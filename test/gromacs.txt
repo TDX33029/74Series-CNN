@@ -1,0 +1,65 @@
+MD生产
+gmx grompp -f step6.0_minimization.mdp -c step5_input.gro -r step5_input.gro -p topol.top -o em.tpr
+gmx mdrun -deffnm em
+gmx grompp -f step6.1_equilibration.mdp -c em.gro -r em.gro -p topol.top -o eq1.tpr -n index.ndx
+gmx mdrun -deffnm eq1
+gmx grompp -f step6.2_equilibration.mdp -c eq1.gro -r eq1.gro -p topol.top -o eq2.tpr -n index.ndx
+gmx mdrun -deffnm eq2
+gmx grompp -f step6.3_equilibration.mdp -c eq2.gro -r eq2.gro -p topol.top -o eq3.tpr -n index.ndx
+gmx mdrun -deffnm eq3
+gmx grompp -f step6.4_equilibration.mdp -c eq3.gro -r eq3.gro -p topol.top -o eq4.tpr -n index.ndx
+gmx mdrun -deffnm eq4
+gmx grompp -f step6.5_equilibration.mdp -c eq4.gro -r eq4.gro -p topol.top -o eq5.tpr -n index.ndx
+gmx mdrun -deffnm eq5
+gmx grompp -f step6.6_equilibration.mdp -c eq5.gro -r eq5.gro -p topol.top -o eq6.tpr -n index.ndx
+gmx mdrun -deffnm eq6
+gmx grompp -f step7_production.mdp -c eq6.gro -r eq6.gro -p topol.top -o md.tpr -n index.ndx
+gmx mdrun -deffnm md nt 12 -nb gpu -pme gpu
+nohup &
+-nt 12 -nb gpu -pme gpu
+计算结合能
+gmx trjconv -s md.tpr -f md.xtc -o md_center.xtc -pbc mol -center -n index.ndx
+gmx_MMPBSA MPI -O -i mmpbsa.in -cs md_0_1.tpr -ci index.ndx -cg 6 5 -ct md_center.xtc -cp topol.top -o MMPBSA.dat -eo MMPBSA.csv
+
+续跑
+gmx grompp -f md.mdp -c md.gro -r md.gro -p topol.top -t md.cpt -o md_.tpr -n index.ndx 
+gmx mdrun -deffnm md_ -e md.edr
+
+
+gmx grompp -f md_pull.mdp -c md.gro -r md.gro -p topol.top -n index.ndx -o pull.tpr
+
+nohup gmx mdrun -s pull.tpr -v -deffnm pull -pf pullf.xvg -px pullx.xvg -nt 4 &
+
+
+
+nohup bash -c 'ls frame-*_run-umbrella.sh | xargs -n1 -P12 bash' > pool.log 2>&1 &
+自由能形貌图
+echo -e "0\n0" | gmx trjconv -s md_.tpr -f md_center.xtc -o md_fit.xtc -fit rot+trans -n index.ndx
+echo -e "4\n4" | gmx covar -s md_.tpr -f md_fit.xtc -o eigenvalues.xvg -v eigenvectors.trr
+echo -e "4\n4" | gmx anaeig -s md_.tpr -f md_fit.xtc -v eigenvectors.trr -first 1 -last 2 -2d 2dproj.xvg
+gmx sham -f 2dproj.xvg -ls fel.xpm -notime -ngrid 50 -nlevels 50
+
+氢键数计算
+echo -e "6\n5" | gmx hbond -s md_.tpr -f md_center.xtc -n index.ndx -num hbond_num.xvg
+
+计算RMSF
+echo -e "4" | gmx rmsf -s md_.tpr -f md_center.xtc -o rmsf_.xvg -res
+
+ligplot采集
+echo -e "0" | gmx trjconv -s md_.tpr -f md_center.xtc -o output.pdb -sep -skip 30 -n index.ndx
+
+VPN登录名：wkj007 密码：fB8c@)11T
+Hipeson@9971
+ 
+
+java -jar LigPlus.jar
+36.3
+38.7
+43.7
+
+
+1162222   36Hz
+1096248   33Hz
+1096643   41Hz
+3401282   0Hz
+298738
