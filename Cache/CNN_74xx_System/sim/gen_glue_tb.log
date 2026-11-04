@@ -1,0 +1,13 @@
+IDLE_MATCH idle              t=  100ns got=3.3 want=high OK
+IDLE_MATCH busy              t=  300ns got=0.0 want=low OK
+IDLE_MATCH idle again        t=  500ns got=3.3 want=high OK
+WAIT_MATCH before wait       t=  500ns got=0.0 want=low OK
+WAIT_MATCH at count          t=  700ns got=3.3 want=high OK
+TIMEOUT_I active             t= 1100ns got=3.3 want=high OK
+TIMEOUT_I inactive           t= 1300ns got=0.0 want=low OK
+XCVR enabled during nCE      t= 1500ns got=3.3 want=high OK
+XCVR disabled idle           t= 1300ns got=0.0 want=low OK
+RESULT_VALID held after set  000ns..900ns: OK
+RESULT_VALID cleared at 800ns: OK
+checks_passed=11/11
+PASS: active-low glue and result-valid hold

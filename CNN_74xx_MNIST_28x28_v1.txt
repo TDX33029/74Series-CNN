@@ -1,0 +1,807 @@
+项目名称：基于74系列逻辑器件与存储器的28×28 MNIST CNN推理系统
+文档类型：Codex总代理下发任务书
+版本：V1.0
+目标：先完成可重复、位精确的行为级仿真，再完成74系列器件级实现与实物验证。
+
+======================================================================
+0. 项目总原则与不可擅自更改的决定
+======================================================================
+
+0.1 系统目标
+使用74系列逻辑芯片、基础存储器、触发器、计数器、加法器、比较器和查表ROM，构建一个无需MCU参与推理调度的MNIST手写数字分类器。
+输入为28×28灰度图像，每个像素uint8，范围0～255。
+模型权重文件已经完成uint8处理。Codex必须先审计权重文件的实际形状、字节解释方式、量化参数和偏置格式，不得擅自重新训练、修改权重或猜测量化规则。
+
+0.2 V1.0硬件架构决定
+A. 使用独立的计算引擎：CONV1、CONV2、FC1、FC2各自拥有自己的乘法器、累加器、局部计数器和控制状态机。
+B. 每个8×8位乘法器由两片64K×8查表存储器构成。一片输出乘积低8位，另一片输出乘积高8位。四个计算引擎共需要八片乘法查表ROM。
+C. 每个阶段使用独立数据存储器。INPUT、CONV1_OUT、POOL1_OUT、CONV2_OUT、POOL2_OUT、FC1_OUT、FC2_LOGITS不得复用同一片SRAM，不做地址空间复用。
+D. 每个计算阶段使用独立权重存储器、偏置存储器和量化参数存储器。不得在V1.0中把各层权重合并到同一片共享SRAM，以免引入共享地址仲裁。
+E. 所有状态机共用唯一系统时钟。禁止组合逻辑生成时钟、禁止通过门控时钟控制阶段顺序。使用时钟使能和同步状态迁移。
+F. 顶层只有一个全局监督状态机。它依次启动各模块，等待模块完成，再启动下一模块。下游模块不能自行启动，也不能在上游写入未完成时读取数据。
+G. 各模块内部拥有独立局部状态机。模块间只使用同步start/busy/done握手，不允许用组合done链直接触发下一个模块。
+H. V1.0以稳定性和易验证性优先，不追求最大吞吐率。阶段按顺序运行；每个阶段内部先采用一个串行MAC通路，利用本阶段独立的乘法ROM、累加器和存储器完成计算。这里的“串行”仅指同一计算引擎内部逐个处理乘积，不是跨层共享乘法器或共享SRAM。
+I. 软件仿真、RTL仿真、门级逻辑仿真和物理电路必须遵循同一数据格式、寻址规则、握手接口和舍入规则。
+
+0.3 重要模型兼容性检查
+28×28网络的FC1输入长度为400；此前16×16网络的FC1输入长度为64。因此：
+- CONV1权重形状仍为[8,1,5,5]，可以与旧架构形状相同。
+- CONV2权重形状仍为[16,8,3,3]，可以与旧架构形状相同。
+- FC1权重必须为[32,400]（或等价转置布局），不能继续使用16×16版本的[32,64]权重。
+- FC2权重为[10,32]。
+如果现有权重文件的FC1输入维度为64，则它不匹配本28×28架构。总代理必须停止声称端到端模型有效，报告维度冲突，并要求使用28×28网络对应的FC1权重；不得通过补零、截断或重复权重伪造兼容性。
+
+======================================================================
+1. 固定网络拓扑与尺寸
+======================================================================
+
+网络采用VALID卷积、不补零，卷积步长1，最大池化窗口2×2、步长2。
+
+层序：
+INPUT 28×28×1 uint8
+-> CONV1 5×5，输入通道1，输出通道8
+-> Requantize + ReLU
+-> MAXPOOL1 2×2，stride 2
+-> CONV2 3×3，输入通道8，输出通道16
+-> Requantize + ReLU
+-> MAXPOOL2 2×2，stride 2
+-> FC1 400->32
+-> Requantize + ReLU
+-> FC2 32->10
+-> 10类分数
+-> ARGMAX
+-> 4位类别编号0～9
+
+各层尺寸：
+INPUT       28×28×1       784个字节
+CONV1       24×24×8       4608个字节
+POOL1       12×12×8       1152个字节
+CONV2       10×10×16      1600个字节
+POOL2       5×5×16        400个字节
+FC1         32            32个字节
+FC2         10个有符号32位分数 40个字节
+
+每层参数：
+CONV1权重：8×1×5×5 = 200个uint8权重；偏置8个int32。
+CONV2权重：16×8×3×3 = 1152个uint8权重；偏置16个int32。
+FC1权重：32×400 = 12800个uint8权重；偏置32个int32。
+FC2权重：10×32 = 320个uint8权重；偏置10个int32。
+权重总数：14472个字节。
+偏置数量：66个int32。
+
+各层乘加次数：
+CONV1：24×24×8×25 = 115200 MAC。
+CONV2：10×10×16×8×9 = 115200 MAC。
+FC1：32×400 = 12800 MAC。
+FC2：10×32 = 320 MAC。
+总计：243520 MAC。
+
+池化不计乘法，只包含读取、比较和写入。
+
+======================================================================
+2. 数据布局、地址公式和数值格式
+======================================================================
+
+2.1 特征图布局
+所有多通道特征图统一采用CHW布局（Channel-Height-Width）。
+地址从0开始，连续存储每个通道的二维平面。
+
+通用地址公式：
+ADDR(c,y,x) = c * H * W + y * W + x
+
+INPUT为单通道：
+ADDR_INPUT(y,x) = y * 28 + x
+
+CONV1_OUT：
+ADDR_C1(oc,y,x) = oc * 24 * 24 + y * 24 + x
+
+POOL1_OUT：
+ADDR_P1(c,y,x) = c * 12 * 12 + y * 12 + x
+
+CONV2_OUT：
+ADDR_C2(oc,y,x) = oc * 10 * 10 + y * 10 + x
+
+POOL2_OUT：
+ADDR_P2(c,y,x) = c * 25 + y * 5 + x
+
+FC1_OUT：
+ADDR_FC1(n) = n
+
+FC2_LOGITS：
+ADDR_FC2(n,byte_index) = n * 4 + byte_index
+byte_index=0为最低有效字节，按little-endian存储32位二进制补码分数。
+
+FC1展平顺序必须与POOL2的CHW顺序一致：
+flat_index = c*25 + y*5 + x，范围0～399。
+
+2.2 权重布局
+CONV1：W1[oc][ky][kx]
+ADDR_W1 = oc*25 + ky*5 + kx
+范围0～199。
+
+CONV2：W2[oc][ic][ky][kx]
+ADDR_W2 = (((oc*8 + ic)*3 + ky)*3 + kx)
+范围0～1151。
+
+FC1：W3[neuron][input_index]
+ADDR_W3 = neuron*400 + input_index
+范围0～12799。
+
+FC2：W4[class][input_index]
+ADDR_W4 = class*32 + input_index
+范围0～319。
+
+偏置全部采用32位二进制补码、小端序：
+ADDR_B(layer, neuron, byte_index) = neuron*4 + byte_index。
+不得用单字节偏置代替int32偏置。
+
+2.3 乘法器查表格式
+V1.0物理乘法查表接口输入A[7:0]、B[7:0]。
+查表地址统一定义为：LUT_ADDR = {A[7:0], B[7:0]}。
+ROM_LO[LUT_ADDR] = (A*B) & 0xFF。
+ROM_HI[LUT_ADDR] = (A*B) >> 8。
+两片ROM输出组合为PRODUCT[15:0]={ROM_HI,ROM_LO}。
+
+如果A、B按uint8解释，则最大乘积255*255=65025，16位无符号结果完整容纳。
+第一层输入像素和模型权重的字节均可送入该乘法器，但有效数学运算是否需要zero-point校正，由量化参数决定。
+
+不得未经检查就把uint8字节解释为int8。模型导出器必须明确给出权重编码：
+- 真正的uint8仿射量化：字节按0～255解释，配合weight_zero_point。
+- 如果原始文件只是将int8二进制补码重解释为uint8容器：必须在软件导出阶段明确转换为规范uint8编码，或生成匹配的有符号查表ROM。禁止硬件和软件分别猜测。
+建议V1.0统一导出为真正uint8仿射量化格式，并在qparam中明确zero point。
+
+2.4 累加器位宽
+乘法查表输出16位。
+MAC累加器统一32位有符号。
+sum_x、sum_w校正辅助累加器至少20位无符号；实现时也可统一使用32位，优先降低设计复杂度。
+32位偏置按有符号数装载。
+不得在中间MAC循环中截断到8位或16位。
+
+对于最大长度400的原始uint8乘积和：
+400*255*255 = 26010000，小于2^25。
+32位累加器足以容纳原始乘积和以及常规量化偏置校正。软件参考模型仍必须执行溢出范围检查；若训练导出的偏置或缩放参数可能导致32位越界，必须在硬件实现前报告并修改量化方案，而不是静默回绕。
+
+2.5 量化数学契约（必须由模型审计代理确认）
+所有存储字节为uint8不代表可以忽略zero point。
+标准仿射量化定义：
+real_x = scale_x * (q_x - zp_x)
+real_w = scale_w * (q_w - zp_w)
+
+每个输出神经元的整数累加：
+ACC = SUM((q_x-zp_x)*(q_w-zp_w)) + bias_int32
+其中bias_int32必须已经按该输出通道的输入scale与权重scale量化。
+
+乘法ROM直接计算q_x*q_w。可先累计：
+RAW_SUM = SUM(q_x*q_w)
+SUM_X = SUM(q_x)
+SUM_W = SUM(q_w)
+然后进行zero-point修正：
+ACC = RAW_SUM - zp_w*SUM_X - zp_x*SUM_W + N*zp_x*zp_w + bias_int32
+N为该输出点的乘积项数量：
+CONV1 N=25；CONV2 N=72；FC1 N=400；FC2 N=32。
+如果zp_x或zp_w为0，对应修正项应被优化掉。
+
+每个输出通道/神经元可能具有独立权重zero point和requant参数。设计必须支持per-output-channel qparam，除非模型文件明确证明是per-tensor参数。
+
+中间层重定标：
+q_out = SATURATE_UINT8(ROUND(ACC * M / 2^S) + zp_out)
+M和S来自模型导出器，不能由Codex随意选择。ACC*M必须使用足够宽的有符号中间结果（建议64位），之后按模型规定执行舍入和算术移位。
+ReLU量化后的下限为zp_out（它代表实数0），而不是在所有量化方案中都固定为数字0。
+FC2例外：不做uint8饱和，不加uint8 output_zero_point；每个类别的ACC须转换到统一的有符号32位logit比较尺度，写入FC2_LOGITS_SRAM。十个类别必须使用相同的最终尺度，之后才能执行Argmax。
+如果模型使用不同的舍入方法、饱和边界或乘数编码，软件黄金模型和硬件必须逐位一致。
+
+FC2输出必须形成10个可直接比较的有符号32位分数，并且10个类别分数必须处于同一比较尺度。如果FC2各输出通道具有不同scale，则必须在Argmax前统一重定标到共同尺度；不能直接比较尺度不同的原始累加值。
+
+模型审计代理必须输出：输入scale/zp、每层输入zp、每输出通道weight zp、输出zp、bias量化格式、requant multiplier、shift、舍入规则、饱和规则、权重编码方式。如果原始模型没有提供这些信息，必须明确报告缺失，并用已知模型导出规则补齐；不能声称位精确。
+
+======================================================================
+3. 独立存储器规划
+======================================================================
+
+V1.0不做存储器复用。以下容量是最低建议容量，实际芯片可选更大容量；地址未使用部分保留。
+
+3.1 特征数据SRAM
+INPUT_SRAM：784字节，建议1K×8。
+CONV1_OUT_SRAM：4608字节，建议8K×8。
+POOL1_OUT_SRAM：1152字节，建议2K×8。
+CONV2_OUT_SRAM：1600字节，建议2K×8。
+POOL2_OUT_SRAM：400字节，建议512×8或1K×8。
+FC1_OUT_SRAM：32字节，建议64×8或更大。
+FC2_LOGITS_SRAM：40字节，建议64×8或更大。
+
+3.2 各层独立权重SRAM
+CONV1_WEIGHT_SRAM：200字节，建议256×8。
+CONV2_WEIGHT_SRAM：1152字节，建议2K×8。
+FC1_WEIGHT_SRAM：12800字节，建议16K×8。
+FC2_WEIGHT_SRAM：320字节，建议512×8。
+
+3.3 各层独立偏置SRAM
+CONV1_BIAS_SRAM：8×4=32字节，建议64×8。
+CONV2_BIAS_SRAM：16×4=64字节，建议128×8。
+FC1_BIAS_SRAM：32×4=128字节，建议256×8。
+FC2_BIAS_SRAM：10×4=40字节，建议64×8。
+
+3.4 各层独立量化参数存储器
+每个输出神经元/通道保存其必要的zero point、requant multiplier、shift和标志位。
+建议每个输出通道使用固定16字节记录，便于地址生成与扩展。
+CONV1_QPARAM：8*16=128字节，建议256×8。
+CONV2_QPARAM：16*16=256字节，建议512×8。
+FC1_QPARAM：32*16=512字节，建议1K×8。
+FC2_QPARAM：10*16=160字节，建议256×8。
+
+建议16字节qparam记录格式：
+Byte0：input_zero_point。
+Byte1：weight_zero_point。
+Byte2：output_zero_point。
+Byte3：flags，包括ReLU使能、输出类型、舍入模式等。
+Byte4～7：requant_multiplier，按模型导出格式定义端序。
+Byte8：requant_shift。
+Byte9～15：保留，后续可扩展。
+若模型参数是per-tensor，可在每个通道复制相同记录，避免硬件地址分支。
+
+3.5 乘法查表ROM
+每个计算引擎配两片64K×8 ROM：
+CONV1_LUT_LO、CONV1_LUT_HI。
+CONV2_LUT_LO、CONV2_LUT_HI。
+FC1_LUT_LO、FC1_LUT_HI。
+FC2_LUT_LO、FC2_LUT_HI。
+总计8片64K×8 ROM。
+各层查表ROM内容相同的前提下，可以从同一生成文件烧录，但物理芯片独立，推理时不共享地址总线。
+
+3.6 总存储器结构
+特征数据存储器7组。
+权重存储器4组。
+偏置存储器4组。
+量化参数存储器4组。
+乘法查表ROM 8片。
+每组均有独立片选/读写控制，不存在多个计算引擎争用同一片存储器的问题。
+
+======================================================================
+4. 顶层端口与系统级握手协议
+======================================================================
+
+所有模块使用同一个CLK。
+推荐系统复位输入RESET_N，外部异步断言，内部同步释放；所有FSM内部使用同步复位状态。
+禁止使用派生时钟。
+
+顶层接口建议：
+CLK：系统时钟。
+RESET_N：复位。
+START：启动一次推理，建议使用上升沿或IDLE状态下的有效电平采样。
+BUSY：系统正在推理。
+DONE：推理完成脉冲，持续一个CLK周期。
+RESULT[3:0]：分类编号0～9。
+RESULT_VALID：结果有效标志，在DONE后保持到下一次START或复位。
+IMAGE_READY：输入图像已经加载完成。
+MODEL_READY：权重、偏置、量化参数、LUT内容全部准备完成。
+ERROR：发生未就绪启动、超时或内部协议错误。
+ERROR_CODE：错误编码。
+
+启动规则：
+1. 上电或复位后BUSY=0、DONE=0、RESULT_VALID=0。
+2. START有效时，如果IMAGE_READY和MODEL_READY均为1，则接受启动。
+3. 如果未就绪，拒绝本次启动，置ERROR和对应ERROR_CODE；不得进入计算。
+4. 接受START后BUSY置1，直到最终Argmax完成。
+5. 每个子模块收到一个CLK周期的start脉冲后开始工作。
+6. 子模块工作期间busy=1；整个阶段完成并且最后一次SRAM写入满足时序后，done置1一个CLK周期，busy清零。
+7. 顶层只在观察到该模块done后启动下一个模块。
+8. 推理过程中忽略新的START请求，禁止重入。
+9. 推理完成后RESULT_VALID=1，RESULT保持稳定，直到下一次有效启动或复位。
+10. 为防止START长期为高造成重复执行，完成后进入WAIT_START_LOW，检测START回到0后再回IDLE。
+
+模块通用接口：
+clk, rst, start, busy, done, error。
+所有start/done/busy均同步到CLK。
+start只允许一个周期脉冲。
+done只允许一个周期脉冲。
+busy在整个事务期间保持高电平，包含最终存储器写完成等待时间。
+
+======================================================================
+5. 全局监督状态机 GLOBAL_SUPERVISOR_FSM
+======================================================================
+
+顶层FSM负责阶段依赖，不负责产生每个像素的地址或每次乘法控制。
+
+状态定义：
+G_RESET：初始化所有状态和输出寄存器。
+G_WAIT_READY：等待IMAGE_READY和MODEL_READY。
+G_IDLE：等待START。
+G_C1_START：向CONV1_ENGINE发出单周期start脉冲。
+G_C1_WAIT：等待CONV1.done。
+G_P1_START：向POOL1_ENGINE发出start脉冲。
+G_P1_WAIT：等待POOL1.done。
+G_C2_START：启动CONV2。
+G_C2_WAIT：等待CONV2.done。
+G_P2_START：启动POOL2。
+G_P2_WAIT：等待POOL2.done。
+G_FC1_START：启动FC1。
+G_FC1_WAIT：等待FC1.done。
+G_FC2_START：启动FC2。
+G_FC2_WAIT：等待FC2.done。
+G_ARGMAX_START：启动ARGMAX。
+G_ARGMAX_WAIT：等待ARGMAX.done。
+G_FINISH：锁存类别结果，置DONE脉冲，清BUSY，置RESULT_VALID。
+G_WAIT_START_LOW：等待START撤销，防止重复启动。
+G_ERROR：锁存错误，停止启动任何下游模块。
+
+严格阶段依赖：
+CONV1完成并确认CONV1_OUT最后一个字节写入后，才能启动POOL1。
+POOL1完成并确认POOL1_OUT最后一个字节写入后，才能启动CONV2。
+CONV2完成并确认CONV2_OUT最后一个字节写入后，才能启动POOL2。
+POOL2完成后才能启动FC1。
+FC1完成并写完32个激活值后才能启动FC2。
+FC2写完10个32位分数后才能启动ARGMAX。
+ARGMAX完成后才能对外给出结果。
+
+不得让下游模块用上游busy下降沿作为直接异步启动信号。只能由全局FSM在时钟边沿检测done并转入下一START状态。
+
+建议加入阶段超时计数器。每进入WAIT状态清零计数，超过该阶段配置的最大周期数仍未done则进入G_ERROR。超时数值由仿真周期统计和实际存储器延迟确定，不在模块开发初期随意硬编码。
+
+======================================================================
+6. 各计算模块局部状态机
+======================================================================
+
+6.1 CONV_ENGINE（分别实例化CONV1与CONV2）
+
+每个卷积引擎具有：
+独立输入特征图SRAM接口。
+独立权重SRAM接口。
+独立偏置SRAM接口。
+独立量化参数SRAM接口。
+独立两片乘法LUT ROM。
+独立32位累加器。
+独立sum_x、sum_w校正累加器。
+独立输出SRAM接口。
+独立输出通道、坐标、输入通道、卷积核行列计数器。
+独立存储器等待计数器。
+独立乘法等待计数器。
+
+卷积循环顺序：
+for oc = 0 .. Cout-1
+  for oy = 0 .. Hout-1
+    for ox = 0 .. Wout-1
+      raw_sum = 0
+      sum_x = 0
+      sum_w = 0
+      for ic = 0 .. Cin-1
+        for ky = 0 .. K-1
+          for kx = 0 .. K-1
+            读取输入和权重
+            LUT乘法
+            累加RAW_SUM、SUM_X、SUM_W
+      执行zero-point校正
+      执行requantization
+      执行ReLU（若该层启用）
+      写出一个uint8输出值
+
+CONV1参数：H=28,W=28,Cin=1,Cout=8,K=5,Hout=24,Wout=24。
+CONV2参数：H=12,W=12,Cin=8,Cout=16,K=3,Hout=10,Wout=10。
+
+输入地址：
+ADDR_IN = ic*H*W + (oy+ky)*W + (ox+kx)
+
+权重地址：
+ADDR_W = (((oc*Cin+ic)*K+ky)*K+kx)
+
+输出地址：
+ADDR_OUT = oc*Hout*Wout + oy*Wout + ox
+
+卷积FSM状态建议：
+C_IDLE：等待start。
+C_LOAD_QPARAM：读取当前输出通道量化参数。
+C_LOAD_BIAS_ADDR：设置偏置地址。
+C_LOAD_BIAS_WAIT：等待偏置存储器访问完成。
+C_LOAD_BIAS_BYTE：读取4个偏置字节并组装int32。
+C_INIT_DOT：raw_sum、sum_x、sum_w清零，核索引清零；bias已在前面的偏置寄存器中锁存，不在原始乘积累加阶段重复加入。
+C_ADDR_SETUP：同时设置输入SRAM地址和权重SRAM地址，拉低对应nCE/nOE。
+C_MEM_WAIT：等待输入SRAM和权重SRAM数据有效。
+C_OPERAND_LATCH：锁存A、B操作数。
+C_LUT_WAIT：将{A,B}送到两片LUT地址端，等待ROM访问时间。
+C_PRODUCT_LATCH：锁存16位乘积。
+C_MAC_ACCUM：累加乘积和、sum_x、sum_w。
+C_INDEX_ADVANCE：按kx、ky、ic顺序推进索引。
+C_DOT_FINISH：确认本输出点所有乘积已完成。
+C_ZP_CORRECT：一次性计算ACC=RAW_SUM-zp_w*SUM_X-zp_x*SUM_W+N*zp_x*zp_w+bias；bias只加入一次。
+C_REQUANT_INIT：装载M、shift和舍入模式。
+C_REQUANT_RUN：完成定点重定标。
+C_RELU_CLAMP：按量化零点执行ReLU和uint8饱和。
+C_OUT_ADDR_SETUP：设置输出SRAM地址和数据。
+C_OUT_WRITE：执行SRAM写脉冲及保持周期。
+C_NEXT_OUTPUT：推进ox、oy、oc；若全部结束则进入DONE。
+C_DONE：done脉冲一个周期，busy清零。
+
+每个输出点必须先初始化累加器，不允许把上一个输出点的acc带入下一个输出点。
+每个输出点都必须单独装载对应oc的bias和qparam。
+只有输出SRAM写入完成后，才允许推进到下一个输出点；阶段完成时最后一次写入也必须完成。
+
+6.2 MAXPOOL_ENGINE（分别实例化POOL1与POOL2）
+
+输入和输出SRAM独立。
+采用CHW地址。
+每个通道单独处理，不跨通道比较。
+窗口2×2，stride2，不补零。
+
+循环：
+for c = 0 .. C-1
+  for oy = 0 .. Hout-1
+    for ox = 0 .. Wout-1
+      读取四个输入值：
+      v0 = IN[c,2*oy,2*ox]
+      v1 = IN[c,2*oy,2*ox+1]
+      v2 = IN[c,2*oy+1,2*ox]
+      v3 = IN[c,2*oy+1,2*ox+1]
+      out = max(v0,v1,v2,v3)
+      写入OUT[c,oy,ox]
+
+POOL1：输入24×24×8，输出12×12×8。
+POOL2：输入10×10×16，输出5×5×16。
+
+FSM状态：P_IDLE、P_INIT、P_ADDR0、P_WAIT0、P_LATCH0、P_ADDR1、P_WAIT1、P_LATCH1、P_ADDR2、P_WAIT2、P_LATCH2、P_ADDR3、P_WAIT3、P_LATCH3、P_COMPARE、P_WRITE_SETUP、P_WRITE、P_NEXT、P_DONE。
+
+可使用一个8位max寄存器和一个8位比较器；每次读入新值后执行unsigned比较。
+如果使用组合比较树一次处理4个值，也必须先确认SRAM具有足够独立读端口；V1.0按单端口SRAM逐个读取四次，时序更简单、对器件要求更低。
+
+6.3 FC_ENGINE（分别实例化FC1与FC2）
+
+FC1输入长度400、输出32。
+FC2输入长度32、输出10。
+每个FC引擎拥有独立输入SRAM、权重SRAM、bias SRAM、qparam SRAM、LUT ROM对、累加器和输出SRAM。
+
+循环：
+for neuron = 0 .. Nout-1
+  raw_sum = 0
+  sum_x = 0
+  sum_w = 0
+  for i = 0 .. Nin-1
+    A = input[i]
+    B = weight[neuron*Nin+i]
+    product = LUT(A,B)
+    累加RAW_SUM、SUM_X、SUM_W
+  完成zero-point修正
+  完成requantization
+  根据层类型执行ReLU/输出转换
+  写出该neuron结果
+
+FC1：输出uint8激活，ReLU开启，32个字节写入FC1_OUT_SRAM；先由RAW_SUM和校正项形成ACC，再按该神经元的M/shift重定标并加output_zero_point。
+FC2：输出10个有符号32位、统一比较尺度的logit，ReLU关闭；先由RAW_SUM和校正项形成ACC，再乘以导出器给出的score_scale_multiplier并移位到共同分数尺度，不进行uint8饱和，每个分数写入4个字节FC2_LOGITS_SRAM。
+
+FC状态建议：F_IDLE、F_LOAD_QPARAM、F_LOAD_BIAS、F_INIT_NEURON、F_ADDR_SETUP、F_MEM_WAIT、F_OPERAND_LATCH、F_LUT_WAIT、F_PRODUCT_LATCH、F_MAC_ACCUM、F_INDEX_ADVANCE、F_DOT_FINISH、F_ZP_CORRECT、F_REQUANT、F_ACTIVATION、F_WRITE_SETUP、F_WRITE_BYTE、F_NEXT_NEURON、F_DONE。
+
+FC2的32位分数按little-endian写入，四个字节写完后才允许处理下一个类别。
+
+6.4 ARGMAX_ENGINE
+
+输入：FC2_LOGITS_SRAM，10个有符号32位分数。
+输出：4位类别编号。
+
+建议流程：
+先读取class0的4字节并组装signed int32，初始化max_value和max_index=0。
+依次读取class1～class9的分数。
+执行有符号比较：score > max_value时更新max_value和max_index。
+相等时不更新，因此并列最大值选择编号较小的类别。
+扫描完10类后锁存result并发出done脉冲。
+
+FSM：A_IDLE、A_READ_ADDR、A_READ_WAIT、A_LATCH_BYTE、A_NEXT_BYTE、A_COMPARE、A_NEXT_CLASS、A_DONE。
+注意必须进行有符号32位比较，不能按uint32比较。
+
+======================================================================
+7. SRAM/ROM存储器时序控制
+======================================================================
+
+所有存储器访问必须通过统一的mem_if适配接口，避免每个计算模块各自写一套不一致的时序。
+
+每个存储器至少具备：
+ADDR、DATA[7:0]、nCE、nOE、nWE。
+读期间nWE保持无效；写期间nOE保持无效；未访问时nCE无效。
+如果具体芯片使用不同极性或不同控制脚，必须由底层适配器转换，不得污染上层FSM。
+
+7.1 读时序
+READ_IDLE：所有控制脚无效。
+READ_SETUP：设置地址，拉低nCE/nOE。
+READ_WAIT：地址和控制信号保持稳定，等待访问时间。
+READ_CAPTURE：在CLK边沿锁存数据。
+READ_HOLD：撤销读使能，满足输出保持/总线释放要求。
+
+等待计数器必须参数化：
+WAIT_READ_CYCLES = ceil((tAA + margin)/Tclk)
+如果片选或输出使能时间更慢，取tAA、tCE、tOE中最大要求。
+WAIT_READ_CYCLES不得小于1，除非仿真和器件时序分析证明允许零等待。
+不同存储器可以有不同等待参数：输入SRAM、权重SRAM、偏置SRAM、qparam SRAM、乘法ROM分别配置。
+
+7.2 写时序
+WRITE_IDLE。
+WRITE_SETUP：设置地址和写数据，片选有效。
+WRITE_PULSE：nWE有效并保持规定周期。
+WRITE_HOLD：撤销nWE，继续保持地址/数据满足hold要求。
+WRITE_RELEASE：撤销片选并释放总线。
+写操作完成后才可发出阶段done。
+
+WAIT_WRITE_CYCLES = ceil((tWP + tDH + margin)/Tclk)，并同时满足器件规定的地址建立、数据建立、片选脉宽和恢复时间。
+
+7.3 乘法ROM时序
+LUT地址由操作数寄存器输出，保证地址稳定。
+LUT_SETUP：驱动{A,B}并等待地址建立。
+LUT_WAIT：按ROM tACC配置等待计数器。
+LUT_CAPTURE：同一CLK边沿锁存ROM_HI和ROM_LO。
+之后才允许执行MAC_ACCUM。
+
+不能假设ROM输出在地址变化的同一个时钟边沿已经有效。
+
+7.4 总线规则
+每片SRAM/ROM具有独立总线，不做多模块共享总线仲裁。
+同一片SRAM在任一时刻只允许一个控制器拥有访问权。
+若加载接口和推理引擎连接同一SRAM，必须增加LOAD与INFER互斥仲裁；推理BUSY期间LOAD_EN必须无效。
+推荐在仿真中把存储器访问延迟做成参数，测试1、2、3、4及更大等待周期，确认FSM不会依赖某个特定等待值。
+
+======================================================================
+8. 外部预加载与启动保护
+======================================================================
+
+权重、偏置、qparam和图像由外部设备预先加载。该加载设备不参与推理计算，不承担运行时调度功能。
+
+软件仿真：每片存储器对应独立初始化文件，例如：
+input.mem
+conv1_weight.mem
+conv1_bias.mem
+conv1_qparam.mem
+conv2_weight.mem
+conv2_bias.mem
+conv2_qparam.mem
+fc1_weight.mem
+fc1_bias.mem
+fc1_qparam.mem
+fc2_weight.mem
+fc2_bias.mem
+fc2_qparam.mem
+conv1_lut_lo.mem / conv1_lut_hi.mem（各层可共用同样内容文件，但实例存储独立）
+其他层同理。
+
+物理硬件：每片SRAM具有独立预加载入口，或通过外部编程总线逐片选择写入。加载完成后，外部置IMAGE_READY和MODEL_READY。
+推理期间禁止任何加载写入。
+
+如果实际选用非易失ROM存储权重和LUT，则这些存储器可不需要每次上电加载，但接口和地址映射保持不变。
+
+======================================================================
+9. 仿真平台与验收标准
+======================================================================
+
+9.1 仿真层次
+第一层：Python整数黄金模型，验证网络尺寸、地址公式、权重量化、zero-point、bias、requant、ReLU、池化和Argmax。
+第二层：SystemVerilog模块行为仿真，所有SRAM/ROM使用带可配置访问延迟的模型。
+第三层：RTL集成仿真，使用真实28×28 MNIST样本与实际uint8模型参数。
+第四层：74系列门级功能仿真，逐模块验证控制逻辑和数据通路。
+第五层：实体存储器与逻辑芯片测试，逐模块测试后再连接完整系统。
+
+9.2 必须完成的测试
+A. LUT乘法器：穷举全部65536组A、B输入，检查高低字节和乘积完全一致。
+B. 加法器/累加器：正数、负数、最大值、最小值、进位、溢出边界测试。
+C. zero-point校正：与Python参考模型对比，覆盖zp为0、非0、边界值和不同N。
+D. requantization：覆盖正负值、舍入边界、饱和上限、饱和下限、ReLU零点。
+E. Conv1：至少覆盖随机输入、全0、全255、单点脉冲输入，并逐输出值比对。
+F. Pool1：四个窗口最大值位置轮换、相等值、通道边界测试。
+G. Conv2：逐输出值对比Python黄金模型。
+H. Pool2：逐输出值对比Python黄金模型。
+I. FC1/FC2：逐神经元输出比对。
+J. Argmax：正负分数、最大值在首尾、并列最大、32位符号边界。
+K. 全局FSM：done延迟变化、各模块忙周期变化、START持续为高、推理中重复START、未ready启动、reset中断、超时错误。
+L. 存储器时序：改变SRAM和ROM访问等待周期，确认不会提前采样或提前done。
+M. 全网络：使用MNIST测试集，比较硬件整数仿真输出与Python整数黄金模型，必须逐样本类别完全一致；同时报告准确率，但不以准确率代替逐位对照。
+
+9.3 阶段完成条件
+一个模块只有同时满足以下条件才标记完成：
+接口符合统一规格。
+独立Testbench通过。
+边界条件测试通过。
+可配置存储器延迟测试通过。
+输出与Python黄金模型逐位一致。
+有明确的仿真日志和可复现命令。
+未完成的模块不得由总代理标记为可集成。
+
+======================================================================
+10. Codex子代理任务表与依赖关系
+======================================================================
+
+任务00：总代理/系统架构负责人
+职责：维护本文件作为唯一系统契约；建立工程目录；统一端口命名、参数命名、地址规则、状态命名和仿真命令；审查所有子代理交付；负责集成，不擅自改变网络和量化契约。
+依赖：无。
+优先级：最高，先完成接口冻结。
+交付：system_contract.md或纯文本接口表、工程目录、模块清单、集成脚本。
+
+任务01：模型文件审计与Python黄金模型
+职责：读取现有MNIST模型文件；检查CONV1/CONV2/FC1/FC2形状、dtype、权重字节编码、bias格式、scale、zero point、multiplier、shift、舍入和饱和规则；确认FC1输入必须为400；生成28×28 Python整数推理参考模型。
+依赖：任务00的网络规格。
+优先级：阻塞任务，必须尽早完成。
+交付：model_manifest.json、所有参数shape报告、量化参数表、golden_model.py、样本逐层中间结果。
+
+任务02：SRAM/ROM行为模型与加载接口
+职责：实现带可配置读写延迟的SRAM/ROM模型；实现独立存储初始化文件加载；实现读写协议、地址越界检测、写保护和加载/推理互斥检查。
+依赖：任务00。
+优先级：高，可与任务01并行。
+交付：memory_model.sv、mem_if.sv、memory_testbench、mem文件格式说明。
+
+任务03：8×8乘法查表生成器与LUT_MULT模块
+职责：生成全部65536地址的低字节和高字节ROM文件；实现双ROM查表乘法模块；完成地址、等待、锁存时序。
+依赖：任务00、任务02的存储器接口。
+优先级：高，可并行。
+交付：lut_generator.py、ROM初始化文件、lut_multiplier.sv、穷举测试报告。
+
+任务04：32位算术、MAC和量化校正模块
+职责：实现32位signed累加器、RAW_SUM、SUM_X、SUM_W、zero-point修正、bias相加、requant multiplier/shift、舍入、饱和和ReLU。
+依赖：任务01的量化契约；任务03的乘积接口。
+优先级：最高阻塞项之一。
+交付：mac_datapath.sv、requantizer.sv、Python对照测试、边界测试报告。
+
+任务05：通用卷积引擎与CONV1实例
+职责：实现可参数化卷积引擎，完成CONV1尺寸、地址、循环计数器、独立SRAM接口和局部FSM；输出24×24×8。
+依赖：任务02、03、04。
+优先级：高。
+交付：conv_engine.sv、conv1_config.svh、conv1_tb、逐元素差异报告。
+
+任务06：CONV2实例与验证
+职责：使用通用卷积引擎实例化CONV2；验证12×12×8到10×10×16的地址、72项点积和输出顺序。
+依赖：任务05通用引擎、任务02～04。
+优先级：高。
+交付：conv2_config.svh、conv2_tb、逐元素差异报告。
+
+任务07：MAXPOOL引擎与POOL1/POOL2实例
+职责：实现单端口SRAM逐项读取四个窗口值、unsigned max比较、CHW地址和输出写入；分别实例化POOL1和POOL2。
+依赖：任务02。
+优先级：高，可与任务03～06并行。
+交付：maxpool_engine.sv、pool1_tb、pool2_tb。
+
+任务08：FC引擎、FC1和FC2实例
+职责：实现向量点积循环和参数地址；FC1输出32个uint8激活；FC2输出10个32位统一尺度分数。
+依赖：任务02、03、04、01。
+优先级：高。
+交付：fc_engine.sv、fc1_config.svh、fc2_config.svh、独立测试报告。
+
+任务09：Argmax模块
+职责：读取10个32位signed score，进行有符号比较，定义并列时选择较小编号，输出4位类别编号。
+依赖：任务02和FC2输出格式。
+优先级：中，可并行。
+交付：argmax.sv、argmax_tb。
+
+任务10：存储器时序适配器
+职责：封装SRAM/ROM读写等待状态机，完成不同芯片访问时间参数化、读数据锁存、写建立/脉宽/保持、总线释放和协议检查。
+依赖：任务00、02。
+优先级：高，可并行。
+交付：sram_controller.sv、rom_controller.sv、时序参数说明和测试报告。
+
+任务11：全局监督FSM
+职责：实现GLOBAL_SUPERVISOR_FSM，启动顺序严格为CONV1、POOL1、CONV2、POOL2、FC1、FC2、ARGMAX；完成start/busy/done协议、ready检查、busy/done/result、错误处理和超时。
+依赖：任务00；可先使用stub模块仿真，之后接入真实模块。
+优先级：最高。
+交付：cnn_top_controller.sv、fake_stage_tb、集成握手波形/日志说明。
+
+任务12：顶层集成与系统回归
+职责：连接所有模块和独立存储器；加载真实权重和MNIST样本；运行全网络；逐层比对Python黄金模型；验证全局FSM和memory timing。
+依赖：任务01～11。
+优先级：集成阶段最高。
+交付：cnn_top.sv、完整testbench、自动回归脚本、准确率和逐样本一致性报告。
+
+任务13：74系列逻辑器件映射与实体电路方案
+职责：把已验证RTL逐模块映射到74系列器件及存储芯片；设计地址计数器、数据寄存器、加法器、比较器、FSM触发器、读写时序；给出扇出、负载、时序裕量、去耦和PCB分区方案。
+依赖：对应RTL模块仿真通过；任务10的存储器时序参数确定。
+优先级：后置，不能早于逻辑行为冻结。
+交付：每模块原理图、器件表、逻辑方程/状态转移表、时序预算、板级测试点表。
+
+任务14：硬件测试与调试计划
+职责：制定LUT单元、单个MAC、单个Pool、单个FSM、全网络逐级实测流程；为每级准备已知输入和期望输出；定义逻辑分析仪测试点。
+依赖：任务13。
+优先级：后置。
+交付：bring-up checklist、测试数据文件、故障定位表。
+
+======================================================================
+11. 子代理并行执行波次
+======================================================================
+
+WAVE 0：接口冻结
+总代理完成任务00；任务01立即审计模型形状和量化元数据。未确认模型形状前，可以做通用模块，但不得冻结FC1权重映射。
+
+WAVE 1：基础模块并行
+任务02存储器模型。
+任务03乘法LUT。
+任务07池化引擎。
+任务09Argmax。
+任务10存储器时序适配器。
+任务11全局FSM可以使用stub开始开发。
+
+WAVE 2：算术和计算引擎
+任务04 MAC/量化。
+任务05/06卷积引擎与实例。
+任务08 FC引擎与实例。
+
+WAVE 3：集成与系统验证
+任务12连接全系统，执行逐层和逐样本回归；修复接口、时序和算术差异。
+
+WAVE 4：物理实现
+任务13器件映射和原理图。
+任务14实体测试和上电调试。
+
+代理之间不得私自复制并修改另一代理的接口文件。接口变更必须由总代理审查并更新唯一契约，再通知所有相关代理。
+
+======================================================================
+12. 推荐工程目录与统一交付格式
+======================================================================
+
+project/
+  spec/
+    system_contract.txt
+    memory_map.txt
+    quantization_contract.txt
+    module_interfaces.txt
+  model/
+    model_manifest.json
+    weights/
+    biases/
+    qparams/
+    lut/
+    mnist_samples/
+  reference/
+    golden_model.py
+    golden_vectors/
+  rtl/
+    common/
+    memory/
+    arithmetic/
+    lut_multiplier/
+    conv/
+    pool/
+    fc/
+    argmax/
+    controller/
+    top/
+  sim/
+    tb/
+    scripts/
+    logs/
+  physical/
+    schematics/
+    bom/
+    timing/
+    bringup/
+
+每个代理交付必须包含：
+1. 源代码。
+2. 模块接口说明。
+3. 参数和位宽说明。
+4. 独立testbench。
+5. 一条可复制执行的测试命令。
+6. 测试通过/失败报告。
+7. 已知限制和未解决问题。
+8. 不得只提交代码而没有测试证据。
+
+统一要求使用SystemVerilog编写可综合RTL；Python用于模型导出、ROM生成和黄金模型；禁止用不可综合的动态行为冒充物理实现。
+
+======================================================================
+13. 第一阶段具体执行顺序
+======================================================================
+
+第一步：总代理建立工程目录和接口契约。
+第二步：模型审计代理检查现有权重文件，重点确认FC1权重是否为32×400，以及全部量化元数据。
+第三步：生成Python整数黄金模型，并用至少一批MNIST样本验证网络推理结果。
+第四步：并行开发LUT乘法器、SRAM模型、时序适配器、池化器、Argmax和全局FSM stub。
+第五步：完成MAC和量化模块；先做纯整数单元测试。
+第六步：完成Conv1/Conv2/FC1/FC2独立仿真。
+第七步：完成全系统FSM集成和数据通路集成。
+第八步：使用真实MNIST数据逐层逐元素比对。
+第九步：冻结RTL行为规格后，开始74系列逻辑芯片映射。
+
+第一阶段的首要验收不是识别准确率，而是同一输入、同一权重时，Python整数黄金模型与RTL所有层的输出逐位一致。准确率只能作为额外指标。
+
+======================================================================
+14. 当前必须由总代理明确跟踪的风险
+======================================================================
+
+RISK-01：现有FC1权重可能仍属于16×16网络，输入维度64，与28×28网络要求的400冲突。最高优先级审计。
+RISK-02：uint8仅说明存储容器宽度，不足以确定signed/unsigned解释、zero point和scale。必须审计量化元数据。
+RISK-03：如果FC2十个类别的输出scale不同，直接比较原始累加值会导致错误Argmax。必须统一分数尺度。
+RISK-04：异步SRAM/ROM不可在地址变化后立即采样。等待周期必须来自具体器件时序和系统CLK。
+RISK-05：SRAM写入尚未完成就发出done会造成下一层读取旧数据。done必须晚于最后一次写周期和保持周期。
+RISK-06：复位释放、START长高、重复START、子模块done脉冲漏采样可能使全局FSM失步。所有握手必须同步且有独立测试。
+RISK-07：32位累加器必须覆盖zero-point修正、偏置和重定标中间值。必须用模型真实参数做范围分析。
+RISK-08：物理ROM的真实访问速度、输出极性、使能脚时序必须与行为模型参数一致。
+RISK-09：独立SRAM数量多，PCB地址/数据控制线和时钟扇出较大；需要分区、就近去耦、缓冲和统一时序约束。
+RISK-10：MNIST输入像素极性、归一化范围、行列顺序必须与训练预处理完全一致。
+
+最终交付标准：一个能够从预加载的28×28图像和uint8模型参数开始，仅由硬件START信号触发，在没有MCU参与推理调度的情况下，自动完成CONV1→POOL1→CONV2→POOL2→FC1→FC2→ARGMAX，并输出0～9类别编号的系统。
