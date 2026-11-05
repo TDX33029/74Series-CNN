@@ -1,0 +1,793 @@
+{
+  "labels": {
+    "S01_Supervisor": [
+      "ARGMAX_DONE",
+      "ARGMAX_START",
+      "BUSY",
+      "C1_DONE",
+      "C1_START",
+      "C2_DONE",
+      "C2_START",
+      "CLK",
+      "DONE",
+      "ERROR",
+      "ERROR_CODE0",
+      "ERROR_CODE1",
+      "ERROR_CODE2",
+      "ERROR_CODE3",
+      "FC1_DONE",
+      "FC1_START",
+      "FC2_DONE",
+      "FC2_START",
+      "IMAGE_READY",
+      "MODEL_READY",
+      "P1_DONE",
+      "P1_START",
+      "P2_DONE",
+      "P2_START",
+      "RESET_N",
+      "RESULT0",
+      "RESULT1",
+      "RESULT2",
+      "RESULT3",
+      "RESULT_IN0",
+      "RESULT_IN1",
+      "RESULT_IN2",
+      "RESULT_IN3",
+      "RESULT_VALID",
+      "START"
+    ],
+    "S02_Timing": [
+      "CLK",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7",
+      "MEM_ACK",
+      "MEM_BUSY",
+      "MEM_DATA0",
+      "MEM_DATA1",
+      "MEM_DATA2",
+      "MEM_DATA3",
+      "MEM_DATA4",
+      "MEM_DATA5",
+      "MEM_DATA6",
+      "MEM_DATA7",
+      "MEM_DONE",
+      "MEM_nCE",
+      "MEM_nOE",
+      "MEM_nWE",
+      "REQ",
+      "RESET_N",
+      "WE"
+    ],
+    "S04_Memories": [
+      "ADDR0",
+      "ADDR1",
+      "ADDR10",
+      "ADDR11",
+      "ADDR12",
+      "ADDR13",
+      "ADDR14",
+      "ADDR15",
+      "ADDR16",
+      "ADDR17",
+      "ADDR18",
+      "ADDR19",
+      "ADDR2",
+      "ADDR20",
+      "ADDR21",
+      "ADDR22",
+      "ADDR23",
+      "ADDR3",
+      "ADDR4",
+      "ADDR5",
+      "ADDR6",
+      "ADDR7",
+      "ADDR8",
+      "ADDR9",
+      "CLK",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7",
+      "IMAGE_DONE_N",
+      "IMAGE_READY",
+      "LOAD_DATA0",
+      "LOAD_DATA1",
+      "LOAD_DATA2",
+      "LOAD_DATA3",
+      "LOAD_DATA4",
+      "LOAD_DATA5",
+      "LOAD_DATA6",
+      "LOAD_DATA7",
+      "LOAD_EN",
+      "LOAD_nOE",
+      "LOAD_nWE",
+      "MEM_SEL0",
+      "MEM_SEL1",
+      "MEM_SEL2",
+      "MEM_SEL3",
+      "MEM_SEL4",
+      "MEM_nCE",
+      "MEM_nOE",
+      "MEM_nWE",
+      "MODEL_DONE_N",
+      "MODEL_READY",
+      "RESET_N"
+    ],
+    "S05_Pool": [
+      "CLK",
+      "DONE",
+      "IN_ADDR0",
+      "IN_ADDR1",
+      "IN_ADDR10",
+      "IN_ADDR11",
+      "IN_ADDR12",
+      "IN_ADDR2",
+      "IN_ADDR3",
+      "IN_ADDR4",
+      "IN_ADDR5",
+      "IN_ADDR6",
+      "IN_ADDR7",
+      "IN_ADDR8",
+      "IN_ADDR9",
+      "IN_DATA0",
+      "IN_DATA1",
+      "IN_DATA2",
+      "IN_DATA3",
+      "IN_DATA4",
+      "IN_DATA5",
+      "IN_DATA6",
+      "IN_DATA7",
+      "OUT_ADDR0",
+      "OUT_ADDR1",
+      "OUT_ADDR10",
+      "OUT_ADDR11",
+      "OUT_ADDR2",
+      "OUT_ADDR3",
+      "OUT_ADDR4",
+      "OUT_ADDR5",
+      "OUT_ADDR6",
+      "OUT_ADDR7",
+      "OUT_ADDR8",
+      "OUT_ADDR9",
+      "OUT_DATA0",
+      "OUT_DATA1",
+      "OUT_DATA2",
+      "OUT_DATA3",
+      "OUT_DATA4",
+      "OUT_DATA5",
+      "OUT_DATA6",
+      "OUT_DATA7",
+      "OUT_WE",
+      "P1_DONE",
+      "P2_DONE",
+      "POOL_BUSY",
+      "POOL_SEL",
+      "RESET_N",
+      "START"
+    ],
+    "S06_Argmax": [
+      "ARGMAX_BUSY",
+      "ARGMAX_DONE",
+      "ARGMAX_RESULT_VALID",
+      "CLK",
+      "RESET_N",
+      "RESULT_IN0",
+      "RESULT_IN1",
+      "RESULT_IN2",
+      "RESULT_IN3",
+      "SCORE_ADDR0",
+      "SCORE_ADDR1",
+      "SCORE_ADDR2",
+      "SCORE_ADDR3",
+      "SCORE_ADDR4",
+      "SCORE_ADDR5",
+      "SCORE_DATA0",
+      "SCORE_DATA1",
+      "SCORE_DATA10",
+      "SCORE_DATA11",
+      "SCORE_DATA12",
+      "SCORE_DATA13",
+      "SCORE_DATA14",
+      "SCORE_DATA15",
+      "SCORE_DATA16",
+      "SCORE_DATA17",
+      "SCORE_DATA18",
+      "SCORE_DATA19",
+      "SCORE_DATA2",
+      "SCORE_DATA20",
+      "SCORE_DATA21",
+      "SCORE_DATA22",
+      "SCORE_DATA23",
+      "SCORE_DATA24",
+      "SCORE_DATA25",
+      "SCORE_DATA26",
+      "SCORE_DATA27",
+      "SCORE_DATA28",
+      "SCORE_DATA29",
+      "SCORE_DATA3",
+      "SCORE_DATA30",
+      "SCORE_DATA31",
+      "SCORE_DATA4",
+      "SCORE_DATA5",
+      "SCORE_DATA6",
+      "SCORE_DATA7",
+      "SCORE_DATA8",
+      "SCORE_DATA9",
+      "SCORE_RD",
+      "START"
+    ],
+    "S07_Conv1": [
+      "+5V",
+      "C1_ADDR0",
+      "C1_ADDR1",
+      "C1_ADDR10",
+      "C1_ADDR11",
+      "C1_ADDR12",
+      "C1_ADDR13",
+      "C1_ADDR14",
+      "C1_ADDR15",
+      "C1_ADDR2",
+      "C1_ADDR3",
+      "C1_ADDR4",
+      "C1_ADDR5",
+      "C1_ADDR6",
+      "C1_ADDR7",
+      "C1_ADDR8",
+      "C1_ADDR9",
+      "C1_BUSY",
+      "C1_DONE",
+      "C1_MEM_nCE_B",
+      "C1_MEM_nCE_IN",
+      "C1_MEM_nCE_MC",
+      "C1_MEM_nCE_OUT",
+      "C1_MEM_nCE_Q",
+      "C1_MEM_nCE_W",
+      "C1_START",
+      "CLK",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7",
+      "GND",
+      "RESET_N"
+    ],
+    "S08_Conv2": [
+      "+5V",
+      "C2_ADDR0",
+      "C2_ADDR1",
+      "C2_ADDR10",
+      "C2_ADDR11",
+      "C2_ADDR12",
+      "C2_ADDR13",
+      "C2_ADDR14",
+      "C2_ADDR15",
+      "C2_ADDR2",
+      "C2_ADDR3",
+      "C2_ADDR4",
+      "C2_ADDR5",
+      "C2_ADDR6",
+      "C2_ADDR7",
+      "C2_ADDR8",
+      "C2_ADDR9",
+      "C2_BUSY",
+      "C2_DONE",
+      "C2_MEM_nCE_B",
+      "C2_MEM_nCE_IN",
+      "C2_MEM_nCE_MC",
+      "C2_MEM_nCE_OUT",
+      "C2_MEM_nCE_Q",
+      "C2_MEM_nCE_W",
+      "C2_START",
+      "CLK",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7",
+      "GND",
+      "RESET_N"
+    ],
+    "S09_FC": [
+      "+5V",
+      "CLK",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7",
+      "FC1_DONE",
+      "FC1_START",
+      "FC2_DONE",
+      "FC2_START",
+      "FC_ADDR0",
+      "FC_ADDR1",
+      "FC_ADDR10",
+      "FC_ADDR11",
+      "FC_ADDR12",
+      "FC_ADDR13",
+      "FC_ADDR14",
+      "FC_ADDR15",
+      "FC_ADDR2",
+      "FC_ADDR3",
+      "FC_ADDR4",
+      "FC_ADDR5",
+      "FC_ADDR6",
+      "FC_ADDR7",
+      "FC_ADDR8",
+      "FC_ADDR9",
+      "FC_MEM_nCE_B",
+      "FC_MEM_nCE_IN",
+      "FC_MEM_nCE_MC",
+      "FC_MEM_nCE_OUT",
+      "FC_MEM_nCE_Q",
+      "FC_MEM_nCE_W",
+      "FC_SEL",
+      "GND",
+      "RESET_N"
+    ],
+    "S10_Top_IO": [
+      "ADDR0",
+      "ADDR1",
+      "ADDR10",
+      "ADDR11",
+      "ADDR12",
+      "ADDR13",
+      "ADDR14",
+      "ADDR15",
+      "ADDR16",
+      "ADDR17",
+      "ADDR18",
+      "ADDR19",
+      "ADDR2",
+      "ADDR20",
+      "ADDR21",
+      "ADDR22",
+      "ADDR23",
+      "ADDR3",
+      "ADDR4",
+      "ADDR5",
+      "ADDR6",
+      "ADDR7",
+      "ADDR8",
+      "ADDR9",
+      "BUSY",
+      "CLK",
+      "DONE",
+      "ERROR",
+      "ERROR_CODE0",
+      "ERROR_CODE1",
+      "ERROR_CODE2",
+      "ERROR_CODE3",
+      "IMAGE_DONE_N",
+      "IMAGE_READY",
+      "LOAD_DATA0",
+      "LOAD_DATA1",
+      "LOAD_DATA2",
+      "LOAD_DATA3",
+      "LOAD_DATA4",
+      "LOAD_DATA5",
+      "LOAD_DATA6",
+      "LOAD_DATA7",
+      "LOAD_EN",
+      "LOAD_nOE",
+      "LOAD_nWE",
+      "MEM_SEL0",
+      "MEM_SEL1",
+      "MEM_SEL2",
+      "MEM_SEL3",
+      "MEM_SEL4",
+      "MODEL_DONE_N",
+      "MODEL_READY",
+      "RESET_N",
+      "RESULT0",
+      "RESULT1",
+      "RESULT2",
+      "RESULT3",
+      "RESULT_VALID",
+      "START"
+    ]
+  },
+  "results": [
+    {
+      "net": "C1_START",
+      "present": [
+        "S01_Supervisor",
+        "S07_Conv1"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S07_Conv1"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "C1_DONE",
+      "present": [
+        "S01_Supervisor",
+        "S07_Conv1"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S07_Conv1"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "C2_START",
+      "present": [
+        "S01_Supervisor",
+        "S08_Conv2"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S08_Conv2"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "C2_DONE",
+      "present": [
+        "S01_Supervisor",
+        "S08_Conv2"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S08_Conv2"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "FC1_START",
+      "present": [
+        "S01_Supervisor",
+        "S09_FC"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S09_FC"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "FC1_DONE",
+      "present": [
+        "S01_Supervisor",
+        "S09_FC"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S09_FC"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "FC2_START",
+      "present": [
+        "S01_Supervisor",
+        "S09_FC"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S09_FC"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "FC2_DONE",
+      "present": [
+        "S01_Supervisor",
+        "S09_FC"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S09_FC"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "P1_DONE",
+      "present": [
+        "S01_Supervisor",
+        "S05_Pool"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S05_Pool"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "P2_DONE",
+      "present": [
+        "S01_Supervisor",
+        "S05_Pool"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S05_Pool"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "ARGMAX_DONE",
+      "present": [
+        "S01_Supervisor",
+        "S06_Argmax"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S06_Argmax"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "P1_START",
+      "present": [
+        "S01_Supervisor"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S05_Pool"
+      ],
+      "missing": [
+        "S05_Pool"
+      ],
+      "status": "FAIL"
+    },
+    {
+      "net": "P2_START",
+      "present": [
+        "S01_Supervisor"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S05_Pool"
+      ],
+      "missing": [
+        "S05_Pool"
+      ],
+      "status": "FAIL"
+    },
+    {
+      "net": "ARGMAX_START",
+      "present": [
+        "S01_Supervisor"
+      ],
+      "required": [
+        "S01_Supervisor",
+        "S06_Argmax"
+      ],
+      "missing": [
+        "S06_Argmax"
+      ],
+      "status": "FAIL"
+    },
+    {
+      "net": "MEM_nCE",
+      "present": [
+        "S02_Timing",
+        "S04_Memories"
+      ],
+      "required": [
+        "S02_Timing",
+        "S04_Memories"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "MEM_nOE",
+      "present": [
+        "S02_Timing",
+        "S04_Memories"
+      ],
+      "required": [
+        "S02_Timing",
+        "S04_Memories"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "MEM_nWE",
+      "present": [
+        "S02_Timing",
+        "S04_Memories"
+      ],
+      "required": [
+        "S02_Timing",
+        "S04_Memories"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "MEM_ACK",
+      "present": [
+        "S02_Timing"
+      ],
+      "required": [
+        "S02_Timing"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "MEM_DONE",
+      "present": [
+        "S02_Timing"
+      ],
+      "required": [
+        "S02_Timing"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "MEM_BUSY",
+      "present": [
+        "S02_Timing"
+      ],
+      "required": [
+        "S02_Timing"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "REQ",
+      "present": [
+        "S02_Timing"
+      ],
+      "required": [
+        "S02_Timing"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "WE",
+      "present": [
+        "S02_Timing"
+      ],
+      "required": [
+        "S02_Timing"
+      ],
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "net": "C1_ADDR0",
+      "present": [
+        "S07_Conv1"
+      ],
+      "required": [
+        "S04_Memories"
+      ],
+      "missing": [
+        "S04_Memories"
+      ],
+      "status": "FAIL"
+    },
+    {
+      "net": "C2_ADDR0",
+      "present": [
+        "S08_Conv2"
+      ],
+      "required": [
+        "S04_Memories"
+      ],
+      "missing": [
+        "S04_Memories"
+      ],
+      "status": "FAIL"
+    },
+    {
+      "net": "FC_ADDR0",
+      "present": [
+        "S09_FC"
+      ],
+      "required": [
+        "S04_Memories"
+      ],
+      "missing": [
+        "S04_Memories"
+      ],
+      "status": "FAIL"
+    },
+    {
+      "net": "C1_MEM_nCE_IN",
+      "present": [
+        "S07_Conv1"
+      ],
+      "required": [
+        "S04_Memories"
+      ],
+      "missing": [
+        "S04_Memories"
+      ],
+      "status": "FAIL"
+    },
+    {
+      "net": "C2_MEM_nCE_IN",
+      "present": [
+        "S08_Conv2"
+      ],
+      "required": [
+        "S04_Memories"
+      ],
+      "missing": [
+        "S04_Memories"
+      ],
+      "status": "FAIL"
+    },
+    {
+      "net": "FC_MEM_nCE_IN",
+      "present": [
+        "S09_FC"
+      ],
+      "required": [
+        "S04_Memories"
+      ],
+      "missing": [
+        "S04_Memories"
+      ],
+      "status": "FAIL"
+    },
+    {
+      "net": "DONE (collision check)",
+      "present": [
+        "S01_Supervisor",
+        "S05_Pool",
+        "S10_Top_IO"
+      ],
+      "required": [],
+      "missing": [],
+      "status": "WARN"
+    },
+    {
+      "net": "START",
+      "present": [
+        "S01_Supervisor",
+        "S05_Pool",
+        "S06_Argmax",
+        "S10_Top_IO"
+      ],
+      "required": [],
+      "missing": [],
+      "status": "INFO"
+    }
+  ]
+}

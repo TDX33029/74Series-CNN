@@ -1,0 +1,97 @@
+[
+  {
+    "id": "F-001",
+    "severity": "major",
+    "module": "S02/S07-S09",
+    "title": "Shared S02 timing controller vs per-engine S02_MEM_IF placeholders",
+    "claim": "Brief states S02 has one shared timing controller and S07-S09 have 3 S02_MEM_IF as page-in placeholders; REQ/WE/ACK/DONE/BUSY need verification.",
+    "evidence": [
+      "grep S02_MEM_IF count: 206 occurrences across project (S07/S08/S09). No S02_MEM_IF found in S02_Timing.kicad_sch; S02_Timing uses 74HC138/74HC688 and MEM_nCE/nOE/nWE outputs.",
+      "S07_Conv1.kicad_sch shows S02_MEM_IF with REQ/WE in, MEM_nCE/nOE/nWE/ACK/DONE/BUSY out; internal labels C1_MEM_REQ/C1_MEM_nCE etc.; globals C1_MEM_nCE_MC/Q/B/OUT/W appear. Connection to S04/S02 not visible as single shared controller connection in simple grep (appears engine-local IF).",
+      "Root sheet text states 'Memory timing controller ... nCE/nOE/nWE active-low, ACK handshake' on S02 and lists MEM_nCE/nOE/nWE/MEM_ACK on root, while engines list C1/C2/FC_ADDR/MEM_nCE_*."
+    ],
+    "proposed_fix": "Trace S07/S08/S09 S02_MEM_IF outputs to global nets and confirm they connect to actual S02 instance (or document bus fabric). If engine-local IFs generate mem controls independently, reconcile with 'one shared S02' claim and arbitration.",
+    "confidence": "high",
+    "functional": true
+  },
+  {
+    "id": "F-002",
+    "severity": "major",
+    "module": "S07-S09/S04",
+    "title": "Engine memory interface reachability to S04/ADDR/MEM_SEL unclear",
+    "claim": "Brief asks whether Cx_ADDR/Cx_MEM_nCE connect to S04 ADDR/MEM_SEL (if not, joint logic incomplete).",
+    "evidence": [
+      "Connection matrix shows MEM_nCE/nOE/nWE from S02->S04 and ADDR/MEM_SEL from S10/S04 context; engines produce C1_MEM_nCE_*/C1_ADDR-like nets (globals appear in S07). Root sheet lists 'C1_DONE,C1_BUSY,C1_ADDR[15:0], C1_MEM_nCE_*' and similar for C2/FC.",
+      "No direct grep evidence of Cx_ADDR connected to top-level S04 ADDR/MEM_SEL bus in quick scan; requires netlist-level tracing. Cannot confirm with text grep alone."
+    ],
+    "proposed_fix": "Export hierarchical netlist (kicad-cli) and trace each engine's memory request/address to S04; verify MEM_SEL decoding covers engine windows. Document in connection matrix.",
+    "confidence": "medium",
+    "functional": true
+  },
+  {
+    "id": "F-003",
+    "severity": "major",
+    "module": "S07-S09",
+    "title": "12x LUT_Mult_Unit vs 4 shared LUT lanes + 8x 27C512 in S04",
+    "claim": "Brief states 12 LUT_Mult_Unit blocks may be logical view of 4 shared LUT lanes; S04 has 8x 27C512 as physical LUT tables.",
+    "evidence": [
+      "LUT_Mult_Unit count: 543 occurrences across project. S07 shows 4x LUT_Mult_Unit (text: 'MAC datapath: 4x LUT_Mult_Unit...'), S08/S09 similar (4 each). S_LUT_Mult_1 is unit reference sheet. BOM lists 12x 'LUT_Mult_Unit' (U7057-U7060,U8061-U8064,U9046-U9049).",
+      "S04 has 17x 27C512 total in BOM (U1001,U1002,U2001,U4020-U4027,U7136,U7137,U8140,U8141,U9127,U9128). Sim confirms LUT contents/spice tests pass for generated LUTs."
+    ],
+    "proposed_fix": "Clarify mapping: are LUT_Mult_Unit physical blocks or schematic symbols instantiating shared ROMs? Cross-reference to S04 ROM selection (MEM_SEL/LUT related) and ensure BOM count matches intended architecture.",
+    "confidence": "high",
+    "functional": true
+  },
+  {
+    "id": "F-004",
+    "severity": "major",
+    "module": "Requant/FC",
+    "title": "Requant_Block implementation scope needs verification",
+    "claim": "Requant_Block is architectural macro; internal 32x16 serial mult, 64-bit prod, shift/round/sat/zero-point correction - need to confirm implemented or expanded.",
+    "evidence": [
+      "BOM lists 3x Requant_Block (U7123,U8127,U9113). S07 text mentions 'requant block (serial 32x16 -> 64-bit)'. Sim tests (run_all) all pass at behavior level, but schematic implementation details not fully traced in this review."
+    ],
+    "proposed_fix": "Inspect Requant_Block symbol/sheet instances for actual logic (not just placeholder) and verify against quantization contract.",
+    "confidence": "medium",
+    "functional": true
+  },
+  {
+    "id": "F-005",
+    "severity": "major",
+    "module": "Top/ERC",
+    "title": "42 pin_not_driven errors at top level - classify internal vs external",
+    "claim": "Top level still has 42 pin_not_driven errors; need to judge external interface vs true internal breaks.",
+    "evidence": [
+      "Main ERC: CNN_74xx_System.rpt ends with 'ERC messages: 940 Errors 42 Warnings 898'. Sample shows pin_not_driven on U5012/U5013 pins (S02 area) and others. Docs state some are external inputs when viewed per-sheet; need hierarchical classification."
+    ],
+    "proposed_fix": "Classify each of 42 pin_not_driven: if driven from another sheet in hierarchy -> wiring issue; if truly external connector pin with no source in design -> document as external; if internal net -> fix connection.",
+    "confidence": "medium",
+    "functional": true
+  },
+  {
+    "id": "F-006",
+    "severity": "minor",
+    "module": "S01",
+    "title": "START network fanout to S05/S06 noted in connection matrix",
+    "claim": "Connection matrix notes START goes to S01/S05/S06 and S01 P1/P2/ARGMAX_START not connected to peer (needs review).",
+    "evidence": [
+      "output/connection_matrix.csv: 'START,S01;S05;S06,S10,\"S01,S05,S06\",主机 START 同时到 S01/S05/S06；S01 的 P1/P2/ARGMAX_START 未连到对端（需评审）'"
+    ],
+    "proposed_fix": "Verify S05/S06 actually controlled by S01 handshake (not just START) per protocol - sim supervisor passes but schematic wiring needs confirmation.",
+    "confidence": "medium",
+    "functional": true
+  },
+  {
+    "id": "F-007",
+    "severity": "minor",
+    "module": "S01/S05",
+    "title": "DONE network possible multi-driver",
+    "claim": "Connection matrix flags DONE may have multi-driver risk (system DONE and S05 local DONE same net).",
+    "evidence": [
+      "output/connection_matrix.csv: 'DONE,S01;S05;S10,S01 (system) / S05 (pool),S10,同名网络合并系统 DONE 与 S05 本地 DONE；存在多驱动风险（需评审）'"
+    ],
+    "proposed_fix": "Check drivers of DONE net (open-collector/tri-state/buffers) and ensure only one active driver at a time or use wired-OR as intended.",
+    "confidence": "medium",
+    "functional": true
+  }
+]

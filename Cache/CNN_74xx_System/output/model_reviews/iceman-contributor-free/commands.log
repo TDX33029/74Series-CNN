@@ -1,0 +1,28 @@
+===ENV===
+date=2026-11-05
+cwd_main=D:/Document/tempPrj/74Series-CNN/Cache/CNN_74xx_System
+cwd_work=D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free/work
+repo=git yes
+
+===SETUP===
+rm -rf D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free && mkdir -p D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free/work
+cp -r D:/Document/tempPrj/74Series-CNN/Cache/CNN_74xx_System/. D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free/work/
+mkdir -p D:/Document/tempPrj/74Series-CNN/Cache/CNN_74xx_System/output/model_reviews/iceman-contributor-free
+
+===TESTS IN WORK COPY===
+cd D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free/work && python sim/run_all.py  (RC:0; 9/9 PASS)
+cd D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free/work && python tools/gen_lut.py  (RC:0)
+cd D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free/work && python sim/gen_lut_tb.py  (RC:0)
+cd D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free/work && python sim/gen_glue_tb.py  (RC:0)
+cd D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free/work && python sim/gen_supervisor_tb.py  (RC:0)
+cd D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free/work && python sim/gen_timing_tb.py  (RC:0)
+cd D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free/work && python sim/gen_mem_decode_tb.py  (RC:0)
+cd D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free/work && python sim/gen_pool_tb.py  (RC:0)
+cd D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free/work && python sim/gen_argmax_tb.py  (RC:0)
+cd D:/Document/tempPrj/74Series-CNN/Cache/_review_iceman-contributor-free/work && python sim/gen_engine_tb.py  (RC:0; conv1/conv2/fc all PASS)
+
+===STATIC AUDIT===
+grep counts: S02_MEM_IF occurrences (main)=206; LUT_Mult_Unit (main)=543
+Top ERC main: CNN_74xx_System.rpt reports "ERC messages: 940  Errors 42  Warnings 898"
+BOM: output/bom/CNN_74xx_System_BOM.csv (60 lines) - see details
+Connection matrix: output/connection_matrix.csv

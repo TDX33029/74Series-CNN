@@ -1,0 +1,156 @@
+[
+  {
+    "id": "M-01",
+    "severity": "blocker",
+    "module": "S01/S05/S06",
+    "title": "P1_START/P2_START/ARGMAX_START have no loads; Pool/Argmax use generic START",
+    "evidence": "top.net: P1_START only U1008.17, P2_START only U1008.15, ARGMAX_START only U1008.12; START net includes U5036.1/U5037.5/U6036.4/U6037.5; build_pool.py:501/514 and build_argmax.py:328/339 connect START.",
+    "fix": "OR P1_START/P2_START into Pool start; use ARGMAX_START for Argmax; regenerate.",
+    "confidence": "high",
+    "functional": true,
+    "status": "fixed"
+  },
+  {
+    "id": "M-02",
+    "severity": "blocker",
+    "module": "S07-S09/S04",
+    "title": "Engine address and chip-select nets do not reach S04",
+    "evidence": "top.net: C1_ADDR0..15, C2_ADDR0..15, FC_ADDR0..15 are single-node; Cx_MEM_nCE_* are single-node; S04 ADDR/MEM_SEL only from S10 U10093/U10096.",
+    "fix": "Add bus owner/arbiter that muxes active engine ADDR/bank selects onto S04 ADDR/MEM_SEL and gates S04 chip selects.",
+    "confidence": "high",
+    "functional": true,
+    "status": "open"
+  },
+  {
+    "id": "M-03",
+    "severity": "blocker",
+    "module": "S02/S04/S07-S09",
+    "title": "S02 MEM_DATA/ACK/DONE/BUSY and engine memory handshake are not closed",
+    "evidence": "top.net: MEM_DATA0..7 only U2010; MEM_ACK/DONE/BUSY only U2005+TP; C1_MEM_ACK only U7136/U7137/U7145; C1_MEM_DONE/BUSY/nOE/nWE single-node.",
+    "fix": "Connect S02 data/ACK/DONE/BUSY to the bus owner and active engine; add request/owner mux.",
+    "confidence": "high",
+    "functional": true,
+    "status": "open"
+  },
+  {
+    "id": "M-04",
+    "severity": "blocker",
+    "module": "S01/S05",
+    "title": "DONE is driven by two enabled 74HCT541 outputs",
+    "evidence": "top.net DONE nodes U1009.17 and U5039.17; both 74HCT541 G1/G2 tied GND in build_supervisor.py:158-172 and build_pool.py:550-558.",
+    "fix": "Rename Pool output to POOL_DONE; keep only S01 DONE on the global net.",
+    "confidence": "high",
+    "functional": true,
+    "status": "fixed"
+  },
+  {
+    "id": "M-05",
+    "severity": "blocker",
+    "module": "S07-S09/Requant",
+    "title": "Requant parameter buses are unexpanded; BIAS/M/SHIFT/ZP/N_MACS floating",
+    "evidence": "top.audit.json unexpanded_bus_nets 27; C1_B_DATA[31:0], C1_M[31:0], C1_SHIFT[5:0], C1_ZP_X/W/OUT[15:0], C1_N_MACS[15:0] only U7123 pins 9-15; C1_ACC has bit members and is connected.",
+    "fix": "Wire qparam/BIAS/M/SHIFT/ZP/N_MACS from memory/registers, or expand Requant into a real sheet with defined inputs.",
+    "confidence": "high",
+    "functional": true,
+    "status": "open"
+  },
+  {
+    "id": "M-06",
+    "severity": "blocker",
+    "module": "S07-S09/S02",
+    "title": "S02_MEM_IF WAIT/ACK/DONE/BUSY and chip-select outputs are floating",
+    "evidence": "top.audit.json: C1_WAIT_READ/WRITE buses unexpanded; C1_MEM_nOE/nWE/DONE/BUSY single-node; C1_MEM_nCE_* single-node; C1_MEM_ACK only local microcode ROM address pins.",
+    "fix": "Remove/replace the placeholder S02_MEM_IF blocks with a shared S02 client/bus owner; route handshake.",
+    "confidence": "high",
+    "functional": true,
+    "status": "open"
+  },
+  {
+    "id": "M-07",
+    "severity": "blocker",
+    "module": "S05/S06",
+    "title": "42 top ERC errors are Pool/Argmax data inputs, not external interfaces",
+    "evidence": "output/erc/CNN_74xx_System.rpt: 32x U6004-U6007 D0-D7 (S06), 8x U5012/U5013 A0-A3 (S05), U5005.P2, U9005.S.",
+    "fix": "Wire Pool input data and Argmax SCORE_DATA; reclassify ERC in docs.",
+    "confidence": "high",
+    "functional": true,
+    "status": "open"
+  },
+  {
+    "id": "M-08",
+    "severity": "major",
+    "module": "S04/S07-S09",
+    "title": "12 LUT_Mult_Unit symbols vs 4 shared LUT lanes / 8x27C512",
+    "evidence": "BOM: 12 LUT_Mult_Unit block symbols; S04: 8x27C512 in 4 pairs; S07/S08/S09 each show 4 logical LUT blocks; engine 2x27C512 are local microcode.",
+    "fix": "Decide shared 4-lane bank vs 12 independent units; expand accordingly; update BOM/memory map.",
+    "confidence": "high",
+    "functional": true,
+    "status": "open"
+  },
+  {
+    "id": "M-09",
+    "severity": "major",
+    "module": "S07-S09/Requant",
+    "title": "Requant is an architectural macro, not a gate-level implementation",
+    "evidence": "Requant_Block symbol only; BOM 3 blocks; no S_Requant sheet; docs REPORT_Conv_FC.md:138-152 describes internal math but no logic.",
+    "fix": "Build S_Requant with serial 32x16 multiplier, 64-bit product, shift/round/saturate, zero-point correction; simulate.",
+    "confidence": "high",
+    "functional": true,
+    "status": "open"
+  },
+  {
+    "id": "M-10",
+    "severity": "major",
+    "module": "S01/S02/clock",
+    "title": "10-100 Hz clock breaks default wait/timeout/pulse assumptions",
+    "evidence": "S02 WAIT_READ=3/WAIT_WRITE=2; S01 24-bit timeout; 8 MHz X1; 10 Hz gives 19.4 days timeout and 300 ms/200 ms wait; manual 2.1 s/125 ns assumes 8 MHz.",
+    "fix": "Make wait/timeout clock-selectable; document single-step/run modes; add clock divider or external clock input.",
+    "confidence": "high",
+    "functional": false,
+    "status": "open"
+  },
+  {
+    "id": "M-11",
+    "severity": "major",
+    "module": "BOM",
+    "title": "490 IC BOM excludes 18 unexpanded blocks and has missing footprints/decoupling",
+    "evidence": "BOM 861 physical refs, 490 ICs, 18 block symbols, 96 10k resistors with U refs and no footprint, engines lack decoupling.",
+    "fix": "Expand blocks and clean BOM before fabrication; count physical packages only.",
+    "confidence": "high",
+    "functional": false,
+    "status": "open"
+  },
+  {
+    "id": "M-12",
+    "severity": "blocker",
+    "module": "S05/S08",
+    "title": "CONV2 input address uses HWC while Pool1 and spec use CHW",
+    "evidence": "build_conv2.py note/formula (oy+ky)*96+(ox+kx)*8+ic; build_pool.py OUT_ADDR c*144+y*12+x; spec 2.1 CHW; layout harness 7198/7200 mismatches; old SY96 chain also had +481 offset.",
+    "fix": "IN_ADDR = ic*144+(oy+ky)*12+(ox+kx); update golden/SPICE/notes; regenerate S08.",
+    "confidence": "high",
+    "functional": true,
+    "status": "fixed"
+  },
+  {
+    "id": "M-13",
+    "severity": "low",
+    "module": "S02",
+    "title": "74HC138 state-decoder outputs CAPTURE_N/DONE_ST_N/HOLD_N/RELEASE_N/WAIT_N have no loads",
+    "evidence": "S02 netlist: outputs only carry local labels; nCE/nOE/nWE/ACK/DONE are generated by U3/U5, not these decoder outputs.",
+    "fix": "Remove unused outputs or add test points; cosmetic ERC cleanup.",
+    "confidence": "high",
+    "functional": false,
+    "status": "open"
+  },
+  {
+    "id": "M-14",
+    "severity": "none",
+    "module": "S07-S09",
+    "title": "74HC138 enable polarity: original ~E1=MEM_nCE is correct (false alarm)",
+    "evidence": "Original decoder138 call used e0=GND, e1=MEM_nCE, e2=+5V. 74HC138 ~E1 is active-low, so the decoder was enabled during a transaction. The bus patch moved MEM_nCE to ~E0, which is functionally equivalent.",
+    "fix": "No functional fix required; the E0/E1 move is a readability refactor.",
+    "confidence": "high",
+    "functional": true,
+    "status": "rejected"
+  }
+]
