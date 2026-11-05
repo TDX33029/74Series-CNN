@@ -1,0 +1,38 @@
+
+digraph flow {
+  graph [rankdir=LR, nodesep=0.35, ranksep=0.45, fontname="Microsoft YaHei",
+         fontsize=12, bgcolor="white", pad=0.15];
+  node [shape=box, style="rounded,filled", fontname="Microsoft YaHei",
+        fontsize=12, margin="0.14,0.08", penwidth=1.1];
+  edge [fontname="Microsoft YaHei", fontsize=9, color="#64748B", arrowsize=0.65];
+
+  IN  [label="INPUT
+28×28×1
+784 B", fillcolor="#E0F2FE"];
+  C1  [label="CONV1
+24×24×8
+4608 B
+S13: ACC>>8", fillcolor="#EDE9FE"];
+  P1  [label="POOL1
+12×12×8
+288 B", fillcolor="#FFEDD5"];
+  C2  [label="CONV2
+10×10×16
+1600 B
+S15: ACC>>9", fillcolor="#EDE9FE"];
+  P2  [label="POOL2
+5×5×16
+400 B", fillcolor="#FFEDD5"];
+  F1  [label="FC1
+32 B
+S17: ACC>>8", fillcolor="#EDE9FE"];
+  F2  [label="FC2
+10×4 B
+S17: raw s32", fillcolor="#EDE9FE"];
+  AM  [label="ARGMAX
+class 0..9", fillcolor="#FEF3C7"];
+  R   [label="RESULT
+4-bit", fillcolor="#DCFCE7"];
+
+  IN -> C1 -> P1 -> C2 -> P2 -> F1 -> F2 -> AM -> R;
+}

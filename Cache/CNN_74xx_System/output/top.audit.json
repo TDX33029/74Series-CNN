@@ -1,0 +1,74 @@
+{
+  "netlist": "output\\top.net",
+  "net_count": 2994,
+  "single_node_module_nets": [
+    {
+      "net": "ARGMAX_RESULT_VALID",
+      "nodes": [
+        [
+          "U6034",
+          "11"
+        ]
+      ]
+    },
+    {
+      "net": "POOL_BUSY",
+      "nodes": [
+        [
+          "U5039",
+          "16"
+        ]
+      ]
+    }
+  ],
+  "unexpanded_bus_nets": [],
+  "done_nodes": [
+    [
+      "TP10007",
+      "1"
+    ],
+    [
+      "TP1005",
+      "1"
+    ],
+    [
+      "U1009",
+      "17"
+    ],
+    [
+      "U10097",
+      "3"
+    ]
+  ],
+  "done_74hct541_outputs": [
+    [
+      "U1009",
+      "17",
+      "74HCT541"
+    ]
+  ],
+  "start_nodes": [
+    [
+      "TP10003",
+      "1"
+    ],
+    [
+      "TP1003",
+      "1"
+    ],
+    [
+      "U10091",
+      "9"
+    ],
+    [
+      "U1011",
+      "2"
+    ]
+  ],
+  "checks": {
+    "single_node_module_nets": 2,
+    "unexpanded_bus_nets": 0,
+    "done_541_output_count": 1,
+    "done_multidriver": false
+  }
+}

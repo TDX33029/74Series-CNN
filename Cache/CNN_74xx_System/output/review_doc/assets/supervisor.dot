@@ -1,0 +1,27 @@
+
+digraph sup {
+  graph [rankdir=LR, nodesep=0.3, ranksep=0.45, fontname="Microsoft YaHei",
+         fontsize=11, bgcolor="white", pad=0.12];
+  node [shape=box, style="rounded,filled", fontname="Microsoft YaHei",
+        fontsize=11, margin="0.12,0.07", penwidth=1.1];
+  edge [fontname="Microsoft YaHei", fontsize=9, color="#64748B", arrowsize=0.65];
+
+  IN [label="S10\nSTART / READY", fillcolor="#E0F2FE"];
+  ROM [label="2×27C512\n64K×16 微码", fillcolor="#FEF3C7"];
+  SR [label="74HCT273\n状态寄存器", fillcolor="#FEF3C7"];
+  OR [label="2×74HCT574\n输出寄存器", fillcolor="#FEF3C7"];
+  DEC [label="74HC238\nSTAGE_CODE 译码", fillcolor="#DCFCE7"];
+  ENG [label="S07/S05/S08/S09/S06\nSTART 脉冲", fillcolor="#EDE9FE"];
+  DONE [label="各阶段 DONE\nTIMEOUT", fillcolor="#FFEDD5"];
+  HOST [label="BUSY / DONE / ERROR\nRESULT_VALID", fillcolor="#E0F2FE"];
+  TMO [label="24 位超时\n计数器 CLR", fillcolor="#FEF3C7"];
+
+  IN -> ROM [label="状态 + 条件"];
+  ROM -> SR [label="next state"];
+  ROM -> OR [label="控制位"];
+  SR -> ROM [label="当前状态"];
+  OR -> DEC -> ENG;
+  OR -> HOST;
+  DONE -> ROM [label="反馈", style=dashed];
+  OR -> TMO [label="TIMEOUT_CLR", style=dotted];
+}

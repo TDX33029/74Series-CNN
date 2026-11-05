@@ -1,0 +1,36 @@
+digraph operand {
+  graph [rankdir=LR, newrank=true, nodesep=0.35, ranksep=0.55,
+         fontname="Microsoft YaHei", fontsize=11, bgcolor="white", pad=0.15];
+  node [shape=box, style="rounded,filled", fontname="Microsoft YaHei",
+        fontsize=10, margin="0.12,0.07", penwidth=1.0];
+  edge [fontname="Microsoft YaHei", fontsize=9, color="#64748B", arrowsize=0.65];
+
+  subgraph cluster_now {
+    label="现状：两条流水都接 DATA[7:0]"; fontsize=10; color="#DC2626";
+    style="rounded,dashed";
+    D0 [label="DATA[7:0]\nS04 共享数据总线", fillcolor="#E0F2FE"];
+    A0 [label="A 流水\n4×74HCT574", fillcolor="#E2E8F0"];
+    B0 [label="B 流水\n4×74HCT574", fillcolor="#E2E8F0"];
+    L0 [label="LUT 8×8\nA×B", fillcolor="#FCE7F3"];
+    P0 [label="PROD[15:0]", fillcolor="#EDE9FE"];
+    D0 -> A0; D0 -> B0;
+    A0 -> L0 [label="A"]; B0 -> L0 [label="B"];
+    L0 -> P0 [label="A=B=x → x²", color="#DC2626", fontcolor="#DC2626"];
+  }
+
+  subgraph cluster_fix {
+    label="应有：按 FSM 相位把像素/权重分开"; fontsize=10; color="#059669";
+    style="rounded,dashed";
+    D1 [label="DATA[7:0]", fillcolor="#E0F2FE"];
+    M1 [label="2:1 数据分配\n74HC157 / 574 使能", fillcolor="#FEF3C7"];
+    A1 [label="A 流水\n像素", fillcolor="#E2E8F0"];
+    B1 [label="B 流水\n权重", fillcolor="#E2E8F0"];
+    L1 [label="LUT 8×8\nA×B", fillcolor="#FCE7F3"];
+    P1 [label="PROD[15:0]", fillcolor="#EDE9FE"];
+    F1 [label="FSM\nA_SEL/B_SEL", fillcolor="#FEF3C7"];
+    D1 -> M1; M1 -> A1; M1 -> B1;
+    F1 -> M1 [style=dashed, label="相位"];
+    A1 -> L1 [label="A"]; B1 -> L1 [label="B"];
+    L1 -> P1 [label="A×B", color="#059669", fontcolor="#059669"];
+  }
+}

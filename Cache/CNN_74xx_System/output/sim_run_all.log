@@ -1,0 +1,134 @@
+== lut_contents ==
+generated 65536 entries; errors=0
+lo bytes 65536 hi bytes 65536
+checksum lo 8224768 hi 4129472
+PASS: exhaustive 8x8 LUT
+-> PASS (D:\Document\tempPrj\74Series-CNN\Cache\CNN_74xx_System\sim\lut_contents.log)
+== lut_spice ==
+0stdout prod                                         0stdout lo                                           0stdout hi                                           0stdout bhi#branch                                   0stdout blo#branch                                   0stdout bp#branch                                    0stdout vb#branch                                    0stdout va#branch                                    0stdout No. of Data Rows : 1667Device Setupoptran inittran--ready--
+A=  0 B=  0 expect     0/  0/  0 got 0.0/0.0/0.0 OK
+A=  1 B=  1 expect     1/  1/  0 got 1.0/1.0/0.0 OK
+A=255 B=255 expect 65025/  1/254 got 65025.0/1.0/254.0 OK
+A=123 B= 45 expect  5535/159/ 21 got 5535.0/159.0/21.0 OK
+A=  0 B=255 expect     0/  0/  0 got 0.0/0.0/0.0 OK
+A=255 B=  0 expect     0/  0/  0 got 0.0/0.0/0.0 OK
+A=128 B=127 expect 16256/128/ 63 got 16256.0/128.0/63.0 OK
+A=200 B=100 expect 20000/ 32/ 78 got 20000.0/32.0/78.0 OK
+PASS: LUT SPICE arithmetic (representative pairs)
+-> PASS (D:\Document\tempPrj\74Series-CNN\Cache\CNN_74xx_System\sim\lut_spice.log)
+== glue ==
+WAIT_MATCH before wait       t=  500ns got=0.0 want=low OK
+WAIT_MATCH at count          t=  700ns got=3.3 want=high OK
+TIMEOUT_I active             t= 1100ns got=3.3 want=high OK
+TIMEOUT_I inactive           t= 1300ns got=0.0 want=low OK
+XCVR enabled during nCE      t= 1500ns got=3.3 want=high OK
+XCVR disabled idle           t= 1300ns got=0.0 want=low OK
+RESULT_VALID held after set  000ns..900ns: OK
+RESULT_VALID cleared at 800ns: OK
+checks_passed=11/11
+PASS: active-low glue and result-valid hold
+-> PASS (D:\Document\tempPrj\74Series-CNN\Cache\CNN_74xx_System\sim\glue.log)
+== supervisor ==
+   (2.38e-06, 2, 0, 0, 0)
+   (2.48e-06, 2, 0, 0, 0)
+   (2.5800000000000003e-06, 2, 0, 0, 0)
+   (2.68e-06, 2, 0, 0, 0)
+   (2.78e-06, 2, 0, 0, 0)
+   (2.8800000000000004e-06, 2, 0, 0, 0)
+   (2.9800000000000003e-06, 2, 0, 0, 0)
+collapsed states: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 2]
+sequence_ok=True busy_ok=True done_ok=True error_ok=True
+PASS: supervisor state sequence
+-> PASS (D:\Document\tempPrj\74Series-CNN\Cache\CNN_74xx_System\sim\supervisor.log)
+== timing ==
+   (1880, 2, 2, False, True, False, False, False, True, True)
+   (1980, 2, 3, False, True, False, False, False, True, True)
+   (2080, 4, 0, False, True, True, True, False, True, True)
+   (2180, 5, 1, True, True, True, False, False, True, True)
+   (2280, 6, 2, True, True, True, False, True, True, True)
+   (2380, 0, 3, True, True, True, False, False, False, True)
+   (2480, 0, 0, True, True, True, False, False, False, True)
+state sequence: [0, 1, 2, 3, 4, 5, 6, 0, 1, 2, 4, 5, 6, 0]
+no_oe_we_conflict=True nce_ok=True done_ok=True ack_ok=True start_ok=True read_ack=True write_ack=True
+PASS: timing controller read/write protocol
+-> PASS (D:\Document\tempPrj\74Series-CNN\Cache\CNN_74xx_System\sim\timing.log)
+== mem_decode ==
+[PASS] one-hot sweep MEM_SEL=26: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=27: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=28: active=0 expected=0
+[PASS] one-hot sweep MEM_SEL=29: active=0 expected=0
+[PASS] one-hot sweep MEM_SEL=30: active=0 expected=0
+[PASS] one-hot sweep MEM_SEL=31: active=0 expected=0
+[PASS] 20000 random vectors: max active CS = 1
+checks: 323  failures: 0
+RESULT: PASS
+log: D:\Document\tempPrj\74Series-CNN\Cache\CNN_74xx_System\output\sim\mem_decode.log
+-> PASS (D:\Document\tempPrj\74Series-CNN\Cache\CNN_74xx_System\sim\mem_decode.log)
+== pool ==
+window 2: out=250 max_reg=250 expected=250
+window 3: out=240 max_reg=240 expected=240
+window 4: out=7 max_reg=7 expected=7
+window 5: out=0 max_reg=0 expected=0
+window 6: out=255 max_reg=255 expected=255
+window 7: out=255 max_reg=255 expected=255
+window 8: out=255 max_reg=255 expected=255
+window 9: out=255 max_reg=255 expected=255
+addr_ok=True rd_checks=40 max_ok=True init_clear=True done_seen=True seq_ok=True v_ok=True
+PASS: POOL 2x2 max, 4-value order, 0/255 and equal-value coverage
+-> PASS (D:\Document\tempPrj\74Series-CNN\Cache\CNN_74xx_System\sim\pool.log)
+== argmax ==
+  (3880.0, 8, 0, 8, 8, 90, 0, 0, 0, 100, 0, 0, 0, 0, False, False, False)
+  (3980.0, 5, 0, 9, 9, 90, 0, 0, 0, 100, 0, 0, 0, 0, False, False, True)
+... (231 samples total)
+test 0: result=0 max=100 expected_result=0 expected_max=100 valid=True
+test 1: result=9 max=2147483647 expected_result=9 expected_max=2147483647 valid=True
+test 2: result=0 max=5 expected_result=0 expected_max=5 valid=True
+test 3: result=2 max=12345 expected_result=2 expected_max=12345 valid=True
+test 4: result=4 max=-1 expected_result=4 expected_max=-1 valid=True
+result_ok=True cmp_ok=True addr_ok=True srd_ok=True seq_ok=True
+PASS: ARGMAX signed32, ties, first/last and -2^31/2^31-1 boundaries
+-> PASS (D:\Document\tempPrj\74Series-CNN\Cache\CNN_74xx_System\sim\argmax.log)
+== argmax_s12 ==
+PASS: structural Argmax/S12/S04/S11 connections (32 checks)
+PASS: 4-byte address sequence + S12 latches, argmax=3
+PASS: 4-byte address sequence + S12 latches, argmax=2
+PASS: 4-byte address sequence + S12 latches, argmax=2
+PASS: S06/S04/S12 Argmax four-byte transaction
+-> PASS (D:\Document\tempPrj\74Series-CNN\Cache\CNN_74xx_System\sim\argmax_s12.log)
+== conv_fc_engines ==
+SPICE samples: 13121 steps (expected 13120)
+PASS: fc: SPICE produced at least 13120 MAC steps
+PASS: fc: SPICE address sequence equals golden for every step
+fc: golden address bounds IN 0..399, W 0..12799, OUT 0..36
+fc: SPICE measured bounds IN 0..399, W 0..12799, OUT 0..36
+PASS: fc: SPICE extrema equal golden extrema
+PASS: fc: all addresses stay inside their documented ranges
+PASS: fc: MAC count 13120 == 13120
+RESULT: PASS
+OVERALL: PASS
+-> PASS (D:\Document\tempPrj\74Series-CNN\Cache\CNN_74xx_System\sim\conv_fc_engines.log)
+== requant_simple ==
+PASS: top: FC_REQ_DONE has >=2 nodes
+PASS: top: ref block U14 present
+PASS: top: ref block U15 present
+PASS: top: ref block U16 present
+PASS: BOM: no Requant_Block
+PASS: BOM: 12 LUT_Mult_Unit blocks
+PASS: BOM: 576 DIP packages (expected 576)
+PASS: BOM: 1011 total parts (expected 1011)
+PASS: top ERC: 0 errors
+RESULT: PASS
+-> PASS (D:\Document\tempPrj\74Series-CNN\Cache\CNN_74xx_System\sim\requant_simple.log)
+
+11/11 checks passed
+  PASS  lut_contents
+  PASS  lut_spice
+  PASS  glue
+  PASS  supervisor
+  PASS  timing
+  PASS  mem_decode
+  PASS  pool
+  PASS  argmax
+  PASS  argmax_s12
+  PASS  conv_fc_engines
+  PASS  requant_simple

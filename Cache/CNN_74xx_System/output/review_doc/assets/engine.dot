@@ -1,0 +1,27 @@
+
+digraph eng {
+  graph [rankdir=LR, nodesep=0.35, ranksep=0.42, fontname="Microsoft YaHei",
+         fontsize=12, bgcolor="white", pad=0.12];
+  node [shape=box, style="rounded,filled", fontname="Microsoft YaHei",
+        fontsize=11, margin="0.12,0.07", penwidth=1.1];
+  edge [fontname="Microsoft YaHei", fontsize=9, color="#64748B", arrowsize=0.65];
+
+  SRC [label="S04 读数据\nIN / W / LUT", fillcolor="#DCFCE7"];
+  LUT [label="4× LUT lane\n8×8 → 16 位", fillcolor="#E0F2FE"];
+  PIPE [label="4 级 A/B 流水\n8×74HCT574", fillcolor="#E2E8F0"];
+  ADD  [label="4 积加法树\n18 位 / 74HC283", fillcolor="#E2E8F0"];
+  ACC  [label="32 位 ACC\n8×74HC283 + 4×574", fillcolor="#EDE9FE"];
+  RQ   [label="S13/S15/S17\nV2 Requant", fillcolor="#FCE7F3"];
+  HOLD [label="OUTHOLD\n574", fillcolor="#E2E8F0"];
+  WR   [label="写回 S04\nOUT 窗口", fillcolor="#DCFCE7"];
+  FSM  [label="本地 FSM\n2×27C512", fillcolor="#FEF3C7"];
+  CNT  [label="KX/KY/OX/OY/OC\n74HC161 链", fillcolor="#FEF3C7"];
+
+  SRC -> LUT -> PIPE -> ADD -> ACC -> RQ -> HOLD -> WR;
+  FSM -> CNT [label="MAC_EN / loop"];
+  CNT -> SRC [label="ADDR", style=dashed];
+  FSM -> PIPE [label="LUT_*_LATCH", style=dotted];
+  FSM -> ACC [label="ACC_CLR", style=dotted];
+  FSM -> RQ [label="REQ_START", style=dotted];
+  RQ -> FSM [label="REQ_DONE", style=dotted];
+}

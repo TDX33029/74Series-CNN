@@ -1,0 +1,66 @@
+
+digraph topo {
+  graph [rankdir=LR, newrank=true, splines=polyline, nodesep=0.35,
+         ranksep=0.65, fontname="Microsoft YaHei", fontsize=12,
+         bgcolor="white", pad=0.15];
+  node [shape=box, style="rounded,filled", fontname="Microsoft YaHei",
+        fontsize=12, margin="0.14,0.08", penwidth=1.1];
+  edge [fontname="Microsoft YaHei", fontsize=9, color="#64748B",
+        arrowsize=0.65, penwidth=1.0];
+
+  S10 [label="S10 主机接口\n8 MHz / 复位 / 加载 / 状态", fillcolor="#E0F2FE"];
+  subgraph cluster_ctrl {
+    label="调度与时序"; fontsize=11; color="#CBD5E1"; style="rounded,dashed";
+    S01 [label="S01 监督 FSM\n20 状态 / 2×27C512", fillcolor="#FEF3C7"];
+    S02 [label="S02 存储时序\nREQ/ACK/DONE", fillcolor="#FEF3C7"];
+  }
+  subgraph cluster_mem {
+    label="存储与总线"; fontsize=11; color="#CBD5E1"; style="rounded,dashed";
+    S11 [label="S11 总线适配\n74HC148 + 27C512 map", fillcolor="#DCFCE7"];
+    S04 [label="S04 存储阵列\n7×6264 / 12×28C256 / 8×27C512", fillcolor="#DCFCE7"];
+  }
+  subgraph cluster_comp {
+    label="计算与数据装配"; fontsize=11; color="#CBD5E1"; style="rounded,dashed";
+    S07 [label="S07 CONV1 引擎", fillcolor="#EDE9FE"];
+    S13 [label="S13 V2 Requant\nACC>>8", fillcolor="#FCE7F3"];
+    S08 [label="S08 CONV2 引擎", fillcolor="#EDE9FE"];
+    S15 [label="S15 V2 Requant\nACC>>9", fillcolor="#FCE7F3"];
+    S09 [label="S09 FC1/FC2 引擎", fillcolor="#EDE9FE"];
+    S17 [label="S17 FC Requant\nFC1>>8 / FC2 raw", fillcolor="#FCE7F3"];
+    S05 [label="S05 POOL1/2\n2×2 max", fillcolor="#FFEDD5"];
+    S06 [label="S06 ARGMAX\n10 类 signed32", fillcolor="#FFEDD5"];
+    S12 [label="S12 数据装配\n541 + 4×574", fillcolor="#E2E8F0"];
+  }
+
+  S10 -> S01 [label="START / READY"];
+  S10 -> S04 [label="LOAD_ADDR/DATA", style=dashed];
+  S01 -> S07 [label="C1_START", style=dotted];
+  S01 -> S05 [label="P1/P2_START", style=dotted];
+  S01 -> S08 [label="C2_START", style=dotted];
+  S01 -> S09 [label="FC1/FC2_START", style=dotted];
+  S01 -> S06 [label="ARGMAX_START", style=dotted];
+
+  S07 -> S13 [label="ACC / START"];
+  S13 -> S07 [label="Q / QSTB / DONE", style=dashed];
+  S08 -> S15 [label="ACC / START"];
+  S15 -> S08 [label="Q / QSTB / DONE", style=dashed];
+  S09 -> S17 [label="ACC / START"];
+  S17 -> S09 [label="Q / QSTB / DONE", style=dashed];
+
+  S07 -> S11 [label="ADDR/REQ/WE"];
+  S08 -> S11 [label="ADDR/REQ/WE"];
+  S09 -> S11 [label="ADDR/REQ/WE"];
+  S11 -> S04 [label="ADDR / MEM_SEL"];
+  S04 -> S11 [label="DATA", style=dashed];
+  S11 -> S02 [label="REQ / WE"];
+  S02 -> S04 [label="nCE/nOE/nWE"];
+  S02 -> S07 [label="ACK/DONE", style=dotted];
+  S02 -> S08 [label="ACK/DONE", style=dotted];
+  S02 -> S09 [label="ACK/DONE", style=dotted];
+
+  S12 -> S05 [label="IN_DATA"];
+  S06 -> S12 [label="SCORE_DATA"];
+  S06 -> S01 [label="ARGMAX_DONE", style=dotted];
+  S05 -> S04 [label="OUT_* 未连接", color="#DC2626", fontcolor="#DC2626", style=dashed];
+  S05 -> S01 [label="P1/P2_DONE", style=dotted];
+}
