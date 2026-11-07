@@ -1,0 +1,168 @@
+ERC report (2026-11-07T23:27:05, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(72.39 mm, 113.03 mm): Symbol #PWR013 Pin 1 [Power input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(77.47 mm, 87.63 mm): Symbol U13201 Pin 2 [D0, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(77.47 mm, 90.17 mm): Symbol U13201 Pin 3 [D1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(77.47 mm, 92.71 mm): Symbol U13201 Pin 4 [D2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(77.47 mm, 95.25 mm): Symbol U13201 Pin 5 [D3, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(77.47 mm, 97.79 mm): Symbol U13201 Pin 6 [D4, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(77.47 mm, 100.33 mm): Symbol U13201 Pin 7 [D5, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(77.47 mm, 102.87 mm): Symbol U13201 Pin 8 [D6, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(77.47 mm, 105.41 mm): Symbol U13201 Pin 9 [D7, Input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(90.17 mm, 74.93 mm): Symbol #PWR015 Pin 1 [Power input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(420.37 mm, 90.17 mm): Symbol U13205 Pin 1 [A0, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(420.37 mm, 92.71 mm): Symbol U13205 Pin 2 [A1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(420.37 mm, 107.95 mm): Symbol U13205 Pin 6 [E3, Input, Line]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(90.17 mm, 100.33 mm): Symbol U13201 [74HCT574]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(107.95 mm, 87.63 mm): Global Label 'SCORE_DATA0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(107.95 mm, 90.17 mm): Global Label 'SCORE_DATA1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(107.95 mm, 92.71 mm): Global Label 'SCORE_DATA2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(107.95 mm, 95.25 mm): Global Label 'SCORE_DATA3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(107.95 mm, 97.79 mm): Global Label 'SCORE_DATA4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(107.95 mm, 100.33 mm): Global Label 'SCORE_DATA5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(107.95 mm, 102.87 mm): Global Label 'SCORE_DATA6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(107.95 mm, 105.41 mm): Global Label 'SCORE_DATA7'
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(170.18 mm, 100.33 mm): Symbol U13202 [74HCT574]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(187.96 mm, 87.63 mm): Global Label 'SCORE_DATA8'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(187.96 mm, 90.17 mm): Global Label 'SCORE_DATA9'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(187.96 mm, 92.71 mm): Global Label 'SCORE_DATA10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(187.96 mm, 95.25 mm): Global Label 'SCORE_DATA11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(187.96 mm, 97.79 mm): Global Label 'SCORE_DATA12'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(187.96 mm, 100.33 mm): Global Label 'SCORE_DATA13'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(187.96 mm, 102.87 mm): Global Label 'SCORE_DATA14'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(187.96 mm, 105.41 mm): Global Label 'SCORE_DATA15'
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(250.19 mm, 100.33 mm): Symbol U13203 [74HCT574]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(267.97 mm, 87.63 mm): Global Label 'SCORE_DATA16'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(267.97 mm, 90.17 mm): Global Label 'SCORE_DATA17'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(267.97 mm, 92.71 mm): Global Label 'SCORE_DATA18'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(267.97 mm, 95.25 mm): Global Label 'SCORE_DATA19'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(267.97 mm, 97.79 mm): Global Label 'SCORE_DATA20'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(267.97 mm, 100.33 mm): Global Label 'SCORE_DATA21'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(267.97 mm, 102.87 mm): Global Label 'SCORE_DATA22'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(267.97 mm, 105.41 mm): Global Label 'SCORE_DATA23'
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(330.20 mm, 100.33 mm): Symbol U13204 [74HCT574]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 87.63 mm): Global Label 'SCORE_DATA24'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 90.17 mm): Global Label 'SCORE_DATA25'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 92.71 mm): Global Label 'SCORE_DATA26'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 95.25 mm): Global Label 'SCORE_DATA27'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 97.79 mm): Global Label 'SCORE_DATA28'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 100.33 mm): Global Label 'SCORE_DATA29'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 102.87 mm): Global Label 'SCORE_DATA30'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 105.41 mm): Global Label 'SCORE_DATA31'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(415.29 mm, 90.17 mm): Global Label 'SCORE_ADDR0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(415.29 mm, 92.71 mm): Global Label 'SCORE_ADDR1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(415.29 mm, 107.95 mm): Global Label 'MEM_ACK'
+
+ ** ERC messages: 52  Errors 13  Warnings 39
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

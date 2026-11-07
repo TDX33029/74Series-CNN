@@ -1,0 +1,564 @@
+ERC report (2026-11-07T23:27:02, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(36.83 mm, 72.39 mm): Symbol #PWR001 Pin 1 [Power input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(41.91 mm, 46.99 mm): Symbol U6004 Pin 2 [D0, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(41.91 mm, 49.53 mm): Symbol U6004 Pin 3 [D1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(41.91 mm, 52.07 mm): Symbol U6004 Pin 4 [D2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(41.91 mm, 54.61 mm): Symbol U6004 Pin 5 [D3, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(41.91 mm, 57.15 mm): Symbol U6004 Pin 6 [D4, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(41.91 mm, 59.69 mm): Symbol U6004 Pin 7 [D5, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(41.91 mm, 62.23 mm): Symbol U6004 Pin 8 [D6, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(41.91 mm, 64.77 mm): Symbol U6004 Pin 9 [D7, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(41.91 mm, 353.06 mm): Symbol U6001 Pin 2 [CP, Input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(54.61 mm, 34.29 mm): Symbol #PWR003 Pin 1 [Power input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(132.08 mm, 46.99 mm): Symbol U6005 Pin 2 [D0, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(132.08 mm, 49.53 mm): Symbol U6005 Pin 3 [D1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(132.08 mm, 52.07 mm): Symbol U6005 Pin 4 [D2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(132.08 mm, 54.61 mm): Symbol U6005 Pin 5 [D3, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(132.08 mm, 57.15 mm): Symbol U6005 Pin 6 [D4, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(132.08 mm, 59.69 mm): Symbol U6005 Pin 7 [D5, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(132.08 mm, 62.23 mm): Symbol U6005 Pin 8 [D6, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(132.08 mm, 64.77 mm): Symbol U6005 Pin 9 [D7, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(222.25 mm, 46.99 mm): Symbol U6006 Pin 2 [D0, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(222.25 mm, 49.53 mm): Symbol U6006 Pin 3 [D1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(222.25 mm, 52.07 mm): Symbol U6006 Pin 4 [D2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(222.25 mm, 54.61 mm): Symbol U6006 Pin 5 [D3, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(222.25 mm, 57.15 mm): Symbol U6006 Pin 6 [D4, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(222.25 mm, 59.69 mm): Symbol U6006 Pin 7 [D5, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(222.25 mm, 62.23 mm): Symbol U6006 Pin 8 [D6, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(222.25 mm, 64.77 mm): Symbol U6006 Pin 9 [D7, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(312.42 mm, 46.99 mm): Symbol U6007 Pin 2 [D0, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(312.42 mm, 49.53 mm): Symbol U6007 Pin 3 [D1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(312.42 mm, 52.07 mm): Symbol U6007 Pin 4 [D2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(312.42 mm, 54.61 mm): Symbol U6007 Pin 5 [D3, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(312.42 mm, 57.15 mm): Symbol U6007 Pin 6 [D4, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(312.42 mm, 59.69 mm): Symbol U6007 Pin 7 [D5, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(312.42 mm, 62.23 mm): Symbol U6007 Pin 8 [D6, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(312.42 mm, 64.77 mm): Symbol U6007 Pin 9 [D7, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(317.50 mm, 462.28 mm): Symbol U6036 Pin 4 [Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(417.83 mm, 358.14 mm): Symbol U6030 Pin 1 [~{Mr}, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(542.29 mm, 467.36 mm): Symbol U6040 Pin 5 [Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(671.83 mm, 464.82 mm): Symbol U6041 Pin 13 [Input, Line]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(36.83 mm, 46.99 mm): Global Label 'SCORE_DATA0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(36.83 mm, 49.53 mm): Global Label 'SCORE_DATA1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(36.83 mm, 52.07 mm): Global Label 'SCORE_DATA2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(36.83 mm, 54.61 mm): Global Label 'SCORE_DATA3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(36.83 mm, 57.15 mm): Global Label 'SCORE_DATA4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(36.83 mm, 59.69 mm): Global Label 'SCORE_DATA5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(36.83 mm, 62.23 mm): Global Label 'SCORE_DATA6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(36.83 mm, 64.77 mm): Global Label 'SCORE_DATA7'
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(54.61 mm, 59.69 mm): Symbol U6004 [74HCT574]
+[lib_symbol_mismatch]: 符号 '74HC85' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(54.61 mm, 154.94 mm): Symbol U6014 [74HC85]
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(54.61 mm, 250.19 mm): Symbol U6022 [74HC157]
+[lib_symbol_issues]: 在符号库中 '74HC161' 找不到符号 '74xx'
+    ; warning
+    @(54.61 mm, 345.44 mm): Symbol U6001 [74HC161]
+[lib_symbol_issues]: 在符号库中 '74HC161' 找不到符号 '74xx'
+    ; warning
+    @(54.61 mm, 425.45 mm): Symbol U6039 [74HC161]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(54.61 mm, 439.42 mm): Symbol U6033 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(54.61 mm, 464.82 mm): Symbol U6033 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(54.61 mm, 490.22 mm): Symbol U6033 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(54.61 mm, 515.62 mm): Symbol U6033 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(95.25 mm, 439.42 mm): Symbol U6033 [74HC32]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(127.00 mm, 46.99 mm): Global Label 'SCORE_DATA8'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(127.00 mm, 49.53 mm): Global Label 'SCORE_DATA9'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(127.00 mm, 52.07 mm): Global Label 'SCORE_DATA10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(127.00 mm, 54.61 mm): Global Label 'SCORE_DATA11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(127.00 mm, 57.15 mm): Global Label 'SCORE_DATA12'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(127.00 mm, 59.69 mm): Global Label 'SCORE_DATA13'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(127.00 mm, 62.23 mm): Global Label 'SCORE_DATA14'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(127.00 mm, 64.77 mm): Global Label 'SCORE_DATA15'
+[lib_symbol_mismatch]: 符号 '74HC85' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(139.70 mm, 154.94 mm): Symbol U6015 [74HC85]
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(139.70 mm, 250.19 mm): Symbol U6023 [74HC157]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(144.78 mm, 59.69 mm): Symbol U6005 [74HCT574]
+[lib_symbol_mismatch]: 符号 '74HC688' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(144.78 mm, 345.44 mm): Symbol U6002 [74HC688]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(144.78 mm, 439.42 mm): Symbol U6034 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(144.78 mm, 464.82 mm): Symbol U6034 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(144.78 mm, 490.22 mm): Symbol U6034 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(144.78 mm, 515.62 mm): Symbol U6034 [74HC32]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(157.48 mm, 439.42 mm): Global Label 'SCORE_RD'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(157.48 mm, 515.62 mm): Global Label 'ARGMAX_RESULT_VALID'
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(185.42 mm, 439.42 mm): Symbol U6034 [74HC32]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(217.17 mm, 46.99 mm): Global Label 'SCORE_DATA16'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(217.17 mm, 49.53 mm): Global Label 'SCORE_DATA17'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(217.17 mm, 52.07 mm): Global Label 'SCORE_DATA18'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(217.17 mm, 54.61 mm): Global Label 'SCORE_DATA19'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(217.17 mm, 57.15 mm): Global Label 'SCORE_DATA20'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(217.17 mm, 59.69 mm): Global Label 'SCORE_DATA21'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(217.17 mm, 62.23 mm): Global Label 'SCORE_DATA22'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(217.17 mm, 64.77 mm): Global Label 'SCORE_DATA23'
+[lib_symbol_mismatch]: 符号 '74HC85' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(224.79 mm, 154.94 mm): Symbol U6016 [74HC85]
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(224.79 mm, 250.19 mm): Symbol U6024 [74HC157]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(234.95 mm, 59.69 mm): Symbol U6006 [74HCT574]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(234.95 mm, 439.42 mm): Symbol U6035 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(234.95 mm, 464.82 mm): Symbol U6035 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(234.95 mm, 490.22 mm): Symbol U6035 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(234.95 mm, 515.62 mm): Symbol U6035 [74HC32]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(250.19 mm, 345.44 mm): Symbol U6012 [74HCT574]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(275.59 mm, 439.42 mm): Symbol U6035 [74HC32]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(307.34 mm, 46.99 mm): Global Label 'SCORE_DATA24'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(307.34 mm, 49.53 mm): Global Label 'SCORE_DATA25'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(307.34 mm, 52.07 mm): Global Label 'SCORE_DATA26'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(307.34 mm, 54.61 mm): Global Label 'SCORE_DATA27'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(307.34 mm, 57.15 mm): Global Label 'SCORE_DATA28'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(307.34 mm, 59.69 mm): Global Label 'SCORE_DATA29'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(307.34 mm, 62.23 mm): Global Label 'SCORE_DATA30'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(307.34 mm, 64.77 mm): Global Label 'SCORE_DATA31'
+[lib_symbol_mismatch]: 符号 '74HC85' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(309.88 mm, 154.94 mm): Symbol U6017 [74HC85]
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(309.88 mm, 250.19 mm): Symbol U6025 [74HC157]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(325.12 mm, 59.69 mm): Symbol U6007 [74HCT574]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(325.12 mm, 439.42 mm): Symbol U6036 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(325.12 mm, 464.82 mm): Symbol U6036 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(325.12 mm, 490.22 mm): Symbol U6036 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(325.12 mm, 515.62 mm): Symbol U6036 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(340.36 mm, 345.44 mm): Symbol U6013 [74HC157]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(364.49 mm, 439.42 mm): Symbol U6036 [74HC08]
+[lib_symbol_mismatch]: 符号 '74HC85' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(394.97 mm, 154.94 mm): Symbol U6018 [74HC85]
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(394.97 mm, 250.19 mm): Symbol U6026 [74HC157]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(415.29 mm, 439.42 mm): Symbol U6037 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(415.29 mm, 464.82 mm): Symbol U6037 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(415.29 mm, 490.22 mm): Symbol U6037 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(415.29 mm, 515.62 mm): Symbol U6037 [74HC08]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(430.53 mm, 59.69 mm): Symbol U6008 [74HCT574]
+[lib_symbol_mismatch]: 符号 '74HCT273' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(430.53 mm, 345.44 mm): Symbol U6030 [74HCT273]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(430.53 mm, 430.53 mm): Symbol U6003 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(430.53 mm, 454.66 mm): Symbol U6003 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(430.53 mm, 480.06 mm): Symbol U6003 [74HC04]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(454.66 mm, 439.42 mm): Symbol U6037 [74HC08]
+[lib_symbol_mismatch]: 符号 '74HC85' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(480.06 mm, 154.94 mm): Symbol U6019 [74HC85]
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(480.06 mm, 250.19 mm): Symbol U6027 [74HC157]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(500.38 mm, 430.53 mm): Symbol U6003 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(500.38 mm, 454.66 mm): Symbol U6003 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(500.38 mm, 480.06 mm): Symbol U6003 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(519.43 mm, 59.69 mm): Symbol U6009 [74HCT574]
+[lib_symbol_mismatch]: 符号 '74HCT273' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(519.43 mm, 345.44 mm): Symbol U6031 [74HCT273]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(549.91 mm, 439.42 mm): Symbol U6040 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(549.91 mm, 464.82 mm): Symbol U6040 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(549.91 mm, 490.22 mm): Symbol U6040 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(549.91 mm, 515.62 mm): Symbol U6040 [74HC08]
+[lib_symbol_mismatch]: 符号 '74HC85' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(565.15 mm, 154.94 mm): Symbol U6020 [74HC85]
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(565.15 mm, 250.19 mm): Symbol U6028 [74HC157]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(570.23 mm, 430.53 mm): Symbol U6003 [74HC04]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(590.55 mm, 439.42 mm): Symbol U6040 [74HC08]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(609.60 mm, 59.69 mm): Symbol U6010 [74HCT574]
+[lib_symbol_mismatch]: 符号 '74HC74' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(609.60 mm, 345.44 mm): Symbol U6032 [74HC74]
+[lib_symbol_mismatch]: 符号 '74HC74' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(609.60 mm, 449.58 mm): Symbol U6032 [74HC74]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(619.76 mm, 439.42 mm): Symbol U6041 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(619.76 mm, 464.82 mm): Symbol U6041 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(619.76 mm, 490.22 mm): Symbol U6041 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(619.76 mm, 515.62 mm): Symbol U6041 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC85' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(650.24 mm, 154.94 mm): Symbol U6021 [74HC85]
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(650.24 mm, 250.19 mm): Symbol U6029 [74HC157]
+[lib_symbol_mismatch]: 符号 '74HC74' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(660.40 mm, 345.44 mm): Symbol U6032 [74HC74]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(679.45 mm, 439.42 mm): Symbol U6041 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(679.45 mm, 464.82 mm): Symbol U6041 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(679.45 mm, 490.22 mm): Symbol U6041 [74HC04]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(692.15 mm, 439.42 mm): Global Label 'ARGMAX_BUSY_N'
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(699.77 mm, 59.69 mm): Symbol U6011 [74HCT574]
+[lib_symbol_mismatch]: 符号 '74HCT541' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(699.77 mm, 345.44 mm): Symbol U6038 [74HCT541]
+[unconnected_wire_endpoint]: 未连接的连线端点
+    ; warning
+    @(699.77 mm, 430.53 mm): Vertical Wire, length 5.08 mm
+[unconnected_wire_endpoint]: 未连接的连线端点
+    ; warning
+    @(699.77 mm, 459.74 mm): Vertical Wire, length 5.08 mm
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(717.55 mm, 332.74 mm): Global Label 'SCORE_ADDR0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(717.55 mm, 335.28 mm): Global Label 'SCORE_ADDR1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(717.55 mm, 337.82 mm): Global Label 'SCORE_ADDR2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(717.55 mm, 340.36 mm): Global Label 'SCORE_ADDR3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(717.55 mm, 342.90 mm): Global Label 'SCORE_ADDR4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(717.55 mm, 345.44 mm): Global Label 'SCORE_ADDR5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(717.55 mm, 347.98 mm): Global Label 'ARGMAX_DONE'
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(720.09 mm, 439.42 mm): Symbol U6042 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(720.09 mm, 464.82 mm): Symbol U6042 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(720.09 mm, 490.22 mm): Symbol U6042 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(720.09 mm, 515.62 mm): Symbol U6042 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(759.46 mm, 439.42 mm): Symbol U6042 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(779.78 mm, 439.42 mm): Symbol U6043 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(779.78 mm, 464.82 mm): Symbol U6043 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(779.78 mm, 490.22 mm): Symbol U6043 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(779.78 mm, 515.62 mm): Symbol U6043 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(820.42 mm, 439.42 mm): Symbol U6043 [74HC32]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(859.79 mm, 439.42 mm): Symbol U6044 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(859.79 mm, 464.82 mm): Symbol U6044 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(859.79 mm, 490.22 mm): Symbol U6044 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(859.79 mm, 515.62 mm): Symbol U6044 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(900.43 mm, 439.42 mm): Symbol U6044 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(900.43 mm, 464.82 mm): Symbol U6044 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(900.43 mm, 490.22 mm): Symbol U6044 [74HC04]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(939.80 mm, 439.42 mm): Symbol U6045 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(939.80 mm, 464.82 mm): Symbol U6045 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(939.80 mm, 490.22 mm): Symbol U6045 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(939.80 mm, 515.62 mm): Symbol U6045 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(980.44 mm, 439.42 mm): Symbol U6045 [74HC08]
+
+ ** ERC messages: 184  Errors 39  Warnings 145
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

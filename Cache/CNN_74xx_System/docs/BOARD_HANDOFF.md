@@ -1,0 +1,393 @@
+# 12 板卡交接说明（Convert to JLC EDA）
+
+本文件给下一个负责把 KiCad 图页转成嘉立创 EDA 的对话使用。
+设计已经完成板卡化；转换时**只重画、不改网络名、不改连接关系**。
+
+## 0. 可直接复制的指令
+
+```text
+把 Cache/CNN_74xx_System 里的 12 张板卡逐张转成嘉立创 EDA 工程。
+板卡清单见 output/boards/BOARD_MANIFEST.csv，每板的图页、排针号、
+对外网络和板内网络见 docs/BOARD_HANDOFF.md。
+要求：
+1. 每张板卡一个独立工程，图页按清单原样保留；不要合并板卡。
+2. 全局标签按原网络名改成 EDA 网络标签，禁止重命名，尤其是
+   FC1_*/FC2_*/POOL1_*/POOL2_*/C1_*/C2_* 前缀。
+3. 每板的 Bxx_Conn 页只放 2x20P 排针，引脚按
+   output/backplane/<board>_Conn_backplane.csv 逐个连接；
+   电源脚固定 1-4=+5V、5-8=+3V3(预留)、9-14=GND、15-40=信号。
+4. 板内网络（各引擎 ACC/REQ 对、IN_DATA1/2、SCORE_DATA）
+   不要引到排针；它们只在同一块板的两张图之间连接。
+5. 元件位号保持 KiCad 重新编号后的值（U5001…、J20401…），
+   不要重新从 U1 开始编号，否则 BOM 与底板表对不上。
+6. 转换完成后按 output/boards/backplane_nets.csv 逐网核对：
+   每个网络出现的板卡集合必须与表中一致。
+```
+
+## 1. 板卡总表
+
+| 板卡 | 名称 | 图页 | 排针 | 对外网络 |
+|---|---|---|---|---|
+| B01 | SUPERVISOR | `S01_Supervisor.kicad_sch` | J20001..J20002（2 片） | 37 |
+| B02 | TIMING | `S02_Timing.kicad_sch` | J20101 | 10 |
+| B03 | MEMORY | `S04_Memories.kicad_sch` | J20201..J20208（8 片） | 204 |
+| B04 | CONV1 | `S07_Conv1.kicad_sch`, `S13_Requant_C1.kicad_sch` | J20301..J20302（2 片） | 43 |
+| B05 | POOL1 | `S05_Pool1.kicad_sch`, `S12A_PoolLatch1.kicad_sch` | J20401..J20403（3 片） | 53 |
+| B06 | CONV2 | `S08_Conv2.kicad_sch`, `S15_Requant_C2.kicad_sch` | J20501..J20502（2 片） | 43 |
+| B07 | POOL2 | `S05_Pool2.kicad_sch`, `S12A_PoolLatch2.kicad_sch` | J20601..J20603（3 片） | 53 |
+| B08 | FC1 | `S09_FC1.kicad_sch`, `S17_FC1.kicad_sch` | J20701..J20702（2 片） | 43 |
+| B09 | FC2 | `S09_FC2.kicad_sch`, `S17_FC2.kicad_sch` | J20801..J20802（2 片） | 44 |
+| B10 | ARGMAX | `S06_Argmax.kicad_sch`, `S12B_ScoreLatch.kicad_sch` | J20901 | 26 |
+| B11 | BUSFAB | `S11_BusFabric.kicad_sch`, `S11A_EngineMerge.kicad_sch` | J21001..J21003（3 片） | 72 |
+| B12 | HOSTIO | `S10_Top_IO.kicad_sch` | J21101..J21103（3 片） | 59 |
+
+## 2. 逐板说明
+
+### B01 SUPERVISOR
+
+- 功能：Global supervisor FSM, microcode ROM, watchdog
+- 阶段：sequencer: START/BUSY/DONE, stage starts, FC_SEL/POOL_SEL
+- 图页：`S01_Supervisor.kicad_sch`、`B01_Conn.kicad_sch`
+- 排针：J20001, J20002（2x20P，电源脚固定）
+- 引脚表：`output/backplane/B01_Conn_backplane.csv`
+- 对外网络（37）：
+
+`ARGMAX_DONE`、`ARGMAX_START`、`BUSY`、`C1_DONE`、`C1_START`、`C2_DONE`  
+`C2_START`、`CLK`、`DONE`、`ERROR`、`ERROR_CODE0`、`ERROR_CODE1`  
+`ERROR_CODE2`、`ERROR_CODE3`、`FC1_DONE`、`FC1_START`、`FC2_DONE`、`FC2_START`  
+`FC_SEL`、`IMAGE_READY`、`MODEL_READY`、`P1_DONE`、`P1_START`、`P2_DONE`  
+`P2_START`、`POOL_SEL`、`RESET_N`、`RESULT0`、`RESULT1`、`RESULT2`  
+`RESULT3`、`RESULT_IN0`、`RESULT_IN1`、`RESULT_IN2`、`RESULT_IN3`、`RESULT_VALID`  
+`START`
+
+- 板内网络（0，不上排针）：
+
+（无）
+
+### B02 TIMING
+
+- 功能：Memory timing controller SETUP/WAIT/CAPTURE/HOLD/RELEASE
+- 阶段：single owner of MEM_nCE/nOE/nWE and the ACK handshake
+- 图页：`S02_Timing.kicad_sch`、`B02_Conn.kicad_sch`
+- 排针：J20101（2x20P，电源脚固定）
+- 引脚表：`output/backplane/B02_Conn_backplane.csv`
+- 对外网络（10）：
+
+`CLK`、`MEM_ACK`、`MEM_BUSY`、`MEM_DONE`、`MEM_nCE`、`MEM_nOE`  
+`MEM_nWE`、`REQ`、`RESET_N`、`WE`
+
+- 板内网络（0，不上排针）：
+
+（无）
+
+### B03 MEMORY
+
+- 功能：7x 6264 SRAM + 12x 28C256 + 8x 27C512 LUT/map storage
+- 阶段：all feature maps, weights, biases, quant params and LUT/map ROMs
+- 图页：`S04_Memories.kicad_sch`、`B03_Conn.kicad_sch`
+- 排针：J20201, J20202, J20203, J20204, J20205, J20206, J20207, J20208（2x20P，电源脚固定）
+- 引脚表：`output/backplane/B03_Conn_backplane.csv`
+- 对外网络（204）：
+
+`ADDR0`、`ADDR1`、`ADDR10`、`ADDR11`、`ADDR12`、`ADDR13`  
+`ADDR14`、`ADDR15`、`ADDR16`、`ADDR17`、`ADDR18`、`ADDR19`  
+`ADDR2`、`ADDR20`、`ADDR21`、`ADDR22`、`ADDR23`、`ADDR3`  
+`ADDR4`、`ADDR5`、`ADDR6`、`ADDR7`、`ADDR8`、`ADDR9`  
+`ARGMAX_BUSY_N`、`C1_ADDR0`、`C1_ADDR1`、`C1_ADDR10`、`C1_ADDR11`、`C1_ADDR12`  
+`C1_ADDR13`、`C1_ADDR14`、`C1_ADDR15`、`C1_ADDR2`、`C1_ADDR3`、`C1_ADDR4`  
+`C1_ADDR5`、`C1_ADDR6`、`C1_ADDR7`、`C1_ADDR8`、`C1_ADDR9`、`C1_BUSY_N`  
+`C2_ADDR0`、`C2_ADDR1`、`C2_ADDR10`、`C2_ADDR11`、`C2_ADDR12`、`C2_ADDR13`  
+`C2_ADDR14`、`C2_ADDR15`、`C2_ADDR2`、`C2_ADDR3`、`C2_ADDR4`、`C2_ADDR5`  
+`C2_ADDR6`、`C2_ADDR7`、`C2_ADDR8`、`C2_ADDR9`、`C2_BUSY_N`、`CLK`  
+`DATA0`、`DATA1`、`DATA2`、`DATA3`、`DATA4`、`DATA5`  
+`DATA6`、`DATA7`、`FC1_ADDR0`、`FC1_ADDR1`、`FC1_ADDR10`、`FC1_ADDR11`  
+`FC1_ADDR12`、`FC1_ADDR13`、`FC1_ADDR14`、`FC1_ADDR15`、`FC1_ADDR2`、`FC1_ADDR3`  
+`FC1_ADDR4`、`FC1_ADDR5`、`FC1_ADDR6`、`FC1_ADDR7`、`FC1_ADDR8`、`FC1_ADDR9`  
+`FC1_BUSY_N`、`FC2_ADDR0`、`FC2_ADDR1`、`FC2_ADDR10`、`FC2_ADDR11`、`FC2_ADDR12`  
+`FC2_ADDR13`、`FC2_ADDR14`、`FC2_ADDR15`、`FC2_ADDR2`、`FC2_ADDR3`、`FC2_ADDR4`  
+`FC2_ADDR5`、`FC2_ADDR6`、`FC2_ADDR7`、`FC2_ADDR8`、`FC2_ADDR9`、`FC2_BUSY_N`  
+`IMAGE_DONE_N`、`IMAGE_READY`、`LOAD_DATA0`、`LOAD_DATA1`、`LOAD_DATA2`、`LOAD_DATA3`  
+`LOAD_DATA4`、`LOAD_DATA5`、`LOAD_DATA6`、`LOAD_DATA7`、`LOAD_EN`、`LOAD_nOE`  
+`LOAD_nWE`、`MEM_SEL0`、`MEM_SEL1`、`MEM_SEL2`、`MEM_SEL3`、`MEM_SEL4`  
+`MEM_nCE`、`MEM_nOE`、`MEM_nWE`、`MODEL_DONE_N`、`MODEL_READY`、`POOL1_BUSY_N`  
+`POOL1_IN_ADDR0`、`POOL1_IN_ADDR1`、`POOL1_IN_ADDR10`、`POOL1_IN_ADDR11`、`POOL1_IN_ADDR12`、`POOL1_IN_ADDR2`  
+`POOL1_IN_ADDR3`、`POOL1_IN_ADDR4`、`POOL1_IN_ADDR5`、`POOL1_IN_ADDR6`、`POOL1_IN_ADDR7`、`POOL1_IN_ADDR8`  
+`POOL1_IN_ADDR9`、`POOL1_MEM_WE`、`POOL1_MEM_nCE_OUT`、`POOL1_OUT_ADDR0`、`POOL1_OUT_ADDR1`、`POOL1_OUT_ADDR10`  
+`POOL1_OUT_ADDR11`、`POOL1_OUT_ADDR2`、`POOL1_OUT_ADDR3`、`POOL1_OUT_ADDR4`、`POOL1_OUT_ADDR5`、`POOL1_OUT_ADDR6`  
+`POOL1_OUT_ADDR7`、`POOL1_OUT_ADDR8`、`POOL1_OUT_ADDR9`、`POOL1_OUT_DATA0`、`POOL1_OUT_DATA1`、`POOL1_OUT_DATA2`  
+`POOL1_OUT_DATA3`、`POOL1_OUT_DATA4`、`POOL1_OUT_DATA5`、`POOL1_OUT_DATA6`、`POOL1_OUT_DATA7`、`POOL2_BUSY_N`  
+`POOL2_IN_ADDR0`、`POOL2_IN_ADDR1`、`POOL2_IN_ADDR10`、`POOL2_IN_ADDR11`、`POOL2_IN_ADDR12`、`POOL2_IN_ADDR2`  
+`POOL2_IN_ADDR3`、`POOL2_IN_ADDR4`、`POOL2_IN_ADDR5`、`POOL2_IN_ADDR6`、`POOL2_IN_ADDR7`、`POOL2_IN_ADDR8`  
+`POOL2_IN_ADDR9`、`POOL2_MEM_WE`、`POOL2_MEM_nCE_OUT`、`POOL2_OUT_ADDR0`、`POOL2_OUT_ADDR1`、`POOL2_OUT_ADDR10`  
+`POOL2_OUT_ADDR11`、`POOL2_OUT_ADDR2`、`POOL2_OUT_ADDR3`、`POOL2_OUT_ADDR4`、`POOL2_OUT_ADDR5`、`POOL2_OUT_ADDR6`  
+`POOL2_OUT_ADDR7`、`POOL2_OUT_ADDR8`、`POOL2_OUT_ADDR9`、`POOL2_OUT_DATA0`、`POOL2_OUT_DATA1`、`POOL2_OUT_DATA2`  
+`POOL2_OUT_DATA3`、`POOL2_OUT_DATA4`、`POOL2_OUT_DATA5`、`POOL2_OUT_DATA6`、`POOL2_OUT_DATA7`、`RESET_N`  
+`SCORE_ADDR0`、`SCORE_ADDR1`、`SCORE_ADDR2`、`SCORE_ADDR3`、`SCORE_ADDR4`、`SCORE_ADDR5`
+
+- 板内网络（0，不上排针）：
+
+（无）
+
+### B04 CONV1
+
+- 功能：5x5x1 -> 8ch convolution engine + ACC>>8 requant
+- 阶段：C1 stage; requant is on-board, C1_ACC never leaves the board
+- 图页：`S07_Conv1.kicad_sch`, `S13_Requant_C1.kicad_sch`、`B04_Conn.kicad_sch`
+- 排针：J20301, J20302（2x20P，电源脚固定）
+- 引脚表：`output/backplane/B04_Conn_backplane.csv`
+- 对外网络（43）：
+
+`C1_ADDR0`、`C1_ADDR1`、`C1_ADDR10`、`C1_ADDR11`、`C1_ADDR12`、`C1_ADDR13`  
+`C1_ADDR14`、`C1_ADDR15`、`C1_ADDR2`、`C1_ADDR3`、`C1_ADDR4`、`C1_ADDR5`  
+`C1_ADDR6`、`C1_ADDR7`、`C1_ADDR8`、`C1_ADDR9`、`C1_BUSY_N`、`C1_DONE`  
+`C1_MEM_REQ`、`C1_MEM_WE`、`C1_MEM_nCE_B`、`C1_MEM_nCE_IN`、`C1_MEM_nCE_MC`、`C1_MEM_nCE_OUT`  
+`C1_MEM_nCE_Q`、`C1_MEM_nCE_W`、`C1_START`、`CLK`、`DATA0`、`DATA1`  
+`DATA2`、`DATA3`、`DATA4`、`DATA5`、`DATA6`、`DATA7`  
+`MEM_ACK`、`MEM_BUSY`、`MEM_DONE`、`MEM_nCE`、`MEM_nOE`、`MEM_nWE`  
+`RESET_N`
+
+- 板内网络（46，不上排针）：
+
+`C1_ACC0`、`C1_ACC1`、`C1_ACC10`、`C1_ACC11`、`C1_ACC12`、`C1_ACC13`  
+`C1_ACC14`、`C1_ACC15`、`C1_ACC16`、`C1_ACC17`、`C1_ACC18`、`C1_ACC19`  
+`C1_ACC2`、`C1_ACC20`、`C1_ACC21`、`C1_ACC22`、`C1_ACC23`、`C1_ACC24`  
+`C1_ACC25`、`C1_ACC26`、`C1_ACC27`、`C1_ACC28`、`C1_ACC29`、`C1_ACC3`  
+`C1_ACC30`、`C1_ACC31`、`C1_ACC4`、`C1_ACC5`、`C1_ACC6`、`C1_ACC7`  
+`C1_ACC8`、`C1_ACC9`、`C1_BUSY`、`C1_REQ_BUSY`、`C1_REQ_DONE`、`C1_REQ_Q0`  
+`C1_REQ_Q1`、`C1_REQ_Q2`、`C1_REQ_Q3`、`C1_REQ_Q4`、`C1_REQ_Q5`、`C1_REQ_Q6`  
+`C1_REQ_Q7`、`C1_REQ_QSTB`、`C1_REQ_START`、`C1_SAT_FLAG`
+
+### B05 POOL1
+
+- 功能：2x2 stride-2 max pool 12x12x8 -> 6x6x8
+- 阶段：P1 stage; POOL_SEL tied 0, IN_DATA1 byte buffer on-board
+- 图页：`S05_Pool1.kicad_sch`, `S12A_PoolLatch1.kicad_sch`、`B05_Conn.kicad_sch`
+- 排针：J20401, J20402, J20403（2x20P，电源脚固定）
+- 引脚表：`output/backplane/B05_Conn_backplane.csv`
+- 对外网络（53）：
+
+`CLK`、`DATA0`、`DATA1`、`DATA2`、`DATA3`、`DATA4`  
+`DATA5`、`DATA6`、`DATA7`、`MEM_ACK`、`MEM_DONE`、`P1_DONE`  
+`P1_START`、`POOL1_BUSY`、`POOL1_BUSY_N`、`POOL1_IN_ADDR0`、`POOL1_IN_ADDR1`、`POOL1_IN_ADDR10`  
+`POOL1_IN_ADDR11`、`POOL1_IN_ADDR12`、`POOL1_IN_ADDR2`、`POOL1_IN_ADDR3`、`POOL1_IN_ADDR4`、`POOL1_IN_ADDR5`  
+`POOL1_IN_ADDR6`、`POOL1_IN_ADDR7`、`POOL1_IN_ADDR8`、`POOL1_IN_ADDR9`、`POOL1_MEM_REQ`、`POOL1_MEM_WE`  
+`POOL1_MEM_nCE_IN`、`POOL1_MEM_nCE_OUT`、`POOL1_OUT_ADDR0`、`POOL1_OUT_ADDR1`、`POOL1_OUT_ADDR10`、`POOL1_OUT_ADDR11`  
+`POOL1_OUT_ADDR2`、`POOL1_OUT_ADDR3`、`POOL1_OUT_ADDR4`、`POOL1_OUT_ADDR5`、`POOL1_OUT_ADDR6`、`POOL1_OUT_ADDR7`  
+`POOL1_OUT_ADDR8`、`POOL1_OUT_ADDR9`、`POOL1_OUT_DATA0`、`POOL1_OUT_DATA1`、`POOL1_OUT_DATA2`、`POOL1_OUT_DATA3`  
+`POOL1_OUT_DATA4`、`POOL1_OUT_DATA5`、`POOL1_OUT_DATA6`、`POOL1_OUT_DATA7`、`RESET_N`
+
+- 板内网络（10，不上排针）：
+
+`IN_DATA10`、`IN_DATA11`、`IN_DATA12`、`IN_DATA13`、`IN_DATA14`、`IN_DATA15`  
+`IN_DATA16`、`IN_DATA17`、`POOL1_OUT_WE_NC`、`POOL1_P2_DONE_NC`
+
+### B06 CONV2
+
+- 功能：3x3x8 -> 16ch convolution engine + ACC>>9 requant
+- 阶段：C2 stage; requant is on-board, C2_ACC never leaves the board
+- 图页：`S08_Conv2.kicad_sch`, `S15_Requant_C2.kicad_sch`、`B06_Conn.kicad_sch`
+- 排针：J20501, J20502（2x20P，电源脚固定）
+- 引脚表：`output/backplane/B06_Conn_backplane.csv`
+- 对外网络（43）：
+
+`C2_ADDR0`、`C2_ADDR1`、`C2_ADDR10`、`C2_ADDR11`、`C2_ADDR12`、`C2_ADDR13`  
+`C2_ADDR14`、`C2_ADDR15`、`C2_ADDR2`、`C2_ADDR3`、`C2_ADDR4`、`C2_ADDR5`  
+`C2_ADDR6`、`C2_ADDR7`、`C2_ADDR8`、`C2_ADDR9`、`C2_BUSY_N`、`C2_DONE`  
+`C2_MEM_REQ`、`C2_MEM_WE`、`C2_MEM_nCE_B`、`C2_MEM_nCE_IN`、`C2_MEM_nCE_MC`、`C2_MEM_nCE_OUT`  
+`C2_MEM_nCE_Q`、`C2_MEM_nCE_W`、`C2_START`、`CLK`、`DATA0`、`DATA1`  
+`DATA2`、`DATA3`、`DATA4`、`DATA5`、`DATA6`、`DATA7`  
+`MEM_ACK`、`MEM_BUSY`、`MEM_DONE`、`MEM_nCE`、`MEM_nOE`、`MEM_nWE`  
+`RESET_N`
+
+- 板内网络（46，不上排针）：
+
+`C2_ACC0`、`C2_ACC1`、`C2_ACC10`、`C2_ACC11`、`C2_ACC12`、`C2_ACC13`  
+`C2_ACC14`、`C2_ACC15`、`C2_ACC16`、`C2_ACC17`、`C2_ACC18`、`C2_ACC19`  
+`C2_ACC2`、`C2_ACC20`、`C2_ACC21`、`C2_ACC22`、`C2_ACC23`、`C2_ACC24`  
+`C2_ACC25`、`C2_ACC26`、`C2_ACC27`、`C2_ACC28`、`C2_ACC29`、`C2_ACC3`  
+`C2_ACC30`、`C2_ACC31`、`C2_ACC4`、`C2_ACC5`、`C2_ACC6`、`C2_ACC7`  
+`C2_ACC8`、`C2_ACC9`、`C2_BUSY`、`C2_REQ_BUSY`、`C2_REQ_DONE`、`C2_REQ_Q0`  
+`C2_REQ_Q1`、`C2_REQ_Q2`、`C2_REQ_Q3`、`C2_REQ_Q4`、`C2_REQ_Q5`、`C2_REQ_Q6`  
+`C2_REQ_Q7`、`C2_REQ_QSTB`、`C2_REQ_START`、`C2_SAT_FLAG`
+
+### B07 POOL2
+
+- 功能：2x2 stride-2 max pool 10x10x16 -> 5x5x16
+- 阶段：P2 stage; POOL_SEL tied 1, IN_DATA2 byte buffer on-board
+- 图页：`S05_Pool2.kicad_sch`, `S12A_PoolLatch2.kicad_sch`、`B07_Conn.kicad_sch`
+- 排针：J20601, J20602, J20603（2x20P，电源脚固定）
+- 引脚表：`output/backplane/B07_Conn_backplane.csv`
+- 对外网络（53）：
+
+`CLK`、`DATA0`、`DATA1`、`DATA2`、`DATA3`、`DATA4`  
+`DATA5`、`DATA6`、`DATA7`、`MEM_ACK`、`MEM_DONE`、`P2_DONE`  
+`P2_START`、`POOL2_BUSY`、`POOL2_BUSY_N`、`POOL2_IN_ADDR0`、`POOL2_IN_ADDR1`、`POOL2_IN_ADDR10`  
+`POOL2_IN_ADDR11`、`POOL2_IN_ADDR12`、`POOL2_IN_ADDR2`、`POOL2_IN_ADDR3`、`POOL2_IN_ADDR4`、`POOL2_IN_ADDR5`  
+`POOL2_IN_ADDR6`、`POOL2_IN_ADDR7`、`POOL2_IN_ADDR8`、`POOL2_IN_ADDR9`、`POOL2_MEM_REQ`、`POOL2_MEM_WE`  
+`POOL2_MEM_nCE_IN`、`POOL2_MEM_nCE_OUT`、`POOL2_OUT_ADDR0`、`POOL2_OUT_ADDR1`、`POOL2_OUT_ADDR10`、`POOL2_OUT_ADDR11`  
+`POOL2_OUT_ADDR2`、`POOL2_OUT_ADDR3`、`POOL2_OUT_ADDR4`、`POOL2_OUT_ADDR5`、`POOL2_OUT_ADDR6`、`POOL2_OUT_ADDR7`  
+`POOL2_OUT_ADDR8`、`POOL2_OUT_ADDR9`、`POOL2_OUT_DATA0`、`POOL2_OUT_DATA1`、`POOL2_OUT_DATA2`、`POOL2_OUT_DATA3`  
+`POOL2_OUT_DATA4`、`POOL2_OUT_DATA5`、`POOL2_OUT_DATA6`、`POOL2_OUT_DATA7`、`RESET_N`
+
+- 板内网络（10，不上排针）：
+
+`IN_DATA20`、`IN_DATA21`、`IN_DATA22`、`IN_DATA23`、`IN_DATA24`、`IN_DATA25`  
+`IN_DATA26`、`IN_DATA27`、`POOL2_OUT_WE_NC`、`POOL2_P1_DONE_NC`
+
+### B08 FC1
+
+- 功能：400 -> 32 fully connected + FC1 uint8 requant
+- 阶段：FC1 stage; FC_SEL tied 0, FC1_ACC/FC1_REQ_* stay on-board
+- 图页：`S09_FC1.kicad_sch`, `S17_FC1.kicad_sch`、`B08_Conn.kicad_sch`
+- 排针：J20701, J20702（2x20P，电源脚固定）
+- 引脚表：`output/backplane/B08_Conn_backplane.csv`
+- 对外网络（43）：
+
+`CLK`、`DATA0`、`DATA1`、`DATA2`、`DATA3`、`DATA4`  
+`DATA5`、`DATA6`、`DATA7`、`FC1_ADDR0`、`FC1_ADDR1`、`FC1_ADDR10`  
+`FC1_ADDR11`、`FC1_ADDR12`、`FC1_ADDR13`、`FC1_ADDR14`、`FC1_ADDR15`、`FC1_ADDR2`  
+`FC1_ADDR3`、`FC1_ADDR4`、`FC1_ADDR5`、`FC1_ADDR6`、`FC1_ADDR7`、`FC1_ADDR8`  
+`FC1_ADDR9`、`FC1_BUSY_N`、`FC1_DONE`、`FC1_MEM_REQ`、`FC1_MEM_WE`、`FC1_MEM_nCE_B`  
+`FC1_MEM_nCE_IN`、`FC1_MEM_nCE_MC`、`FC1_MEM_nCE_OUT`、`FC1_MEM_nCE_Q`、`FC1_MEM_nCE_W`、`FC1_START`  
+`MEM_ACK`、`MEM_BUSY`、`MEM_DONE`、`MEM_nCE`、`MEM_nOE`、`MEM_nWE`  
+`RESET_N`
+
+- 板内网络（47，不上排针）：
+
+`FC1_ACC0`、`FC1_ACC1`、`FC1_ACC10`、`FC1_ACC11`、`FC1_ACC12`、`FC1_ACC13`  
+`FC1_ACC14`、`FC1_ACC15`、`FC1_ACC16`、`FC1_ACC17`、`FC1_ACC18`、`FC1_ACC19`  
+`FC1_ACC2`、`FC1_ACC20`、`FC1_ACC21`、`FC1_ACC22`、`FC1_ACC23`、`FC1_ACC24`  
+`FC1_ACC25`、`FC1_ACC26`、`FC1_ACC27`、`FC1_ACC28`、`FC1_ACC29`、`FC1_ACC3`  
+`FC1_ACC30`、`FC1_ACC31`、`FC1_ACC4`、`FC1_ACC5`、`FC1_ACC6`、`FC1_ACC7`  
+`FC1_ACC8`、`FC1_ACC9`、`FC1_BUSY`、`FC1_FC2_DONE_NC`、`FC1_REQ_BUSY`、`FC1_REQ_DONE`  
+`FC1_REQ_Q0`、`FC1_REQ_Q1`、`FC1_REQ_Q2`、`FC1_REQ_Q3`、`FC1_REQ_Q4`、`FC1_REQ_Q5`  
+`FC1_REQ_Q6`、`FC1_REQ_Q7`、`FC1_REQ_QSTB`、`FC1_REQ_START`、`FC1_SAT_FLAG`
+
+### B09 FC2
+
+- 功能：32 -> 10 fully connected + FC2 raw signed32 requant
+- 阶段：FC2 stage; FC_SEL tied 1, FC2_ACC/FC2_REQ_* stay on-board
+- 图页：`S09_FC2.kicad_sch`, `S17_FC2.kicad_sch`、`B09_Conn.kicad_sch`
+- 排针：J20801, J20802（2x20P，电源脚固定）
+- 引脚表：`output/backplane/B09_Conn_backplane.csv`
+- 对外网络（44）：
+
+`CLK`、`DATA0`、`DATA1`、`DATA2`、`DATA3`、`DATA4`  
+`DATA5`、`DATA6`、`DATA7`、`FC2_ADDR0`、`FC2_ADDR1`、`FC2_ADDR10`  
+`FC2_ADDR11`、`FC2_ADDR12`、`FC2_ADDR13`、`FC2_ADDR14`、`FC2_ADDR15`、`FC2_ADDR2`  
+`FC2_ADDR3`、`FC2_ADDR4`、`FC2_ADDR5`、`FC2_ADDR6`、`FC2_ADDR7`、`FC2_ADDR8`  
+`FC2_ADDR9`、`FC2_BUSY`、`FC2_BUSY_N`、`FC2_DONE`、`FC2_MEM_REQ`、`FC2_MEM_WE`  
+`FC2_MEM_nCE_B`、`FC2_MEM_nCE_IN`、`FC2_MEM_nCE_MC`、`FC2_MEM_nCE_OUT`、`FC2_MEM_nCE_Q`、`FC2_MEM_nCE_W`  
+`FC2_START`、`MEM_ACK`、`MEM_BUSY`、`MEM_DONE`、`MEM_nCE`、`MEM_nOE`  
+`MEM_nWE`、`RESET_N`
+
+- 板内网络（46，不上排针）：
+
+`FC2_ACC0`、`FC2_ACC1`、`FC2_ACC10`、`FC2_ACC11`、`FC2_ACC12`、`FC2_ACC13`  
+`FC2_ACC14`、`FC2_ACC15`、`FC2_ACC16`、`FC2_ACC17`、`FC2_ACC18`、`FC2_ACC19`  
+`FC2_ACC2`、`FC2_ACC20`、`FC2_ACC21`、`FC2_ACC22`、`FC2_ACC23`、`FC2_ACC24`  
+`FC2_ACC25`、`FC2_ACC26`、`FC2_ACC27`、`FC2_ACC28`、`FC2_ACC29`、`FC2_ACC3`  
+`FC2_ACC30`、`FC2_ACC31`、`FC2_ACC4`、`FC2_ACC5`、`FC2_ACC6`、`FC2_ACC7`  
+`FC2_ACC8`、`FC2_ACC9`、`FC2_FC1_DONE_NC`、`FC2_REQ_BUSY`、`FC2_REQ_DONE`、`FC2_REQ_Q0`  
+`FC2_REQ_Q1`、`FC2_REQ_Q2`、`FC2_REQ_Q3`、`FC2_REQ_Q4`、`FC2_REQ_Q5`、`FC2_REQ_Q6`  
+`FC2_REQ_Q7`、`FC2_REQ_QSTB`、`FC2_REQ_START`、`FC2_SAT_FLAG`
+
+### B10 ARGMAX
+
+- 功能：10-way signed-32 argmax + 32-bit score staging
+- 阶段：final stage; four score bytes assembled on-board
+- 图页：`S06_Argmax.kicad_sch`, `S12B_ScoreLatch.kicad_sch`、`B10_Conn.kicad_sch`
+- 排针：J20901（2x20P，电源脚固定）
+- 引脚表：`output/backplane/B10_Conn_backplane.csv`
+- 对外网络（26）：
+
+`ARGMAX_BUSY_N`、`ARGMAX_DONE`、`ARGMAX_START`、`CLK`、`DATA0`、`DATA1`  
+`DATA2`、`DATA3`、`DATA4`、`DATA5`、`DATA6`、`DATA7`  
+`MEM_ACK`、`MEM_DONE`、`RESET_N`、`RESULT_IN0`、`RESULT_IN1`、`RESULT_IN2`  
+`RESULT_IN3`、`SCORE_ADDR0`、`SCORE_ADDR1`、`SCORE_ADDR2`、`SCORE_ADDR3`、`SCORE_ADDR4`  
+`SCORE_ADDR5`、`SCORE_RD`
+
+- 板内网络（34，不上排针）：
+
+`ARGMAX_BUSY`、`ARGMAX_RESULT_VALID`、`SCORE_DATA0`、`SCORE_DATA1`、`SCORE_DATA10`、`SCORE_DATA11`  
+`SCORE_DATA12`、`SCORE_DATA13`、`SCORE_DATA14`、`SCORE_DATA15`、`SCORE_DATA16`、`SCORE_DATA17`  
+`SCORE_DATA18`、`SCORE_DATA19`、`SCORE_DATA2`、`SCORE_DATA20`、`SCORE_DATA21`、`SCORE_DATA22`  
+`SCORE_DATA23`、`SCORE_DATA24`、`SCORE_DATA25`、`SCORE_DATA26`、`SCORE_DATA27`、`SCORE_DATA28`  
+`SCORE_DATA29`、`SCORE_DATA3`、`SCORE_DATA30`、`SCORE_DATA31`、`SCORE_DATA4`、`SCORE_DATA5`  
+`SCORE_DATA6`、`SCORE_DATA7`、`SCORE_DATA8`、`SCORE_DATA9`
+
+### B11 BUSFAB
+
+- 功能：Master/region encode, map ROM, REQ/WE merge, engine merge
+- 阶段：arbitration only; FC1/FC2 and POOL1/POOL2 are muxed into the S11 slots
+- 图页：`S11_BusFabric.kicad_sch`, `S11A_EngineMerge.kicad_sch`、`B11_Conn.kicad_sch`
+- 排针：J21001, J21002, J21003（2x20P，电源脚固定）
+- 引脚表：`output/backplane/B11_Conn_backplane.csv`
+- 对外网络（72）：
+
+`ADDR16`、`ADDR17`、`ADDR18`、`ADDR19`、`ADDR20`、`ADDR21`  
+`ADDR22`、`ADDR23`、`ARGMAX_BUSY_N`、`C1_BUSY_N`、`C1_MEM_REQ`、`C1_MEM_WE`  
+`C1_MEM_nCE_B`、`C1_MEM_nCE_IN`、`C1_MEM_nCE_MC`、`C1_MEM_nCE_OUT`、`C1_MEM_nCE_Q`、`C1_MEM_nCE_W`  
+`C2_BUSY_N`、`C2_MEM_REQ`、`C2_MEM_WE`、`C2_MEM_nCE_B`、`C2_MEM_nCE_IN`、`C2_MEM_nCE_MC`  
+`C2_MEM_nCE_OUT`、`C2_MEM_nCE_Q`、`C2_MEM_nCE_W`、`FC1_BUSY_N`、`FC1_MEM_REQ`、`FC1_MEM_WE`  
+`FC1_MEM_nCE_B`、`FC1_MEM_nCE_IN`、`FC1_MEM_nCE_MC`、`FC1_MEM_nCE_OUT`、`FC1_MEM_nCE_Q`、`FC1_MEM_nCE_W`  
+`FC2_BUSY`、`FC2_BUSY_N`、`FC2_MEM_REQ`、`FC2_MEM_WE`、`FC2_MEM_nCE_B`、`FC2_MEM_nCE_IN`  
+`FC2_MEM_nCE_MC`、`FC2_MEM_nCE_OUT`、`FC2_MEM_nCE_Q`、`FC2_MEM_nCE_W`、`FC_SEL`、`LOAD_EN`  
+`MEM_ACK`、`MEM_BUSY`、`MEM_DONE`、`MEM_SEL0`、`MEM_SEL1`、`MEM_SEL2`  
+`MEM_SEL3`、`MEM_SEL4`、`POOL1_BUSY`、`POOL1_BUSY_N`、`POOL1_MEM_REQ`、`POOL1_MEM_WE`  
+`POOL1_MEM_nCE_IN`、`POOL1_MEM_nCE_OUT`、`POOL2_BUSY`、`POOL2_BUSY_N`、`POOL2_MEM_REQ`、`POOL2_MEM_WE`  
+`POOL2_MEM_nCE_IN`、`POOL2_MEM_nCE_OUT`、`POOL_SEL`、`REQ`、`SCORE_RD`、`WE`
+
+- 板内网络（15，不上排针）：
+
+`FC_BUSY_N`、`FC_MEM_nCE_B`、`FC_MEM_nCE_IN`、`FC_MEM_nCE_MC`、`FC_MEM_nCE_OUT`、`FC_MEM_nCE_Q`  
+`FC_MEM_nCE_W`、`FC_MEM_REQ`、`FC_MEM_WE`、`POOL_BUSY`、`POOL_BUSY_N`、`POOL_MEM_nCE_IN`  
+`POOL_MEM_nCE_OUT`、`POOL_MEM_REQ`、`POOL_MEM_WE`
+
+### B12 HOSTIO
+
+- 功能：Host connector, clock/reset, image and weight load ports
+- 阶段：the only board with the external host interface
+- 图页：`S10_Top_IO.kicad_sch`、`B12_Conn.kicad_sch`
+- 排针：J21101, J21102, J21103（2x20P，电源脚固定）
+- 引脚表：`output/backplane/B12_Conn_backplane.csv`
+- 对外网络（59）：
+
+`ADDR0`、`ADDR1`、`ADDR10`、`ADDR11`、`ADDR12`、`ADDR13`  
+`ADDR14`、`ADDR15`、`ADDR16`、`ADDR17`、`ADDR18`、`ADDR19`  
+`ADDR2`、`ADDR20`、`ADDR21`、`ADDR22`、`ADDR23`、`ADDR3`  
+`ADDR4`、`ADDR5`、`ADDR6`、`ADDR7`、`ADDR8`、`ADDR9`  
+`BUSY`、`CLK`、`DONE`、`ERROR`、`ERROR_CODE0`、`ERROR_CODE1`  
+`ERROR_CODE2`、`ERROR_CODE3`、`IMAGE_DONE_N`、`IMAGE_READY`、`LOAD_DATA0`、`LOAD_DATA1`  
+`LOAD_DATA2`、`LOAD_DATA3`、`LOAD_DATA4`、`LOAD_DATA5`、`LOAD_DATA6`、`LOAD_DATA7`  
+`LOAD_EN`、`LOAD_nOE`、`LOAD_nWE`、`MEM_SEL0`、`MEM_SEL1`、`MEM_SEL2`  
+`MEM_SEL3`、`MEM_SEL4`、`MODEL_DONE_N`、`MODEL_READY`、`RESET_N`、`RESULT0`  
+`RESULT1`、`RESULT2`、`RESULT3`、`RESULT_VALID`、`START`
+
+- 板内网络（0，不上排针）：
+
+（无）
+
+## 3. 转换时的固定约定
+
+- 电源脚：1–4 `+5V`、5–8 `+3V3`（预留，当前无负载）、9–14 `GND`。
+- 排针型号：`Connector_Generic:Conn_02x20_Odd_Even`，封装 `PinHeader_2x20_P2.54mm_Vertical`。
+- `FC_SEL`/`POOL_SEL` 只出现在 B01 与 B11，不再进引擎板；引擎变体已把选择脚固定为 0/1。
+- B11 的 `S11A_EngineMerge` 是板上 5 片 74HC157，不是跨板连接；转换时不要把它拆到别的板。
+- B03 的 FC2/POOL2 缓冲组（U58–U65）是板上三方态合并，不要误当成跨板直连。
+
+## 4. 核对清单
+
+- [ ] 12 个工程，共 32 张图页（模块图 + Bxx_Conn）。
+- [ ] 每板排针数与 `BOARD_MANIFEST.csv` 一致（合计 32 片）。
+- [ ] 每个排针 1–14 脚电源定义一致。
+- [ ] `backplane_nets.csv` 中 282 个网络的板卡集合逐一对上。
+- [ ] 板内网络没有出现在任何排针上。
+- [ ] 位号未重新编号。
+
+机器可读文件：
+
+- `output/boards/BOARD_MANIFEST.csv`：板卡 → 图页 → 网络数/排针数。
+- `output/boards/backplane_nets.csv`：网络 → 板卡集合。
+- `output/backplane/backplane_pinout.csv`：逐脚 net/role。
+- `output/bom/CNN_74xx_System_BOM.csv`：整机 BOM（1329 件）。

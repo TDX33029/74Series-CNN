@@ -1,0 +1,244 @@
+* ARGMAX signed-32 functional testbench (S06 behavior)
+.model ddff d_dff()
+Vclk clk 0 PULSE(0 3.3 50n 1n 1n 50n 100n)
+Vrst rst 0 PWL(0 3.3 200n 3.3 201n 0)
+Vs0 s0 0 0
+Bst st 0 V = (V(q0)+2*V(q1)+4*V(q2)+8*V(q3))/3.3
+Btval tst 0 V = (V(qt0)+2*V(qt1)+4*V(qt2))/3.3
+Bcls cls 0 V = (V(qc0)+2*V(qc1)+4*V(qc2)+8*V(qc3))/3.3
+Bstart start 0 V = ((abs(V(st)-0)<0.5)*(V(tst)<4.5)) ? 3.3 : 0
+Bns ns 0 V = (abs(V(st)-0)<0.5 ? ((V(start)>1.65) ? 1 : 0) : (abs(V(st)-1)<0.5 ? 2 : (abs(V(st)-2)<0.5 ? 3 : (abs(V(st)-3)<0.5 ? 4 : (abs(V(st)-4)<0.5 ? 8 : (abs(V(st)-5)<0.5 ? 6 : (abs(V(st)-6)<0.5 ? 7 : (abs(V(st)-7)<0.5 ? 8 : (abs(V(st)-8)<0.5 ? ((abs(V(cls)-9)<0.5) ? 9 : 5) : (abs(V(st)-9)<0.5 ? 10 : (abs(V(st)-10)<0.5 ? ((V(start)>1.65) ? 10 : 0) : 0)))))))))))
+Bmclr mclr 0 V = ((V(rst)>1.65)+(abs(V(st)-1)<0.5) > 0.5) ? 3.3 : 0
+Bclsn clsn 0 V = (abs(V(st)-8)<0.5) ? (V(cls)+1) : V(cls)
+Btnxt tnxt 0 V = (abs(V(st)-9)<0.5) ? (V(tst)+1) : V(tst)
+Bb0_0 b0_0 0 V = (abs(V(cls)-0)<0.5 ? 100 : (abs(V(cls)-1)<0.5 ? 206 : (abs(V(cls)-2)<0.5 ? 30 : (abs(V(cls)-3)<0.5 ? 249 : (abs(V(cls)-4)<0.5 ? 0 : (abs(V(cls)-5)<0.5 ? 55 : (abs(V(cls)-6)<0.5 ? 156 : (abs(V(cls)-7)<0.5 ? 12 : (abs(V(cls)-8)<0.5 ? 90 : (abs(V(cls)-9)<0.5 ? 255 : 0))))))))))
+Bb0_1 b0_1 0 V = (abs(V(cls)-0)<0.5 ? 0 : (abs(V(cls)-1)<0.5 ? 255 : (abs(V(cls)-2)<0.5 ? 0 : (abs(V(cls)-3)<0.5 ? 1 : (abs(V(cls)-4)<0.5 ? 254 : (abs(V(cls)-5)<0.5 ? 1 : (abs(V(cls)-6)<0.5 ? 0 : (abs(V(cls)-7)<0.5 ? 0 : (abs(V(cls)-8)<0.5 ? 42 : (abs(V(cls)-9)<0.5 ? 255 : 0))))))))))
+Bb0_2 b0_2 0 V = (abs(V(cls)-0)<0.5 ? 5 : (abs(V(cls)-1)<0.5 ? 5 : (abs(V(cls)-2)<0.5 ? 5 : (abs(V(cls)-3)<0.5 ? 5 : (abs(V(cls)-4)<0.5 ? 5 : (abs(V(cls)-5)<0.5 ? 5 : (abs(V(cls)-6)<0.5 ? 5 : (abs(V(cls)-7)<0.5 ? 5 : (abs(V(cls)-8)<0.5 ? 5 : (abs(V(cls)-9)<0.5 ? 5 : 0))))))))))
+Bb0_3 b0_3 0 V = (abs(V(cls)-0)<0.5 ? 247 : (abs(V(cls)-1)<0.5 ? 247 : (abs(V(cls)-2)<0.5 ? 57 : (abs(V(cls)-3)<0.5 ? 0 : (abs(V(cls)-4)<0.5 ? 4 : (abs(V(cls)-5)<0.5 ? 57 : (abs(V(cls)-6)<0.5 ? 254 : (abs(V(cls)-7)<0.5 ? 57 : (abs(V(cls)-8)<0.5 ? 0 : (abs(V(cls)-9)<0.5 ? 1 : 0))))))))))
+Bb0_4 b0_4 0 V = (abs(V(cls)-0)<0.5 ? 251 : (abs(V(cls)-1)<0.5 ? 156 : (abs(V(cls)-2)<0.5 ? 249 : (abs(V(cls)-3)<0.5 ? 0 : (abs(V(cls)-4)<0.5 ? 255 : (abs(V(cls)-5)<0.5 ? 254 : (abs(V(cls)-6)<0.5 ? 253 : (abs(V(cls)-7)<0.5 ? 252 : (abs(V(cls)-8)<0.5 ? 251 : (abs(V(cls)-9)<0.5 ? 250 : 0))))))))))
+Bb0 b0 0 V = (abs(V(tst)-0)<0.5 ? V(b0_0) : (abs(V(tst)-1)<0.5 ? V(b0_1) : (abs(V(tst)-2)<0.5 ? V(b0_2) : (abs(V(tst)-3)<0.5 ? V(b0_3) : (abs(V(tst)-4)<0.5 ? V(b0_4) : 0)))))
+Bb1_0 b1_0 0 V = (abs(V(cls)-0)<0.5 ? 0 : (abs(V(cls)-1)<0.5 ? 255 : (abs(V(cls)-2)<0.5 ? 0 : (abs(V(cls)-3)<0.5 ? 255 : (abs(V(cls)-4)<0.5 ? 0 : (abs(V(cls)-5)<0.5 ? 0 : (abs(V(cls)-6)<0.5 ? 255 : (abs(V(cls)-7)<0.5 ? 0 : (abs(V(cls)-8)<0.5 ? 0 : (abs(V(cls)-9)<0.5 ? 255 : 0))))))))))
+Bb1_1 b1_1 0 V = (abs(V(cls)-0)<0.5 ? 0 : (abs(V(cls)-1)<0.5 ? 255 : (abs(V(cls)-2)<0.5 ? 0 : (abs(V(cls)-3)<0.5 ? 0 : (abs(V(cls)-4)<0.5 ? 255 : (abs(V(cls)-5)<0.5 ? 0 : (abs(V(cls)-6)<0.5 ? 0 : (abs(V(cls)-7)<0.5 ? 0 : (abs(V(cls)-8)<0.5 ? 0 : (abs(V(cls)-9)<0.5 ? 255 : 0))))))))))
+Bb1_2 b1_2 0 V = (abs(V(cls)-0)<0.5 ? 0 : (abs(V(cls)-1)<0.5 ? 0 : (abs(V(cls)-2)<0.5 ? 0 : (abs(V(cls)-3)<0.5 ? 0 : (abs(V(cls)-4)<0.5 ? 0 : (abs(V(cls)-5)<0.5 ? 0 : (abs(V(cls)-6)<0.5 ? 0 : (abs(V(cls)-7)<0.5 ? 0 : (abs(V(cls)-8)<0.5 ? 0 : (abs(V(cls)-9)<0.5 ? 0 : 0))))))))))
+Bb1_3 b1_3 0 V = (abs(V(cls)-0)<0.5 ? 255 : (abs(V(cls)-1)<0.5 ? 255 : (abs(V(cls)-2)<0.5 ? 48 : (abs(V(cls)-3)<0.5 ? 0 : (abs(V(cls)-4)<0.5 ? 0 : (abs(V(cls)-5)<0.5 ? 48 : (abs(V(cls)-6)<0.5 ? 255 : (abs(V(cls)-7)<0.5 ? 48 : (abs(V(cls)-8)<0.5 ? 0 : (abs(V(cls)-9)<0.5 ? 0 : 0))))))))))
+Bb1_4 b1_4 0 V = (abs(V(cls)-0)<0.5 ? 255 : (abs(V(cls)-1)<0.5 ? 255 : (abs(V(cls)-2)<0.5 ? 255 : (abs(V(cls)-3)<0.5 ? 0 : (abs(V(cls)-4)<0.5 ? 255 : (abs(V(cls)-5)<0.5 ? 255 : (abs(V(cls)-6)<0.5 ? 255 : (abs(V(cls)-7)<0.5 ? 255 : (abs(V(cls)-8)<0.5 ? 255 : (abs(V(cls)-9)<0.5 ? 255 : 0))))))))))
+Bb1 b1 0 V = (abs(V(tst)-0)<0.5 ? V(b1_0) : (abs(V(tst)-1)<0.5 ? V(b1_1) : (abs(V(tst)-2)<0.5 ? V(b1_2) : (abs(V(tst)-3)<0.5 ? V(b1_3) : (abs(V(tst)-4)<0.5 ? V(b1_4) : 0)))))
+Bb2_0 b2_0 0 V = (abs(V(cls)-0)<0.5 ? 0 : (abs(V(cls)-1)<0.5 ? 255 : (abs(V(cls)-2)<0.5 ? 0 : (abs(V(cls)-3)<0.5 ? 255 : (abs(V(cls)-4)<0.5 ? 0 : (abs(V(cls)-5)<0.5 ? 0 : (abs(V(cls)-6)<0.5 ? 255 : (abs(V(cls)-7)<0.5 ? 0 : (abs(V(cls)-8)<0.5 ? 0 : (abs(V(cls)-9)<0.5 ? 255 : 0))))))))))
+Bb2_1 b2_1 0 V = (abs(V(cls)-0)<0.5 ? 0 : (abs(V(cls)-1)<0.5 ? 255 : (abs(V(cls)-2)<0.5 ? 0 : (abs(V(cls)-3)<0.5 ? 0 : (abs(V(cls)-4)<0.5 ? 255 : (abs(V(cls)-5)<0.5 ? 0 : (abs(V(cls)-6)<0.5 ? 0 : (abs(V(cls)-7)<0.5 ? 0 : (abs(V(cls)-8)<0.5 ? 0 : (abs(V(cls)-9)<0.5 ? 255 : 0))))))))))
+Bb2_2 b2_2 0 V = (abs(V(cls)-0)<0.5 ? 0 : (abs(V(cls)-1)<0.5 ? 0 : (abs(V(cls)-2)<0.5 ? 0 : (abs(V(cls)-3)<0.5 ? 0 : (abs(V(cls)-4)<0.5 ? 0 : (abs(V(cls)-5)<0.5 ? 0 : (abs(V(cls)-6)<0.5 ? 0 : (abs(V(cls)-7)<0.5 ? 0 : (abs(V(cls)-8)<0.5 ? 0 : (abs(V(cls)-9)<0.5 ? 0 : 0))))))))))
+Bb2_3 b2_3 0 V = (abs(V(cls)-0)<0.5 ? 255 : (abs(V(cls)-1)<0.5 ? 255 : (abs(V(cls)-2)<0.5 ? 0 : (abs(V(cls)-3)<0.5 ? 0 : (abs(V(cls)-4)<0.5 ? 0 : (abs(V(cls)-5)<0.5 ? 0 : (abs(V(cls)-6)<0.5 ? 255 : (abs(V(cls)-7)<0.5 ? 0 : (abs(V(cls)-8)<0.5 ? 0 : (abs(V(cls)-9)<0.5 ? 0 : 0))))))))))
+Bb2_4 b2_4 0 V = (abs(V(cls)-0)<0.5 ? 255 : (abs(V(cls)-1)<0.5 ? 255 : (abs(V(cls)-2)<0.5 ? 255 : (abs(V(cls)-3)<0.5 ? 0 : (abs(V(cls)-4)<0.5 ? 255 : (abs(V(cls)-5)<0.5 ? 255 : (abs(V(cls)-6)<0.5 ? 255 : (abs(V(cls)-7)<0.5 ? 255 : (abs(V(cls)-8)<0.5 ? 255 : (abs(V(cls)-9)<0.5 ? 255 : 0))))))))))
+Bb2 b2 0 V = (abs(V(tst)-0)<0.5 ? V(b2_0) : (abs(V(tst)-1)<0.5 ? V(b2_1) : (abs(V(tst)-2)<0.5 ? V(b2_2) : (abs(V(tst)-3)<0.5 ? V(b2_3) : (abs(V(tst)-4)<0.5 ? V(b2_4) : 0)))))
+Bb3_0 b3_0 0 V = (abs(V(cls)-0)<0.5 ? 0 : (abs(V(cls)-1)<0.5 ? 255 : (abs(V(cls)-2)<0.5 ? 0 : (abs(V(cls)-3)<0.5 ? 255 : (abs(V(cls)-4)<0.5 ? 0 : (abs(V(cls)-5)<0.5 ? 0 : (abs(V(cls)-6)<0.5 ? 255 : (abs(V(cls)-7)<0.5 ? 0 : (abs(V(cls)-8)<0.5 ? 0 : (abs(V(cls)-9)<0.5 ? 255 : 0))))))))))
+Bb3_1 b3_1 0 V = (abs(V(cls)-0)<0.5 ? 128 : (abs(V(cls)-1)<0.5 ? 255 : (abs(V(cls)-2)<0.5 ? 0 : (abs(V(cls)-3)<0.5 ? 0 : (abs(V(cls)-4)<0.5 ? 127 : (abs(V(cls)-5)<0.5 ? 128 : (abs(V(cls)-6)<0.5 ? 64 : (abs(V(cls)-7)<0.5 ? 192 : (abs(V(cls)-8)<0.5 ? 0 : (abs(V(cls)-9)<0.5 ? 127 : 0))))))))))
+Bb3_2 b3_2 0 V = (abs(V(cls)-0)<0.5 ? 0 : (abs(V(cls)-1)<0.5 ? 0 : (abs(V(cls)-2)<0.5 ? 0 : (abs(V(cls)-3)<0.5 ? 0 : (abs(V(cls)-4)<0.5 ? 0 : (abs(V(cls)-5)<0.5 ? 0 : (abs(V(cls)-6)<0.5 ? 0 : (abs(V(cls)-7)<0.5 ? 0 : (abs(V(cls)-8)<0.5 ? 0 : (abs(V(cls)-9)<0.5 ? 0 : 0))))))))))
+Bb3_3 b3_3 0 V = (abs(V(cls)-0)<0.5 ? 255 : (abs(V(cls)-1)<0.5 ? 255 : (abs(V(cls)-2)<0.5 ? 0 : (abs(V(cls)-3)<0.5 ? 0 : (abs(V(cls)-4)<0.5 ? 0 : (abs(V(cls)-5)<0.5 ? 0 : (abs(V(cls)-6)<0.5 ? 255 : (abs(V(cls)-7)<0.5 ? 0 : (abs(V(cls)-8)<0.5 ? 0 : (abs(V(cls)-9)<0.5 ? 0 : 0))))))))))
+Bb3_4 b3_4 0 V = (abs(V(cls)-0)<0.5 ? 255 : (abs(V(cls)-1)<0.5 ? 255 : (abs(V(cls)-2)<0.5 ? 255 : (abs(V(cls)-3)<0.5 ? 128 : (abs(V(cls)-4)<0.5 ? 255 : (abs(V(cls)-5)<0.5 ? 255 : (abs(V(cls)-6)<0.5 ? 255 : (abs(V(cls)-7)<0.5 ? 255 : (abs(V(cls)-8)<0.5 ? 255 : (abs(V(cls)-9)<0.5 ? 255 : 0))))))))))
+Bb3 b3 0 V = (abs(V(tst)-0)<0.5 ? V(b3_0) : (abs(V(tst)-1)<0.5 ? V(b3_1) : (abs(V(tst)-2)<0.5 ? V(b3_2) : (abs(V(tst)-3)<0.5 ? V(b3_3) : (abs(V(tst)-4)<0.5 ? V(b3_4) : 0)))))
+Bd0 d0 0 V = 3.3*(floor((V(ns)+0.5)/1)-2*floor((V(ns)+0.5)/2))
+A0 d0 clk s0 rst q0 qb0 ddff
+Bd1 d1 0 V = 3.3*(floor((V(ns)+0.5)/2)-2*floor((V(ns)+0.5)/4))
+A1 d1 clk s0 rst q1 qb1 ddff
+Bd2 d2 0 V = 3.3*(floor((V(ns)+0.5)/4)-2*floor((V(ns)+0.5)/8))
+A2 d2 clk s0 rst q2 qb2 ddff
+Bd3 d3 0 V = 3.3*(floor((V(ns)+0.5)/8)-2*floor((V(ns)+0.5)/16))
+A3 d3 clk s0 rst q3 qb3 ddff
+Btd0 td0 0 V = 3.3*(floor((V(tnxt)+0.5)/1)-2*floor((V(tnxt)+0.5)/2))
+At0 td0 clk s0 rst qt0 qtb0 ddff
+Btd1 td1 0 V = 3.3*(floor((V(tnxt)+0.5)/2)-2*floor((V(tnxt)+0.5)/4))
+At1 td1 clk s0 rst qt1 qtb1 ddff
+Btd2 td2 0 V = 3.3*(floor((V(tnxt)+0.5)/4)-2*floor((V(tnxt)+0.5)/8))
+At2 td2 clk s0 rst qt2 qtb2 ddff
+Bcd0 cd0 0 V = 3.3*(floor((V(clsn)+0.5)/1)-2*floor((V(clsn)+0.5)/2))
+Ac0 cd0 clk s0 mclr qc0 qcb0 ddff
+Bcd1 cd1 0 V = 3.3*(floor((V(clsn)+0.5)/2)-2*floor((V(clsn)+0.5)/4))
+Ac1 cd1 clk s0 mclr qc1 qcb1 ddff
+Bcd2 cd2 0 V = 3.3*(floor((V(clsn)+0.5)/4)-2*floor((V(clsn)+0.5)/8))
+Ac2 cd2 clk s0 mclr qc2 qcb2 ddff
+Bcd3 cd3 0 V = 3.3*(floor((V(clsn)+0.5)/8)-2*floor((V(clsn)+0.5)/16))
+Ac3 cd3 clk s0 mclr qc3 qcb3 ddff
+Bsd0 sd0 0 V = 3.3*(floor((V(b0)+0.5)/1)-2*floor((V(b0)+0.5)/2))
+As0 sd0 clk s0 mclr qs0 qsb0 ddff
+Bsd1 sd1 0 V = 3.3*(floor((V(b0)+0.5)/2)-2*floor((V(b0)+0.5)/4))
+As1 sd1 clk s0 mclr qs1 qsb1 ddff
+Bsd2 sd2 0 V = 3.3*(floor((V(b0)+0.5)/4)-2*floor((V(b0)+0.5)/8))
+As2 sd2 clk s0 mclr qs2 qsb2 ddff
+Bsd3 sd3 0 V = 3.3*(floor((V(b0)+0.5)/8)-2*floor((V(b0)+0.5)/16))
+As3 sd3 clk s0 mclr qs3 qsb3 ddff
+Bsd4 sd4 0 V = 3.3*(floor((V(b0)+0.5)/16)-2*floor((V(b0)+0.5)/32))
+As4 sd4 clk s0 mclr qs4 qsb4 ddff
+Bsd5 sd5 0 V = 3.3*(floor((V(b0)+0.5)/32)-2*floor((V(b0)+0.5)/64))
+As5 sd5 clk s0 mclr qs5 qsb5 ddff
+Bsd6 sd6 0 V = 3.3*(floor((V(b0)+0.5)/64)-2*floor((V(b0)+0.5)/128))
+As6 sd6 clk s0 mclr qs6 qsb6 ddff
+Bsd7 sd7 0 V = 3.3*(floor((V(b0)+0.5)/128)-2*floor((V(b0)+0.5)/256))
+As7 sd7 clk s0 mclr qs7 qsb7 ddff
+Bsd8 sd8 0 V = 3.3*(floor((V(b1)+0.5)/1)-2*floor((V(b1)+0.5)/2))
+As8 sd8 clk s0 mclr qs8 qsb8 ddff
+Bsd9 sd9 0 V = 3.3*(floor((V(b1)+0.5)/2)-2*floor((V(b1)+0.5)/4))
+As9 sd9 clk s0 mclr qs9 qsb9 ddff
+Bsd10 sd10 0 V = 3.3*(floor((V(b1)+0.5)/4)-2*floor((V(b1)+0.5)/8))
+As10 sd10 clk s0 mclr qs10 qsb10 ddff
+Bsd11 sd11 0 V = 3.3*(floor((V(b1)+0.5)/8)-2*floor((V(b1)+0.5)/16))
+As11 sd11 clk s0 mclr qs11 qsb11 ddff
+Bsd12 sd12 0 V = 3.3*(floor((V(b1)+0.5)/16)-2*floor((V(b1)+0.5)/32))
+As12 sd12 clk s0 mclr qs12 qsb12 ddff
+Bsd13 sd13 0 V = 3.3*(floor((V(b1)+0.5)/32)-2*floor((V(b1)+0.5)/64))
+As13 sd13 clk s0 mclr qs13 qsb13 ddff
+Bsd14 sd14 0 V = 3.3*(floor((V(b1)+0.5)/64)-2*floor((V(b1)+0.5)/128))
+As14 sd14 clk s0 mclr qs14 qsb14 ddff
+Bsd15 sd15 0 V = 3.3*(floor((V(b1)+0.5)/128)-2*floor((V(b1)+0.5)/256))
+As15 sd15 clk s0 mclr qs15 qsb15 ddff
+Bsd16 sd16 0 V = 3.3*(floor((V(b2)+0.5)/1)-2*floor((V(b2)+0.5)/2))
+As16 sd16 clk s0 mclr qs16 qsb16 ddff
+Bsd17 sd17 0 V = 3.3*(floor((V(b2)+0.5)/2)-2*floor((V(b2)+0.5)/4))
+As17 sd17 clk s0 mclr qs17 qsb17 ddff
+Bsd18 sd18 0 V = 3.3*(floor((V(b2)+0.5)/4)-2*floor((V(b2)+0.5)/8))
+As18 sd18 clk s0 mclr qs18 qsb18 ddff
+Bsd19 sd19 0 V = 3.3*(floor((V(b2)+0.5)/8)-2*floor((V(b2)+0.5)/16))
+As19 sd19 clk s0 mclr qs19 qsb19 ddff
+Bsd20 sd20 0 V = 3.3*(floor((V(b2)+0.5)/16)-2*floor((V(b2)+0.5)/32))
+As20 sd20 clk s0 mclr qs20 qsb20 ddff
+Bsd21 sd21 0 V = 3.3*(floor((V(b2)+0.5)/32)-2*floor((V(b2)+0.5)/64))
+As21 sd21 clk s0 mclr qs21 qsb21 ddff
+Bsd22 sd22 0 V = 3.3*(floor((V(b2)+0.5)/64)-2*floor((V(b2)+0.5)/128))
+As22 sd22 clk s0 mclr qs22 qsb22 ddff
+Bsd23 sd23 0 V = 3.3*(floor((V(b2)+0.5)/128)-2*floor((V(b2)+0.5)/256))
+As23 sd23 clk s0 mclr qs23 qsb23 ddff
+Bsd24 sd24 0 V = 3.3*(floor((V(b3)+0.5)/1)-2*floor((V(b3)+0.5)/2))
+As24 sd24 clk s0 mclr qs24 qsb24 ddff
+Bsd25 sd25 0 V = 3.3*(floor((V(b3)+0.5)/2)-2*floor((V(b3)+0.5)/4))
+As25 sd25 clk s0 mclr qs25 qsb25 ddff
+Bsd26 sd26 0 V = 3.3*(floor((V(b3)+0.5)/4)-2*floor((V(b3)+0.5)/8))
+As26 sd26 clk s0 mclr qs26 qsb26 ddff
+Bsd27 sd27 0 V = 3.3*(floor((V(b3)+0.5)/8)-2*floor((V(b3)+0.5)/16))
+As27 sd27 clk s0 mclr qs27 qsb27 ddff
+Bsd28 sd28 0 V = 3.3*(floor((V(b3)+0.5)/16)-2*floor((V(b3)+0.5)/32))
+As28 sd28 clk s0 mclr qs28 qsb28 ddff
+Bsd29 sd29 0 V = 3.3*(floor((V(b3)+0.5)/32)-2*floor((V(b3)+0.5)/64))
+As29 sd29 clk s0 mclr qs29 qsb29 ddff
+Bsd30 sd30 0 V = 3.3*(floor((V(b3)+0.5)/64)-2*floor((V(b3)+0.5)/128))
+As30 sd30 clk s0 mclr qs30 qsb30 ddff
+Bsd31 sd31 0 V = 3.3*(floor((V(b3)+0.5)/128)-2*floor((V(b3)+0.5)/256))
+As31 sd31 clk s0 mclr qs31 qsb31 ddff
+Bc31 c31 0 V = ((V(qs31)<1.65)*(V(qm31)>1.65)) ? 3.3 : (((V(qs31)>1.65)*(V(qm31)<1.65)) ? -3.3 : 0)
+Bc30 c30 0 V = (abs(V(c31))>1.65) ? V(c31) : (((V(qs30)>1.65)*(V(qm30)<1.65)) ? 3.3 : (((V(qs30)<1.65)*(V(qm30)>1.65)) ? -3.3 : 0))
+Bc29 c29 0 V = (abs(V(c30))>1.65) ? V(c30) : (((V(qs29)>1.65)*(V(qm29)<1.65)) ? 3.3 : (((V(qs29)<1.65)*(V(qm29)>1.65)) ? -3.3 : 0))
+Bc28 c28 0 V = (abs(V(c29))>1.65) ? V(c29) : (((V(qs28)>1.65)*(V(qm28)<1.65)) ? 3.3 : (((V(qs28)<1.65)*(V(qm28)>1.65)) ? -3.3 : 0))
+Bc27 c27 0 V = (abs(V(c28))>1.65) ? V(c28) : (((V(qs27)>1.65)*(V(qm27)<1.65)) ? 3.3 : (((V(qs27)<1.65)*(V(qm27)>1.65)) ? -3.3 : 0))
+Bc26 c26 0 V = (abs(V(c27))>1.65) ? V(c27) : (((V(qs26)>1.65)*(V(qm26)<1.65)) ? 3.3 : (((V(qs26)<1.65)*(V(qm26)>1.65)) ? -3.3 : 0))
+Bc25 c25 0 V = (abs(V(c26))>1.65) ? V(c26) : (((V(qs25)>1.65)*(V(qm25)<1.65)) ? 3.3 : (((V(qs25)<1.65)*(V(qm25)>1.65)) ? -3.3 : 0))
+Bc24 c24 0 V = (abs(V(c25))>1.65) ? V(c25) : (((V(qs24)>1.65)*(V(qm24)<1.65)) ? 3.3 : (((V(qs24)<1.65)*(V(qm24)>1.65)) ? -3.3 : 0))
+Bc23 c23 0 V = (abs(V(c24))>1.65) ? V(c24) : (((V(qs23)>1.65)*(V(qm23)<1.65)) ? 3.3 : (((V(qs23)<1.65)*(V(qm23)>1.65)) ? -3.3 : 0))
+Bc22 c22 0 V = (abs(V(c23))>1.65) ? V(c23) : (((V(qs22)>1.65)*(V(qm22)<1.65)) ? 3.3 : (((V(qs22)<1.65)*(V(qm22)>1.65)) ? -3.3 : 0))
+Bc21 c21 0 V = (abs(V(c22))>1.65) ? V(c22) : (((V(qs21)>1.65)*(V(qm21)<1.65)) ? 3.3 : (((V(qs21)<1.65)*(V(qm21)>1.65)) ? -3.3 : 0))
+Bc20 c20 0 V = (abs(V(c21))>1.65) ? V(c21) : (((V(qs20)>1.65)*(V(qm20)<1.65)) ? 3.3 : (((V(qs20)<1.65)*(V(qm20)>1.65)) ? -3.3 : 0))
+Bc19 c19 0 V = (abs(V(c20))>1.65) ? V(c20) : (((V(qs19)>1.65)*(V(qm19)<1.65)) ? 3.3 : (((V(qs19)<1.65)*(V(qm19)>1.65)) ? -3.3 : 0))
+Bc18 c18 0 V = (abs(V(c19))>1.65) ? V(c19) : (((V(qs18)>1.65)*(V(qm18)<1.65)) ? 3.3 : (((V(qs18)<1.65)*(V(qm18)>1.65)) ? -3.3 : 0))
+Bc17 c17 0 V = (abs(V(c18))>1.65) ? V(c18) : (((V(qs17)>1.65)*(V(qm17)<1.65)) ? 3.3 : (((V(qs17)<1.65)*(V(qm17)>1.65)) ? -3.3 : 0))
+Bc16 c16 0 V = (abs(V(c17))>1.65) ? V(c17) : (((V(qs16)>1.65)*(V(qm16)<1.65)) ? 3.3 : (((V(qs16)<1.65)*(V(qm16)>1.65)) ? -3.3 : 0))
+Bc15 c15 0 V = (abs(V(c16))>1.65) ? V(c16) : (((V(qs15)>1.65)*(V(qm15)<1.65)) ? 3.3 : (((V(qs15)<1.65)*(V(qm15)>1.65)) ? -3.3 : 0))
+Bc14 c14 0 V = (abs(V(c15))>1.65) ? V(c15) : (((V(qs14)>1.65)*(V(qm14)<1.65)) ? 3.3 : (((V(qs14)<1.65)*(V(qm14)>1.65)) ? -3.3 : 0))
+Bc13 c13 0 V = (abs(V(c14))>1.65) ? V(c14) : (((V(qs13)>1.65)*(V(qm13)<1.65)) ? 3.3 : (((V(qs13)<1.65)*(V(qm13)>1.65)) ? -3.3 : 0))
+Bc12 c12 0 V = (abs(V(c13))>1.65) ? V(c13) : (((V(qs12)>1.65)*(V(qm12)<1.65)) ? 3.3 : (((V(qs12)<1.65)*(V(qm12)>1.65)) ? -3.3 : 0))
+Bc11 c11 0 V = (abs(V(c12))>1.65) ? V(c12) : (((V(qs11)>1.65)*(V(qm11)<1.65)) ? 3.3 : (((V(qs11)<1.65)*(V(qm11)>1.65)) ? -3.3 : 0))
+Bc10 c10 0 V = (abs(V(c11))>1.65) ? V(c11) : (((V(qs10)>1.65)*(V(qm10)<1.65)) ? 3.3 : (((V(qs10)<1.65)*(V(qm10)>1.65)) ? -3.3 : 0))
+Bc9 c9 0 V = (abs(V(c10))>1.65) ? V(c10) : (((V(qs9)>1.65)*(V(qm9)<1.65)) ? 3.3 : (((V(qs9)<1.65)*(V(qm9)>1.65)) ? -3.3 : 0))
+Bc8 c8 0 V = (abs(V(c9))>1.65) ? V(c9) : (((V(qs8)>1.65)*(V(qm8)<1.65)) ? 3.3 : (((V(qs8)<1.65)*(V(qm8)>1.65)) ? -3.3 : 0))
+Bc7 c7 0 V = (abs(V(c8))>1.65) ? V(c8) : (((V(qs7)>1.65)*(V(qm7)<1.65)) ? 3.3 : (((V(qs7)<1.65)*(V(qm7)>1.65)) ? -3.3 : 0))
+Bc6 c6 0 V = (abs(V(c7))>1.65) ? V(c7) : (((V(qs6)>1.65)*(V(qm6)<1.65)) ? 3.3 : (((V(qs6)<1.65)*(V(qm6)>1.65)) ? -3.3 : 0))
+Bc5 c5 0 V = (abs(V(c6))>1.65) ? V(c6) : (((V(qs5)>1.65)*(V(qm5)<1.65)) ? 3.3 : (((V(qs5)<1.65)*(V(qm5)>1.65)) ? -3.3 : 0))
+Bc4 c4 0 V = (abs(V(c5))>1.65) ? V(c5) : (((V(qs4)>1.65)*(V(qm4)<1.65)) ? 3.3 : (((V(qs4)<1.65)*(V(qm4)>1.65)) ? -3.3 : 0))
+Bc3 c3 0 V = (abs(V(c4))>1.65) ? V(c4) : (((V(qs3)>1.65)*(V(qm3)<1.65)) ? 3.3 : (((V(qs3)<1.65)*(V(qm3)>1.65)) ? -3.3 : 0))
+Bc2 c2 0 V = (abs(V(c3))>1.65) ? V(c3) : (((V(qs2)>1.65)*(V(qm2)<1.65)) ? 3.3 : (((V(qs2)<1.65)*(V(qm2)>1.65)) ? -3.3 : 0))
+Bc1 c1 0 V = (abs(V(c2))>1.65) ? V(c2) : (((V(qs1)>1.65)*(V(qm1)<1.65)) ? 3.3 : (((V(qs1)<1.65)*(V(qm1)>1.65)) ? -3.3 : 0))
+Bc0 c0 0 V = (abs(V(c1))>1.65) ? V(c1) : (((V(qs0)>1.65)*(V(qm0)<1.65)) ? 3.3 : (((V(qs0)<1.65)*(V(qm0)>1.65)) ? -3.3 : 0))
+Bgt gt 0 V = (V(c0)>1.65) ? 3.3 : 0
+Bupd upd 0 V = ((abs(V(st)-4)<0.5) ? 3.3 : ((abs(V(st)-7)<0.5) ? V(gt) : 0))
+Bmxd0 mxd0 0 V = (V(upd)>1.65) ? V(qs0) : V(qm0)
+Am0 mxd0 clk s0 mclr qm0 qmb0 ddff
+Bmxd1 mxd1 0 V = (V(upd)>1.65) ? V(qs1) : V(qm1)
+Am1 mxd1 clk s0 mclr qm1 qmb1 ddff
+Bmxd2 mxd2 0 V = (V(upd)>1.65) ? V(qs2) : V(qm2)
+Am2 mxd2 clk s0 mclr qm2 qmb2 ddff
+Bmxd3 mxd3 0 V = (V(upd)>1.65) ? V(qs3) : V(qm3)
+Am3 mxd3 clk s0 mclr qm3 qmb3 ddff
+Bmxd4 mxd4 0 V = (V(upd)>1.65) ? V(qs4) : V(qm4)
+Am4 mxd4 clk s0 mclr qm4 qmb4 ddff
+Bmxd5 mxd5 0 V = (V(upd)>1.65) ? V(qs5) : V(qm5)
+Am5 mxd5 clk s0 mclr qm5 qmb5 ddff
+Bmxd6 mxd6 0 V = (V(upd)>1.65) ? V(qs6) : V(qm6)
+Am6 mxd6 clk s0 mclr qm6 qmb6 ddff
+Bmxd7 mxd7 0 V = (V(upd)>1.65) ? V(qs7) : V(qm7)
+Am7 mxd7 clk s0 mclr qm7 qmb7 ddff
+Bmxd8 mxd8 0 V = (V(upd)>1.65) ? V(qs8) : V(qm8)
+Am8 mxd8 clk s0 mclr qm8 qmb8 ddff
+Bmxd9 mxd9 0 V = (V(upd)>1.65) ? V(qs9) : V(qm9)
+Am9 mxd9 clk s0 mclr qm9 qmb9 ddff
+Bmxd10 mxd10 0 V = (V(upd)>1.65) ? V(qs10) : V(qm10)
+Am10 mxd10 clk s0 mclr qm10 qmb10 ddff
+Bmxd11 mxd11 0 V = (V(upd)>1.65) ? V(qs11) : V(qm11)
+Am11 mxd11 clk s0 mclr qm11 qmb11 ddff
+Bmxd12 mxd12 0 V = (V(upd)>1.65) ? V(qs12) : V(qm12)
+Am12 mxd12 clk s0 mclr qm12 qmb12 ddff
+Bmxd13 mxd13 0 V = (V(upd)>1.65) ? V(qs13) : V(qm13)
+Am13 mxd13 clk s0 mclr qm13 qmb13 ddff
+Bmxd14 mxd14 0 V = (V(upd)>1.65) ? V(qs14) : V(qm14)
+Am14 mxd14 clk s0 mclr qm14 qmb14 ddff
+Bmxd15 mxd15 0 V = (V(upd)>1.65) ? V(qs15) : V(qm15)
+Am15 mxd15 clk s0 mclr qm15 qmb15 ddff
+Bmxd16 mxd16 0 V = (V(upd)>1.65) ? V(qs16) : V(qm16)
+Am16 mxd16 clk s0 mclr qm16 qmb16 ddff
+Bmxd17 mxd17 0 V = (V(upd)>1.65) ? V(qs17) : V(qm17)
+Am17 mxd17 clk s0 mclr qm17 qmb17 ddff
+Bmxd18 mxd18 0 V = (V(upd)>1.65) ? V(qs18) : V(qm18)
+Am18 mxd18 clk s0 mclr qm18 qmb18 ddff
+Bmxd19 mxd19 0 V = (V(upd)>1.65) ? V(qs19) : V(qm19)
+Am19 mxd19 clk s0 mclr qm19 qmb19 ddff
+Bmxd20 mxd20 0 V = (V(upd)>1.65) ? V(qs20) : V(qm20)
+Am20 mxd20 clk s0 mclr qm20 qmb20 ddff
+Bmxd21 mxd21 0 V = (V(upd)>1.65) ? V(qs21) : V(qm21)
+Am21 mxd21 clk s0 mclr qm21 qmb21 ddff
+Bmxd22 mxd22 0 V = (V(upd)>1.65) ? V(qs22) : V(qm22)
+Am22 mxd22 clk s0 mclr qm22 qmb22 ddff
+Bmxd23 mxd23 0 V = (V(upd)>1.65) ? V(qs23) : V(qm23)
+Am23 mxd23 clk s0 mclr qm23 qmb23 ddff
+Bmxd24 mxd24 0 V = (V(upd)>1.65) ? V(qs24) : V(qm24)
+Am24 mxd24 clk s0 mclr qm24 qmb24 ddff
+Bmxd25 mxd25 0 V = (V(upd)>1.65) ? V(qs25) : V(qm25)
+Am25 mxd25 clk s0 mclr qm25 qmb25 ddff
+Bmxd26 mxd26 0 V = (V(upd)>1.65) ? V(qs26) : V(qm26)
+Am26 mxd26 clk s0 mclr qm26 qmb26 ddff
+Bmxd27 mxd27 0 V = (V(upd)>1.65) ? V(qs27) : V(qm27)
+Am27 mxd27 clk s0 mclr qm27 qmb27 ddff
+Bmxd28 mxd28 0 V = (V(upd)>1.65) ? V(qs28) : V(qm28)
+Am28 mxd28 clk s0 mclr qm28 qmb28 ddff
+Bmxd29 mxd29 0 V = (V(upd)>1.65) ? V(qs29) : V(qm29)
+Am29 mxd29 clk s0 mclr qm29 qmb29 ddff
+Bmxd30 mxd30 0 V = (V(upd)>1.65) ? V(qs30) : V(qm30)
+Am30 mxd30 clk s0 mclr qm30 qmb30 ddff
+Bmxd31 mxd31 0 V = (V(upd)>1.65) ? V(qs31) : V(qm31)
+Am31 mxd31 clk s0 mclr qm31 qmb31 ddff
+Bixd0 ixd0 0 V = (V(upd)>1.65) ? V(qc0) : V(qi0)
+Ai0 ixd0 clk s0 mclr qi0 qib0 ddff
+Bixd1 ixd1 0 V = (V(upd)>1.65) ? V(qc1) : V(qi1)
+Ai1 ixd1 clk s0 mclr qi1 qib1 ddff
+Bixd2 ixd2 0 V = (V(upd)>1.65) ? V(qc2) : V(qi2)
+Ai2 ixd2 clk s0 mclr qi2 qib2 ddff
+Bixd3 ixd3 0 V = (V(upd)>1.65) ? V(qc3) : V(qi3)
+Ai3 ixd3 clk s0 mclr qi3 qib3 ddff
+Bsbyte0 sbyte0 0 V = ((V(qs0)>1.65)?1:0)+2*((V(qs1)>1.65)?1:0)+4*((V(qs2)>1.65)?1:0)+8*((V(qs3)>1.65)?1:0)+16*((V(qs4)>1.65)?1:0)+32*((V(qs5)>1.65)?1:0)+64*((V(qs6)>1.65)?1:0)+128*((V(qs7)>1.65)?1:0)
+Bmbyte0 mbyte0 0 V = ((V(qm0)>1.65)?1:0)+2*((V(qm1)>1.65)?1:0)+4*((V(qm2)>1.65)?1:0)+8*((V(qm3)>1.65)?1:0)+16*((V(qm4)>1.65)?1:0)+32*((V(qm5)>1.65)?1:0)+64*((V(qm6)>1.65)?1:0)+128*((V(qm7)>1.65)?1:0)
+Bsbyte1 sbyte1 0 V = ((V(qs8)>1.65)?1:0)+2*((V(qs9)>1.65)?1:0)+4*((V(qs10)>1.65)?1:0)+8*((V(qs11)>1.65)?1:0)+16*((V(qs12)>1.65)?1:0)+32*((V(qs13)>1.65)?1:0)+64*((V(qs14)>1.65)?1:0)+128*((V(qs15)>1.65)?1:0)
+Bmbyte1 mbyte1 0 V = ((V(qm8)>1.65)?1:0)+2*((V(qm9)>1.65)?1:0)+4*((V(qm10)>1.65)?1:0)+8*((V(qm11)>1.65)?1:0)+16*((V(qm12)>1.65)?1:0)+32*((V(qm13)>1.65)?1:0)+64*((V(qm14)>1.65)?1:0)+128*((V(qm15)>1.65)?1:0)
+Bsbyte2 sbyte2 0 V = ((V(qs16)>1.65)?1:0)+2*((V(qs17)>1.65)?1:0)+4*((V(qs18)>1.65)?1:0)+8*((V(qs19)>1.65)?1:0)+16*((V(qs20)>1.65)?1:0)+32*((V(qs21)>1.65)?1:0)+64*((V(qs22)>1.65)?1:0)+128*((V(qs23)>1.65)?1:0)
+Bmbyte2 mbyte2 0 V = ((V(qm16)>1.65)?1:0)+2*((V(qm17)>1.65)?1:0)+4*((V(qm18)>1.65)?1:0)+8*((V(qm19)>1.65)?1:0)+16*((V(qm20)>1.65)?1:0)+32*((V(qm21)>1.65)?1:0)+64*((V(qm22)>1.65)?1:0)+128*((V(qm23)>1.65)?1:0)
+Bsbyte3 sbyte3 0 V = ((V(qs24)>1.65)?1:0)+2*((V(qs25)>1.65)?1:0)+4*((V(qs26)>1.65)?1:0)+8*((V(qs27)>1.65)?1:0)+16*((V(qs28)>1.65)?1:0)+32*((V(qs29)>1.65)?1:0)+64*((V(qs30)>1.65)?1:0)+128*((V(qs31)>1.65)?1:0)
+Bmbyte3 mbyte3 0 V = ((V(qm24)>1.65)?1:0)+2*((V(qm25)>1.65)?1:0)+4*((V(qm26)>1.65)?1:0)+8*((V(qm27)>1.65)?1:0)+16*((V(qm28)>1.65)?1:0)+32*((V(qm29)>1.65)?1:0)+64*((V(qm30)>1.65)?1:0)+128*((V(qm31)>1.65)?1:0)
+Bres result 0 V = ((V(qi0)>1.65)?1:0)+2*((V(qi1)>1.65)?1:0)+4*((V(qi2)>1.65)?1:0)+8*((V(qi3)>1.65)?1:0)
+Baddr addr 0 V = V(cls)
+Bdone done 0 V = (abs(V(st)-9)<0.5) ? 3.3 : 0
+Bvalid valid 0 V = ((abs(V(st)-9)<0.5)+(abs(V(st)-10)<0.5) > 0.5) ? 3.3 : 0
+Bsrd srd 0 V = ((abs(V(st)-2)<0.5)+(abs(V(st)-3)<0.5)+(abs(V(st)-5)<0.5)+(abs(V(st)-6)<0.5) > 0.5) ? 3.3 : 0
+.tran 1n 23000n
+.end

@@ -1,0 +1,30 @@
+COMMAND: python sim/gen_engine_tb.py
+ENGINE: fc
+=== FC1 / FC2 ===
+FC1: neuron(0..31) -> index(0..399), 12800 MAC
+FC2: neuron(0..9) -> index(0..31), 320 MAC
+Golden MAC count: 13120 (12800 + 320)
+PASS: FC total MAC count = 13120
+PASS: FC1 MAC count = 32*400 = 12800
+PASS: FC2 MAC count = 10*32 = 320
+PASS: FC IN_ADDR bounds 0..399 (got 0..399)
+PASS: FC W_ADDR bounds 0..12799 (got 0..12799)
+PASS: FC OUT_ADDR bounds 0..36 (got 0..36)
+PASS: FC output writes = 32 (FC1) + 40 (FC2) = 72
+PASS: FC2 write address bounds 0..39 (got 0..39)
+PASS: FC2 writes 4 bytes little-endian per class, addresses 4n..4n+3
+PASS: FC1 neuron/index counters wrap after 12800 MACs
+PASS: FC2 neuron/index counters wrap after 320 MACs
+PASS: FC 74HC161 counter model matches golden indices for all 13120 MACs
+NGSPICE COMMAND: python tools/ngspice_runner.py sim\tb_fc_eng.cir
+ngspice load rc=0
+ngspice run rc=0
+SPICE samples: 13121 steps (expected 13120)
+PASS: fc: SPICE produced at least 13120 MAC steps
+PASS: fc: SPICE address sequence equals golden for every step
+fc: golden address bounds IN 0..399, W 0..12799, OUT 0..36
+fc: SPICE measured bounds IN 0..399, W 0..12799, OUT 0..36
+PASS: fc: SPICE extrema equal golden extrema
+PASS: fc: all addresses stay inside their documented ranges
+PASS: fc: MAC count 13120 == 13120
+RESULT: PASS

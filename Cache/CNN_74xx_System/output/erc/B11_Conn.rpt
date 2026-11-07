@@ -1,0 +1,228 @@
+ERC report (2026-11-07T23:27:15, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 64.77 mm): Global Label 'FC_SEL'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 67.31 mm): Global Label 'ADDR16'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 69.85 mm): Global Label 'ADDR18'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 72.39 mm): Global Label 'ADDR20'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 74.93 mm): Global Label 'ADDR22'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 77.47 mm): Global Label 'MEM_ACK'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 80.01 mm): Global Label 'MEM_DONE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 82.55 mm): Global Label 'WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 85.09 mm): Global Label 'MEM_SEL0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 87.63 mm): Global Label 'MEM_SEL2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 90.17 mm): Global Label 'MEM_SEL4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 92.71 mm): Global Label 'C1_MEM_nCE_B'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 95.25 mm): Global Label 'C1_MEM_nCE_MC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 124.46 mm): Global Label 'C1_MEM_nCE_Q'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 127.00 mm): Global Label 'C1_MEM_REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 129.54 mm): Global Label 'C2_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 132.08 mm): Global Label 'C2_MEM_nCE_IN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 134.62 mm): Global Label 'C2_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 137.16 mm): Global Label 'C2_MEM_nCE_W'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 139.70 mm): Global Label 'C2_MEM_WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 142.24 mm): Global Label 'SCORE_RD'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 144.78 mm): Global Label 'FC1_MEM_nCE_B'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 147.32 mm): Global Label 'FC1_MEM_nCE_MC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 149.86 mm): Global Label 'FC1_MEM_nCE_Q'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 152.40 mm): Global Label 'FC1_MEM_REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 154.94 mm): Global Label 'FC2_BUSY'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 185.42 mm): Global Label 'FC2_MEM_nCE_B'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 187.96 mm): Global Label 'FC2_MEM_nCE_MC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 190.50 mm): Global Label 'FC2_MEM_nCE_Q'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 193.04 mm): Global Label 'FC2_MEM_REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 195.58 mm): Global Label 'POOL1_BUSY'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 198.12 mm): Global Label 'POOL1_MEM_nCE_IN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 200.66 mm): Global Label 'POOL1_MEM_REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 203.20 mm): Global Label 'POOL2_BUSY'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 205.74 mm): Global Label 'POOL2_MEM_nCE_IN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 208.28 mm): Global Label 'POOL2_MEM_REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 64.77 mm): Global Label 'POOL_SEL'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 67.31 mm): Global Label 'ADDR17'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 69.85 mm): Global Label 'ADDR19'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 72.39 mm): Global Label 'ADDR21'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 74.93 mm): Global Label 'ADDR23'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 77.47 mm): Global Label 'MEM_BUSY'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 80.01 mm): Global Label 'REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 82.55 mm): Global Label 'LOAD_EN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 85.09 mm): Global Label 'MEM_SEL1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 87.63 mm): Global Label 'MEM_SEL3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 90.17 mm): Global Label 'C1_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 92.71 mm): Global Label 'C1_MEM_nCE_IN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 95.25 mm): Global Label 'C1_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 124.46 mm): Global Label 'C1_MEM_nCE_W'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 127.00 mm): Global Label 'C1_MEM_WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 129.54 mm): Global Label 'C2_MEM_nCE_B'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 132.08 mm): Global Label 'C2_MEM_nCE_MC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 134.62 mm): Global Label 'C2_MEM_nCE_Q'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 137.16 mm): Global Label 'C2_MEM_REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 139.70 mm): Global Label 'ARGMAX_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 142.24 mm): Global Label 'FC1_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 144.78 mm): Global Label 'FC1_MEM_nCE_IN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 147.32 mm): Global Label 'FC1_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 149.86 mm): Global Label 'FC1_MEM_nCE_W'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 152.40 mm): Global Label 'FC1_MEM_WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 154.94 mm): Global Label 'FC2_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 185.42 mm): Global Label 'FC2_MEM_nCE_IN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 187.96 mm): Global Label 'FC2_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 190.50 mm): Global Label 'FC2_MEM_nCE_W'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 193.04 mm): Global Label 'FC2_MEM_WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 195.58 mm): Global Label 'POOL1_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 198.12 mm): Global Label 'POOL1_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 200.66 mm): Global Label 'POOL1_MEM_WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 203.20 mm): Global Label 'POOL2_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 205.74 mm): Global Label 'POOL2_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 208.28 mm): Global Label 'POOL2_MEM_WE'
+
+ ** ERC messages: 72  Errors 0  Warnings 72
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

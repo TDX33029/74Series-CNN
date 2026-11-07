@@ -1,0 +1,74 @@
+* POOL engine functional testbench (S05 behavior)
+.model ddff d_dff()
+Vclk clk 0 PULSE(0 3.3 50n 1n 1n 50n 100n)
+Vrst rst 0 PWL(0 3.3 200n 3.3 201n 0)
+Vstart start 0 PWL(0 0 300n 0 301n 3.3 700n 3.3 701n 0)
+Vs0 s0 0 0
+Bst st 0 V = (V(q0)+2*V(q1)+4*V(q2)+8*V(q3))/3.3
+Bns ns 0 V = (abs(V(st)-0)<0.5 ? ((V(start)>1.65) ? 1 : 0) : (abs(V(st)-1)<0.5 ? 2 : (abs(V(st)-2)<0.5 ? 3 : (abs(V(st)-3)<0.5 ? 4 : (abs(V(st)-4)<0.5 ? ((V(v)>2.5) ? 5 : 2) : (abs(V(st)-5)<0.5 ? 6 : (abs(V(st)-6)<0.5 ? ((abs(V(n)-9)<0.5) ? 7 : 2) : (abs(V(st)-7)<0.5 ? 8 : (abs(V(st)-8)<0.5 ? ((V(start)>1.65) ? 8 : 0) : 0)))))))))
+Bvval v 0 V = (V(qv0)+2*V(qv1))/3.3
+Bvn vn 0 V = (abs(V(st)-4)<0.5) ? ((floor(V(v)+1.01)-4*floor((V(v)+1.01)/4+0.01))) : V(v)
+Bmclr mclr 0 V = ((V(rst)>1.65) + (abs(V(st)-1)<0.5) > 0.5) ? 3.3 : 0
+Bnval n 0 V = (V(qn0)+2*V(qn1)+4*V(qn2)+8*V(qn3))/3.3
+Bnn nn 0 V = (abs(V(st)-6)<0.5) ? (V(n)+1) : V(n)
+Bdata data 0 V = (abs(V(n)-0)<0.5 ? ((abs(V(v)-0)<0.5 ? 5 : (abs(V(v)-1)<0.5 ? 200 : (abs(V(v)-2)<0.5 ? 30 : (abs(V(v)-3)<0.5 ? 40 : 0))))) : (abs(V(n)-1)<0.5 ? ((abs(V(v)-0)<0.5 ? 10 : (abs(V(v)-1)<0.5 ? 20 : (abs(V(v)-2)<0.5 ? 30 : (abs(V(v)-3)<0.5 ? 255 : 0))))) : (abs(V(n)-2)<0.5 ? ((abs(V(v)-0)<0.5 ? 250 : (abs(V(v)-1)<0.5 ? 20 : (abs(V(v)-2)<0.5 ? 3 : (abs(V(v)-3)<0.5 ? 4 : 0))))) : (abs(V(n)-3)<0.5 ? ((abs(V(v)-0)<0.5 ? 1 : (abs(V(v)-1)<0.5 ? 2 : (abs(V(v)-2)<0.5 ? 240 : (abs(V(v)-3)<0.5 ? 4 : 0))))) : (abs(V(n)-4)<0.5 ? ((abs(V(v)-0)<0.5 ? 7 : (abs(V(v)-1)<0.5 ? 7 : (abs(V(v)-2)<0.5 ? 7 : (abs(V(v)-3)<0.5 ? 7 : 0))))) : (abs(V(n)-5)<0.5 ? ((abs(V(v)-0)<0.5 ? 0 : (abs(V(v)-1)<0.5 ? 0 : (abs(V(v)-2)<0.5 ? 0 : (abs(V(v)-3)<0.5 ? 0 : 0))))) : (abs(V(n)-6)<0.5 ? ((abs(V(v)-0)<0.5 ? 255 : (abs(V(v)-1)<0.5 ? 0 : (abs(V(v)-2)<0.5 ? 0 : (abs(V(v)-3)<0.5 ? 0 : 0))))) : (abs(V(n)-7)<0.5 ? ((abs(V(v)-0)<0.5 ? 0 : (abs(V(v)-1)<0.5 ? 255 : (abs(V(v)-2)<0.5 ? 0 : (abs(V(v)-3)<0.5 ? 0 : 0))))) : (abs(V(n)-8)<0.5 ? ((abs(V(v)-0)<0.5 ? 0 : (abs(V(v)-1)<0.5 ? 0 : (abs(V(v)-2)<0.5 ? 255 : (abs(V(v)-3)<0.5 ? 0 : 0))))) : (abs(V(n)-9)<0.5 ? ((abs(V(v)-0)<0.5 ? 0 : (abs(V(v)-1)<0.5 ? 0 : (abs(V(v)-2)<0.5 ? 0 : (abs(V(v)-3)<0.5 ? 255 : 0))))) : 0))))))))))
+Bgt gt 0 V = (V(data)>V(max)+0.5) ? 3.3 : 0
+Bupd upd 0 V = ((abs(V(st)-4)<0.5) ? ((abs(V(v)-0)<0.5) ? 3.3 : V(gt)) : 0)
+Baddr addr 0 V = 2*V(n) + ((abs(V(v)-0)<0.5) ? 0 : ((abs(V(v)-1)<0.5) ? 1 : ((abs(V(v)-2)<0.5) ? 24 : 25)))
+Bd0 d0 0 V = 3.3*(floor(V(ns)/1+0.01)-2*floor(V(ns)/2+0.005))
+A0 d0 clk s0 rst q0 qb0 ddff
+Bd1 d1 0 V = 3.3*(floor(V(ns)/2+0.01)-2*floor(V(ns)/4+0.005))
+A1 d1 clk s0 rst q1 qb1 ddff
+Bd2 d2 0 V = 3.3*(floor(V(ns)/4+0.01)-2*floor(V(ns)/8+0.005))
+A2 d2 clk s0 rst q2 qb2 ddff
+Bd3 d3 0 V = 3.3*(floor(V(ns)/8+0.01)-2*floor(V(ns)/16+0.005))
+A3 d3 clk s0 rst q3 qb3 ddff
+Bvd0 vd0 0 V = 3.3*(floor(V(vn)/1+0.01)-2*floor(V(vn)/2+0.005))
+Av0 vd0 clk s0 mclr qv0 qvb0 ddff
+Bvd1 vd1 0 V = 3.3*(floor(V(vn)/2+0.01)-2*floor(V(vn)/4+0.005))
+Av1 vd1 clk s0 mclr qv1 qvb1 ddff
+Bnd0 nd0 0 V = 3.3*(floor(V(nn)/1+0.01)-2*floor(V(nn)/2+0.005))
+An0 nd0 clk s0 mclr qn0 qnb0 ddff
+Bnd1 nd1 0 V = 3.3*(floor(V(nn)/2+0.01)-2*floor(V(nn)/4+0.005))
+An1 nd1 clk s0 mclr qn1 qnb1 ddff
+Bnd2 nd2 0 V = 3.3*(floor(V(nn)/4+0.01)-2*floor(V(nn)/8+0.005))
+An2 nd2 clk s0 mclr qn2 qnb2 ddff
+Bnd3 nd3 0 V = 3.3*(floor(V(nn)/8+0.01)-2*floor(V(nn)/16+0.005))
+An3 nd3 clk s0 mclr qn3 qnb3 ddff
+Bmb0 mb0 0 V = 3.3*(floor((V(data)+0.5)/1)-2*floor((V(data)+0.5)/2))
+Bmxd0 mxd0 0 V = ((V(upd)>1.65) ? V(mb0) : V(qm0))
+Am0 mxd0 clk s0 mclr qm0 qmb0 ddff
+Bmb1 mb1 0 V = 3.3*(floor((V(data)+0.5)/2)-2*floor((V(data)+0.5)/4))
+Bmxd1 mxd1 0 V = ((V(upd)>1.65) ? V(mb1) : V(qm1))
+Am1 mxd1 clk s0 mclr qm1 qmb1 ddff
+Bmb2 mb2 0 V = 3.3*(floor((V(data)+0.5)/4)-2*floor((V(data)+0.5)/8))
+Bmxd2 mxd2 0 V = ((V(upd)>1.65) ? V(mb2) : V(qm2))
+Am2 mxd2 clk s0 mclr qm2 qmb2 ddff
+Bmb3 mb3 0 V = 3.3*(floor((V(data)+0.5)/8)-2*floor((V(data)+0.5)/16))
+Bmxd3 mxd3 0 V = ((V(upd)>1.65) ? V(mb3) : V(qm3))
+Am3 mxd3 clk s0 mclr qm3 qmb3 ddff
+Bmb4 mb4 0 V = 3.3*(floor((V(data)+0.5)/16)-2*floor((V(data)+0.5)/32))
+Bmxd4 mxd4 0 V = ((V(upd)>1.65) ? V(mb4) : V(qm4))
+Am4 mxd4 clk s0 mclr qm4 qmb4 ddff
+Bmb5 mb5 0 V = 3.3*(floor((V(data)+0.5)/32)-2*floor((V(data)+0.5)/64))
+Bmxd5 mxd5 0 V = ((V(upd)>1.65) ? V(mb5) : V(qm5))
+Am5 mxd5 clk s0 mclr qm5 qmb5 ddff
+Bmb6 mb6 0 V = 3.3*(floor((V(data)+0.5)/64)-2*floor((V(data)+0.5)/128))
+Bmxd6 mxd6 0 V = ((V(upd)>1.65) ? V(mb6) : V(qm6))
+Am6 mxd6 clk s0 mclr qm6 qmb6 ddff
+Bmb7 mb7 0 V = 3.3*(floor((V(data)+0.5)/128)-2*floor((V(data)+0.5)/256))
+Bmxd7 mxd7 0 V = ((V(upd)>1.65) ? V(mb7) : V(qm7))
+Am7 mxd7 clk s0 mclr qm7 qmb7 ddff
+Bmax max 0 V = (V(qm0)+2*V(qm1)+4*V(qm2)+8*V(qm3)+16*V(qm4)+32*V(qm5)+64*V(qm6)+128*V(qm7))/3.3
+Ao0 qm0 clk s0 mclr qo0 qob0 ddff
+Ao1 qm1 clk s0 mclr qo1 qob1 ddff
+Ao2 qm2 clk s0 mclr qo2 qob2 ddff
+Ao3 qm3 clk s0 mclr qo3 qob3 ddff
+Ao4 qm4 clk s0 mclr qo4 qob4 ddff
+Ao5 qm5 clk s0 mclr qo5 qob5 ddff
+Ao6 qm6 clk s0 mclr qo6 qob6 ddff
+Ao7 qm7 clk s0 mclr qo7 qob7 ddff
+Bout out 0 V = (V(qo0)+2*V(qo1)+4*V(qo2)+8*V(qo3)+16*V(qo4)+32*V(qo5)+64*V(qo6)+128*V(qo7))/3.3
+Bdone done 0 V = 3.3*((abs(V(st)-7)<0.5) ? 1 : 0)
+.tran 1n 17500n
+.end

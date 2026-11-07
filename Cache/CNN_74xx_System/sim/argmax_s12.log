@@ -1,0 +1,5 @@
+PASS: structural Argmax/S12B/S04/S11 connections (32 checks)
+PASS: 4-byte address sequence + S12B latches, argmax=3
+PASS: 4-byte address sequence + S12B latches, argmax=2
+PASS: 4-byte address sequence + S12B latches, argmax=2
+PASS: S06/S04/S12B Argmax four-byte transaction

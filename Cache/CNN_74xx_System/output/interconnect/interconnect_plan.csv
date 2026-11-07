@@ -1,0 +1,119 @@
+﻿net,width,source,dest,active,timing,status,notes
+CLK,1,S10.CLK,S01.CLK;S02.CLK;S04.CLK;S05.CLK;S06.CLK;S07.CLK;S08.CLK;S09.CLK;S11.CLK;S13.CLK;S15.CLK;S17.CLK,rising,continuous,existing,33 ohm series at S10
+RESET_N,1,S10.RESET_N,S01.RESET_N;S02.RESET_N;S04.RESET_N;S05.RESET_N;S06.RESET_N;S07.RESET_N;S08.RESET_N;S09.RESET_N;S11.RESET_N;S13.RESET_N;S15.RESET_N;S17.RESET_N,low,async,existing,"100k/1u RC, about 69 ms"
+START,1,S10.START,S01.START,high,1clk,existing,synchronized in S10
+LOAD_EN,1,S10.LOAD_EN,S04.LOAD_EN,high,level,change,must be gated with ~BUSY
+ADDR[23:16],8,S10.ADDR / S11.ADDR,S04.ADDR,na,level,existing,"{000,MEM_SEL}; LOAD_EN selects S10, otherwise S11"
+ADDR[15:0],16,S10.ADDR / S04 master mux,S04.ADDR,na,level,existing,load from S10; inference from S04 C1/C2/FC/Argmax/Pool mux
+LOAD_DATA[7:0],8,S10.LOAD_DATA,S04.LOAD_DATA,na,level,existing,host write data
+LOAD_nOE,1,S10.LOAD_nOE,S04.LOAD_nOE,low,level,existing,host read
+LOAD_nWE,1,S10.LOAD_nWE,S04.LOAD_nWE,low,level,existing,host write
+IMAGE_DONE_N,1,S10.IMAGE_DONE_N,S04.IMAGE_DONE_N,low,pulse,existing,image load done
+MODEL_DONE_N,1,S10.MODEL_DONE_N,S04.MODEL_DONE_N,low,pulse,existing,model load done
+IMAGE_READY,1,S04.IMAGE_READY,S01.IMAGE_READY;S10.IMAGE_READY,high,level,existing,ready latch
+MODEL_READY,1,S04.MODEL_READY,S01.MODEL_READY;S10.MODEL_READY,high,level,existing,ready latch
+C1_START,1,S01.C1_START,S07.C1_START,high,1clk,existing,stage 3
+C1_DONE,1,S07.C1_DONE,S01.C1_DONE,high,1clk,existing,stage 4
+P1_START,1,S01.P1_START,S05.P1_START,high,1clk,existing,POOL_SEL=0
+P1_DONE,1,S05.P1_DONE,S01.P1_DONE,high,1clk,existing,POOL_DONE & ~POOL_SEL
+C2_START,1,S01.C2_START,S08.C2_START,high,1clk,existing,stage 7
+C2_DONE,1,S08.C2_DONE,S01.C2_DONE,high,1clk,existing,stage 8
+P2_START,1,S01.P2_START,S05.P2_START,high,1clk,existing,POOL_SEL=1
+P2_DONE,1,S05.P2_DONE,S01.P2_DONE,high,1clk,existing,POOL_DONE & POOL_SEL
+FC1_START,1,S01.FC1_START,S09.FC1_START,high,1clk,existing,FC_SEL=0
+FC1_DONE,1,S09.FC1_DONE,S01.FC1_DONE,high,1clk,existing,stage 12
+FC2_START,1,S01.FC2_START,S09.FC2_START,high,1clk,existing,FC_SEL=1
+FC2_DONE,1,S09.FC2_DONE,S01.FC2_DONE,high,1clk,existing,stage 14
+ARGMAX_START,1,S01.ARGMAX_START,S06.ARGMAX_START,high,1clk,existing,stage 15
+ARGMAX_DONE,1,S06.ARGMAX_DONE,S01.ARGMAX_DONE,high,1clk,existing,stage 16
+POOL_SEL,1,S01.POOL_SEL,S05.POOL_SEL;S11.POOL_SEL,high,level,existing,"0=P1, 1=P2"
+FC_SEL,1,S01.FC_SEL,S09.FC_SEL;S11.FC_SEL;S17.FC_SEL,high,level,existing,"0=FC1, 1=FC2"
+C1_ADDR[15:0],16,S07.C1_ADDR,S04.C1_ADDR,na,level,existing,driven only when C1_BUSY=1
+C1_BUSY,1,S07.C1_BUSY,S11.C1_BUSY;S01.C1_BUSY,high,level,existing,master busy
+C1_BUSY_N,1,S07.C1_BUSY_N,S04.C1_BUSY_N;S11.C1_BUSY_N,low,level,existing,address buffer OE
+C1_MEM_REQ,1,S07.C1_MEM_REQ,S11.C1_MEM_REQ,high,until_ack,existing,read/write request
+C1_MEM_WE,1,S07.C1_MEM_WE,S11.C1_MEM_WE,high,level,existing,1=write
+C1_MEM_nCE_IN,1,S07.C1_MEM_nCE_IN,S11.C1_MEM_nCE_IN,low,level,existing,region 0
+C1_MEM_nCE_W,1,S07.C1_MEM_nCE_W,S11.C1_MEM_nCE_W,low,level,existing,region 1
+C1_MEM_nCE_OUT,1,S07.C1_MEM_nCE_OUT,S11.C1_MEM_nCE_OUT,low,level,existing,region 2
+C1_MEM_nCE_B,1,S07.C1_MEM_nCE_B,S11.C1_MEM_nCE_B,low,level,existing,reserved
+C1_MEM_nCE_Q,1,S07.C1_MEM_nCE_Q,S11.C1_MEM_nCE_Q,low,level,existing,reserved
+C1_MEM_nCE_MC,1,S07.C1_MEM_nCE_MC,S11.C1_MEM_nCE_MC,low,level,existing,LUT low/high
+C2_ADDR[15:0],16,S08.C2_ADDR,S04.C2_ADDR,na,level,existing,driven only when C2_BUSY=1
+C2_BUSY,1,S08.C2_BUSY,S11.C2_BUSY;S01.C2_BUSY,high,level,existing,master busy
+C2_BUSY_N,1,S08.C2_BUSY_N,S04.C2_BUSY_N;S11.C2_BUSY_N,low,level,existing,address buffer OE
+C2_MEM_REQ,1,S08.C2_MEM_REQ,S11.C2_MEM_REQ,high,until_ack,existing,read/write request
+C2_MEM_WE,1,S08.C2_MEM_WE,S11.C2_MEM_WE,high,level,existing,1=write
+C2_MEM_nCE_IN,1,S08.C2_MEM_nCE_IN,S11.C2_MEM_nCE_IN,low,level,existing,region 0
+C2_MEM_nCE_W,1,S08.C2_MEM_nCE_W,S11.C2_MEM_nCE_W,low,level,existing,region 1
+C2_MEM_nCE_OUT,1,S08.C2_MEM_nCE_OUT,S11.C2_MEM_nCE_OUT,low,level,existing,region 2
+C2_MEM_nCE_B,1,S08.C2_MEM_nCE_B,S11.C2_MEM_nCE_B,low,level,existing,reserved
+C2_MEM_nCE_Q,1,S08.C2_MEM_nCE_Q,S11.C2_MEM_nCE_Q,low,level,existing,reserved
+C2_MEM_nCE_MC,1,S08.C2_MEM_nCE_MC,S11.C2_MEM_nCE_MC,low,level,existing,LUT low/high
+FC_ADDR[15:0],16,S09.FC_ADDR,S04.FC_ADDR,na,level,existing,driven only when FC_BUSY=1
+FC_BUSY,1,S09.FC_BUSY,S11.FC_BUSY;S01.FC_BUSY,high,level,existing,master busy
+FC_BUSY_N,1,S09.FC_BUSY_N,S04.FC_BUSY_N;S11.FC_BUSY_N,low,level,existing,address buffer OE
+FC_MEM_REQ,1,S09.FC_MEM_REQ,S11.FC_MEM_REQ,high,until_ack,existing,read/write request
+FC_MEM_WE,1,S09.FC_MEM_WE,S11.FC_MEM_WE,high,level,existing,1=write
+FC_MEM_nCE_IN,1,S09.FC_MEM_nCE_IN,S11.FC_MEM_nCE_IN,low,level,existing,region 0
+FC_MEM_nCE_W,1,S09.FC_MEM_nCE_W,S11.FC_MEM_nCE_W,low,level,existing,region 1
+FC_MEM_nCE_OUT,1,S09.FC_MEM_nCE_OUT,S11.FC_MEM_nCE_OUT,low,level,existing,region 2
+FC_MEM_nCE_B,1,S09.FC_MEM_nCE_B,S11.FC_MEM_nCE_B,low,level,existing,reserved
+FC_MEM_nCE_Q,1,S09.FC_MEM_nCE_Q,S11.FC_MEM_nCE_Q,low,level,existing,reserved
+FC_MEM_nCE_MC,1,S09.FC_MEM_nCE_MC,S11.FC_MEM_nCE_MC,low,level,existing,LUT low/high
+POOL_IN_ADDR[12:0],13,S05.POOL_IN_ADDR,S04.POOL_IN_ADDR,na,level,new,read address to S04 541
+POOL_OUT_ADDR[11:0],12,S05.POOL_OUT_ADDR,S04.POOL_OUT_ADDR,na,level,new,write address to S04 541
+POOL_OUT_DATA[7:0],8,S05.POOL_OUT_DATA,S04.POOL_OUT_DATA,na,level,new,write data to S04 541
+POOL_MEM_REQ,1,S05.POOL_MEM_REQ,S11.POOL_MEM_REQ,high,until_ack,new,read/write request
+POOL_MEM_WE,1,S05.POOL_MEM_WE,S11.POOL_MEM_WE;S04.POOL_MEM_WE,high,level,new,1=write; S04 read-buffer deselect
+POOL_MEM_nCE_IN,1,S05.POOL_MEM_nCE_IN,S11.POOL_MEM_nCE_IN,low,level,new,region 0
+POOL_MEM_nCE_OUT,1,S05.POOL_MEM_nCE_OUT,S11.POOL_MEM_nCE_OUT;S04.POOL_MEM_nCE_OUT,low,level,new,region 2; S04 write address/data OE
+POOL_BUSY,1,S05.POOL_BUSY,S11.POOL_BUSY;TP_POOL_BUSY,high,level,new,master busy; S01 optional
+POOL_BUSY_N,1,S05.POOL_BUSY_N,S11.POOL_BUSY_N;S04.POOL_BUSY_N,low,level,new,74HC148 I2; S04 read-buffer hold
+SCORE_ADDR[5:0],6,S06.SCORE_ADDR,S04.SCORE_ADDR;S12.SCORE_ADDR,na,level,existing,class*4+byte
+SCORE_RD,1,S06.SCORE_RD,S11.SCORE_RD;S04.SCORE_RD,high,level,existing,Argmax read
+ARGMAX_BUSY,1,S06.ARGMAX_BUSY,S11.ARGMAX_BUSY,high,level,existing,master busy
+ARGMAX_BUSY_N,1,S06.ARGMAX_BUSY_N,S04.ARGMAX_BUSY_N;S11.ARGMAX_BUSY_N,low,level,existing,address buffer OE
+MEM_SEL[4:0],5,S11.MEM_SEL / S10.MEM_SEL,S04.MEM_SEL,na,level,existing,inference S11; load S10
+REQ,1,S11.REQ,S02.REQ,high,until_ack,existing,merged masters
+WE,1,S11.WE,S02.WE,high,level,existing,merged masters
+MEM_nCE,1,S02.MEM_nCE,S04.MEM_nCE,low,level,existing,chip select
+MEM_nOE,1,S02.MEM_nOE,S04.MEM_nOE,low,level,existing,read enable
+MEM_nWE,1,S02.MEM_nWE,S04.MEM_nWE,low,level,existing,write enable
+MEM_ACK,1,S02.MEM_ACK,S05.MEM_ACK;S06.MEM_ACK;S07.MEM_ACK;S08.MEM_ACK;S09.MEM_ACK;S11.MEM_ACK;S12.MEM_ACK,high,1clk,existing,capture/hold
+MEM_DONE,1,S02.MEM_DONE,S05.MEM_DONE;S06.MEM_DONE;S07.MEM_DONE;S08.MEM_DONE;S09.MEM_DONE;S11.MEM_DONE,high,1clk,existing,transaction done
+MEM_BUSY,1,S02.MEM_BUSY,S06.MEM_BUSY;S07.MEM_BUSY;S08.MEM_BUSY;S09.MEM_BUSY;S11.MEM_BUSY,high,level,existing,transaction active
+DATA[7:0],8,S04.DATA / S07/S08/S09 write / S04 Pool write,S04.DATA;S12.DATA,na,bidir,existing,tri-state; one driver only
+IN_DATA[7:0],8,S12.IN_DATA,S05.IN_DATA,na,level,existing,buffered DATA
+SCORE_DATA[31:0],32,S12.SCORE_DATA,S06.SCORE_DATA,na,level,existing,4-byte LE
+SCORE_ADDR[1:0],2,S06.SCORE_ADDR,S12.SCORE_ADDR,na,level,existing,byte lane
+C1_ACC[31:0],32,S07.C1_ACC,S13.C1_ACC,na,level,existing,accumulator
+C1_REQ_START,1,S07.C1_REQ_START,S13.C1_REQ_START,high,1clk,existing,start requant
+C1_REQ_Q[7:0],8,S13.C1_REQ_Q,S07.C1_REQ_Q,na,level,existing,quantized byte
+C1_REQ_QSTB,1,S13.C1_REQ_QSTB,S07.C1_REQ_QSTB,high,1clk,existing,output strobe
+C1_SAT_FLAG,1,S13.C1_SAT_FLAG,S07.C1_SAT_FLAG;TP_C1_SAT,high,level,existing,saturation
+C1_REQ_BUSY,1,S13.C1_REQ_BUSY,S07.C1_REQ_BUSY,high,level,existing,requant busy
+C1_REQ_DONE,1,S13.C1_REQ_DONE,S07.C1_REQ_DONE,high,1clk,existing,requant done
+C2_ACC[31:0],32,S08.C2_ACC,S15.C2_ACC,na,level,existing,accumulator
+C2_REQ_START,1,S08.C2_REQ_START,S15.C2_REQ_START,high,1clk,existing,start requant
+C2_REQ_Q[7:0],8,S15.C2_REQ_Q,S08.C2_REQ_Q,na,level,existing,quantized byte
+C2_REQ_QSTB,1,S15.C2_REQ_QSTB,S08.C2_REQ_QSTB,high,1clk,existing,output strobe
+C2_SAT_FLAG,1,S15.C2_SAT_FLAG,S08.C2_SAT_FLAG;TP_C2_SAT,high,level,existing,saturation
+C2_REQ_BUSY,1,S15.C2_REQ_BUSY,S08.C2_REQ_BUSY,high,level,existing,requant busy
+C2_REQ_DONE,1,S15.C2_REQ_DONE,S08.C2_REQ_DONE,high,1clk,existing,requant done
+FC_ACC[31:0],32,S09.FC_ACC,S17.FC_ACC,na,level,existing,accumulator
+FC_REQ_START,1,S09.FC_REQ_START,S17.FC_REQ_START,high,1clk,existing,start requant
+FC_REQ_Q[7:0],8,S17.FC_REQ_Q,S09.FC_REQ_Q,na,level,existing,FC1 Q8 or FC2 byte
+FC_REQ_QSTB,1,S17.FC_REQ_QSTB,S09.FC_REQ_QSTB,high,1clk,existing,FC2 four strobes
+FC_SAT_FLAG,1,S17.FC_SAT_FLAG,S09.FC_SAT_FLAG;TP_FC_SAT,high,level,existing,saturation
+FC_REQ_BUSY,1,S17.FC_REQ_BUSY,S09.FC_REQ_BUSY,high,level,existing,requant busy
+FC_REQ_DONE,1,S17.FC_REQ_DONE,S09.FC_REQ_DONE,high,1clk,existing,requant done
+BUSY,1,S01.BUSY,S10.BUSY,high,level,existing,system busy
+DONE,1,S01.DONE,S10.DONE,high,1clk,existing,system done
+RESULT_VALID,1,S01.RESULT_VALID,S10.RESULT_VALID,high,1clk,existing,result valid
+RESULT[3:0],4,S01.RESULT,S10.RESULT,na,level,existing,class 0..9
+ERROR,1,S01.ERROR,S10.ERROR,high,level,existing,error flag
+ERROR_CODE[3:0],4,S01.ERROR_CODE,S10.ERROR_CODE,na,level,existing,error code
+RESULT_IN[3:0],4,S06.RESULT_IN,S01.RESULT_IN,na,level,existing,Argmax result
+TP_ARGMAX_RESULT_VALID,1,S06.ARGMAX_RESULT_VALID,TP_ARGMAX_RESULT_VALID,high,level,change,testpoint only; rename
+TP_POOL_BUSY,1,S05.POOL_BUSY,TP_POOL_BUSY,high,level,new,testpoint only

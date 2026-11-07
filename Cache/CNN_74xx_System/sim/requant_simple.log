@@ -1,0 +1,84 @@
+V2 simple requant verification (S13/S15/S17)
+PASS: S13: 13 IC packages (expected 13)
+PASS: S13: no Requant_Block macro
+PASS: S13: no microcode ROM
+PASS: S13: no old parameter/zero-point nets ([])
+PASS: S13: fixed-shift clamp documented
+PASS: S15: 13 IC packages (expected 13)
+PASS: S15: no Requant_Block macro
+PASS: S15: no microcode ROM
+PASS: S15: no old parameter/zero-point nets ([])
+PASS: S15: fixed-shift clamp documented
+PASS: S17: 24 IC packages (expected 24)
+PASS: S17: no Requant_Block macro
+PASS: S17: no microcode ROM
+PASS: S17: no old parameter/zero-point nets ([])
+PASS: S17: fixed-shift clamp documented
+PASS: S13 mix: {'74xx:74HC32': 5, '74xx:74HC04': 1, '74xx:74HC08': 1, '74xx:74HC157': 4, '74xx:74HCT574': 1, '74xx:74HC74': 1}
+PASS: S17 mix: {'74xx:74HC32': 5, '74xx:74HC04': 1, '74xx:74HC08': 2, '74xx:74HC157': 13, '74xx:74HCT574': 1, '74xx:74HC161': 1, '74xx:74HC74': 1}
+PASS: S17_FC2 mirrors S17_FC1: 24 packages {'74xx:74HC32': 5, '74xx:74HC04': 1, '74xx:74HC08': 2, '74xx:74HC157': 13, '74xx:74HCT574': 1, '74xx:74HC161': 1, '74xx:74HC74': 1}
+PASS: S17_FC2 uses FC2_* nets and has FC_SEL tied off
+PASS: S14_ParamLoader.kicad_sch removed
+PASS: S16_ParamLoader_C2.kicad_sch removed
+PASS: S18_ParamLoader_FC.kicad_sch removed
+PASS: root: S14_ParamLoader not instantiated
+PASS: root: S16_ParamLoader not instantiated
+PASS: root: S18_ParamLoader not instantiated
+PASS: root: S13_Requant_C1 instantiated
+PASS: root: S15_Requant_C2 instantiated
+PASS: root: S17_FC1 instantiated
+PASS: root: S17_FC2 instantiated
+PASS: S13: required interface nets present ([])
+PASS: S15: required interface nets present ([])
+PASS: S17: required interface nets present ([])
+
+-- arithmetic --
+PASS: C1: directed clamp vectors
+PASS: C1: 5000 random clamp vectors
+PASS: C2: directed clamp vectors
+PASS: C2: 5000 random clamp vectors
+PASS: FC1: directed clamp vectors
+PASS: FC1: 5000 random clamp vectors
+PASS: FC2 bytes for 0: [0, 0, 0, 0]
+PASS: FC2 bytes for 1: [1, 0, 0, 0]
+PASS: FC2 bytes for -1: [255, 255, 255, 255]
+PASS: FC2 bytes for 305419896: [120, 86, 52, 18]
+PASS: FC2 bytes for -305419896: [136, 169, 203, 237]
+PASS: FC2 bytes for 2147483647: [255, 255, 255, 127]
+PASS: FC2 bytes for -2147483648: [0, 0, 0, 128]
+
+-- handshake models --
+PASS: C1: START -> QSTB -> DONE sequence [(1, 0, 0, 1, 0), (0, 1, 0, 1, 255), (0, 0, 1, 1, 255), (0, 0, 0, 0, 255)]
+PASS: C2: START -> QSTB -> DONE sequence [(1, 0, 0, 1, 0), (0, 1, 0, 1, 255), (0, 0, 1, 1, 255), (0, 0, 0, 0, 255)]
+PASS: FC1: QSTB [0], DONE [0]
+PASS: FC1: byte at QSTB [255] == 255
+PASS: FC2: QSTB [0, 1, 2, 3], DONE [3]
+PASS: FC2: bytes at QSTB [120, 86, 52, 18] == LE [120, 86, 52, 18]
+PASS: FC1: QSTB [0], DONE [0]
+PASS: FC1: byte at QSTB [0] == 0
+PASS: FC2: QSTB [0, 1, 2, 3], DONE [3]
+PASS: FC2: bytes at QSTB [136, 169, 203, 237] == LE [136, 169, 203, 237]
+
+-- integration --
+PASS: top netlist exists
+PASS: top: S07/S13 C1_ACC8 joins both sheets
+PASS: top: S07/S13 C1_REQ_Q0 joins both sheets
+PASS: top: S08/S15 C2_ACC9 joins both sheets
+PASS: top: S08/S15 C2_REQ_Q0 joins both sheets
+PASS: top: S09_FC1/S17_FC1 FC1_ACC0 joins both sheets
+PASS: top: S09_FC1/S17_FC1 FC1_REQ_Q0 joins both sheets
+PASS: top: S09_FC1/S17_FC1 FC1_REQ_QSTB joins both sheets
+PASS: top: C1_REQ_QSTB has >=2 nodes
+PASS: top: C2_REQ_QSTB has >=2 nodes
+PASS: top: FC1_REQ_DONE has >=2 nodes
+PASS: top: ref block U14 present
+PASS: top: ref block U15 present
+PASS: top: ref block U16 present
+PASS: BOM: no Requant_Block
+PASS: BOM: 0 LUT_Mult_Unit blocks (expected 0)
+PASS: BOM: 896 DIP packages (expected 896)
+PASS: BOM: 1329 total parts (expected 1329)
+PASS: BOM: 32 BACKPLANE headers (expected 32)
+PASS: top ERC: 0 errors
+
+RESULT: PASS

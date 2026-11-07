@@ -1,0 +1,32 @@
+* Timing controller functional testbench
+.model ddff d_dff()
+Vclk clk 0 PULSE(0 3.3 50n 1n 1n 50n 100n)
+Vrst rst 0 PWL(0 3.3 200n 3.3 201n 0)
+Vs0 s0 0 0
+Vreq req 0 PWL(0 0 300n 0 301n 3.3 1100n 3.3 1101n 0 1500n 0 1501n 3.3 2300n 3.3 2301n 0)
+Vwe we 0 PWL(0 0 1400n 0 1401n 3.3)
+Vwaitr waitr 0 2
+Vwaitw waitw 0 3
+Bwaitv waitv 0 V = (V(we)>1.65) ? V(waitw) : V(waitr)
+
+Bts ts 0 V = (V(q0)+2*V(q1)+4*V(q2))/3.3
+Bcnt cnt 0 V = ((V(qc0)>1.65) ? 1 : 0) + 2*((V(qc1)>1.65) ? 1 : 0)
+Bns ns 0 V = ((abs(V(ts)-0)<0.5) ? (((V(req)>1.65) ? 1 : 0) ? 1 : 0) : ((abs(V(ts)-1)<0.5) ? 2 : ((abs(V(ts)-2)<0.5) ? (((abs(V(cnt)-V(waitv))<0.05) ? 1 : 0) ? (((V(we)>1.65) ? 1 : 0) ? 4 : 3) : 2) : ((abs(V(ts)-3)<0.5) ? 4 : ((abs(V(ts)-4)<0.5) ? 5 : ((abs(V(ts)-5)<0.5) ? 6 : ((abs(V(ts)-6)<0.5) ? 0 : 0)))))))
+Bc0n c0n 0 V = 3.3*((abs(V(ts)-1)<0.5) ? 0 : (1 - ((V(qc0)>1.65) ? 1 : 0)))
+Bc1n c1n 0 V = 3.3*((abs(V(ts)-1)<0.5) ? 0 : (((V(qc1)>1.65) ? 1 : 0) + ((V(qc0)>1.65) ? 1 : 0) - 2*((V(qc1)>1.65) ? 1 : 0)*((V(qc0)>1.65) ? 1 : 0)))
+Bd0 d0 0 V = 3.3*(floor(V(ns)/1+0.01)-2*floor(V(ns)/2+0.005))
+A0 d0 clk s0 rst q0 qb0 ddff
+Bd1 d1 0 V = 3.3*(floor(V(ns)/2+0.01)-2*floor(V(ns)/4+0.005))
+A1 d1 clk s0 rst q1 qb1 ddff
+Bd2 d2 0 V = 3.3*(floor(V(ns)/4+0.01)-2*floor(V(ns)/8+0.005))
+A2 d2 clk s0 rst q2 qb2 ddff
+AC0 c0n clk s0 rst qc0 qbc0 ddff
+AC1 c1n clk s0 rst qc1 qbc1 ddff
+Bnce nce 0 V = 3.3*((V(ts)<0.5) ? 1 : ((V(ts)<3.5) ? 0 : ((V(ts)<4.5) ? 0 : ((V(ts)<5.5) ? 1 : 1))))
+Bnoe noe 0 V = 3.3*((V(we)>1.65) ? 1 : ((V(ts)>0.5) ? ((V(ts)<4.5) ? 0 : 1) : 1))
+Bnwe nwe 0 V = 3.3*((V(we)<1.65) ? 1 : ((V(ts)>0.5) ? ((V(ts)<3.5) ? 0 : 1) : 1))
+Back ack 0 V = 3.3*((((V(we)<1.65)*(V(ts)>2.5)*(V(ts)<3.5)) + ((V(we)>1.65)*(V(ts)>3.5)*(V(ts)<4.5))) ? 1 : 0)
+Bdone done 0 V = 3.3*((V(ts)>5.5) ? 1 : 0)
+Bbusy busy 0 V = 3.3*((V(ts)>0.5) ? 1 : 0)
+.tran 1n 2600n
+.end

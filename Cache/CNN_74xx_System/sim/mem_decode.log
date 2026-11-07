@@ -1,0 +1,339 @@
+S04 memory address-decode verification
+model: 4x74HC138 (MEM_SEL[2:0]) + 74HC688 (ADDR[23:16]==MEM_SEL)
+       DEC_EN = ADDR_TAG_OK & (LOAD_EN | ~MEM_nCE)
+mapped devices: 27  unmapped MEM_SEL: [7, 28, 29, 30, 31]
+
+[PASS] device 00 U1 INPUT_SRAM   base=0x000000 size= 8192 cs=nCS_SRAM_INPUT active=['nCS_SRAM_INPUT']
+[PASS]   device 00 offset 0x0000 unique active=['nCS_SRAM_INPUT']
+[PASS]   device 00 offset 0x0001 unique active=['nCS_SRAM_INPUT']
+[PASS]   device 00 offset 0x1FFF unique active=['nCS_SRAM_INPUT']
+[PASS]   device 00 offset 0xFFFF unique active=['nCS_SRAM_INPUT']
+[PASS] device 01 U2 CONV1_OUT_SRAM base=0x010000 size= 8192 cs=nCS_SRAM_C1OUT active=['nCS_SRAM_C1OUT']
+[PASS]   device 01 offset 0x0000 unique active=['nCS_SRAM_C1OUT']
+[PASS]   device 01 offset 0x0001 unique active=['nCS_SRAM_C1OUT']
+[PASS]   device 01 offset 0x1FFF unique active=['nCS_SRAM_C1OUT']
+[PASS]   device 01 offset 0xFFFF unique active=['nCS_SRAM_C1OUT']
+[PASS] device 02 U3 POOL1_OUT_SRAM base=0x020000 size= 8192 cs=nCS_SRAM_P1OUT active=['nCS_SRAM_P1OUT']
+[PASS]   device 02 offset 0x0000 unique active=['nCS_SRAM_P1OUT']
+[PASS]   device 02 offset 0x0001 unique active=['nCS_SRAM_P1OUT']
+[PASS]   device 02 offset 0x1FFF unique active=['nCS_SRAM_P1OUT']
+[PASS]   device 02 offset 0xFFFF unique active=['nCS_SRAM_P1OUT']
+[PASS] device 03 U4 CONV2_OUT_SRAM base=0x030000 size= 8192 cs=nCS_SRAM_C2OUT active=['nCS_SRAM_C2OUT']
+[PASS]   device 03 offset 0x0000 unique active=['nCS_SRAM_C2OUT']
+[PASS]   device 03 offset 0x0001 unique active=['nCS_SRAM_C2OUT']
+[PASS]   device 03 offset 0x1FFF unique active=['nCS_SRAM_C2OUT']
+[PASS]   device 03 offset 0xFFFF unique active=['nCS_SRAM_C2OUT']
+[PASS] device 04 U5 POOL2_OUT_SRAM base=0x040000 size= 8192 cs=nCS_SRAM_P2OUT active=['nCS_SRAM_P2OUT']
+[PASS]   device 04 offset 0x0000 unique active=['nCS_SRAM_P2OUT']
+[PASS]   device 04 offset 0x0001 unique active=['nCS_SRAM_P2OUT']
+[PASS]   device 04 offset 0x1FFF unique active=['nCS_SRAM_P2OUT']
+[PASS]   device 04 offset 0xFFFF unique active=['nCS_SRAM_P2OUT']
+[PASS] device 05 U6 FC1_OUT_SRAM base=0x050000 size= 8192 cs=nCS_SRAM_FC1OUT active=['nCS_SRAM_FC1OUT']
+[PASS]   device 05 offset 0x0000 unique active=['nCS_SRAM_FC1OUT']
+[PASS]   device 05 offset 0x0001 unique active=['nCS_SRAM_FC1OUT']
+[PASS]   device 05 offset 0x1FFF unique active=['nCS_SRAM_FC1OUT']
+[PASS]   device 05 offset 0xFFFF unique active=['nCS_SRAM_FC1OUT']
+[PASS] device 06 U7 FC2_LOGITS_SRAM base=0x060000 size= 8192 cs=nCS_SRAM_FC2LOG active=['nCS_SRAM_FC2LOG']
+[PASS]   device 06 offset 0x0000 unique active=['nCS_SRAM_FC2LOG']
+[PASS]   device 06 offset 0x0001 unique active=['nCS_SRAM_FC2LOG']
+[PASS]   device 06 offset 0x1FFF unique active=['nCS_SRAM_FC2LOG']
+[PASS]   device 06 offset 0xFFFF unique active=['nCS_SRAM_FC2LOG']
+[PASS] device 08 U8 W_CONV1      base=0x080000 size=32768 cs=nCS_W_CONV1 active=['nCS_W_CONV1']
+[PASS]   device 08 offset 0x0000 unique active=['nCS_W_CONV1']
+[PASS]   device 08 offset 0x0001 unique active=['nCS_W_CONV1']
+[PASS]   device 08 offset 0x7FFF unique active=['nCS_W_CONV1']
+[PASS]   device 08 offset 0xFFFF unique active=['nCS_W_CONV1']
+[PASS] device 09 U9 W_CONV2      base=0x090000 size=32768 cs=nCS_W_CONV2 active=['nCS_W_CONV2']
+[PASS]   device 09 offset 0x0000 unique active=['nCS_W_CONV2']
+[PASS]   device 09 offset 0x0001 unique active=['nCS_W_CONV2']
+[PASS]   device 09 offset 0x7FFF unique active=['nCS_W_CONV2']
+[PASS]   device 09 offset 0xFFFF unique active=['nCS_W_CONV2']
+[PASS] device 10 U10 W_FC1        base=0x0A0000 size=32768 cs=nCS_W_FC1 active=['nCS_W_FC1']
+[PASS]   device 10 offset 0x0000 unique active=['nCS_W_FC1']
+[PASS]   device 10 offset 0x0001 unique active=['nCS_W_FC1']
+[PASS]   device 10 offset 0x7FFF unique active=['nCS_W_FC1']
+[PASS]   device 10 offset 0xFFFF unique active=['nCS_W_FC1']
+[PASS] device 11 U11 W_FC2        base=0x0B0000 size=32768 cs=nCS_W_FC2 active=['nCS_W_FC2']
+[PASS]   device 11 offset 0x0000 unique active=['nCS_W_FC2']
+[PASS]   device 11 offset 0x0001 unique active=['nCS_W_FC2']
+[PASS]   device 11 offset 0x7FFF unique active=['nCS_W_FC2']
+[PASS]   device 11 offset 0xFFFF unique active=['nCS_W_FC2']
+[PASS] device 12 U12 B_CONV1      base=0x0C0000 size=32768 cs=nCS_B_CONV1 active=['nCS_B_CONV1']
+[PASS]   device 12 offset 0x0000 unique active=['nCS_B_CONV1']
+[PASS]   device 12 offset 0x0001 unique active=['nCS_B_CONV1']
+[PASS]   device 12 offset 0x7FFF unique active=['nCS_B_CONV1']
+[PASS]   device 12 offset 0xFFFF unique active=['nCS_B_CONV1']
+[PASS] device 13 U13 B_CONV2      base=0x0D0000 size=32768 cs=nCS_B_CONV2 active=['nCS_B_CONV2']
+[PASS]   device 13 offset 0x0000 unique active=['nCS_B_CONV2']
+[PASS]   device 13 offset 0x0001 unique active=['nCS_B_CONV2']
+[PASS]   device 13 offset 0x7FFF unique active=['nCS_B_CONV2']
+[PASS]   device 13 offset 0xFFFF unique active=['nCS_B_CONV2']
+[PASS] device 14 U14 B_FC1        base=0x0E0000 size=32768 cs=nCS_B_FC1 active=['nCS_B_FC1']
+[PASS]   device 14 offset 0x0000 unique active=['nCS_B_FC1']
+[PASS]   device 14 offset 0x0001 unique active=['nCS_B_FC1']
+[PASS]   device 14 offset 0x7FFF unique active=['nCS_B_FC1']
+[PASS]   device 14 offset 0xFFFF unique active=['nCS_B_FC1']
+[PASS] device 15 U15 B_FC2        base=0x0F0000 size=32768 cs=nCS_B_FC2 active=['nCS_B_FC2']
+[PASS]   device 15 offset 0x0000 unique active=['nCS_B_FC2']
+[PASS]   device 15 offset 0x0001 unique active=['nCS_B_FC2']
+[PASS]   device 15 offset 0x7FFF unique active=['nCS_B_FC2']
+[PASS]   device 15 offset 0xFFFF unique active=['nCS_B_FC2']
+[PASS] device 16 U16 Q_CONV1      base=0x100000 size=32768 cs=nCS_Q_CONV1 active=['nCS_Q_CONV1']
+[PASS]   device 16 offset 0x0000 unique active=['nCS_Q_CONV1']
+[PASS]   device 16 offset 0x0001 unique active=['nCS_Q_CONV1']
+[PASS]   device 16 offset 0x7FFF unique active=['nCS_Q_CONV1']
+[PASS]   device 16 offset 0xFFFF unique active=['nCS_Q_CONV1']
+[PASS] device 17 U17 Q_CONV2      base=0x110000 size=32768 cs=nCS_Q_CONV2 active=['nCS_Q_CONV2']
+[PASS]   device 17 offset 0x0000 unique active=['nCS_Q_CONV2']
+[PASS]   device 17 offset 0x0001 unique active=['nCS_Q_CONV2']
+[PASS]   device 17 offset 0x7FFF unique active=['nCS_Q_CONV2']
+[PASS]   device 17 offset 0xFFFF unique active=['nCS_Q_CONV2']
+[PASS] device 18 U18 Q_FC1        base=0x120000 size=32768 cs=nCS_Q_FC1 active=['nCS_Q_FC1']
+[PASS]   device 18 offset 0x0000 unique active=['nCS_Q_FC1']
+[PASS]   device 18 offset 0x0001 unique active=['nCS_Q_FC1']
+[PASS]   device 18 offset 0x7FFF unique active=['nCS_Q_FC1']
+[PASS]   device 18 offset 0xFFFF unique active=['nCS_Q_FC1']
+[PASS] device 19 U19 Q_FC2        base=0x130000 size=32768 cs=nCS_Q_FC2 active=['nCS_Q_FC2']
+[PASS]   device 19 offset 0x0000 unique active=['nCS_Q_FC2']
+[PASS]   device 19 offset 0x0001 unique active=['nCS_Q_FC2']
+[PASS]   device 19 offset 0x7FFF unique active=['nCS_Q_FC2']
+[PASS]   device 19 offset 0xFFFF unique active=['nCS_Q_FC2']
+[PASS] device 20 U20 LUT0_LO      base=0x140000 size=65536 cs=nCS_LUT0_LO active=['nCS_LUT0_LO']
+[PASS]   device 20 offset 0x0000 unique active=['nCS_LUT0_LO']
+[PASS]   device 20 offset 0x0001 unique active=['nCS_LUT0_LO']
+[PASS]   device 20 offset 0xFFFF unique active=['nCS_LUT0_LO']
+[PASS]   device 20 offset 0xFFFF unique active=['nCS_LUT0_LO']
+[PASS] device 21 U21 LUT0_HI      base=0x150000 size=65536 cs=nCS_LUT0_HI active=['nCS_LUT0_HI']
+[PASS]   device 21 offset 0x0000 unique active=['nCS_LUT0_HI']
+[PASS]   device 21 offset 0x0001 unique active=['nCS_LUT0_HI']
+[PASS]   device 21 offset 0xFFFF unique active=['nCS_LUT0_HI']
+[PASS]   device 21 offset 0xFFFF unique active=['nCS_LUT0_HI']
+[PASS] device 22 U22 LUT1_LO      base=0x160000 size=65536 cs=nCS_LUT1_LO active=['nCS_LUT1_LO']
+[PASS]   device 22 offset 0x0000 unique active=['nCS_LUT1_LO']
+[PASS]   device 22 offset 0x0001 unique active=['nCS_LUT1_LO']
+[PASS]   device 22 offset 0xFFFF unique active=['nCS_LUT1_LO']
+[PASS]   device 22 offset 0xFFFF unique active=['nCS_LUT1_LO']
+[PASS] device 23 U23 LUT1_HI      base=0x170000 size=65536 cs=nCS_LUT1_HI active=['nCS_LUT1_HI']
+[PASS]   device 23 offset 0x0000 unique active=['nCS_LUT1_HI']
+[PASS]   device 23 offset 0x0001 unique active=['nCS_LUT1_HI']
+[PASS]   device 23 offset 0xFFFF unique active=['nCS_LUT1_HI']
+[PASS]   device 23 offset 0xFFFF unique active=['nCS_LUT1_HI']
+[PASS] device 24 U24 LUT2_LO      base=0x180000 size=65536 cs=nCS_LUT2_LO active=['nCS_LUT2_LO']
+[PASS]   device 24 offset 0x0000 unique active=['nCS_LUT2_LO']
+[PASS]   device 24 offset 0x0001 unique active=['nCS_LUT2_LO']
+[PASS]   device 24 offset 0xFFFF unique active=['nCS_LUT2_LO']
+[PASS]   device 24 offset 0xFFFF unique active=['nCS_LUT2_LO']
+[PASS] device 25 U25 LUT2_HI      base=0x190000 size=65536 cs=nCS_LUT2_HI active=['nCS_LUT2_HI']
+[PASS]   device 25 offset 0x0000 unique active=['nCS_LUT2_HI']
+[PASS]   device 25 offset 0x0001 unique active=['nCS_LUT2_HI']
+[PASS]   device 25 offset 0xFFFF unique active=['nCS_LUT2_HI']
+[PASS]   device 25 offset 0xFFFF unique active=['nCS_LUT2_HI']
+[PASS] device 26 U26 LUT3_LO      base=0x1A0000 size=65536 cs=nCS_LUT3_LO active=['nCS_LUT3_LO']
+[PASS]   device 26 offset 0x0000 unique active=['nCS_LUT3_LO']
+[PASS]   device 26 offset 0x0001 unique active=['nCS_LUT3_LO']
+[PASS]   device 26 offset 0xFFFF unique active=['nCS_LUT3_LO']
+[PASS]   device 26 offset 0xFFFF unique active=['nCS_LUT3_LO']
+[PASS] device 27 U27 LUT3_HI      base=0x1B0000 size=65536 cs=nCS_LUT3_HI active=['nCS_LUT3_HI']
+[PASS]   device 27 offset 0x0000 unique active=['nCS_LUT3_HI']
+[PASS]   device 27 offset 0x0001 unique active=['nCS_LUT3_HI']
+[PASS]   device 27 offset 0xFFFF unique active=['nCS_LUT3_HI']
+[PASS]   device 27 offset 0xFFFF unique active=['nCS_LUT3_HI']
+
+[PASS] unmapped MEM_SEL=07 addr=0x070000 no CS (active=[])
+[PASS] unmapped MEM_SEL=07 addr=0x000000 no CS (active=[])
+[PASS] unmapped MEM_SEL=07 addr=0x1B0000 no CS (active=[])
+[PASS] unmapped MEM_SEL=07 addr=0xFFFFFF no CS (active=[])
+[PASS] unmapped MEM_SEL=28 addr=0x1C0000 no CS (active=[])
+[PASS] unmapped MEM_SEL=28 addr=0x000000 no CS (active=[])
+[PASS] unmapped MEM_SEL=28 addr=0x1B0000 no CS (active=[])
+[PASS] unmapped MEM_SEL=28 addr=0xFFFFFF no CS (active=[])
+[PASS] unmapped MEM_SEL=29 addr=0x1D0000 no CS (active=[])
+[PASS] unmapped MEM_SEL=29 addr=0x000000 no CS (active=[])
+[PASS] unmapped MEM_SEL=29 addr=0x1B0000 no CS (active=[])
+[PASS] unmapped MEM_SEL=29 addr=0xFFFFFF no CS (active=[])
+[PASS] unmapped MEM_SEL=30 addr=0x1E0000 no CS (active=[])
+[PASS] unmapped MEM_SEL=30 addr=0x000000 no CS (active=[])
+[PASS] unmapped MEM_SEL=30 addr=0x1B0000 no CS (active=[])
+[PASS] unmapped MEM_SEL=30 addr=0xFFFFFF no CS (active=[])
+[PASS] unmapped MEM_SEL=31 addr=0x1F0000 no CS (active=[])
+[PASS] unmapped MEM_SEL=31 addr=0x000000 no CS (active=[])
+[PASS] unmapped MEM_SEL=31 addr=0x1B0000 no CS (active=[])
+[PASS] unmapped MEM_SEL=31 addr=0xFFFFFF no CS (active=[])
+
+[PASS] tag mismatch MEM_SEL=00 ADDR[23:16]=0x01 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=00 ADDR[23:16]=0x10 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=00 ADDR[23:16]=0x1F no CS (active=[])
+[PASS] tag mismatch MEM_SEL=01 ADDR[23:16]=0x02 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=01 ADDR[23:16]=0x11 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=01 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=02 ADDR[23:16]=0x03 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=02 ADDR[23:16]=0x12 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=02 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=03 ADDR[23:16]=0x04 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=03 ADDR[23:16]=0x13 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=03 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=04 ADDR[23:16]=0x05 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=04 ADDR[23:16]=0x14 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=04 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=05 ADDR[23:16]=0x06 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=05 ADDR[23:16]=0x15 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=05 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=06 ADDR[23:16]=0x07 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=06 ADDR[23:16]=0x16 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=06 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=08 ADDR[23:16]=0x09 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=08 ADDR[23:16]=0x18 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=08 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=09 ADDR[23:16]=0x0A no CS (active=[])
+[PASS] tag mismatch MEM_SEL=09 ADDR[23:16]=0x19 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=09 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=10 ADDR[23:16]=0x0B no CS (active=[])
+[PASS] tag mismatch MEM_SEL=10 ADDR[23:16]=0x1A no CS (active=[])
+[PASS] tag mismatch MEM_SEL=10 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=11 ADDR[23:16]=0x0C no CS (active=[])
+[PASS] tag mismatch MEM_SEL=11 ADDR[23:16]=0x1B no CS (active=[])
+[PASS] tag mismatch MEM_SEL=11 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=12 ADDR[23:16]=0x0D no CS (active=[])
+[PASS] tag mismatch MEM_SEL=12 ADDR[23:16]=0x1C no CS (active=[])
+[PASS] tag mismatch MEM_SEL=12 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=13 ADDR[23:16]=0x0E no CS (active=[])
+[PASS] tag mismatch MEM_SEL=13 ADDR[23:16]=0x1D no CS (active=[])
+[PASS] tag mismatch MEM_SEL=13 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=14 ADDR[23:16]=0x0F no CS (active=[])
+[PASS] tag mismatch MEM_SEL=14 ADDR[23:16]=0x1E no CS (active=[])
+[PASS] tag mismatch MEM_SEL=14 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=15 ADDR[23:16]=0x10 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=15 ADDR[23:16]=0x1F no CS (active=[])
+[PASS] tag mismatch MEM_SEL=15 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=16 ADDR[23:16]=0x11 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=16 ADDR[23:16]=0x20 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=16 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=17 ADDR[23:16]=0x12 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=17 ADDR[23:16]=0x21 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=17 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=18 ADDR[23:16]=0x13 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=18 ADDR[23:16]=0x22 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=18 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=19 ADDR[23:16]=0x14 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=19 ADDR[23:16]=0x23 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=19 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=20 ADDR[23:16]=0x15 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=20 ADDR[23:16]=0x24 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=20 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=21 ADDR[23:16]=0x16 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=21 ADDR[23:16]=0x25 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=21 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=22 ADDR[23:16]=0x17 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=22 ADDR[23:16]=0x26 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=22 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=23 ADDR[23:16]=0x18 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=23 ADDR[23:16]=0x27 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=23 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=24 ADDR[23:16]=0x19 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=24 ADDR[23:16]=0x28 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=24 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=25 ADDR[23:16]=0x1A no CS (active=[])
+[PASS] tag mismatch MEM_SEL=25 ADDR[23:16]=0x29 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=25 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=26 ADDR[23:16]=0x1B no CS (active=[])
+[PASS] tag mismatch MEM_SEL=26 ADDR[23:16]=0x2A no CS (active=[])
+[PASS] tag mismatch MEM_SEL=26 ADDR[23:16]=0x00 no CS (active=[])
+[PASS] tag mismatch MEM_SEL=27 ADDR[23:16]=0x1C no CS (active=[])
+[PASS] tag mismatch MEM_SEL=27 ADDR[23:16]=0x2B no CS (active=[])
+[PASS] tag mismatch MEM_SEL=27 ADDR[23:16]=0x00 no CS (active=[])
+
+[PASS] normal idle MEM_SEL=00 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=01 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=02 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=03 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=04 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=05 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=06 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=08 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=09 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=10 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=11 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=12 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=13 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=14 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=15 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=16 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=17 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=18 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=19 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=20 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=21 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=22 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=23 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=24 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=25 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=26 MEM_nCE=1 no CS (active=[])
+[PASS] normal idle MEM_SEL=27 MEM_nCE=1 no CS (active=[])
+
+[PASS] load mode MEM_SEL=00 MEM_nCE=1 active=['nCS_SRAM_INPUT']
+[PASS] load mode MEM_SEL=01 MEM_nCE=1 active=['nCS_SRAM_C1OUT']
+[PASS] load mode MEM_SEL=02 MEM_nCE=1 active=['nCS_SRAM_P1OUT']
+[PASS] load mode MEM_SEL=03 MEM_nCE=1 active=['nCS_SRAM_C2OUT']
+[PASS] load mode MEM_SEL=04 MEM_nCE=1 active=['nCS_SRAM_P2OUT']
+[PASS] load mode MEM_SEL=05 MEM_nCE=1 active=['nCS_SRAM_FC1OUT']
+[PASS] load mode MEM_SEL=06 MEM_nCE=1 active=['nCS_SRAM_FC2LOG']
+[PASS] load mode MEM_SEL=08 MEM_nCE=1 active=['nCS_W_CONV1']
+[PASS] load mode MEM_SEL=09 MEM_nCE=1 active=['nCS_W_CONV2']
+[PASS] load mode MEM_SEL=10 MEM_nCE=1 active=['nCS_W_FC1']
+[PASS] load mode MEM_SEL=11 MEM_nCE=1 active=['nCS_W_FC2']
+[PASS] load mode MEM_SEL=12 MEM_nCE=1 active=['nCS_B_CONV1']
+[PASS] load mode MEM_SEL=13 MEM_nCE=1 active=['nCS_B_CONV2']
+[PASS] load mode MEM_SEL=14 MEM_nCE=1 active=['nCS_B_FC1']
+[PASS] load mode MEM_SEL=15 MEM_nCE=1 active=['nCS_B_FC2']
+[PASS] load mode MEM_SEL=16 MEM_nCE=1 active=['nCS_Q_CONV1']
+[PASS] load mode MEM_SEL=17 MEM_nCE=1 active=['nCS_Q_CONV2']
+[PASS] load mode MEM_SEL=18 MEM_nCE=1 active=['nCS_Q_FC1']
+[PASS] load mode MEM_SEL=19 MEM_nCE=1 active=['nCS_Q_FC2']
+[PASS] load mode MEM_SEL=20 MEM_nCE=1 active=['nCS_LUT0_LO']
+[PASS] load mode MEM_SEL=21 MEM_nCE=1 active=['nCS_LUT0_HI']
+[PASS] load mode MEM_SEL=22 MEM_nCE=1 active=['nCS_LUT1_LO']
+[PASS] load mode MEM_SEL=23 MEM_nCE=1 active=['nCS_LUT1_HI']
+[PASS] load mode MEM_SEL=24 MEM_nCE=1 active=['nCS_LUT2_LO']
+[PASS] load mode MEM_SEL=25 MEM_nCE=1 active=['nCS_LUT2_HI']
+[PASS] load mode MEM_SEL=26 MEM_nCE=1 active=['nCS_LUT3_LO']
+[PASS] load mode MEM_SEL=27 MEM_nCE=1 active=['nCS_LUT3_HI']
+
+[PASS] one-hot sweep MEM_SEL=00: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=01: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=02: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=03: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=04: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=05: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=06: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=07: active=0 expected=0
+[PASS] one-hot sweep MEM_SEL=08: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=09: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=10: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=11: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=12: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=13: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=14: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=15: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=16: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=17: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=18: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=19: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=20: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=21: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=22: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=23: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=24: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=25: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=26: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=27: active=1 expected=1
+[PASS] one-hot sweep MEM_SEL=28: active=0 expected=0
+[PASS] one-hot sweep MEM_SEL=29: active=0 expected=0
+[PASS] one-hot sweep MEM_SEL=30: active=0 expected=0
+[PASS] one-hot sweep MEM_SEL=31: active=0 expected=0
+
+[PASS] 20000 random vectors: max active CS = 1
+
+checks: 323  failures: 0
+RESULT: PASS
+
+log: D:\Document\tempPrj\74Series-CNN\Cache\CNN_74xx_System\output\sim\mem_decode.log

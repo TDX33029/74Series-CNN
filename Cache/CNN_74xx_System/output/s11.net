@@ -1,0 +1,5258 @@
+(export
+	(version "E")
+	(design
+		(source "D:\\Document\\tempPrj\\74Series-CNN\\Cache\\CNN_74xx_System\\S11_BusFabric.kicad_sch")
+		(date "2026-11-07T03:38:02")
+		(tool "Eeschema 10.0.4")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "S11_BusFabric - Engine/Memory Bus Fabric")
+				(company "74Series-CNN Project")
+				(rev "1.0")
+				(date "2026-11-04")
+				(source "S11_BusFabric.kicad_sch")
+				(comment
+					(number "1")
+					(value "")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C12001")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a0e567a4-0dd1-49d2-9e54-809183d6ee84")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12002")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5a0c1e64-aee8-4a94-8953-053608eae156")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12003")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "742a5d45-4e0f-4eec-87ce-df0bafb87c9e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12004")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "aa2c0c0b-2710-4ff2-88ba-ef16e2879680")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12005")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "13b1ce44-3020-4590-ac76-c74c814753cb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12006")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "93916c42-2d33-4032-a32e-f60f63d1cbf6")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12007")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "29c66702-b732-494d-810b-2e2518d77516")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12008")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "38014177-38aa-4661-8f4d-c0c60a1e4fa3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12009")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "92849a57-acdc-491e-a563-90a39f7f5d84")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12010")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "44e13d53-677a-44b6-a5bc-35962f7abbc0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12011")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1658acce-01d8-4421-964b-110ce3f89fc3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12012")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "df01170a-6d9a-42ee-b6a3-fee441e2f4ac")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12013")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ff891076-20ce-4f8b-a5ee-3a55136cd110")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12014")
+			(value "100n")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a8dc395f-198b-472a-8d70-b614d914d54f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP12001")
+			(value "TP")
+			(description "test point")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e2ecb2cd-ebf5-49ef-81a2-553da1af8ab7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP12002")
+			(value "TP")
+			(description "test point")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a556ee31-9c27-47fb-b1b3-b84fe06d6c45")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP12003")
+			(value "TP")
+			(description "test point")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a6d2ec1b-4ad6-41e9-8615-5ae91917639d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12001")
+			(value "74HC148")
+			(footprint "Package_DIP:DIP-16_W7.62mm")
+			(description "Priority Encoder 3 to 8 cascadable")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-16_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Priority Encoder 3 to 8 cascadable")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74LS148")
+				(description "Priority Encoder 3 to 8 cascadable")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL ENCOD")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?16*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5c60af7f-028d-47dd-a787-6a70c68841e0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12002")
+			(value "74HC148")
+			(footprint "Package_DIP:DIP-16_W7.62mm")
+			(description "Priority Encoder 3 to 8 cascadable")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-16_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Priority Encoder 3 to 8 cascadable")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74LS148")
+				(description "Priority Encoder 3 to 8 cascadable")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL ENCOD")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?16*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4651b2d2-941e-4b43-aa63-80bd7ff9349e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12003")
+			(value "74HC148")
+			(footprint "Package_DIP:DIP-16_W7.62mm")
+			(description "Priority Encoder 3 to 8 cascadable")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-16_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Priority Encoder 3 to 8 cascadable")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74LS148")
+				(description "Priority Encoder 3 to 8 cascadable")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL ENCOD")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?16*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "36a7c7e7-2576-4ab0-a642-c90eb50e7a68")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12004")
+			(value "74HC148")
+			(footprint "Package_DIP:DIP-16_W7.62mm")
+			(description "Priority Encoder 3 to 8 cascadable")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-16_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Priority Encoder 3 to 8 cascadable")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74LS148")
+				(description "Priority Encoder 3 to 8 cascadable")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL ENCOD")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?16*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c16a8efc-9f71-481f-bbc2-5e60c74d89a1")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12005")
+			(value "27C512")
+			(footprint "Package_DIP:DIP-28_W15.24mm")
+			(description "OTP EPROM 512 KiBit")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-28_W15.24mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "OTP EPROM 512 KiBit")
+			)
+			(libsource
+				(lib "Memory_EPROM")
+				(part "27C512")
+				(description "OTP EPROM 512 KiBit")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "OTP EPROM 512KiBit")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP*W15.24mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "23f32ca2-4285-49df-8504-b99a6a41b36c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "25")
+						)
+						(pin
+							(num "24")
+						)
+						(pin
+							(num "21")
+						)
+						(pin
+							(num "23")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "26")
+						)
+						(pin
+							(num "27")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "22")
+						)
+						(pin
+							(num "28")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "19")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12006")
+			(value "74HC157")
+			(footprint "Package_DIP:DIP-16_W7.62mm")
+			(description "Quad 2 to 1 line Multiplexer")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-16_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Quad 2 to 1 line Multiplexer")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC157")
+				(description "Quad 2 to 1 line Multiplexer")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL MUX MUX2")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?16*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "525803e7-a33a-4d08-a2f3-868434c43441")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "12")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12007")
+			(value "74HC157")
+			(footprint "Package_DIP:DIP-16_W7.62mm")
+			(description "Quad 2 to 1 line Multiplexer")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-16_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Quad 2 to 1 line Multiplexer")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC157")
+				(description "Quad 2 to 1 line Multiplexer")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL MUX MUX2")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?16*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "298e2615-1731-4b6b-bb9a-fffcbc211829")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "12")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12008")
+			(value "74HCT541")
+			(footprint "Package_DIP:DIP-20_W7.62mm")
+			(description "8-bit Buffer/Line Driver 3-state outputs")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-20_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "8-bit Buffer/Line Driver 3-state outputs")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HCT541")
+				(description "8-bit Buffer/Line Driver 3-state outputs")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL BUFFER 3State BUS")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?20*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "37ad9e5d-fd7d-43aa-9b43-7e8d279c0783")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "11")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12009")
+			(value "74HCT541")
+			(footprint "Package_DIP:DIP-20_W7.62mm")
+			(description "8-bit Buffer/Line Driver 3-state outputs")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-20_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "8-bit Buffer/Line Driver 3-state outputs")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HCT541")
+				(description "8-bit Buffer/Line Driver 3-state outputs")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL BUFFER 3State BUS")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?20*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "de41832c-e762-4bf8-912f-c3352d1e0629")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "11")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12010")
+			(value "74HC32")
+			(footprint "Package_DIP:DIP-14_W7.62mm")
+			(description "Quad 2-input OR")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-14_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Quad 2-input OR")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC32")
+				(description "Quad 2-input OR")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL Or2")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?14*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "434ac3c9-20e1-472b-a3f2-de391eecc357" "c3628bff-a120-474e-8730-86b0395885ea"
+				"98e33b11-7aa2-4517-86d7-81f998e153a3" "5ca7162e-0ef3-458d-b639-471dfbb896e5"
+				"2bc04b70-a615-4b1e-8d52-ac511189d328"
+			)
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+				(unit
+					(name "B")
+					(pins
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+				(unit
+					(name "C")
+					(pins
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+				(unit
+					(name "D")
+					(pins
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "11")
+						)
+					)
+				)
+				(unit
+					(name "E")
+					(pins
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12011")
+			(value "74HC08")
+			(footprint "Package_DIP:DIP-14_W7.62mm")
+			(description "Quad And2")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-14_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Quad And2")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC08")
+				(description "Quad And2")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL and2")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP*W7.62mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d301bf58-407a-4f3c-9c52-97889432cbe0" "9859aa12-51f7-4491-a821-bd191e1513fc"
+				"e8f70557-d968-4f14-951d-5ba0295e561f" "b0094d56-2a12-4ba4-82d9-f2dc5aa9b995"
+				"856e8720-0411-4077-9e03-6105b4877554"
+			)
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+				(unit
+					(name "B")
+					(pins
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+				(unit
+					(name "C")
+					(pins
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+				(unit
+					(name "D")
+					(pins
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "11")
+						)
+					)
+				)
+				(unit
+					(name "E")
+					(pins
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12012")
+			(value "74HC32")
+			(footprint "Package_DIP:DIP-14_W7.62mm")
+			(description "Quad 2-input OR")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-14_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Quad 2-input OR")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC32")
+				(description "Quad 2-input OR")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL Or2")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?14*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9d539d53-6048-4c32-a727-d4dc2c083240" "b2a492a1-aca8-4cb0-97c6-520d5151552e"
+				"cfa59e40-4f24-403d-a83a-9923f612c603" "e5b182a7-cb2f-483a-9771-c555c2932bc3"
+				"40793502-1325-41dc-950b-a0810c08eda0"
+			)
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+				(unit
+					(name "B")
+					(pins
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+				(unit
+					(name "C")
+					(pins
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+				(unit
+					(name "D")
+					(pins
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "11")
+						)
+					)
+				)
+				(unit
+					(name "E")
+					(pins
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12013")
+			(value "74HC157")
+			(footprint "Package_DIP:DIP-16_W7.62mm")
+			(description "Quad 2 to 1 line Multiplexer")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-16_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Quad 2 to 1 line Multiplexer")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC157")
+				(description "Quad 2 to 1 line Multiplexer")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL MUX MUX2")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?16*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "315ea3e6-8a62-47d7-809a-3fa90ab1cea5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "12")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U12014")
+			(value "74HC08")
+			(footprint "Package_DIP:DIP-14_W7.62mm")
+			(description "Quad And2")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-14_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Quad And2")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HC08")
+				(description "Quad And2")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "S11_BusFabric.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL and2")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP*W7.62mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "bb256b4c-ea26-4231-ab32-c1e303dc8497" "4ecfd42b-f921-4cd9-96fa-8ecfce0bfc66")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+				(unit
+					(name "B")
+					(pins
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+				(unit
+					(name "C")
+					(pins
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+				(unit
+					(name "D")
+					(pins
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "11")
+						)
+					)
+				)
+				(unit
+					(name "E")
+					(pins
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "74xx")
+			(part "74HC08")
+			(description "Quad And2")
+			(docs "http://www.ti.com/lit/gpn/sn74LS08")
+			(footprints
+				(fp "DIP*W7.62mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "74HC08")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "http://www.ti.com/lit/gpn/sn74LS08")
+				(field
+					(name "Description") "Quad And2")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "4")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "7")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "8")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "9")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "10")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "11")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "12")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "13")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "14")
+					(name "VCC")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "74xx")
+			(part "74HC157")
+			(description "Quad 2 to 1 line Multiplexer")
+			(docs "http://www.ti.com/lit/gpn/sn74LS157")
+			(footprints
+				(fp "DIP?16*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "74HC157")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "http://www.ti.com/lit/gpn/sn74LS157")
+				(field
+					(name "Description") "Quad 2 to 1 line Multiplexer")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "S")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "I0a")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "I1a")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "Za")
+					(type "output")
+				)
+				(pin
+					(num "5")
+					(name "I0b")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "I1b")
+					(type "input")
+				)
+				(pin
+					(num "7")
+					(name "Zb")
+					(type "output")
+				)
+				(pin
+					(num "8")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "9")
+					(name "Zc")
+					(type "output")
+				)
+				(pin
+					(num "10")
+					(name "I1c")
+					(type "input")
+				)
+				(pin
+					(num "11")
+					(name "I0c")
+					(type "input")
+				)
+				(pin
+					(num "12")
+					(name "Zd")
+					(type "output")
+				)
+				(pin
+					(num "13")
+					(name "I1d")
+					(type "input")
+				)
+				(pin
+					(num "14")
+					(name "I0d")
+					(type "input")
+				)
+				(pin
+					(num "15")
+					(name "E")
+					(type "input")
+				)
+				(pin
+					(num "16")
+					(name "VCC")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "74xx")
+			(part "74HC32")
+			(description "Quad 2-input OR")
+			(docs "http://www.ti.com/lit/gpn/sn74LS32")
+			(footprints
+				(fp "DIP?14*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "74HC32")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "http://www.ti.com/lit/gpn/sn74LS32")
+				(field
+					(name "Description") "Quad 2-input OR")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "4")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "7")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "8")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "9")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "10")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "11")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "12")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "13")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "14")
+					(name "VCC")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "74xx")
+			(part "74HCT541")
+			(description "8-bit Buffer/Line Driver 3-state outputs")
+			(docs "http://www.ti.com/lit/gpn/sn74LS541")
+			(footprints
+				(fp "DIP?20*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "74HCT541")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "http://www.ti.com/lit/gpn/sn74LS541")
+				(field
+					(name "Description") "8-bit Buffer/Line Driver 3-state outputs")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "G1")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "A0")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "A1")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "A2")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "A3")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "A4")
+					(type "input")
+				)
+				(pin
+					(num "7")
+					(name "A5")
+					(type "input")
+				)
+				(pin
+					(num "8")
+					(name "A6")
+					(type "input")
+				)
+				(pin
+					(num "9")
+					(name "A7")
+					(type "input")
+				)
+				(pin
+					(num "10")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "11")
+					(name "Y7")
+					(type "tri_state")
+				)
+				(pin
+					(num "12")
+					(name "Y6")
+					(type "tri_state")
+				)
+				(pin
+					(num "13")
+					(name "Y5")
+					(type "tri_state")
+				)
+				(pin
+					(num "14")
+					(name "Y4")
+					(type "tri_state")
+				)
+				(pin
+					(num "15")
+					(name "Y3")
+					(type "tri_state")
+				)
+				(pin
+					(num "16")
+					(name "Y2")
+					(type "tri_state")
+				)
+				(pin
+					(num "17")
+					(name "Y1")
+					(type "tri_state")
+				)
+				(pin
+					(num "18")
+					(name "Y0")
+					(type "tri_state")
+				)
+				(pin
+					(num "19")
+					(name "G2")
+					(type "input")
+				)
+				(pin
+					(num "20")
+					(name "VCC")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "74xx")
+			(part "74LS148")
+			(description "Priority Encoder 3 to 8 cascadable")
+			(docs "http://www.ti.com/lit/gpn/sn74LS148")
+			(footprints
+				(fp "DIP?16*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "74LS148")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "http://www.ti.com/lit/gpn/sn74LS148")
+				(field
+					(name "Description") "Priority Encoder 3 to 8 cascadable")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "I4")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "I5")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "I6")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "I7")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "EI")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "S2")
+					(type "output")
+				)
+				(pin
+					(num "7")
+					(name "S1")
+					(type "output")
+				)
+				(pin
+					(num "8")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "9")
+					(name "S0")
+					(type "output")
+				)
+				(pin
+					(num "10")
+					(name "IO")
+					(type "input")
+				)
+				(pin
+					(num "11")
+					(name "I1")
+					(type "input")
+				)
+				(pin
+					(num "12")
+					(name "I2")
+					(type "input")
+				)
+				(pin
+					(num "13")
+					(name "I3")
+					(type "input")
+				)
+				(pin
+					(num "14")
+					(name "GS")
+					(type "output")
+				)
+				(pin
+					(num "15")
+					(name "EO")
+					(type "output")
+				)
+				(pin
+					(num "16")
+					(name "VCC")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector")
+			(part "TestPoint")
+			(description "test point")
+			(footprints
+				(fp "Pin*")
+				(fp "Test*")
+			)
+			(fields
+				(field
+					(name "Reference") "TP")
+				(field
+					(name "Value") "TestPoint")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "C")
+			(description "Unpolarized capacitor")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Memory_EPROM")
+			(part "27C512")
+			(description "OTP EPROM 512 KiBit")
+			(docs "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0015.pdf")
+			(footprints
+				(fp "DIP*W15.24mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "27C512")
+				(field
+					(name "Footprint") "Package_DIP:DIP-28_W15.24mm")
+				(field
+					(name "Datasheet") "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0015.pdf")
+				(field
+					(name "Description") "OTP EPROM 512 KiBit")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "A15")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "A12")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "A7")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "A6")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "A5")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "A4")
+					(type "input")
+				)
+				(pin
+					(num "7")
+					(name "A3")
+					(type "input")
+				)
+				(pin
+					(num "8")
+					(name "A2")
+					(type "input")
+				)
+				(pin
+					(num "9")
+					(name "A1")
+					(type "input")
+				)
+				(pin
+					(num "10")
+					(name "A0")
+					(type "input")
+				)
+				(pin
+					(num "11")
+					(name "D0")
+					(type "tri_state")
+				)
+				(pin
+					(num "12")
+					(name "D1")
+					(type "tri_state")
+				)
+				(pin
+					(num "13")
+					(name "D2")
+					(type "tri_state")
+				)
+				(pin
+					(num "14")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "15")
+					(name "D3")
+					(type "tri_state")
+				)
+				(pin
+					(num "16")
+					(name "D4")
+					(type "tri_state")
+				)
+				(pin
+					(num "17")
+					(name "D5")
+					(type "tri_state")
+				)
+				(pin
+					(num "18")
+					(name "D6")
+					(type "tri_state")
+				)
+				(pin
+					(num "19")
+					(name "D7")
+					(type "tri_state")
+				)
+				(pin
+					(num "20")
+					(name "~{CE}")
+					(type "input")
+				)
+				(pin
+					(num "21")
+					(name "A10")
+					(type "input")
+				)
+				(pin
+					(num "22")
+					(name "~{OE}")
+					(type "input")
+				)
+				(pin
+					(num "23")
+					(name "A11")
+					(type "input")
+				)
+				(pin
+					(num "24")
+					(name "A9")
+					(type "input")
+				)
+				(pin
+					(num "25")
+					(name "A8")
+					(type "input")
+				)
+				(pin
+					(num "26")
+					(name "A13")
+					(type "input")
+				)
+				(pin
+					(num "27")
+					(name "A14")
+					(type "input")
+				)
+				(pin
+					(num "28")
+					(name "VCC")
+					(type "power_in")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "74xx")
+			(uri "${KICAD10_SYMBOL_DIR}/74xx.kicad_sym")
+		)
+		(library
+			(logical "Connector")
+			(uri "${KICAD10_SYMBOL_DIR}/Connector.kicad_sym")
+		)
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
+		)
+		(library
+			(logical "Memory_EPROM")
+			(uri "${KICAD10_SYMBOL_DIR}/Memory_EPROM.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "+5V")
+			(class "Default")
+			(node
+				(ref "C12001")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12002")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12003")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12004")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12005")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12006")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12007")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12008")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12009")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12010")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12011")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12012")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12013")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12014")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U12001")
+				(pin "11")
+				(pinfunction "I1_11")
+				(pintype "input")
+			)
+			(node
+				(ref "U12001")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12001")
+				(pin "4")
+				(pinfunction "I7_4")
+				(pintype "input")
+			)
+			(node
+				(ref "U12002")
+				(pin "11")
+				(pinfunction "I1_11")
+				(pintype "input")
+			)
+			(node
+				(ref "U12002")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12003")
+				(pin "11")
+				(pinfunction "I1_11")
+				(pintype "input")
+			)
+			(node
+				(ref "U12003")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12004")
+				(pin "11")
+				(pinfunction "I1_11")
+				(pintype "input")
+			)
+			(node
+				(ref "U12004")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12005")
+				(pin "28")
+				(pinfunction "VCC_28")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12006")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12007")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12008")
+				(pin "20")
+				(pinfunction "VCC_20")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12009")
+				(pin "20")
+				(pinfunction "VCC_20")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12010")
+				(pin "14")
+				(pinfunction "VCC_14")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12011")
+				(pin "14")
+				(pinfunction "VCC_14")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12012")
+				(pin "14")
+				(pinfunction "VCC_14")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12013")
+				(pin "16")
+				(pinfunction "VCC_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12014")
+				(pin "14")
+				(pinfunction "VCC_14")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "2")
+			(name "/ANY_CONV_N")
+			(class "Default")
+			(node
+				(ref "U12007")
+				(pin "1")
+				(pinfunction "S_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U12011")
+				(pin "11")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "3")
+			(name "/C1_REG0")
+			(class "Default")
+			(node
+				(ref "U12002")
+				(pin "9")
+				(pinfunction "S0_9")
+				(pintype "output")
+			)
+			(node
+				(ref "U12006")
+				(pin "2")
+				(pinfunction "I0a_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "4")
+			(name "/C1_REG1")
+			(class "Default")
+			(node
+				(ref "U12002")
+				(pin "7")
+				(pinfunction "S1_7")
+				(pintype "output")
+			)
+			(node
+				(ref "U12006")
+				(pin "5")
+				(pinfunction "I0b_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "5")
+			(name "/C1_REG2")
+			(class "Default")
+			(node
+				(ref "U12002")
+				(pin "6")
+				(pinfunction "S2_6")
+				(pintype "output")
+			)
+			(node
+				(ref "U12006")
+				(pin "11")
+				(pinfunction "I0c_11")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "6")
+			(name "/C2_REG0")
+			(class "Default")
+			(node
+				(ref "U12003")
+				(pin "9")
+				(pinfunction "S0_9")
+				(pintype "output")
+			)
+			(node
+				(ref "U12006")
+				(pin "3")
+				(pinfunction "I1a_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "7")
+			(name "/C2_REG1")
+			(class "Default")
+			(node
+				(ref "U12003")
+				(pin "7")
+				(pinfunction "S1_7")
+				(pintype "output")
+			)
+			(node
+				(ref "U12006")
+				(pin "6")
+				(pinfunction "I1b_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "8")
+			(name "/C2_REG2")
+			(class "Default")
+			(node
+				(ref "U12003")
+				(pin "6")
+				(pinfunction "S2_6")
+				(pintype "output")
+			)
+			(node
+				(ref "U12006")
+				(pin "10")
+				(pinfunction "I1c_10")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "9")
+			(name "/FC_REG0")
+			(class "Default")
+			(node
+				(ref "U12004")
+				(pin "9")
+				(pinfunction "S0_9")
+				(pintype "output")
+			)
+			(node
+				(ref "U12007")
+				(pin "3")
+				(pinfunction "I1a_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "10")
+			(name "/FC_REG1")
+			(class "Default")
+			(node
+				(ref "U12004")
+				(pin "7")
+				(pinfunction "S1_7")
+				(pintype "output")
+			)
+			(node
+				(ref "U12007")
+				(pin "6")
+				(pinfunction "I1b_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "11")
+			(name "/FC_REG2")
+			(class "Default")
+			(node
+				(ref "U12004")
+				(pin "6")
+				(pinfunction "S2_6")
+				(pintype "output")
+			)
+			(node
+				(ref "U12007")
+				(pin "10")
+				(pinfunction "I1c_10")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "12")
+			(name "/MAP_SEL0")
+			(class "Default")
+			(node
+				(ref "U12005")
+				(pin "11")
+				(pinfunction "D0_11")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U12008")
+				(pin "2")
+				(pinfunction "A0_2")
+				(pintype "input")
+			)
+			(node
+				(ref "U12009")
+				(pin "2")
+				(pinfunction "A0_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "13")
+			(name "/MAP_SEL1")
+			(class "Default")
+			(node
+				(ref "U12005")
+				(pin "12")
+				(pinfunction "D1_12")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U12008")
+				(pin "3")
+				(pinfunction "A1_3")
+				(pintype "input")
+			)
+			(node
+				(ref "U12009")
+				(pin "3")
+				(pinfunction "A1_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "14")
+			(name "/MAP_SEL2")
+			(class "Default")
+			(node
+				(ref "U12005")
+				(pin "13")
+				(pinfunction "D2_13")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U12008")
+				(pin "4")
+				(pinfunction "A2_4")
+				(pintype "input")
+			)
+			(node
+				(ref "U12009")
+				(pin "4")
+				(pinfunction "A2_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "15")
+			(name "/MAP_SEL3")
+			(class "Default")
+			(node
+				(ref "U12005")
+				(pin "15")
+				(pinfunction "D3_15")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U12008")
+				(pin "5")
+				(pinfunction "A3_5")
+				(pintype "input")
+			)
+			(node
+				(ref "U12009")
+				(pin "5")
+				(pinfunction "A3_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "16")
+			(name "/MAP_SEL4")
+			(class "Default")
+			(node
+				(ref "U12005")
+				(pin "16")
+				(pinfunction "D4_16")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U12008")
+				(pin "6")
+				(pinfunction "A4_6")
+				(pintype "input")
+			)
+			(node
+				(ref "U12009")
+				(pin "6")
+				(pinfunction "A4_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "17")
+			(name "/MASTER0")
+			(class "Default")
+			(node
+				(ref "U12001")
+				(pin "9")
+				(pinfunction "S0_9")
+				(pintype "output")
+			)
+			(node
+				(ref "U12005")
+				(pin "6")
+				(pinfunction "A4_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "18")
+			(name "/MASTER1")
+			(class "Default")
+			(node
+				(ref "U12001")
+				(pin "7")
+				(pinfunction "S1_7")
+				(pintype "output")
+			)
+			(node
+				(ref "U12005")
+				(pin "5")
+				(pinfunction "A5_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "19")
+			(name "/MASTER2")
+			(class "Default")
+			(node
+				(ref "U12001")
+				(pin "6")
+				(pinfunction "S2_6")
+				(pintype "output")
+			)
+			(node
+				(ref "U12005")
+				(pin "3")
+				(pinfunction "A7_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "20")
+			(name "/REGION0")
+			(class "Default")
+			(node
+				(ref "U12005")
+				(pin "9")
+				(pinfunction "A1_9")
+				(pintype "input")
+			)
+			(node
+				(ref "U12013")
+				(pin "4")
+				(pinfunction "Za_4")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "21")
+			(name "/REGION1")
+			(class "Default")
+			(node
+				(ref "U12005")
+				(pin "8")
+				(pinfunction "A2_8")
+				(pintype "input")
+			)
+			(node
+				(ref "U12013")
+				(pin "7")
+				(pinfunction "Zb_7")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "22")
+			(name "/REGION2")
+			(class "Default")
+			(node
+				(ref "U12005")
+				(pin "7")
+				(pinfunction "A3_7")
+				(pintype "input")
+			)
+			(node
+				(ref "U12013")
+				(pin "9")
+				(pinfunction "Zc_9")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "23")
+			(name "/REGION_PRE0")
+			(class "Default")
+			(node
+				(ref "U12007")
+				(pin "4")
+				(pinfunction "Za_4")
+				(pintype "output")
+			)
+			(node
+				(ref "U12013")
+				(pin "2")
+				(pinfunction "I0a_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "24")
+			(name "/REGION_PRE1")
+			(class "Default")
+			(node
+				(ref "U12007")
+				(pin "7")
+				(pinfunction "Zb_7")
+				(pintype "output")
+			)
+			(node
+				(ref "U12013")
+				(pin "5")
+				(pinfunction "I0b_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "25")
+			(name "/REGION_PRE2")
+			(class "Default")
+			(node
+				(ref "U12007")
+				(pin "9")
+				(pinfunction "Zc_9")
+				(pintype "output")
+			)
+			(node
+				(ref "U12013")
+				(pin "11")
+				(pinfunction "I0c_11")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "26")
+			(name "/REQ_A")
+			(class "Default")
+			(node
+				(ref "U12010")
+				(pin "3")
+				(pintype "output")
+			)
+			(node
+				(ref "U12012")
+				(pin "9")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "27")
+			(name "/REQ_B")
+			(class "Default")
+			(node
+				(ref "U12010")
+				(pin "6")
+				(pintype "output")
+			)
+			(node
+				(ref "U12012")
+				(pin "4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "28")
+			(name "/REQ_C")
+			(class "Default")
+			(node
+				(ref "U12012")
+				(pin "10")
+				(pintype "input")
+			)
+			(node
+				(ref "U12012")
+				(pin "6")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "29")
+			(name "/RMUX0")
+			(class "Default")
+			(node
+				(ref "U12006")
+				(pin "4")
+				(pinfunction "Za_4")
+				(pintype "output")
+			)
+			(node
+				(ref "U12007")
+				(pin "2")
+				(pinfunction "I0a_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "30")
+			(name "/RMUX1")
+			(class "Default")
+			(node
+				(ref "U12006")
+				(pin "7")
+				(pinfunction "Zb_7")
+				(pintype "output")
+			)
+			(node
+				(ref "U12007")
+				(pin "5")
+				(pinfunction "I0b_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "31")
+			(name "/RMUX2")
+			(class "Default")
+			(node
+				(ref "U12006")
+				(pin "9")
+				(pinfunction "Zc_9")
+				(pintype "output")
+			)
+			(node
+				(ref "U12007")
+				(pin "11")
+				(pinfunction "I0c_11")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "32")
+			(name "/WE1")
+			(class "Default")
+			(node
+				(ref "U12010")
+				(pin "9")
+				(pintype "input")
+			)
+			(node
+				(ref "U12011")
+				(pin "3")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "33")
+			(name "/WE2")
+			(class "Default")
+			(node
+				(ref "U12010")
+				(pin "10")
+				(pintype "input")
+			)
+			(node
+				(ref "U12011")
+				(pin "6")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "34")
+			(name "/WE3")
+			(class "Default")
+			(node
+				(ref "U12011")
+				(pin "8")
+				(pintype "output")
+			)
+			(node
+				(ref "U12012")
+				(pin "12")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "35")
+			(name "/WE4")
+			(class "Default")
+			(node
+				(ref "U12012")
+				(pin "13")
+				(pintype "input")
+			)
+			(node
+				(ref "U12014")
+				(pin "3")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "36")
+			(name "/WE12")
+			(class "Default")
+			(node
+				(ref "U12010")
+				(pin "12")
+				(pintype "input")
+			)
+			(node
+				(ref "U12010")
+				(pin "8")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "37")
+			(name "/WE34")
+			(class "Default")
+			(node
+				(ref "U12010")
+				(pin "13")
+				(pintype "input")
+			)
+			(node
+				(ref "U12012")
+				(pin "11")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "38")
+			(name "ADDR16")
+			(class "Default")
+			(node
+				(ref "U12008")
+				(pin "18")
+				(pinfunction "Y0_18")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "39")
+			(name "ADDR17")
+			(class "Default")
+			(node
+				(ref "U12008")
+				(pin "17")
+				(pinfunction "Y1_17")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "40")
+			(name "ADDR18")
+			(class "Default")
+			(node
+				(ref "U12008")
+				(pin "16")
+				(pinfunction "Y2_16")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "41")
+			(name "ADDR19")
+			(class "Default")
+			(node
+				(ref "U12008")
+				(pin "15")
+				(pinfunction "Y3_15")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "42")
+			(name "ADDR20")
+			(class "Default")
+			(node
+				(ref "U12008")
+				(pin "14")
+				(pinfunction "Y4_14")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "43")
+			(name "ADDR21")
+			(class "Default")
+			(node
+				(ref "U12008")
+				(pin "13")
+				(pinfunction "Y5_13")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "44")
+			(name "ADDR22")
+			(class "Default")
+			(node
+				(ref "U12008")
+				(pin "12")
+				(pinfunction "Y6_12")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "45")
+			(name "ADDR23")
+			(class "Default")
+			(node
+				(ref "U12008")
+				(pin "11")
+				(pinfunction "Y7_11")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "46")
+			(name "ARGMAX_BUSY_N")
+			(class "Default")
+			(node
+				(ref "U12001")
+				(pin "13")
+				(pinfunction "I3_13")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "47")
+			(name "C1_BUSY_N")
+			(class "Default")
+			(node
+				(ref "U12001")
+				(pin "3")
+				(pinfunction "I6_3")
+				(pintype "input")
+			)
+			(node
+				(ref "U12006")
+				(pin "1")
+				(pinfunction "S_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U12011")
+				(pin "12")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "48")
+			(name "C1_MEM_REQ")
+			(class "Default")
+			(node
+				(ref "C12001")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12002")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12003")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12004")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12005")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12006")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12007")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12008")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12009")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12010")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12011")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12012")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12013")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12014")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U12001")
+				(pin "5")
+				(pinfunction "EI_5")
+				(pintype "input")
+			)
+			(node
+				(ref "U12001")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12002")
+				(pin "5")
+				(pinfunction "EI_5")
+				(pintype "input")
+			)
+			(node
+				(ref "U12002")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12003")
+				(pin "5")
+				(pinfunction "EI_5")
+				(pintype "input")
+			)
+			(node
+				(ref "U12003")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12004")
+				(pin "5")
+				(pinfunction "EI_5")
+				(pintype "input")
+			)
+			(node
+				(ref "U12004")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12005")
+				(pin "1")
+				(pinfunction "A15_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U12005")
+				(pin "10")
+				(pinfunction "A0_10")
+				(pintype "input")
+			)
+			(node
+				(ref "U12005")
+				(pin "14")
+				(pinfunction "GND_14")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12005")
+				(pin "2")
+				(pinfunction "A12_2")
+				(pintype "input")
+			)
+			(node
+				(ref "U12005")
+				(pin "20")
+				(pinfunction "~{CE}_20")
+				(pintype "input")
+			)
+			(node
+				(ref "U12005")
+				(pin "21")
+				(pinfunction "A10_21")
+				(pintype "input")
+			)
+			(node
+				(ref "U12005")
+				(pin "22")
+				(pinfunction "~{OE}_22")
+				(pintype "input")
+			)
+			(node
+				(ref "U12005")
+				(pin "23")
+				(pinfunction "A11_23")
+				(pintype "input")
+			)
+			(node
+				(ref "U12005")
+				(pin "24")
+				(pinfunction "A9_24")
+				(pintype "input")
+			)
+			(node
+				(ref "U12005")
+				(pin "26")
+				(pinfunction "A13_26")
+				(pintype "input")
+			)
+			(node
+				(ref "U12005")
+				(pin "27")
+				(pinfunction "A14_27")
+				(pintype "input")
+			)
+			(node
+				(ref "U12006")
+				(pin "13")
+				(pinfunction "I1d_13")
+				(pintype "input")
+			)
+			(node
+				(ref "U12006")
+				(pin "14")
+				(pinfunction "I0d_14")
+				(pintype "input")
+			)
+			(node
+				(ref "U12006")
+				(pin "15")
+				(pinfunction "E_15")
+				(pintype "input")
+			)
+			(node
+				(ref "U12006")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12007")
+				(pin "13")
+				(pinfunction "I1d_13")
+				(pintype "input")
+			)
+			(node
+				(ref "U12007")
+				(pin "14")
+				(pinfunction "I0d_14")
+				(pintype "input")
+			)
+			(node
+				(ref "U12007")
+				(pin "15")
+				(pinfunction "E_15")
+				(pintype "input")
+			)
+			(node
+				(ref "U12007")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12008")
+				(pin "10")
+				(pinfunction "GND_10")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12008")
+				(pin "7")
+				(pinfunction "A5_7")
+				(pintype "input")
+			)
+			(node
+				(ref "U12008")
+				(pin "8")
+				(pinfunction "A6_8")
+				(pintype "input")
+			)
+			(node
+				(ref "U12008")
+				(pin "9")
+				(pinfunction "A7_9")
+				(pintype "input")
+			)
+			(node
+				(ref "U12009")
+				(pin "10")
+				(pinfunction "GND_10")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12009")
+				(pin "7")
+				(pinfunction "A5_7")
+				(pintype "input")
+			)
+			(node
+				(ref "U12009")
+				(pin "8")
+				(pinfunction "A6_8")
+				(pintype "input")
+			)
+			(node
+				(ref "U12009")
+				(pin "9")
+				(pinfunction "A7_9")
+				(pintype "input")
+			)
+			(node
+				(ref "U12010")
+				(pin "1")
+				(pintype "input")
+			)
+			(node
+				(ref "U12010")
+				(pin "7")
+				(pinfunction "GND_7")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12011")
+				(pin "1")
+				(pintype "input")
+			)
+			(node
+				(ref "U12011")
+				(pin "7")
+				(pinfunction "GND_7")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12012")
+				(pin "1")
+				(pintype "input")
+			)
+			(node
+				(ref "U12012")
+				(pin "2")
+				(pintype "input")
+			)
+			(node
+				(ref "U12012")
+				(pin "7")
+				(pinfunction "GND_7")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12013")
+				(pin "10")
+				(pinfunction "I1c_10")
+				(pintype "input")
+			)
+			(node
+				(ref "U12013")
+				(pin "13")
+				(pinfunction "I1d_13")
+				(pintype "input")
+			)
+			(node
+				(ref "U12013")
+				(pin "14")
+				(pinfunction "I0d_14")
+				(pintype "input")
+			)
+			(node
+				(ref "U12013")
+				(pin "15")
+				(pinfunction "E_15")
+				(pintype "input")
+			)
+			(node
+				(ref "U12013")
+				(pin "3")
+				(pinfunction "I1a_3")
+				(pintype "input")
+			)
+			(node
+				(ref "U12013")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U12014")
+				(pin "7")
+				(pinfunction "GND_7")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "49")
+			(name "C1_MEM_WE")
+			(class "Default")
+			(node
+				(ref "U12011")
+				(pin "2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "50")
+			(name "C1_MEM_nCE_B")
+			(class "Default")
+			(node
+				(ref "U12002")
+				(pin "1")
+				(pinfunction "I4_1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "51")
+			(name "C1_MEM_nCE_IN")
+			(class "Default")
+			(node
+				(ref "U12002")
+				(pin "4")
+				(pinfunction "I7_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "52")
+			(name "C1_MEM_nCE_MC")
+			(class "Default")
+			(node
+				(ref "U12002")
+				(pin "12")
+				(pinfunction "I2_12")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "53")
+			(name "C1_MEM_nCE_OUT")
+			(class "Default")
+			(node
+				(ref "U12002")
+				(pin "2")
+				(pinfunction "I5_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "54")
+			(name "C1_MEM_nCE_Q")
+			(class "Default")
+			(node
+				(ref "U12002")
+				(pin "13")
+				(pinfunction "I3_13")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "55")
+			(name "C1_MEM_nCE_W")
+			(class "Default")
+			(node
+				(ref "U12002")
+				(pin "3")
+				(pinfunction "I6_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "56")
+			(name "C2_BUSY_N")
+			(class "Default")
+			(node
+				(ref "U12001")
+				(pin "2")
+				(pinfunction "I5_2")
+				(pintype "input")
+			)
+			(node
+				(ref "U12011")
+				(pin "13")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "57")
+			(name "C2_MEM_REQ")
+			(class "Default")
+			(node
+				(ref "U12010")
+				(pin "2")
+				(pintype "input")
+			)
+			(node
+				(ref "U12011")
+				(pin "4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "58")
+			(name "C2_MEM_WE")
+			(class "Default")
+			(node
+				(ref "U12011")
+				(pin "5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "59")
+			(name "C2_MEM_nCE_B")
+			(class "Default")
+			(node
+				(ref "U12003")
+				(pin "1")
+				(pinfunction "I4_1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "60")
+			(name "C2_MEM_nCE_IN")
+			(class "Default")
+			(node
+				(ref "U12003")
+				(pin "4")
+				(pinfunction "I7_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "61")
+			(name "C2_MEM_nCE_MC")
+			(class "Default")
+			(node
+				(ref "U12003")
+				(pin "12")
+				(pinfunction "I2_12")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "62")
+			(name "C2_MEM_nCE_OUT")
+			(class "Default")
+			(node
+				(ref "U12003")
+				(pin "2")
+				(pinfunction "I5_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "63")
+			(name "C2_MEM_nCE_Q")
+			(class "Default")
+			(node
+				(ref "U12003")
+				(pin "13")
+				(pinfunction "I3_13")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "64")
+			(name "C2_MEM_nCE_W")
+			(class "Default")
+			(node
+				(ref "U12003")
+				(pin "3")
+				(pinfunction "I6_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "65")
+			(name "FC_BUSY_N")
+			(class "Default")
+			(node
+				(ref "U12001")
+				(pin "1")
+				(pinfunction "I4_1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "66")
+			(name "FC_MEM_REQ")
+			(class "Default")
+			(node
+				(ref "U12010")
+				(pin "4")
+				(pintype "input")
+			)
+			(node
+				(ref "U12011")
+				(pin "9")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "67")
+			(name "FC_MEM_WE")
+			(class "Default")
+			(node
+				(ref "U12011")
+				(pin "10")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "68")
+			(name "FC_MEM_nCE_B")
+			(class "Default")
+			(node
+				(ref "U12004")
+				(pin "1")
+				(pinfunction "I4_1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "69")
+			(name "FC_MEM_nCE_IN")
+			(class "Default")
+			(node
+				(ref "U12004")
+				(pin "4")
+				(pinfunction "I7_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "70")
+			(name "FC_MEM_nCE_MC")
+			(class "Default")
+			(node
+				(ref "U12004")
+				(pin "12")
+				(pinfunction "I2_12")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "71")
+			(name "FC_MEM_nCE_OUT")
+			(class "Default")
+			(node
+				(ref "U12004")
+				(pin "2")
+				(pinfunction "I5_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "72")
+			(name "FC_MEM_nCE_Q")
+			(class "Default")
+			(node
+				(ref "U12004")
+				(pin "13")
+				(pinfunction "I3_13")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "73")
+			(name "FC_MEM_nCE_W")
+			(class "Default")
+			(node
+				(ref "U12004")
+				(pin "3")
+				(pinfunction "I6_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "74")
+			(name "FC_SEL")
+			(class "Default")
+			(node
+				(ref "U12005")
+				(pin "4")
+				(pinfunction "A6_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "75")
+			(name "LOAD_EN")
+			(class "Default")
+			(node
+				(ref "U12008")
+				(pin "1")
+				(pinfunction "G1_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U12008")
+				(pin "19")
+				(pinfunction "G2_19")
+				(pintype "input")
+			)
+			(node
+				(ref "U12009")
+				(pin "1")
+				(pinfunction "G1_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U12009")
+				(pin "19")
+				(pinfunction "G2_19")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "76")
+			(name "MEM_ACK")
+			(class "Default")
+			(node
+				(ref "TP12001")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "77")
+			(name "MEM_BUSY")
+			(class "Default")
+			(node
+				(ref "TP12003")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "78")
+			(name "MEM_DONE")
+			(class "Default")
+			(node
+				(ref "TP12002")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "79")
+			(name "MEM_SEL0")
+			(class "Default")
+			(node
+				(ref "U12009")
+				(pin "18")
+				(pinfunction "Y0_18")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "80")
+			(name "MEM_SEL1")
+			(class "Default")
+			(node
+				(ref "U12009")
+				(pin "17")
+				(pinfunction "Y1_17")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "81")
+			(name "MEM_SEL2")
+			(class "Default")
+			(node
+				(ref "U12009")
+				(pin "16")
+				(pinfunction "Y2_16")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "82")
+			(name "MEM_SEL3")
+			(class "Default")
+			(node
+				(ref "U12009")
+				(pin "15")
+				(pinfunction "Y3_15")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "83")
+			(name "MEM_SEL4")
+			(class "Default")
+			(node
+				(ref "U12009")
+				(pin "14")
+				(pinfunction "Y4_14")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "84")
+			(name "POOL_BUSY")
+			(class "Default")
+			(node
+				(ref "U12013")
+				(pin "1")
+				(pinfunction "S_1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "85")
+			(name "POOL_BUSY_N")
+			(class "Default")
+			(node
+				(ref "U12001")
+				(pin "12")
+				(pinfunction "I2_12")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "86")
+			(name "POOL_MEM_REQ")
+			(class "Default")
+			(node
+				(ref "U12012")
+				(pin "5")
+				(pintype "input")
+			)
+			(node
+				(ref "U12014")
+				(pin "1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "87")
+			(name "POOL_MEM_WE")
+			(class "Default")
+			(node
+				(ref "U12014")
+				(pin "2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "88")
+			(name "POOL_MEM_nCE_IN")
+			(class "Default")
+			(node
+				(ref "U12013")
+				(pin "6")
+				(pinfunction "I1b_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "89")
+			(name "POOL_SEL")
+			(class "Default")
+			(node
+				(ref "U12005")
+				(pin "25")
+				(pinfunction "A8_25")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "90")
+			(name "REQ")
+			(class "Default")
+			(node
+				(ref "U12012")
+				(pin "8")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "91")
+			(name "SCORE_RD")
+			(class "Default")
+			(node
+				(ref "U12010")
+				(pin "5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "92")
+			(name "WE")
+			(class "Default")
+			(node
+				(ref "U12010")
+				(pin "11")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "93")
+			(name "unconnected-(U12001-EO-Pad15)")
+			(class "Default")
+			(node
+				(ref "U12001")
+				(pin "15")
+				(pinfunction "EO_15")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "94")
+			(name "unconnected-(U12001-GS-Pad14)")
+			(class "Default")
+			(node
+				(ref "U12001")
+				(pin "14")
+				(pinfunction "GS_14")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "95")
+			(name "unconnected-(U12001-IO-Pad10)")
+			(class "Default")
+			(node
+				(ref "U12001")
+				(pin "10")
+				(pinfunction "IO_10")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "96")
+			(name "unconnected-(U12002-EO-Pad15)")
+			(class "Default")
+			(node
+				(ref "U12002")
+				(pin "15")
+				(pinfunction "EO_15")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "97")
+			(name "unconnected-(U12002-GS-Pad14)")
+			(class "Default")
+			(node
+				(ref "U12002")
+				(pin "14")
+				(pinfunction "GS_14")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "98")
+			(name "unconnected-(U12002-IO-Pad10)")
+			(class "Default")
+			(node
+				(ref "U12002")
+				(pin "10")
+				(pinfunction "IO_10")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "99")
+			(name "unconnected-(U12003-EO-Pad15)")
+			(class "Default")
+			(node
+				(ref "U12003")
+				(pin "15")
+				(pinfunction "EO_15")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "100")
+			(name "unconnected-(U12003-GS-Pad14)")
+			(class "Default")
+			(node
+				(ref "U12003")
+				(pin "14")
+				(pinfunction "GS_14")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "101")
+			(name "unconnected-(U12003-IO-Pad10)")
+			(class "Default")
+			(node
+				(ref "U12003")
+				(pin "10")
+				(pinfunction "IO_10")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "102")
+			(name "unconnected-(U12004-EO-Pad15)")
+			(class "Default")
+			(node
+				(ref "U12004")
+				(pin "15")
+				(pinfunction "EO_15")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "103")
+			(name "unconnected-(U12004-GS-Pad14)")
+			(class "Default")
+			(node
+				(ref "U12004")
+				(pin "14")
+				(pinfunction "GS_14")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "104")
+			(name "unconnected-(U12004-IO-Pad10)")
+			(class "Default")
+			(node
+				(ref "U12004")
+				(pin "10")
+				(pinfunction "IO_10")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "105")
+			(name "unconnected-(U12005-D5-Pad17)")
+			(class "Default")
+			(node
+				(ref "U12005")
+				(pin "17")
+				(pinfunction "D5_17")
+				(pintype "tri_state+no_connect")
+			)
+		)
+		(net
+			(code "106")
+			(name "unconnected-(U12005-D6-Pad18)")
+			(class "Default")
+			(node
+				(ref "U12005")
+				(pin "18")
+				(pinfunction "D6_18")
+				(pintype "tri_state+no_connect")
+			)
+		)
+		(net
+			(code "107")
+			(name "unconnected-(U12005-D7-Pad19)")
+			(class "Default")
+			(node
+				(ref "U12005")
+				(pin "19")
+				(pinfunction "D7_19")
+				(pintype "tri_state+no_connect")
+			)
+		)
+		(net
+			(code "108")
+			(name "unconnected-(U12006-Zd-Pad12)")
+			(class "Default")
+			(node
+				(ref "U12006")
+				(pin "12")
+				(pinfunction "Zd_12")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "109")
+			(name "unconnected-(U12007-Zd-Pad12)")
+			(class "Default")
+			(node
+				(ref "U12007")
+				(pin "12")
+				(pinfunction "Zd_12")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "110")
+			(name "unconnected-(U12009-Y5-Pad13)")
+			(class "Default")
+			(node
+				(ref "U12009")
+				(pin "13")
+				(pinfunction "Y5_13")
+				(pintype "tri_state+no_connect")
+			)
+		)
+		(net
+			(code "111")
+			(name "unconnected-(U12009-Y6-Pad12)")
+			(class "Default")
+			(node
+				(ref "U12009")
+				(pin "12")
+				(pinfunction "Y6_12")
+				(pintype "tri_state+no_connect")
+			)
+		)
+		(net
+			(code "112")
+			(name "unconnected-(U12009-Y7-Pad11)")
+			(class "Default")
+			(node
+				(ref "U12009")
+				(pin "11")
+				(pinfunction "Y7_11")
+				(pintype "tri_state+no_connect")
+			)
+		)
+		(net
+			(code "113")
+			(name "unconnected-(U12012-Pad3)")
+			(class "Default")
+			(node
+				(ref "U12012")
+				(pin "3")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "114")
+			(name "unconnected-(U12013-Zd-Pad12)")
+			(class "Default")
+			(node
+				(ref "U12013")
+				(pin "12")
+				(pinfunction "Zd_12")
+				(pintype "output+no_connect")
+			)
+		)
+	)
+)

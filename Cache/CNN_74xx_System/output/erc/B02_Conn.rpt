@@ -1,0 +1,42 @@
+ERC report (2026-11-07T23:26:05, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 64.77 mm): Global Label 'CLK'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 67.31 mm): Global Label 'MEM_ACK'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 69.85 mm): Global Label 'MEM_DONE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 72.39 mm): Global Label 'MEM_nOE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 74.93 mm): Global Label 'REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 64.77 mm): Global Label 'RESET_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 67.31 mm): Global Label 'MEM_BUSY'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 69.85 mm): Global Label 'MEM_nCE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 72.39 mm): Global Label 'MEM_nWE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 74.93 mm): Global Label 'WE'
+
+ ** ERC messages: 10  Errors 0  Warnings 10
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

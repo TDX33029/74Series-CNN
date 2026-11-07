@@ -1,0 +1,258 @@
+ERC report (2026-11-07T23:27:12, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 64.77 mm): Symbol U12501 Pin 2 [I0a, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 67.31 mm): Symbol U12501 Pin 3 [I1a, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 72.39 mm): Symbol U12501 Pin 5 [I0b, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 74.93 mm): Symbol U12501 Pin 6 [I1b, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 80.01 mm): Symbol U12501 Pin 11 [I0c, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 82.55 mm): Symbol U12501 Pin 10 [I1c, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 87.63 mm): Symbol U12501 Pin 14 [I0d, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 90.17 mm): Symbol U12501 Pin 13 [I1d, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 95.25 mm): Symbol U12501 Pin 1 [S, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 154.94 mm): Symbol U12502 Pin 2 [I0a, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 157.48 mm): Symbol U12502 Pin 3 [I1a, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 162.56 mm): Symbol U12502 Pin 5 [I0b, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 165.10 mm): Symbol U12502 Pin 6 [I1b, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 170.18 mm): Symbol U12502 Pin 11 [I0c, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 172.72 mm): Symbol U12502 Pin 10 [I1c, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 177.80 mm): Symbol U12502 Pin 14 [I0d, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 180.34 mm): Symbol U12502 Pin 13 [I1d, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 245.11 mm): Symbol U12503 Pin 2 [I0a, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(67.31 mm, 247.65 mm): Symbol U12503 Pin 3 [I1a, Input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(80.01 mm, 52.07 mm): Symbol #PWR003 Pin 1 [Power input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(80.01 mm, 110.49 mm): Symbol #PWR001 Pin 1 [Power input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(317.50 mm, 64.77 mm): Symbol U12504 Pin 2 [I0a, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(317.50 mm, 67.31 mm): Symbol U12504 Pin 3 [I1a, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(317.50 mm, 72.39 mm): Symbol U12504 Pin 5 [I0b, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(317.50 mm, 74.93 mm): Symbol U12504 Pin 6 [I1b, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(317.50 mm, 80.01 mm): Symbol U12504 Pin 11 [I0c, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(317.50 mm, 82.55 mm): Symbol U12504 Pin 10 [I1c, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(317.50 mm, 87.63 mm): Symbol U12504 Pin 14 [I0d, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(317.50 mm, 90.17 mm): Symbol U12504 Pin 13 [I1d, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(317.50 mm, 95.25 mm): Symbol U12504 Pin 1 [S, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(317.50 mm, 154.94 mm): Symbol U12505 Pin 2 [I0a, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(317.50 mm, 162.56 mm): Symbol U12505 Pin 5 [I0b, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(317.50 mm, 165.10 mm): Symbol U12505 Pin 6 [I1b, Input, Line]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 64.77 mm): Global Label 'FC1_MEM_nCE_IN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 67.31 mm): Global Label 'FC2_MEM_nCE_IN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 72.39 mm): Global Label 'FC1_MEM_nCE_W'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 74.93 mm): Global Label 'FC2_MEM_nCE_W'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 80.01 mm): Global Label 'FC1_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 82.55 mm): Global Label 'FC2_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 87.63 mm): Global Label 'FC1_MEM_nCE_B'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 90.17 mm): Global Label 'FC2_MEM_nCE_B'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 154.94 mm): Global Label 'FC1_MEM_nCE_Q'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 157.48 mm): Global Label 'FC2_MEM_nCE_Q'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 162.56 mm): Global Label 'FC1_MEM_nCE_MC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 165.10 mm): Global Label 'FC2_MEM_nCE_MC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 170.18 mm): Global Label 'FC1_MEM_REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 172.72 mm): Global Label 'FC2_MEM_REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 177.80 mm): Global Label 'FC1_MEM_WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 180.34 mm): Global Label 'FC2_MEM_WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 245.11 mm): Global Label 'FC1_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(62.23 mm, 247.65 mm): Global Label 'FC2_BUSY_N'
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(80.01 mm, 80.01 mm): Symbol U12501 [74HC157]
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(80.01 mm, 170.18 mm): Symbol U12502 [74HC157]
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(80.01 mm, 260.35 mm): Symbol U12503 [74HC157]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(97.79 mm, 64.77 mm): Global Label 'FC_MEM_nCE_IN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(97.79 mm, 72.39 mm): Global Label 'FC_MEM_nCE_W'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(97.79 mm, 80.01 mm): Global Label 'FC_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(97.79 mm, 87.63 mm): Global Label 'FC_MEM_nCE_B'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(97.79 mm, 154.94 mm): Global Label 'FC_MEM_nCE_Q'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(97.79 mm, 162.56 mm): Global Label 'FC_MEM_nCE_MC'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(97.79 mm, 170.18 mm): Global Label 'FC_MEM_REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(97.79 mm, 177.80 mm): Global Label 'FC_MEM_WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(97.79 mm, 245.11 mm): Global Label 'FC_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(312.42 mm, 64.77 mm): Global Label 'POOL1_MEM_nCE_IN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(312.42 mm, 67.31 mm): Global Label 'POOL2_MEM_nCE_IN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(312.42 mm, 72.39 mm): Global Label 'POOL1_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(312.42 mm, 74.93 mm): Global Label 'POOL2_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(312.42 mm, 80.01 mm): Global Label 'POOL1_MEM_REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(312.42 mm, 82.55 mm): Global Label 'POOL2_MEM_REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(312.42 mm, 87.63 mm): Global Label 'POOL1_MEM_WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(312.42 mm, 90.17 mm): Global Label 'POOL2_MEM_WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(312.42 mm, 154.94 mm): Global Label 'POOL1_BUSY'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(312.42 mm, 162.56 mm): Global Label 'POOL1_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(312.42 mm, 165.10 mm): Global Label 'POOL2_BUSY_N'
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(330.20 mm, 80.01 mm): Symbol U12504 [74HC157]
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(330.20 mm, 170.18 mm): Symbol U12505 [74HC157]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 64.77 mm): Global Label 'POOL_MEM_nCE_IN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 72.39 mm): Global Label 'POOL_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 80.01 mm): Global Label 'POOL_MEM_REQ'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 87.63 mm): Global Label 'POOL_MEM_WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 154.94 mm): Global Label 'POOL_BUSY'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(347.98 mm, 162.56 mm): Global Label 'POOL_BUSY_N'
+
+ ** ERC messages: 82  Errors 33  Warnings 49
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

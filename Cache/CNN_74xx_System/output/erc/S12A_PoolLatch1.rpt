@@ -1,0 +1,93 @@
+ERC report (2026-11-07T23:26:25, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(77.47 mm, 85.09 mm): Symbol #PWR001 Pin 1 [Power input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(82.55 mm, 62.23 mm): Symbol U13001 Pin 2 [A0, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(82.55 mm, 64.77 mm): Symbol U13001 Pin 3 [A1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(82.55 mm, 67.31 mm): Symbol U13001 Pin 4 [A2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(82.55 mm, 69.85 mm): Symbol U13001 Pin 5 [A3, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(82.55 mm, 72.39 mm): Symbol U13001 Pin 6 [A4, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(82.55 mm, 74.93 mm): Symbol U13001 Pin 7 [A5, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(82.55 mm, 77.47 mm): Symbol U13001 Pin 8 [A6, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(82.55 mm, 80.01 mm): Symbol U13001 Pin 9 [A7, Input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(95.25 mm, 49.53 mm): Symbol #PWR004 Pin 1 [Power input, Line]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 62.23 mm): Global Label 'DATA0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 64.77 mm): Global Label 'DATA1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 67.31 mm): Global Label 'DATA2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 69.85 mm): Global Label 'DATA3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 72.39 mm): Global Label 'DATA4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 74.93 mm): Global Label 'DATA5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 77.47 mm): Global Label 'DATA6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(77.47 mm, 80.01 mm): Global Label 'DATA7'
+[lib_symbol_mismatch]: 符号 '74HCT541' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(95.25 mm, 74.93 mm): Symbol U13001 [74HCT541]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(113.03 mm, 62.23 mm): Global Label 'IN_DATA10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(113.03 mm, 64.77 mm): Global Label 'IN_DATA11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(113.03 mm, 67.31 mm): Global Label 'IN_DATA12'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(113.03 mm, 69.85 mm): Global Label 'IN_DATA13'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(113.03 mm, 72.39 mm): Global Label 'IN_DATA14'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(113.03 mm, 74.93 mm): Global Label 'IN_DATA15'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(113.03 mm, 77.47 mm): Global Label 'IN_DATA16'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(113.03 mm, 80.01 mm): Global Label 'IN_DATA17'
+
+ ** ERC messages: 27  Errors 10  Warnings 17
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

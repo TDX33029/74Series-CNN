@@ -1,0 +1,21 @@
+* Glue polarity / result-valid hold testbench
+.model ddff d_dff()
+Vclk clk 0 PULSE(0 3.3 10n 1n 1n 10n 20n)
+Vst st 0 PWL(0 3.3 199n 3.3 200n 0 399n 0 400n 3.3 599n 3.3 600n 0)
+Vwait_t wait_t 0 PWL(0 0 599n 0 600n 3.3 799n 3.3 800n 0)
+Vto to 0 PWL(0 0 999n 0 1000n 3.3 1199n 3.3 1200n 0)
+Vnce nce 0 PWL(0 3.3 1399n 3.3 1400n 0 1599n 0 1600n 3.3)
+Vsetn setn 0 PWL(0 3.3 299n 3.3 300n 0 399n 0 400n 3.3)
+Vclrn clrn 0 PWL(0 3.3 799n 3.3 800n 0 899n 0 900n 3.3)
+Bidlen idlen 0 V = (V(st)>1.65 ? 0 : 3.3)
+Bidlem idlem 0 V = 3.3 - V(idlen)
+Bwaitn waitn 0 V = (V(wait_t)>1.65 ? 0 : 3.3)
+Bwaitm waitm 0 V = 3.3 - V(waitn)
+Bton ton 0 V = 3.3 - V(to)
+Btoi toi 0 V = 3.3 - V(ton)
+Boe oe 0 V = (V(nce)>1.65 ? 0 : 3.3)
+Bset set 0 V = 3.3 - V(setn)
+Bclr clr 0 V = 3.3 - V(clrn)
+Arv rv clk set clr rv rvb ddff
+.tran 1n 1800n
+.end

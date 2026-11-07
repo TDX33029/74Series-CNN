@@ -1,0 +1,282 @@
+ERC report (2026-11-07T23:25:58, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(59.69 mm, 62.23 mm): Symbol U1001 Pin 25 [A8, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(59.69 mm, 64.77 mm): Symbol U1001 Pin 24 [A9, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(59.69 mm, 67.31 mm): Symbol U1001 Pin 21 [A10, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(59.69 mm, 69.85 mm): Symbol U1001 Pin 23 [A11, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(59.69 mm, 72.39 mm): Symbol U1001 Pin 2 [A12, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(59.69 mm, 74.93 mm): Symbol U1001 Pin 26 [A13, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(59.69 mm, 77.47 mm): Symbol U1001 Pin 27 [A14, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(62.23 mm, 247.65 mm): Symbol U1012 Pin 2 [D, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(62.23 mm, 281.94 mm): Symbol U1012 Pin 12 [D, Input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(69.85 mm, 31.75 mm): Symbol #PWR004 Pin 1 [Power input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(69.85 mm, 97.79 mm): Symbol #PWR001 Pin 1 [Power input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(377.19 mm, 147.32 mm): Symbol U1010 Pin 2 [D0, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(377.19 mm, 149.86 mm): Symbol U1010 Pin 3 [D1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(377.19 mm, 152.40 mm): Symbol U1010 Pin 4 [D2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(377.19 mm, 154.94 mm): Symbol U1010 Pin 5 [D3, Input, Line]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(57.15 mm, 247.65 mm): Global Label 'IMAGE_READY'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(57.15 mm, 281.94 mm): Global Label 'MODEL_READY'
+[lib_symbol_mismatch]: 符号 '74HC74' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(69.85 mm, 250.19 mm): Symbol U1012 [74HC74]
+[lib_symbol_mismatch]: 符号 '74HC74' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(69.85 mm, 284.48 mm): Symbol U1012 [74HC74]
+[lib_symbol_issues]: 在符号库中 '74HC161' 找不到符号 '74xx'
+    ; warning
+    @(69.85 mm, 400.05 mm): Symbol U1018 [74HC161]
+[lib_symbol_mismatch]: 符号 '74HC74' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(110.49 mm, 250.19 mm): Symbol U1012 [74HC74]
+[lib_symbol_issues]: 在符号库中 '74HC161' 找不到符号 '74xx'
+    ; warning
+    @(139.70 mm, 400.05 mm): Symbol U1019 [74HC161]
+[lib_symbol_issues]: 在符号库中 '74HC157' 找不到符号 '74xx'
+    ; warning
+    @(149.86 mm, 160.02 mm): Symbol U1007 [74HC157]
+[lib_symbol_mismatch]: 符号 '74HC74' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(149.86 mm, 250.19 mm): Symbol U1013 [74HC74]
+[lib_symbol_mismatch]: 符号 '74HC74' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(149.86 mm, 284.48 mm): Symbol U1013 [74HC74]
+[lib_symbol_mismatch]: 符号 '74HC74' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(190.50 mm, 250.19 mm): Symbol U1013 [74HC74]
+[lib_symbol_issues]: 在符号库中 '74HC161' 找不到符号 '74xx'
+    ; warning
+    @(209.55 mm, 400.05 mm): Symbol U1020 [74HC161]
+[lib_symbol_mismatch]: 符号 '74HCT541' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(229.87 mm, 160.02 mm): Symbol U1008 [74HCT541]
+[lib_symbol_mismatch]: 符号 '74HCT273' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(240.03 mm, 64.77 mm): Symbol U1003 [74HCT273]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(240.03 mm, 250.19 mm): Symbol U1014 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(240.03 mm, 275.59 mm): Symbol U1014 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(240.03 mm, 299.72 mm): Symbol U1014 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(240.03 mm, 325.12 mm): Symbol U1014 [74HC08]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(247.65 mm, 147.32 mm): Global Label 'C1_START'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(247.65 mm, 149.86 mm): Global Label 'P1_START'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(247.65 mm, 152.40 mm): Global Label 'C2_START'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(247.65 mm, 154.94 mm): Global Label 'P2_START'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(247.65 mm, 157.48 mm): Global Label 'FC1_START'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(247.65 mm, 160.02 mm): Global Label 'FC2_START'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(247.65 mm, 162.56 mm): Global Label 'ARGMAX_START'
+[lib_symbol_issues]: 在符号库中 '74HC08' 找不到符号 '74xx'
+    ; warning
+    @(279.40 mm, 250.19 mm): Symbol U1014 [74HC08]
+[lib_symbol_issues]: 在符号库中 '74HC161' 找不到符号 '74xx'
+    ; warning
+    @(279.40 mm, 400.05 mm): Symbol U1021 [74HC161]
+[lib_symbol_mismatch]: 符号 '74HCT541' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(309.88 mm, 160.02 mm): Symbol U1009 [74HCT541]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(320.04 mm, 64.77 mm): Symbol U1004 [74HCT574]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(320.04 mm, 250.19 mm): Symbol U1015 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(320.04 mm, 275.59 mm): Symbol U1015 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(320.04 mm, 299.72 mm): Symbol U1015 [74HC32]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(320.04 mm, 325.12 mm): Symbol U1015 [74HC32]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(327.66 mm, 157.48 mm): Global Label 'ERROR_CODE0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(327.66 mm, 160.02 mm): Global Label 'ERROR_CODE1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(327.66 mm, 162.56 mm): Global Label 'ERROR_CODE2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(327.66 mm, 165.10 mm): Global Label 'ERROR_CODE3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(337.82 mm, 52.07 mm): Label 'MCR0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(337.82 mm, 54.61 mm): Label 'MCR1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(337.82 mm, 57.15 mm): Label 'MCR2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(337.82 mm, 59.69 mm): Label 'MCR3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(337.82 mm, 62.23 mm): Label 'MCR4'
+[lib_symbol_issues]: 在符号库中 '74HC161' 找不到符号 '74xx'
+    ; warning
+    @(350.52 mm, 400.05 mm): Symbol U1022 [74HC161]
+[lib_symbol_issues]: 在符号库中 '74HC32' 找不到符号 '74xx'
+    ; warning
+    @(359.41 mm, 250.19 mm): Symbol U1015 [74HC32]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(372.11 mm, 147.32 mm): Global Label 'RESULT_IN0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(372.11 mm, 149.86 mm): Global Label 'RESULT_IN1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(372.11 mm, 152.40 mm): Global Label 'RESULT_IN2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(372.11 mm, 154.94 mm): Global Label 'RESULT_IN3'
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(389.89 mm, 160.02 mm): Symbol U1010 [74HCT574]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(400.05 mm, 64.77 mm): Symbol U1005 [74HCT574]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(400.05 mm, 250.19 mm): Symbol U1016 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(400.05 mm, 275.59 mm): Symbol U1016 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(400.05 mm, 299.72 mm): Symbol U1016 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(400.05 mm, 325.12 mm): Symbol U1016 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(400.05 mm, 350.52 mm): Symbol U1016 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(400.05 mm, 374.65 mm): Symbol U1016 [74HC04]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(407.67 mm, 147.32 mm): Global Label 'RESULT0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(407.67 mm, 149.86 mm): Global Label 'RESULT1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(407.67 mm, 152.40 mm): Global Label 'RESULT2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(407.67 mm, 154.94 mm): Global Label 'RESULT3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(412.75 mm, 299.72 mm): Label 'NOT_RESET_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(417.83 mm, 64.77 mm): Global Label 'POOL_SEL'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(417.83 mm, 67.31 mm): Global Label 'FC_SEL'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(417.83 mm, 69.85 mm): Label 'MCR15'
+[lib_symbol_issues]: 在符号库中 '74HC161' 找不到符号 '74xx'
+    ; warning
+    @(420.37 mm, 400.05 mm): Symbol U1023 [74HC161]
+[lib_symbol_mismatch]: 符号 '74HC04' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(439.42 mm, 250.19 mm): Symbol U1016 [74HC04]
+[lib_symbol_mismatch]: 符号 '74HC74' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(480.06 mm, 160.02 mm): Symbol U1011 [74HC74]
+[lib_symbol_mismatch]: 符号 '74HC74' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(480.06 mm, 195.58 mm): Symbol U1011 [74HC74]
+[lib_symbol_mismatch]: 符号 '74HC688' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(480.06 mm, 250.19 mm): Symbol U1017 [74HC688]
+[lib_symbol_mismatch]: 符号 '74HC688' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(500.38 mm, 400.05 mm): Symbol U1024 [74HC688]
+[lib_symbol_mismatch]: 符号 '74HC74' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(519.43 mm, 160.02 mm): Symbol U1011 [74HC74]
+[lib_symbol_mismatch]: 符号 '74HC688' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(580.39 mm, 400.05 mm): Symbol U1025 [74HC688]
+[lib_symbol_mismatch]: 符号 '74HC688' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(660.40 mm, 400.05 mm): Symbol U1026 [74HC688]
+[unconnected_wire_endpoint]: 未连接的连线端点
+    ; warning
+    @(699.77 mm, 500.38 mm): Vertical Wire, length 5.08 mm
+[unconnected_wire_endpoint]: 未连接的连线端点
+    ; warning
+    @(759.46 mm, 500.38 mm): Vertical Wire, length 5.08 mm
+
+ ** ERC messages: 90  Errors 15  Warnings 75
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

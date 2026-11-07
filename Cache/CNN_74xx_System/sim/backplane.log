@@ -1,0 +1,23 @@
+PASS: 32 headers in pinout
+PASS: 1280 pins (expected 1280)
+PASS: connector sheet names are Bxx_Conn ([])
+PASS: no net pinned twice on a board ([])
+PASS: B01: connector nets match (37 pins, missing=[], extra=[])
+PASS: B02: connector nets match (10 pins, missing=[], extra=[])
+PASS: B03: connector nets match (204 pins, missing=[], extra=[])
+PASS: B04: connector nets match (43 pins, missing=[], extra=[])
+PASS: B05: connector nets match (53 pins, missing=[], extra=[])
+PASS: B06: connector nets match (43 pins, missing=[], extra=[])
+PASS: B07: connector nets match (53 pins, missing=[], extra=[])
+PASS: B08: connector nets match (43 pins, missing=[], extra=[])
+PASS: B09: connector nets match (44 pins, missing=[], extra=[])
+PASS: B10: connector nets match (26 pins, missing=[], extra=[])
+PASS: B11: connector nets match (72 pins, missing=[], extra=[])
+PASS: B12: connector nets match (59 pins, missing=[], extra=[])
+PASS: pinout net set matches (282 nets)
+PASS: net -> board sets match ([])
+PASS: power pins 1-14 fixed ([])
+PASS: no internal net on a pin ([])
+PASS: all 12 boards have connectors (12)
+
+RESULT: PASS

@@ -1,0 +1,33 @@
+ERC report (2026-11-07T04:15:20, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(77.47 mm, 95.25 mm): Symbol #PWR001 Pin 1 [Power input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(95.25 mm, 59.69 mm): Symbol #PWR004 Pin 1 [Power input, Line]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(90.17 mm, 144.78 mm): Symbol U13002 [74HCT574]
+[lib_symbol_mismatch]: 符号 '74HCT541' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(95.25 mm, 85.09 mm): Symbol U13001 [74HCT541]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(170.18 mm, 144.78 mm): Symbol U13003 [74HCT574]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(250.19 mm, 144.78 mm): Symbol U13004 [74HCT574]
+[lib_symbol_mismatch]: 符号 '74HCT574' 与来源库 '74xx' 中的符号存在差异
+    ; warning
+    @(330.20 mm, 144.78 mm): Symbol U13005 [74HCT574]
+
+ ** ERC messages: 7  Errors 2  Warnings 5
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

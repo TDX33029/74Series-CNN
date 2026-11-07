@@ -1,0 +1,33 @@
+* Supervisor FSM functional testbench (state-bit level)
+.model ddff d_dff()
+Vclk clk 0 PULSE(0 3.3 50n 1n 1n 50n 100n)
+Vrst rst 0 PWL(0 3.3 200n 3.3 201n 0)
+Vs0 s0 0 0
+Vstart start 0 PWL(0 0 500n 0 501n 3.3 1000n 3.3 1001n 0)
+Vimg img 0 PWL(0 0 300n 0 301n 3.3)
+Vmdl mdl 0 PWL(0 0 400n 0 401n 3.3)
+Vc1 c1 0 PWL(0 0 740n 0 741n 3.3 760n 3.3 761n 0)
+Vp1 p1 0 PWL(0 0 940n 0 941n 3.3 960n 3.3 961n 0)
+Vc2 c2 0 PWL(0 0 1140n 0 1141n 3.3 1160n 3.3 1161n 0)
+Vp2 p2 0 PWL(0 0 1340n 0 1341n 3.3 1360n 3.3 1361n 0)
+Vfc1 fc1 0 PWL(0 0 1540n 0 1541n 3.3 1560n 3.3 1561n 0)
+Vfc2 fc2 0 PWL(0 0 1740n 0 1741n 3.3 1760n 3.3 1761n 0)
+Vam am 0 PWL(0 0 1940n 0 1941n 3.3 1960n 3.3 1961n 0)
+Vto to 0 0
+Bst st 0 V = (V(q0)+2*V(q1)+4*V(q2)+8*V(q3)+16*V(q4))/3.3
+Bns ns 0 V = (abs(V(st)-0)<0.5 ? 1 : (abs(V(st)-1)<0.5 ? ((((V(img)>1.65) ? 1 : 0)*((V(mdl)>1.65) ? 1 : 0)) ? 2 : (((V(start)>1.65) ? 1 : 0) ? 19 : 1)) : (abs(V(st)-2)<0.5 ? (((V(start)>1.65) ? 1 : 0) ? ((((V(img)>1.65) ? 1 : 0)*((V(mdl)>1.65) ? 1 : 0)) ? 3 : 19) : 2) : (abs(V(st)-3)<0.5 ? 4 : (abs(V(st)-4)<0.5 ? (((V(to)>1.65) ? 1 : 0) ? 19 : (((V(c1)>1.65) ? 1 : 0) ? 5 : 4)) : (abs(V(st)-5)<0.5 ? 6 : (abs(V(st)-6)<0.5 ? (((V(to)>1.65) ? 1 : 0) ? 19 : (((V(p1)>1.65) ? 1 : 0) ? 7 : 6)) : (abs(V(st)-7)<0.5 ? 8 : (abs(V(st)-8)<0.5 ? (((V(to)>1.65) ? 1 : 0) ? 19 : (((V(c2)>1.65) ? 1 : 0) ? 9 : 8)) : (abs(V(st)-9)<0.5 ? 10 : (abs(V(st)-10)<0.5 ? (((V(to)>1.65) ? 1 : 0) ? 19 : (((V(p2)>1.65) ? 1 : 0) ? 11 : 10)) : (abs(V(st)-11)<0.5 ? 12 : (abs(V(st)-12)<0.5 ? (((V(to)>1.65) ? 1 : 0) ? 19 : (((V(fc1)>1.65) ? 1 : 0) ? 13 : 12)) : (abs(V(st)-13)<0.5 ? 14 : (abs(V(st)-14)<0.5 ? (((V(to)>1.65) ? 1 : 0) ? 19 : (((V(fc2)>1.65) ? 1 : 0) ? 15 : 14)) : (abs(V(st)-15)<0.5 ? 16 : (abs(V(st)-16)<0.5 ? (((V(to)>1.65) ? 1 : 0) ? 19 : (((V(am)>1.65) ? 1 : 0) ? 17 : 16)) : (abs(V(st)-17)<0.5 ? 18 : (abs(V(st)-18)<0.5 ? (((V(start)>1.65) ? 1 : 0) ? 18 : 2) : (abs(V(st)-19)<0.5 ? 19 : 0))))))))))))))))))))
+Bd0 d0 0 V = 3.3*(floor(V(ns)/1+0.01)-2*floor(V(ns)/2+0.005))
+A0 d0 clk s0 rst q0 qb0 ddff
+Bd1 d1 0 V = 3.3*(floor(V(ns)/2+0.01)-2*floor(V(ns)/4+0.005))
+A1 d1 clk s0 rst q1 qb1 ddff
+Bd2 d2 0 V = 3.3*(floor(V(ns)/4+0.01)-2*floor(V(ns)/8+0.005))
+A2 d2 clk s0 rst q2 qb2 ddff
+Bd3 d3 0 V = 3.3*(floor(V(ns)/8+0.01)-2*floor(V(ns)/16+0.005))
+A3 d3 clk s0 rst q3 qb3 ddff
+Bd4 d4 0 V = 3.3*(floor(V(ns)/16+0.01)-2*floor(V(ns)/32+0.005))
+A4 d4 clk s0 rst q4 qb4 ddff
+Bbusy busy 0 V = 3.3*((V(st)>2.5) ? ((V(st)<16.5) ? 1 : 0) : 0)
+Bdon done 0 V = 3.3*((abs(V(st)-17)<0.5) ? 1 : 0)
+Berr err 0 V = 3.3*((abs(V(st)-19)<0.5) ? 1 : 0)
+.tran 1n 3000n
+.end

@@ -1,0 +1,34 @@
+digraph pool_bus {
+  graph [rankdir=LR, splines=spline, nodesep=0.40, ranksep=0.75,
+         fontname="Microsoft YaHei", bgcolor="white", pad=0.25];
+  node [shape=box, style="rounded,filled", fontname="Microsoft YaHei",
+        fontsize=11, margin="0.14,0.09", penwidth=1.2];
+  edge [fontname="Microsoft YaHei", fontsize=8.5, color="#1D4ED8",
+        fontcolor="#1D4ED8", arrowsize=0.75, penwidth=1.2];
+
+  S05 [label=<<B>S05 Pool</B><BR/><FONT POINT-SIZE="8.5">IN_ADDR[12:0] · OUT_ADDR[11:0]<BR/>OUT_DATA[7:0]<BR/>REQ / WE / nCE_IN / nCE_OUT<BR/>MEM_ACK / MEM_DONE</FONT>>,
+       fillcolor="#DBEAFE", color="#1D4ED8"];
+  BUF [label=<<B>S04 Pool 缓冲（5×74HCT541 + 1×74HC32）</B><BR/><FONT POINT-SIZE="8.5">2×541 读地址  OE=BUSY_N | WE<BR/>2×541 写地址  OE=nCE_OUT<BR/>1×541 写数据  OE=nCE_OUT</FONT>>,
+       fillcolor="#FEF3C7", color="#B45309"];
+  MEM [label=<<B>S04 SRAM / ROM</B><BR/><FONT POINT-SIZE="8.5">MEM_SEL 1/2/3/4<BR/>CONV1_OUT · POOL1_OUT<BR/>CONV2_OUT · POOL2_OUT</FONT>>,
+       fillcolor="#FEF3C7", color="#B45309"];
+  S11 [label=<<B>S11 BusFabric</B><BR/><FONT POINT-SIZE="8.5">Pool = master 5<BR/>map A8 = POOL_SEL<BR/>+1×74HC157 region mux<BR/>REQ/WE 合并</FONT>>,
+       fillcolor="#D1FAE5", color="#047857"];
+  S02 [label=<<B>S02 Timing</B><BR/><FONT POINT-SIZE="8.5">MEM_nCE / nOE / nWE<BR/>MEM_ACK / MEM_DONE<BR/>WAIT_READ=3</FONT>>,
+       fillcolor="#F1F5F9", color="#64748B"];
+  S12 [label=<<B>S12 DataAssembly</B><BR/><FONT POINT-SIZE="8.5">74HCT541: DATA→IN_DATA<BR/>SCORE 拼装</FONT>>,
+       fillcolor="#F1F5F9", color="#64748B"];
+
+  S05 -> BUF [label="IN_ADDR / OUT_ADDR / OUT_DATA"];
+  BUF -> MEM [label="ADDR[15:0] / DATA[7:0]"];
+  S05 -> S11 [label="REQ / WE / nCE / BUSY(_N)"];
+  S11 -> S02 [label="REQ / WE"];
+  S02 -> MEM [label="MEM_nCE / nOE / nWE"];
+  S11 -> MEM [label="MEM_SEL / ADDR[23:16]"];
+  MEM -> S12 [label="DATA[7:0]"];
+  S12 -> S05 [label="IN_DATA[7:0]", style=dashed, constraint=false, color="#64748B", fontcolor="#64748B"];
+  S02 -> S05 [label="MEM_ACK / MEM_DONE", style=dashed, constraint=false, color="#B91C1C", fontcolor="#B91C1C"];
+
+  { rank=same; S05; BUF; S11; S02; }
+  { rank=same; MEM; S12; }
+}

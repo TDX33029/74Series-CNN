@@ -1,0 +1,624 @@
+ERC report (2026-11-07T23:26:11, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 64.77 mm): Global Label 'CLK'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 67.31 mm): Global Label 'IMAGE_DONE_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 69.85 mm): Global Label 'MODEL_DONE_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 72.39 mm): Global Label 'ADDR0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 74.93 mm): Global Label 'ADDR2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 77.47 mm): Global Label 'ADDR4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 80.01 mm): Global Label 'ADDR6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 82.55 mm): Global Label 'ADDR8'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 85.09 mm): Global Label 'ADDR10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 87.63 mm): Global Label 'ADDR12'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 90.17 mm): Global Label 'ADDR14'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 92.71 mm): Global Label 'ADDR16'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 95.25 mm): Global Label 'ADDR18'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 124.46 mm): Global Label 'ADDR20'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 127.00 mm): Global Label 'ADDR22'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 129.54 mm): Global Label 'DATA0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 132.08 mm): Global Label 'DATA2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 134.62 mm): Global Label 'DATA4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 137.16 mm): Global Label 'DATA6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 139.70 mm): Global Label 'MEM_nCE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 142.24 mm): Global Label 'MEM_nWE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 144.78 mm): Global Label 'LOAD_DATA1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 147.32 mm): Global Label 'LOAD_DATA3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 149.86 mm): Global Label 'LOAD_DATA5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 152.40 mm): Global Label 'LOAD_DATA7'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 154.94 mm): Global Label 'LOAD_nOE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 185.42 mm): Global Label 'MEM_SEL0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 187.96 mm): Global Label 'MEM_SEL2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 190.50 mm): Global Label 'MEM_SEL4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 193.04 mm): Global Label 'C1_ADDR1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 195.58 mm): Global Label 'C1_ADDR3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 198.12 mm): Global Label 'C1_ADDR5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 200.66 mm): Global Label 'C1_ADDR7'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 203.20 mm): Global Label 'C1_ADDR9'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 205.74 mm): Global Label 'C1_ADDR11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 208.28 mm): Global Label 'C1_ADDR13'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 210.82 mm): Global Label 'C1_ADDR15'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 213.36 mm): Global Label 'C2_ADDR0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 215.90 mm): Global Label 'C2_ADDR2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 245.11 mm): Global Label 'C2_ADDR4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 247.65 mm): Global Label 'C2_ADDR6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 250.19 mm): Global Label 'C2_ADDR8'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 252.73 mm): Global Label 'C2_ADDR10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 255.27 mm): Global Label 'C2_ADDR12'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 257.81 mm): Global Label 'C2_ADDR14'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 260.35 mm): Global Label 'C2_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 262.89 mm): Global Label 'SCORE_ADDR0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 265.43 mm): Global Label 'SCORE_ADDR2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 267.97 mm): Global Label 'SCORE_ADDR4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 270.51 mm): Global Label 'FC1_ADDR0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 273.05 mm): Global Label 'FC1_ADDR2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 275.59 mm): Global Label 'FC1_ADDR4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 304.80 mm): Global Label 'FC1_ADDR6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 307.34 mm): Global Label 'FC1_ADDR8'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 309.88 mm): Global Label 'FC1_ADDR10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 312.42 mm): Global Label 'FC1_ADDR12'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 314.96 mm): Global Label 'FC1_ADDR14'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 317.50 mm): Global Label 'FC1_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 320.04 mm): Global Label 'FC2_ADDR1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 322.58 mm): Global Label 'FC2_ADDR3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 325.12 mm): Global Label 'FC2_ADDR5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 327.66 mm): Global Label 'FC2_ADDR7'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 330.20 mm): Global Label 'FC2_ADDR9'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 332.74 mm): Global Label 'FC2_ADDR11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 335.28 mm): Global Label 'FC2_ADDR13'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 364.49 mm): Global Label 'FC2_ADDR15'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 367.03 mm): Global Label 'POOL1_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 369.57 mm): Global Label 'POOL1_IN_ADDR1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 372.11 mm): Global Label 'POOL1_IN_ADDR3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 374.65 mm): Global Label 'POOL1_IN_ADDR5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 377.19 mm): Global Label 'POOL1_IN_ADDR7'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 379.73 mm): Global Label 'POOL1_IN_ADDR9'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 382.27 mm): Global Label 'POOL1_IN_ADDR11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 384.81 mm): Global Label 'POOL1_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 387.35 mm): Global Label 'POOL1_OUT_ADDR0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 389.89 mm): Global Label 'POOL1_OUT_ADDR2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 392.43 mm): Global Label 'POOL1_OUT_ADDR4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 394.97 mm): Global Label 'POOL1_OUT_ADDR6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 425.45 mm): Global Label 'POOL1_OUT_ADDR8'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 427.99 mm): Global Label 'POOL1_OUT_ADDR10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 430.53 mm): Global Label 'POOL1_OUT_DATA0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 433.07 mm): Global Label 'POOL1_OUT_DATA2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 435.61 mm): Global Label 'POOL1_OUT_DATA4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 438.15 mm): Global Label 'POOL1_OUT_DATA6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 440.69 mm): Global Label 'POOL2_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 443.23 mm): Global Label 'POOL2_IN_ADDR1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 445.77 mm): Global Label 'POOL2_IN_ADDR3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 448.31 mm): Global Label 'POOL2_IN_ADDR5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 450.85 mm): Global Label 'POOL2_IN_ADDR7'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 453.39 mm): Global Label 'POOL2_IN_ADDR9'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 455.93 mm): Global Label 'POOL2_IN_ADDR11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 485.14 mm): Global Label 'POOL2_MEM_nCE_OUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 487.68 mm): Global Label 'POOL2_OUT_ADDR0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 490.22 mm): Global Label 'POOL2_OUT_ADDR2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 492.76 mm): Global Label 'POOL2_OUT_ADDR4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 495.30 mm): Global Label 'POOL2_OUT_ADDR6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 497.84 mm): Global Label 'POOL2_OUT_ADDR8'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 500.38 mm): Global Label 'POOL2_OUT_ADDR10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 502.92 mm): Global Label 'POOL2_OUT_DATA0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 505.46 mm): Global Label 'POOL2_OUT_DATA2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 508.00 mm): Global Label 'POOL2_OUT_DATA4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(45.72 mm, 510.54 mm): Global Label 'POOL2_OUT_DATA6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 64.77 mm): Global Label 'RESET_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 67.31 mm): Global Label 'IMAGE_READY'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 69.85 mm): Global Label 'MODEL_READY'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 72.39 mm): Global Label 'ADDR1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 74.93 mm): Global Label 'ADDR3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 77.47 mm): Global Label 'ADDR5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 80.01 mm): Global Label 'ADDR7'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 82.55 mm): Global Label 'ADDR9'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 85.09 mm): Global Label 'ADDR11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 87.63 mm): Global Label 'ADDR13'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 90.17 mm): Global Label 'ADDR15'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 92.71 mm): Global Label 'ADDR17'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 95.25 mm): Global Label 'ADDR19'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 124.46 mm): Global Label 'ADDR21'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 127.00 mm): Global Label 'ADDR23'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 129.54 mm): Global Label 'DATA1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 132.08 mm): Global Label 'DATA3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 134.62 mm): Global Label 'DATA5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 137.16 mm): Global Label 'DATA7'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 139.70 mm): Global Label 'MEM_nOE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 142.24 mm): Global Label 'LOAD_DATA0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 144.78 mm): Global Label 'LOAD_DATA2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 147.32 mm): Global Label 'LOAD_DATA4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 149.86 mm): Global Label 'LOAD_DATA6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 152.40 mm): Global Label 'LOAD_EN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 154.94 mm): Global Label 'LOAD_nWE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 185.42 mm): Global Label 'MEM_SEL1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 187.96 mm): Global Label 'MEM_SEL3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 190.50 mm): Global Label 'C1_ADDR0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 193.04 mm): Global Label 'C1_ADDR2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 195.58 mm): Global Label 'C1_ADDR4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 198.12 mm): Global Label 'C1_ADDR6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 200.66 mm): Global Label 'C1_ADDR8'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 203.20 mm): Global Label 'C1_ADDR10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 205.74 mm): Global Label 'C1_ADDR12'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 208.28 mm): Global Label 'C1_ADDR14'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 210.82 mm): Global Label 'C1_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 213.36 mm): Global Label 'C2_ADDR1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 215.90 mm): Global Label 'C2_ADDR3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 245.11 mm): Global Label 'C2_ADDR5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 247.65 mm): Global Label 'C2_ADDR7'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 250.19 mm): Global Label 'C2_ADDR9'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 252.73 mm): Global Label 'C2_ADDR11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 255.27 mm): Global Label 'C2_ADDR13'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 257.81 mm): Global Label 'C2_ADDR15'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 260.35 mm): Global Label 'ARGMAX_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 262.89 mm): Global Label 'SCORE_ADDR1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 265.43 mm): Global Label 'SCORE_ADDR3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 267.97 mm): Global Label 'SCORE_ADDR5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 270.51 mm): Global Label 'FC1_ADDR1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 273.05 mm): Global Label 'FC1_ADDR3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 275.59 mm): Global Label 'FC1_ADDR5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 304.80 mm): Global Label 'FC1_ADDR7'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 307.34 mm): Global Label 'FC1_ADDR9'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 309.88 mm): Global Label 'FC1_ADDR11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 312.42 mm): Global Label 'FC1_ADDR13'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 314.96 mm): Global Label 'FC1_ADDR15'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 317.50 mm): Global Label 'FC2_ADDR0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 320.04 mm): Global Label 'FC2_ADDR2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 322.58 mm): Global Label 'FC2_ADDR4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 325.12 mm): Global Label 'FC2_ADDR6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 327.66 mm): Global Label 'FC2_ADDR8'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 330.20 mm): Global Label 'FC2_ADDR10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 332.74 mm): Global Label 'FC2_ADDR12'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 335.28 mm): Global Label 'FC2_ADDR14'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 364.49 mm): Global Label 'FC2_BUSY_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 367.03 mm): Global Label 'POOL1_IN_ADDR0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 369.57 mm): Global Label 'POOL1_IN_ADDR2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 372.11 mm): Global Label 'POOL1_IN_ADDR4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 374.65 mm): Global Label 'POOL1_IN_ADDR6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 377.19 mm): Global Label 'POOL1_IN_ADDR8'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 379.73 mm): Global Label 'POOL1_IN_ADDR10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 382.27 mm): Global Label 'POOL1_IN_ADDR12'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 384.81 mm): Global Label 'POOL1_MEM_WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 387.35 mm): Global Label 'POOL1_OUT_ADDR1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 389.89 mm): Global Label 'POOL1_OUT_ADDR3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 392.43 mm): Global Label 'POOL1_OUT_ADDR5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 394.97 mm): Global Label 'POOL1_OUT_ADDR7'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 425.45 mm): Global Label 'POOL1_OUT_ADDR9'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 427.99 mm): Global Label 'POOL1_OUT_ADDR11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 430.53 mm): Global Label 'POOL1_OUT_DATA1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 433.07 mm): Global Label 'POOL1_OUT_DATA3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 435.61 mm): Global Label 'POOL1_OUT_DATA5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 438.15 mm): Global Label 'POOL1_OUT_DATA7'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 440.69 mm): Global Label 'POOL2_IN_ADDR0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 443.23 mm): Global Label 'POOL2_IN_ADDR2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 445.77 mm): Global Label 'POOL2_IN_ADDR4'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 448.31 mm): Global Label 'POOL2_IN_ADDR6'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 450.85 mm): Global Label 'POOL2_IN_ADDR8'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 453.39 mm): Global Label 'POOL2_IN_ADDR10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 455.93 mm): Global Label 'POOL2_IN_ADDR12'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 485.14 mm): Global Label 'POOL2_MEM_WE'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 487.68 mm): Global Label 'POOL2_OUT_ADDR1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 490.22 mm): Global Label 'POOL2_OUT_ADDR3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 492.76 mm): Global Label 'POOL2_OUT_ADDR5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 495.30 mm): Global Label 'POOL2_OUT_ADDR7'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 497.84 mm): Global Label 'POOL2_OUT_ADDR9'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 500.38 mm): Global Label 'POOL2_OUT_ADDR11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 502.92 mm): Global Label 'POOL2_OUT_DATA1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 505.46 mm): Global Label 'POOL2_OUT_DATA3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 508.00 mm): Global Label 'POOL2_OUT_DATA5'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(66.04 mm, 510.54 mm): Global Label 'POOL2_OUT_DATA7'
+
+ ** ERC messages: 204  Errors 0  Warnings 204
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

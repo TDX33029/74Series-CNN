@@ -1,0 +1,27 @@
+COMMAND: python sim/gen_engine_tb.py
+ENGINE: conv1
+=== CONV1 ===
+Loop: oc(0..7) -> oy(0..23) -> ox(0..23) -> ky(0..4) -> kx(0..4), ic=0
+Expected MAC: 8*24*24*5*5 = 115200
+Golden MAC count: 115200
+PASS: CONV1 MAC count = 115200
+PASS: CONV1 points = 8*24*24 = 4608
+PASS: CONV1 IN_ADDR bounds 0..783 (got 0..783)
+PASS: CONV1 W_ADDR bounds 0..199 (got 0..199)
+PASS: CONV1 OUT_ADDR bounds 0..4607 (got 0..4607)
+PASS: CONV1 last MAC at oc=7,oy=23,ox=23,ky=4,kx=4
+PASS: CONV1 last addresses = (783,199,4607)
+PASS: CONV1 74HC161 counter model matches golden indices for all 115200 MACs
+PASS: CONV1 counters wrap to (oc,oy,ox,ky,kx)=0 after the final MAC
+NGSPICE COMMAND: python tools/ngspice_runner.py sim\tb_conv1_eng.cir
+ngspice load rc=0
+ngspice run rc=0
+SPICE samples: 115201 steps (expected 115200)
+PASS: conv1: SPICE produced at least 115200 MAC steps
+PASS: conv1: SPICE address sequence equals golden for every step
+conv1: golden address bounds IN 0..783, W 0..199, OUT 0..4607
+conv1: SPICE measured bounds IN 0..783, W 0..199, OUT 0..4607
+PASS: conv1: SPICE extrema equal golden extrema
+PASS: conv1: all addresses stay inside their documented ranges
+PASS: conv1: MAC count 115200 == 115200
+RESULT: PASS
