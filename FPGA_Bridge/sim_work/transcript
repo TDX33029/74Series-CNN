@@ -1,0 +1,41 @@
+# vsim -c tb_host_bridge -do "run -all; quit -f" 
+# Start time: 15:00:49 on Nov 08,2026
+# Loading work.tb_host_bridge
+# Loading work.host_bridge
+# Loading work.uart_rx
+# Loading work.uart_tx
+# Loading work.b12_port
+# run -all
+# === host_bridge testbench (CLK=16000000 Hz, baud 1000000) ===
+#   <- stat=00 len=8
+# PASS: PING status OK
+# PASS: PING length 8
+# PASS: PING payload
+#   <- stat=00 len=1
+# PASS: LOAD_IMAGE status OK
+# PASS: LOAD_IMAGE ack
+# PASS: image written to MEM_SEL=0
+# PASS: IMAGE_DONE_N latched IMAGE_READY
+#   <- stat=00 len=43
+# PASS: INFER status OK
+# PASS: INFER returns 40 score bytes + 3 status
+# PASS: score payload from MEM_SEL=6
+# PASS: argmax result byte
+# PASS: error code byte
+# PASS: flags: RESULT_VALID seen
+# PASS: flags: DONE seen
+#   <- stat=00 len=16
+# PASS: READ_MEM length
+# PASS: READ_MEM data
+#   <- stat=00 len=3
+# PASS: STATUS reply
+# PASS: STATUS: RESULT_VALID bit
+#   <- stat=01 len=0
+# PASS: bad CRC -> STAT=1
+# PASS: bad CRC reply has no payload
+# PASS: translator DIR matches WE/OE strobes
+# TB RESULT: PASS
+# ** Note: $finish    : ../tb_host_bridge.v(279)
+#    Time: 13303843750 ps  Iteration: 0  Instance: /tb_host_bridge
+# End time: 15:00:50 on Nov 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

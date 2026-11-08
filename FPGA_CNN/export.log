@@ -1,0 +1,10 @@
+D:\Document\tempPrj\74Series-CNN\FPGA_CNN\train_export.py:386: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  pred = model(torch.from_numpy(xte).float().unsqueeze(1) / 255.0).argmax(1)
+train (60000, 28, 28) test (10000, 28, 28)
+loaded D:\Document\tempPrj\74Series-CNN\FPGA_CNN\cnn28_fp32.pt
+activation maxima: {'conv1': 4.5065, 'conv2': 16.9376, 'fc1': 41.2694}
+float accuracy 0.9856
+int8  accuracy 0.9854  (delta -0.0002)
+per-class accuracy: {0: 0.995, 1: 0.995, 2: 0.984, 3: 0.987, 4: 0.987, 5: 0.989, 6: 0.983, 7: 0.988, 8: 0.976, 9: 0.969}
+exported to D:\Document\tempPrj\74Series-CNN\weights\x28: 15792 B model.bin, {'conv1_weight': 0, 'conv1_bias': 200, 'conv2_weight': 232, 'conv2_bias': 1384, 'fc1_weight': 1448, 'fc1_bias': 14248, 'fc2_weight': 14376, 'fc2_bias': 14696, 'qparams': 14736}
+exported 8 test vectors to D:\Document\tempPrj\74Series-CNN\weights\x28\vectors

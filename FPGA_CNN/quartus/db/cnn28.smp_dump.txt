@@ -1,0 +1,74 @@
+
+State Machine - |cnn28_top|txs
+Name txs.T_CRCH txs.T_CRCL txs.T_DATA txs.T_LENH txs.T_LENL txs.T_CODE txs.T_SOF1 txs.T_SOF0 
+txs.T_SOF0 0 0 0 0 0 0 0 0 
+txs.T_SOF1 0 0 0 0 0 0 1 1 
+txs.T_CODE 0 0 0 0 0 1 0 1 
+txs.T_LENL 0 0 0 0 1 0 0 1 
+txs.T_LENH 0 0 0 1 0 0 0 1 
+txs.T_DATA 0 0 1 0 0 0 0 1 
+txs.T_CRCL 0 1 0 0 0 0 0 1 
+txs.T_CRCH 1 0 0 0 0 0 0 1 
+
+State Machine - |cnn28_top|xs
+Name xs.X_WR2 xs.X_WRP xs.X_RDW2 xs.X_TX xs.X_FIN xs.X_WAIT xs.X_RDR xs.X_RDW xs.X_DISP xs.X_IDLE 
+xs.X_IDLE 0 0 0 0 0 0 0 0 0 0 
+xs.X_DISP 0 0 0 0 0 0 0 0 1 1 
+xs.X_RDW 0 0 0 0 0 0 0 1 0 1 
+xs.X_RDR 0 0 0 0 0 0 1 0 0 1 
+xs.X_WAIT 0 0 0 0 0 1 0 0 0 1 
+xs.X_FIN 0 0 0 0 1 0 0 0 0 1 
+xs.X_TX 0 0 0 1 0 0 0 0 0 1 
+xs.X_RDW2 0 0 1 0 0 0 0 0 0 1 
+xs.X_WRP 0 1 0 0 0 0 0 0 0 1 
+xs.X_WR2 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |cnn28_top|rxs
+Name rxs.R_CRCH rxs.R_CRCL rxs.R_DATA rxs.R_LENH rxs.R_LENL rxs.R_CMD rxs.R_SOF2 rxs.R_IDLE 
+rxs.R_IDLE 0 0 0 0 0 0 0 0 
+rxs.R_SOF2 0 0 0 0 0 0 1 1 
+rxs.R_CMD 0 0 0 0 0 1 0 1 
+rxs.R_LENL 0 0 0 0 1 0 0 1 
+rxs.R_LENH 0 0 0 1 0 0 0 1 
+rxs.R_DATA 0 0 1 0 0 0 0 1 
+rxs.R_CRCL 0 1 0 0 0 0 0 1 
+rxs.R_CRCH 1 0 0 0 0 0 0 1 
+
+State Machine - |cnn28_top|cnn28_core:u_core|st
+Name st.S_F2_SH st.S_F1_SH st.S_C2_SH st.S_C1_SH st.S_DONE st.S_AM st.S_F2_WR st.S_F2_MUL st.S_F2_REQ st.S_F2_TERM st.S_F2_SETUP st.S_F1_WR st.S_F1_MUL st.S_F1_REQ st.S_F1_TERM st.S_F1_SETUP st.S_P2 st.S_C2_WR st.S_C2_MUL st.S_C2_REQ st.S_C2_TERM st.S_C2_SETUP st.S_P1 st.S_C1_WR st.S_C1_MUL st.S_C1_REQ st.S_C1_TERM st.S_C1_SETUP st.S_IDLE 
+st.S_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+st.S_C1_SETUP 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+st.S_C1_TERM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+st.S_C1_REQ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+st.S_C1_MUL 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+st.S_C1_WR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+st.S_P1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+st.S_C2_SETUP 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+st.S_C2_TERM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+st.S_C2_REQ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+st.S_C2_MUL 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+st.S_C2_WR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+st.S_P2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_F1_SETUP 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_F1_TERM 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_F1_REQ 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_F1_MUL 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_F1_WR 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_F2_SETUP 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_F2_TERM 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_F2_REQ 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_F2_MUL 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_F2_WR 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_AM 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_DONE 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_C1_SH 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_C2_SH 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_F1_SH 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+st.S_F2_SH 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |cnn28_top|uart_rx:u_rx|st
+Name st.S_STOP st.S_DATA st.S_START st.S_IDLE 
+st.S_IDLE 0 0 0 0 
+st.S_START 0 0 1 1 
+st.S_DATA 0 1 0 1 
+st.S_STOP 1 0 0 1 

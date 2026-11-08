@@ -1,0 +1,115 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Document/tempPrj/74Series-CNN/FPGA_Bridge/sim_work
+vb12_port
+Z1 !s110 1794121249
+!i10b 1
+!s100 eR4LMa8CZ[4RRi61I6EaI0
+IGIcA2SeW_O3ZgkooJ[[N62
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1794121010
+8../b12_port.v
+F../b12_port.v
+L0 13
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1794121249.000000
+Z5 !s107 ../tb_host_bridge.v|../host_bridge.v|../b12_port.v|../uart_tx.v|../uart_rx.v|
+Z6 !s90 -quiet|../uart_rx.v|../uart_tx.v|../b12_port.v|../host_bridge.v|../tb_host_bridge.v|
+!i113 1
+Z7 o-quiet
+Z8 tCvgOpt 0
+vhost_bridge
+R1
+!i10b 1
+!s100 W>@cQ;IcLb:9TPek:KG@13
+I;LBjX6j5gDli;VLa8QVh22
+R2
+R0
+w1794121020
+8../host_bridge.v
+F../host_bridge.v
+L0 14
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+R8
+vtb_host_bridge
+R1
+!i10b 1
+!s100 6GHni:XzbT67YA>hoP@dK1
+IF_0QLXKbf4QK`Z4iCid9z1
+R2
+R0
+w1794121048
+8../tb_host_bridge.v
+F../tb_host_bridge.v
+L0 17
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+R8
+vuart_rx
+R1
+!i10b 1
+!s100 71YZO;bgQKIWY`2j;NfI52
+IGR_42WbSFgP<9UDEj0M[71
+R2
+R0
+w1794119749
+8../uart_rx.v
+F../uart_rx.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+R8
+vuart_tx
+R1
+!i10b 1
+!s100 f[6F;T[<^8;FkXKmif?oX1
+Ig4hZn7QDd?gn;:<UA?k@E0
+R2
+R0
+w1794119758
+8../uart_tx.v
+F../uart_tx.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+R8

@@ -1,0 +1,26 @@
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE10F17C8
+set_global_assignment -name TOP_LEVEL_ENTITY cnn28_top
+set_global_assignment -name VERILOG_FILE ../rtl/uart_rx.v
+set_global_assignment -name VERILOG_FILE ../rtl/uart_tx.v
+set_global_assignment -name VERILOG_FILE ../rtl/cnn28_core.v
+set_global_assignment -name VERILOG_FILE ../rtl/cnn28_top.v
+set_global_assignment -name SDC_FILE cnn28.sdc
+set_global_assignment -name OPTIMIZATION_MODE BALANCED
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Standard Edition"
+# --- bring-up defaults ------------------------------------------------------
+# Pins are intentionally left to the board's constraint file; until they are
+# assigned the fitter picks arbitrary locations (see cnn28.pin).
+# Keep reset from floating low on boards without a reset button.
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to rst_n
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED WITH WEAK PULL-UP"
+
+# --- board pins (set_pins.py) ---
+set_location_assignment PIN_E1 -to clk
+set_location_assignment PIN_B13 -to uart_rx
+set_location_assignment PIN_A13 -to uart_tx
+set_global_assignment -name VERILOG_MACRO "NO_EXT_RESET=1"
+set_parameter -name BAUD 921600
+# --- end board pins ---

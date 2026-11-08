@@ -1,0 +1,851 @@
+================================================================================
+74Series-CNN 变更记录（V3：Pool 总线闭环 + A/B 分流 + 24 片独立 LUT）
+日期：2026-11-07
+工程：D:/Document/tempPrj/74Series-CNN/Cache/CNN_74xx_System
+================================================================================
+
+一、本次变更的目标
+--------------------------------------------------------------------------------
+1. 补齐 S05 Pool 与共享存储系统之间缺失的总线控制和握手：
+   POOL_MEM_REQ / POOL_MEM_WE / POOL_MEM_nCE_IN / POOL_MEM_nCE_OUT /
+   POOL_BUSY_N，以及 MEM_ACK / MEM_DONE 握手。
+2. 修复 S07/S08/S09 三个引擎的 A/B 操作数通路：
+   - 原设计 A、B 两条流水都从 DATA[7:0] 进，LUT 实际算的是 x*x；
+   - 原设计 574 流水自由跑，S02 读等待 3 拍/写等待 2 拍期间继续移位，
+     操作数会错位。
+   按用户选择采用“方案 A”：A/B 输入锁存 + 8 级保持 mux，保留现有
+   KX/KY/ACC 计数器时序。
+3. 把所有 12 个 LUT_Mult_Unit 块符号展开为真实 27C512 封装。
+   按用户选择采用“每引擎 8 片、共 24 片独立 ROM”，不做 8 片共享。
+4. 同步更新本地 FSM、微码镜像、累加器清零方式、CONV1 padding、
+   测试、BOM、ERC 和文档。
+
+设计原则：不计规模消耗，稳定优先；所有跨页连接用 global_label；
+每个真实 IC 引脚必须接线、接电源或显式 NC。
+
+
+二、Pool 总线闭环（S05 + S11 + S04）
+--------------------------------------------------------------------------------
+2.1 S05 Pool（45 片 DIP，原 42）
+- 新增 5 个跨页输出：
+    POOL_MEM_REQ
+    POOL_MEM_WE
+    POOL_MEM_nCE_IN
+    POOL_MEM_nCE_OUT
+    POOL_BUSY_N
+- 新增 MEM_ACK / MEM_DONE 握手：
+    - 读事务：E_RD 等 MEM_ACK；收到后进入 E_CP。
+    - 写事务：E_WT 等 MEM_DONE；收到后按 LAST 决定 E_OUTLD 或 E_NEXT。
+    - 等待期间用 RD_HOLD / WT_HOLD / NEXT_HOLD 保持状态，不会丢拍。
+- 复用空闲门实现：
+    U43 74HC08：S_RD & MEM_ACK -> D_CP；WT_DONE & NV_LAST -> NEXT_VALUE；
+                 WT_DONE & V_LAST -> D_OUTLD；S_RD & NMEM_ACK -> RD_HOLD。
+    U44 74HC32：STEP | RD_HOLD -> D_RD_B；D_RD_A | D_RD_B -> D_RD；
+                 READ_PHASE | S_NEXT -> POOL_MEM_REQ_INT；
+                 S_OUTLD | NEXT_HOLD -> D_NEXT。
+    U45 74HC04：MEM_ACK->NMEM_ACK、MEM_DONE->NMEM_DONE、
+                 READ_PHASE->NREAD_PHASE、S_NEXT->NS_NEXT、
+                 BUSY_I->POOL_BUSY_N_INT。
+    U41c/d、U42b/c/d、U38d、U37a、U32a、U33b/c/d、U36c、U26–U28 重新分配。
+- U39 74HCT541 输出映射改为：
+    Y0 OUT_WE
+    Y1 POOL_DONE
+    Y2 POOL_BUSY
+    Y3 POOL_MEM_REQ
+    Y4 POOL_MEM_WE
+    Y5 POOL_MEM_nCE_IN
+    Y6 POOL_MEM_nCE_OUT
+    Y7 POOL_BUSY_N
+- 总线改名（全局）：
+    IN_ADDR*  -> POOL_IN_ADDR*
+    OUT_ADDR* -> POOL_OUT_ADDR*
+    OUT_DATA* -> POOL_OUT_DATA*
+
+2.2 S11 总线适配（14 片 DIP，原 12）
+- Pool 作为 master 5 接入 74HC148 主编码器：
+    I2 = POOL_BUSY_N（优先级低于 C1/C2/FC/Argmax）。
+- Map ROM 27C512 地址增加 A8 = POOL_SEL：
+    A[8:0] = {POOL_SEL, MASTER[2], FC_SEL, MASTER[1:0], REGION[2:0], 0}
+- 新增 U13 74HC157 第三级 region mux：
+    S = POOL_BUSY；
+    Pool 读：REGION=1（IN 窗口）；
+    Pool 写：REGION=2（OUT 窗口）。
+- REQ 合并：
+    REQ = C1_REQ | C2_REQ | FC_REQ | SCORE_RD | POOL_MEM_REQ
+- WE 合并：
+    WE = (C1_REQ & C1_WE) | (C2_REQ & C2_WE) | (FC_REQ & FC_WE)
+         | (POOL_MEM_REQ & POOL_MEM_WE)
+- Map ROM 新增 4 行：
+    0x090 -> MEM_SEL=1（Pool 读 IN）
+    0x094 -> MEM_SEL=2（Pool 写 OUT）
+    0x190 -> MEM_SEL=3（Pool 读 IN，POOL_SEL=1）
+    0x194 -> MEM_SEL=4（Pool 写 OUT，POOL_SEL=1）
+- 注意：新增 U13 原来放在 (430,230)，与 U10 74HC32 的引脚重叠，
+  导致 C1_MEM_REQ 被短接到 GND。已把 U13 移到 (700,230)，ERC 的
+  pin_to_pin / multiple_net_names 错误清零。
+
+2.3 S04 存储阵列（56 片 DIP，原 50）
+- 新增 5×74HCT541 + 1×74HC32：
+    U52/U53：Pool 读地址缓冲，输入 {3'b0, POOL_IN_ADDR[12:0]}，
+             输出 ADDR[15:0]，OE = POOL_BUSY_N | POOL_MEM_WE。
+    U54/U55：Pool 写地址缓冲，输入 {4'b0, POOL_OUT_ADDR[11:0]}，
+             输出 ADDR[15:0]，OE = POOL_MEM_nCE_OUT。
+    U56：Pool 写数据缓冲，A=POOL_OUT_DATA[7:0]，Y=DATA[7:0]，
+         OE = POOL_MEM_nCE_OUT。
+    U57 74HC32：POOL_BUSY_N | POOL_MEM_WE -> POOL_READ_OE。
+- 读/写地址缓冲 OE 互斥：
+    读：POOL_BUSY_N=0 且 POOL_MEM_WE=0；
+    写：POOL_MEM_nCE_OUT=0；
+    Pool 空闲时读缓冲关闭，不占用 ADDR。
+- Pool 数据只在写事务时由 U56 驱动 DATA[7:0]，其他时间高阻。
+
+2.4 Pool 验收
+- 顶层 ERC 0 error。
+- sim/pool PASS：10 个窗口 + 40 个地址检查。
+- 总线图：output/interconnect/pool_bus_path.png / .dot。
+- CSV 源标签已改为 S05.POOL_IN_ADDR / S05.POOL_OUT_ADDR /
+  S05.POOL_OUT_DATA。
+
+
+三、A/B 操作数分流（S07/S08/S09 共用模板）
+--------------------------------------------------------------------------------
+3.1 问题
+- 原代码：
+    e.reg574_pipeline([430 + lane * 50 ...], 170, DATA, A_ST)
+    e.reg574_pipeline([640 + lane * 50 ...], 170, DATA, B_ST)
+  A、B 都从 DATA 进，LUT 的 A/B 同源，PROD = x*x。
+- 原 574 的 Cp 直接接 CLK，没有保持/使能；S02 读等待 3 拍、写等待
+  2 拍期间流水线继续移位，操作数错位。
+- 另外，4 级流水每 4 个 MAC 累加一次时，如果 ACC_LD 与第 4 次
+  SHIFT 同拍，累加的是移位前的 4 个操作数；第一组会少一个、最后一组
+  会丢一个。必须把 ACC 放在 SHIFT 的下一拍（E_ACC）。
+
+3.2 新数据通路（每引擎）
+- A_LAT：1×74HCT574，D=DATA[7:0]，Cp=A_LOAD，Q=A_LAT0..7。
+- B_LAT：1×74HCT574，D=DATA[7:0]（CONV1 经 BZERO 零 mux），
+  Cp=B_LOAD，Q=B_LAT0..7。
+- 每操作数 4 级 74HCT574：
+    stage 0 D = hold mux 输出，Q = A0_0..7 / B0_0..7；
+    stage 1..3 同理。
+- 每级 2:1 保持 mux（2×74HC157/级，共 16×157/引擎）：
+    I0 = 本级 Q（保持）
+    I1 = 前一级 Q（移位）；stage 0 的 I1 = A_LAT/B_LAT
+    S  = SHIFT_EN
+    Z  = 本级 D
+- 效果：
+    SHIFT_EN=0：所有级保持，等待态不移位；
+    SHIFT_EN=1：A/B 同时移入，严格对齐；
+    PROD = A*B，不再 x*x。
+
+3.3 CONV1 padding（25 -> 28）
+- 25 个真实 MAC 不是 4 的倍数，最后一组只有 1 个真实 MAC。
+- 增加 3 个“零 B” MAC，共 28 = 7 组 × 4：
+    PAD 计数器：1×74HC161（Q0/Q1），
+                PAD_EN = MAC_EN & (PAD_ACTIVE | (KX_LAST & KY_LAST))。
+    PAD_ACTIVE = PAD0 | PAD1（74HC32）。
+    BZERO：2×74HC157，I0=DATA，I1=0，S=PAD_ACTIVE，
+           输出 B_LAT_D0..7 送 B_LAT 的 D 输入。
+    PAD_LAST = PAD0 & PAD1（74HC08），经 74HC74 打一拍得到
+              POINT_LAST，供 E_ACC 使用。
+- 权重布局保持不变：W_ADDR = oc*25 + ky*5 + kx，不需要改成每 oc 28 B，
+  也不需要重新生成权重 EEPROM。
+- CONV2 72、FC1 400、FC2 32 都是 4 的倍数，不需要 padding。
+
+3.4 累加器清零方式修正
+- 原设计：4×74HCT574 + 32 个 10 k 下拉，ACC_CLR 只把 574 输出置高阻；
+  574 内部仍保存旧值，ACC_CLR 撤销后旧值会重新驱动总线，下一轮
+  累加可能把旧值加回去。
+- 新设计：4×74HCT273，~MR = RESET_N & ACC_CLR_N（ACC_MR_N）。
+  273 的异步 master reset 真正清零寄存器；删除 32 个 10 k 下拉。
+- ACC_CLR_N 由 ROM1 D7 产生，仅在 E_NEXT 为 0（低有效）。
+
+3.5 本地 FSM 扩展（11 -> 13 状态）
+状态编码：
+    0  E_RESET
+    1  E_IDLE
+    2  E_ADDR_IN
+    3  E_WAIT_A
+    4  E_ADDR_W
+    5  E_WAIT_B
+    6  E_SHIFT
+    7  E_ACC
+    8  E_REQ
+    9  E_ADDR_OUT
+    10 E_WRITE
+    11 E_NEXT
+    12 E_DONE
+
+状态转移：
+    E_RESET -> E_IDLE
+    E_IDLE: START ? E_ADDR_IN : E_IDLE
+    E_ADDR_IN -> E_WAIT_A
+    E_WAIT_A: MEM_ACK ? E_ADDR_W : E_WAIT_A
+    E_ADDR_W -> E_WAIT_B
+    E_WAIT_B: MEM_ACK ? E_SHIFT : E_WAIT_B
+    E_SHIFT -> E_ACC
+    E_ACC: POINT_LAST ? E_REQ : E_ADDR_IN
+    E_REQ: REQ_DONE ? E_ADDR_OUT : E_REQ
+    E_ADDR_OUT -> E_WRITE
+    E_WRITE: MEM_DONE ? E_NEXT : E_WRITE
+    E_NEXT: IMAGE_LAST ? E_DONE : E_ADDR_IN
+    E_DONE -> E_IDLE
+
+每 MAC 的节拍：
+    E_ADDR_IN  发 IN 地址 + MEM_REQ
+    E_WAIT_A   等 MEM_ACK，A_LOAD 打 A_LAT
+    E_ADDR_W   发 W 地址 + MEM_REQ
+    E_WAIT_B   等 MEM_ACK，B_LOAD 打 B_LAT
+    E_SHIFT    SHIFT_EN=1，MAC_EN=1（KX/KY 计数）
+    E_ACC      ACC_EN=1；每第 4 个 ACC_EN 产生 ACC_LD
+    （循环，直到 POINT_LAST）
+    E_REQ      发 REQ_START，等 REQ_DONE
+    E_ADDR_OUT 发 OUT 地址 + MEM_REQ + MEM_WE
+    E_WRITE    等 MEM_DONE
+    E_NEXT     ACC_CLR_N=0、OUT_STB=1；IMAGE_LAST ? E_DONE : 下一输出点
+    E_DONE     发 *_DONE
+
+3.6 FSM 微码 ROM
+- 2×27C512/引擎（ROM1 下一状态+标志，ROM2 控制字）。
+- ROM 地址：
+    A0..A4  = ST[4:0]
+    A5      = START_S（C1_START / C2_START / START_ANY）
+    A6      = POINT_LAST
+    A7      = MEM_ACK
+    A8      = MEM_DONE
+    A9      = REQ_DONE
+    A10     = IMAGE_LAST
+    A11     = FC_SEL（仅 S09；S07/S08 接地）
+    A12..A15 未用，接地
+- ROM1 数据：
+    D0..D4 下一状态
+    D5     BUSY
+    D6     DONE
+    D7     ACC_CLR_N（低有效，仅 E_NEXT=0）
+- ROM2 数据：
+    D0     MAC_EN
+    D1     MEM_REQ
+    D2     MEM_WE
+    D3     OUT_STB（S09 不用，QSTB 直接驱动字节计数器）
+    D4     ADD_SEL0
+    D5     ADD_SEL1
+    D6/D7  0
+- 状态译码：
+    74HC138 #1（ST[2:0]，E2=+5V）：
+        Y0 LOOP_CLR_N
+        Y3 WAIT_A_N
+        Y5 WAIT_B_N
+        Y6 SHIFT_N
+        Y7 ACC_N
+    74HC138 #2（ST[2:0]，E2=ST3）：
+        Y0 REQ_START_N（状态 8）
+- 组合：
+    WAIT_A = ~WAIT_A_N；WAIT_B = ~WAIT_B_N；
+    SHIFT_EN = ~SHIFT_N；ACC_EN = ~ACC_N；
+    REQ_START = ~REQ_START_N；
+    A_LOAD = WAIT_A & MEM_ACK；
+    B_LOAD = WAIT_B & MEM_ACK。
+- lane 计数器：
+    74HC161，CEP=CET=ACC_EN，~PE = NAND(LANE0, LANE1)，
+    D=0；第 4 个 ACC_EN 同步装 0。
+    ACC_LD = ACC_EN & LANE0 & LANE1。
+- POINT_LAST：
+    C1：PAD_LAST 经 74HC74 打一拍。
+    C2：KX_LAST & KY_LAST & IC_LAST 经 74HC74 打一拍。
+    FC：INDEX_LAST 经 74HC74 打一拍。
+- IMAGE_LAST：
+    C1/C2：SP_LAST（E_NEXT 时 SP 正好是最后一个输出点）。
+    FC：LAST_POINT 置位、下一次 START 清除的保持标志。
+- 微码镜像：
+    model/microcode/c1_rom1.bin, c1_rom2.bin
+    model/microcode/c2_rom1.bin, c2_rom2.bin
+    model/microcode/fc_rom1.bin, fc_rom2.bin
+    各 65536 字节；生成器 tools/gen_engine_microcode.py 自带分支自检。
+
+3.7 芯片增量（每引擎）
+- 新增：
+    2×74HCT574（A_LAT/B_LAT）
+    16×74HC157（4 级 × 2 操作数 × 2 片）
+    1×74HC74（POINT_LAST 打拍）
+    C1 另加：1×74HC161（PAD）、2×74HC157（BZERO）、1×74HC08（PAD_LAST）、
+             1×74HC32（PAD_ACTIVE）、1×74HC08（PAD_EN）
+    FC 另加：1×74HC08、1×74HC32、1×74HC04（IMAGE_LAST 保持）
+- 替换：
+    4×74HCT574 累加器 -> 4×74HCT273
+- 删除：
+    32 个 10 k 下拉/引擎
+- 每引擎 DIP：
+    S07 143、S08 144、S09 132（测试点等非 DIP 不计入）。
+
+3.8 A/B 验收
+- 新增 sim/harness_ab_path.py：
+    - 81 项结构检查：A/B 锁存 D/Cp、保持 mux 的 I0/I1/S/Z、
+      LUT ROM A[7:0]=B、A[15:8]=A、PAD mux、FSM ROM 地址位。
+    - 行为模型：随机等待态下流水线只在 SHIFT_EN 时移动；
+      4-MAC 分组覆盖每个真实 MAC 恰好一次。
+      覆盖 CONV1 25+3、CONV2 72、FC1 400、FC2 32。
+- sim/run_all.py 12/12 PASS（新增 ab_path）。
+- sim/conv_fc_engines 地址序列仍 PASS。
+
+
+四、LUT 物理展开（24 片独立 27C512）
+--------------------------------------------------------------------------------
+4.1 结构
+- 每个引擎 4 条 lane，每条 lane 2 片 27C512：
+    低字节 ROM：D0..D7 = PROD[7:0]
+    高字节 ROM：D0..D7 = PROD[8..15]
+- 地址：
+    A0..A7  = B 操作数（B lane 的 8 位）
+    A8..A15 = A 操作数（A lane 的 8 位）
+  与 model/lut/lut_lo.bin、lut_hi.bin 的 (a<<8)|b 地址一致。
+- ~CE、~OE 接地；16 位地址全部使用。
+- 流水线 574 的输出直接作为 ROM 地址；保持 mux 保证地址在等待态稳定。
+  不再需要 LUT_AB_LATCH / LUT_PROD_LATCH 块内锁存。
+- 每个 ROM 旁预留 100 nF 去耦位（S07/S08/S09 图纸上以 C7xxx/C8xxx/
+  C9xxx 形式给出；BOM 计入电容）。
+- 24 片 ROM 全部独立，不做三引擎共享；符合“不计规模、稳定优先”。
+
+4.2 图纸位置
+- 每引擎 LUT ROM 列放在 x=1100，lane 0..3 的 y=40/180/320/460，
+  低字节在 y，高字节在 y+70。
+- 这样与 A/B 保持 mux（y=115/150）和 ACC（y=270..450）错开，
+  避免 27C512 长符号与 157 引脚重叠。
+
+4.3 BOM
+- LUT_Mult_Unit 块符号：12 -> 0。
+- 27C512：原 S04 8 片 + S01 2 片 + S02 1 片 + S11 1 片 = 12 片；
+  新增 24 片 LUT + 6 片本地微码 = 42 片。
+- 原 S04 的 8 片共享 LUT ROM 仍保留在 S04，但引擎已不通过
+  *_MEM_nCE_MC 访问它们，属于备用/后续降本路径。
+
+
+五、重新构建与验证结果
+--------------------------------------------------------------------------------
+5.1 重建顺序
+    cd D:/Document/tempPrj/74Series-CNN/Cache/CNN_74xx_System/tools
+    python build_conv1.py
+    python build_conv2.py
+    python build_fc.py
+    python build_bus.py
+    python build_pool.py
+    python build_memories.py
+    python gen_bus_map.py
+    cd ..
+    python tools/renumber_refs.py
+    python tools/strip_pwr_flags.py
+    python tools/build_top.py
+    "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe" sch erc \
+        --severity-all --output output/top-erc-simple.rpt \
+        CNN_74xx_System.kicad_sch
+    "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe" sch export bom \
+        -o output/bom/CNN_74xx_System_BOM.csv CNN_74xx_System.kicad_sch
+    python sim/run_all.py
+
+5.2 结果
+- 顶层 ERC：0 errors / 1043 warnings。
+  警告主要是：
+    - 74HC 别名符号与 KiCad 库版本差异（lib_symbol_mismatch）；
+    - 未放置的备用门单元（missing_unit / missing_input_pin）；
+    - 测试点单端标签（isolated_pin_label）；
+    - 少量未连接线端（unconnected_wire_endpoint）。
+  没有 pin_to_pin、multiple_net_names、输出冲突或电源短路。
+- sim/run_all.py：12/12 PASS。
+    lut_contents      65536 项，errors=0
+    lut_spice         8 组代表操作数
+    glue              11/11
+    supervisor        0->1->...->18->2
+    timing            读/写协议
+    mem_decode        323 checks / 20000 随机向量
+    pool              10 窗口 + 40 地址
+    argmax            5 向量（并列/边界）
+    argmax_s12        四字节 40 地址/ACK/DONE + S12 四 lane
+    ab_path           81 结构检查 + 流水线/4-MAC 分组模型
+    conv_fc_engines   CONV1/2 115200 MAC，FC 13120 MAC
+    requant_simple    5000×3 随机 clamp + FC2 字节序 + 结构/跨页/BOM/ERC
+- BOM：1019 件 / 681 片 DIP / 0 个块符号。
+    S01 26、S02 11、S04 56、S05 45、S06 45、
+    S07 143、S08 144、S09 132、S10 9、S11 14、S12 6、
+    S13 13、S15 13、S17 24。
+- 顶层未展开总线：0。
+- 单节点模块网：
+    ARGMAX_RESULT_VALID（S06 测试点，建议后续改名 TP_*）
+    OUT_WE（S05 预留，当前未使用）
+  POOL_BUSY 已接入 S11，不再单节点。
+- 新增/更新的测试：
+    sim/harness_ab_path.py（新）
+    sim/harness_argmax_s12.py（S04 位号从 U4050/U4051 更新为 U4049/U4050）
+    sim/gen_requant_simple_tb.py（BOM 期望 681 DIP / 1019 件 / 0 LUT 块）
+    sim/run_all.py（加入 ab_path）
+
+5.3 文档与 PDF
+- docs/FINAL_STATUS.md：新增 3.1 节，更新 DIP/BOM/ERC/测试数。
+- docs/INTEGRATION_NOTES.md：新增 5.1 节，更新 BOM/ERC/审计。
+- docs/HW_MANUAL.md：更新 12/12、1043W、1019/681、0 LUT 块。
+- docs/INTERCONNECT_PLAN.md：新增第 9 节“实施结果（2026-11-07）”。
+- output/interconnect/interconnect_plan.csv：Pool 源标签改为 S05.POOL_*。
+- output/pdf/ 下重新生成：
+    CNN_74xx_System.pdf
+    HW_MANUAL.pdf
+    CNN_74xx_Review_Package.pdf（177 页，32 书签）
+    各模块 PDF（S01..S17、S_LUT_Mult_1）
+- output/bom/CNN_74xx_System_BOM.csv 重新导出。
+- output/top-erc-simple.rpt 重新生成。
+
+
+六、已知限制与后续建议
+--------------------------------------------------------------------------------
+1. FC2 四字节输出（重要，流片前必须处理）
+   - S17 的 FC_REQ_QSTB 在 BC=0..3 是 4 拍电平，不是 4 个单拍脉冲。
+   - S09 只有一个 OUTHOLD 字节寄存器，4 拍内只保留最后一字节；
+     当前 FSM 在 REQ_DONE（BC=3）后只写一次，地址 BYTE 已回绕。
+   - 影响：FC2 的 4 字节 signed32 分数只写回最后一字节，Argmax 读到
+     的 FC2 分数不完整。
+   - 建议方案（二选一）：
+     a) S09 增加 4×74HCT574 字节暂存 + 4 个写状态（BYTE=0..3），
+        每个字节等一次 MEM_DONE；
+     b) S17 改成 4 个单拍 QSTB（BC=0..3 各一拍），S09 每收到一个
+        QSTB 就发一次写事务并等 MEM_DONE，再让 S17 进入下一字节。
+   - 本次未改，因为用户本轮要求聚焦 Pool、A/B 和 LUT；该项不影响
+     FC1、CONV1、CONV2、Argmax 的现有验证。
+
+2. S04 的 8 片共享 LUT ROM
+   - 引擎已改为私有 24 片 LUT，S04 的 U4020..U4027 目前未被访问。
+   - 保留为备用/降本路径；若确认不用，可在下一版删除并同步
+     gen_bus_map.py 的 MC 区域。
+
+3. 单节点测试点
+   - ARGMAX_RESULT_VALID 建议改名为 TP_ARGMAX_RESULT_VALID，避免
+     与功能网混淆。
+   - OUT_WE 是 S05 预留输出，当前未使用；可接测试点或删除。
+
+4. 每引擎 100 nF 去耦
+   - 本次只在 LUT ROM 旁补了去耦位；S07/S08/S09 的 74HC 芯片仍按
+     “S10 电源入口统一 bank”处理，未逐片画 100 nF。
+   - 若 PCB 评审要求逐片去耦，需要在三个引擎图纸上补 143/144/132
+     个电容位，BOM 会增加相应数量。
+
+5. 单页 ERC
+   - 单独打开子图时，外部输入未驱动会产生 error；这是层次设计的
+     预期行为，顶层 0 error 才是验收口径。
+
+
+七、关键文件清单
+--------------------------------------------------------------------------------
+修改的构建器：
+    tools/build_pool.py
+    tools/build_bus.py
+    tools/build_memories.py
+    tools/gen_bus_map.py
+    tools/build_conv1.py
+    tools/build_conv2.py
+    tools/build_fc.py
+    tools/renumber_refs.py
+新增的构建/生成器：
+    tools/gen_engine_microcode.py
+新增的测试：
+    sim/harness_ab_path.py
+修改的测试：
+    sim/harness_argmax_s12.py
+    sim/gen_requant_simple_tb.py
+    sim/run_all.py
+重新生成的图纸：
+    S04_Memories.kicad_sch
+    S05_Pool.kicad_sch
+    S07_Conv1.kicad_sch
+    S08_Conv2.kicad_sch
+    S09_FC.kicad_sch
+    S11_BusFabric.kicad_sch
+    CNN_74xx_System.kicad_sch
+新增的微码镜像：
+    model/microcode/c1_rom1.bin / c1_rom2.bin
+    model/microcode/c2_rom1.bin / c2_rom2.bin
+    model/microcode/fc_rom1.bin / fc_rom2.bin
+    model/microcode/c1_rom1.hex / ...（同名 .hex）
+更新的文档：
+    docs/FINAL_STATUS.md
+    docs/INTEGRATION_NOTES.md
+    docs/HW_MANUAL.md
+    docs/INTERCONNECT_PLAN.md
+    output/interconnect/interconnect_plan.csv
+更新的输出：
+    output/top-erc-simple.rpt
+    output/bom/CNN_74xx_System_BOM.csv
+    output/pdf/CNN_74xx_System.pdf
+    output/pdf/HW_MANUAL.pdf
+    output/pdf/CNN_74xx_Review_Package.pdf
+    output/pdf/S01..S17、S_LUT_Mult_1.pdf
+
+
+八、结论
+--------------------------------------------------------------------------------
+- Pool 读/写路径已闭环：S05 有完整 REQ/WE/nCE/BUSY 和 ACK/DONE 握手，
+  S11 把 Pool 作为 master 5 映射到 IN/OUT 窗口，S04 有独立地址/数据缓冲。
+- S07/S08/S09 的 A/B 已分流，PROD=A*B；等待态流水线保持；CONV1 25 MAC
+  通过 3 个零 B MAC 补齐到 28；累加器改用 273 真正清零。
+- 12 个 LUT_Mult_Unit 块已全部展开为 24 片独立 27C512；BOM 无块符号。
+- 顶层 ERC 0 error；sim/run_all.py 12/12 PASS；BOM 1019 件 / 681 DIP。
+- 剩余最重要的未关闭项是 FC2 四字节写回；建议下一轮优先处理。
+
+================================================================================
+
+九、背板 2x20P 连接器（2026-11-07 追加）
+--------------------------------------------------------------------------------
+9.1 需求
+- 每张模块原理图增加 2x20P 背板排针，用于连接底板、实现不同板卡互联。
+- 电源脚统一：4×5V + 4×3.3V + 6×GND。
+- 其余数据脚位置由本进程分配；底板由用户设计。
+
+9.2 连接器数量：为什么不是每张图只有一片
+- 2x20P 共 40 脚，扣除 14 个电源脚后只有 26 个信号脚。
+- 本项目跨模块网络共 375 个；单板跨模块网络数如下：
+    S01 37、S02 10、S04 151、S05 57、S06 52、S07 89、S08 89、S09 92、
+    S10 59、S11 55、S12 51、S13 39、S15 38、S17 48。
+- 因此每张图至少放 J1；超过 26 个信号的图增加 J2..Jn。
+  所有排针使用完全相同的电源脚定义。
+- 实际数量（40 片 2x20P）：
+    S01 2、S02 1、S04 6、S05 3、S06 2、S07 4、S08 4、S09 4、
+    S10 3、S11 3、S12 2、S13 2、S15 2、S17 2。
+- 如果必须“每块板只有一片 2x20P”，需要先把 S07+S13、S08+S15、
+  S09+S17 等合并到同一 PCB，或改用更宽的连接器；当前按“所有跨模块
+  信号都上背板”实现，所以大板有多片。
+
+9.3 统一引脚定义（40 片排针完全一致）
+    脚 1..4    +5V
+    脚 5..8    +3V3（预留；当前逻辑全部 5V）
+    脚 9..14   GND
+    脚 15..40  信号（每片 26 个）
+- 每片排针的 1..14 脚都接电源，任意一片都可以给板卡供电；
+  底板可以并联供电，也可以只经 J1 供电。
+- 未使用的信号脚显式 no_connect，不悬空。
+
+9.4 信号分配规则
+- 按功能排序，保证同一总线尽量连续：
+    CLK/RESET
+    → 系统状态（START/BUSY/DONE/ERROR/ERROR_CODE/IMAGE_*/MODEL_*/RESULT*）
+    → 阶段 START/DONE（C1/C2/FC1/FC2/P1/P2/ARGMAX、FC_SEL、POOL_SEL）
+    → DATA/ADDR/MEM_nCE/nOE/nWE/MEM_ACK/DONE/BUSY/REQ/WE
+    → LOAD_*/MEM_SEL*
+    → C1_* → C2_* → FC_* → POOL_*/IN_DATA* → SCORE_*/ARGMAX_* → 其他
+- 每片排针承载该板 26 个连续信号。
+- 因为按板分配，同一网络在不同板上的引脚号可能不同；底板按
+  output/backplane/backplane_pinout.csv 逐槽布线。
+- 如果需要“同一网络在同一引脚”的总线式底板，需要再做一次全局
+  引脚映射；当前未做，用户明确允许数据脚任意位置。
+
+9.5 实现
+- 新增 tools/backplane.py：
+    - 自动收集本页所有 global_label，排除 +5V/GND/+3V3；
+    - 按 9.4 的功能顺序排序，每 26 个一组；
+    - 放置 Connector_Generic:Conn_02x20_Odd_Even，Value=BACKPLANE，
+      Footprint=Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical；
+    - 1..14 脚接电源全局标签，15..40 脚接信号；多余脚 no_connect；
+    - 排针放在现有内容右侧 40 mm 的独立列，y 从 60 mm 开始，间距 60 mm；
+    - 自动把图纸改为 User 尺寸，保证排针和标签在边框内。
+- 新增 tools/gen_backplane_csv.py：
+    从 output/top.net 读取最终位号和引脚网络，生成权威引脚表。
+- 12 个构建脚本全部在写图前调用 place_backplane：
+    build_supervisor.py、build_timing.py、build_memories.py、
+    build_pool.py、build_argmax.py、build_conv1.py、build_conv2.py、
+    build_fc.py、build_top_io.py、build_bus.py、build_s12.py、
+    build_requant_simple.py。
+- tools/kicad_gen.py：
+    default_registry() 增加 Connector_Generic 库；
+    sym-lib-table 增加 Connector_Generic。
+- tools/build_top.py：
+    根图增加 +3V3 PWR_FLAG（FLG2），PWR_FLAG 由 2 个变为 3 个
+    （+5V、+3V3、GND）。
+- 保留原有连接器：
+    S04 的 J1（2x12 加载口）保留，背板排针从 J4002 开始；
+    S10 的 J1..J7 保留，背板排针从 J10008 开始。
+- 位号经 renumber_refs.py 统一到各页块：
+    S01 J1001..J1002、S02 J2001、S04 J4002..J4007、
+    S05 J5001..J5003、S06 J6001..J6002、S07 J7001..J7004、
+    S08 J8001..J8004、S09 J9001..J9004、S10 J10008..J10010、
+    S11 J12001..J12003、S12 J13001..J13002、
+    S13 J14001..J14002、S15 J15001..J15002、S17 J16001..J16002。
+
+9.6 生成的文件
+- output/backplane/backplane_pinout.csv
+    40 片 × 40 脚 = 1600 行；字段 sheet, connector, pin, net, role。
+- output/backplane/backplane_summary.csv
+    每板排针数、信号脚数。
+- output/backplane/backplane_nets.csv
+    网络视角：每个跨模块网络的（板、排针、脚）列表，供底板逐网布线。
+- output/backplane/<sheet>_backplane.csv
+    构建时的局部引脚表（未重编号的 J1..Jn，便于对照构建脚本）。
+
+9.7 验证结果
+- 40 片排针全部 40 脚齐全。
+- 电源脚检查：40 片排针的 1..4=+5V、5..8=+3V3、9..14=GND，
+  0 个不一致。
+- 14 张模块图的所有非电源 global_label 都出现在本板排针信号脚上，
+  无遗漏、无多余：
+    S01 37/37、S02 10/10、S04 151/151、S05 57/57、S06 52/52、
+    S07 89/89、S08 89/89、S09 92/92、S10 59/59、S11 55/55、
+    S12 51/51、S13 39/39、S15 38/38、S17 48/48。
+- 顶层 ERC：0 error / 1041 warning（原 1043 warning，减少 2）。
+- BOM：1060 件 = 原 1019 + 40 片 2x20P + 1 个 +3V3 PWR_FLAG；
+  681 片 DIP 不变；BACKPLANE 排针 40 片。
+- sim/run_all.py：12/12 PASS。
+  sim/gen_requant_simple_tb.py 增加 “40 BACKPLANE headers” 检查；
+  sim/harness_argmax_s12.py 的 S06 位号按本次重建更新为
+  U6042/U6043/U6045。
+- 图纸尺寸改为 User，例如：
+    S04 1020×812 mm、S07 1275×841 mm、S09 1275×855 mm、
+    S12 606×420 mm、S17 888×792 mm；
+  原有电路保持在左侧，背板排针列在右侧，不重叠。
+
+9.8 已知限制
+- 当前是“每板任意引脚”的点对点背板方案，不是“同一网络同一引脚”的
+  总线式背板；底板需要按 CSV 逐槽布线。
+- 3.3V 目前没有负载，只作为背板预留；如果后续加入 3.3V 器件，需要
+  在对应板卡上增加 5V→3.3V 或由底板直接供电。
+- 大板（S04 6 片、S07/S08/S09 4 片）排针数量较多；如果希望减少，
+  需要合并板卡或改用更宽的连接器。
+
+================================================================================
+
+十、更新后的总结
+--------------------------------------------------------------------------------
+- Pool、A/B 分流、24 片独立 LUT 均已完成并验证。
+- 14 张模块图全部增加 2x20P 背板排针，共 40 片；电源脚统一为
+  4×5V + 4×3.3V + 6×GND，信号脚按功能顺序分配。
+- 顶层 ERC 0 error；sim/run_all.py 12/12 PASS；
+  BOM 1060 件 / 681 DIP / 40 片 BACKPLANE。
+- 背板引脚表：output/backplane/backplane_pinout.csv。
+- 仍未关闭的最重要项：FC2 四字节写回；建议下一轮优先处理。
+
+================================================================================
+
+================================================================================
+
+十一、方案 A：12 板卡化（2026-11-07，取代第九/十节的 14 模块 40 排针方案）
+--------------------------------------------------------------------------------
+
+11.1 目标
+- 不再让同一张模块图在不同阶段复用（S05 同时做 POOL1/POOL2、S09 同时做
+  FC1/FC2、S17 同时做 FC1/FC2 的 Requant）。
+- 改成 12 张具体板卡：CONV1 板、POOL1 板、FC1 板……每板固定功能，插在
+  无源底板上；底板由用户用飞线实现，本次只给出板卡与连接器。
+
+11.2 板卡划分
+| 板卡 | 名称 | 图页 | 对外网络 | 2x20P |
+|---|---|---|---|---|
+| B01 | SUPERVISOR | S01 | 37 | 2 |
+| B02 | TIMING | S02 | 10 | 1 |
+| B03 | MEMORY | S04 | 204 | 8 |
+| B04 | CONV1 | S07 + S13 | 43 | 2 |
+| B05 | POOL1 | S05_Pool1 + S12A_PoolLatch1 | 53 | 3 |
+| B06 | CONV2 | S08 + S15 | 43 | 2 |
+| B07 | POOL2 | S05_Pool2 + S12A_PoolLatch2 | 53 | 3 |
+| B08 | FC1 | S09_FC1 + S17_FC1 | 43 | 2 |
+| B09 | FC2 | S09_FC2 + S17_FC2 | 44 | 2 |
+| B10 | ARGMAX | S06 + S12B_ScoreLatch | 26 | 1 |
+| B11 | BUSFAB | S11 + S11A_EngineMerge | 72 | 3 |
+| B12 | HOSTIO | S10 | 59 | 3 |
+
+11.3 引擎变体（templates/ -> 根目录）
+- build_pool.py 写 templates/S05_Pool.kicad_sch；
+  build_fc.py 写 templates/S09_FC.kicad_sch；
+  build_requant_simple.py 写 templates/S17_Requant_FC.kicad_sch。
+- make_variants.py 从模板生成 6 份变体，只改 global_label 名称、UUID 和标题，
+  电路与位号不变：
+    S05_Pool1：POOL_SEL=GND，P2_START=GND，P2_DONE->POOL1_P2_DONE_NC，
+               POOL_*->POOL1_*，IN_DATA*->IN_DATA1*
+    S05_Pool2：POOL_SEL=+5V，P1_START=GND，P1_DONE->POOL2_P1_DONE_NC，
+               POOL_*->POOL2_*，IN_DATA*->IN_DATA2*
+    S09_FC1：FC_SEL=GND，FC2_START=GND，FC2_DONE->FC1_FC2_DONE_NC，
+             FC_*->FC1_*
+    S09_FC2：FC_SEL=+5V，FC1_START=GND，FC1_DONE->FC2_FC1_DONE_NC，
+             FC_*->FC2_*
+    S17_FC1/FC2：FC_SEL 固定 0/1，FC_*->FC1_*/FC2_*
+- 未用的 DONE 输出改成 *_NC 单节点，避免两份变体同时驱动 FC1_DONE/
+  FC2_DONE/P1_DONE/P2_DONE。
+- 修复：make_variants.py 最初替换 title 时多写一个右括号，导致 6 份变体
+  在 KiCad 里加载失败、网表静默漏掉这些页；已修正并用
+  kicad_sexpr.parse 做括号平衡检查。网表元件数从 815 恢复到 1329。
+
+11.4 S12 拆分
+- 原 S12_DataAssembly 合并了 Pool 字节缓冲和 Argmax 32 位锁存。
+- 新 S12A_PoolLatch1/2：各 1 片 74HCT541，DATA[7:0] -> IN_DATA1/2[7:0]，
+  分别放在 B05/B07。
+- 新 S12B_ScoreLatch：4×74HCT574 + 74HC238 + 4 个测试点，DATA[7:0] ->
+  SCORE_DATA[31:0]，SCORE_ADDR[1:0]/MEM_ACK 译码，放在 B10。
+- 旧合并页移入 legacy/S12_DataAssembly.kicad_sch；build_s12.py 也改为写
+  legacy/，不再参与构建。
+
+11.5 S11A_EngineMerge（B11）
+- S11 本体（74HC148 master/region、74HC157 区域 mux、27C512 map ROM、
+  REQ/WE 合并）保持原样，不因板卡化重画。
+- S11A 用 5 片 74HC157，选择端 FC2_BUSY / POOL2_BUSY：
+    FC1_*/FC2_*   -> FC_*    （6 个 nCE + REQ + WE + BUSY_N）
+    POOL1_*/POOL2_* -> POOL_*（nCE_IN/OUT + REQ + WE + BUSY/BUSY_N）
+- 为什么用 mux 而不是 OR/AND：引擎 74HC138 只由共享 MEM_nCE 限定，空闲
+  引擎在别的引擎访问期间仍会输出一个区域码；直接按位合并会把访问映射到
+  错误存储窗口。mux 只取正在运行的那一份，且不需要改已验证的引擎图。
+- 同一对引擎由 S01 串行调度，BUSY 在整个事务期间稳定，选择不会中途变化。
+
+11.6 S04 的复制缓冲
+- FC1 地址缓冲沿用 U48/U49；新增 FC2 一对 U58/U59，OE=FC2_BUSY_N，
+  输入 FC2_ADDR[15:0]。
+- POOL1 组沿用 U52..U57（改名 POOL1_*）；新增 POOL2 组 U60..U65
+  （5 片 541 + 1 片 74HC32，OE=POOL2_BUSY_N/POOL2_MEM_nCE_OUT）。
+- 所有组仍是三方态合并到 ADDR[15:0]/DATA[7:0]，靠各引擎 BUSY/写使能互斥；
+  S01 串行化阶段，任意时刻只有一组使能。
+
+11.7 连接器与网表
+- build_boards.py 按“同一网络出现在两块以上板卡”自动计算每板外部网表：
+  板内网络（C1/C2/FC1/FC2 的 ACC+REQ、IN_DATA1/2、SCORE_DATA）自动排除。
+- 每板生成 Bxx_Conn.kicad_sch，排针电源脚仍固定
+  1-4 +5V、5-8 +3V3、9-14 GND、15-40 信号。
+- 共 32 片 2x20P、1280 脚、687 个信号端点、282 个跨板网络。
+- output/backplane/backplane_pinout.csv 由 top.net 重新生成；
+  output/boards/backplane_nets.csv 给出“网络 -> 板卡”矩阵；
+  output/boards/BOARD_MANIFEST.csv 给出“板卡 -> 图页 -> 网络数/排针数”。
+- 顶层 S00：32 张图页按 12 个板卡框排布（4×3），框内是模块图 + 连接器页；
+  底部为板卡表，根图保留 +5V/+3V3/GND 三个 PWR_FLAG。
+
+11.8 位号
+- renumber_refs.py 新增块：
+    S05_Pool2 5100、S09_FC2 9200、S11A 12500、S12A1 13000、S12A2 13100、
+    S12B 13200、S17_FC2 16200、B01..B12 连接器 20000..21100。
+- 例：B03 排针 J20201..J20208；S12B 的 238 为 U13205。
+- 旧共享页 S05/S09/S17 与 S12 已移入 legacy/，不参与位号分配。
+
+11.9 验证结果（2026-11-07）
+- 顶层 ERC：0 errors / 1407 warnings（警告均为库符号版本差异、未用门、
+  单端测试点标签；无重复驱动/短路/输出冲突）。
+- BOM：1329 件；896 片 DIP IC/存储器；32 片 BACKPLANE；0 个块符号。
+  分板 DIP：B01 26、B02 11、B03 64、B04 156、B05 46、B06 157、B07 46、
+  B08 156、B09 156、B10 50、B11 19、B12 9。
+- sim/run_all.py：13/13 PASS（新增 sim/check_backplane.py）。
+  harness_argmax_s12.py 更新为 S12B 位号（U13201/U13204/U13205）和
+  新的层次网名（/B10_S06_Argmax/*、/B11_S11_BusFabric/*）。
+  gen_requant_simple_tb.py 改为检查 S09_FC1/S17_FC1/S17_FC2，BOM 期望
+  1329/896/32；并增加 S17_FC2 镜像检查。
+- 背板覆盖检查：282 个外部网络全部有信号脚，无遗漏、无多余；
+  每板首片排针 15/16 脚固定为 CLK/RESET_N（B11 为纯组合逻辑，无时钟）。
+
+11.10 复现
+  python tools/build_all.py
+  python tools/export_review.py --no-preview
+  python sim/run_all.py
+
+  build_all.py 顺序：13 个模块/模板构建 -> make_variants -> strip_pwr_flags
+  -> build_boards -> renumber_refs -> build_top。
+
+11.11 已知限制
+- 底板仍是“每板任意引脚”的点对点方案；同一网络在不同板上的引脚号不同，
+  必须按 CSV 逐槽布线。
+- FC2 四字节写回仍只有一个 OUTHOLD 字节寄存器（历史遗留项，未在本次改动）。
+- 板卡数量增加使 DIP 从 681 增至 896（复制 POOL/FC/FC-Requant 引擎与
+  S04 缓冲组），这是消除复用的直接代价。
+- 旧 40 排针方案完整备份在 Cache/_backup_backplane_20261107/，仅作对照。
+
+================================================================================
+
+十二、更新后的总结（方案 A）
+--------------------------------------------------------------------------------
+- 12 张具体板卡，32 张图页，32 片 2x20P 背板排针，282 个跨板网络。
+- 引擎不再跨阶段复用；POOL1/POOL2、FC1/FC2、FC1/FC2-Requant 各自独立，
+  S11 用 S11A 的 157 mux 接回原有单一 FC/POOL 槽位。
+- 顶层 ERC 0 error；sim/run_all.py 13/13 PASS；
+  BOM 1329 件 / 896 DIP / 32 BACKPLANE。
+- 新增 sim/check_backplane.py：32 排针/1280 脚/282 网络逐板核对，
+  含电源脚固定、板内网络不外露、网络-板卡集合一致。
+- 板卡清单：output/boards/BOARD_MANIFEST.csv
+  网络矩阵：output/boards/backplane_nets.csv
+  逐脚定义：output/backplane/backplane_pinout.csv
+
+================================================================================
+
+十三、结构/连线仿真验证（2026-11-08）
+--------------------------------------------------------------------------------
+目的：不做 CNN 数值验证，只用真实网表验证 12 板卡的结构与连线。
+
+方法：
+- Quartus 18.0 编译被 license 阻止（Error 292026），USB-Blaster 为 Code 28
+  且当前无管理员权限；未使用任何绕过手段。
+- 改用 ModelSim ASE 10.5b，对由 output/top.net 自动生成的扁平结构网表做仿真：
+  rtl/gen_models.py 生成 23 个按引脚号的行为模型，
+  rtl/gen_rtl.py 逐封装、逐引脚、逐网络生成 897 实例/3809 wire，
+  JP1 按 1-2 插短接片建模，U2001 时序微码为重建（工程无原始镜像）。
+
+已通过：
+- 复位/时钟/JP1 通路；SRAM0 写读 8/8；28C256 写读 4/4；
+  IMAGE_READY/MODEL_READY；START 同步；S01 阶段链 C1→P1→C2→P2→FC1。
+- 整机 20 ms 时 7776 个 MEM_nCE 脉冲，其中 P1/P2 约 7760 次（理论值），
+  证明背板/仲裁/时序/存储通路可用。
+
+发现（详见 Simulation/VERIFICATION_REPORT.md）：
+- V1 装载排针未引出 H_A16..A23，而 S04 的 688 要求 ADDR[23:16]={000,MEM_SEL}；
+  实物只能选中 tag=0 的 SRAM0，12 片 28C256 无法在线编程。
+- V2 74HC688 的 P=R 为低有效，引擎侧 23 个 *_LAST 命名混用该低有效输出；
+  已确认 C1_SP_LAST/C2_SP_LAST 直连 ROM A10、FC1_INDEX399/FC2_INDEX31 经 157
+  进 POINT_LAST，C1/C2/FC1/FC2 在第一个点后即退出（C1 仅 11 个 MEM_nCE 脉冲）。
+- V3 8 位比较器被用于 10 位 C1_SP 和 9 位 FC1_INDEX，575 截成 63、399 截成 143。
+- V4 FC2 requant 死锁：FC 状态 8 保持 REQ_START=1 等 DONE，
+  而 requant 的字节计数器被 START_N=0 按住，BC 到不了 3；S01 停在 FC2_WAIT。
+- V5 C1 的 POINT_LAST 实际接 PAD_LAST（每 4 个 MAC），与“25 tap/点”的微码语义不符。
+- V6 H_A15 未引出不阻塞 28C256/6264 在线编程；27C512 为 UV EPROM，离线编程即可。
+
+结论：板级互连基本正确，但上述逻辑缺陷会让实机无法完成一次推理；
+修复顺序建议 V2→V3→V4→V1→V5，修完重跑同一 testbench 即可回归。
+本轮未改动 KiCad 主工程或 output/top.net。
+
+复检（2026-11-08 晚）：
+- Quartus 18.0 全流程已可用（quartus_map/fit/asm/sta 对 EP4CE10F17C8 均 0 errors）；
+  USB-Blaster 用 Quartus 自带 drivers/usb-blaster/usbblstr.inf（v2.12.0.0）安装后，
+  设备状态 Code 28 -> OK；jtagconfig 识别 USB-Blaster [USB-0]、IDCODE 0x020F10DD；
+  最小工程 Simulation/quartus_probe2 已成功配置到 EP4CE10F17。
+- 容量结论不变：898 个封装、30,144 Kbit 存储约为 EP4CE10 片内 414 Kbit 的 72.8 倍，
+  整机门级复刻仍无法下载；前述 ModelSim 结构结论不变。
+
+================================================================================
+仿真修正（2026-11-08，已改动 KiCad 主工程）
+================================================================================
+依据上一轮仿真结论，本轮直接修改 Cache/CNN_74xx_System 生成器并重导出网表。
+逐引脚差异：Cache/CNN_74xx_System/review/net_diff_v1_v11.txt
+同步报告（交给嘉立创 EDA 对话）：Cache/CNN_74xx_System/CHANGES_V1_V11_FOR_EASYEDA.md
+
+V1  B12：ADDR[23:16] 由 {000,MEM_SEL[4:0]} 生成，删除 RN10003 上拉排阻；
+    U10006 的 2..6 脚接 MEM_SEL0..4，7..9 脚接 GND。H_A16..23 网络取消。
+V2  23 个 74HC688 的 P=R（低有效）统一经 74HC04 反相后再作为 *_LAST。
+    C1 6 个、C2 7 个、FC1 5 个、FC2 5 个。
+V3  10 位 C1_SP、9 位 FC INDEX 增加高位 688 + 74HC02 级联：
+    B04 加 U7156/U7157，S09 每图加 U9142/U9143/U9144。
+V4  FC2 四字节写循环：S09 增加 2 位 BYTE 计数器（0..3，ST10&MEM_ACK 使能），
+    BYTE_LAST 接 ROM A12，输出地址 = NEURON*4+BYTE；S17 删除字节计数器/
+    译码/157 三件（U1x022..24），改 2 级 74HC74 握手，字节选择改用全局
+    FC_BYTE0/FC_BYTE1。
+V5  复检为误报：PAD 只在 KXKY_LAST 之后计数，POINT_LAST=PAD_LAST 正确，未改。
+V6  不改：H_A15 未引出不影响 28C256/6264 在线编程；27C512 离线烧录。
+V7  C1/C2 嵌套计数器同步装载改为“全部内层到末值 且 MAC_EN”，修复外层
+    计数器提前清零（原 C1 从不产生 POINT_LAST）。
+V8  状态译码 74HC138 的 ~E1 改接 ST3（C1/C2/S09 各一片）。原接法把
+    state 8（requant，低三位 000）也译成 Y0，每个输出点清一次全部循环
+    计数器，引擎永远回到第 0 点。
+V9  写请求改为 MEM_ACK 释放（引擎微码），S02 原理图不变。原实现写请求保持到
+    MEM_DONE，加上 REQ_S 与控件寄存器的各一拍延迟，控制器回到 IDLE 时 REQ
+    仍为高，导致每次写执行两遍、且第二次的 ACK 被下一点的首次读误用。
+    S09 的 BYTE_EN 同步改为 ST10 & MEM_ACK。
+V10 C2 外层循环使能整体错位一级（IC 使能用了 ICKY 而不是 KXKY），IC 永不
+    计数、引擎只在 ky/kx 上打转；改接 U8019 四个使能输入。
+V11 FC 的 NEURON 计数器重载未受 MAC_EN 门控，最后一个神经元在最后一个 MAC
+    之前的等待态就回零，NEURON_LAST 丢失、IMAGE_LAST 永不置位；改为
+    NEURON_PE_N = NAND(NEURON_LAST, NEURON_EN)。
+
+器件变化：+11 / -7 封装，20 个同号换型（集中在 S09/S17），567 个引脚连接变化；
+B02 无电气变化（边沿检测方案已完整回退）。
+
+整链仿真（ModelSim ASE，8 MHz，16 M 时钟上限）：
+    C1_DONE      40.51 ms   写 577
+    P1_DONE      46.85 ms   写 1152
+    C2_DONE      66.80 ms   写 1600
+    P2_DONE      68.99 ms   写 400
+    FC1_DONE    104.24 ms   写 32
+    FC2_DONE    105.17 ms   写 40（10 神经元 x 4 字节）
+    ARGMAX_DONE 105.23 ms   DONE=1 ERROR=0 RESULT_VALID=1 RESULT=0
+    TB RESULT: PASS
+
+ROM 映像已重新生成：model/microcode/{c1,c2,fc}_rom{1,2}.{hex,bin}；
+S02 的 init/timing.hex 未变。

@@ -1,0 +1,28 @@
+D:\Document\tempPrj\74Series-CNN\FPGA_CNN\train_export.py:100: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  xt = torch.from_numpy(xtr).float().unsqueeze(1) / 255.0
+train (60000, 28, 28) test (10000, 28, 28)
+epoch  1/12  loss 0.5024  test acc 0.9454
+epoch  2/12  loss 0.1417  test acc 0.9687
+epoch  3/12  loss 0.0969  test acc 0.9765
+epoch  4/12  loss 0.0781  test acc 0.9778
+epoch  5/12  loss 0.0661  test acc 0.9824
+epoch  6/12  loss 0.0596  test acc 0.9820
+epoch  7/12  loss 0.0536  test acc 0.9826
+epoch  8/12  loss 0.0489  test acc 0.9838
+epoch  9/12  loss 0.0453  test acc 0.9839
+epoch 10/12  loss 0.0424  test acc 0.9850
+epoch 11/12  loss 0.0404  test acc 0.9851
+epoch 12/12  loss 0.0394  test acc 0.9856
+activation maxima: {'conv1': 1.4351, 'conv2': 0.6965, 'fc1': 0.3425}
+Traceback (most recent call last):
+  File "D:\Document\tempPrj\74Series-CNN\FPGA_CNN\train_export.py", line 467, in <module>
+    sys.exit(main())
+  File "D:\Document\tempPrj\74Series-CNN\FPGA_CNN\train_export.py", line 418, in main
+    acc_q, conf = eval_gold(model, xte, yte, p)
+  File "D:\Document\tempPrj\74Series-CNN\FPGA_CNN\train_export.py", line 253, in eval_gold
+    logits = gold_infer(xte[i], p)
+  File "D:\Document\tempPrj\74Series-CNN\FPGA_CNN\train_export.py", line 236, in gold_infer
+    a = _conv_u8(x, p["conv1"]["w_u8"], p["conv1"]["bias32"],
+  File "D:\Document\tempPrj\74Series-CNN\FPGA_CNN\train_export.py", line 213, in _conv_u8
+    return out.transpose(2, 0, 1).reshape(oc, oh, ow)
+ValueError: axes don't match array

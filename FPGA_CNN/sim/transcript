@@ -1,0 +1,27 @@
+# vsim -c tb_cnn28_top -do "run -all; quit -f" 
+# Start time: 17:02:38 on Nov 08,2026
+# Loading work.tb_cnn28_top
+# Loading work.cnn28_top
+# Loading work.uart_rx
+# Loading work.uart_tx
+# Loading work.cnn28_core
+# run -all
+# === cnn28_top UART end-to-end test ===
+# PASS: PING reply
+# PASS: PING payload CNN28-FPGA
+# PASS: model downloaded over UART
+# PASS: LOAD_IMAGE ack
+# PASS: INFER returns 43 bytes
+# PASS: 10 logits match the reference
+# PASS: argmax result 0
+# PASS: flags valid+done
+# PASS: READ_SCORES length
+# PASS: READ_SCORES returns the same logits
+# PASS: STATUS reply
+# PASS: STATUS result_valid
+# PASS: bad CRC rejected
+# TB RESULT: PASS
+# ** Note: $finish    : ../tb/tb_cnn28_top.v(281)
+#    Time: 62594703125 ps  Iteration: 0  Instance: /tb_cnn28_top
+# End time: 17:02:44 on Nov 08,2026, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0

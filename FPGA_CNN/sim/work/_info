@@ -1,0 +1,130 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Document/tempPrj/74Series-CNN/FPGA_CNN/sim
+vcnn28_core
+Z1 !s110 1794126122
+!i10b 1
+!s100 nm8BJURd8hg>fjP0]`DG<2
+IoBBC32FJ5WO^919PDlMWz2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1794125837
+8../rtl/cnn28_core.v
+F../rtl/cnn28_core.v
+L0 23
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1794126122.000000
+Z5 !s107 ../tb/tb_cnn28_top.v|../tb/tb_cnn28_core.v|../rtl/uart_tx.v|../rtl/uart_rx.v|../rtl/cnn28_top.v|../rtl/cnn28_core.v|
+Z6 !s90 ../rtl/cnn28_core.v|../rtl/cnn28_top.v|../rtl/uart_rx.v|../rtl/uart_tx.v|../tb/tb_cnn28_core.v|../tb/tb_cnn28_top.v|
+!i113 1
+Z7 tCvgOpt 0
+vcnn28_top
+!s110 1794128464
+!i10b 1
+!s100 o?;:eUBgJ71DUf[]`Ad5m1
+I;5JFLW7ZYekj_?cLVBaKD0
+R2
+R0
+w1794128464
+8../rtl/cnn28_top.v
+F../rtl/cnn28_top.v
+L0 21
+R3
+r1
+!s85 0
+31
+!s108 1794128464.000000
+!s107 ../tb/tb_cnn28_top.v|../rtl/cnn28_top.v|
+!s90 ../rtl/cnn28_top.v|../tb/tb_cnn28_top.v|
+!i113 1
+R7
+vtb_cnn28_core
+!s110 1794127657
+!i10b 1
+!s100 XiBB9c5N?]@amZ^B?3aJR3
+I`VjO;GUjiF=UC[a>m2dL]3
+R2
+R0
+w1794125431
+8../tb/tb_cnn28_core.v
+F../tb/tb_cnn28_core.v
+L0 13
+R3
+r1
+!s85 0
+31
+!s108 1794127657.000000
+!s107 ../tb/tb_cnn28_core.v|../tb/tb_cnn28_top.v|../rtl/cnn28_top.v|
+!s90 ../rtl/cnn28_top.v|../tb/tb_cnn28_top.v|../tb/tb_cnn28_core.v|
+!i113 1
+R7
+vtb_cnn28_top
+!s110 1794128558
+!i10b 1
+!s100 HP0:8iX[EJjAgZiV9[;h51
+IL=Jl`BI<c]KWW28FzmYlY0
+R2
+R0
+w1794128550
+8../tb/tb_cnn28_top.v
+F../tb/tb_cnn28_top.v
+L0 9
+R3
+r1
+!s85 0
+31
+!s108 1794128557.000000
+!s107 ../tb/tb_cnn28_top.v|
+!s90 ../tb/tb_cnn28_top.v|
+!i113 1
+R7
+vuart_rx
+R1
+!i10b 1
+!s100 71YZO;bgQKIWY`2j;NfI52
+IbLeMeoW3_IMI0ngaM^W1l0
+R2
+R0
+Z8 w1794123582
+8../rtl/uart_rx.v
+F../rtl/uart_rx.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vuart_tx
+R1
+!i10b 1
+!s100 f[6F;T[<^8;FkXKmif?oX1
+Im5NWLkE[dfGda]lFC[25U0
+R2
+R0
+R8
+8../rtl/uart_tx.v
+F../rtl/uart_tx.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
