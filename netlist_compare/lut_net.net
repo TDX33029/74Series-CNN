@@ -1,0 +1,2907 @@
+(export
+	(version "E")
+	(design
+		(source "D:\\Document\\tempPrj\\74Series-CNN\\Cache\\CNN_74xx_System\\S_LUT_Mult_1.kicad_sch")
+		(date "2026-11-11T02:38:44")
+		(tool "Eeschema 10.0.4")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "S_LUT_Mult_1 - 8x8 LUT Multiplier Unit")
+				(company "74Series-CNN Project")
+				(rev "1.0")
+				(date "2026-11-04")
+				(source "S_LUT_Mult_1.kicad_sch")
+				(comment
+					(number "1")
+					(value "")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C11001")
+			(value "100nF")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Decoupling capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Decoupling capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7fbf9491-feaa-4d41-82ae-9066bdc66141")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C11002")
+			(value "100nF")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Decoupling capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Decoupling capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f0f5b21c-c3ee-4593-8aa7-630722177ab6")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C11003")
+			(value "100nF")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Decoupling capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Decoupling capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "eb5e8f7e-54c5-47c8-bbe5-f2a0e3fe0486")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C11004")
+			(value "100nF")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Decoupling capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Decoupling capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c0297f72-ba27-4401-a46f-a4833c94464d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C11005")
+			(value "100nF")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Decoupling capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Decoupling capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "233ffe82-e17f-4487-a603-e4b00643d161")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C11006")
+			(value "100nF")
+			(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+			(description "Decoupling capacitor")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Decoupling capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f88df335-5782-4959-a281-9d1725d57e83")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP11001")
+			(value "TP")
+			(footprint "TestPoint:TestPoint_Pad_D1.5mm")
+			(description "Test point LUT_AB_LATCH")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Test point LUT_AB_LATCH")
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "bbd22fd0-9cb8-4f67-9c92-59d54773c250")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP11002")
+			(value "TP")
+			(footprint "TestPoint:TestPoint_Pad_D1.5mm")
+			(description "Test point LUT_PROD_LATCH")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Test point LUT_PROD_LATCH")
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1ce77080-e62d-46da-92fa-7d3f39850263")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP11003")
+			(value "TP")
+			(footprint "TestPoint:TestPoint_Pad_D1.5mm")
+			(description "Test point LUT_CE_N")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Test point LUT_CE_N")
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c3571c6e-d974-4630-9f41-4d0caaa7ada4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP11004")
+			(value "TP")
+			(footprint "TestPoint:TestPoint_Pad_D1.5mm")
+			(description "Test point LUT_OE_N")
+			(fields
+				(field
+					(name "Footprint") "TestPoint:TestPoint_Pad_D1.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Test point LUT_OE_N")
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3659a71b-fbc1-48ce-a997-dcb03aa5bba1")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U11001")
+			(value "27C512")
+			(footprint "Package_DIP:DIP-28_W15.24mm")
+			(description "LUT ROM low byte (A*B)[7:0]")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-28_W15.24mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "LUT ROM low byte (A*B)[7:0]")
+			)
+			(libsource
+				(lib "Memory_EPROM")
+				(part "27C512")
+				(description "OTP EPROM 512 KiBit")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "OTP EPROM 512KiBit")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP*W15.24mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a35558a3-af6d-473b-a137-2b5bd46f69f9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "25")
+						)
+						(pin
+							(num "24")
+						)
+						(pin
+							(num "21")
+						)
+						(pin
+							(num "23")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "26")
+						)
+						(pin
+							(num "27")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "22")
+						)
+						(pin
+							(num "28")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "19")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U11002")
+			(value "27C512")
+			(footprint "Package_DIP:DIP-28_W15.24mm")
+			(description "LUT ROM high byte (A*B)[15:8]")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-28_W15.24mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "LUT ROM high byte (A*B)[15:8]")
+			)
+			(libsource
+				(lib "Memory_EPROM")
+				(part "27C512")
+				(description "OTP EPROM 512 KiBit")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "OTP EPROM 512KiBit")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP*W15.24mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2a3b14b3-076e-48e3-b433-fc89fde7e994")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "25")
+						)
+						(pin
+							(num "24")
+						)
+						(pin
+							(num "21")
+						)
+						(pin
+							(num "23")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "26")
+						)
+						(pin
+							(num "27")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "22")
+						)
+						(pin
+							(num "28")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "19")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U11003")
+			(value "74HCT574")
+			(footprint "Package_DIP:DIP-20_W7.62mm")
+			(description "A operand latch")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-20_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "A operand latch")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HCT574")
+				(description "8-bit Register, 3-state outputs")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL REG DFF DFF8 3State")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?20*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5f1e146a-df58-4aaf-9432-208245f31a2f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U11004")
+			(value "74HCT574")
+			(footprint "Package_DIP:DIP-20_W7.62mm")
+			(description "B operand latch")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-20_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "B operand latch")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HCT574")
+				(description "8-bit Register, 3-state outputs")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL REG DFF DFF8 3State")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?20*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0af04258-4fbf-40d0-a053-4f4112d30a26")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U11005")
+			(value "74HCT574")
+			(footprint "Package_DIP:DIP-20_W7.62mm")
+			(description "Product low-byte latch")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-20_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Product low-byte latch")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HCT574")
+				(description "8-bit Register, 3-state outputs")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL REG DFF DFF8 3State")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?20*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "bf37cce9-50b5-4f02-bae3-165d86ba1ca7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U11006")
+			(value "74HCT574")
+			(footprint "Package_DIP:DIP-20_W7.62mm")
+			(description "Product high-byte latch")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-20_W7.62mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Product high-byte latch")
+			)
+			(libsource
+				(lib "74xx")
+				(part "74HCT574")
+				(description "8-bit Register, 3-state outputs")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../Cache/CNN_74xx_System/S_LUT_Mult_1.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "TTL REG DFF DFF8 3State")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?20*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "11a21e38-aa88-40d4-a0b3-5e0cebe65e3c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "74xx")
+			(part "74HCT574")
+			(description "8-bit Register, 3-state outputs")
+			(docs "http://www.ti.com/lit/gpn/sn74LS574")
+			(footprints
+				(fp "DIP?20*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "74HCT574")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "http://www.ti.com/lit/gpn/sn74LS574")
+				(field
+					(name "Description") "8-bit Register, 3-state outputs")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "OE")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "D0")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "D1")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "D2")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "D3")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "D4")
+					(type "input")
+				)
+				(pin
+					(num "7")
+					(name "D5")
+					(type "input")
+				)
+				(pin
+					(num "8")
+					(name "D6")
+					(type "input")
+				)
+				(pin
+					(num "9")
+					(name "D7")
+					(type "input")
+				)
+				(pin
+					(num "10")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "11")
+					(name "Cp")
+					(type "input")
+				)
+				(pin
+					(num "12")
+					(name "Q7")
+					(type "tri_state")
+				)
+				(pin
+					(num "13")
+					(name "Q6")
+					(type "tri_state")
+				)
+				(pin
+					(num "14")
+					(name "Q5")
+					(type "tri_state")
+				)
+				(pin
+					(num "15")
+					(name "Q4")
+					(type "tri_state")
+				)
+				(pin
+					(num "16")
+					(name "Q3")
+					(type "tri_state")
+				)
+				(pin
+					(num "17")
+					(name "Q2")
+					(type "tri_state")
+				)
+				(pin
+					(num "18")
+					(name "Q1")
+					(type "tri_state")
+				)
+				(pin
+					(num "19")
+					(name "Q0")
+					(type "tri_state")
+				)
+				(pin
+					(num "20")
+					(name "VCC")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector")
+			(part "TestPoint")
+			(description "test point")
+			(footprints
+				(fp "Pin*")
+				(fp "Test*")
+			)
+			(fields
+				(field
+					(name "Reference") "TP")
+				(field
+					(name "Value") "TestPoint")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "C")
+			(description "Unpolarized capacitor")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Memory_EPROM")
+			(part "27C512")
+			(description "OTP EPROM 512 KiBit")
+			(docs "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0015.pdf")
+			(footprints
+				(fp "DIP*W15.24mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "27C512")
+				(field
+					(name "Footprint") "Package_DIP:DIP-28_W15.24mm")
+				(field
+					(name "Datasheet") "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0015.pdf")
+				(field
+					(name "Description") "OTP EPROM 512 KiBit")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "A15")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "A12")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "A7")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "A6")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "A5")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "A4")
+					(type "input")
+				)
+				(pin
+					(num "7")
+					(name "A3")
+					(type "input")
+				)
+				(pin
+					(num "8")
+					(name "A2")
+					(type "input")
+				)
+				(pin
+					(num "9")
+					(name "A1")
+					(type "input")
+				)
+				(pin
+					(num "10")
+					(name "A0")
+					(type "input")
+				)
+				(pin
+					(num "11")
+					(name "D0")
+					(type "tri_state")
+				)
+				(pin
+					(num "12")
+					(name "D1")
+					(type "tri_state")
+				)
+				(pin
+					(num "13")
+					(name "D2")
+					(type "tri_state")
+				)
+				(pin
+					(num "14")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "15")
+					(name "D3")
+					(type "tri_state")
+				)
+				(pin
+					(num "16")
+					(name "D4")
+					(type "tri_state")
+				)
+				(pin
+					(num "17")
+					(name "D5")
+					(type "tri_state")
+				)
+				(pin
+					(num "18")
+					(name "D6")
+					(type "tri_state")
+				)
+				(pin
+					(num "19")
+					(name "D7")
+					(type "tri_state")
+				)
+				(pin
+					(num "20")
+					(name "~{CE}")
+					(type "input")
+				)
+				(pin
+					(num "21")
+					(name "A10")
+					(type "input")
+				)
+				(pin
+					(num "22")
+					(name "~{OE}")
+					(type "input")
+				)
+				(pin
+					(num "23")
+					(name "A11")
+					(type "input")
+				)
+				(pin
+					(num "24")
+					(name "A9")
+					(type "input")
+				)
+				(pin
+					(num "25")
+					(name "A8")
+					(type "input")
+				)
+				(pin
+					(num "26")
+					(name "A13")
+					(type "input")
+				)
+				(pin
+					(num "27")
+					(name "A14")
+					(type "input")
+				)
+				(pin
+					(num "28")
+					(name "VCC")
+					(type "power_in")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "74xx")
+			(uri "${KICAD10_SYMBOL_DIR}/74xx.kicad_sym")
+		)
+		(library
+			(logical "Connector")
+			(uri "${KICAD10_SYMBOL_DIR}/Connector.kicad_sym")
+		)
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
+		)
+		(library
+			(logical "Memory_EPROM")
+			(uri "${KICAD10_SYMBOL_DIR}/Memory_EPROM.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "+5V")
+			(class "Default")
+			(node
+				(ref "C11001")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11002")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11003")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11004")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11005")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11006")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U11001")
+				(pin "28")
+				(pinfunction "VCC_28")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U11002")
+				(pin "28")
+				(pinfunction "VCC_28")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U11003")
+				(pin "20")
+				(pinfunction "VCC_20")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U11004")
+				(pin "20")
+				(pinfunction "VCC_20")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U11005")
+				(pin "20")
+				(pinfunction "VCC_20")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U11006")
+				(pin "20")
+				(pinfunction "VCC_20")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "2")
+			(name "/LUT_A0")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "10")
+				(pinfunction "A0_10")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "10")
+				(pinfunction "A0_10")
+				(pintype "input")
+			)
+			(node
+				(ref "U11003")
+				(pin "19")
+				(pinfunction "Q0_19")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "3")
+			(name "/LUT_A1")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "9")
+				(pinfunction "A1_9")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "9")
+				(pinfunction "A1_9")
+				(pintype "input")
+			)
+			(node
+				(ref "U11003")
+				(pin "18")
+				(pinfunction "Q1_18")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "4")
+			(name "/LUT_A2")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "8")
+				(pinfunction "A2_8")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "8")
+				(pinfunction "A2_8")
+				(pintype "input")
+			)
+			(node
+				(ref "U11003")
+				(pin "17")
+				(pinfunction "Q2_17")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "5")
+			(name "/LUT_A3")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "7")
+				(pinfunction "A3_7")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "7")
+				(pinfunction "A3_7")
+				(pintype "input")
+			)
+			(node
+				(ref "U11003")
+				(pin "16")
+				(pinfunction "Q3_16")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "6")
+			(name "/LUT_A4")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "6")
+				(pinfunction "A4_6")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "6")
+				(pinfunction "A4_6")
+				(pintype "input")
+			)
+			(node
+				(ref "U11003")
+				(pin "15")
+				(pinfunction "Q4_15")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "7")
+			(name "/LUT_A5")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "5")
+				(pinfunction "A5_5")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "5")
+				(pinfunction "A5_5")
+				(pintype "input")
+			)
+			(node
+				(ref "U11003")
+				(pin "14")
+				(pinfunction "Q5_14")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "8")
+			(name "/LUT_A6")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "4")
+				(pinfunction "A6_4")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "4")
+				(pinfunction "A6_4")
+				(pintype "input")
+			)
+			(node
+				(ref "U11003")
+				(pin "13")
+				(pinfunction "Q6_13")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "9")
+			(name "/LUT_A7")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "3")
+				(pinfunction "A7_3")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "3")
+				(pinfunction "A7_3")
+				(pintype "input")
+			)
+			(node
+				(ref "U11003")
+				(pin "12")
+				(pinfunction "Q7_12")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "10")
+			(name "/LUT_A8")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "25")
+				(pinfunction "A8_25")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "25")
+				(pinfunction "A8_25")
+				(pintype "input")
+			)
+			(node
+				(ref "U11004")
+				(pin "19")
+				(pinfunction "Q0_19")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "11")
+			(name "/LUT_A9")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "24")
+				(pinfunction "A9_24")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "24")
+				(pinfunction "A9_24")
+				(pintype "input")
+			)
+			(node
+				(ref "U11004")
+				(pin "18")
+				(pinfunction "Q1_18")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "12")
+			(name "/LUT_A10")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "21")
+				(pinfunction "A10_21")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "21")
+				(pinfunction "A10_21")
+				(pintype "input")
+			)
+			(node
+				(ref "U11004")
+				(pin "17")
+				(pinfunction "Q2_17")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "13")
+			(name "/LUT_A11")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "23")
+				(pinfunction "A11_23")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "23")
+				(pinfunction "A11_23")
+				(pintype "input")
+			)
+			(node
+				(ref "U11004")
+				(pin "16")
+				(pinfunction "Q3_16")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "14")
+			(name "/LUT_A12")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "2")
+				(pinfunction "A12_2")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "2")
+				(pinfunction "A12_2")
+				(pintype "input")
+			)
+			(node
+				(ref "U11004")
+				(pin "15")
+				(pinfunction "Q4_15")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "15")
+			(name "/LUT_A13")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "26")
+				(pinfunction "A13_26")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "26")
+				(pinfunction "A13_26")
+				(pintype "input")
+			)
+			(node
+				(ref "U11004")
+				(pin "14")
+				(pinfunction "Q5_14")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "16")
+			(name "/LUT_A14")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "27")
+				(pinfunction "A14_27")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "27")
+				(pinfunction "A14_27")
+				(pintype "input")
+			)
+			(node
+				(ref "U11004")
+				(pin "13")
+				(pinfunction "Q6_13")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "17")
+			(name "/LUT_A15")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "1")
+				(pinfunction "A15_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "1")
+				(pinfunction "A15_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U11004")
+				(pin "12")
+				(pinfunction "Q7_12")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "18")
+			(name "/ROM_H0")
+			(class "Default")
+			(node
+				(ref "U11002")
+				(pin "11")
+				(pinfunction "D0_11")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11006")
+				(pin "2")
+				(pinfunction "D0_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "19")
+			(name "/ROM_H1")
+			(class "Default")
+			(node
+				(ref "U11002")
+				(pin "12")
+				(pinfunction "D1_12")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11006")
+				(pin "3")
+				(pinfunction "D1_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "20")
+			(name "/ROM_H2")
+			(class "Default")
+			(node
+				(ref "U11002")
+				(pin "13")
+				(pinfunction "D2_13")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11006")
+				(pin "4")
+				(pinfunction "D2_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "21")
+			(name "/ROM_H3")
+			(class "Default")
+			(node
+				(ref "U11002")
+				(pin "15")
+				(pinfunction "D3_15")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11006")
+				(pin "5")
+				(pinfunction "D3_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "22")
+			(name "/ROM_H4")
+			(class "Default")
+			(node
+				(ref "U11002")
+				(pin "16")
+				(pinfunction "D4_16")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11006")
+				(pin "6")
+				(pinfunction "D4_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "23")
+			(name "/ROM_H5")
+			(class "Default")
+			(node
+				(ref "U11002")
+				(pin "17")
+				(pinfunction "D5_17")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11006")
+				(pin "7")
+				(pinfunction "D5_7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "24")
+			(name "/ROM_H6")
+			(class "Default")
+			(node
+				(ref "U11002")
+				(pin "18")
+				(pinfunction "D6_18")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11006")
+				(pin "8")
+				(pinfunction "D6_8")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "25")
+			(name "/ROM_H7")
+			(class "Default")
+			(node
+				(ref "U11002")
+				(pin "19")
+				(pinfunction "D7_19")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11006")
+				(pin "9")
+				(pinfunction "D7_9")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "26")
+			(name "/ROM_L0")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "11")
+				(pinfunction "D0_11")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11005")
+				(pin "2")
+				(pinfunction "D0_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "27")
+			(name "/ROM_L1")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "12")
+				(pinfunction "D1_12")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11005")
+				(pin "3")
+				(pinfunction "D1_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "28")
+			(name "/ROM_L2")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "13")
+				(pinfunction "D2_13")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11005")
+				(pin "4")
+				(pinfunction "D2_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "29")
+			(name "/ROM_L3")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "15")
+				(pinfunction "D3_15")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11005")
+				(pin "5")
+				(pinfunction "D3_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "30")
+			(name "/ROM_L4")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "16")
+				(pinfunction "D4_16")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11005")
+				(pin "6")
+				(pinfunction "D4_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "31")
+			(name "/ROM_L5")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "17")
+				(pinfunction "D5_17")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11005")
+				(pin "7")
+				(pinfunction "D5_7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "32")
+			(name "/ROM_L6")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "18")
+				(pinfunction "D6_18")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11005")
+				(pin "8")
+				(pinfunction "D6_8")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "33")
+			(name "/ROM_L7")
+			(class "Default")
+			(node
+				(ref "U11001")
+				(pin "19")
+				(pinfunction "D7_19")
+				(pintype "tri_state")
+			)
+			(node
+				(ref "U11005")
+				(pin "9")
+				(pinfunction "D7_9")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "34")
+			(name "A0")
+			(class "Default")
+			(node
+				(ref "U11003")
+				(pin "2")
+				(pinfunction "D0_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "35")
+			(name "A1")
+			(class "Default")
+			(node
+				(ref "U11003")
+				(pin "3")
+				(pinfunction "D1_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "36")
+			(name "A2")
+			(class "Default")
+			(node
+				(ref "U11003")
+				(pin "4")
+				(pinfunction "D2_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "37")
+			(name "A3")
+			(class "Default")
+			(node
+				(ref "U11003")
+				(pin "5")
+				(pinfunction "D3_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "38")
+			(name "A4")
+			(class "Default")
+			(node
+				(ref "U11003")
+				(pin "6")
+				(pinfunction "D4_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "39")
+			(name "A5")
+			(class "Default")
+			(node
+				(ref "U11003")
+				(pin "7")
+				(pinfunction "D5_7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "40")
+			(name "A6")
+			(class "Default")
+			(node
+				(ref "U11003")
+				(pin "8")
+				(pinfunction "D6_8")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "41")
+			(name "A7")
+			(class "Default")
+			(node
+				(ref "U11003")
+				(pin "9")
+				(pinfunction "D7_9")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "42")
+			(name "B0")
+			(class "Default")
+			(node
+				(ref "U11004")
+				(pin "2")
+				(pinfunction "D0_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "43")
+			(name "B1")
+			(class "Default")
+			(node
+				(ref "U11004")
+				(pin "3")
+				(pinfunction "D1_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "44")
+			(name "B2")
+			(class "Default")
+			(node
+				(ref "U11004")
+				(pin "4")
+				(pinfunction "D2_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "45")
+			(name "B3")
+			(class "Default")
+			(node
+				(ref "U11004")
+				(pin "5")
+				(pinfunction "D3_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "46")
+			(name "B4")
+			(class "Default")
+			(node
+				(ref "U11004")
+				(pin "6")
+				(pinfunction "D4_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "47")
+			(name "B5")
+			(class "Default")
+			(node
+				(ref "U11004")
+				(pin "7")
+				(pinfunction "D5_7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "48")
+			(name "B6")
+			(class "Default")
+			(node
+				(ref "U11004")
+				(pin "8")
+				(pinfunction "D6_8")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "49")
+			(name "B7")
+			(class "Default")
+			(node
+				(ref "U11004")
+				(pin "9")
+				(pinfunction "D7_9")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "50")
+			(name "GND")
+			(class "Default")
+			(node
+				(ref "C11001")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11002")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11003")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11004")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11005")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11006")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U11001")
+				(pin "14")
+				(pinfunction "GND_14")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U11002")
+				(pin "14")
+				(pinfunction "GND_14")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U11003")
+				(pin "1")
+				(pinfunction "OE_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U11003")
+				(pin "10")
+				(pinfunction "GND_10")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U11004")
+				(pin "1")
+				(pinfunction "OE_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U11004")
+				(pin "10")
+				(pinfunction "GND_10")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U11005")
+				(pin "1")
+				(pinfunction "OE_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U11005")
+				(pin "10")
+				(pinfunction "GND_10")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U11006")
+				(pin "1")
+				(pinfunction "OE_1")
+				(pintype "input")
+			)
+			(node
+				(ref "U11006")
+				(pin "10")
+				(pinfunction "GND_10")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "51")
+			(name "LUT_AB_LATCH")
+			(class "Default")
+			(node
+				(ref "TP11001")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U11003")
+				(pin "11")
+				(pinfunction "Cp_11")
+				(pintype "input")
+			)
+			(node
+				(ref "U11004")
+				(pin "11")
+				(pinfunction "Cp_11")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "52")
+			(name "LUT_CE_N")
+			(class "Default")
+			(node
+				(ref "TP11003")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U11001")
+				(pin "20")
+				(pinfunction "~{CE}_20")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "20")
+				(pinfunction "~{CE}_20")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "53")
+			(name "LUT_OE_N")
+			(class "Default")
+			(node
+				(ref "TP11004")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U11001")
+				(pin "22")
+				(pinfunction "~{OE}_22")
+				(pintype "input")
+			)
+			(node
+				(ref "U11002")
+				(pin "22")
+				(pinfunction "~{OE}_22")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "54")
+			(name "LUT_PROD_LATCH")
+			(class "Default")
+			(node
+				(ref "TP11002")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U11005")
+				(pin "11")
+				(pinfunction "Cp_11")
+				(pintype "input")
+			)
+			(node
+				(ref "U11006")
+				(pin "11")
+				(pinfunction "Cp_11")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "55")
+			(name "PROD0")
+			(class "Default")
+			(node
+				(ref "U11005")
+				(pin "19")
+				(pinfunction "Q0_19")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "56")
+			(name "PROD1")
+			(class "Default")
+			(node
+				(ref "U11005")
+				(pin "18")
+				(pinfunction "Q1_18")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "57")
+			(name "PROD2")
+			(class "Default")
+			(node
+				(ref "U11005")
+				(pin "17")
+				(pinfunction "Q2_17")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "58")
+			(name "PROD3")
+			(class "Default")
+			(node
+				(ref "U11005")
+				(pin "16")
+				(pinfunction "Q3_16")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "59")
+			(name "PROD4")
+			(class "Default")
+			(node
+				(ref "U11005")
+				(pin "15")
+				(pinfunction "Q4_15")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "60")
+			(name "PROD5")
+			(class "Default")
+			(node
+				(ref "U11005")
+				(pin "14")
+				(pinfunction "Q5_14")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "61")
+			(name "PROD6")
+			(class "Default")
+			(node
+				(ref "U11005")
+				(pin "13")
+				(pinfunction "Q6_13")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "62")
+			(name "PROD7")
+			(class "Default")
+			(node
+				(ref "U11005")
+				(pin "12")
+				(pinfunction "Q7_12")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "63")
+			(name "PROD8")
+			(class "Default")
+			(node
+				(ref "U11006")
+				(pin "19")
+				(pinfunction "Q0_19")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "64")
+			(name "PROD9")
+			(class "Default")
+			(node
+				(ref "U11006")
+				(pin "18")
+				(pinfunction "Q1_18")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "65")
+			(name "PROD10")
+			(class "Default")
+			(node
+				(ref "U11006")
+				(pin "17")
+				(pinfunction "Q2_17")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "66")
+			(name "PROD11")
+			(class "Default")
+			(node
+				(ref "U11006")
+				(pin "16")
+				(pinfunction "Q3_16")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "67")
+			(name "PROD12")
+			(class "Default")
+			(node
+				(ref "U11006")
+				(pin "15")
+				(pinfunction "Q4_15")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "68")
+			(name "PROD13")
+			(class "Default")
+			(node
+				(ref "U11006")
+				(pin "14")
+				(pinfunction "Q5_14")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "69")
+			(name "PROD14")
+			(class "Default")
+			(node
+				(ref "U11006")
+				(pin "13")
+				(pinfunction "Q6_13")
+				(pintype "tri_state")
+			)
+		)
+		(net
+			(code "70")
+			(name "PROD15")
+			(class "Default")
+			(node
+				(ref "U11006")
+				(pin "12")
+				(pinfunction "Q7_12")
+				(pintype "tri_state")
+			)
+		)
+	)
+)

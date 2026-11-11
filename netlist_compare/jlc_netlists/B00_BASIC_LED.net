@@ -1,0 +1,324 @@
+PROTEL NETLIST 2.0
+[
+DESIGNATOR
+LED1
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED1
+Device
+HLMP-S301
+Name
+HLMP-S301
+Unique ID
+gge1
+Reuse Block
+
+Group ID
+
+Channel ID
+
+LCSC Part Name
+HLMP-S301
+Supplier Part
+C7285273
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+
+*
+]
+[
+DESIGNATOR
+Q1
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q1
+Device
+S8050_C2931492
+Unique ID
+gge2
+Name
+S8050
+Reuse Block
+
+Group ID
+
+Channel ID
+
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+C2931492
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+
+*
+]
+[
+DESIGNATOR
+R1
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+RN 1/4W 150R F T/B A1
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:150Ω;精度:±1%;功率:250mW;温度系数:±50ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+RN 1/4W 150R F T/B A1
+Designator
+R1
+Device
+RN 1/4W 150R F T/B A1
+Unique ID
+gge3
+Name
+150Ω
+Reuse Block
+
+Group ID
+
+Channel ID
+
+LCSC Part Name
+150Ω ±1% 250mW 金属膜电阻
+Supplier Part
+C410679
+Manufacturer
+Tyohm(幸亚电阻)
+Manufacturer Part
+RN 1/4W 150R F T/B A1
+Supplier Footprint
+插件,D2.4xL6.4mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/RN%25201%252F4W%2520150R%2520F%2520T%252FB%2520A1/401600.html
+Supplier
+LCSC
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Type
+金属膜电阻
+Value
+150Ω
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±50ppm/℃
+Operating Temperature
+-55℃~+125℃
+Description
+电阻类型:金属膜电阻;阻值:150Ω;精度:±1%;功率:250mW;温度系数:±50ppm/℃;
+
+*
+]
+[
+DESIGNATOR
+R2
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R2
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge4
+Name
+10kΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier
+LCSC
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+
+*
+]
+(
+$1N3 
+LED1-1 HLMP-S301-C Passive 
+Q1-3 S8050_C2931492-C Passive 
+)
+(
+$1N2 
+LED1-2 HLMP-S301-A Passive 
+R1-1 RN 1/4W 150R F T/B A1-1 Passive 
+)
+(
+$1N4 
+Q1-2 S8050_C2931492-B Passive 
+R2-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
+GND 
+Q1-1 S8050_C2931492-E Passive 
+)
+(
++VLED 
+R1-2 RN 1/4W 150R F T/B A1-2 Passive 
+)
+(
+SIGNAL 
+R2-2 MF1/4W-10KΩ±1% T-2 Passive 
+)

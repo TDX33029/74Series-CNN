@@ -1,0 +1,11436 @@
+PROTEL NETLIST 2.0
+[
+DESIGNATOR
+J4001
+FOOTPRINT
+HDR-TH_24P-P2.54-V-M-R2-C12-S2.54
+PARTTYPE
+PZ254V-12-24P
+DESCRIPTION
+Image / weight load header
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+PZ254V-12-24P
+Designator
+J4001
+Device
+PZ254V-12-24P
+Unique ID
+gge1
+LCSC Part Name
+
+Supplier Part
+PZ254V-12-24P.1
+Manufacturer
+XFCN(兴飞)
+Manufacturer Part
+PZ254V-12-24P
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+HDR-TH_24P-P2.54-M-LI-2X12P
+Pin Structure
+
+Pitch
+
+Row Spacing
+
+Circluar Pins/Square Pins
+
+Mounting Type
+
+Number of Rows
+
+Number of Pins
+
+Current Rating
+
+Voltage Rating (Max)
+
+Length of Mating Pin
+
+Insulation Height
+
+Length of End Connection Pin
+
+Contact Material
+
+Contact Plating
+
+Operating Temperature
+
+Color
+
+Name
+PZ254V-12-24P
+Description
+Image / weight load header
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R4001
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+MFR-25FBF52-10K
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MFR-25FBF52-10K
+Designator
+R4001
+Device
+MFR-25FBF52-10K
+Unique ID
+gge2
+LCSC Part Name
+
+Supplier Part
+MFR-25FBF52-10K.1
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+MFR-25FBF52-10K
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Type
+
+Value
+
+Tolerance
+
+Power(Watts)
+
+Temperature Coefficient
+
+Operating Temperature Range
+
+Name
+
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R4002
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+MFR-25FBF52-10K
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MFR-25FBF52-10K
+Designator
+R4002
+Device
+MFR-25FBF52-10K
+Unique ID
+gge3
+LCSC Part Name
+
+Supplier Part
+MFR-25FBF52-10K.1
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+MFR-25FBF52-10K
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Type
+
+Value
+
+Tolerance
+
+Power(Watts)
+
+Temperature Coefficient
+
+Operating Temperature Range
+
+Name
+
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R4003
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+MFR-25FBF52-10K
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MFR-25FBF52-10K
+Designator
+R4003
+Device
+MFR-25FBF52-10K
+Unique ID
+gge4
+LCSC Part Name
+
+Supplier Part
+MFR-25FBF52-10K.1
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+MFR-25FBF52-10K
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Type
+
+Value
+
+Tolerance
+
+Power(Watts)
+
+Temperature Coefficient
+
+Operating Temperature Range
+
+Name
+
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R4004
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+MFR-25FBF52-10K
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MFR-25FBF52-10K
+Designator
+R4004
+Device
+MFR-25FBF52-10K
+Unique ID
+gge5
+LCSC Part Name
+
+Supplier Part
+MFR-25FBF52-10K.1
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+MFR-25FBF52-10K
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Type
+
+Value
+
+Tolerance
+
+Power(Watts)
+
+Temperature Coefficient
+
+Operating Temperature Range
+
+Name
+
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R4005
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+MFR-25FBF52-10K
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MFR-25FBF52-10K
+Designator
+R4005
+Device
+MFR-25FBF52-10K
+Unique ID
+gge6
+LCSC Part Name
+
+Supplier Part
+MFR-25FBF52-10K.1
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+MFR-25FBF52-10K
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Type
+
+Value
+
+Tolerance
+
+Power(Watts)
+
+Temperature Coefficient
+
+Operating Temperature Range
+
+Name
+
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R4006
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+MFR-25FBF52-10K
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MFR-25FBF52-10K
+Designator
+R4006
+Device
+MFR-25FBF52-10K
+Unique ID
+gge7
+LCSC Part Name
+
+Supplier Part
+MFR-25FBF52-10K.1
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+MFR-25FBF52-10K
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Type
+
+Value
+
+Tolerance
+
+Power(Watts)
+
+Temperature Coefficient
+
+Operating Temperature Range
+
+Name
+
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R4007
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+MFR-25FBF52-10K
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MFR-25FBF52-10K
+Designator
+R4007
+Device
+MFR-25FBF52-10K
+Unique ID
+gge8
+LCSC Part Name
+
+Supplier Part
+MFR-25FBF52-10K.1
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+MFR-25FBF52-10K
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Type
+
+Value
+
+Tolerance
+
+Power(Watts)
+
+Temperature Coefficient
+
+Operating Temperature Range
+
+Name
+
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R4008
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+MFR-25FBF52-10K
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MFR-25FBF52-10K
+Designator
+R4008
+Device
+MFR-25FBF52-10K
+Unique ID
+gge9
+LCSC Part Name
+
+Supplier Part
+MFR-25FBF52-10K.1
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+MFR-25FBF52-10K
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Type
+
+Value
+
+Tolerance
+
+Power(Watts)
+
+Temperature Coefficient
+
+Operating Temperature Range
+
+Name
+
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R4009
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+MFR-25FBF52-10K
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MFR-25FBF52-10K
+Designator
+R4009
+Device
+MFR-25FBF52-10K
+Unique ID
+gge10
+LCSC Part Name
+
+Supplier Part
+MFR-25FBF52-10K.1
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+MFR-25FBF52-10K
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Type
+
+Value
+
+Tolerance
+
+Power(Watts)
+
+Temperature Coefficient
+
+Operating Temperature Range
+
+Name
+
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R4010
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+MFR-25FBF52-10K
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MFR-25FBF52-10K
+Designator
+R4010
+Device
+MFR-25FBF52-10K
+Unique ID
+gge11
+LCSC Part Name
+
+Supplier Part
+MFR-25FBF52-10K.1
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+MFR-25FBF52-10K
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Type
+
+Value
+
+Tolerance
+
+Power(Watts)
+
+Temperature Coefficient
+
+Operating Temperature Range
+
+Name
+
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4001
+FOOTPRINT
+PDIP-28_L38.1-W12.7-P2.54-LS15.3-BL
+PARTTYPE
+AS6C6264-55PCN
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AS6C6264-55PCN
+Designator
+U4001
+Device
+AS6C6264-55PCN
+Unique ID
+gge12
+LCSC Part Name
+
+Supplier Part
+AS6C6264-55PCN.1
+Manufacturer
+Alliance Memory
+Manufacturer Part
+AS6C6264-55PCN
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L38.1-W12.7-H5.1-P2.54-LS15.3-BL
+Interface
+
+Memory Size
+
+Voltage - Supply
+
+Access Time
+
+Operating Temperature
+
+Supply Current (Icc)
+
+Standby Current (Iq)
+
+Features
+
+Name
+AS6C6264-55PCN
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+6264
+
+*
+]
+[
+DESIGNATOR
+U4002
+FOOTPRINT
+PDIP-28_L38.1-W12.7-P2.54-LS15.3-BL
+PARTTYPE
+AS6C6264-55PCN
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AS6C6264-55PCN
+Designator
+U4002
+Device
+AS6C6264-55PCN
+Unique ID
+gge13
+LCSC Part Name
+
+Supplier Part
+AS6C6264-55PCN.1
+Manufacturer
+Alliance Memory
+Manufacturer Part
+AS6C6264-55PCN
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L38.1-W12.7-H5.1-P2.54-LS15.3-BL
+Interface
+
+Memory Size
+
+Voltage - Supply
+
+Access Time
+
+Operating Temperature
+
+Supply Current (Icc)
+
+Standby Current (Iq)
+
+Features
+
+Name
+AS6C6264-55PCN
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+6264
+
+*
+]
+[
+DESIGNATOR
+U4003
+FOOTPRINT
+PDIP-28_L38.1-W12.7-P2.54-LS15.3-BL
+PARTTYPE
+AS6C6264-55PCN
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AS6C6264-55PCN
+Designator
+U4003
+Device
+AS6C6264-55PCN
+Unique ID
+gge14
+LCSC Part Name
+
+Supplier Part
+AS6C6264-55PCN.1
+Manufacturer
+Alliance Memory
+Manufacturer Part
+AS6C6264-55PCN
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L38.1-W12.7-H5.1-P2.54-LS15.3-BL
+Interface
+
+Memory Size
+
+Voltage - Supply
+
+Access Time
+
+Operating Temperature
+
+Supply Current (Icc)
+
+Standby Current (Iq)
+
+Features
+
+Name
+AS6C6264-55PCN
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+6264
+
+*
+]
+[
+DESIGNATOR
+U4004
+FOOTPRINT
+PDIP-28_L38.1-W12.7-P2.54-LS15.3-BL
+PARTTYPE
+AS6C6264-55PCN
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AS6C6264-55PCN
+Designator
+U4004
+Device
+AS6C6264-55PCN
+Unique ID
+gge15
+LCSC Part Name
+
+Supplier Part
+AS6C6264-55PCN.1
+Manufacturer
+Alliance Memory
+Manufacturer Part
+AS6C6264-55PCN
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L38.1-W12.7-H5.1-P2.54-LS15.3-BL
+Interface
+
+Memory Size
+
+Voltage - Supply
+
+Access Time
+
+Operating Temperature
+
+Supply Current (Icc)
+
+Standby Current (Iq)
+
+Features
+
+Name
+AS6C6264-55PCN
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+6264
+
+*
+]
+[
+DESIGNATOR
+U4005
+FOOTPRINT
+PDIP-28_L38.1-W12.7-P2.54-LS15.3-BL
+PARTTYPE
+AS6C6264-55PCN
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AS6C6264-55PCN
+Designator
+U4005
+Device
+AS6C6264-55PCN
+Unique ID
+gge16
+LCSC Part Name
+
+Supplier Part
+AS6C6264-55PCN.1
+Manufacturer
+Alliance Memory
+Manufacturer Part
+AS6C6264-55PCN
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L38.1-W12.7-H5.1-P2.54-LS15.3-BL
+Interface
+
+Memory Size
+
+Voltage - Supply
+
+Access Time
+
+Operating Temperature
+
+Supply Current (Icc)
+
+Standby Current (Iq)
+
+Features
+
+Name
+AS6C6264-55PCN
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+6264
+
+*
+]
+[
+DESIGNATOR
+U4006
+FOOTPRINT
+PDIP-28_L38.1-W12.7-P2.54-LS15.3-BL
+PARTTYPE
+AS6C6264-55PCN
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AS6C6264-55PCN
+Designator
+U4006
+Device
+AS6C6264-55PCN
+Unique ID
+gge17
+LCSC Part Name
+
+Supplier Part
+AS6C6264-55PCN.1
+Manufacturer
+Alliance Memory
+Manufacturer Part
+AS6C6264-55PCN
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L38.1-W12.7-H5.1-P2.54-LS15.3-BL
+Interface
+
+Memory Size
+
+Voltage - Supply
+
+Access Time
+
+Operating Temperature
+
+Supply Current (Icc)
+
+Standby Current (Iq)
+
+Features
+
+Name
+AS6C6264-55PCN
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+6264
+
+*
+]
+[
+DESIGNATOR
+U4007
+FOOTPRINT
+PDIP-28_L38.1-W12.7-P2.54-LS15.3-BL
+PARTTYPE
+AS6C6264-55PCN
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AS6C6264-55PCN
+Designator
+U4007
+Device
+AS6C6264-55PCN
+Unique ID
+gge18
+LCSC Part Name
+
+Supplier Part
+AS6C6264-55PCN.1
+Manufacturer
+Alliance Memory
+Manufacturer Part
+AS6C6264-55PCN
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L38.1-W12.7-H5.1-P2.54-LS15.3-BL
+Interface
+
+Memory Size
+
+Voltage - Supply
+
+Access Time
+
+Operating Temperature
+
+Supply Current (Icc)
+
+Standby Current (Iq)
+
+Features
+
+Name
+AS6C6264-55PCN
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+6264
+
+*
+]
+[
+DESIGNATOR
+U4008
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT28C256-15PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT28C256-15PU
+Designator
+U4008
+Device
+AT28C256-15PU
+Unique ID
+gge19
+LCSC Part Name
+32KX8位低功耗CMOS SRAM
+Supplier Part
+C5569983
+Manufacturer
+Alliance Memory
+Manufacturer Part
+AS6C62256-55PCN
+Supplier Footprint
+PDIP-28
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/AS6C62256-55PCN/6488360.html
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+-
+Memory Size
+256Kbit
+Clock Frequency
+
+Write Cycle Time(Tw)
+
+Data Retention - TDR (Year)
+
+Write Cycle Endurance
+
+Features
+自动掉电功能
+Voltage - Supply
+2.7V~5.5V
+Operating Temperature
+0℃~+70℃
+Name
+AS6C62256-55PCN
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Access Time
+55ns
+Supply Current (Icc)
+45mA
+Standby Current (Iq)
+3uA
+Value
+62256
+
+*
+]
+[
+DESIGNATOR
+U4009
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT28C256-15PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT28C256-15PU
+Designator
+U4009
+Device
+AT28C256-15PU
+Unique ID
+gge20
+LCSC Part Name
+32KX8位低功耗CMOS SRAM
+Supplier Part
+C5569983
+Manufacturer
+Alliance Memory
+Manufacturer Part
+AS6C62256-55PCN
+Supplier Footprint
+PDIP-28
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/AS6C62256-55PCN/6488360.html
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+-
+Memory Size
+256Kbit
+Clock Frequency
+
+Write Cycle Time(Tw)
+
+Data Retention - TDR (Year)
+
+Write Cycle Endurance
+
+Features
+自动掉电功能
+Voltage - Supply
+2.7V~5.5V
+Operating Temperature
+0℃~+70℃
+Name
+AS6C62256-55PCN
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Access Time
+55ns
+Supply Current (Icc)
+45mA
+Standby Current (Iq)
+3uA
+Value
+62256
+
+*
+]
+[
+DESIGNATOR
+U4010
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT28C256-15PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT28C256-15PU
+Designator
+U4010
+Device
+AT28C256-15PU
+Unique ID
+gge21
+LCSC Part Name
+32KX8位低功耗CMOS SRAM
+Supplier Part
+C5569983
+Manufacturer
+Alliance Memory
+Manufacturer Part
+AS6C62256-55PCN
+Supplier Footprint
+PDIP-28
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/AS6C62256-55PCN/6488360.html
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+-
+Memory Size
+256Kbit
+Clock Frequency
+
+Write Cycle Time(Tw)
+
+Data Retention - TDR (Year)
+
+Write Cycle Endurance
+
+Features
+自动掉电功能
+Voltage - Supply
+2.7V~5.5V
+Operating Temperature
+0℃~+70℃
+Name
+AS6C62256-55PCN
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Access Time
+55ns
+Supply Current (Icc)
+45mA
+Standby Current (Iq)
+3uA
+Value
+62256
+
+*
+]
+[
+DESIGNATOR
+U4011
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT28C256-15PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT28C256-15PU
+Designator
+U4011
+Device
+AT28C256-15PU
+Unique ID
+gge22
+LCSC Part Name
+32KX8位低功耗CMOS SRAM
+Supplier Part
+C5569983
+Manufacturer
+Alliance Memory
+Manufacturer Part
+AS6C62256-55PCN
+Supplier Footprint
+PDIP-28
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/AS6C62256-55PCN/6488360.html
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+-
+Memory Size
+256Kbit
+Clock Frequency
+
+Write Cycle Time(Tw)
+
+Data Retention - TDR (Year)
+
+Write Cycle Endurance
+
+Features
+自动掉电功能
+Voltage - Supply
+2.7V~5.5V
+Operating Temperature
+0℃~+70℃
+Name
+AS6C62256-55PCN
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Access Time
+55ns
+Supply Current (Icc)
+45mA
+Standby Current (Iq)
+3uA
+Value
+62256
+
+*
+]
+[
+DESIGNATOR
+U4012
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT27C512R-70PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT27C512R-70PU
+Designator
+U4012
+Device
+AT27C512R-70PU
+Unique ID
+gge31
+LCSC Part Name
+高速低功耗电可擦除可编程只读存储器
+Supplier Part
+C19311781
+Manufacturer
+Winbond(华邦)
+Manufacturer Part
+W27C512-45Z
+Supplier Footprint
+PDIP-28
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/W27C512-45Z/20599581.html
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+并口(Parallel)
+Memory Format
+
+Memory Size
+512Kbit
+Voltage - Supply
+4.75V~5.25V
+Operating Temperature
+0℃~+70℃
+Features
+安全擦除功能
+Name
+W27C512-45Z
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Clock Frequency
+-
+Write Cycle Time(Tw)
+100us
+Data Retention - TDR (Year)
+-
+Write Cycle Endurance
+-
+Operating Current
+30mA
+Standby Current
+1mA
+Access Time
+45ns
+Value
+W27C512
+
+*
+]
+[
+DESIGNATOR
+U4013
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT27C512R-70PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT27C512R-70PU
+Designator
+U4013
+Device
+AT27C512R-70PU
+Unique ID
+gge32
+LCSC Part Name
+高速低功耗电可擦除可编程只读存储器
+Supplier Part
+C19311781
+Manufacturer
+Winbond(华邦)
+Manufacturer Part
+W27C512-45Z
+Supplier Footprint
+PDIP-28
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/W27C512-45Z/20599581.html
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+并口(Parallel)
+Memory Format
+
+Memory Size
+512Kbit
+Voltage - Supply
+4.75V~5.25V
+Operating Temperature
+0℃~+70℃
+Features
+安全擦除功能
+Name
+W27C512-45Z
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Clock Frequency
+-
+Write Cycle Time(Tw)
+100us
+Data Retention - TDR (Year)
+-
+Write Cycle Endurance
+-
+Operating Current
+30mA
+Standby Current
+1mA
+Access Time
+45ns
+Value
+W27C512
+
+*
+]
+[
+DESIGNATOR
+U4014
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT27C512R-70PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT27C512R-70PU
+Designator
+U4014
+Device
+AT27C512R-70PU
+Unique ID
+gge33
+LCSC Part Name
+高速低功耗电可擦除可编程只读存储器
+Supplier Part
+C19311781
+Manufacturer
+Winbond(华邦)
+Manufacturer Part
+W27C512-45Z
+Supplier Footprint
+PDIP-28
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/W27C512-45Z/20599581.html
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+并口(Parallel)
+Memory Format
+
+Memory Size
+512Kbit
+Voltage - Supply
+4.75V~5.25V
+Operating Temperature
+0℃~+70℃
+Features
+安全擦除功能
+Name
+W27C512-45Z
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Clock Frequency
+-
+Write Cycle Time(Tw)
+100us
+Data Retention - TDR (Year)
+-
+Write Cycle Endurance
+-
+Operating Current
+30mA
+Standby Current
+1mA
+Access Time
+45ns
+Value
+W27C512
+
+*
+]
+[
+DESIGNATOR
+U4015
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT27C512R-70PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT27C512R-70PU
+Designator
+U4015
+Device
+AT27C512R-70PU
+Unique ID
+gge34
+LCSC Part Name
+高速低功耗电可擦除可编程只读存储器
+Supplier Part
+C19311781
+Manufacturer
+Winbond(华邦)
+Manufacturer Part
+W27C512-45Z
+Supplier Footprint
+PDIP-28
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/W27C512-45Z/20599581.html
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+并口(Parallel)
+Memory Format
+
+Memory Size
+512Kbit
+Voltage - Supply
+4.75V~5.25V
+Operating Temperature
+0℃~+70℃
+Features
+安全擦除功能
+Name
+W27C512-45Z
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Clock Frequency
+-
+Write Cycle Time(Tw)
+100us
+Data Retention - TDR (Year)
+-
+Write Cycle Endurance
+-
+Operating Current
+30mA
+Standby Current
+1mA
+Access Time
+45ns
+Value
+W27C512
+
+*
+]
+[
+DESIGNATOR
+U4016
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT27C512R-70PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT27C512R-70PU
+Designator
+U4016
+Device
+AT27C512R-70PU
+Unique ID
+gge35
+LCSC Part Name
+高速低功耗电可擦除可编程只读存储器
+Supplier Part
+C19311781
+Manufacturer
+Winbond(华邦)
+Manufacturer Part
+W27C512-45Z
+Supplier Footprint
+PDIP-28
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/W27C512-45Z/20599581.html
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+并口(Parallel)
+Memory Format
+
+Memory Size
+512Kbit
+Voltage - Supply
+4.75V~5.25V
+Operating Temperature
+0℃~+70℃
+Features
+安全擦除功能
+Name
+W27C512-45Z
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Clock Frequency
+-
+Write Cycle Time(Tw)
+100us
+Data Retention - TDR (Year)
+-
+Write Cycle Endurance
+-
+Operating Current
+30mA
+Standby Current
+1mA
+Access Time
+45ns
+Value
+W27C512
+
+*
+]
+[
+DESIGNATOR
+U4017
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT27C512R-70PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT27C512R-70PU
+Designator
+U4017
+Device
+AT27C512R-70PU
+Unique ID
+gge36
+LCSC Part Name
+高速低功耗电可擦除可编程只读存储器
+Supplier Part
+C19311781
+Manufacturer
+Winbond(华邦)
+Manufacturer Part
+W27C512-45Z
+Supplier Footprint
+PDIP-28
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/W27C512-45Z/20599581.html
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+并口(Parallel)
+Memory Format
+
+Memory Size
+512Kbit
+Voltage - Supply
+4.75V~5.25V
+Operating Temperature
+0℃~+70℃
+Features
+安全擦除功能
+Name
+W27C512-45Z
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Clock Frequency
+-
+Write Cycle Time(Tw)
+100us
+Data Retention - TDR (Year)
+-
+Write Cycle Endurance
+-
+Operating Current
+30mA
+Standby Current
+1mA
+Access Time
+45ns
+Value
+W27C512
+
+*
+]
+[
+DESIGNATOR
+U4018
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT27C512R-70PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT27C512R-70PU
+Designator
+U4018
+Device
+AT27C512R-70PU
+Unique ID
+gge37
+LCSC Part Name
+高速低功耗电可擦除可编程只读存储器
+Supplier Part
+C19311781
+Manufacturer
+Winbond(华邦)
+Manufacturer Part
+W27C512-45Z
+Supplier Footprint
+PDIP-28
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/W27C512-45Z/20599581.html
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+并口(Parallel)
+Memory Format
+
+Memory Size
+512Kbit
+Voltage - Supply
+4.75V~5.25V
+Operating Temperature
+0℃~+70℃
+Features
+安全擦除功能
+Name
+W27C512-45Z
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Clock Frequency
+-
+Write Cycle Time(Tw)
+100us
+Data Retention - TDR (Year)
+-
+Write Cycle Endurance
+-
+Operating Current
+30mA
+Standby Current
+1mA
+Access Time
+45ns
+Value
+W27C512
+
+*
+]
+[
+DESIGNATOR
+U4019
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT27C512R-70PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT27C512R-70PU
+Designator
+U4019
+Device
+AT27C512R-70PU
+Unique ID
+gge38
+LCSC Part Name
+高速低功耗电可擦除可编程只读存储器
+Supplier Part
+C19311781
+Manufacturer
+Winbond(华邦)
+Manufacturer Part
+W27C512-45Z
+Supplier Footprint
+PDIP-28
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/W27C512-45Z/20599581.html
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+并口(Parallel)
+Memory Format
+
+Memory Size
+512Kbit
+Voltage - Supply
+4.75V~5.25V
+Operating Temperature
+0℃~+70℃
+Features
+安全擦除功能
+Name
+W27C512-45Z
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Clock Frequency
+-
+Write Cycle Time(Tw)
+100us
+Data Retention - TDR (Year)
+-
+Write Cycle Endurance
+-
+Operating Current
+30mA
+Standby Current
+1mA
+Access Time
+45ns
+Value
+W27C512
+
+*
+]
+[
+DESIGNATOR
+U4020
+FOOTPRINT
+DIP-16_L19.2-W6.6-P2.54-LS7.6-BL
+PARTTYPE
+74HC138N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+74HC138N
+Designator
+U4020
+Device
+74HC138N
+Unique ID
+gge39
+LCSC Part Name
+
+Supplier Part
+74HC138N.1
+Manufacturer
+HGSEMI(华冠)
+Manufacturer Part
+74HC138N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-16_L19.2-W6.6-H3.3-LS7.62-P2.54
+Type
+
+Voltage Supply Source
+
+Voltage - Supply
+
+Number of lines
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Operating temperature
+
+Propagation Delay
+
+Quiescent Current
+
+Function
+
+Series
+
+Name
+74HC138N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4021
+FOOTPRINT
+DIP-16_L19.2-W6.6-P2.54-LS7.6-BL
+PARTTYPE
+74HC138N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+74HC138N
+Designator
+U4021
+Device
+74HC138N
+Unique ID
+gge40
+LCSC Part Name
+
+Supplier Part
+74HC138N.1
+Manufacturer
+HGSEMI(华冠)
+Manufacturer Part
+74HC138N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-16_L19.2-W6.6-H3.3-LS7.62-P2.54
+Type
+
+Voltage Supply Source
+
+Voltage - Supply
+
+Number of lines
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Operating temperature
+
+Propagation Delay
+
+Quiescent Current
+
+Function
+
+Series
+
+Name
+74HC138N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4022
+FOOTPRINT
+DIP-16_L19.2-W6.6-P2.54-LS7.6-BL
+PARTTYPE
+74HC138N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+74HC138N
+Designator
+U4022
+Device
+74HC138N
+Unique ID
+gge41
+LCSC Part Name
+
+Supplier Part
+74HC138N.1
+Manufacturer
+HGSEMI(华冠)
+Manufacturer Part
+74HC138N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-16_L19.2-W6.6-H3.3-LS7.62-P2.54
+Type
+
+Voltage Supply Source
+
+Voltage - Supply
+
+Number of lines
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Operating temperature
+
+Propagation Delay
+
+Quiescent Current
+
+Function
+
+Series
+
+Name
+74HC138N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4023
+FOOTPRINT
+DIP-16_L19.2-W6.6-P2.54-LS7.6-BL
+PARTTYPE
+74HC138N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+74HC138N
+Designator
+U4023
+Device
+74HC138N
+Unique ID
+gge42
+LCSC Part Name
+
+Supplier Part
+74HC138N.1
+Manufacturer
+HGSEMI(华冠)
+Manufacturer Part
+74HC138N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-16_L19.2-W6.6-H3.3-LS7.62-P2.54
+Type
+
+Voltage Supply Source
+
+Voltage - Supply
+
+Number of lines
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Operating temperature
+
+Propagation Delay
+
+Quiescent Current
+
+Function
+
+Series
+
+Name
+74HC138N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4024
+FOOTPRINT
+PDIP-20_L24.5-W6.4-P2.54-LS7.9-BL
+PARTTYPE
+SN74HC688N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HC688N
+Designator
+U4024
+Device
+SN74HC688N
+Unique ID
+gge43
+LCSC Part Name
+
+Supplier Part
+SN74HC688N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HC688N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L24.5-W6.4-P2.54-LS7.9-BL
+Number of Channels
+
+Supply Voltage
+
+Output
+
+Output Function
+
+Maximum Propagation Delay
+
+Quiescent Current
+
+Sink Current
+
+Source Current
+
+Operating Temperature
+
+Name
+SN74HC688N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4025
+FOOTPRINT
+DIP-14_L19.2-W6.6-P2.54-LS10.9-BL
+PARTTYPE
+SN74HC04N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HC04N
+Designator
+U4025
+Device
+SN74HC04N
+Unique ID
+gge44
+LCSC Part Name
+
+Supplier Part
+SN74HC04N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HC04N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-14_L20.0-W6.7-H4.1-LS7.62-P2.54
+Input Type
+
+Voltage - Supply
+
+Quiescent Current(Iq)
+
+Number of Circuits
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Input Logic Level - High
+
+Input Logic Level -Low
+
+Output Logic Level - High
+
+Output Logic Level - Low
+
+Propagation Delay
+
+Series
+
+Operating Temperature
+
+Features
+
+Name
+SN74HC04N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4026
+FOOTPRINT
+DIP-14_L19.2-W6.6-P2.54-LS10.9-BL
+PARTTYPE
+SN74HC08N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HC08N
+Designator
+U4026
+Device
+SN74HC08N
+Unique ID
+gge45
+LCSC Part Name
+
+Supplier Part
+SN74HC08N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HC08N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-14_L20.0-W6.7-H4.1-LS7.62-P2.54
+Logic Type
+
+Number of Gates
+
+Voltage - Supply
+
+Quiescent Current
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Input Logic Level - High
+
+Input Logic Level - Low
+
+Output Logic Level - High
+
+Output Logic Level - Low
+
+Series
+
+Propagation Delay
+
+Operating Temperature
+
+Inputs per Gates
+
+Features
+
+Name
+SN74HC08N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4027
+FOOTPRINT
+DIP-16_L20.4-W5.8-P2.54-LS7.6-BL
+PARTTYPE
+SN74HC157N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HC157N
+Designator
+U4027
+Device
+SN74HC157N
+Unique ID
+gge46
+LCSC Part Name
+
+Supplier Part
+SN74HC157N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HC157N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-16_L20.4-W5.8-H5.1-P2.54-LS7.6-BL
+Type
+
+Voltage Supply Source
+
+Voltage - Supply
+
+Number of lines
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Operating temperature
+
+Propagation Delay
+
+Quiescent Current
+
+Function
+
+Name
+SN74HC157N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4028
+FOOTPRINT
+PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL
+PARTTYPE
+CD74HC245E
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HC245E
+Designator
+U4028
+Device
+CD74HC245E
+Unique ID
+gge47
+LCSC Part Name
+
+Supplier Part
+CD74HC245E.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HC245E
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+CD74HC245E
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4029
+FOOTPRINT
+PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL
+PARTTYPE
+CD74HC245E
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HC245E
+Designator
+U4029
+Device
+CD74HC245E
+Unique ID
+gge48
+LCSC Part Name
+
+Supplier Part
+CD74HC245E.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HC245E
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+CD74HC245E
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4030
+FOOTPRINT
+PDIP-14_L19.3-W6.4-P2.54-LS7.9-BL-1
+PARTTYPE
+CD74HC74E
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HC74E
+Designator
+U4030
+Device
+CD74HC74E
+Unique ID
+gge49
+LCSC Part Name
+
+Supplier Part
+CD74HC74E.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HC74E
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-14_L19.3-W6.4-P2.54-LS7.9-BL-1
+Type
+
+Trigger Type
+
+Voltage - Supply
+
+Clock Frequency
+
+Function
+
+Number of Elements
+
+Number of Bits per Element
+
+Output Type
+
+Propagation Delay
+
+Series
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Quiescent Current
+
+Input Capacitance
+
+Operating Temperature
+
+Synchronous/Asynchronous
+
+Setup Time
+
+Hold Time
+
+Name
+CD74HC74E
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4031
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4031
+Device
+SN74HCT541N
+Unique ID
+gge50
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4032
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4032
+Device
+SN74HCT541N
+Unique ID
+gge51
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4033
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4033
+Device
+SN74HCT541N
+Unique ID
+gge52
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4034
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4034
+Device
+SN74HCT541N
+Unique ID
+gge53
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4035
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4035
+Device
+SN74HCT541N
+Unique ID
+gge54
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4036
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4036
+Device
+SN74HCT541N
+Unique ID
+gge55
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4037
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4037
+Device
+SN74HCT541N
+Unique ID
+gge56
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4038
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4038
+Device
+SN74HCT541N
+Unique ID
+gge57
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4039
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4039
+Device
+SN74HCT541N
+Unique ID
+gge58
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4040
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4040
+Device
+SN74HCT541N
+Unique ID
+gge59
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4041
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4041
+Device
+SN74HCT541N
+Unique ID
+gge60
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4042
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4042
+Device
+SN74HCT541N
+Unique ID
+gge61
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4043
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4043
+Device
+SN74HCT541N
+Unique ID
+gge62
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4044
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4044
+Device
+SN74HCT541N
+Unique ID
+gge63
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4045
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4045
+Device
+SN74HCT541N
+Unique ID
+gge64
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4046
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4046
+Device
+SN74HCT541N
+Unique ID
+gge65
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4047
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4047
+Device
+SN74HCT541N
+Unique ID
+gge66
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4048
+FOOTPRINT
+PDIP-14_L19.3-W6.4-P2.54-LS7.6-BL
+PARTTYPE
+SN74HC32AN
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HC32AN
+Designator
+U4048
+Device
+SN74HC32AN
+Unique ID
+gge67
+LCSC Part Name
+
+Supplier Part
+SN74HC32AN.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HC32AN
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-14_L19.3-W6.4-P2.54-LS7.6-BL
+Logic Type
+
+Number of Channels
+
+Voltage - Supply
+
+Quiescent Current
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Input Logic Level - High
+
+Input Logic Level - Low
+
+Series
+
+Propagation Delay
+
+Operating Temperature
+
+Name
+SN74HC32AN
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4049
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4049
+Device
+SN74HCT541N
+Unique ID
+gge68
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4050
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4050
+Device
+SN74HCT541N
+Unique ID
+gge69
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4051
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4051
+Device
+SN74HCT541N
+Unique ID
+gge70
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4052
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4052
+Device
+SN74HCT541N
+Unique ID
+gge71
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4053
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4053
+Device
+SN74HCT541N
+Unique ID
+gge72
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4054
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4054
+Device
+SN74HCT541N
+Unique ID
+gge73
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4055
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4055
+Device
+SN74HCT541N
+Unique ID
+gge74
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4056
+FOOTPRINT
+PDIP-14_L19.3-W6.4-P2.54-LS7.6-BL
+PARTTYPE
+SN74HC32AN
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HC32AN
+Designator
+U4056
+Device
+SN74HC32AN
+Unique ID
+gge75
+LCSC Part Name
+
+Supplier Part
+SN74HC32AN.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HC32AN
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-14_L19.3-W6.4-P2.54-LS7.6-BL
+Logic Type
+
+Number of Channels
+
+Voltage - Supply
+
+Quiescent Current
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Input Logic Level - High
+
+Input Logic Level - Low
+
+Series
+
+Propagation Delay
+
+Operating Temperature
+
+Name
+SN74HC32AN
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+J20201
+FOOTPRINT
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+PARTTYPE
+PZ254V-12-40P
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+PZ254V-12-40P
+Designator
+J20201
+Device
+PZ254V-12-40P
+Unique ID
+gge76
+LCSC Part Name
+
+Supplier Part
+PZ254V-12-40P.1
+Manufacturer
+XFCN(兴飞)
+Manufacturer Part
+PZ254V-12-40P
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+Pin Structure
+
+Pitch
+
+Row Spacing
+
+Circluar Pins/Square Pins
+
+Mounting Type
+
+Number of Rows
+
+Number of Pins
+
+Current Rating
+
+Length of Mating Pin
+
+Insulation Height
+
+Length of End Connection Pin
+
+Contact Material
+
+Operating Temperature
+
+Color
+
+Name
+PZ254V-12-40P
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+J20202
+FOOTPRINT
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+PARTTYPE
+PZ254V-12-40P
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+PZ254V-12-40P
+Designator
+J20202
+Device
+PZ254V-12-40P
+Unique ID
+gge77
+LCSC Part Name
+
+Supplier Part
+PZ254V-12-40P.1
+Manufacturer
+XFCN(兴飞)
+Manufacturer Part
+PZ254V-12-40P
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+Pin Structure
+
+Pitch
+
+Row Spacing
+
+Circluar Pins/Square Pins
+
+Mounting Type
+
+Number of Rows
+
+Number of Pins
+
+Current Rating
+
+Length of Mating Pin
+
+Insulation Height
+
+Length of End Connection Pin
+
+Contact Material
+
+Operating Temperature
+
+Color
+
+Name
+PZ254V-12-40P
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+J20203
+FOOTPRINT
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+PARTTYPE
+PZ254V-12-40P
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+PZ254V-12-40P
+Designator
+J20203
+Device
+PZ254V-12-40P
+Unique ID
+gge78
+LCSC Part Name
+
+Supplier Part
+PZ254V-12-40P.1
+Manufacturer
+XFCN(兴飞)
+Manufacturer Part
+PZ254V-12-40P
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+Pin Structure
+
+Pitch
+
+Row Spacing
+
+Circluar Pins/Square Pins
+
+Mounting Type
+
+Number of Rows
+
+Number of Pins
+
+Current Rating
+
+Length of Mating Pin
+
+Insulation Height
+
+Length of End Connection Pin
+
+Contact Material
+
+Operating Temperature
+
+Color
+
+Name
+PZ254V-12-40P
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+J20204
+FOOTPRINT
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+PARTTYPE
+PZ254V-12-40P
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+PZ254V-12-40P
+Designator
+J20204
+Device
+PZ254V-12-40P
+Unique ID
+gge79
+LCSC Part Name
+
+Supplier Part
+PZ254V-12-40P.1
+Manufacturer
+XFCN(兴飞)
+Manufacturer Part
+PZ254V-12-40P
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+Pin Structure
+
+Pitch
+
+Row Spacing
+
+Circluar Pins/Square Pins
+
+Mounting Type
+
+Number of Rows
+
+Number of Pins
+
+Current Rating
+
+Length of Mating Pin
+
+Insulation Height
+
+Length of End Connection Pin
+
+Contact Material
+
+Operating Temperature
+
+Color
+
+Name
+PZ254V-12-40P
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+J20205
+FOOTPRINT
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+PARTTYPE
+PZ254V-12-40P
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+PZ254V-12-40P
+Designator
+J20205
+Device
+PZ254V-12-40P
+Unique ID
+gge80
+LCSC Part Name
+
+Supplier Part
+PZ254V-12-40P.1
+Manufacturer
+XFCN(兴飞)
+Manufacturer Part
+PZ254V-12-40P
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+Pin Structure
+
+Pitch
+
+Row Spacing
+
+Circluar Pins/Square Pins
+
+Mounting Type
+
+Number of Rows
+
+Number of Pins
+
+Current Rating
+
+Length of Mating Pin
+
+Insulation Height
+
+Length of End Connection Pin
+
+Contact Material
+
+Operating Temperature
+
+Color
+
+Name
+PZ254V-12-40P
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+J20206
+FOOTPRINT
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+PARTTYPE
+PZ254V-12-40P
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+PZ254V-12-40P
+Designator
+J20206
+Device
+PZ254V-12-40P
+Unique ID
+gge81
+LCSC Part Name
+
+Supplier Part
+PZ254V-12-40P.1
+Manufacturer
+XFCN(兴飞)
+Manufacturer Part
+PZ254V-12-40P
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+Pin Structure
+
+Pitch
+
+Row Spacing
+
+Circluar Pins/Square Pins
+
+Mounting Type
+
+Number of Rows
+
+Number of Pins
+
+Current Rating
+
+Length of Mating Pin
+
+Insulation Height
+
+Length of End Connection Pin
+
+Contact Material
+
+Operating Temperature
+
+Color
+
+Name
+PZ254V-12-40P
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+J20207
+FOOTPRINT
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+PARTTYPE
+PZ254V-12-40P
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+PZ254V-12-40P
+Designator
+J20207
+Device
+PZ254V-12-40P
+Unique ID
+gge82
+LCSC Part Name
+
+Supplier Part
+PZ254V-12-40P.1
+Manufacturer
+XFCN(兴飞)
+Manufacturer Part
+PZ254V-12-40P
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+Pin Structure
+
+Pitch
+
+Row Spacing
+
+Circluar Pins/Square Pins
+
+Mounting Type
+
+Number of Rows
+
+Number of Pins
+
+Current Rating
+
+Length of Mating Pin
+
+Insulation Height
+
+Length of End Connection Pin
+
+Contact Material
+
+Operating Temperature
+
+Color
+
+Name
+PZ254V-12-40P
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+J20208
+FOOTPRINT
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+PARTTYPE
+PZ254V-12-40P
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+PZ254V-12-40P
+Designator
+J20208
+Device
+PZ254V-12-40P
+Unique ID
+gge83
+LCSC Part Name
+
+Supplier Part
+PZ254V-12-40P.1
+Manufacturer
+XFCN(兴飞)
+Manufacturer Part
+PZ254V-12-40P
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+HDR-TH_40P-P2.54-V-M-R2-C20-S2.54_2-146257-0
+Pin Structure
+
+Pitch
+
+Row Spacing
+
+Circluar Pins/Square Pins
+
+Mounting Type
+
+Number of Rows
+
+Number of Pins
+
+Current Rating
+
+Length of Mating Pin
+
+Insulation Height
+
+Length of End Connection Pin
+
+Contact Material
+
+Operating Temperature
+
+Color
+
+Name
+PZ254V-12-40P
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED3001
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED3001
+Device
+HLMP-S301
+Unique ID
+gge84
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q3001
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q3001
+Device
+S8050_C2931492
+Unique ID
+gge85
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R3001
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R3001
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge86
+Name
+1kΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier
+LCSC
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+
+*
+]
+[
+DESIGNATOR
+R3002
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R3002
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge87
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED3002
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED3002
+Device
+HLMP-S301
+Unique ID
+gge88
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q3002
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q3002
+Device
+S8050_C2931492
+Unique ID
+gge89
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R3003
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R3003
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge90
+Name
+1kΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier
+LCSC
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+
+*
+]
+[
+DESIGNATOR
+R3004
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R3004
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge91
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED3003
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED3003
+Device
+HLMP-S301
+Unique ID
+gge92
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q3003
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q3003
+Device
+S8050_C2931492
+Unique ID
+gge93
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R3005
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R3005
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge94
+Name
+1kΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier
+LCSC
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+
+*
+]
+[
+DESIGNATOR
+R3006
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R3006
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge95
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED3004
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED3004
+Device
+HLMP-S301
+Unique ID
+gge96
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q3004
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q3004
+Device
+S8050_C2931492
+Unique ID
+gge97
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R3007
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R3007
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge98
+Name
+1kΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier
+LCSC
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+
+*
+]
+[
+DESIGNATOR
+R3008
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R3008
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge99
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED3005
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED3005
+Device
+HLMP-S301
+Unique ID
+gge100
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q3005
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q3005
+Device
+S8050_C2931492
+Unique ID
+gge101
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R3009
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R3009
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge102
+Name
+1kΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier
+LCSC
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+
+*
+]
+[
+DESIGNATOR
+R3010
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R3010
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge103
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED3006
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED3006
+Device
+HLMP-S301
+Unique ID
+gge104
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q3006
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q3006
+Device
+S8050_C2931492
+Unique ID
+gge105
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R3011
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R3011
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge106
+Name
+1kΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier
+LCSC
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+
+*
+]
+[
+DESIGNATOR
+R3012
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R3012
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge107
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED3007
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED3007
+Device
+HLMP-S301
+Unique ID
+gge108
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q3007
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q3007
+Device
+S8050_C2931492
+Unique ID
+gge109
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R3013
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R3013
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge110
+Name
+1kΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier
+LCSC
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+
+*
+]
+[
+DESIGNATOR
+R3014
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R3014
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge111
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED3008
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED3008
+Device
+HLMP-S301
+Unique ID
+gge112
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q3008
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q3008
+Device
+S8050_C2931492
+Unique ID
+gge113
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R3015
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R3015
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge114
+Name
+1kΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier
+LCSC
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+
+*
+]
+[
+DESIGNATOR
+R3016
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R3016
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge115
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED3009
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED3009
+Device
+HLMP-S301
+Unique ID
+gge116
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q3009
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q3009
+Device
+S8050_C2931492
+Unique ID
+gge117
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R3017
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R3017
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge118
+Name
+1kΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier
+LCSC
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+
+*
+]
+[
+DESIGNATOR
+R3018
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R3018
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge119
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED3010
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED3010
+Device
+HLMP-S301
+Unique ID
+gge120
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q3010
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q3010
+Device
+S8050_C2931492
+Unique ID
+gge121
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R3019
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R3019
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge122
+Name
+1kΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier
+LCSC
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+
+*
+]
+[
+DESIGNATOR
+R3020
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R3020
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge123
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+(
+GND 
+J4001-1 PZ254V-12-24P-1 Passive 
+J4001-20 PZ254V-12-24P-20 Passive 
+J4001-21 PZ254V-12-24P-21 Passive 
+J4001-2 PZ254V-12-24P-2 Passive 
+R4006-2 MFR-25FBF52-10K-2 Passive 
+U4001-14 AS6C6264-55PCN-Vss Passive 
+U4002-14 AS6C6264-55PCN-Vss Passive 
+U4003-14 AS6C6264-55PCN-Vss Passive 
+U4004-14 AS6C6264-55PCN-Vss Passive 
+U4005-14 AS6C6264-55PCN-Vss Passive 
+U4006-14 AS6C6264-55PCN-Vss Passive 
+U4007-14 AS6C6264-55PCN-Vss Passive 
+U4008-14 AT28C256-15PU-GND Passive 
+U4009-14 AT28C256-15PU-GND Passive 
+U4010-14 AT28C256-15PU-GND Passive 
+U4011-14 AT28C256-15PU-GND Passive 
+U4012-14 AT27C512R-70PU-GND Passive 
+U4013-14 AT27C512R-70PU-GND Passive 
+U4014-14 AT27C512R-70PU-GND Passive 
+U4015-14 AT27C512R-70PU-GND Passive 
+U4016-14 AT27C512R-70PU-GND Passive 
+U4017-14 AT27C512R-70PU-GND Passive 
+U4018-14 AT27C512R-70PU-GND Passive 
+U4019-14 AT27C512R-70PU-GND Passive 
+U4020-8 74HC138N-GND Passive 
+U4021-8 74HC138N-GND Passive 
+U4022-8 74HC138N-GND Passive 
+U4023-8 74HC138N-GND Passive 
+U4024-18 SN74HC688N-Q7 Passive 
+U4024-16 SN74HC688N-Q6 Passive 
+U4024-14 SN74HC688N-Q5 Passive 
+U4024-10 SN74HC688N-GND Passive 
+U4024-1 SN74HC688N-OE# Passive 
+U4025-7 SN74HC04N-GND Passive 
+U4025-13 SN74HC04N-6A Passive 
+U4026-7 SN74HC08N-GND Passive 
+U4026-9 SN74HC08N-3A Passive 
+U4026-10 SN74HC08N-3B Passive 
+U4026-12 SN74HC08N-4A Passive 
+U4026-13 SN74HC08N-4B Passive 
+U4027-8 SN74HC157N-GND Passive 
+U4027-13 SN74HC157N-4B Passive 
+U4027-15 SN74HC157N-#G Passive 
+U4028-10 CD74HC245E-GND Passive 
+U4029-10 CD74HC245E-GND Passive 
+U4030-7 CD74HC74E-GND Passive 
+U4031-1 SN74HCT541N-OE1 Passive 
+U4031-19 SN74HCT541N-OE2 Passive 
+U4031-10 SN74HCT541N-GND Passive 
+U4032-1 SN74HCT541N-OE1 Passive 
+U4032-19 SN74HCT541N-OE2 Passive 
+U4032-10 SN74HCT541N-GND Passive 
+U4033-1 SN74HCT541N-OE1 Passive 
+U4033-19 SN74HCT541N-OE2 Passive 
+U4033-10 SN74HCT541N-GND Passive 
+U4034-1 SN74HCT541N-OE1 Passive 
+U4034-19 SN74HCT541N-OE2 Passive 
+U4034-10 SN74HCT541N-GND Passive 
+U4035-10 SN74HCT541N-GND Passive 
+U4036-10 SN74HCT541N-GND Passive 
+U4037-10 SN74HCT541N-GND Passive 
+U4038-10 SN74HCT541N-GND Passive 
+U4039-10 SN74HCT541N-GND Passive 
+U4040-10 SN74HCT541N-GND Passive 
+U4041-8 SN74HCT541N-A7 Passive 
+U4041-9 SN74HCT541N-A8 Passive 
+U4041-10 SN74HCT541N-GND Passive 
+U4042-2 SN74HCT541N-A1 Passive 
+U4042-3 SN74HCT541N-A2 Passive 
+U4042-4 SN74HCT541N-A3 Passive 
+U4042-5 SN74HCT541N-A4 Passive 
+U4042-6 SN74HCT541N-A5 Passive 
+U4042-7 SN74HCT541N-A6 Passive 
+U4042-8 SN74HCT541N-A7 Passive 
+U4042-9 SN74HCT541N-A8 Passive 
+U4042-10 SN74HCT541N-GND Passive 
+U4043-10 SN74HCT541N-GND Passive 
+U4044-7 SN74HCT541N-A6 Passive 
+U4044-8 SN74HCT541N-A7 Passive 
+U4044-9 SN74HCT541N-A8 Passive 
+U4044-10 SN74HCT541N-GND Passive 
+U4045-10 SN74HCT541N-GND Passive 
+U4046-6 SN74HCT541N-A5 Passive 
+U4046-7 SN74HCT541N-A6 Passive 
+U4046-8 SN74HCT541N-A7 Passive 
+U4046-9 SN74HCT541N-A8 Passive 
+U4046-10 SN74HCT541N-GND Passive 
+U4047-10 SN74HCT541N-GND Passive 
+U4048-7 SN74HC32AN-GND Passive 
+U4049-10 SN74HCT541N-GND Passive 
+U4050-10 SN74HCT541N-GND Passive 
+U4051-10 SN74HCT541N-GND Passive 
+U4052-7 SN74HCT541N-A6 Passive 
+U4052-8 SN74HCT541N-A7 Passive 
+U4052-9 SN74HCT541N-A8 Passive 
+U4052-10 SN74HCT541N-GND Passive 
+U4053-10 SN74HCT541N-GND Passive 
+U4054-6 SN74HCT541N-A5 Passive 
+U4054-7 SN74HCT541N-A6 Passive 
+U4054-8 SN74HCT541N-A7 Passive 
+U4054-9 SN74HCT541N-A8 Passive 
+U4054-10 SN74HCT541N-GND Passive 
+U4055-10 SN74HCT541N-GND Passive 
+U4056-7 SN74HC32AN-GND Passive 
+J20201-9 PZ254V-12-40P-9 Passive 
+J20201-11 PZ254V-12-40P-11 Passive 
+J20201-13 PZ254V-12-40P-13 Passive 
+J20201-14 PZ254V-12-40P-14 Passive 
+J20201-12 PZ254V-12-40P-12 Passive 
+J20201-10 PZ254V-12-40P-10 Passive 
+J20202-9 PZ254V-12-40P-9 Passive 
+J20202-11 PZ254V-12-40P-11 Passive 
+J20202-13 PZ254V-12-40P-13 Passive 
+J20202-14 PZ254V-12-40P-14 Passive 
+J20202-12 PZ254V-12-40P-12 Passive 
+J20202-10 PZ254V-12-40P-10 Passive 
+J20203-9 PZ254V-12-40P-9 Passive 
+J20203-11 PZ254V-12-40P-11 Passive 
+J20203-13 PZ254V-12-40P-13 Passive 
+J20203-14 PZ254V-12-40P-14 Passive 
+J20203-12 PZ254V-12-40P-12 Passive 
+J20203-10 PZ254V-12-40P-10 Passive 
+J20204-9 PZ254V-12-40P-9 Passive 
+J20204-11 PZ254V-12-40P-11 Passive 
+J20204-13 PZ254V-12-40P-13 Passive 
+J20204-14 PZ254V-12-40P-14 Passive 
+J20204-12 PZ254V-12-40P-12 Passive 
+J20204-10 PZ254V-12-40P-10 Passive 
+J20205-9 PZ254V-12-40P-9 Passive 
+J20205-11 PZ254V-12-40P-11 Passive 
+J20205-13 PZ254V-12-40P-13 Passive 
+J20205-14 PZ254V-12-40P-14 Passive 
+J20205-12 PZ254V-12-40P-12 Passive 
+J20205-10 PZ254V-12-40P-10 Passive 
+J20206-9 PZ254V-12-40P-9 Passive 
+J20206-11 PZ254V-12-40P-11 Passive 
+J20206-13 PZ254V-12-40P-13 Passive 
+J20206-14 PZ254V-12-40P-14 Passive 
+J20206-12 PZ254V-12-40P-12 Passive 
+J20206-10 PZ254V-12-40P-10 Passive 
+J20207-9 PZ254V-12-40P-9 Passive 
+J20207-11 PZ254V-12-40P-11 Passive 
+J20207-13 PZ254V-12-40P-13 Passive 
+J20207-14 PZ254V-12-40P-14 Passive 
+J20207-12 PZ254V-12-40P-12 Passive 
+J20207-10 PZ254V-12-40P-10 Passive 
+J20208-9 PZ254V-12-40P-9 Passive 
+J20208-11 PZ254V-12-40P-11 Passive 
+J20208-13 PZ254V-12-40P-13 Passive 
+J20208-14 PZ254V-12-40P-14 Passive 
+J20208-12 PZ254V-12-40P-12 Passive 
+J20208-10 PZ254V-12-40P-10 Passive 
+Q3001-1 S8050_C2931492-E Passive 
+Q3002-1 S8050_C2931492-E Passive 
+Q3003-1 S8050_C2931492-E Passive 
+Q3004-1 S8050_C2931492-E Passive 
+Q3005-1 S8050_C2931492-E Passive 
+Q3006-1 S8050_C2931492-E Passive 
+Q3007-1 S8050_C2931492-E Passive 
+Q3008-1 S8050_C2931492-E Passive 
+Q3009-1 S8050_C2931492-E Passive 
+Q3010-1 S8050_C2931492-E Passive 
+)
+(
+UNCONNECTED-(J4001-PIN_24-PAD24) 
+J4001-24 PZ254V-12-24P-24 Passive 
+)
+(
+LOAD_DATA0 
+J4001-3 PZ254V-12-24P-3 Passive 
+U4029-2 CD74HC245E-A1 Passive 
+J20202-30 PZ254V-12-40P-30 Passive 
+R3018-2 MF1/4W-10KΩ±1% T-2 Passive 
+)
+(
+UNCONNECTED-(J4001-PIN_22-PAD22) 
+J4001-22 PZ254V-12-24P-22 Passive 
+)
+(
+LOAD_DATA2 
+J4001-5 PZ254V-12-24P-5 Passive 
+U4029-4 CD74HC245E-A3 Passive 
+J20202-32 PZ254V-12-40P-32 Passive 
+)
+(
+LOAD_DATA4 
+J4001-7 PZ254V-12-24P-7 Passive 
+U4029-6 CD74HC245E-A5 Passive 
+J20202-34 PZ254V-12-40P-34 Passive 
+)
+(
++5V 
+J4001-18 PZ254V-12-24P-18 Passive 
+J4001-19 PZ254V-12-24P-19 Passive 
+R4001-2 MFR-25FBF52-10K-2 Passive 
+R4002-2 MFR-25FBF52-10K-2 Passive 
+R4003-2 MFR-25FBF52-10K-2 Passive 
+R4004-2 MFR-25FBF52-10K-2 Passive 
+R4005-2 MFR-25FBF52-10K-2 Passive 
+R4007-2 MFR-25FBF52-10K-2 Passive 
+R4008-2 MFR-25FBF52-10K-2 Passive 
+R4009-2 MFR-25FBF52-10K-2 Passive 
+R4010-2 MFR-25FBF52-10K-2 Passive 
+U4001-26 AS6C6264-55PCN-CE2 Passive 
+U4001-28 AS6C6264-55PCN-Vcc Passive 
+U4002-26 AS6C6264-55PCN-CE2 Passive 
+U4002-28 AS6C6264-55PCN-Vcc Passive 
+U4003-26 AS6C6264-55PCN-CE2 Passive 
+U4003-28 AS6C6264-55PCN-Vcc Passive 
+U4004-26 AS6C6264-55PCN-CE2 Passive 
+U4004-28 AS6C6264-55PCN-Vcc Passive 
+U4005-26 AS6C6264-55PCN-CE2 Passive 
+U4005-28 AS6C6264-55PCN-Vcc Passive 
+U4006-26 AS6C6264-55PCN-CE2 Passive 
+U4006-28 AS6C6264-55PCN-Vcc Passive 
+U4007-26 AS6C6264-55PCN-CE2 Passive 
+U4007-28 AS6C6264-55PCN-Vcc Passive 
+U4008-28 AT28C256-15PU-Vcc Passive 
+U4009-28 AT28C256-15PU-Vcc Passive 
+U4010-28 AT28C256-15PU-Vcc Passive 
+U4011-28 AT28C256-15PU-Vcc Passive 
+U4012-28 AT27C512R-70PU-VCC Passive 
+U4013-28 AT27C512R-70PU-VCC Passive 
+U4014-28 AT27C512R-70PU-VCC Passive 
+U4015-28 AT27C512R-70PU-VCC Passive 
+U4016-28 AT27C512R-70PU-VCC Passive 
+U4017-28 AT27C512R-70PU-VCC Passive 
+U4018-28 AT27C512R-70PU-VCC Passive 
+U4019-28 AT27C512R-70PU-VCC Passive 
+U4020-16 74HC138N-VCC Passive 
+U4021-16 74HC138N-VCC Passive 
+U4022-16 74HC138N-VCC Passive 
+U4023-16 74HC138N-VCC Passive 
+U4024-20 SN74HC688N-VCC Passive 
+U4025-14 SN74HC04N-VCC Passive 
+U4026-14 SN74HC08N-VCC Passive 
+U4027-14 SN74HC157N-4A Passive 
+U4027-16 SN74HC157N-VCC Passive 
+U4028-20 CD74HC245E-VCC Passive 
+U4029-20 CD74HC245E-VCC Passive 
+U4030-14 CD74HC74E-VCC Passive 
+U4031-20 SN74HCT541N-VCC Passive 
+U4032-20 SN74HCT541N-VCC Passive 
+U4033-20 SN74HCT541N-VCC Passive 
+U4034-20 SN74HCT541N-VCC Passive 
+U4035-20 SN74HCT541N-VCC Passive 
+U4036-20 SN74HCT541N-VCC Passive 
+U4037-20 SN74HCT541N-VCC Passive 
+U4038-20 SN74HCT541N-VCC Passive 
+U4039-20 SN74HCT541N-VCC Passive 
+U4040-20 SN74HCT541N-VCC Passive 
+U4041-20 SN74HCT541N-VCC Passive 
+U4042-20 SN74HCT541N-VCC Passive 
+U4043-20 SN74HCT541N-VCC Passive 
+U4044-20 SN74HCT541N-VCC Passive 
+U4045-20 SN74HCT541N-VCC Passive 
+U4046-20 SN74HCT541N-VCC Passive 
+U4047-20 SN74HCT541N-VCC Passive 
+U4048-14 SN74HC32AN-VCC Passive 
+U4049-20 SN74HCT541N-VCC Passive 
+U4050-20 SN74HCT541N-VCC Passive 
+U4051-20 SN74HCT541N-VCC Passive 
+U4052-20 SN74HCT541N-VCC Passive 
+U4053-20 SN74HCT541N-VCC Passive 
+U4054-20 SN74HCT541N-VCC Passive 
+U4055-20 SN74HCT541N-VCC Passive 
+U4056-14 SN74HC32AN-VCC Passive 
+J20201-1 PZ254V-12-40P-1 Passive 
+J20201-3 PZ254V-12-40P-3 Passive 
+J20201-4 PZ254V-12-40P-4 Passive 
+J20201-2 PZ254V-12-40P-2 Passive 
+J20202-1 PZ254V-12-40P-1 Passive 
+J20202-3 PZ254V-12-40P-3 Passive 
+J20202-4 PZ254V-12-40P-4 Passive 
+J20202-2 PZ254V-12-40P-2 Passive 
+J20203-1 PZ254V-12-40P-1 Passive 
+J20203-3 PZ254V-12-40P-3 Passive 
+J20203-4 PZ254V-12-40P-4 Passive 
+J20203-2 PZ254V-12-40P-2 Passive 
+J20204-1 PZ254V-12-40P-1 Passive 
+J20204-3 PZ254V-12-40P-3 Passive 
+J20204-4 PZ254V-12-40P-4 Passive 
+J20204-2 PZ254V-12-40P-2 Passive 
+J20205-1 PZ254V-12-40P-1 Passive 
+J20205-3 PZ254V-12-40P-3 Passive 
+J20205-4 PZ254V-12-40P-4 Passive 
+J20205-2 PZ254V-12-40P-2 Passive 
+J20206-1 PZ254V-12-40P-1 Passive 
+J20206-3 PZ254V-12-40P-3 Passive 
+J20206-4 PZ254V-12-40P-4 Passive 
+J20206-2 PZ254V-12-40P-2 Passive 
+J20207-1 PZ254V-12-40P-1 Passive 
+J20207-3 PZ254V-12-40P-3 Passive 
+J20207-4 PZ254V-12-40P-4 Passive 
+J20207-2 PZ254V-12-40P-2 Passive 
+J20208-1 PZ254V-12-40P-1 Passive 
+J20208-3 PZ254V-12-40P-3 Passive 
+J20208-4 PZ254V-12-40P-4 Passive 
+J20208-2 PZ254V-12-40P-2 Passive 
+)
+(
+LOAD_DATA6 
+J4001-9 PZ254V-12-24P-9 Passive 
+U4029-8 CD74HC245E-A7 Passive 
+J20202-36 PZ254V-12-40P-36 Passive 
+)
+(
+IMAGE_READY 
+J4001-16 PZ254V-12-24P-16 Passive 
+U4030-2 CD74HC74E-1D Passive 
+U4030-5 CD74HC74E-1Q Passive 
+J20201-18 PZ254V-12-40P-18 Passive 
+)
+(
+LOAD_EN 
+J4001-11 PZ254V-12-24P-11 Passive 
+R4006-1 MFR-25FBF52-10K-1 Passive 
+U4034-7 SN74HCT541N-A6 Passive 
+J20202-38 PZ254V-12-40P-38 Passive 
+)
+(
+IMAGE_DONE_N 
+J4001-14 PZ254V-12-24P-14 Passive 
+R4009-1 MFR-25FBF52-10K-1 Passive 
+U4030-4 CD74HC74E-1PRE# Passive 
+J20201-17 PZ254V-12-40P-17 Passive 
+)
+(
+LOAD_NOE 
+J4001-13 PZ254V-12-24P-13 Passive 
+R4008-1 MFR-25FBF52-10K-1 Passive 
+U4034-9 SN74HCT541N-A8 Passive 
+J20202-39 PZ254V-12-40P-39 Passive 
+)
+(
+LOAD_NWE 
+J4001-12 PZ254V-12-24P-12 Passive 
+R4007-1 MFR-25FBF52-10K-1 Passive 
+U4034-8 SN74HCT541N-A7 Passive 
+J20202-40 PZ254V-12-40P-40 Passive 
+)
+(
+MODEL_DONE_N 
+J4001-15 PZ254V-12-24P-15 Passive 
+R4010-1 MFR-25FBF52-10K-1 Passive 
+U4030-10 CD74HC74E-2PRE# Passive 
+J20201-19 PZ254V-12-40P-19 Passive 
+)
+(
+LOAD_DATA7 
+J4001-10 PZ254V-12-24P-10 Passive 
+U4029-9 CD74HC245E-A8 Passive 
+J20202-37 PZ254V-12-40P-37 Passive 
+)
+(
+MODEL_READY 
+J4001-17 PZ254V-12-24P-17 Passive 
+U4030-9 CD74HC74E-2Q Passive 
+U4030-12 CD74HC74E-2D Passive 
+J20201-20 PZ254V-12-40P-20 Passive 
+)
+(
+LOAD_DATA5 
+J4001-8 PZ254V-12-24P-8 Passive 
+U4029-7 CD74HC245E-A6 Passive 
+J20202-35 PZ254V-12-40P-35 Passive 
+)
+(
+LOAD_DATA3 
+J4001-6 PZ254V-12-24P-6 Passive 
+U4029-5 CD74HC245E-A4 Passive 
+J20202-33 PZ254V-12-40P-33 Passive 
+)
+(
+LOAD_DATA1 
+J4001-4 PZ254V-12-24P-4 Passive 
+U4029-3 CD74HC245E-A2 Passive 
+J20202-31 PZ254V-12-40P-31 Passive 
+R3020-2 MF1/4W-10KΩ±1% T-2 Passive 
+)
+(
+UNCONNECTED-(J4001-PIN_23-PAD23) 
+J4001-23 PZ254V-12-24P-23 Passive 
+)
+(
+MEM_SEL0 
+R4001-1 MFR-25FBF52-10K-1 Passive 
+U4034-2 SN74HCT541N-A1 Passive 
+J20203-15 PZ254V-12-40P-15 Passive 
+)
+(
+MEM_SEL1 
+R4002-1 MFR-25FBF52-10K-1 Passive 
+U4034-3 SN74HCT541N-A2 Passive 
+J20203-16 PZ254V-12-40P-16 Passive 
+)
+(
+MEM_SEL2 
+R4003-1 MFR-25FBF52-10K-1 Passive 
+U4034-4 SN74HCT541N-A3 Passive 
+J20203-17 PZ254V-12-40P-17 Passive 
+)
+(
+MEM_SEL3 
+R4004-1 MFR-25FBF52-10K-1 Passive 
+U4034-5 SN74HCT541N-A4 Passive 
+J20203-18 PZ254V-12-40P-18 Passive 
+)
+(
+MEM_SEL4 
+R4005-1 MFR-25FBF52-10K-1 Passive 
+U4034-6 SN74HCT541N-A5 Passive 
+J20203-19 PZ254V-12-40P-19 Passive 
+)
+(
+UNCONNECTED-(U4001-NC-PAD1) 
+U4001-1 AS6C6264-55PCN-NC Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR12 
+U4001-2 AS6C6264-55PCN-A12 Passive 
+U4002-2 AS6C6264-55PCN-A12 Passive 
+U4003-2 AS6C6264-55PCN-A12 Passive 
+U4004-2 AS6C6264-55PCN-A12 Passive 
+U4005-2 AS6C6264-55PCN-A12 Passive 
+U4006-2 AS6C6264-55PCN-A12 Passive 
+U4007-2 AS6C6264-55PCN-A12 Passive 
+U4008-2 AT28C256-15PU-A12 Passive 
+U4009-2 AT28C256-15PU-A12 Passive 
+U4010-2 AT28C256-15PU-A12 Passive 
+U4011-2 AT28C256-15PU-A12 Passive 
+U4012-2 AT27C512R-70PU-A12 Passive 
+U4013-2 AT27C512R-70PU-A12 Passive 
+U4014-2 AT27C512R-70PU-A12 Passive 
+U4015-2 AT27C512R-70PU-A12 Passive 
+U4016-2 AT27C512R-70PU-A12 Passive 
+U4017-2 AT27C512R-70PU-A12 Passive 
+U4018-2 AT27C512R-70PU-A12 Passive 
+U4019-2 AT27C512R-70PU-A12 Passive 
+U4032-14 SN74HCT541N-Y5 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR7 
+U4001-3 AS6C6264-55PCN-A7 Passive 
+U4002-3 AS6C6264-55PCN-A7 Passive 
+U4003-3 AS6C6264-55PCN-A7 Passive 
+U4004-3 AS6C6264-55PCN-A7 Passive 
+U4005-3 AS6C6264-55PCN-A7 Passive 
+U4006-3 AS6C6264-55PCN-A7 Passive 
+U4007-3 AS6C6264-55PCN-A7 Passive 
+U4008-3 AT28C256-15PU-A7 Passive 
+U4009-3 AT28C256-15PU-A7 Passive 
+U4010-3 AT28C256-15PU-A7 Passive 
+U4011-3 AT28C256-15PU-A7 Passive 
+U4012-3 AT27C512R-70PU-A7 Passive 
+U4013-3 AT27C512R-70PU-A7 Passive 
+U4014-3 AT27C512R-70PU-A7 Passive 
+U4015-3 AT27C512R-70PU-A7 Passive 
+U4016-3 AT27C512R-70PU-A7 Passive 
+U4017-3 AT27C512R-70PU-A7 Passive 
+U4018-3 AT27C512R-70PU-A7 Passive 
+U4019-3 AT27C512R-70PU-A7 Passive 
+U4031-11 SN74HCT541N-Y8 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR6 
+U4001-4 AS6C6264-55PCN-A6 Passive 
+U4002-4 AS6C6264-55PCN-A6 Passive 
+U4003-4 AS6C6264-55PCN-A6 Passive 
+U4004-4 AS6C6264-55PCN-A6 Passive 
+U4005-4 AS6C6264-55PCN-A6 Passive 
+U4006-4 AS6C6264-55PCN-A6 Passive 
+U4007-4 AS6C6264-55PCN-A6 Passive 
+U4008-4 AT28C256-15PU-A6 Passive 
+U4009-4 AT28C256-15PU-A6 Passive 
+U4010-4 AT28C256-15PU-A6 Passive 
+U4011-4 AT28C256-15PU-A6 Passive 
+U4012-4 AT27C512R-70PU-A6 Passive 
+U4013-4 AT27C512R-70PU-A6 Passive 
+U4014-4 AT27C512R-70PU-A6 Passive 
+U4015-4 AT27C512R-70PU-A6 Passive 
+U4016-4 AT27C512R-70PU-A6 Passive 
+U4017-4 AT27C512R-70PU-A6 Passive 
+U4018-4 AT27C512R-70PU-A6 Passive 
+U4019-4 AT27C512R-70PU-A6 Passive 
+U4031-12 SN74HCT541N-Y7 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR5 
+U4001-5 AS6C6264-55PCN-A5 Passive 
+U4002-5 AS6C6264-55PCN-A5 Passive 
+U4003-5 AS6C6264-55PCN-A5 Passive 
+U4004-5 AS6C6264-55PCN-A5 Passive 
+U4005-5 AS6C6264-55PCN-A5 Passive 
+U4006-5 AS6C6264-55PCN-A5 Passive 
+U4007-5 AS6C6264-55PCN-A5 Passive 
+U4008-5 AT28C256-15PU-A5 Passive 
+U4009-5 AT28C256-15PU-A5 Passive 
+U4010-5 AT28C256-15PU-A5 Passive 
+U4011-5 AT28C256-15PU-A5 Passive 
+U4012-5 AT27C512R-70PU-A5 Passive 
+U4013-5 AT27C512R-70PU-A5 Passive 
+U4014-5 AT27C512R-70PU-A5 Passive 
+U4015-5 AT27C512R-70PU-A5 Passive 
+U4016-5 AT27C512R-70PU-A5 Passive 
+U4017-5 AT27C512R-70PU-A5 Passive 
+U4018-5 AT27C512R-70PU-A5 Passive 
+U4019-5 AT27C512R-70PU-A5 Passive 
+U4031-13 SN74HCT541N-Y6 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR4 
+U4001-6 AS6C6264-55PCN-A4 Passive 
+U4002-6 AS6C6264-55PCN-A4 Passive 
+U4003-6 AS6C6264-55PCN-A4 Passive 
+U4004-6 AS6C6264-55PCN-A4 Passive 
+U4005-6 AS6C6264-55PCN-A4 Passive 
+U4006-6 AS6C6264-55PCN-A4 Passive 
+U4007-6 AS6C6264-55PCN-A4 Passive 
+U4008-6 AT28C256-15PU-A4 Passive 
+U4009-6 AT28C256-15PU-A4 Passive 
+U4010-6 AT28C256-15PU-A4 Passive 
+U4011-6 AT28C256-15PU-A4 Passive 
+U4012-6 AT27C512R-70PU-A4 Passive 
+U4013-6 AT27C512R-70PU-A4 Passive 
+U4014-6 AT27C512R-70PU-A4 Passive 
+U4015-6 AT27C512R-70PU-A4 Passive 
+U4016-6 AT27C512R-70PU-A4 Passive 
+U4017-6 AT27C512R-70PU-A4 Passive 
+U4018-6 AT27C512R-70PU-A4 Passive 
+U4019-6 AT27C512R-70PU-A4 Passive 
+U4031-14 SN74HCT541N-Y5 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR3 
+U4001-7 AS6C6264-55PCN-A3 Passive 
+U4002-7 AS6C6264-55PCN-A3 Passive 
+U4003-7 AS6C6264-55PCN-A3 Passive 
+U4004-7 AS6C6264-55PCN-A3 Passive 
+U4005-7 AS6C6264-55PCN-A3 Passive 
+U4006-7 AS6C6264-55PCN-A3 Passive 
+U4007-7 AS6C6264-55PCN-A3 Passive 
+U4008-7 AT28C256-15PU-A3 Passive 
+U4009-7 AT28C256-15PU-A3 Passive 
+U4010-7 AT28C256-15PU-A3 Passive 
+U4011-7 AT28C256-15PU-A3 Passive 
+U4012-7 AT27C512R-70PU-A3 Passive 
+U4013-7 AT27C512R-70PU-A3 Passive 
+U4014-7 AT27C512R-70PU-A3 Passive 
+U4015-7 AT27C512R-70PU-A3 Passive 
+U4016-7 AT27C512R-70PU-A3 Passive 
+U4017-7 AT27C512R-70PU-A3 Passive 
+U4018-7 AT27C512R-70PU-A3 Passive 
+U4019-7 AT27C512R-70PU-A3 Passive 
+U4031-15 SN74HCT541N-Y4 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR2 
+U4001-8 AS6C6264-55PCN-A2 Passive 
+U4002-8 AS6C6264-55PCN-A2 Passive 
+U4003-8 AS6C6264-55PCN-A2 Passive 
+U4004-8 AS6C6264-55PCN-A2 Passive 
+U4005-8 AS6C6264-55PCN-A2 Passive 
+U4006-8 AS6C6264-55PCN-A2 Passive 
+U4007-8 AS6C6264-55PCN-A2 Passive 
+U4008-8 AT28C256-15PU-A2 Passive 
+U4009-8 AT28C256-15PU-A2 Passive 
+U4010-8 AT28C256-15PU-A2 Passive 
+U4011-8 AT28C256-15PU-A2 Passive 
+U4012-8 AT27C512R-70PU-A2 Passive 
+U4013-8 AT27C512R-70PU-A2 Passive 
+U4014-8 AT27C512R-70PU-A2 Passive 
+U4015-8 AT27C512R-70PU-A2 Passive 
+U4016-8 AT27C512R-70PU-A2 Passive 
+U4017-8 AT27C512R-70PU-A2 Passive 
+U4018-8 AT27C512R-70PU-A2 Passive 
+U4019-8 AT27C512R-70PU-A2 Passive 
+U4031-16 SN74HCT541N-Y3 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR1 
+U4001-9 AS6C6264-55PCN-A1 Passive 
+U4002-9 AS6C6264-55PCN-A1 Passive 
+U4003-9 AS6C6264-55PCN-A1 Passive 
+U4004-9 AS6C6264-55PCN-A1 Passive 
+U4005-9 AS6C6264-55PCN-A1 Passive 
+U4006-9 AS6C6264-55PCN-A1 Passive 
+U4007-9 AS6C6264-55PCN-A1 Passive 
+U4008-9 AT28C256-15PU-A1 Passive 
+U4009-9 AT28C256-15PU-A1 Passive 
+U4010-9 AT28C256-15PU-A1 Passive 
+U4011-9 AT28C256-15PU-A1 Passive 
+U4012-9 AT27C512R-70PU-A1 Passive 
+U4013-9 AT27C512R-70PU-A1 Passive 
+U4014-9 AT27C512R-70PU-A1 Passive 
+U4015-9 AT27C512R-70PU-A1 Passive 
+U4016-9 AT27C512R-70PU-A1 Passive 
+U4017-9 AT27C512R-70PU-A1 Passive 
+U4018-9 AT27C512R-70PU-A1 Passive 
+U4019-9 AT27C512R-70PU-A1 Passive 
+U4031-17 SN74HCT541N-Y2 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR0 
+U4001-10 AS6C6264-55PCN-A0 Passive 
+U4002-10 AS6C6264-55PCN-A0 Passive 
+U4003-10 AS6C6264-55PCN-A0 Passive 
+U4004-10 AS6C6264-55PCN-A0 Passive 
+U4005-10 AS6C6264-55PCN-A0 Passive 
+U4006-10 AS6C6264-55PCN-A0 Passive 
+U4007-10 AS6C6264-55PCN-A0 Passive 
+U4008-10 AT28C256-15PU-A0 Passive 
+U4009-10 AT28C256-15PU-A0 Passive 
+U4010-10 AT28C256-15PU-A0 Passive 
+U4011-10 AT28C256-15PU-A0 Passive 
+U4012-10 AT27C512R-70PU-A0 Passive 
+U4013-10 AT27C512R-70PU-A0 Passive 
+U4014-10 AT27C512R-70PU-A0 Passive 
+U4015-10 AT27C512R-70PU-A0 Passive 
+U4016-10 AT27C512R-70PU-A0 Passive 
+U4017-10 AT27C512R-70PU-A0 Passive 
+U4018-10 AT27C512R-70PU-A0 Passive 
+U4019-10 AT27C512R-70PU-A0 Passive 
+U4031-18 SN74HCT541N-Y1 Passive 
+)
+(
+/B03_S04_MEMORIES/MEM_D0 
+U4001-11 AS6C6264-55PCN-DQ0 Passive 
+U4002-11 AS6C6264-55PCN-DQ0 Passive 
+U4003-11 AS6C6264-55PCN-DQ0 Passive 
+U4004-11 AS6C6264-55PCN-DQ0 Passive 
+U4005-11 AS6C6264-55PCN-DQ0 Passive 
+U4006-11 AS6C6264-55PCN-DQ0 Passive 
+U4007-11 AS6C6264-55PCN-DQ0 Passive 
+U4008-11 AT28C256-15PU-I/O0 Passive 
+U4009-11 AT28C256-15PU-I/O0 Passive 
+U4010-11 AT28C256-15PU-I/O0 Passive 
+U4011-11 AT28C256-15PU-I/O0 Passive 
+U4012-11 AT27C512R-70PU-O0 Passive 
+U4013-11 AT27C512R-70PU-O0 Passive 
+U4014-11 AT27C512R-70PU-O0 Passive 
+U4015-11 AT27C512R-70PU-O0 Passive 
+U4016-11 AT27C512R-70PU-O0 Passive 
+U4017-11 AT27C512R-70PU-O0 Passive 
+U4018-11 AT27C512R-70PU-O0 Passive 
+U4019-11 AT27C512R-70PU-O0 Passive 
+U4028-2 CD74HC245E-A1 Passive 
+U4029-18 CD74HC245E-B1 Passive 
+)
+(
+/B03_S04_MEMORIES/MEM_D1 
+U4001-12 AS6C6264-55PCN-DQ1 Passive 
+U4002-12 AS6C6264-55PCN-DQ1 Passive 
+U4003-12 AS6C6264-55PCN-DQ1 Passive 
+U4004-12 AS6C6264-55PCN-DQ1 Passive 
+U4005-12 AS6C6264-55PCN-DQ1 Passive 
+U4006-12 AS6C6264-55PCN-DQ1 Passive 
+U4007-12 AS6C6264-55PCN-DQ1 Passive 
+U4008-12 AT28C256-15PU-I/O1 Passive 
+U4009-12 AT28C256-15PU-I/O1 Passive 
+U4010-12 AT28C256-15PU-I/O1 Passive 
+U4011-12 AT28C256-15PU-I/O1 Passive 
+U4012-12 AT27C512R-70PU-O1 Passive 
+U4013-12 AT27C512R-70PU-O1 Passive 
+U4014-12 AT27C512R-70PU-O1 Passive 
+U4015-12 AT27C512R-70PU-O1 Passive 
+U4016-12 AT27C512R-70PU-O1 Passive 
+U4017-12 AT27C512R-70PU-O1 Passive 
+U4018-12 AT27C512R-70PU-O1 Passive 
+U4019-12 AT27C512R-70PU-O1 Passive 
+U4028-3 CD74HC245E-A2 Passive 
+U4029-17 CD74HC245E-B2 Passive 
+)
+(
+/B03_S04_MEMORIES/MEM_D2 
+U4001-13 AS6C6264-55PCN-DQ2 Passive 
+U4002-13 AS6C6264-55PCN-DQ2 Passive 
+U4003-13 AS6C6264-55PCN-DQ2 Passive 
+U4004-13 AS6C6264-55PCN-DQ2 Passive 
+U4005-13 AS6C6264-55PCN-DQ2 Passive 
+U4006-13 AS6C6264-55PCN-DQ2 Passive 
+U4007-13 AS6C6264-55PCN-DQ2 Passive 
+U4008-13 AT28C256-15PU-I/O2 Passive 
+U4009-13 AT28C256-15PU-I/O2 Passive 
+U4010-13 AT28C256-15PU-I/O2 Passive 
+U4011-13 AT28C256-15PU-I/O2 Passive 
+U4012-13 AT27C512R-70PU-O2 Passive 
+U4013-13 AT27C512R-70PU-O2 Passive 
+U4014-13 AT27C512R-70PU-O2 Passive 
+U4015-13 AT27C512R-70PU-O2 Passive 
+U4016-13 AT27C512R-70PU-O2 Passive 
+U4017-13 AT27C512R-70PU-O2 Passive 
+U4018-13 AT27C512R-70PU-O2 Passive 
+U4019-13 AT27C512R-70PU-O2 Passive 
+U4028-4 CD74HC245E-A3 Passive 
+U4029-16 CD74HC245E-B3 Passive 
+)
+(
+/B03_S04_MEMORIES/MEM_D3 
+U4001-15 AS6C6264-55PCN-DQ3 Passive 
+U4002-15 AS6C6264-55PCN-DQ3 Passive 
+U4003-15 AS6C6264-55PCN-DQ3 Passive 
+U4004-15 AS6C6264-55PCN-DQ3 Passive 
+U4005-15 AS6C6264-55PCN-DQ3 Passive 
+U4006-15 AS6C6264-55PCN-DQ3 Passive 
+U4007-15 AS6C6264-55PCN-DQ3 Passive 
+U4008-15 AT28C256-15PU-I/O3 Passive 
+U4009-15 AT28C256-15PU-I/O3 Passive 
+U4010-15 AT28C256-15PU-I/O3 Passive 
+U4011-15 AT28C256-15PU-I/O3 Passive 
+U4012-15 AT27C512R-70PU-O3 Passive 
+U4013-15 AT27C512R-70PU-O3 Passive 
+U4014-15 AT27C512R-70PU-O3 Passive 
+U4015-15 AT27C512R-70PU-O3 Passive 
+U4016-15 AT27C512R-70PU-O3 Passive 
+U4017-15 AT27C512R-70PU-O3 Passive 
+U4018-15 AT27C512R-70PU-O3 Passive 
+U4019-15 AT27C512R-70PU-O3 Passive 
+U4028-5 CD74HC245E-A4 Passive 
+U4029-15 CD74HC245E-B4 Passive 
+)
+(
+/B03_S04_MEMORIES/MEM_D4 
+U4001-16 AS6C6264-55PCN-DQ4 Passive 
+U4002-16 AS6C6264-55PCN-DQ4 Passive 
+U4003-16 AS6C6264-55PCN-DQ4 Passive 
+U4004-16 AS6C6264-55PCN-DQ4 Passive 
+U4005-16 AS6C6264-55PCN-DQ4 Passive 
+U4006-16 AS6C6264-55PCN-DQ4 Passive 
+U4007-16 AS6C6264-55PCN-DQ4 Passive 
+U4008-16 AT28C256-15PU-I/O4 Passive 
+U4009-16 AT28C256-15PU-I/O4 Passive 
+U4010-16 AT28C256-15PU-I/O4 Passive 
+U4011-16 AT28C256-15PU-I/O4 Passive 
+U4012-16 AT27C512R-70PU-O4 Passive 
+U4013-16 AT27C512R-70PU-O4 Passive 
+U4014-16 AT27C512R-70PU-O4 Passive 
+U4015-16 AT27C512R-70PU-O4 Passive 
+U4016-16 AT27C512R-70PU-O4 Passive 
+U4017-16 AT27C512R-70PU-O4 Passive 
+U4018-16 AT27C512R-70PU-O4 Passive 
+U4019-16 AT27C512R-70PU-O4 Passive 
+U4028-6 CD74HC245E-A5 Passive 
+U4029-14 CD74HC245E-B5 Passive 
+)
+(
+/B03_S04_MEMORIES/MEM_D5 
+U4001-17 AS6C6264-55PCN-DQ5 Passive 
+U4002-17 AS6C6264-55PCN-DQ5 Passive 
+U4003-17 AS6C6264-55PCN-DQ5 Passive 
+U4004-17 AS6C6264-55PCN-DQ5 Passive 
+U4005-17 AS6C6264-55PCN-DQ5 Passive 
+U4006-17 AS6C6264-55PCN-DQ5 Passive 
+U4007-17 AS6C6264-55PCN-DQ5 Passive 
+U4008-17 AT28C256-15PU-I/O5 Passive 
+U4009-17 AT28C256-15PU-I/O5 Passive 
+U4010-17 AT28C256-15PU-I/O5 Passive 
+U4011-17 AT28C256-15PU-I/O5 Passive 
+U4012-17 AT27C512R-70PU-O5 Passive 
+U4013-17 AT27C512R-70PU-O5 Passive 
+U4014-17 AT27C512R-70PU-O5 Passive 
+U4015-17 AT27C512R-70PU-O5 Passive 
+U4016-17 AT27C512R-70PU-O5 Passive 
+U4017-17 AT27C512R-70PU-O5 Passive 
+U4018-17 AT27C512R-70PU-O5 Passive 
+U4019-17 AT27C512R-70PU-O5 Passive 
+U4028-7 CD74HC245E-A6 Passive 
+U4029-13 CD74HC245E-B6 Passive 
+)
+(
+/B03_S04_MEMORIES/MEM_D6 
+U4001-18 AS6C6264-55PCN-DQ6 Passive 
+U4002-18 AS6C6264-55PCN-DQ6 Passive 
+U4003-18 AS6C6264-55PCN-DQ6 Passive 
+U4004-18 AS6C6264-55PCN-DQ6 Passive 
+U4005-18 AS6C6264-55PCN-DQ6 Passive 
+U4006-18 AS6C6264-55PCN-DQ6 Passive 
+U4007-18 AS6C6264-55PCN-DQ6 Passive 
+U4008-18 AT28C256-15PU-I/O6 Passive 
+U4009-18 AT28C256-15PU-I/O6 Passive 
+U4010-18 AT28C256-15PU-I/O6 Passive 
+U4011-18 AT28C256-15PU-I/O6 Passive 
+U4012-18 AT27C512R-70PU-O6 Passive 
+U4013-18 AT27C512R-70PU-O6 Passive 
+U4014-18 AT27C512R-70PU-O6 Passive 
+U4015-18 AT27C512R-70PU-O6 Passive 
+U4016-18 AT27C512R-70PU-O6 Passive 
+U4017-18 AT27C512R-70PU-O6 Passive 
+U4018-18 AT27C512R-70PU-O6 Passive 
+U4019-18 AT27C512R-70PU-O6 Passive 
+U4028-8 CD74HC245E-A7 Passive 
+U4029-12 CD74HC245E-B7 Passive 
+)
+(
+/B03_S04_MEMORIES/MEM_D7 
+U4001-19 AS6C6264-55PCN-DQ7 Passive 
+U4002-19 AS6C6264-55PCN-DQ7 Passive 
+U4003-19 AS6C6264-55PCN-DQ7 Passive 
+U4004-19 AS6C6264-55PCN-DQ7 Passive 
+U4005-19 AS6C6264-55PCN-DQ7 Passive 
+U4006-19 AS6C6264-55PCN-DQ7 Passive 
+U4007-19 AS6C6264-55PCN-DQ7 Passive 
+U4008-19 AT28C256-15PU-I/O7 Passive 
+U4009-19 AT28C256-15PU-I/O7 Passive 
+U4010-19 AT28C256-15PU-I/O7 Passive 
+U4011-19 AT28C256-15PU-I/O7 Passive 
+U4012-19 AT27C512R-70PU-O7 Passive 
+U4013-19 AT27C512R-70PU-O7 Passive 
+U4014-19 AT27C512R-70PU-O7 Passive 
+U4015-19 AT27C512R-70PU-O7 Passive 
+U4016-19 AT27C512R-70PU-O7 Passive 
+U4017-19 AT27C512R-70PU-O7 Passive 
+U4018-19 AT27C512R-70PU-O7 Passive 
+U4019-19 AT27C512R-70PU-O7 Passive 
+U4028-9 CD74HC245E-A8 Passive 
+U4029-11 CD74HC245E-B8 Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_SRAM_INPUT 
+U4001-20 AS6C6264-55PCN-CE# Passive 
+U4020-15 74HC138N-Y0 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR10 
+U4001-21 AS6C6264-55PCN-A10 Passive 
+U4002-21 AS6C6264-55PCN-A10 Passive 
+U4003-21 AS6C6264-55PCN-A10 Passive 
+U4004-21 AS6C6264-55PCN-A10 Passive 
+U4005-21 AS6C6264-55PCN-A10 Passive 
+U4006-21 AS6C6264-55PCN-A10 Passive 
+U4007-21 AS6C6264-55PCN-A10 Passive 
+U4008-21 AT28C256-15PU-A10 Passive 
+U4009-21 AT28C256-15PU-A10 Passive 
+U4010-21 AT28C256-15PU-A10 Passive 
+U4011-21 AT28C256-15PU-A10 Passive 
+U4012-21 AT27C512R-70PU-A10 Passive 
+U4013-21 AT27C512R-70PU-A10 Passive 
+U4014-21 AT27C512R-70PU-A10 Passive 
+U4015-21 AT27C512R-70PU-A10 Passive 
+U4016-21 AT27C512R-70PU-A10 Passive 
+U4017-21 AT27C512R-70PU-A10 Passive 
+U4018-21 AT27C512R-70PU-A10 Passive 
+U4019-21 AT27C512R-70PU-A10 Passive 
+U4032-16 SN74HCT541N-Y3 Passive 
+)
+(
+/B03_S04_MEMORIES/MEM_NOE_INT 
+U4001-22 AS6C6264-55PCN-OE# Passive 
+U4002-22 AS6C6264-55PCN-OE# Passive 
+U4003-22 AS6C6264-55PCN-OE# Passive 
+U4004-22 AS6C6264-55PCN-OE# Passive 
+U4005-22 AS6C6264-55PCN-OE# Passive 
+U4006-22 AS6C6264-55PCN-OE# Passive 
+U4007-22 AS6C6264-55PCN-OE# Passive 
+U4008-22 AT28C256-15PU-OE# Passive 
+U4009-22 AT28C256-15PU-OE# Passive 
+U4010-22 AT28C256-15PU-OE# Passive 
+U4011-22 AT28C256-15PU-OE# Passive 
+U4012-22 AT27C512R-70PU-OE#/VPP Passive 
+U4013-22 AT27C512R-70PU-OE#/VPP Passive 
+U4014-22 AT27C512R-70PU-OE#/VPP Passive 
+U4015-22 AT27C512R-70PU-OE#/VPP Passive 
+U4016-22 AT27C512R-70PU-OE#/VPP Passive 
+U4017-22 AT27C512R-70PU-OE#/VPP Passive 
+U4018-22 AT27C512R-70PU-OE#/VPP Passive 
+U4019-22 AT27C512R-70PU-OE#/VPP Passive 
+U4027-4 SN74HC157N-1Y Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR11 
+U4001-23 AS6C6264-55PCN-A11 Passive 
+U4002-23 AS6C6264-55PCN-A11 Passive 
+U4003-23 AS6C6264-55PCN-A11 Passive 
+U4004-23 AS6C6264-55PCN-A11 Passive 
+U4005-23 AS6C6264-55PCN-A11 Passive 
+U4006-23 AS6C6264-55PCN-A11 Passive 
+U4007-23 AS6C6264-55PCN-A11 Passive 
+U4008-23 AT28C256-15PU-A11 Passive 
+U4009-23 AT28C256-15PU-A11 Passive 
+U4010-23 AT28C256-15PU-A11 Passive 
+U4011-23 AT28C256-15PU-A11 Passive 
+U4012-23 AT27C512R-70PU-A11 Passive 
+U4013-23 AT27C512R-70PU-A11 Passive 
+U4014-23 AT27C512R-70PU-A11 Passive 
+U4015-23 AT27C512R-70PU-A11 Passive 
+U4016-23 AT27C512R-70PU-A11 Passive 
+U4017-23 AT27C512R-70PU-A11 Passive 
+U4018-23 AT27C512R-70PU-A11 Passive 
+U4019-23 AT27C512R-70PU-A11 Passive 
+U4032-15 SN74HCT541N-Y4 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR9 
+U4001-24 AS6C6264-55PCN-A9 Passive 
+U4002-24 AS6C6264-55PCN-A9 Passive 
+U4003-24 AS6C6264-55PCN-A9 Passive 
+U4004-24 AS6C6264-55PCN-A9 Passive 
+U4005-24 AS6C6264-55PCN-A9 Passive 
+U4006-24 AS6C6264-55PCN-A9 Passive 
+U4007-24 AS6C6264-55PCN-A9 Passive 
+U4008-24 AT28C256-15PU-A9 Passive 
+U4009-24 AT28C256-15PU-A9 Passive 
+U4010-24 AT28C256-15PU-A9 Passive 
+U4011-24 AT28C256-15PU-A9 Passive 
+U4012-24 AT27C512R-70PU-A9 Passive 
+U4013-24 AT27C512R-70PU-A9 Passive 
+U4014-24 AT27C512R-70PU-A9 Passive 
+U4015-24 AT27C512R-70PU-A9 Passive 
+U4016-24 AT27C512R-70PU-A9 Passive 
+U4017-24 AT27C512R-70PU-A9 Passive 
+U4018-24 AT27C512R-70PU-A9 Passive 
+U4019-24 AT27C512R-70PU-A9 Passive 
+U4032-17 SN74HCT541N-Y2 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR8 
+U4001-25 AS6C6264-55PCN-A8 Passive 
+U4002-25 AS6C6264-55PCN-A8 Passive 
+U4003-25 AS6C6264-55PCN-A8 Passive 
+U4004-25 AS6C6264-55PCN-A8 Passive 
+U4005-25 AS6C6264-55PCN-A8 Passive 
+U4006-25 AS6C6264-55PCN-A8 Passive 
+U4007-25 AS6C6264-55PCN-A8 Passive 
+U4008-25 AT28C256-15PU-A8 Passive 
+U4009-25 AT28C256-15PU-A8 Passive 
+U4010-25 AT28C256-15PU-A8 Passive 
+U4011-25 AT28C256-15PU-A8 Passive 
+U4012-25 AT27C512R-70PU-A8 Passive 
+U4013-25 AT27C512R-70PU-A8 Passive 
+U4014-25 AT27C512R-70PU-A8 Passive 
+U4015-25 AT27C512R-70PU-A8 Passive 
+U4016-25 AT27C512R-70PU-A8 Passive 
+U4017-25 AT27C512R-70PU-A8 Passive 
+U4018-25 AT27C512R-70PU-A8 Passive 
+U4019-25 AT27C512R-70PU-A8 Passive 
+U4032-18 SN74HCT541N-Y1 Passive 
+)
+(
+/B03_S04_MEMORIES/MEM_NWE_INT 
+U4001-27 AS6C6264-55PCN-WE# Passive 
+U4002-27 AS6C6264-55PCN-WE# Passive 
+U4003-27 AS6C6264-55PCN-WE# Passive 
+U4004-27 AS6C6264-55PCN-WE# Passive 
+U4005-27 AS6C6264-55PCN-WE# Passive 
+U4006-27 AS6C6264-55PCN-WE# Passive 
+U4007-27 AS6C6264-55PCN-WE# Passive 
+U4008-27 AT28C256-15PU-WE# Passive 
+U4009-27 AT28C256-15PU-WE# Passive 
+U4010-27 AT28C256-15PU-WE# Passive 
+U4011-27 AT28C256-15PU-WE# Passive 
+U4027-7 SN74HC157N-2Y Passive 
+)
+(
+UNCONNECTED-(U4002-NC-PAD1) 
+U4002-1 AS6C6264-55PCN-NC Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_SRAM_C1OUT 
+U4002-20 AS6C6264-55PCN-CE# Passive 
+U4020-14 74HC138N-Y1 Passive 
+)
+(
+UNCONNECTED-(U4003-NC-PAD1) 
+U4003-1 AS6C6264-55PCN-NC Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_SRAM_P1OUT 
+U4003-20 AS6C6264-55PCN-CE# Passive 
+U4020-13 74HC138N-Y2 Passive 
+)
+(
+UNCONNECTED-(U4004-NC-PAD1) 
+U4004-1 AS6C6264-55PCN-NC Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_SRAM_C2OUT 
+U4004-20 AS6C6264-55PCN-CE# Passive 
+U4020-12 74HC138N-Y3 Passive 
+)
+(
+UNCONNECTED-(U4005-NC-PAD1) 
+U4005-1 AS6C6264-55PCN-NC Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_SRAM_P2OUT 
+U4005-20 AS6C6264-55PCN-CE# Passive 
+U4020-11 74HC138N-Y4 Passive 
+)
+(
+UNCONNECTED-(U4006-NC-PAD1) 
+U4006-1 AS6C6264-55PCN-NC Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_SRAM_FC1OUT 
+U4006-20 AS6C6264-55PCN-CE# Passive 
+U4020-10 74HC138N-Y5 Passive 
+)
+(
+UNCONNECTED-(U4007-NC-PAD1) 
+U4007-1 AS6C6264-55PCN-NC Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_SRAM_FC2LOG 
+U4007-20 AS6C6264-55PCN-CE# Passive 
+U4020-9 74HC138N-Y6 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR14 
+U4008-1 AT28C256-15PU-A14 Passive 
+U4009-1 AT28C256-15PU-A14 Passive 
+U4010-1 AT28C256-15PU-A14 Passive 
+U4011-1 AT28C256-15PU-A14 Passive 
+U4012-27 AT27C512R-70PU-A14 Passive 
+U4013-27 AT27C512R-70PU-A14 Passive 
+U4014-27 AT27C512R-70PU-A14 Passive 
+U4015-27 AT27C512R-70PU-A14 Passive 
+U4016-27 AT27C512R-70PU-A14 Passive 
+U4017-27 AT27C512R-70PU-A14 Passive 
+U4018-27 AT27C512R-70PU-A14 Passive 
+U4019-27 AT27C512R-70PU-A14 Passive 
+U4032-12 SN74HCT541N-Y7 Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_W_CONV1 
+U4008-20 AT28C256-15PU-CE# Passive 
+U4021-15 74HC138N-Y0 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR13 
+U4008-26 AT28C256-15PU-A13 Passive 
+U4009-26 AT28C256-15PU-A13 Passive 
+U4010-26 AT28C256-15PU-A13 Passive 
+U4011-26 AT28C256-15PU-A13 Passive 
+U4012-26 AT27C512R-70PU-A13 Passive 
+U4013-26 AT27C512R-70PU-A13 Passive 
+U4014-26 AT27C512R-70PU-A13 Passive 
+U4015-26 AT27C512R-70PU-A13 Passive 
+U4016-26 AT27C512R-70PU-A13 Passive 
+U4017-26 AT27C512R-70PU-A13 Passive 
+U4018-26 AT27C512R-70PU-A13 Passive 
+U4019-26 AT27C512R-70PU-A13 Passive 
+U4032-13 SN74HCT541N-Y6 Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_W_CONV2 
+U4009-20 AT28C256-15PU-CE# Passive 
+U4021-14 74HC138N-Y1 Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_W_FC1 
+U4010-20 AT28C256-15PU-CE# Passive 
+U4021-13 74HC138N-Y2 Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_W_FC2 
+U4011-20 AT28C256-15PU-CE# Passive 
+U4021-12 74HC138N-Y3 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR15 
+U4012-1 AT27C512R-70PU-A15 Passive 
+U4013-1 AT27C512R-70PU-A15 Passive 
+U4014-1 AT27C512R-70PU-A15 Passive 
+U4015-1 AT27C512R-70PU-A15 Passive 
+U4016-1 AT27C512R-70PU-A15 Passive 
+U4017-1 AT27C512R-70PU-A15 Passive 
+U4018-1 AT27C512R-70PU-A15 Passive 
+U4019-1 AT27C512R-70PU-A15 Passive 
+U4032-11 SN74HCT541N-Y8 Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_LUT0_LO 
+U4012-20 AT27C512R-70PU-CE# Passive 
+U4022-11 74HC138N-Y4 Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_LUT0_HI 
+U4013-20 AT27C512R-70PU-CE# Passive 
+U4022-10 74HC138N-Y5 Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_LUT1_LO 
+U4014-20 AT27C512R-70PU-CE# Passive 
+U4022-9 74HC138N-Y6 Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_LUT1_HI 
+U4015-20 AT27C512R-70PU-CE# Passive 
+U4022-7 74HC138N-Y7 Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_LUT2_LO 
+U4016-20 AT27C512R-70PU-CE# Passive 
+U4023-15 74HC138N-Y0 Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_LUT2_HI 
+U4017-20 AT27C512R-70PU-CE# Passive 
+U4023-14 74HC138N-Y1 Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_LUT3_LO 
+U4018-20 AT27C512R-70PU-CE# Passive 
+U4023-13 74HC138N-Y2 Passive 
+)
+(
+/B03_S04_MEMORIES/NCS_LUT3_HI 
+U4019-20 AT27C512R-70PU-CE# Passive 
+U4023-12 74HC138N-Y3 Passive 
+)
+(
+/B03_S04_MEMORIES/MSEL0 
+U4020-1 74HC138N-A0 Passive 
+U4021-1 74HC138N-A0 Passive 
+U4022-1 74HC138N-A0 Passive 
+U4023-1 74HC138N-A0 Passive 
+U4024-3 SN74HC688N-Q0 Passive 
+U4034-18 SN74HCT541N-Y1 Passive 
+)
+(
+/B03_S04_MEMORIES/MSEL1 
+U4020-2 74HC138N-A1 Passive 
+U4021-2 74HC138N-A1 Passive 
+U4022-2 74HC138N-A1 Passive 
+U4023-2 74HC138N-A1 Passive 
+U4024-5 SN74HC688N-Q1 Passive 
+U4034-17 SN74HCT541N-Y2 Passive 
+)
+(
+/B03_S04_MEMORIES/MSEL2 
+U4020-3 74HC138N-A2 Passive 
+U4021-3 74HC138N-A2 Passive 
+U4022-3 74HC138N-A2 Passive 
+U4023-3 74HC138N-A2 Passive 
+U4024-7 SN74HC688N-Q2 Passive 
+U4034-16 SN74HCT541N-Y3 Passive 
+)
+(
+/B03_S04_MEMORIES/MSEL4 
+U4020-4 74HC138N-CS2 Passive 
+U4021-4 74HC138N-CS2 Passive 
+U4024-12 SN74HC688N-Q4 Passive 
+U4025-3 SN74HC04N-2A Passive 
+U4034-14 SN74HCT541N-Y5 Passive 
+)
+(
+/B03_S04_MEMORIES/MSEL3 
+U4020-5 74HC138N-CS3 Passive 
+U4022-5 74HC138N-CS3 Passive 
+U4024-9 SN74HC688N-Q3 Passive 
+U4025-1 SN74HC04N-1A Passive 
+U4034-15 SN74HCT541N-Y4 Passive 
+)
+(
+/B03_S04_MEMORIES/DEC_EN 
+U4020-6 74HC138N-CS1 Passive 
+U4021-6 74HC138N-CS1 Passive 
+U4022-6 74HC138N-CS1 Passive 
+U4023-6 74HC138N-CS1 Passive 
+U4026-3 SN74HC08N-1Y Passive 
+)
+(
+UNCONNECTED-(U4028-~{Y7}-PAD7) 
+U4020-7 74HC138N-Y7 Passive 
+)
+(
+/B03_S04_MEMORIES/NOT_MSEL3 
+U4021-5 74HC138N-CS3 Passive 
+U4023-5 74HC138N-CS3 Passive 
+U4025-2 SN74HC04N-1Y Passive 
+)
+(
+/B03_S04_MEMORIES/NOT_MSEL4 
+U4022-4 74HC138N-CS2 Passive 
+U4023-4 74HC138N-CS2 Passive 
+U4025-4 SN74HC04N-2Y Passive 
+)
+(
+UNCONNECTED-(U4031-~{Y7}-PAD7) 
+U4023-7 74HC138N-Y7 Passive 
+)
+(
+UNCONNECTED-(U4031-~{Y6}-PAD9) 
+U4023-9 74HC138N-Y6 Passive 
+)
+(
+UNCONNECTED-(U4031-~{Y5}-PAD10) 
+U4023-10 74HC138N-Y5 Passive 
+)
+(
+UNCONNECTED-(U4031-~{Y4}-PAD11) 
+U4023-11 74HC138N-Y4 Passive 
+)
+(
+/B03_S04_MEMORIES/ADDR_TAG_OK_N 
+U4024-19 SN74HC688N-(P=Q)# Passive 
+U4025-5 SN74HC04N-3A Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR23 
+U4024-17 SN74HC688N-P7 Passive 
+U4033-11 SN74HCT541N-Y8 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR22 
+U4024-15 SN74HC688N-P6 Passive 
+U4033-12 SN74HCT541N-Y7 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR21 
+U4024-13 SN74HC688N-P5 Passive 
+U4033-13 SN74HCT541N-Y6 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR20 
+U4024-11 SN74HC688N-P4 Passive 
+U4033-14 SN74HCT541N-Y5 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR19 
+U4024-8 SN74HC688N-P3 Passive 
+U4033-15 SN74HCT541N-Y4 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR18 
+U4024-6 SN74HC688N-P2 Passive 
+U4033-16 SN74HCT541N-Y3 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR17 
+U4024-4 SN74HC688N-P1 Passive 
+U4033-17 SN74HCT541N-Y2 Passive 
+)
+(
+/B03_S04_MEMORIES/MADDR16 
+U4024-2 SN74HC688N-P0 Passive 
+U4033-18 SN74HCT541N-Y1 Passive 
+)
+(
+/B03_S04_MEMORIES/ADDR_TAG_OK 
+U4025-6 SN74HC04N-3Y Passive 
+U4026-1 SN74HC08N-1A Passive 
+)
+(
+/B03_S04_MEMORIES/READ_DIR 
+U4025-8 SN74HC04N-4Y Passive 
+U4028-1 CD74HC245E-DIR Passive 
+)
+(
+/B03_S04_MEMORIES/DIR_SEL 
+U4025-9 SN74HC04N-4A Passive 
+U4027-9 SN74HC157N-3Y Passive 
+U4029-1 CD74HC245E-DIR Passive 
+)
+(
+/B03_S04_MEMORIES/MEM_CE_OK 
+U4025-10 SN74HC04N-5Y Passive 
+U4026-2 SN74HC08N-1B Passive 
+)
+(
+/B03_S04_MEMORIES/BOTH_IDLE 
+U4025-11 SN74HC04N-5A Passive 
+U4026-6 SN74HC08N-2Y Passive 
+)
+(
+UNCONNECTED-(U4033-PAD12) 
+U4025-12 SN74HC04N-6Y Passive 
+)
+(
+MEM_NCE 
+U4026-4 SN74HC08N-2A Passive 
+J20202-27 PZ254V-12-40P-27 Passive 
+)
+(
+/B03_S04_MEMORIES/NOT_LOAD_EN 
+U4026-5 SN74HC08N-2B Passive 
+U4027-12 SN74HC157N-4Y Passive 
+U4029-19 CD74HC245E-OE# Passive 
+)
+(
+UNCONNECTED-(U4034-PAD8) 
+U4026-8 SN74HC08N-3Y Passive 
+)
+(
+UNCONNECTED-(U4034-PAD11) 
+U4026-11 SN74HC08N-4Y Passive 
+)
+(
+/B03_S04_MEMORIES/LOAD_EN_I 
+U4027-1 SN74HC157N-#A/B Passive 
+U4028-19 CD74HC245E-OE# Passive 
+U4034-13 SN74HCT541N-Y6 Passive 
+)
+(
+MEM_NOE 
+U4027-2 SN74HC157N-1A Passive 
+U4027-11 SN74HC157N-3A Passive 
+J20202-28 PZ254V-12-40P-28 Passive 
+)
+(
+/B03_S04_MEMORIES/LOAD_NOE_I 
+U4027-3 SN74HC157N-1B Passive 
+U4027-10 SN74HC157N-3B Passive 
+U4034-11 SN74HCT541N-Y8 Passive 
+)
+(
+MEM_NWE 
+U4027-5 SN74HC157N-2A Passive 
+J20202-29 PZ254V-12-40P-29 Passive 
+)
+(
+/B03_S04_MEMORIES/LOAD_NWE_I 
+U4027-6 SN74HC157N-2B Passive 
+U4034-12 SN74HCT541N-Y7 Passive 
+)
+(
+DATA7 
+U4028-11 CD74HC245E-B8 Passive 
+U4047-11 SN74HCT541N-Y8 Passive 
+U4055-11 SN74HCT541N-Y8 Passive 
+J20202-26 PZ254V-12-40P-26 Passive 
+R3016-2 MF1/4W-10KΩ±1% T-2 Passive 
+)
+(
+DATA6 
+U4028-12 CD74HC245E-B7 Passive 
+U4047-12 SN74HCT541N-Y7 Passive 
+U4055-12 SN74HCT541N-Y7 Passive 
+J20202-25 PZ254V-12-40P-25 Passive 
+R3014-2 MF1/4W-10KΩ±1% T-2 Passive 
+)
+(
+DATA5 
+U4028-13 CD74HC245E-B6 Passive 
+U4047-13 SN74HCT541N-Y6 Passive 
+U4055-13 SN74HCT541N-Y6 Passive 
+J20202-24 PZ254V-12-40P-24 Passive 
+R3012-2 MF1/4W-10KΩ±1% T-2 Passive 
+)
+(
+DATA4 
+U4028-14 CD74HC245E-B5 Passive 
+U4047-14 SN74HCT541N-Y5 Passive 
+U4055-14 SN74HCT541N-Y5 Passive 
+J20202-23 PZ254V-12-40P-23 Passive 
+R3010-2 MF1/4W-10KΩ±1% T-2 Passive 
+)
+(
+DATA3 
+U4028-15 CD74HC245E-B4 Passive 
+U4047-15 SN74HCT541N-Y4 Passive 
+U4055-15 SN74HCT541N-Y4 Passive 
+J20202-22 PZ254V-12-40P-22 Passive 
+R3008-2 MF1/4W-10KΩ±1% T-2 Passive 
+)
+(
+DATA2 
+U4028-16 CD74HC245E-B3 Passive 
+U4047-16 SN74HCT541N-Y3 Passive 
+U4055-16 SN74HCT541N-Y3 Passive 
+J20202-21 PZ254V-12-40P-21 Passive 
+R3006-2 MF1/4W-10KΩ±1% T-2 Passive 
+)
+(
+DATA1 
+U4028-17 CD74HC245E-B2 Passive 
+U4047-17 SN74HCT541N-Y2 Passive 
+U4055-17 SN74HCT541N-Y2 Passive 
+J20202-20 PZ254V-12-40P-20 Passive 
+R3004-2 MF1/4W-10KΩ±1% T-2 Passive 
+)
+(
+DATA0 
+U4028-18 CD74HC245E-B1 Passive 
+U4047-18 SN74HCT541N-Y1 Passive 
+U4055-18 SN74HCT541N-Y1 Passive 
+J20202-19 PZ254V-12-40P-19 Passive 
+R3002-2 MF1/4W-10KΩ±1% T-2 Passive 
+)
+(
+RESET_N 
+U4030-1 CD74HC74E-1CLR# Passive 
+U4030-13 CD74HC74E-2CLR# Passive 
+J20201-16 PZ254V-12-40P-16 Passive 
+)
+(
+CLK 
+U4030-3 CD74HC74E-1CLK Passive 
+U4030-11 CD74HC74E-2CLK Passive 
+J20201-15 PZ254V-12-40P-15 Passive 
+)
+(
+UNCONNECTED-(U4038A-~{Q}-PAD6) 
+U4030-6 CD74HC74E-1Q# Passive 
+)
+(
+UNCONNECTED-(U4038B-~{Q}-PAD8) 
+U4030-8 CD74HC74E-2Q# Passive 
+)
+(
+ADDR0 
+U4031-2 SN74HCT541N-A1 Passive 
+U4035-18 SN74HCT541N-Y1 Passive 
+U4037-18 SN74HCT541N-Y1 Passive 
+U4039-18 SN74HCT541N-Y1 Passive 
+U4041-18 SN74HCT541N-Y1 Passive 
+U4043-18 SN74HCT541N-Y1 Passive 
+U4045-18 SN74HCT541N-Y1 Passive 
+U4049-18 SN74HCT541N-Y1 Passive 
+U4051-18 SN74HCT541N-Y1 Passive 
+U4053-18 SN74HCT541N-Y1 Passive 
+J20201-21 PZ254V-12-40P-21 Passive 
+)
+(
+ADDR1 
+U4031-3 SN74HCT541N-A2 Passive 
+U4035-17 SN74HCT541N-Y2 Passive 
+U4037-17 SN74HCT541N-Y2 Passive 
+U4039-17 SN74HCT541N-Y2 Passive 
+U4041-17 SN74HCT541N-Y2 Passive 
+U4043-17 SN74HCT541N-Y2 Passive 
+U4045-17 SN74HCT541N-Y2 Passive 
+U4049-17 SN74HCT541N-Y2 Passive 
+U4051-17 SN74HCT541N-Y2 Passive 
+U4053-17 SN74HCT541N-Y2 Passive 
+J20201-22 PZ254V-12-40P-22 Passive 
+)
+(
+ADDR2 
+U4031-4 SN74HCT541N-A3 Passive 
+U4035-16 SN74HCT541N-Y3 Passive 
+U4037-16 SN74HCT541N-Y3 Passive 
+U4039-16 SN74HCT541N-Y3 Passive 
+U4041-16 SN74HCT541N-Y3 Passive 
+U4043-16 SN74HCT541N-Y3 Passive 
+U4045-16 SN74HCT541N-Y3 Passive 
+U4049-16 SN74HCT541N-Y3 Passive 
+U4051-16 SN74HCT541N-Y3 Passive 
+U4053-16 SN74HCT541N-Y3 Passive 
+J20201-23 PZ254V-12-40P-23 Passive 
+)
+(
+ADDR3 
+U4031-5 SN74HCT541N-A4 Passive 
+U4035-15 SN74HCT541N-Y4 Passive 
+U4037-15 SN74HCT541N-Y4 Passive 
+U4039-15 SN74HCT541N-Y4 Passive 
+U4041-15 SN74HCT541N-Y4 Passive 
+U4043-15 SN74HCT541N-Y4 Passive 
+U4045-15 SN74HCT541N-Y4 Passive 
+U4049-15 SN74HCT541N-Y4 Passive 
+U4051-15 SN74HCT541N-Y4 Passive 
+U4053-15 SN74HCT541N-Y4 Passive 
+J20201-24 PZ254V-12-40P-24 Passive 
+)
+(
+ADDR4 
+U4031-6 SN74HCT541N-A5 Passive 
+U4035-14 SN74HCT541N-Y5 Passive 
+U4037-14 SN74HCT541N-Y5 Passive 
+U4039-14 SN74HCT541N-Y5 Passive 
+U4041-14 SN74HCT541N-Y5 Passive 
+U4043-14 SN74HCT541N-Y5 Passive 
+U4045-14 SN74HCT541N-Y5 Passive 
+U4049-14 SN74HCT541N-Y5 Passive 
+U4051-14 SN74HCT541N-Y5 Passive 
+U4053-14 SN74HCT541N-Y5 Passive 
+J20201-25 PZ254V-12-40P-25 Passive 
+)
+(
+ADDR5 
+U4031-7 SN74HCT541N-A6 Passive 
+U4035-13 SN74HCT541N-Y6 Passive 
+U4037-13 SN74HCT541N-Y6 Passive 
+U4039-13 SN74HCT541N-Y6 Passive 
+U4041-13 SN74HCT541N-Y6 Passive 
+U4043-13 SN74HCT541N-Y6 Passive 
+U4045-13 SN74HCT541N-Y6 Passive 
+U4049-13 SN74HCT541N-Y6 Passive 
+U4051-13 SN74HCT541N-Y6 Passive 
+U4053-13 SN74HCT541N-Y6 Passive 
+J20201-26 PZ254V-12-40P-26 Passive 
+)
+(
+ADDR6 
+U4031-8 SN74HCT541N-A7 Passive 
+U4035-12 SN74HCT541N-Y7 Passive 
+U4037-12 SN74HCT541N-Y7 Passive 
+U4039-12 SN74HCT541N-Y7 Passive 
+U4041-12 SN74HCT541N-Y7 Passive 
+U4043-12 SN74HCT541N-Y7 Passive 
+U4045-12 SN74HCT541N-Y7 Passive 
+U4049-12 SN74HCT541N-Y7 Passive 
+U4051-12 SN74HCT541N-Y7 Passive 
+U4053-12 SN74HCT541N-Y7 Passive 
+J20201-27 PZ254V-12-40P-27 Passive 
+)
+(
+ADDR7 
+U4031-9 SN74HCT541N-A8 Passive 
+U4035-11 SN74HCT541N-Y8 Passive 
+U4037-11 SN74HCT541N-Y8 Passive 
+U4039-11 SN74HCT541N-Y8 Passive 
+U4041-11 SN74HCT541N-Y8 Passive 
+U4043-11 SN74HCT541N-Y8 Passive 
+U4045-11 SN74HCT541N-Y8 Passive 
+U4049-11 SN74HCT541N-Y8 Passive 
+U4051-11 SN74HCT541N-Y8 Passive 
+U4053-11 SN74HCT541N-Y8 Passive 
+J20201-28 PZ254V-12-40P-28 Passive 
+)
+(
+ADDR8 
+U4032-2 SN74HCT541N-A1 Passive 
+U4036-18 SN74HCT541N-Y1 Passive 
+U4038-18 SN74HCT541N-Y1 Passive 
+U4040-18 SN74HCT541N-Y1 Passive 
+U4042-18 SN74HCT541N-Y1 Passive 
+U4044-18 SN74HCT541N-Y1 Passive 
+U4046-18 SN74HCT541N-Y1 Passive 
+U4050-18 SN74HCT541N-Y1 Passive 
+U4052-18 SN74HCT541N-Y1 Passive 
+U4054-18 SN74HCT541N-Y1 Passive 
+J20201-29 PZ254V-12-40P-29 Passive 
+)
+(
+ADDR9 
+U4032-3 SN74HCT541N-A2 Passive 
+U4036-17 SN74HCT541N-Y2 Passive 
+U4038-17 SN74HCT541N-Y2 Passive 
+U4040-17 SN74HCT541N-Y2 Passive 
+U4042-17 SN74HCT541N-Y2 Passive 
+U4044-17 SN74HCT541N-Y2 Passive 
+U4046-17 SN74HCT541N-Y2 Passive 
+U4050-17 SN74HCT541N-Y2 Passive 
+U4052-17 SN74HCT541N-Y2 Passive 
+U4054-17 SN74HCT541N-Y2 Passive 
+J20201-30 PZ254V-12-40P-30 Passive 
+)
+(
+ADDR10 
+U4032-4 SN74HCT541N-A3 Passive 
+U4036-16 SN74HCT541N-Y3 Passive 
+U4038-16 SN74HCT541N-Y3 Passive 
+U4040-16 SN74HCT541N-Y3 Passive 
+U4042-16 SN74HCT541N-Y3 Passive 
+U4044-16 SN74HCT541N-Y3 Passive 
+U4046-16 SN74HCT541N-Y3 Passive 
+U4050-16 SN74HCT541N-Y3 Passive 
+U4052-16 SN74HCT541N-Y3 Passive 
+U4054-16 SN74HCT541N-Y3 Passive 
+J20201-31 PZ254V-12-40P-31 Passive 
+)
+(
+ADDR11 
+U4032-5 SN74HCT541N-A4 Passive 
+U4036-15 SN74HCT541N-Y4 Passive 
+U4038-15 SN74HCT541N-Y4 Passive 
+U4040-15 SN74HCT541N-Y4 Passive 
+U4042-15 SN74HCT541N-Y4 Passive 
+U4044-15 SN74HCT541N-Y4 Passive 
+U4046-15 SN74HCT541N-Y4 Passive 
+U4050-15 SN74HCT541N-Y4 Passive 
+U4052-15 SN74HCT541N-Y4 Passive 
+U4054-15 SN74HCT541N-Y4 Passive 
+J20201-32 PZ254V-12-40P-32 Passive 
+)
+(
+ADDR12 
+U4032-6 SN74HCT541N-A5 Passive 
+U4036-14 SN74HCT541N-Y5 Passive 
+U4038-14 SN74HCT541N-Y5 Passive 
+U4040-14 SN74HCT541N-Y5 Passive 
+U4042-14 SN74HCT541N-Y5 Passive 
+U4044-14 SN74HCT541N-Y5 Passive 
+U4046-14 SN74HCT541N-Y5 Passive 
+U4050-14 SN74HCT541N-Y5 Passive 
+U4052-14 SN74HCT541N-Y5 Passive 
+U4054-14 SN74HCT541N-Y5 Passive 
+J20201-33 PZ254V-12-40P-33 Passive 
+)
+(
+ADDR13 
+U4032-7 SN74HCT541N-A6 Passive 
+U4036-13 SN74HCT541N-Y6 Passive 
+U4038-13 SN74HCT541N-Y6 Passive 
+U4040-13 SN74HCT541N-Y6 Passive 
+U4042-13 SN74HCT541N-Y6 Passive 
+U4044-13 SN74HCT541N-Y6 Passive 
+U4046-13 SN74HCT541N-Y6 Passive 
+U4050-13 SN74HCT541N-Y6 Passive 
+U4052-13 SN74HCT541N-Y6 Passive 
+U4054-13 SN74HCT541N-Y6 Passive 
+J20201-34 PZ254V-12-40P-34 Passive 
+)
+(
+ADDR14 
+U4032-8 SN74HCT541N-A7 Passive 
+U4036-12 SN74HCT541N-Y7 Passive 
+U4038-12 SN74HCT541N-Y7 Passive 
+U4040-12 SN74HCT541N-Y7 Passive 
+U4042-12 SN74HCT541N-Y7 Passive 
+U4044-12 SN74HCT541N-Y7 Passive 
+U4046-12 SN74HCT541N-Y7 Passive 
+U4050-12 SN74HCT541N-Y7 Passive 
+U4052-12 SN74HCT541N-Y7 Passive 
+U4054-12 SN74HCT541N-Y7 Passive 
+J20201-35 PZ254V-12-40P-35 Passive 
+)
+(
+ADDR15 
+U4032-9 SN74HCT541N-A8 Passive 
+U4036-11 SN74HCT541N-Y8 Passive 
+U4038-11 SN74HCT541N-Y8 Passive 
+U4040-11 SN74HCT541N-Y8 Passive 
+U4042-11 SN74HCT541N-Y8 Passive 
+U4044-11 SN74HCT541N-Y8 Passive 
+U4046-11 SN74HCT541N-Y8 Passive 
+U4050-11 SN74HCT541N-Y8 Passive 
+U4052-11 SN74HCT541N-Y8 Passive 
+U4054-11 SN74HCT541N-Y8 Passive 
+J20201-36 PZ254V-12-40P-36 Passive 
+)
+(
+ADDR16 
+U4033-2 SN74HCT541N-A1 Passive 
+J20201-37 PZ254V-12-40P-37 Passive 
+)
+(
+ADDR17 
+U4033-3 SN74HCT541N-A2 Passive 
+J20201-38 PZ254V-12-40P-38 Passive 
+)
+(
+ADDR18 
+U4033-4 SN74HCT541N-A3 Passive 
+J20201-39 PZ254V-12-40P-39 Passive 
+)
+(
+ADDR19 
+U4033-5 SN74HCT541N-A4 Passive 
+J20201-40 PZ254V-12-40P-40 Passive 
+)
+(
+ADDR20 
+U4033-6 SN74HCT541N-A5 Passive 
+J20202-15 PZ254V-12-40P-15 Passive 
+)
+(
+ADDR21 
+U4033-7 SN74HCT541N-A6 Passive 
+J20202-16 PZ254V-12-40P-16 Passive 
+)
+(
+ADDR22 
+U4033-8 SN74HCT541N-A7 Passive 
+J20202-17 PZ254V-12-40P-17 Passive 
+)
+(
+ADDR23 
+U4033-9 SN74HCT541N-A8 Passive 
+J20202-18 PZ254V-12-40P-18 Passive 
+)
+(
+C1_BUSY_N 
+U4035-1 SN74HCT541N-OE1 Passive 
+U4035-19 SN74HCT541N-OE2 Passive 
+U4036-1 SN74HCT541N-OE1 Passive 
+U4036-19 SN74HCT541N-OE2 Passive 
+J20203-36 PZ254V-12-40P-36 Passive 
+)
+(
+C1_ADDR0 
+U4035-2 SN74HCT541N-A1 Passive 
+J20203-20 PZ254V-12-40P-20 Passive 
+)
+(
+C1_ADDR1 
+U4035-3 SN74HCT541N-A2 Passive 
+J20203-21 PZ254V-12-40P-21 Passive 
+)
+(
+C1_ADDR2 
+U4035-4 SN74HCT541N-A3 Passive 
+J20203-22 PZ254V-12-40P-22 Passive 
+)
+(
+C1_ADDR3 
+U4035-5 SN74HCT541N-A4 Passive 
+J20203-23 PZ254V-12-40P-23 Passive 
+)
+(
+C1_ADDR4 
+U4035-6 SN74HCT541N-A5 Passive 
+J20203-24 PZ254V-12-40P-24 Passive 
+)
+(
+C1_ADDR5 
+U4035-7 SN74HCT541N-A6 Passive 
+J20203-25 PZ254V-12-40P-25 Passive 
+)
+(
+C1_ADDR6 
+U4035-8 SN74HCT541N-A7 Passive 
+J20203-26 PZ254V-12-40P-26 Passive 
+)
+(
+C1_ADDR7 
+U4035-9 SN74HCT541N-A8 Passive 
+J20203-27 PZ254V-12-40P-27 Passive 
+)
+(
+C1_ADDR8 
+U4036-2 SN74HCT541N-A1 Passive 
+J20203-28 PZ254V-12-40P-28 Passive 
+)
+(
+C1_ADDR9 
+U4036-3 SN74HCT541N-A2 Passive 
+J20203-29 PZ254V-12-40P-29 Passive 
+)
+(
+C1_ADDR10 
+U4036-4 SN74HCT541N-A3 Passive 
+J20203-30 PZ254V-12-40P-30 Passive 
+)
+(
+C1_ADDR11 
+U4036-5 SN74HCT541N-A4 Passive 
+J20203-31 PZ254V-12-40P-31 Passive 
+)
+(
+C1_ADDR12 
+U4036-6 SN74HCT541N-A5 Passive 
+J20203-32 PZ254V-12-40P-32 Passive 
+)
+(
+C1_ADDR13 
+U4036-7 SN74HCT541N-A6 Passive 
+J20203-33 PZ254V-12-40P-33 Passive 
+)
+(
+C1_ADDR14 
+U4036-8 SN74HCT541N-A7 Passive 
+J20203-34 PZ254V-12-40P-34 Passive 
+)
+(
+C1_ADDR15 
+U4036-9 SN74HCT541N-A8 Passive 
+J20203-35 PZ254V-12-40P-35 Passive 
+)
+(
+C2_BUSY_N 
+U4037-1 SN74HCT541N-OE1 Passive 
+U4037-19 SN74HCT541N-OE2 Passive 
+U4038-1 SN74HCT541N-OE1 Passive 
+U4038-19 SN74HCT541N-OE2 Passive 
+J20204-27 PZ254V-12-40P-27 Passive 
+)
+(
+C2_ADDR0 
+U4037-2 SN74HCT541N-A1 Passive 
+J20203-37 PZ254V-12-40P-37 Passive 
+)
+(
+C2_ADDR1 
+U4037-3 SN74HCT541N-A2 Passive 
+J20203-38 PZ254V-12-40P-38 Passive 
+)
+(
+C2_ADDR2 
+U4037-4 SN74HCT541N-A3 Passive 
+J20203-39 PZ254V-12-40P-39 Passive 
+)
+(
+C2_ADDR3 
+U4037-5 SN74HCT541N-A4 Passive 
+J20203-40 PZ254V-12-40P-40 Passive 
+)
+(
+C2_ADDR4 
+U4037-6 SN74HCT541N-A5 Passive 
+J20204-15 PZ254V-12-40P-15 Passive 
+)
+(
+C2_ADDR5 
+U4037-7 SN74HCT541N-A6 Passive 
+J20204-16 PZ254V-12-40P-16 Passive 
+)
+(
+C2_ADDR6 
+U4037-8 SN74HCT541N-A7 Passive 
+J20204-17 PZ254V-12-40P-17 Passive 
+)
+(
+C2_ADDR7 
+U4037-9 SN74HCT541N-A8 Passive 
+J20204-18 PZ254V-12-40P-18 Passive 
+)
+(
+C2_ADDR8 
+U4038-2 SN74HCT541N-A1 Passive 
+J20204-19 PZ254V-12-40P-19 Passive 
+)
+(
+C2_ADDR9 
+U4038-3 SN74HCT541N-A2 Passive 
+J20204-20 PZ254V-12-40P-20 Passive 
+)
+(
+C2_ADDR10 
+U4038-4 SN74HCT541N-A3 Passive 
+J20204-21 PZ254V-12-40P-21 Passive 
+)
+(
+C2_ADDR11 
+U4038-5 SN74HCT541N-A4 Passive 
+J20204-22 PZ254V-12-40P-22 Passive 
+)
+(
+C2_ADDR12 
+U4038-6 SN74HCT541N-A5 Passive 
+J20204-23 PZ254V-12-40P-23 Passive 
+)
+(
+C2_ADDR13 
+U4038-7 SN74HCT541N-A6 Passive 
+J20204-24 PZ254V-12-40P-24 Passive 
+)
+(
+C2_ADDR14 
+U4038-8 SN74HCT541N-A7 Passive 
+J20204-25 PZ254V-12-40P-25 Passive 
+)
+(
+C2_ADDR15 
+U4038-9 SN74HCT541N-A8 Passive 
+J20204-26 PZ254V-12-40P-26 Passive 
+)
+(
+FC1_BUSY_N 
+U4039-1 SN74HCT541N-OE1 Passive 
+U4039-19 SN74HCT541N-OE2 Passive 
+U4040-1 SN74HCT541N-OE1 Passive 
+U4040-19 SN74HCT541N-OE2 Passive 
+J20205-25 PZ254V-12-40P-25 Passive 
+)
+(
+FC1_ADDR0 
+U4039-2 SN74HCT541N-A1 Passive 
+J20204-35 PZ254V-12-40P-35 Passive 
+)
+(
+FC1_ADDR1 
+U4039-3 SN74HCT541N-A2 Passive 
+J20204-36 PZ254V-12-40P-36 Passive 
+)
+(
+FC1_ADDR2 
+U4039-4 SN74HCT541N-A3 Passive 
+J20204-37 PZ254V-12-40P-37 Passive 
+)
+(
+FC1_ADDR3 
+U4039-5 SN74HCT541N-A4 Passive 
+J20204-38 PZ254V-12-40P-38 Passive 
+)
+(
+FC1_ADDR4 
+U4039-6 SN74HCT541N-A5 Passive 
+J20204-39 PZ254V-12-40P-39 Passive 
+)
+(
+FC1_ADDR5 
+U4039-7 SN74HCT541N-A6 Passive 
+J20204-40 PZ254V-12-40P-40 Passive 
+)
+(
+FC1_ADDR6 
+U4039-8 SN74HCT541N-A7 Passive 
+J20205-15 PZ254V-12-40P-15 Passive 
+)
+(
+FC1_ADDR7 
+U4039-9 SN74HCT541N-A8 Passive 
+J20205-16 PZ254V-12-40P-16 Passive 
+)
+(
+FC1_ADDR8 
+U4040-2 SN74HCT541N-A1 Passive 
+J20205-17 PZ254V-12-40P-17 Passive 
+)
+(
+FC1_ADDR9 
+U4040-3 SN74HCT541N-A2 Passive 
+J20205-18 PZ254V-12-40P-18 Passive 
+)
+(
+FC1_ADDR10 
+U4040-4 SN74HCT541N-A3 Passive 
+J20205-19 PZ254V-12-40P-19 Passive 
+)
+(
+FC1_ADDR11 
+U4040-5 SN74HCT541N-A4 Passive 
+J20205-20 PZ254V-12-40P-20 Passive 
+)
+(
+FC1_ADDR12 
+U4040-6 SN74HCT541N-A5 Passive 
+J20205-21 PZ254V-12-40P-21 Passive 
+)
+(
+FC1_ADDR13 
+U4040-7 SN74HCT541N-A6 Passive 
+J20205-22 PZ254V-12-40P-22 Passive 
+)
+(
+FC1_ADDR14 
+U4040-8 SN74HCT541N-A7 Passive 
+J20205-23 PZ254V-12-40P-23 Passive 
+)
+(
+FC1_ADDR15 
+U4040-9 SN74HCT541N-A8 Passive 
+J20205-24 PZ254V-12-40P-24 Passive 
+)
+(
+ARGMAX_BUSY_N 
+U4041-1 SN74HCT541N-OE1 Passive 
+U4041-19 SN74HCT541N-OE2 Passive 
+U4042-1 SN74HCT541N-OE1 Passive 
+U4042-19 SN74HCT541N-OE2 Passive 
+J20204-28 PZ254V-12-40P-28 Passive 
+)
+(
+SCORE_ADDR0 
+U4041-2 SN74HCT541N-A1 Passive 
+J20204-29 PZ254V-12-40P-29 Passive 
+)
+(
+SCORE_ADDR1 
+U4041-3 SN74HCT541N-A2 Passive 
+J20204-30 PZ254V-12-40P-30 Passive 
+)
+(
+SCORE_ADDR2 
+U4041-4 SN74HCT541N-A3 Passive 
+J20204-31 PZ254V-12-40P-31 Passive 
+)
+(
+SCORE_ADDR3 
+U4041-5 SN74HCT541N-A4 Passive 
+J20204-32 PZ254V-12-40P-32 Passive 
+)
+(
+SCORE_ADDR4 
+U4041-6 SN74HCT541N-A5 Passive 
+J20204-33 PZ254V-12-40P-33 Passive 
+)
+(
+SCORE_ADDR5 
+U4041-7 SN74HCT541N-A6 Passive 
+J20204-34 PZ254V-12-40P-34 Passive 
+)
+(
+/B03_S04_MEMORIES/POOL1_READ_OE 
+U4043-1 SN74HCT541N-OE1 Passive 
+U4043-19 SN74HCT541N-OE2 Passive 
+U4044-1 SN74HCT541N-OE1 Passive 
+U4044-19 SN74HCT541N-OE2 Passive 
+U4048-3 SN74HC32AN-1Y Passive 
+)
+(
+POOL1_IN_ADDR0 
+U4043-2 SN74HCT541N-A1 Passive 
+J20206-18 PZ254V-12-40P-18 Passive 
+)
+(
+POOL1_IN_ADDR1 
+U4043-3 SN74HCT541N-A2 Passive 
+J20206-19 PZ254V-12-40P-19 Passive 
+)
+(
+POOL1_IN_ADDR2 
+U4043-4 SN74HCT541N-A3 Passive 
+J20206-20 PZ254V-12-40P-20 Passive 
+)
+(
+POOL1_IN_ADDR3 
+U4043-5 SN74HCT541N-A4 Passive 
+J20206-21 PZ254V-12-40P-21 Passive 
+)
+(
+POOL1_IN_ADDR4 
+U4043-6 SN74HCT541N-A5 Passive 
+J20206-22 PZ254V-12-40P-22 Passive 
+)
+(
+POOL1_IN_ADDR5 
+U4043-7 SN74HCT541N-A6 Passive 
+J20206-23 PZ254V-12-40P-23 Passive 
+)
+(
+POOL1_IN_ADDR6 
+U4043-8 SN74HCT541N-A7 Passive 
+J20206-24 PZ254V-12-40P-24 Passive 
+)
+(
+POOL1_IN_ADDR7 
+U4043-9 SN74HCT541N-A8 Passive 
+J20206-25 PZ254V-12-40P-25 Passive 
+)
+(
+POOL1_IN_ADDR8 
+U4044-2 SN74HCT541N-A1 Passive 
+J20206-26 PZ254V-12-40P-26 Passive 
+)
+(
+POOL1_IN_ADDR9 
+U4044-3 SN74HCT541N-A2 Passive 
+J20206-27 PZ254V-12-40P-27 Passive 
+)
+(
+POOL1_IN_ADDR10 
+U4044-4 SN74HCT541N-A3 Passive 
+J20206-28 PZ254V-12-40P-28 Passive 
+)
+(
+POOL1_IN_ADDR11 
+U4044-5 SN74HCT541N-A4 Passive 
+J20206-29 PZ254V-12-40P-29 Passive 
+)
+(
+POOL1_IN_ADDR12 
+U4044-6 SN74HCT541N-A5 Passive 
+J20206-30 PZ254V-12-40P-30 Passive 
+)
+(
+POOL1_MEM_NCE_OUT 
+U4045-1 SN74HCT541N-OE1 Passive 
+U4045-19 SN74HCT541N-OE2 Passive 
+U4046-1 SN74HCT541N-OE1 Passive 
+U4046-19 SN74HCT541N-OE2 Passive 
+U4047-1 SN74HCT541N-OE1 Passive 
+U4047-19 SN74HCT541N-OE2 Passive 
+J20206-31 PZ254V-12-40P-31 Passive 
+)
+(
+POOL1_OUT_ADDR0 
+U4045-2 SN74HCT541N-A1 Passive 
+J20206-33 PZ254V-12-40P-33 Passive 
+)
+(
+POOL1_OUT_ADDR1 
+U4045-3 SN74HCT541N-A2 Passive 
+J20206-34 PZ254V-12-40P-34 Passive 
+)
+(
+POOL1_OUT_ADDR2 
+U4045-4 SN74HCT541N-A3 Passive 
+J20206-35 PZ254V-12-40P-35 Passive 
+)
+(
+POOL1_OUT_ADDR3 
+U4045-5 SN74HCT541N-A4 Passive 
+J20206-36 PZ254V-12-40P-36 Passive 
+)
+(
+POOL1_OUT_ADDR4 
+U4045-6 SN74HCT541N-A5 Passive 
+J20206-37 PZ254V-12-40P-37 Passive 
+)
+(
+POOL1_OUT_ADDR5 
+U4045-7 SN74HCT541N-A6 Passive 
+J20206-38 PZ254V-12-40P-38 Passive 
+)
+(
+POOL1_OUT_ADDR6 
+U4045-8 SN74HCT541N-A7 Passive 
+J20206-39 PZ254V-12-40P-39 Passive 
+)
+(
+POOL1_OUT_ADDR7 
+U4045-9 SN74HCT541N-A8 Passive 
+J20206-40 PZ254V-12-40P-40 Passive 
+)
+(
+POOL1_OUT_ADDR8 
+U4046-2 SN74HCT541N-A1 Passive 
+J20207-15 PZ254V-12-40P-15 Passive 
+)
+(
+POOL1_OUT_ADDR9 
+U4046-3 SN74HCT541N-A2 Passive 
+J20207-16 PZ254V-12-40P-16 Passive 
+)
+(
+POOL1_OUT_ADDR10 
+U4046-4 SN74HCT541N-A3 Passive 
+J20207-17 PZ254V-12-40P-17 Passive 
+)
+(
+POOL1_OUT_ADDR11 
+U4046-5 SN74HCT541N-A4 Passive 
+J20207-18 PZ254V-12-40P-18 Passive 
+)
+(
+POOL1_OUT_DATA0 
+U4047-2 SN74HCT541N-A1 Passive 
+J20207-19 PZ254V-12-40P-19 Passive 
+)
+(
+POOL1_OUT_DATA1 
+U4047-3 SN74HCT541N-A2 Passive 
+J20207-20 PZ254V-12-40P-20 Passive 
+)
+(
+POOL1_OUT_DATA2 
+U4047-4 SN74HCT541N-A3 Passive 
+J20207-21 PZ254V-12-40P-21 Passive 
+)
+(
+POOL1_OUT_DATA3 
+U4047-5 SN74HCT541N-A4 Passive 
+J20207-22 PZ254V-12-40P-22 Passive 
+)
+(
+POOL1_OUT_DATA4 
+U4047-6 SN74HCT541N-A5 Passive 
+J20207-23 PZ254V-12-40P-23 Passive 
+)
+(
+POOL1_OUT_DATA5 
+U4047-7 SN74HCT541N-A6 Passive 
+J20207-24 PZ254V-12-40P-24 Passive 
+)
+(
+POOL1_OUT_DATA6 
+U4047-8 SN74HCT541N-A7 Passive 
+J20207-25 PZ254V-12-40P-25 Passive 
+)
+(
+POOL1_OUT_DATA7 
+U4047-9 SN74HCT541N-A8 Passive 
+J20207-26 PZ254V-12-40P-26 Passive 
+)
+(
+POOL1_BUSY_N 
+U4048-1 SN74HC32AN-1A Passive 
+J20206-17 PZ254V-12-40P-17 Passive 
+)
+(
+POOL1_MEM_WE 
+U4048-2 SN74HC32AN-1B Passive 
+J20206-32 PZ254V-12-40P-32 Passive 
+)
+(
+FC2_BUSY_N 
+U4049-1 SN74HCT541N-OE1 Passive 
+U4049-19 SN74HCT541N-OE2 Passive 
+U4050-1 SN74HCT541N-OE1 Passive 
+U4050-19 SN74HCT541N-OE2 Passive 
+J20206-16 PZ254V-12-40P-16 Passive 
+)
+(
+FC2_ADDR0 
+U4049-2 SN74HCT541N-A1 Passive 
+J20205-26 PZ254V-12-40P-26 Passive 
+)
+(
+FC2_ADDR1 
+U4049-3 SN74HCT541N-A2 Passive 
+J20205-27 PZ254V-12-40P-27 Passive 
+)
+(
+FC2_ADDR2 
+U4049-4 SN74HCT541N-A3 Passive 
+J20205-28 PZ254V-12-40P-28 Passive 
+)
+(
+FC2_ADDR3 
+U4049-5 SN74HCT541N-A4 Passive 
+J20205-29 PZ254V-12-40P-29 Passive 
+)
+(
+FC2_ADDR4 
+U4049-6 SN74HCT541N-A5 Passive 
+J20205-30 PZ254V-12-40P-30 Passive 
+)
+(
+FC2_ADDR5 
+U4049-7 SN74HCT541N-A6 Passive 
+J20205-31 PZ254V-12-40P-31 Passive 
+)
+(
+FC2_ADDR6 
+U4049-8 SN74HCT541N-A7 Passive 
+J20205-32 PZ254V-12-40P-32 Passive 
+)
+(
+FC2_ADDR7 
+U4049-9 SN74HCT541N-A8 Passive 
+J20205-33 PZ254V-12-40P-33 Passive 
+)
+(
+FC2_ADDR8 
+U4050-2 SN74HCT541N-A1 Passive 
+J20205-34 PZ254V-12-40P-34 Passive 
+)
+(
+FC2_ADDR9 
+U4050-3 SN74HCT541N-A2 Passive 
+J20205-35 PZ254V-12-40P-35 Passive 
+)
+(
+FC2_ADDR10 
+U4050-4 SN74HCT541N-A3 Passive 
+J20205-36 PZ254V-12-40P-36 Passive 
+)
+(
+FC2_ADDR11 
+U4050-5 SN74HCT541N-A4 Passive 
+J20205-37 PZ254V-12-40P-37 Passive 
+)
+(
+FC2_ADDR12 
+U4050-6 SN74HCT541N-A5 Passive 
+J20205-38 PZ254V-12-40P-38 Passive 
+)
+(
+FC2_ADDR13 
+U4050-7 SN74HCT541N-A6 Passive 
+J20205-39 PZ254V-12-40P-39 Passive 
+)
+(
+FC2_ADDR14 
+U4050-8 SN74HCT541N-A7 Passive 
+J20205-40 PZ254V-12-40P-40 Passive 
+)
+(
+FC2_ADDR15 
+U4050-9 SN74HCT541N-A8 Passive 
+J20206-15 PZ254V-12-40P-15 Passive 
+)
+(
+/B03_S04_MEMORIES/POOL2_READ_OE 
+U4051-1 SN74HCT541N-OE1 Passive 
+U4051-19 SN74HCT541N-OE2 Passive 
+U4052-1 SN74HCT541N-OE1 Passive 
+U4052-19 SN74HCT541N-OE2 Passive 
+U4056-3 SN74HC32AN-1Y Passive 
+)
+(
+POOL2_IN_ADDR0 
+U4051-2 SN74HCT541N-A1 Passive 
+J20207-28 PZ254V-12-40P-28 Passive 
+)
+(
+POOL2_IN_ADDR1 
+U4051-3 SN74HCT541N-A2 Passive 
+J20207-29 PZ254V-12-40P-29 Passive 
+)
+(
+POOL2_IN_ADDR2 
+U4051-4 SN74HCT541N-A3 Passive 
+J20207-30 PZ254V-12-40P-30 Passive 
+)
+(
+POOL2_IN_ADDR3 
+U4051-5 SN74HCT541N-A4 Passive 
+J20207-31 PZ254V-12-40P-31 Passive 
+)
+(
+POOL2_IN_ADDR4 
+U4051-6 SN74HCT541N-A5 Passive 
+J20207-32 PZ254V-12-40P-32 Passive 
+)
+(
+POOL2_IN_ADDR5 
+U4051-7 SN74HCT541N-A6 Passive 
+J20207-33 PZ254V-12-40P-33 Passive 
+)
+(
+POOL2_IN_ADDR6 
+U4051-8 SN74HCT541N-A7 Passive 
+J20207-34 PZ254V-12-40P-34 Passive 
+)
+(
+POOL2_IN_ADDR7 
+U4051-9 SN74HCT541N-A8 Passive 
+J20207-35 PZ254V-12-40P-35 Passive 
+)
+(
+POOL2_IN_ADDR8 
+U4052-2 SN74HCT541N-A1 Passive 
+J20207-36 PZ254V-12-40P-36 Passive 
+)
+(
+POOL2_IN_ADDR9 
+U4052-3 SN74HCT541N-A2 Passive 
+J20207-37 PZ254V-12-40P-37 Passive 
+)
+(
+POOL2_IN_ADDR10 
+U4052-4 SN74HCT541N-A3 Passive 
+J20207-38 PZ254V-12-40P-38 Passive 
+)
+(
+POOL2_IN_ADDR11 
+U4052-5 SN74HCT541N-A4 Passive 
+J20207-39 PZ254V-12-40P-39 Passive 
+)
+(
+POOL2_IN_ADDR12 
+U4052-6 SN74HCT541N-A5 Passive 
+J20207-40 PZ254V-12-40P-40 Passive 
+)
+(
+POOL2_MEM_NCE_OUT 
+U4053-1 SN74HCT541N-OE1 Passive 
+U4053-19 SN74HCT541N-OE2 Passive 
+U4054-1 SN74HCT541N-OE1 Passive 
+U4054-19 SN74HCT541N-OE2 Passive 
+U4055-1 SN74HCT541N-OE1 Passive 
+U4055-19 SN74HCT541N-OE2 Passive 
+J20208-15 PZ254V-12-40P-15 Passive 
+)
+(
+POOL2_OUT_ADDR0 
+U4053-2 SN74HCT541N-A1 Passive 
+J20208-17 PZ254V-12-40P-17 Passive 
+)
+(
+POOL2_OUT_ADDR1 
+U4053-3 SN74HCT541N-A2 Passive 
+J20208-18 PZ254V-12-40P-18 Passive 
+)
+(
+POOL2_OUT_ADDR2 
+U4053-4 SN74HCT541N-A3 Passive 
+J20208-19 PZ254V-12-40P-19 Passive 
+)
+(
+POOL2_OUT_ADDR3 
+U4053-5 SN74HCT541N-A4 Passive 
+J20208-20 PZ254V-12-40P-20 Passive 
+)
+(
+POOL2_OUT_ADDR4 
+U4053-6 SN74HCT541N-A5 Passive 
+J20208-21 PZ254V-12-40P-21 Passive 
+)
+(
+POOL2_OUT_ADDR5 
+U4053-7 SN74HCT541N-A6 Passive 
+J20208-22 PZ254V-12-40P-22 Passive 
+)
+(
+POOL2_OUT_ADDR6 
+U4053-8 SN74HCT541N-A7 Passive 
+J20208-23 PZ254V-12-40P-23 Passive 
+)
+(
+POOL2_OUT_ADDR7 
+U4053-9 SN74HCT541N-A8 Passive 
+J20208-24 PZ254V-12-40P-24 Passive 
+)
+(
+POOL2_OUT_ADDR8 
+U4054-2 SN74HCT541N-A1 Passive 
+J20208-25 PZ254V-12-40P-25 Passive 
+)
+(
+POOL2_OUT_ADDR9 
+U4054-3 SN74HCT541N-A2 Passive 
+J20208-26 PZ254V-12-40P-26 Passive 
+)
+(
+POOL2_OUT_ADDR10 
+U4054-4 SN74HCT541N-A3 Passive 
+J20208-27 PZ254V-12-40P-27 Passive 
+)
+(
+POOL2_OUT_ADDR11 
+U4054-5 SN74HCT541N-A4 Passive 
+J20208-28 PZ254V-12-40P-28 Passive 
+)
+(
+POOL2_OUT_DATA0 
+U4055-2 SN74HCT541N-A1 Passive 
+J20208-29 PZ254V-12-40P-29 Passive 
+)
+(
+POOL2_OUT_DATA1 
+U4055-3 SN74HCT541N-A2 Passive 
+J20208-30 PZ254V-12-40P-30 Passive 
+)
+(
+POOL2_OUT_DATA2 
+U4055-4 SN74HCT541N-A3 Passive 
+J20208-31 PZ254V-12-40P-31 Passive 
+)
+(
+POOL2_OUT_DATA3 
+U4055-5 SN74HCT541N-A4 Passive 
+J20208-32 PZ254V-12-40P-32 Passive 
+)
+(
+POOL2_OUT_DATA4 
+U4055-6 SN74HCT541N-A5 Passive 
+J20208-33 PZ254V-12-40P-33 Passive 
+)
+(
+POOL2_OUT_DATA5 
+U4055-7 SN74HCT541N-A6 Passive 
+J20208-34 PZ254V-12-40P-34 Passive 
+)
+(
+POOL2_OUT_DATA6 
+U4055-8 SN74HCT541N-A7 Passive 
+J20208-35 PZ254V-12-40P-35 Passive 
+)
+(
+POOL2_OUT_DATA7 
+U4055-9 SN74HCT541N-A8 Passive 
+J20208-36 PZ254V-12-40P-36 Passive 
+)
+(
+POOL2_BUSY_N 
+U4056-1 SN74HC32AN-1A Passive 
+J20207-27 PZ254V-12-40P-27 Passive 
+)
+(
+POOL2_MEM_WE 
+U4056-2 SN74HC32AN-1B Passive 
+J20208-16 PZ254V-12-40P-16 Passive 
+)
+(
++3V3 
+J20201-5 PZ254V-12-40P-5 Passive 
+J20201-7 PZ254V-12-40P-7 Passive 
+J20201-8 PZ254V-12-40P-8 Passive 
+J20201-6 PZ254V-12-40P-6 Passive 
+J20202-5 PZ254V-12-40P-5 Passive 
+J20202-7 PZ254V-12-40P-7 Passive 
+J20202-8 PZ254V-12-40P-8 Passive 
+J20202-6 PZ254V-12-40P-6 Passive 
+J20203-5 PZ254V-12-40P-5 Passive 
+J20203-7 PZ254V-12-40P-7 Passive 
+J20203-8 PZ254V-12-40P-8 Passive 
+J20203-6 PZ254V-12-40P-6 Passive 
+J20204-5 PZ254V-12-40P-5 Passive 
+J20204-7 PZ254V-12-40P-7 Passive 
+J20204-8 PZ254V-12-40P-8 Passive 
+J20204-6 PZ254V-12-40P-6 Passive 
+J20205-5 PZ254V-12-40P-5 Passive 
+J20205-7 PZ254V-12-40P-7 Passive 
+J20205-8 PZ254V-12-40P-8 Passive 
+J20205-6 PZ254V-12-40P-6 Passive 
+J20206-5 PZ254V-12-40P-5 Passive 
+J20206-7 PZ254V-12-40P-7 Passive 
+J20206-8 PZ254V-12-40P-8 Passive 
+J20206-6 PZ254V-12-40P-6 Passive 
+J20207-5 PZ254V-12-40P-5 Passive 
+J20207-7 PZ254V-12-40P-7 Passive 
+J20207-8 PZ254V-12-40P-8 Passive 
+J20207-6 PZ254V-12-40P-6 Passive 
+J20208-5 PZ254V-12-40P-5 Passive 
+J20208-7 PZ254V-12-40P-7 Passive 
+J20208-8 PZ254V-12-40P-8 Passive 
+J20208-6 PZ254V-12-40P-6 Passive 
+)
+(
+UNCONNECTED-(J20208-PIN_40-PAD40) 
+J20208-40 PZ254V-12-40P-40 Passive 
+)
+(
+UNCONNECTED-(J20208-PIN_38-PAD38) 
+J20208-38 PZ254V-12-40P-38 Passive 
+)
+(
+UNCONNECTED-(J20208-PIN_37-PAD37) 
+J20208-37 PZ254V-12-40P-37 Passive 
+)
+(
+UNCONNECTED-(J20208-PIN_39-PAD39) 
+J20208-39 PZ254V-12-40P-39 Passive 
+)
+(
+$2N1284 
+LED3001-1 HLMP-S301-C Passive 
+Q3001-3 S8050_C2931492-C Passive 
+)
+(
+$2N1285 
+LED3001-2 HLMP-S301-A Passive 
+R3001-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$2N1282 
+Q3001-2 S8050_C2931492-B Passive 
+R3002-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
++VLED 
+R3001-1 MF1/4W-1KΩ±1% T-1 Passive 
+R3003-1 MF1/4W-1KΩ±1% T-1 Passive 
+R3005-1 MF1/4W-1KΩ±1% T-1 Passive 
+R3007-1 MF1/4W-1KΩ±1% T-1 Passive 
+R3009-1 MF1/4W-1KΩ±1% T-1 Passive 
+R3011-1 MF1/4W-1KΩ±1% T-1 Passive 
+R3013-1 MF1/4W-1KΩ±1% T-1 Passive 
+R3015-1 MF1/4W-1KΩ±1% T-1 Passive 
+R3017-1 MF1/4W-1KΩ±1% T-1 Passive 
+R3019-1 MF1/4W-1KΩ±1% T-1 Passive 
+)
+(
+$2N1290 
+LED3002-1 HLMP-S301-C Passive 
+Q3002-3 S8050_C2931492-C Passive 
+)
+(
+$2N1291 
+LED3002-2 HLMP-S301-A Passive 
+R3003-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$2N1288 
+Q3002-2 S8050_C2931492-B Passive 
+R3004-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
+$2N1296 
+LED3003-1 HLMP-S301-C Passive 
+Q3003-3 S8050_C2931492-C Passive 
+)
+(
+$2N1297 
+LED3003-2 HLMP-S301-A Passive 
+R3005-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$2N1294 
+Q3003-2 S8050_C2931492-B Passive 
+R3006-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
+$2N1302 
+LED3004-1 HLMP-S301-C Passive 
+Q3004-3 S8050_C2931492-C Passive 
+)
+(
+$2N1303 
+LED3004-2 HLMP-S301-A Passive 
+R3007-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$2N1300 
+Q3004-2 S8050_C2931492-B Passive 
+R3008-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
+$2N1308 
+LED3005-1 HLMP-S301-C Passive 
+Q3005-3 S8050_C2931492-C Passive 
+)
+(
+$2N1309 
+LED3005-2 HLMP-S301-A Passive 
+R3009-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$2N1306 
+Q3005-2 S8050_C2931492-B Passive 
+R3010-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
+$2N1314 
+LED3006-1 HLMP-S301-C Passive 
+Q3006-3 S8050_C2931492-C Passive 
+)
+(
+$2N1315 
+LED3006-2 HLMP-S301-A Passive 
+R3011-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$2N1312 
+Q3006-2 S8050_C2931492-B Passive 
+R3012-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
+$2N1320 
+LED3007-1 HLMP-S301-C Passive 
+Q3007-3 S8050_C2931492-C Passive 
+)
+(
+$2N1321 
+LED3007-2 HLMP-S301-A Passive 
+R3013-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$2N1318 
+Q3007-2 S8050_C2931492-B Passive 
+R3014-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
+$2N1326 
+LED3008-1 HLMP-S301-C Passive 
+Q3008-3 S8050_C2931492-C Passive 
+)
+(
+$2N1327 
+LED3008-2 HLMP-S301-A Passive 
+R3015-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$2N1324 
+Q3008-2 S8050_C2931492-B Passive 
+R3016-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
+$2N1332 
+LED3009-1 HLMP-S301-C Passive 
+Q3009-3 S8050_C2931492-C Passive 
+)
+(
+$2N1333 
+LED3009-2 HLMP-S301-A Passive 
+R3017-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$2N1330 
+Q3009-2 S8050_C2931492-B Passive 
+R3018-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
+$2N1338 
+LED3010-1 HLMP-S301-C Passive 
+Q3010-3 S8050_C2931492-C Passive 
+)
+(
+$2N1339 
+LED3010-2 HLMP-S301-A Passive 
+R3019-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$2N1336 
+Q3010-2 S8050_C2931492-B Passive 
+R3020-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
