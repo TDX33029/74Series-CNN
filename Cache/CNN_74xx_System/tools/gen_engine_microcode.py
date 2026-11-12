@@ -1,0 +1,295 @@
+"""Generate the S07/S08/S09 local-FSM microcode ROM images.
+
+ROM address (27C512, 16 address pins):
+    A[4:0]  = ST[4:0]       current state
+    A5      = START_S       stage start (C1_START / C2_START / START_ANY)
+    A6      = POINT_LAST    last MAC of the current output point
+    A7      = MEM_ACK       S02 read acknowledge
+    A8      = MEM_DONE      S02 write done
+    A9      = REQ_DONE      requant done
+    A10     = IMAGE_LAST    last output point of the stage
+    A11     = FC_SEL        S09 only; tied low on S07/S08
+    A12     = BYTE_LAST     S09 only; last of the four FC2 output bytes
+    A[15:13] unused, tied low
+
+ROM1 data:
+    D[4:0]  next state
+    D5      BUSY
+    D6      DONE
+    D7      ACC_CLR_N (active low; 0 only in E_NEXT)
+
+ROM2 data:
+    D0      MAC_EN
+    D1      MEM_REQ
+    D2      MEM_WE
+    D3      OUT_STB (0 on S09; its byte counter uses QSTB)
+    D4      ADD_SEL0
+    D5      ADD_SEL1
+    D6/D7   0
+
+State sequence:
+    0  E_RESET
+    1  E_IDLE
+    2  E_ADDR_IN
+    3  E_WAIT_A
+    4  E_ADDR_W
+    5  E_WAIT_B
+    6  E_SHIFT
+    7  E_ACC
+    8  E_REQ
+    9  E_ADDR_OUT
+    10 E_WRITE
+    11 E_NEXT
+    12 E_DONE
+
+Run from the tools directory:
+    python gen_engine_microcode.py
+"""
+from __future__ import annotations
+
+import os
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.abspath(os.path.join(HERE, ".."))
+OUT = os.path.join(PROJECT_DIR, "model", "microcode")
+os.makedirs(OUT, exist_ok=True)
+
+E_RESET, E_IDLE = 0, 1
+E_ADDR_IN, E_WAIT_A, E_ADDR_W, E_WAIT_B = 2, 3, 4, 5
+E_SHIFT, E_ACC, E_REQ = 6, 7, 8
+E_ADDR_OUT, E_WRITE, E_NEXT, E_DONE = 9, 10, 11, 12
+NSTATES = 13
+
+
+def microcode(state: int, start: int, point_last: int, mem_ack: int,
+              mem_done: int, req_done: int, image_last: int,
+              fc_sel: int, byte_last: int, is_fc: bool) -> tuple[int, int]:
+    ns = state
+    busy = 0
+    done = 0
+    acc_clr_n = 1
+    mac_en = 0
+    mem_req = 0
+    mem_we = 0
+    out_stb = 0
+    neu_stb = 0
+    add_sel0 = 0
+    add_sel1 = 0
+
+    if state == E_RESET:
+        ns = E_IDLE
+    elif state == E_IDLE:
+        ns = E_ADDR_IN if start else E_IDLE
+    elif state == E_ADDR_IN:
+        ns = E_WAIT_A
+        mem_req = 1
+        add_sel0 = 0
+        add_sel1 = 0
+    elif state == E_WAIT_A:
+        # Controls are registered one state late, so this word is what the
+        # bus sees while E_ADDR_W runs.  Keep the region (IN) but drop REQ:
+        # the A read already started from the E_ADDR_IN word, and a REQ still
+        # high after its ACK makes S02 start a duplicate A cycle whose ACK
+        # then gets consumed by the write handshake (measured).
+        ns = E_ADDR_W if mem_ack else E_WAIT_A
+        add_sel0 = 0
+        add_sel1 = 0
+    elif state == E_ADDR_W:
+        ns = E_WAIT_B
+        mem_req = 1
+        add_sel0 = 1
+        add_sel1 = 0
+    elif state == E_WAIT_B:
+        # same for the W (weight) fetch: region held, REQ dropped
+        ns = E_SHIFT if mem_ack else E_WAIT_B
+        add_sel0 = 1
+        add_sel1 = 0
+    elif state == E_SHIFT:
+        ns = E_ACC
+        mac_en = 1
+    elif state == E_ACC:
+        ns = E_REQ if point_last else E_ADDR_IN
+    elif state == E_REQ:
+        ns = E_ADDR_OUT if req_done else E_REQ
+    elif state == E_ADDR_OUT:
+        # This word drives the bus while E_WRITE runs (one-state register
+        # delay), i.e. exactly during the MEM_ACK wait.
+        ns = E_WRITE
+        mem_req = 1
+        mem_we = 1
+        add_sel0 = 0
+        add_sel1 = 1
+    elif state == E_WRITE:
+        # V9: leave on MEM_ACK, one transfer state before MEM_DONE.  S02 is
+        # level-sensitive (POOL/ARGMAX hold REQ for back-to-back transfers),
+        # so a request still asserted when the controller returns to IDLE
+        # would start a second, spurious write.  Dropping REQ at ACK gives
+        # REQ_S a full cycle of margin, and the write data is still held
+        # because nWE only rises in T_RELEASE, before MEM_REQ falls.
+        #
+        # V13: REQ must stay high for the whole ACK wait.  S02 derives WE_S
+        # (its write/read selector) as a registered *qualified* WE, i.e.
+        # WE_S <= any(REQ & WE).  A one-clock REQ pulse is already gone by
+        # the time the controller reaches SETUP/WAIT, so WE_S reads 0 and the
+        # write executes as a read (measured: every engine write became a
+        # read of the OUT page, engine consumed that read's ACK).
+        if mem_ack:
+            # FC2 stores four bytes per neuron; repeat address+write until
+            # the S09 write counter reaches BYTE_LAST.  FC1 and C1/C2 go on
+            # after a single byte.
+            ns = E_ADDR_OUT if (is_fc and fc_sel and not byte_last) else E_NEXT
+        else:
+            ns = E_WRITE
+        mem_req = 1
+        mem_we = 1
+        add_sel0 = 0
+        add_sel1 = 1
+    elif state == E_NEXT:
+        ns = E_DONE if image_last else E_ADDR_IN
+        acc_clr_n = 0
+        out_stb = 0 if is_fc else 1
+        # V25: on S09 the neuron counter must advance *after* the output byte
+        # has been written.  NEURON currently advances on INDEX_LAST & MAC_EN,
+        # i.e. before the write, so neuron n was stored at address n+1 and the
+        # last neuron wrapped onto address 0.  D3 is unused on S09 (the CTRL
+        # 574 leaves Q3 open); drive it as the one-clock neuron strobe that
+        # becomes active in E_NEXT (same phase as OUT_STB on S07/S08) and feed
+        # NEURON_EN from it.
+        neu_stb = 1 if is_fc else 0
+    elif state == E_DONE:
+        ns = E_IDLE
+        done = 1
+
+    if E_ADDR_IN <= state <= E_NEXT:
+        busy = 1
+
+    rom1 = (ns & 0x1F) | (busy << 5) | (done << 6) | (acc_clr_n << 7)
+    rom2 = (mac_en & 1) | ((mem_req & 1) << 1) | ((mem_we & 1) << 2)
+    rom2 |= ((out_stb | neu_stb) & 1) << 3
+    rom2 |= (add_sel0 & 1) << 4
+    rom2 |= (add_sel1 & 1) << 5
+    return rom1, rom2
+
+
+def generate(name: str, is_fc: bool, oc_last_bit: bool = False) -> None:
+    # oc_last_bit: A11 is wired to OC_LAST on the engine board (C1/C2).  The
+    # stage is only finished when the last output point of the *last* filter
+    # is reached, so IMAGE_LAST = A10 & A11.  Without it the FSM entered DONE
+    # after the first output channel (576 of 4608 points on C1).
+    lo1 = bytearray(65536)
+    lo2 = bytearray(65536)
+    for addr in range(65536):
+        state = addr & 0x1F
+        start = (addr >> 5) & 1
+        point_last = (addr >> 6) & 1
+        mem_ack = (addr >> 7) & 1
+        mem_done = (addr >> 8) & 1
+        req_done = (addr >> 9) & 1
+        image_last = (addr >> 10) & 1
+        fc_sel = (addr >> 11) & 1
+        byte_last = (addr >> 12) & 1
+        if oc_last_bit:
+            image_last = image_last & fc_sel    # A11 = OC_LAST
+            fc_sel = 0
+        if state > NSTATES - 1:
+            w1 = w2 = 0
+        else:
+            w1, w2 = microcode(state, start, point_last, mem_ack, mem_done,
+                               req_done, image_last, fc_sel, byte_last, is_fc)
+        lo1[addr] = w1
+        lo2[addr] = w2
+
+    for suffix, data in (("rom1", lo1), ("rom2", lo2)):
+        with open(os.path.join(OUT, f"{name}_{suffix}.bin"), "wb") as f:
+            f.write(data)
+        with open(os.path.join(OUT, f"{name}_{suffix}.hex"), "w",
+                  encoding="ascii", newline="\n") as f:
+            f.writelines(f"{b:02X}\n" for b in data)
+    print(f"wrote {name}_rom1/rom2.bin (65536 bytes each)")
+
+
+def check(name: str, is_fc: bool) -> None:
+    def word(addr: int) -> tuple[int, int]:
+        return microcode(addr & 0x1F, (addr >> 5) & 1, (addr >> 6) & 1,
+                         (addr >> 7) & 1, (addr >> 8) & 1, (addr >> 9) & 1,
+                         (addr >> 10) & 1, (addr >> 11) & 1, (addr >> 12) & 1,
+                         is_fc)
+
+    # state 0 -> 1
+    assert word(0)[0] & 0x1F == E_IDLE
+    # state 1 with start -> 2
+    assert word(E_IDLE | (1 << 5))[0] & 0x1F == E_ADDR_IN
+    # state 2 -> 3, MEM_REQ
+    w1, w2 = word(E_ADDR_IN)
+    assert w1 & 0x1F == E_WAIT_A and (w2 >> 1) & 1 == 1
+    # state 3 with ACK -> 4
+    assert word(E_WAIT_A | (1 << 7))[0] & 0x1F == E_ADDR_W
+    # state 3 without ACK -> 3
+    assert word(E_WAIT_A)[0] & 0x1F == E_WAIT_A
+    # state 4 -> 5, ADD_SEL0
+    w1, w2 = word(E_ADDR_W)
+    assert w1 & 0x1F == E_WAIT_B and (w2 >> 4) & 1 == 1
+    # state 5 with ACK -> 6
+    assert word(E_WAIT_B | (1 << 7))[0] & 0x1F == E_SHIFT
+    # state 6 -> 7, MAC_EN
+    w1, w2 = word(E_SHIFT)
+    assert w1 & 0x1F == E_ACC and w2 & 1 == 1
+    # state 7 with POINT_LAST -> 8, without -> 2
+    assert word(E_ACC | (1 << 6))[0] & 0x1F == E_REQ
+    assert word(E_ACC)[0] & 0x1F == E_ADDR_IN
+    # state 8 with REQ_DONE -> 9
+    assert word(E_REQ | (1 << 9))[0] & 0x1F == E_ADDR_OUT
+    # state 9 -> 10, WE+ADD_SEL1; the control registers (74HCT574/273) are
+    # clocked from the same ROM word as the state register, so a word's
+    # control fields appear on the bus while the *next* state runs.  Measured
+    # on the netlist: the word of E_ADDR_IN drives the bus in E_WAIT_A, the
+    # word of E_ADDR_OUT drives it in E_WRITE.  The request is therefore
+    # issued in E_ADDR_OUT so that it is active exactly while E_WRITE waits
+    # for MEM_ACK, and dropped in E_WRITE so a multi-byte write still
+    # produces one clean REQ pulse per byte.
+    w1, w2 = word(E_ADDR_OUT)
+    assert w1 & 0x1F == E_WRITE
+    assert (w2 >> 1) & 1 == 1          # MEM_REQ active during E_WRITE
+    assert (w2 >> 2) & 1 == 1 and (w2 >> 5) & 1 == 1
+    w1, w2 = word(E_WRITE)
+    assert w1 & 0x1F == E_WRITE        # waits for MEM_ACK in place
+    assert (w2 >> 1) & 1 == 1          # REQ held: WE_S must still be 1 at SETUP
+    assert (w2 >> 2) & 1 == 1          # WE kept: OUT buffer stays enabled
+    # the A/B reads hold the region (ADD_SEL) but drop REQ after their ACK,
+    # otherwise S02 starts a duplicate cycle whose ACK poisons the write
+    w1, w2 = word(E_WAIT_A | (1 << 7))
+    assert w1 & 0x1F == E_ADDR_W and (w2 >> 1) & 1 == 0
+    assert (w2 >> 4) & 1 == 0 and (w2 >> 5) & 1 == 0   # IN region held
+    w1, w2 = word(E_WAIT_B | (1 << 7))
+    assert w1 & 0x1F == E_SHIFT and (w2 >> 1) & 1 == 0
+    assert (w2 >> 4) & 1 == 1 and (w2 >> 5) & 1 == 0   # W region held
+    # state 10 with MEM_ACK -> 11 (V9: ACK, not DONE)
+    assert word(E_WRITE | (1 << 7))[0] & 0x1F == E_NEXT
+    # state 10 without MEM_ACK -> 10
+    assert word(E_WRITE)[0] & 0x1F == E_WRITE
+    if is_fc:
+        # FC2 with FC_SEL=1: repeat address+write until BYTE_LAST.
+        assert word(E_WRITE | (1 << 7) | (1 << 11))[0] & 0x1F == E_ADDR_OUT
+        assert word(E_WRITE | (1 << 7) | (1 << 11) | (1 << 12))[0] & 0x1F == E_NEXT
+        # FC1 (FC_SEL=0) ignores BYTE_LAST and writes one byte.
+        assert word(E_WRITE | (1 << 7) | (1 << 12))[0] & 0x1F == E_NEXT
+    # state 11 with IMAGE_LAST -> 12, ACC_CLR_N=0
+    w1, _ = word(E_NEXT | (1 << 10))
+    assert w1 & 0x1F == E_DONE and (w1 >> 7) & 1 == 0
+    # state 11 without IMAGE_LAST -> 2
+    assert word(E_NEXT)[0] & 0x1F == E_ADDR_IN
+    # state 12 -> 1, DONE
+    w1, _ = word(E_DONE)
+    assert w1 & 0x1F == E_IDLE and (w1 >> 6) & 1 == 1
+    print(f"PASS: {name} microcode spot checks")
+
+
+def main() -> int:
+    for name, is_fc, oc in (("c1", False, True), ("c2", False, True), ("fc", True, False)):
+        generate(name, is_fc, oc)
+        check(name, is_fc)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,7 @@
+D:\Document\tempPrj\74Series-CNN\FPGA_CNN\eval_nonneg_v2.py:140: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  fl = model(torch.from_numpy(xte).float().unsqueeze(1) / 255.0).numpy()
+layer shifts: {'conv1': 10, 'conv2': 10, 'fc1': 13, 'fc2': 0}
+
+float   : 0.9650
+V2 非负 : 0.7545   (limit=2000)
+权重范围: conv1 max=255  负值个数=0

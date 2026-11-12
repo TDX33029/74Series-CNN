@@ -1,0 +1,1074 @@
+(kicad_symbol_lib
+	(version 20241209)
+	(generator "kicad_symbol_editor")
+	(generator_version "10.0")
+	(symbol "LUT_Mult_Unit"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -35.56 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "LUT_Mult_Unit"
+			(at -35.56 -64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "8x8 LUT multiplier unit, interface identical to S_LUT_Mult_1"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(symbol "LUT_Mult_Unit_0_1"
+			(rectangle
+				(start -33.02 25.40)
+				(end 33.02 -60.96)
+				(stroke (width 0.254) (type default))
+				(fill (type background))
+			)
+		)
+		(symbol "LUT_Mult_Unit_1_1"
+			(pin input line
+				(at -38.10 17.78 0)
+				(length 5.08)
+				(name "A0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "1"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 12.70 0)
+				(length 5.08)
+				(name "A1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "2"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 7.62 0)
+				(length 5.08)
+				(name "A2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "3"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 2.54 0)
+				(length 5.08)
+				(name "A3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "4"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 -2.54 0)
+				(length 5.08)
+				(name "A4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "5"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 -7.62 0)
+				(length 5.08)
+				(name "A5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "6"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 -12.70 0)
+				(length 5.08)
+				(name "A6"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "7"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 -17.78 0)
+				(length 5.08)
+				(name "A7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "8"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 -20.32 0)
+				(length 5.08)
+				(name "B0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "9"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 -25.40 0)
+				(length 5.08)
+				(name "B1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "10"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 -30.48 0)
+				(length 5.08)
+				(name "B2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "11"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 -35.56 0)
+				(length 5.08)
+				(name "B3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "12"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 -40.64 0)
+				(length 5.08)
+				(name "B4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "13"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 -45.72 0)
+				(length 5.08)
+				(name "B5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "14"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 -50.80 0)
+				(length 5.08)
+				(name "B6"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "15"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -38.10 -55.88 0)
+				(length 5.08)
+				(name "B7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "16"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 20.32 180)
+				(length 5.08)
+				(name "PROD0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "17"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 17.78 180)
+				(length 5.08)
+				(name "PROD1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "18"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 15.24 180)
+				(length 5.08)
+				(name "PROD2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "19"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 12.70 180)
+				(length 5.08)
+				(name "PROD3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "20"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 10.16 180)
+				(length 5.08)
+				(name "PROD4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "21"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 7.62 180)
+				(length 5.08)
+				(name "PROD5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "22"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 5.08 180)
+				(length 5.08)
+				(name "PROD6"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "23"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 2.54 180)
+				(length 5.08)
+				(name "PROD7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "24"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 0.00 180)
+				(length 5.08)
+				(name "PROD8"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "25"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 -2.54 180)
+				(length 5.08)
+				(name "PROD9"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "26"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 -5.08 180)
+				(length 5.08)
+				(name "PROD10"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "27"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 -7.62 180)
+				(length 5.08)
+				(name "PROD11"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "28"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 -10.16 180)
+				(length 5.08)
+				(name "PROD12"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "29"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 -12.70 180)
+				(length 5.08)
+				(name "PROD13"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "30"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 -15.24 180)
+				(length 5.08)
+				(name "PROD14"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "31"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 38.10 -17.78 180)
+				(length 5.08)
+				(name "PROD15"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "32"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -10.16 30.48 270)
+				(length 5.08)
+				(name "LUT_AB_LATCH"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "33"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at 10.16 30.48 270)
+				(length 5.08)
+				(name "LUT_PROD_LATCH"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "34"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -10.16 -66.04 90)
+				(length 5.08)
+				(name "LUT_CE_N"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "35"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at 10.16 -66.04 90)
+				(length 5.08)
+				(name "LUT_OE_N"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "36"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+		)
+	)
+	(symbol "Requant_Block"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -76.20 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "Requant_Block"
+			(at -76.20 -60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "Zero-point correction and requantization macro: serial 32x16 multiplier, 64-bit intermediate product, shift/round/saturate"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(symbol "Requant_Block_0_1"
+			(rectangle
+				(start -73.66 50.80)
+				(end 73.66 -53.34)
+				(stroke (width 0.254) (type default))
+				(fill (type background))
+			)
+		)
+		(symbol "Requant_Block_1_1"
+			(pin input line
+				(at -78.74 19.05 0)
+				(length 5.08)
+				(name "MAC_STB"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "1"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -78.74 12.70 0)
+				(length 5.08)
+				(name "MODE0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "2"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -78.74 6.35 0)
+				(length 5.08)
+				(name "MODE1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "3"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -78.74 0.00 0)
+				(length 5.08)
+				(name "RELU_EN"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "4"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -78.74 -6.35 0)
+				(length 5.08)
+				(name "START"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "5"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -78.74 -12.70 0)
+				(length 5.08)
+				(name "CLK"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "6"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -78.74 -19.05 0)
+				(length 5.08)
+				(name "RESET_N"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "7"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at -69.85 55.88 270)
+				(length 5.08)
+				(name "ACC[31:0]"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "8"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at -49.53 55.88 270)
+				(length 5.08)
+				(name "BIAS[31:0]"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "9"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at -29.21 55.88 270)
+				(length 5.08)
+				(name "M[31:0]"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "10"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at -8.89 55.88 270)
+				(length 5.08)
+				(name "SHIFT[5:0]"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "11"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at 11.43 55.88 270)
+				(length 5.08)
+				(name "ZP_X[15:0]"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "12"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at 31.75 55.88 270)
+				(length 5.08)
+				(name "ZP_W[15:0]"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "13"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at 52.07 55.88 270)
+				(length 5.08)
+				(name "ZP_OUT[15:0]"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "14"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at 72.39 55.88 270)
+				(length 5.08)
+				(name "N_MACS[15:0]"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "15"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -30.48 -58.42 90)
+				(length 5.08)
+				(name "PIX0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "16"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -24.13 -58.42 90)
+				(length 5.08)
+				(name "PIX1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "17"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -17.78 -58.42 90)
+				(length 5.08)
+				(name "PIX2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "18"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -11.43 -58.42 90)
+				(length 5.08)
+				(name "PIX3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "19"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -5.08 -58.42 90)
+				(length 5.08)
+				(name "PIX4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "20"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at 1.27 -58.42 90)
+				(length 5.08)
+				(name "PIX5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "21"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at 7.62 -58.42 90)
+				(length 5.08)
+				(name "PIX6"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "22"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at 13.97 -58.42 90)
+				(length 5.08)
+				(name "PIX7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "23"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at 20.32 -58.42 90)
+				(length 5.08)
+				(name "WGT0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "24"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at 26.67 -58.42 90)
+				(length 5.08)
+				(name "WGT1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "25"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at 33.02 -58.42 90)
+				(length 5.08)
+				(name "WGT2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "26"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at 39.37 -58.42 90)
+				(length 5.08)
+				(name "WGT3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "27"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at 45.72 -58.42 90)
+				(length 5.08)
+				(name "WGT4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "28"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at 52.07 -58.42 90)
+				(length 5.08)
+				(name "WGT5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "29"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at 58.42 -58.42 90)
+				(length 5.08)
+				(name "WGT6"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "30"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at 64.77 -58.42 90)
+				(length 5.08)
+				(name "WGT7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "31"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 78.74 40.64 180)
+				(length 5.08)
+				(name "Q0"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "32"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 78.74 33.02 180)
+				(length 5.08)
+				(name "Q1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "33"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 78.74 25.40 180)
+				(length 5.08)
+				(name "Q2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "34"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 78.74 17.78 180)
+				(length 5.08)
+				(name "Q3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "35"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 78.74 10.16 180)
+				(length 5.08)
+				(name "Q4"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "36"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 78.74 2.54 180)
+				(length 5.08)
+				(name "Q5"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "37"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 78.74 -5.08 180)
+				(length 5.08)
+				(name "Q6"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "38"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 78.74 -12.70 180)
+				(length 5.08)
+				(name "Q7"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "39"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 78.74 -20.32 180)
+				(length 5.08)
+				(name "QSTB"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "40"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 78.74 -27.94 180)
+				(length 5.08)
+				(name "SAT_FLAG"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "41"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 78.74 -35.56 180)
+				(length 5.08)
+				(name "BUSY"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "42"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 78.74 -43.18 180)
+				(length 5.08)
+				(name "DONE"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "43"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+		)
+	)
+	(symbol "S02_MEM_IF"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -43.18 26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "S02_MEM_IF"
+			(at -43.18 -29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "S02_Timing memory controller instance (one per engine); signal names identical to S02"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects (font (size 1.27 1.27)))
+		)
+		(symbol "S02_MEM_IF_0_1"
+			(rectangle
+				(start -40.64 22.86)
+				(end 40.64 -25.40)
+				(stroke (width 0.254) (type default))
+				(fill (type background))
+			)
+		)
+		(symbol "S02_MEM_IF_1_1"
+			(pin input line
+				(at -45.72 17.78 0)
+				(length 5.08)
+				(name "CLK"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "1"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -45.72 10.16 0)
+				(length 5.08)
+				(name "RESET_N"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "2"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -45.72 2.54 0)
+				(length 5.08)
+				(name "REQ"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "3"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin input line
+				(at -45.72 -5.08 0)
+				(length 5.08)
+				(name "WE"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "4"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at -45.72 -12.70 0)
+				(length 5.08)
+				(name "WAIT_READ[3:0]"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "5"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at -45.72 -20.32 0)
+				(length 5.08)
+				(name "WAIT_WRITE[3:0]"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "6"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 45.72 17.78 180)
+				(length 5.08)
+				(name "MEM_nCE"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "7"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 45.72 10.16 180)
+				(length 5.08)
+				(name "MEM_nOE"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "8"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 45.72 2.54 180)
+				(length 5.08)
+				(name "MEM_nWE"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "9"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 45.72 -5.08 180)
+				(length 5.08)
+				(name "MEM_ACK"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "10"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 45.72 -12.70 180)
+				(length 5.08)
+				(name "MEM_DONE"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "11"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin output line
+				(at 45.72 -20.32 180)
+				(length 5.08)
+				(name "MEM_BUSY"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "12"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+		)
+	)
+)

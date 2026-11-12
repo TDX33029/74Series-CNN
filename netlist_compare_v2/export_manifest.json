@@ -1,0 +1,653 @@
+[
+ {
+  "board": "B13_LUT_REF",
+  "page": "S_LUT_Mult_1",
+  "file": "B13_LUT_REF__S_LUT_Mult_1.net",
+  "chars": 17221,
+  "activated": "6374f5fd06e29d61@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B02_TIMING",
+  "page": "B02_Conn",
+  "file": "B02_TIMING__B02_Conn.net",
+  "chars": 125123,
+  "activated": "9d213a6e8ad3ddbd@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B02_TIMING",
+  "page": "S02_Timing",
+  "file": "B02_TIMING__S02_Timing.net",
+  "chars": 125123,
+  "activated": "073c5b9a369532e2@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B01_SUPERVISOR",
+  "page": "B01_Conn",
+  "file": "B01_SUPERVISOR__B01_Conn.net",
+  "chars": 95522,
+  "activated": "65e69a0a66a39a79@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B01_SUPERVISOR",
+  "page": "S01_Supervisor",
+  "file": "B01_SUPERVISOR__S01_Supervisor.net",
+  "chars": 95522,
+  "activated": "888fcfc01b919dd3@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B04-2_CONV1",
+  "page": "s07_conv1",
+  "file": "B04-2_CONV1__s07_conv1.net",
+  "chars": 49251,
+  "activated": "01714cffdc6aa9d2@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B04-2_CONV1",
+  "page": "b04_conn",
+  "file": "B04-2_CONV1__b04_conn.net",
+  "chars": 49251,
+  "activated": "2a94e517c3c443d1@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B04-3_CONV1",
+  "page": "s07_conv1",
+  "file": "B04-3_CONV1__s07_conv1.net",
+  "chars": 49240,
+  "activated": "da29f61ca76c763b@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B04-3_CONV1",
+  "page": "b04_conn",
+  "file": "B04-3_CONV1__b04_conn.net",
+  "chars": 49240,
+  "activated": "b8eb5837abecd9c8@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B04-4_CONV1",
+  "page": "s07_conv1",
+  "file": "B04-4_CONV1__s07_conv1.net",
+  "chars": 58468,
+  "activated": "1257630ab7816e7d@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B04-4_CONV1",
+  "page": "b04_conn",
+  "file": "B04-4_CONV1__b04_conn.net",
+  "chars": 58468,
+  "activated": "ae355fbe36d1f775@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B04-6_CONV1",
+  "page": "s07_conv1",
+  "file": "B04-6_CONV1__s07_conv1.net",
+  "chars": 46745,
+  "activated": "fe550102fbf0e747@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B04-6_CONV1",
+  "page": "b04_conn",
+  "file": "B04-6_CONV1__b04_conn.net",
+  "chars": 46745,
+  "activated": "e6d74d8df72e476f@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B08-1_FC1",
+  "page": "b08_conn",
+  "file": "B08-1_FC1__b08_conn.net",
+  "chars": 127358,
+  "activated": "8da2ac68146aafc1@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B08-1_FC1",
+  "page": "s17_fc1",
+  "file": "B08-1_FC1__s17_fc1.net",
+  "chars": 127358,
+  "activated": "8e75286ffc330a1d@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B08-2_FC1",
+  "page": "s09_fc1",
+  "file": "B08-2_FC1__s09_fc1.net",
+  "chars": 45421,
+  "activated": "6004007354660930@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B08-2_FC1",
+  "page": "b08_conn",
+  "file": "B08-2_FC1__b08_conn.net",
+  "chars": 45421,
+  "activated": "8a186187ade4fca5@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B08-3_FC1",
+  "page": "b08_conn",
+  "file": "B08-3_FC1__b08_conn.net",
+  "chars": 48353,
+  "activated": "8880621cb699d95b@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B08-3_FC1",
+  "page": "s09_fc1",
+  "file": "B08-3_FC1__s09_fc1.net",
+  "chars": 48353,
+  "activated": "8993bffe22cc9d73@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B08-4_FC1",
+  "page": "s09_fc1",
+  "file": "B08-4_FC1__s09_fc1.net",
+  "chars": 66472,
+  "activated": "88d26b2e603c0324@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B08-4_FC1",
+  "page": "b08_conn",
+  "file": "B08-4_FC1__b08_conn.net",
+  "chars": 66472,
+  "activated": "77ea6e24e0cd5a8e@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B08-6_FC1",
+  "page": "s09_fc1",
+  "file": "B08-6_FC1__s09_fc1.net",
+  "chars": 40427,
+  "activated": "7faefc69398af5bb@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B08-6_FC1",
+  "page": "b08_conn",
+  "file": "B08-6_FC1__b08_conn.net",
+  "chars": 40427,
+  "activated": "66449f924bcf6d6c@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B09-1_FC2",
+  "page": "b09_conn",
+  "file": "B09-1_FC2__b09_conn.net",
+  "chars": 111533,
+  "activated": "d087ebe52c11873b@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B09-1_FC2",
+  "page": "s17_fc2",
+  "file": "B09-1_FC2__s17_fc2.net",
+  "chars": 111533,
+  "activated": "624615db1f778147@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B09-3_FC2",
+  "page": "b09_conn",
+  "file": "B09-3_FC2__b09_conn.net",
+  "chars": 57064,
+  "activated": "7f9f212304c316ae@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B09-3_FC2",
+  "page": "s09_fc2",
+  "file": "B09-3_FC2__s09_fc2.net",
+  "chars": 57064,
+  "activated": "48e5a86992d10340@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B09-4_FC2",
+  "page": "s09_fc2",
+  "file": "B09-4_FC2__s09_fc2.net",
+  "chars": 57147,
+  "activated": "c59704a8071d1cf1@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B09-4_FC2",
+  "page": "b09_conn",
+  "file": "B09-4_FC2__b09_conn.net",
+  "chars": 57147,
+  "activated": "357a0b2534604c91@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B09-5_FC2",
+  "page": "s09_fc2",
+  "file": "B09-5_FC2__s09_fc2.net",
+  "chars": 49507,
+  "activated": "507c0baf78f9970b@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B09-5_FC2",
+  "page": "b09_conn",
+  "file": "B09-5_FC2__b09_conn.net",
+  "chars": 49507,
+  "activated": "1559819e6baa1c1e@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B09-6_FC2",
+  "page": "s17_fc2",
+  "file": "B09-6_FC2__s17_fc2.net",
+  "chars": 58507,
+  "activated": "4d5cec7942fa2092@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B09-6_FC2",
+  "page": "b09_conn",
+  "file": "B09-6_FC2__b09_conn.net",
+  "chars": 58507,
+  "activated": "25eb21175e43d2d8@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B12-1_HOSTIO",
+  "page": "b12_conn",
+  "file": "B12-1_HOSTIO__b12_conn.net",
+  "chars": 121367,
+  "activated": "0d58d6e6fac0686a@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B12-1_HOSTIO",
+  "page": "s10_top_io",
+  "file": "B12-1_HOSTIO__s10_top_io.net",
+  "chars": 121367,
+  "activated": "04ae50cbc5485b71@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B12-3_HOSTIO",
+  "page": "S10_Top_IO",
+  "file": "B12-3_HOSTIO__S10_Top_IO.net",
+  "chars": 9707,
+  "activated": "fbbd4ac1252d9d62@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B12-3_HOSTIO",
+  "page": "B12_Conn",
+  "file": "B12-3_HOSTIO__B12_Conn.net",
+  "chars": 9707,
+  "activated": "6f5b4942aed35ae1@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B12-2_HOSTIO",
+  "page": "B12_Conn",
+  "file": "B12-2_HOSTIO__B12_Conn.net",
+  "chars": 69106,
+  "activated": "011c17f7d80a6b44@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B12-2_HOSTIO",
+  "page": "S10_Top_IO",
+  "file": "B12-2_HOSTIO__S10_Top_IO.net",
+  "chars": 69106,
+  "activated": "cff1e61f3038c846@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B11-2_BUSFAB",
+  "page": "B11_Conn",
+  "file": "B11-2_BUSFAB__B11_Conn.net",
+  "chars": 43585,
+  "activated": "253d42f18027002e@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B11-2_BUSFAB",
+  "page": "S11_BusFabric",
+  "file": "B11-2_BUSFAB__S11_BusFabric.net",
+  "chars": 43585,
+  "activated": "1694ae4761c7ccde@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B11-1_BUSFAB",
+  "page": "S11_BusFabric",
+  "file": "B11-1_BUSFAB__S11_BusFabric.net",
+  "chars": 122454,
+  "activated": "fc043957ef9ae6cf@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B11-1_BUSFAB",
+  "page": "B11_Conn",
+  "file": "B11-1_BUSFAB__B11_Conn.net",
+  "chars": 122454,
+  "activated": "83de2b4f6dda817f@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B10-2_ARGMAX",
+  "page": "S06_Argmax",
+  "file": "B10-2_ARGMAX__S06_Argmax.net",
+  "chars": 220515,
+  "activated": "142b0ffe26b52a77@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B10-2_ARGMAX",
+  "page": "B10_Conn",
+  "file": "B10-2_ARGMAX__B10_Conn.net",
+  "chars": 220515,
+  "activated": "991bc27f9b3cd188@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B10-1_ARGMAX",
+  "page": "S06_Argmax",
+  "file": "B10-1_ARGMAX__S06_Argmax.net",
+  "chars": 223602,
+  "activated": "8b8737eaa3662798@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B10-1_ARGMAX",
+  "page": "B10_Conn",
+  "file": "B10-1_ARGMAX__B10_Conn.net",
+  "chars": 223602,
+  "activated": "5f67911e01f0d762@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-7_CONV2",
+  "page": "S08_Conv2",
+  "file": "B06-7_CONV2__S08_Conv2.net",
+  "chars": 37225,
+  "activated": "0840ad3c31f14e5d@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-7_CONV2",
+  "page": "B06_Conn",
+  "file": "B06-7_CONV2__B06_Conn.net",
+  "chars": 37225,
+  "activated": "9fad49abb9ef3ca5@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-6_CONV2",
+  "page": "S08_Conv2",
+  "file": "B06-6_CONV2__S08_Conv2.net",
+  "chars": 41758,
+  "activated": "ed7b31acc3b1be3e@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-6_CONV2",
+  "page": "B06_Conn",
+  "file": "B06-6_CONV2__B06_Conn.net",
+  "chars": 41758,
+  "activated": "b21be2103faf0d32@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-5_CONV2",
+  "page": "B06_Conn",
+  "file": "B06-5_CONV2__B06_Conn.net",
+  "chars": 57279,
+  "activated": "65ae6bd0ec0dbaed@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-5_CONV2",
+  "page": "S08_Conv2",
+  "file": "B06-5_CONV2__S08_Conv2.net",
+  "chars": 57279,
+  "activated": "4c0ad4409c8f41c0@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-3_CONV2",
+  "page": "S08_Conv2",
+  "file": "B06-3_CONV2__S08_Conv2.net",
+  "chars": 101282,
+  "activated": "340e25c3a6160f8c@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-3_CONV2",
+  "page": "B06_Conn",
+  "file": "B06-3_CONV2__B06_Conn.net",
+  "chars": 101282,
+  "activated": "d0a480cb90577ceb@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-2_CONV2",
+  "page": "B06_Conn",
+  "file": "B06-2_CONV2__B06_Conn.net",
+  "chars": 50128,
+  "activated": "902773184de0d26f@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-2_CONV2",
+  "page": "S08_Conv2",
+  "file": "B06-2_CONV2__S08_Conv2.net",
+  "chars": 50128,
+  "activated": "230499a296f80f1f@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-1_CONV2",
+  "page": "S08_Conv2",
+  "file": "B06-1_CONV2__S08_Conv2.net",
+  "chars": 49911,
+  "activated": "a4bb00619fed40e7@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-1_CONV2",
+  "page": "B06_Conn",
+  "file": "B06-1_CONV2__B06_Conn.net",
+  "chars": 49911,
+  "activated": "871ecb6cd52c94c9@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B05-2_POOL1",
+  "page": "S05_Pool1",
+  "file": "B05-2_POOL1__S05_Pool1.net",
+  "chars": 179508,
+  "activated": "e9da3ff040e0c755@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B05-2_POOL1",
+  "page": "B05_Conn",
+  "file": "B05-2_POOL1__B05_Conn.net",
+  "chars": 179508,
+  "activated": "5c2ddd1fbf3fb739@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B04-1_CONV1",
+  "page": "S07_Conv1",
+  "file": "B04-1_CONV1__S07_Conv1.net",
+  "chars": 122032,
+  "activated": "bc61960b1ca1663f@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B04-1_CONV1",
+  "page": "B04_Conn",
+  "file": "B04-1_CONV1__B04_Conn.net",
+  "chars": 122032,
+  "activated": "578445ee79b4265c@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B09-2_FC2",
+  "page": "S09_FC2",
+  "file": "B09-2_FC2__S09_FC2.net",
+  "chars": 49980,
+  "activated": "1cae993225c5960b@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B09-2_FC2",
+  "page": "B09_Conn",
+  "file": "B09-2_FC2__B09_Conn.net",
+  "chars": 49980,
+  "activated": "e7555205d7a662bc@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B08-5_FC1",
+  "page": "P2",
+  "file": "B08-5_FC1__P2.net",
+  "chars": 55477,
+  "activated": "3528e37b2b5f2a1d@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B08-5_FC1",
+  "page": "B08-5_FC1",
+  "file": "B08-5_FC1__B08-5_FC1.net",
+  "chars": 55477,
+  "activated": "1429415475a03b53@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B07-2_POOL2",
+  "page": "B07-2_POOL2",
+  "file": "B07-2_POOL2__B07-2_POOL2.net",
+  "chars": 179436,
+  "activated": "be374d4f2f37c88d@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B07-2_POOL2",
+  "page": "P2",
+  "file": "B07-2_POOL2__P2.net",
+  "chars": 179436,
+  "activated": "35b95c40ab5a0ab5@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B07-1_POOL2",
+  "page": "P2",
+  "file": "B07-1_POOL2__P2.net",
+  "chars": 212277,
+  "activated": "a45dd77059657e56@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B07-1_POOL2",
+  "page": "B07-1_POOL2",
+  "file": "B07-1_POOL2__B07-1_POOL2.net",
+  "chars": 212277,
+  "activated": "cb134c4613fe4485@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-4_CONV2",
+  "page": "P1",
+  "file": "B06-4_CONV2__P1.net",
+  "chars": 49898,
+  "activated": "1ea7c454e01eba91@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B06-4_CONV2",
+  "page": "B06-4_CONV2",
+  "file": "B06-4_CONV2__B06-4_CONV2.net",
+  "chars": 49898,
+  "activated": "8a27bad2999322ec@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B05-1_POOL1",
+  "page": "P2",
+  "file": "B05-1_POOL1__P2.net",
+  "chars": 212277,
+  "activated": "332839d22474512e@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B05-1_POOL1",
+  "page": "B05-1_POOL1",
+  "file": "B05-1_POOL1__B05-1_POOL1.net",
+  "chars": 212277,
+  "activated": "b7c77d8fdd50eb1a@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B04-5_CONV1",
+  "page": "P1",
+  "file": "B04-5_CONV1__P1.net",
+  "chars": 58424,
+  "activated": "da259cc692966c34@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B04-5_CONV1",
+  "page": "B04-5_CONV1",
+  "file": "B04-5_CONV1__B04-5_CONV1.net",
+  "chars": 58424,
+  "activated": "8694c482af0fef78@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-8_MEMORY",
+  "page": "B03-8_MEMORY",
+  "file": "B03-8_MEMORY__B03-8_MEMORY.net",
+  "chars": 17102,
+  "activated": "df0000dbd160c54c@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-8_MEMORY",
+  "page": "P1",
+  "file": "B03-8_MEMORY__P1.net",
+  "chars": 17102,
+  "activated": "3038a660e320fd29@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-7_MEMORY",
+  "page": "B03-7_MEMORY",
+  "file": "B03-7_MEMORY__B03-7_MEMORY.net",
+  "chars": 17922,
+  "activated": "356aa60483f542ea@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-7_MEMORY",
+  "page": "P1",
+  "file": "B03-7_MEMORY__P1.net",
+  "chars": 17922,
+  "activated": "39601763a834e473@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-4_MEMORY",
+  "page": "B03-4_MEMORY",
+  "file": "B03-4_MEMORY__B03-4_MEMORY.net",
+  "chars": 20932,
+  "activated": "489ac956ed7057d6@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-4_MEMORY",
+  "page": "P1",
+  "file": "B03-4_MEMORY__P1.net",
+  "chars": 20932,
+  "activated": "0535f09b511aacb8@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-3_MEMORY",
+  "page": "P1",
+  "file": "B03-3_MEMORY__P1.net",
+  "chars": 30633,
+  "activated": "f3905698b1bec632@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-3_MEMORY",
+  "page": "B03-3_MEMORY",
+  "file": "B03-3_MEMORY__B03-3_MEMORY.net",
+  "chars": 30633,
+  "activated": "4208bdbe3437e815@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-2_MEMORY",
+  "page": "P1",
+  "file": "B03-2_MEMORY__P1.net",
+  "chars": 36434,
+  "activated": "25db92838315de8c@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-2_MEMORY",
+  "page": "B03-2_MEMORY",
+  "file": "B03-2_MEMORY__B03-2_MEMORY.net",
+  "chars": 36434,
+  "activated": "b2154479061aacf1@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-1_MEMORY",
+  "page": "P1",
+  "file": "B03-1_MEMORY__P1.net",
+  "chars": 46305,
+  "activated": "09a0b4a09b45eacb@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-1_MEMORY",
+  "page": "B03-1_MEMORY",
+  "file": "B03-1_MEMORY__B03-1_MEMORY.net",
+  "chars": 46305,
+  "activated": "12dea7fa11b6a6a7@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-6_MEMORY",
+  "page": "P1",
+  "file": "B03-6_MEMORY__P1.net",
+  "chars": 21409,
+  "activated": "caa397401d1e3e72@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-6_MEMORY",
+  "page": "B03-6_MEMORY",
+  "file": "B03-6_MEMORY__B03-6_MEMORY.net",
+  "chars": 21409,
+  "activated": "469ddc4c9188b2f4@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-5_MEMORY",
+  "page": "P1",
+  "file": "B03-5_MEMORY__P1.net",
+  "chars": 26847,
+  "activated": "ea6a01498e018e51@86c1d8c59be2462ebb49fab075a5c297"
+ },
+ {
+  "board": "B03-5_MEMORY",
+  "page": "B03-5_MEMORY",
+  "file": "B03-5_MEMORY__B03-5_MEMORY.net",
+  "chars": 26847,
+  "activated": "77d035e909bfe79f@86c1d8c59be2462ebb49fab075a5c297"
+ }
+]

@@ -1,0 +1,607 @@
+PROTEL NETLIST 2.0
+[
+DESIGNATOR
+U10004
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U10004
+Device
+SN74HCT541N
+Unique ID
+gge40
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U10005
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U10005
+Device
+SN74HCT541N
+Unique ID
+gge41
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+RN10001
+FOOTPRINT
+RES-ARRAY-TH_9P-P2.54-D1.0
+PARTTYPE
+A09-103JP
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+A09-103JP
+Designator
+RN10001
+Device
+A09-103JP
+Unique ID
+gge48
+LCSC Part Name
+
+Supplier Part
+A09-103JP.1
+Manufacturer
+FH(风华)
+Manufacturer Part
+A09-103JP
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+SIP-9_L22.8-W3.0-H8.5-P2.54
+Number of Resistors
+
+Value
+
+Tolerance
+
+Power(Watts)
+
+Temperature Coefficient
+
+Number of Pins
+
+Name
+
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+RN10002
+FOOTPRINT
+RES-ARRAY-TH_9P-P2.54-D1.0
+PARTTYPE
+A09-103JP
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+A09-103JP
+Designator
+RN10002
+Device
+A09-103JP
+Unique ID
+gge49
+LCSC Part Name
+
+Supplier Part
+A09-103JP.1
+Manufacturer
+FH(风华)
+Manufacturer Part
+A09-103JP
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+SIP-9_L22.8-W3.0-H8.5-P2.54
+Number of Resistors
+
+Value
+
+Tolerance
+
+Power(Watts)
+
+Temperature Coefficient
+
+Number of Pins
+
+Name
+
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+J21103
+FOOTPRINT
+HDR-TH_64P-P2.54-V-M-R2-C32-S2.54-2
+PARTTYPE
+X6522WV-2x32H-C60D30-E80
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+X6522WV-2X32H-C60D30-E80
+Designator
+J21103
+Device
+X6522WV-2x32H-C60D30-E80
+Unique ID
+gge50
+LCSC Part Name
+
+Supplier Part
+X6522WV-2X32H-C60D30-E80.1
+Manufacturer
+XKB Connection(中国星坤)
+Manufacturer Part
+X6522WV-2x32H-C60D30-E80
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+HDR-TH_64P-P2.54-V-M-R2-C32-S2.54-2
+Pin Structure
+
+Pitch
+
+Row Spacing
+
+Circluar Pins/Square Pins
+
+Number of Rows
+
+Number of Pins
+
+Current Rating
+
+Voltage Rating (Max)
+
+Length of Mating Pin
+
+Insulation Height
+
+Length of End Connection Pin
+
+Contact Material
+
+Contact Plating
+
+Operating Temperature
+
+Color
+
+Name
+X6522WV-2x32H-C60D30-E80
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+(
+/B12_S10_TOP_IO/NOT_LOAD_EN 
+U10004-1 SN74HCT541N-OE1 Passive 
+U10004-19 SN74HCT541N-OE2 Passive 
+U10005-1 SN74HCT541N-OE1 Passive 
+U10005-19 SN74HCT541N-OE2 Passive 
+J21103-27 X6522WV-2x32H-C60D30-E80-27 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A0 
+U10004-2 SN74HCT541N-A1 Passive 
+RN10001-2 A09-103JP-2 Input   
+J21103-11 X6522WV-2x32H-C60D30-E80-11 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A1 
+U10004-3 SN74HCT541N-A2 Passive 
+RN10001-3 A09-103JP-3 Input   
+J21103-12 X6522WV-2x32H-C60D30-E80-12 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A2 
+U10004-4 SN74HCT541N-A3 Passive 
+RN10001-4 A09-103JP-4 Input   
+J21103-19 X6522WV-2x32H-C60D30-E80-19 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A3 
+U10004-5 SN74HCT541N-A4 Passive 
+RN10001-5 A09-103JP-5 Input   
+J21103-20 X6522WV-2x32H-C60D30-E80-20 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A4 
+U10004-6 SN74HCT541N-A5 Passive 
+RN10001-6 A09-103JP-6 Input   
+J21103-21 X6522WV-2x32H-C60D30-E80-21 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A5 
+U10004-7 SN74HCT541N-A6 Passive 
+RN10001-7 A09-103JP-7 Input   
+J21103-22 X6522WV-2x32H-C60D30-E80-22 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A6 
+U10004-8 SN74HCT541N-A7 Passive 
+RN10001-8 A09-103JP-8 Input   
+J21103-23 X6522WV-2x32H-C60D30-E80-23 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A7 
+U10004-9 SN74HCT541N-A8 Passive 
+RN10001-9 A09-103JP-9 Input   
+J21103-24 X6522WV-2x32H-C60D30-E80-24 Passive 
+)
+(
+GND 
+U10004-10 SN74HCT541N-GND Passive 
+U10005-10 SN74HCT541N-GND Passive 
+RN10001-1 A09-103JP-1 Input   
+RN10002-1 A09-103JP-1 Input   
+J21103-2 X6522WV-2x32H-C60D30-E80-2 Passive 
+J21103-63 X6522WV-2x32H-C60D30-E80-63 Passive 
+J21103-4 X6522WV-2x32H-C60D30-E80-4 Passive 
+J21103-61 X6522WV-2x32H-C60D30-E80-61 Passive 
+J21103-59 X6522WV-2x32H-C60D30-E80-59 Passive 
+J21103-57 X6522WV-2x32H-C60D30-E80-57 Passive 
+J21103-55 X6522WV-2x32H-C60D30-E80-55 Passive 
+J21103-53 X6522WV-2x32H-C60D30-E80-53 Passive 
+J21103-51 X6522WV-2x32H-C60D30-E80-51 Passive 
+J21103-49 X6522WV-2x32H-C60D30-E80-49 Passive 
+J21103-47 X6522WV-2x32H-C60D30-E80-47 Passive 
+J21103-45 X6522WV-2x32H-C60D30-E80-45 Passive 
+J21103-44 X6522WV-2x32H-C60D30-E80-44 Passive 
+J21103-46 X6522WV-2x32H-C60D30-E80-46 Passive 
+J21103-48 X6522WV-2x32H-C60D30-E80-48 Passive 
+J21103-50 X6522WV-2x32H-C60D30-E80-50 Passive 
+J21103-52 X6522WV-2x32H-C60D30-E80-52 Passive 
+J21103-54 X6522WV-2x32H-C60D30-E80-54 Passive 
+J21103-56 X6522WV-2x32H-C60D30-E80-56 Passive 
+J21103-58 X6522WV-2x32H-C60D30-E80-58 Passive 
+J21103-60 X6522WV-2x32H-C60D30-E80-60 Passive 
+J21103-62 X6522WV-2x32H-C60D30-E80-62 Passive 
+J21103-3 X6522WV-2x32H-C60D30-E80-3 Passive 
+J21103-64 X6522WV-2x32H-C60D30-E80-64 Passive 
+J21103-1 X6522WV-2x32H-C60D30-E80-1 Passive 
+)
+(
+ADDR7 
+U10004-11 SN74HCT541N-Y8 Passive 
+J21103-41 X6522WV-2x32H-C60D30-E80-41 Passive 
+)
+(
+ADDR6 
+U10004-12 SN74HCT541N-Y7 Passive 
+J21103-40 X6522WV-2x32H-C60D30-E80-40 Passive 
+)
+(
+ADDR5 
+U10004-13 SN74HCT541N-Y6 Passive 
+J21103-39 X6522WV-2x32H-C60D30-E80-39 Passive 
+)
+(
+ADDR4 
+U10004-14 SN74HCT541N-Y5 Passive 
+J21103-38 X6522WV-2x32H-C60D30-E80-38 Passive 
+)
+(
+ADDR3 
+U10004-15 SN74HCT541N-Y4 Passive 
+J21103-37 X6522WV-2x32H-C60D30-E80-37 Passive 
+)
+(
+ADDR2 
+U10004-16 SN74HCT541N-Y3 Passive 
+J21103-36 X6522WV-2x32H-C60D30-E80-36 Passive 
+)
+(
+ADDR1 
+U10004-17 SN74HCT541N-Y2 Passive 
+J21103-29 X6522WV-2x32H-C60D30-E80-29 Passive 
+)
+(
+ADDR0 
+U10004-18 SN74HCT541N-Y1 Passive 
+J21103-28 X6522WV-2x32H-C60D30-E80-28 Passive 
+)
+(
++5V 
+U10004-20 SN74HCT541N-VCC Passive 
+U10005-20 SN74HCT541N-VCC Passive 
+J21103-6 X6522WV-2x32H-C60D30-E80-6 Passive 
+J21103-8 X6522WV-2x32H-C60D30-E80-8 Passive 
+J21103-7 X6522WV-2x32H-C60D30-E80-7 Passive 
+J21103-5 X6522WV-2x32H-C60D30-E80-5 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A8 
+U10005-2 SN74HCT541N-A1 Passive 
+RN10002-2 A09-103JP-2 Input   
+J21103-25 X6522WV-2x32H-C60D30-E80-25 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A9 
+U10005-3 SN74HCT541N-A2 Passive 
+RN10002-3 A09-103JP-3 Input   
+J21103-26 X6522WV-2x32H-C60D30-E80-26 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A10 
+U10005-4 SN74HCT541N-A3 Passive 
+RN10002-4 A09-103JP-4 Input   
+J21103-13 X6522WV-2x32H-C60D30-E80-13 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A11 
+U10005-5 SN74HCT541N-A4 Passive 
+RN10002-5 A09-103JP-5 Input   
+J21103-14 X6522WV-2x32H-C60D30-E80-14 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A12 
+U10005-6 SN74HCT541N-A5 Passive 
+RN10002-6 A09-103JP-6 Input   
+J21103-15 X6522WV-2x32H-C60D30-E80-15 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A13 
+U10005-7 SN74HCT541N-A6 Passive 
+RN10002-7 A09-103JP-7 Input   
+J21103-16 X6522WV-2x32H-C60D30-E80-16 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A14 
+U10005-8 SN74HCT541N-A7 Passive 
+RN10002-8 A09-103JP-8 Input   
+J21103-17 X6522WV-2x32H-C60D30-E80-17 Passive 
+)
+(
+/B12_S10_TOP_IO/H_A15 
+U10005-9 SN74HCT541N-A8 Passive 
+RN10002-9 A09-103JP-9 Input   
+J21103-18 X6522WV-2x32H-C60D30-E80-18 Passive 
+)
+(
+ADDR15 
+U10005-11 SN74HCT541N-Y8 Passive 
+J21103-35 X6522WV-2x32H-C60D30-E80-35 Passive 
+)
+(
+ADDR14 
+U10005-12 SN74HCT541N-Y7 Passive 
+J21103-34 X6522WV-2x32H-C60D30-E80-34 Passive 
+)
+(
+ADDR13 
+U10005-13 SN74HCT541N-Y6 Passive 
+J21103-33 X6522WV-2x32H-C60D30-E80-33 Passive 
+)
+(
+ADDR12 
+U10005-14 SN74HCT541N-Y5 Passive 
+J21103-32 X6522WV-2x32H-C60D30-E80-32 Passive 
+)
+(
+ADDR11 
+U10005-15 SN74HCT541N-Y4 Passive 
+J21103-31 X6522WV-2x32H-C60D30-E80-31 Passive 
+)
+(
+ADDR10 
+U10005-16 SN74HCT541N-Y3 Passive 
+J21103-30 X6522WV-2x32H-C60D30-E80-30 Passive 
+)
+(
+ADDR9 
+U10005-17 SN74HCT541N-Y2 Passive 
+J21103-43 X6522WV-2x32H-C60D30-E80-43 Passive 
+)
+(
+ADDR8 
+U10005-18 SN74HCT541N-Y1 Passive 
+J21103-42 X6522WV-2x32H-C60D30-E80-42 Passive 
+)
+(
++VLED 
+J21103-10 X6522WV-2x32H-C60D30-E80-10 Passive 
+J21103-9 X6522WV-2x32H-C60D30-E80-9 Passive 
+)

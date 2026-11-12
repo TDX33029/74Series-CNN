@@ -1,0 +1,1291 @@
+PROTEL NETLIST 2.0
+[
+DESIGNATOR
+R4002
+FOOTPRINT
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+PARTTYPE
+MFR-25FBF52-10K
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MFR-25FBF52-10K
+Designator
+R4002
+Device
+MFR-25FBF52-10K
+Unique ID
+gge3
+LCSC Part Name
+
+Supplier Part
+MFR-25FBF52-10K.1
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+MFR-25FBF52-10K
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+RES-TH_BD2.4-L6.3-P10.30-D0.6
+Type
+
+Value
+
+Tolerance
+
+Power(Watts)
+
+Temperature Coefficient
+
+Operating Temperature Range
+
+Name
+
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4043
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4043
+Device
+SN74HCT541N
+Unique ID
+gge62
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4045
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4045
+Device
+SN74HCT541N
+Unique ID
+gge64
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4046
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4046
+Device
+SN74HCT541N
+Unique ID
+gge65
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4051
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4051
+Device
+SN74HCT541N
+Unique ID
+gge70
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U4052
+FOOTPRINT
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+PARTTYPE
+SN74HCT541N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HCT541N
+Designator
+U4052
+Device
+SN74HCT541N
+Unique ID
+gge71
+LCSC Part Name
+
+Supplier Part
+SN74HCT541N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HCT541N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL
+Input type
+
+output type
+
+Voltage - Supply
+
+Number of Elements
+
+Number of Bits per Element
+
+Channel Type
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Logic Family
+
+Operating Temperature
+
+Quiescent Current
+
+Propagation Delay
+
+Features
+
+Name
+SN74HCT541N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+C4005
+FOOTPRINT
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+100NF_C9900015256
+Designator
+C4005
+Device
+100nF
+Unique ID
+gge128
+LCSC Part Name
+100nF
+Supplier Part
+100NF_C9900015256.1
+Manufacturer
+
+Manufacturer Part
+100nF
+Supplier Footprint
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+JLCPCB Part Class
+Extended Part
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+CAP-TH_BD5.0-W2.5-P5.08
+Name
+100nF
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+100n
+
+*
+]
+[
+DESIGNATOR
+C4007
+FOOTPRINT
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+100NF_C9900015256
+Designator
+C4007
+Device
+100nF
+Unique ID
+gge130
+LCSC Part Name
+100nF
+Supplier Part
+100NF_C9900015256.1
+Manufacturer
+
+Manufacturer Part
+100nF
+Supplier Footprint
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+JLCPCB Part Class
+Extended Part
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+CAP-TH_BD5.0-W2.5-P5.08
+Name
+100nF
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+100n
+
+*
+]
+[
+DESIGNATOR
+C4023
+FOOTPRINT
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+100NF_C9900015256
+Designator
+C4023
+Device
+100nF
+Unique ID
+gge146
+LCSC Part Name
+100nF
+Supplier Part
+100NF_C9900015256.1
+Manufacturer
+
+Manufacturer Part
+100nF
+Supplier Footprint
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+JLCPCB Part Class
+Extended Part
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+CAP-TH_BD5.0-W2.5-P5.08
+Name
+100nF
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+100n
+
+*
+]
+[
+DESIGNATOR
+C4025
+FOOTPRINT
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+100NF_C9900015256
+Designator
+C4025
+Device
+100nF
+Unique ID
+gge148
+LCSC Part Name
+100nF
+Supplier Part
+100NF_C9900015256.1
+Manufacturer
+
+Manufacturer Part
+100nF
+Supplier Footprint
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+JLCPCB Part Class
+Extended Part
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+CAP-TH_BD5.0-W2.5-P5.08
+Name
+100nF
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+100n
+
+*
+]
+[
+DESIGNATOR
+C4026
+FOOTPRINT
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+100NF_C9900015256
+Designator
+C4026
+Device
+100nF
+Unique ID
+gge149
+LCSC Part Name
+100nF
+Supplier Part
+100NF_C9900015256.1
+Manufacturer
+
+Manufacturer Part
+100nF
+Supplier Footprint
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+JLCPCB Part Class
+Extended Part
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+CAP-TH_BD5.0-W2.5-P5.08
+Name
+100nF
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+100n
+
+*
+]
+[
+DESIGNATOR
+C4036
+FOOTPRINT
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+100NF_C9900015256
+Designator
+C4036
+Device
+100nF
+Unique ID
+gge159
+LCSC Part Name
+100nF
+Supplier Part
+100NF_C9900015256.1
+Manufacturer
+
+Manufacturer Part
+100nF
+Supplier Footprint
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+JLCPCB Part Class
+Extended Part
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+CAP-TH_BD5.0-W2.5-P5.08
+Name
+100nF
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+100n
+
+*
+]
+[
+DESIGNATOR
+C4046
+FOOTPRINT
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+100NF_C9900015256
+Designator
+C4046
+Device
+100nF
+Unique ID
+gge169
+LCSC Part Name
+100nF
+Supplier Part
+100NF_C9900015256.1
+Manufacturer
+
+Manufacturer Part
+100nF
+Supplier Footprint
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+JLCPCB Part Class
+Extended Part
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+CAP-TH_BD5.0-W2.5-P5.08
+Name
+100nF
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+100n
+
+*
+]
+[
+DESIGNATOR
+J20207
+FOOTPRINT
+HDR-TH_64P-P2.54-V-M-R2-C32-S2.54-2
+PARTTYPE
+X6522WV-2x32H-C60D30-E80
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+X6522WV-2X32H-C60D30-E80
+Designator
+J20207
+Device
+X6522WV-2x32H-C60D30-E80
+Unique ID
+gge170
+LCSC Part Name
+
+Supplier Part
+X6522WV-2X32H-C60D30-E80.1
+Manufacturer
+XKB Connection(中国星坤)
+Manufacturer Part
+X6522WV-2x32H-C60D30-E80
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+HDR-TH_64P-P2.54-V-M-R2-C32-S2.54-2
+Pin Structure
+
+Pitch
+
+Row Spacing
+
+Circluar Pins/Square Pins
+
+Number of Rows
+
+Number of Pins
+
+Current Rating
+
+Voltage Rating (Max)
+
+Length of Mating Pin
+
+Insulation Height
+
+Length of End Connection Pin
+
+Contact Material
+
+Contact Plating
+
+Operating Temperature
+
+Color
+
+Name
+X6522WV-2x32H-C60D30-E80
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+(
+MEM_SEL1 
+R4002-1 MFR-25FBF52-10K-1 Passive 
+J20207-29 X6522WV-2x32H-C60D30-E80-29 Passive 
+)
+(
++5V 
+R4002-2 MFR-25FBF52-10K-2 Passive 
+U4043-20 SN74HCT541N-VCC Passive 
+U4045-20 SN74HCT541N-VCC Passive 
+U4046-20 SN74HCT541N-VCC Passive 
+U4051-20 SN74HCT541N-VCC Passive 
+U4052-20 SN74HCT541N-VCC Passive 
+C4005-1 100nF-1 Passive 
+C4007-1 100nF-1 Passive 
+C4023-1 100nF-1 Passive 
+C4025-1 100nF-1 Passive 
+C4026-1 100nF-1 Passive 
+C4036-1 100nF-1 Passive 
+C4046-1 100nF-1 Passive 
+J20207-6 X6522WV-2x32H-C60D30-E80-6 Passive 
+J20207-8 X6522WV-2x32H-C60D30-E80-8 Passive 
+J20207-7 X6522WV-2x32H-C60D30-E80-7 Passive 
+J20207-5 X6522WV-2x32H-C60D30-E80-5 Passive 
+)
+(
+/B03_S04_MEMORIES/POOL1_READ_OE 
+U4043-1 SN74HCT541N-OE1 Passive 
+U4043-19 SN74HCT541N-OE2 Passive 
+J20207-11 X6522WV-2x32H-C60D30-E80-11 Passive 
+)
+(
+POOL1_IN_ADDR0 
+U4043-2 SN74HCT541N-A1 Passive 
+J20207-30 X6522WV-2x32H-C60D30-E80-30 Passive 
+)
+(
+POOL1_IN_ADDR1 
+U4043-3 SN74HCT541N-A2 Passive 
+J20207-31 X6522WV-2x32H-C60D30-E80-31 Passive 
+)
+(
+POOL1_IN_ADDR2 
+U4043-4 SN74HCT541N-A3 Passive 
+J20207-32 X6522WV-2x32H-C60D30-E80-32 Passive 
+)
+(
+POOL1_IN_ADDR3 
+U4043-5 SN74HCT541N-A4 Passive 
+J20207-33 X6522WV-2x32H-C60D30-E80-33 Passive 
+)
+(
+POOL1_IN_ADDR4 
+U4043-6 SN74HCT541N-A5 Passive 
+J20207-34 X6522WV-2x32H-C60D30-E80-34 Passive 
+)
+(
+POOL1_IN_ADDR5 
+U4043-7 SN74HCT541N-A6 Passive 
+J20207-35 X6522WV-2x32H-C60D30-E80-35 Passive 
+)
+(
+POOL1_IN_ADDR6 
+U4043-8 SN74HCT541N-A7 Passive 
+J20207-36 X6522WV-2x32H-C60D30-E80-36 Passive 
+)
+(
+POOL1_IN_ADDR7 
+U4043-9 SN74HCT541N-A8 Passive 
+J20207-37 X6522WV-2x32H-C60D30-E80-37 Passive 
+)
+(
+GND 
+U4043-10 SN74HCT541N-GND Passive 
+U4045-10 SN74HCT541N-GND Passive 
+U4046-6 SN74HCT541N-A5 Passive 
+U4046-7 SN74HCT541N-A6 Passive 
+U4046-8 SN74HCT541N-A7 Passive 
+U4046-9 SN74HCT541N-A8 Passive 
+U4046-10 SN74HCT541N-GND Passive 
+U4051-10 SN74HCT541N-GND Passive 
+U4052-7 SN74HCT541N-A6 Passive 
+U4052-8 SN74HCT541N-A7 Passive 
+U4052-9 SN74HCT541N-A8 Passive 
+U4052-10 SN74HCT541N-GND Passive 
+C4005-2 100nF-2 Passive 
+C4007-2 100nF-2 Passive 
+C4023-2 100nF-2 Passive 
+C4025-2 100nF-2 Passive 
+C4026-2 100nF-2 Passive 
+C4036-2 100nF-2 Passive 
+C4046-2 100nF-2 Passive 
+J20207-2 X6522WV-2x32H-C60D30-E80-2 Passive 
+J20207-4 X6522WV-2x32H-C60D30-E80-4 Passive 
+J20207-3 X6522WV-2x32H-C60D30-E80-3 Passive 
+J20207-64 X6522WV-2x32H-C60D30-E80-64 Passive 
+J20207-1 X6522WV-2x32H-C60D30-E80-1 Passive 
+)
+(
+ADDR7 
+U4043-11 SN74HCT541N-Y8 Passive 
+U4045-11 SN74HCT541N-Y8 Passive 
+U4051-11 SN74HCT541N-Y8 Passive 
+J20207-26 X6522WV-2x32H-C60D30-E80-26 Passive 
+)
+(
+ADDR6 
+U4043-12 SN74HCT541N-Y7 Passive 
+U4045-12 SN74HCT541N-Y7 Passive 
+U4051-12 SN74HCT541N-Y7 Passive 
+J20207-25 X6522WV-2x32H-C60D30-E80-25 Passive 
+)
+(
+ADDR5 
+U4043-13 SN74HCT541N-Y6 Passive 
+U4045-13 SN74HCT541N-Y6 Passive 
+U4051-13 SN74HCT541N-Y6 Passive 
+J20207-24 X6522WV-2x32H-C60D30-E80-24 Passive 
+)
+(
+ADDR4 
+U4043-14 SN74HCT541N-Y5 Passive 
+U4045-14 SN74HCT541N-Y5 Passive 
+U4051-14 SN74HCT541N-Y5 Passive 
+J20207-23 X6522WV-2x32H-C60D30-E80-23 Passive 
+)
+(
+ADDR3 
+U4043-15 SN74HCT541N-Y4 Passive 
+U4045-15 SN74HCT541N-Y4 Passive 
+U4051-15 SN74HCT541N-Y4 Passive 
+J20207-22 X6522WV-2x32H-C60D30-E80-22 Passive 
+)
+(
+ADDR2 
+U4043-16 SN74HCT541N-Y3 Passive 
+U4045-16 SN74HCT541N-Y3 Passive 
+U4051-16 SN74HCT541N-Y3 Passive 
+J20207-21 X6522WV-2x32H-C60D30-E80-21 Passive 
+)
+(
+ADDR1 
+U4043-17 SN74HCT541N-Y2 Passive 
+U4045-17 SN74HCT541N-Y2 Passive 
+U4051-17 SN74HCT541N-Y2 Passive 
+J20207-14 X6522WV-2x32H-C60D30-E80-14 Passive 
+)
+(
+ADDR0 
+U4043-18 SN74HCT541N-Y1 Passive 
+U4045-18 SN74HCT541N-Y1 Passive 
+U4051-18 SN74HCT541N-Y1 Passive 
+J20207-13 X6522WV-2x32H-C60D30-E80-13 Passive 
+)
+(
+POOL1_MEM_NCE_OUT 
+U4045-1 SN74HCT541N-OE1 Passive 
+U4045-19 SN74HCT541N-OE2 Passive 
+U4046-1 SN74HCT541N-OE1 Passive 
+U4046-19 SN74HCT541N-OE2 Passive 
+J20207-38 X6522WV-2x32H-C60D30-E80-38 Passive 
+)
+(
+POOL1_OUT_ADDR0 
+U4045-2 SN74HCT541N-A1 Passive 
+J20207-39 X6522WV-2x32H-C60D30-E80-39 Passive 
+)
+(
+POOL1_OUT_ADDR1 
+U4045-3 SN74HCT541N-A2 Passive 
+J20207-40 X6522WV-2x32H-C60D30-E80-40 Passive 
+)
+(
+POOL1_OUT_ADDR2 
+U4045-4 SN74HCT541N-A3 Passive 
+J20207-43 X6522WV-2x32H-C60D30-E80-43 Passive 
+)
+(
+POOL1_OUT_ADDR3 
+U4045-5 SN74HCT541N-A4 Passive 
+J20207-44 X6522WV-2x32H-C60D30-E80-44 Passive 
+)
+(
+POOL1_OUT_ADDR4 
+U4045-6 SN74HCT541N-A5 Passive 
+J20207-45 X6522WV-2x32H-C60D30-E80-45 Passive 
+)
+(
+POOL1_OUT_ADDR5 
+U4045-7 SN74HCT541N-A6 Passive 
+J20207-46 X6522WV-2x32H-C60D30-E80-46 Passive 
+)
+(
+POOL1_OUT_ADDR6 
+U4045-8 SN74HCT541N-A7 Passive 
+J20207-47 X6522WV-2x32H-C60D30-E80-47 Passive 
+)
+(
+POOL1_OUT_ADDR7 
+U4045-9 SN74HCT541N-A8 Passive 
+J20207-48 X6522WV-2x32H-C60D30-E80-48 Passive 
+)
+(
+POOL1_OUT_ADDR8 
+U4046-2 SN74HCT541N-A1 Passive 
+J20207-49 X6522WV-2x32H-C60D30-E80-49 Passive 
+)
+(
+POOL1_OUT_ADDR9 
+U4046-3 SN74HCT541N-A2 Passive 
+J20207-50 X6522WV-2x32H-C60D30-E80-50 Passive 
+)
+(
+POOL1_OUT_ADDR10 
+U4046-4 SN74HCT541N-A3 Passive 
+J20207-41 X6522WV-2x32H-C60D30-E80-41 Passive 
+)
+(
+POOL1_OUT_ADDR11 
+U4046-5 SN74HCT541N-A4 Passive 
+J20207-42 X6522WV-2x32H-C60D30-E80-42 Passive 
+)
+(
+ADDR15 
+U4046-11 SN74HCT541N-Y8 Passive 
+U4052-11 SN74HCT541N-Y8 Passive 
+J20207-20 X6522WV-2x32H-C60D30-E80-20 Passive 
+)
+(
+ADDR14 
+U4046-12 SN74HCT541N-Y7 Passive 
+U4052-12 SN74HCT541N-Y7 Passive 
+J20207-19 X6522WV-2x32H-C60D30-E80-19 Passive 
+)
+(
+ADDR13 
+U4046-13 SN74HCT541N-Y6 Passive 
+U4052-13 SN74HCT541N-Y6 Passive 
+J20207-18 X6522WV-2x32H-C60D30-E80-18 Passive 
+)
+(
+ADDR12 
+U4046-14 SN74HCT541N-Y5 Passive 
+U4052-14 SN74HCT541N-Y5 Passive 
+J20207-17 X6522WV-2x32H-C60D30-E80-17 Passive 
+)
+(
+ADDR11 
+U4046-15 SN74HCT541N-Y4 Passive 
+U4052-15 SN74HCT541N-Y4 Passive 
+J20207-16 X6522WV-2x32H-C60D30-E80-16 Passive 
+)
+(
+ADDR10 
+U4046-16 SN74HCT541N-Y3 Passive 
+U4052-16 SN74HCT541N-Y3 Passive 
+J20207-15 X6522WV-2x32H-C60D30-E80-15 Passive 
+)
+(
+ADDR9 
+U4046-17 SN74HCT541N-Y2 Passive 
+U4052-17 SN74HCT541N-Y2 Passive 
+J20207-28 X6522WV-2x32H-C60D30-E80-28 Passive 
+)
+(
+ADDR8 
+U4046-18 SN74HCT541N-Y1 Passive 
+U4052-18 SN74HCT541N-Y1 Passive 
+J20207-27 X6522WV-2x32H-C60D30-E80-27 Passive 
+)
+(
+/B03_S04_MEMORIES/POOL2_READ_OE 
+U4051-1 SN74HCT541N-OE1 Passive 
+U4051-19 SN74HCT541N-OE2 Passive 
+U4052-1 SN74HCT541N-OE1 Passive 
+U4052-19 SN74HCT541N-OE2 Passive 
+J20207-12 X6522WV-2x32H-C60D30-E80-12 Passive 
+)
+(
+POOL2_IN_ADDR0 
+U4051-2 SN74HCT541N-A1 Passive 
+J20207-51 X6522WV-2x32H-C60D30-E80-51 Passive 
+)
+(
+POOL2_IN_ADDR1 
+U4051-3 SN74HCT541N-A2 Passive 
+J20207-52 X6522WV-2x32H-C60D30-E80-52 Passive 
+)
+(
+POOL2_IN_ADDR2 
+U4051-4 SN74HCT541N-A3 Passive 
+J20207-56 X6522WV-2x32H-C60D30-E80-56 Passive 
+)
+(
+POOL2_IN_ADDR3 
+U4051-5 SN74HCT541N-A4 Passive 
+J20207-57 X6522WV-2x32H-C60D30-E80-57 Passive 
+)
+(
+POOL2_IN_ADDR4 
+U4051-6 SN74HCT541N-A5 Passive 
+J20207-58 X6522WV-2x32H-C60D30-E80-58 Passive 
+)
+(
+POOL2_IN_ADDR5 
+U4051-7 SN74HCT541N-A6 Passive 
+J20207-59 X6522WV-2x32H-C60D30-E80-59 Passive 
+)
+(
+POOL2_IN_ADDR6 
+U4051-8 SN74HCT541N-A7 Passive 
+J20207-60 X6522WV-2x32H-C60D30-E80-60 Passive 
+)
+(
+POOL2_IN_ADDR7 
+U4051-9 SN74HCT541N-A8 Passive 
+J20207-61 X6522WV-2x32H-C60D30-E80-61 Passive 
+)
+(
+POOL2_IN_ADDR8 
+U4052-2 SN74HCT541N-A1 Passive 
+J20207-62 X6522WV-2x32H-C60D30-E80-62 Passive 
+)
+(
+POOL2_IN_ADDR9 
+U4052-3 SN74HCT541N-A2 Passive 
+J20207-63 X6522WV-2x32H-C60D30-E80-63 Passive 
+)
+(
+POOL2_IN_ADDR10 
+U4052-4 SN74HCT541N-A3 Passive 
+J20207-53 X6522WV-2x32H-C60D30-E80-53 Passive 
+)
+(
+POOL2_IN_ADDR11 
+U4052-5 SN74HCT541N-A4 Passive 
+J20207-54 X6522WV-2x32H-C60D30-E80-54 Passive 
+)
+(
+POOL2_IN_ADDR12 
+U4052-6 SN74HCT541N-A5 Passive 
+J20207-55 X6522WV-2x32H-C60D30-E80-55 Passive 
+)
+(
++VLED 
+J20207-10 X6522WV-2x32H-C60D30-E80-10 Passive 
+J20207-9 X6522WV-2x32H-C60D30-E80-9 Passive 
+)

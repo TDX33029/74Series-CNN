@@ -1,0 +1,13 @@
+﻿board,name,function,sheets,stage,external_nets,headers,signal_pins
+B01,SUPERVISOR,"Global supervisor FSM, microcode ROM, watchdog",S01_Supervisor.kicad_sch,"sequencer: START/BUSY/DONE, stage starts, FC_SEL/POOL_SEL",37,2,52
+B02,TIMING,Memory timing controller SETUP/WAIT/CAPTURE/HOLD/RELEASE,S02_Timing.kicad_sch,single owner of MEM_nCE/nOE/nWE and the ACK handshake,10,1,26
+B03,MEMORY,7x 6264 SRAM + 12x 28C256 + 8x 27C512 LUT/map storage,S04_Memories.kicad_sch,"all feature maps, weights, biases, quant params and LUT/map ROMs",204,8,208
+B04,CONV1,5x5x1 -> 8ch convolution engine + ACC>>8 requant,S07_Conv1.kicad_sch;S13_Requant_C1.kicad_sch,"C1 stage; requant is on-board, C1_ACC never leaves the board",43,2,52
+B05,POOL1,2x2 stride-2 max pool 12x12x8 -> 6x6x8,S05_Pool1.kicad_sch;S12A_PoolLatch1.kicad_sch,"P1 stage; POOL_SEL tied 0, IN_DATA1 byte buffer on-board",53,3,78
+B06,CONV2,3x3x8 -> 16ch convolution engine + ACC>>9 requant,S08_Conv2.kicad_sch;S15_Requant_C2.kicad_sch,"C2 stage; requant is on-board, C2_ACC never leaves the board",43,2,52
+B07,POOL2,2x2 stride-2 max pool 10x10x16 -> 5x5x16,S05_Pool2.kicad_sch;S12A_PoolLatch2.kicad_sch,"P2 stage; POOL_SEL tied 1, IN_DATA2 byte buffer on-board",53,3,78
+B08,FC1,400 -> 32 fully connected + FC1 uint8 requant,S09_FC1.kicad_sch;S17_FC1.kicad_sch,"FC1 stage; FC_SEL tied 0, FC1_ACC/FC1_REQ_* stay on-board",43,2,52
+B09,FC2,32 -> 10 fully connected + FC2 raw signed32 requant,S09_FC2.kicad_sch;S17_FC2.kicad_sch,"FC2 stage; FC_SEL tied 1, FC2_ACC/FC2_REQ_* stay on-board",44,2,52
+B10,ARGMAX,10-way signed-32 argmax + 32-bit score staging,S06_Argmax.kicad_sch;S12B_ScoreLatch.kicad_sch,final stage; four score bytes assembled on-board,26,1,26
+B11,BUSFAB,"Master/region encode, map ROM, REQ/WE merge, engine merge",S11_BusFabric.kicad_sch;S11A_EngineMerge.kicad_sch,arbitration only; FC1/FC2 and POOL1/POOL2 are muxed into the S11 slots,72,3,78
+B12,HOSTIO,"Host connector, clock/reset, image and weight load ports",S10_Top_IO.kicad_sch,the only board with the external host interface,59,3,78

@@ -1,0 +1,1407 @@
+PROTEL NETLIST 2.0
+[
+DESIGNATOR
+U11001
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT27C512R-70PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT27C512R-70PU
+Designator
+U11001
+Device
+AT27C512R-70PU
+Unique ID
+gge1
+LCSC Part Name
+
+Supplier Part
+AT27C512R-70PU.1
+Manufacturer
+MICROCHIP(美国微芯)
+Manufacturer Part
+AT27C512R-70PU
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+
+Memory Format
+
+Memory Size
+
+Voltage - Supply
+
+Operating Temperature
+
+Features
+
+Name
+AT27C512R-70PU
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U11002
+FOOTPRINT
+PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL
+PARTTYPE
+AT27C512R-70PU
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+AT27C512R-70PU
+Designator
+U11002
+Device
+AT27C512R-70PU
+Unique ID
+gge2
+LCSC Part Name
+
+Supplier Part
+AT27C512R-70PU.1
+Manufacturer
+MICROCHIP(美国微芯)
+Manufacturer Part
+AT27C512R-70PU
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-28_L37.0-W13.5-H5-P2.54-LS15.6-BL
+Interface
+
+Memory Format
+
+Memory Size
+
+Voltage - Supply
+
+Operating Temperature
+
+Features
+
+Name
+AT27C512R-70PU
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U11003
+FOOTPRINT
+PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL
+PARTTYPE
+CD74HCT574EE4
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HCT574EE4
+Designator
+U11003
+Device
+CD74HCT574EE4
+Unique ID
+gge3
+LCSC Part Name
+
+Supplier Part
+CD74HCT574EE4.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HCT574EE4
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL
+Type
+
+Trigger Type
+
+Voltage - Supply
+
+Clock Frequency
+
+Function
+
+Number of Elements
+
+Number of Bits per Element
+
+Output Type
+
+Propagation Delay
+
+Series
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Quiescent Current
+
+Input Capacitance
+
+Operating Temperature
+
+Synchronous/Asynchronous
+
+Setup Time
+
+Hold Time
+
+Name
+CD74HCT574EE4
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U11004
+FOOTPRINT
+PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL
+PARTTYPE
+CD74HCT574EE4
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HCT574EE4
+Designator
+U11004
+Device
+CD74HCT574EE4
+Unique ID
+gge4
+LCSC Part Name
+
+Supplier Part
+CD74HCT574EE4.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HCT574EE4
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL
+Type
+
+Trigger Type
+
+Voltage - Supply
+
+Clock Frequency
+
+Function
+
+Number of Elements
+
+Number of Bits per Element
+
+Output Type
+
+Propagation Delay
+
+Series
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Quiescent Current
+
+Input Capacitance
+
+Operating Temperature
+
+Synchronous/Asynchronous
+
+Setup Time
+
+Hold Time
+
+Name
+CD74HCT574EE4
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U11005
+FOOTPRINT
+PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL
+PARTTYPE
+CD74HCT574EE4
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HCT574EE4
+Designator
+U11005
+Device
+CD74HCT574EE4
+Unique ID
+gge5
+LCSC Part Name
+
+Supplier Part
+CD74HCT574EE4.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HCT574EE4
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL
+Type
+
+Trigger Type
+
+Voltage - Supply
+
+Clock Frequency
+
+Function
+
+Number of Elements
+
+Number of Bits per Element
+
+Output Type
+
+Propagation Delay
+
+Series
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Quiescent Current
+
+Input Capacitance
+
+Operating Temperature
+
+Synchronous/Asynchronous
+
+Setup Time
+
+Hold Time
+
+Name
+CD74HCT574EE4
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U11006
+FOOTPRINT
+PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL
+PARTTYPE
+CD74HCT574EE4
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HCT574EE4
+Designator
+U11006
+Device
+CD74HCT574EE4
+Unique ID
+gge6
+LCSC Part Name
+
+Supplier Part
+CD74HCT574EE4.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HCT574EE4
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL
+Type
+
+Trigger Type
+
+Voltage - Supply
+
+Clock Frequency
+
+Function
+
+Number of Elements
+
+Number of Bits per Element
+
+Output Type
+
+Propagation Delay
+
+Series
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Quiescent Current
+
+Input Capacitance
+
+Operating Temperature
+
+Synchronous/Asynchronous
+
+Setup Time
+
+Hold Time
+
+Name
+CD74HCT574EE4
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+TP11001
+FOOTPRINT
+TESTPOINT-TH_BD3.2
+PARTTYPE
+TP-黄色测试点
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+TP-黄色测试点
+Designator
+TP11001
+Device
+TP-黄色测试点
+Unique ID
+gge7
+LCSC Part Name
+
+Supplier Part
+TP-黄色测试点.1
+Manufacturer
+
+Manufacturer Part
+TP-黄色测试点
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+TESTPOINT-TH_BD3.2
+Name
+TP-黄色测试点
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+TP11002
+FOOTPRINT
+TESTPOINT-TH_BD3.2
+PARTTYPE
+TP-黄色测试点
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+TP-黄色测试点
+Designator
+TP11002
+Device
+TP-黄色测试点
+Unique ID
+gge8
+LCSC Part Name
+
+Supplier Part
+TP-黄色测试点.1
+Manufacturer
+
+Manufacturer Part
+TP-黄色测试点
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+TESTPOINT-TH_BD3.2
+Name
+TP-黄色测试点
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+TP11003
+FOOTPRINT
+TESTPOINT-TH_BD3.2
+PARTTYPE
+TP-黄色测试点
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+TP-黄色测试点
+Designator
+TP11003
+Device
+TP-黄色测试点
+Unique ID
+gge9
+LCSC Part Name
+
+Supplier Part
+TP-黄色测试点.1
+Manufacturer
+
+Manufacturer Part
+TP-黄色测试点
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+TESTPOINT-TH_BD3.2
+Name
+TP-黄色测试点
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+TP11004
+FOOTPRINT
+TESTPOINT-TH_BD3.2
+PARTTYPE
+TP-黄色测试点
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+TP-黄色测试点
+Designator
+TP11004
+Device
+TP-黄色测试点
+Unique ID
+gge10
+LCSC Part Name
+
+Supplier Part
+TP-黄色测试点.1
+Manufacturer
+
+Manufacturer Part
+TP-黄色测试点
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+TESTPOINT-TH_BD3.2
+Name
+TP-黄色测试点
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+C11001
+FOOTPRINT
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+100NF_C9900015256
+Designator
+C11001
+Device
+100nF
+Unique ID
+gge11
+LCSC Part Name
+100nF
+Supplier Part
+100NF_C9900015256.1
+Manufacturer
+
+Manufacturer Part
+100nF
+Supplier Footprint
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+JLCPCB Part Class
+Extended Part
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+CAP-TH_BD5.0-W2.5-P5.08
+Name
+100nF
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+100nF
+
+*
+]
+[
+DESIGNATOR
+C11002
+FOOTPRINT
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+100NF_C9900015256
+Designator
+C11002
+Device
+100nF
+Unique ID
+gge12
+LCSC Part Name
+100nF
+Supplier Part
+100NF_C9900015256.1
+Manufacturer
+
+Manufacturer Part
+100nF
+Supplier Footprint
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+JLCPCB Part Class
+Extended Part
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+CAP-TH_BD5.0-W2.5-P5.08
+Name
+100nF
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+100nF
+
+*
+]
+[
+DESIGNATOR
+C11003
+FOOTPRINT
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+100NF_C9900015256
+Designator
+C11003
+Device
+100nF
+Unique ID
+gge13
+LCSC Part Name
+100nF
+Supplier Part
+100NF_C9900015256.1
+Manufacturer
+
+Manufacturer Part
+100nF
+Supplier Footprint
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+JLCPCB Part Class
+Extended Part
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+CAP-TH_BD5.0-W2.5-P5.08
+Name
+100nF
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+100nF
+
+*
+]
+[
+DESIGNATOR
+C11004
+FOOTPRINT
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+100NF_C9900015256
+Designator
+C11004
+Device
+100nF
+Unique ID
+gge14
+LCSC Part Name
+100nF
+Supplier Part
+100NF_C9900015256.1
+Manufacturer
+
+Manufacturer Part
+100nF
+Supplier Footprint
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+JLCPCB Part Class
+Extended Part
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+CAP-TH_BD5.0-W2.5-P5.08
+Name
+100nF
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+100nF
+
+*
+]
+[
+DESIGNATOR
+C11005
+FOOTPRINT
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+100NF_C9900015256
+Designator
+C11005
+Device
+100nF
+Unique ID
+gge15
+LCSC Part Name
+100nF
+Supplier Part
+100NF_C9900015256.1
+Manufacturer
+
+Manufacturer Part
+100nF
+Supplier Footprint
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+JLCPCB Part Class
+Extended Part
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+CAP-TH_BD5.0-W2.5-P5.08
+Name
+100nF
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+100nF
+
+*
+]
+[
+DESIGNATOR
+C11006
+FOOTPRINT
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+PARTTYPE
+100nF
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+100NF_C9900015256
+Designator
+C11006
+Device
+100nF
+Unique ID
+gge16
+LCSC Part Name
+100nF
+Supplier Part
+100NF_C9900015256.1
+Manufacturer
+
+Manufacturer Part
+100nF
+Supplier Footprint
+CAP-TH_L5.0-W2.5-P5.00-D1.0
+JLCPCB Part Class
+Extended Part
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+CAP-TH_BD5.0-W2.5-P5.08
+Name
+100nF
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Value
+100nF
+
+*
+]
+(
+/LUT_A15 
+U11001-1 AT27C512R-70PU-A15 Passive 
+U11002-1 AT27C512R-70PU-A15 Passive 
+U11004-12 CD74HCT574EE4-Q7 Passive 
+)
+(
+/LUT_A12 
+U11001-2 AT27C512R-70PU-A12 Passive 
+U11002-2 AT27C512R-70PU-A12 Passive 
+U11004-15 CD74HCT574EE4-Q4 Passive 
+)
+(
+/LUT_A7 
+U11001-3 AT27C512R-70PU-A7 Passive 
+U11002-3 AT27C512R-70PU-A7 Passive 
+U11003-12 CD74HCT574EE4-Q7 Passive 
+)
+(
+/LUT_A6 
+U11001-4 AT27C512R-70PU-A6 Passive 
+U11002-4 AT27C512R-70PU-A6 Passive 
+U11003-13 CD74HCT574EE4-Q6 Passive 
+)
+(
+/LUT_A5 
+U11001-5 AT27C512R-70PU-A5 Passive 
+U11002-5 AT27C512R-70PU-A5 Passive 
+U11003-14 CD74HCT574EE4-Q5 Passive 
+)
+(
+/LUT_A4 
+U11001-6 AT27C512R-70PU-A4 Passive 
+U11002-6 AT27C512R-70PU-A4 Passive 
+U11003-15 CD74HCT574EE4-Q4 Passive 
+)
+(
+/LUT_A3 
+U11001-7 AT27C512R-70PU-A3 Passive 
+U11002-7 AT27C512R-70PU-A3 Passive 
+U11003-16 CD74HCT574EE4-Q3 Passive 
+)
+(
+/LUT_A2 
+U11001-8 AT27C512R-70PU-A2 Passive 
+U11002-8 AT27C512R-70PU-A2 Passive 
+U11003-17 CD74HCT574EE4-Q2 Passive 
+)
+(
+/LUT_A1 
+U11001-9 AT27C512R-70PU-A1 Passive 
+U11002-9 AT27C512R-70PU-A1 Passive 
+U11003-18 CD74HCT574EE4-Q1 Passive 
+)
+(
+/LUT_A0 
+U11001-10 AT27C512R-70PU-A0 Passive 
+U11002-10 AT27C512R-70PU-A0 Passive 
+U11003-19 CD74HCT574EE4-Q0 Passive 
+)
+(
+/ROM_L0 
+U11001-11 AT27C512R-70PU-O0 Passive 
+U11005-2 CD74HCT574EE4-D0 Passive 
+)
+(
+/ROM_L1 
+U11001-12 AT27C512R-70PU-O1 Passive 
+U11005-3 CD74HCT574EE4-D1 Passive 
+)
+(
+/ROM_L2 
+U11001-13 AT27C512R-70PU-O2 Passive 
+U11005-4 CD74HCT574EE4-D2 Passive 
+)
+(
+GND 
+U11001-14 AT27C512R-70PU-GND Passive 
+U11002-14 AT27C512R-70PU-GND Passive 
+U11003-1 CD74HCT574EE4-OE# Passive 
+U11003-10 CD74HCT574EE4-GND Passive 
+U11004-1 CD74HCT574EE4-OE# Passive 
+U11004-10 CD74HCT574EE4-GND Passive 
+U11005-1 CD74HCT574EE4-OE# Passive 
+U11005-10 CD74HCT574EE4-GND Passive 
+U11006-1 CD74HCT574EE4-OE# Passive 
+U11006-10 CD74HCT574EE4-GND Passive 
+C11001-2 100nF-2 Passive 
+C11002-2 100nF-2 Passive 
+C11003-2 100nF-2 Passive 
+C11004-2 100nF-2 Passive 
+C11005-2 100nF-2 Passive 
+C11006-2 100nF-2 Passive 
+)
+(
+/ROM_L3 
+U11001-15 AT27C512R-70PU-O3 Passive 
+U11005-5 CD74HCT574EE4-D3 Passive 
+)
+(
+/ROM_L4 
+U11001-16 AT27C512R-70PU-O4 Passive 
+U11005-6 CD74HCT574EE4-D4 Passive 
+)
+(
+/ROM_L5 
+U11001-17 AT27C512R-70PU-O5 Passive 
+U11005-7 CD74HCT574EE4-D5 Passive 
+)
+(
+/ROM_L6 
+U11001-18 AT27C512R-70PU-O6 Passive 
+U11005-8 CD74HCT574EE4-D6 Passive 
+)
+(
+/ROM_L7 
+U11001-19 AT27C512R-70PU-O7 Passive 
+U11005-9 CD74HCT574EE4-D7 Passive 
+)
+(
+LUT_CE_N 
+U11001-20 AT27C512R-70PU-CE# Passive 
+U11002-20 AT27C512R-70PU-CE# Passive 
+TP11003-1 TP-黄色测试点-1 Passive 
+)
+(
+/LUT_A10 
+U11001-21 AT27C512R-70PU-A10 Passive 
+U11002-21 AT27C512R-70PU-A10 Passive 
+U11004-17 CD74HCT574EE4-Q2 Passive 
+)
+(
+LUT_OE_N 
+U11001-22 AT27C512R-70PU-OE#/VPP Passive 
+U11002-22 AT27C512R-70PU-OE#/VPP Passive 
+TP11004-1 TP-黄色测试点-1 Passive 
+)
+(
+/LUT_A11 
+U11001-23 AT27C512R-70PU-A11 Passive 
+U11002-23 AT27C512R-70PU-A11 Passive 
+U11004-16 CD74HCT574EE4-Q3 Passive 
+)
+(
+/LUT_A9 
+U11001-24 AT27C512R-70PU-A9 Passive 
+U11002-24 AT27C512R-70PU-A9 Passive 
+U11004-18 CD74HCT574EE4-Q1 Passive 
+)
+(
+/LUT_A8 
+U11001-25 AT27C512R-70PU-A8 Passive 
+U11002-25 AT27C512R-70PU-A8 Passive 
+U11004-19 CD74HCT574EE4-Q0 Passive 
+)
+(
+/LUT_A13 
+U11001-26 AT27C512R-70PU-A13 Passive 
+U11002-26 AT27C512R-70PU-A13 Passive 
+U11004-14 CD74HCT574EE4-Q5 Passive 
+)
+(
+/LUT_A14 
+U11001-27 AT27C512R-70PU-A14 Passive 
+U11002-27 AT27C512R-70PU-A14 Passive 
+U11004-13 CD74HCT574EE4-Q6 Passive 
+)
+(
++5V 
+U11001-28 AT27C512R-70PU-VCC Passive 
+U11002-28 AT27C512R-70PU-VCC Passive 
+U11003-20 CD74HCT574EE4-VCC Passive 
+U11004-20 CD74HCT574EE4-VCC Passive 
+U11005-20 CD74HCT574EE4-VCC Passive 
+U11006-20 CD74HCT574EE4-VCC Passive 
+C11001-1 100nF-1 Passive 
+C11002-1 100nF-1 Passive 
+C11003-1 100nF-1 Passive 
+C11004-1 100nF-1 Passive 
+C11005-1 100nF-1 Passive 
+C11006-1 100nF-1 Passive 
+)
+(
+/ROM_H0 
+U11002-11 AT27C512R-70PU-O0 Passive 
+U11006-2 CD74HCT574EE4-D0 Passive 
+)
+(
+/ROM_H1 
+U11002-12 AT27C512R-70PU-O1 Passive 
+U11006-3 CD74HCT574EE4-D1 Passive 
+)
+(
+/ROM_H2 
+U11002-13 AT27C512R-70PU-O2 Passive 
+U11006-4 CD74HCT574EE4-D2 Passive 
+)
+(
+/ROM_H3 
+U11002-15 AT27C512R-70PU-O3 Passive 
+U11006-5 CD74HCT574EE4-D3 Passive 
+)
+(
+/ROM_H4 
+U11002-16 AT27C512R-70PU-O4 Passive 
+U11006-6 CD74HCT574EE4-D4 Passive 
+)
+(
+/ROM_H5 
+U11002-17 AT27C512R-70PU-O5 Passive 
+U11006-7 CD74HCT574EE4-D5 Passive 
+)
+(
+/ROM_H6 
+U11002-18 AT27C512R-70PU-O6 Passive 
+U11006-8 CD74HCT574EE4-D6 Passive 
+)
+(
+/ROM_H7 
+U11002-19 AT27C512R-70PU-O7 Passive 
+U11006-9 CD74HCT574EE4-D7 Passive 
+)
+(
+A0 
+U11003-2 CD74HCT574EE4-D0 Passive 
+)
+(
+A1 
+U11003-3 CD74HCT574EE4-D1 Passive 
+)
+(
+A2 
+U11003-4 CD74HCT574EE4-D2 Passive 
+)
+(
+A3 
+U11003-5 CD74HCT574EE4-D3 Passive 
+)
+(
+A4 
+U11003-6 CD74HCT574EE4-D4 Passive 
+)
+(
+A5 
+U11003-7 CD74HCT574EE4-D5 Passive 
+)
+(
+A6 
+U11003-8 CD74HCT574EE4-D6 Passive 
+)
+(
+A7 
+U11003-9 CD74HCT574EE4-D7 Passive 
+)
+(
+LUT_AB_LATCH 
+U11003-11 CD74HCT574EE4-CP Passive 
+U11004-11 CD74HCT574EE4-CP Passive 
+TP11001-1 TP-黄色测试点-1 Passive 
+)
+(
+B0 
+U11004-2 CD74HCT574EE4-D0 Passive 
+)
+(
+B1 
+U11004-3 CD74HCT574EE4-D1 Passive 
+)
+(
+B2 
+U11004-4 CD74HCT574EE4-D2 Passive 
+)
+(
+B3 
+U11004-5 CD74HCT574EE4-D3 Passive 
+)
+(
+B4 
+U11004-6 CD74HCT574EE4-D4 Passive 
+)
+(
+B5 
+U11004-7 CD74HCT574EE4-D5 Passive 
+)
+(
+B6 
+U11004-8 CD74HCT574EE4-D6 Passive 
+)
+(
+B7 
+U11004-9 CD74HCT574EE4-D7 Passive 
+)
+(
+LUT_PROD_LATCH 
+U11005-11 CD74HCT574EE4-CP Passive 
+U11006-11 CD74HCT574EE4-CP Passive 
+TP11002-1 TP-黄色测试点-1 Passive 
+)
+(
+PROD7 
+U11005-12 CD74HCT574EE4-Q7 Passive 
+)
+(
+PROD6 
+U11005-13 CD74HCT574EE4-Q6 Passive 
+)
+(
+PROD5 
+U11005-14 CD74HCT574EE4-Q5 Passive 
+)
+(
+PROD4 
+U11005-15 CD74HCT574EE4-Q4 Passive 
+)
+(
+PROD3 
+U11005-16 CD74HCT574EE4-Q3 Passive 
+)
+(
+PROD2 
+U11005-17 CD74HCT574EE4-Q2 Passive 
+)
+(
+PROD1 
+U11005-18 CD74HCT574EE4-Q1 Passive 
+)
+(
+PROD0 
+U11005-19 CD74HCT574EE4-Q0 Passive 
+)
+(
+PROD15 
+U11006-12 CD74HCT574EE4-Q7 Passive 
+)
+(
+PROD14 
+U11006-13 CD74HCT574EE4-Q6 Passive 
+)
+(
+PROD13 
+U11006-14 CD74HCT574EE4-Q5 Passive 
+)
+(
+PROD12 
+U11006-15 CD74HCT574EE4-Q4 Passive 
+)
+(
+PROD11 
+U11006-16 CD74HCT574EE4-Q3 Passive 
+)
+(
+PROD10 
+U11006-17 CD74HCT574EE4-Q2 Passive 
+)
+(
+PROD9 
+U11006-18 CD74HCT574EE4-Q1 Passive 
+)
+(
+PROD8 
+U11006-19 CD74HCT574EE4-Q0 Passive 
+)

@@ -1,0 +1,12 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "74xx")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/74xx.kicad_sym")(options "")(descr ""))
+	(lib (name "Memory_RAM")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/Memory_RAM.kicad_sym")(options "")(descr ""))
+	(lib (name "Memory_EPROM")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/Memory_EPROM.kicad_sym")(options "")(descr ""))
+	(lib (name "Memory_EEPROM")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/Memory_EEPROM.kicad_sym")(options "")(descr ""))
+	(lib (name "Device")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")(options "")(descr ""))
+	(lib (name "power")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/power.kicad_sym")(options "")(descr ""))
+	(lib (name "Connector")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/Connector.kicad_sym")(options "")(descr ""))
+	(lib (name "Connector_Generic")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym")(options "")(descr ""))
+	(lib (name "CNN_Blocks")(type "KiCad")(uri "${KIPRJMOD}/symbols/CNN_Blocks.kicad_sym")(options "")(descr ""))
+)

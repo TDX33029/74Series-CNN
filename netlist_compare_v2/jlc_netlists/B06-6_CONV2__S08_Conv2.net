@@ -1,0 +1,2847 @@
+PROTEL NETLIST 2.0
+[
+DESIGNATOR
+U8003
+FOOTPRINT
+PDIP-16_L19.3-W6.4-P2.54-LS7.9-BL
+PARTTYPE
+SN74HC161N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HC161N
+Designator
+U8003
+Device
+SN74HC161N
+Unique ID
+gge172
+LCSC Part Name
+
+Supplier Part
+SN74HC161N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HC161N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-16_L19.3-W6.4-P2.54-LS7.9-BL
+Logic Type
+
+Direction
+
+Voltage - Supply
+
+Number of Elements
+
+Trigger Type
+
+Reset
+
+Timing
+
+Count Rate
+
+Operating Temperature
+
+Features
+
+Name
+SN74HC161N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U8004
+FOOTPRINT
+PDIP-20_L24.5-W6.4-P2.54-LS7.9-BL
+PARTTYPE
+SN74HC688N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HC688N
+Designator
+U8004
+Device
+SN74HC688N
+Unique ID
+gge173
+LCSC Part Name
+
+Supplier Part
+SN74HC688N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HC688N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L24.5-W6.4-P2.54-LS7.9-BL
+Number of Channels
+
+Supply Voltage
+
+Output
+
+Output Function
+
+Maximum Propagation Delay
+
+Quiescent Current
+
+Sink Current
+
+Source Current
+
+Operating Temperature
+
+Name
+SN74HC688N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U8005
+FOOTPRINT
+PDIP-16_L19.3-W6.4-P2.54-LS7.9-BL
+PARTTYPE
+SN74HC161N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HC161N
+Designator
+U8005
+Device
+SN74HC161N
+Unique ID
+gge174
+LCSC Part Name
+
+Supplier Part
+SN74HC161N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HC161N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-16_L19.3-W6.4-P2.54-LS7.9-BL
+Logic Type
+
+Direction
+
+Voltage - Supply
+
+Number of Elements
+
+Trigger Type
+
+Reset
+
+Timing
+
+Count Rate
+
+Operating Temperature
+
+Features
+
+Name
+SN74HC161N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U8006
+FOOTPRINT
+PDIP-20_L24.5-W6.4-P2.54-LS7.9-BL
+PARTTYPE
+SN74HC688N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HC688N
+Designator
+U8006
+Device
+SN74HC688N
+Unique ID
+gge175
+LCSC Part Name
+
+Supplier Part
+SN74HC688N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HC688N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+PDIP-20_L24.5-W6.4-P2.54-LS7.9-BL
+Number of Channels
+
+Supply Voltage
+
+Output
+
+Output Function
+
+Maximum Propagation Delay
+
+Quiescent Current
+
+Sink Current
+
+Source Current
+
+Operating Temperature
+
+Name
+SN74HC688N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U8021
+FOOTPRINT
+DIP-16_L19.8-W6.5-P2.54-LS7.6-BL
+PARTTYPE
+CD74HC283E
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HC283E
+Designator
+U8021
+Device
+CD74HC283E
+Unique ID
+gge190
+LCSC Part Name
+
+Supplier Part
+CD74HC283E.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HC283E
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-16_L20.0-W6.4-H3.5-LS7.62-P2.54
+Number of Channels
+
+Voltage - Supply
+
+Operating Temperature
+
+Name
+CD74HC283E
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U8022
+FOOTPRINT
+DIP-16_L19.8-W6.5-P2.54-LS7.6-BL
+PARTTYPE
+CD74HC283E
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HC283E
+Designator
+U8022
+Device
+CD74HC283E
+Unique ID
+gge191
+LCSC Part Name
+
+Supplier Part
+CD74HC283E.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HC283E
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-16_L20.0-W6.4-H3.5-LS7.62-P2.54
+Number of Channels
+
+Voltage - Supply
+
+Operating Temperature
+
+Name
+CD74HC283E
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U8024
+FOOTPRINT
+DIP-16_L19.8-W6.5-P2.54-LS7.6-BL
+PARTTYPE
+CD74HC283E
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HC283E
+Designator
+U8024
+Device
+CD74HC283E
+Unique ID
+gge193
+LCSC Part Name
+
+Supplier Part
+CD74HC283E.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HC283E
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-16_L20.0-W6.4-H3.5-LS7.62-P2.54
+Number of Channels
+
+Voltage - Supply
+
+Operating Temperature
+
+Name
+CD74HC283E
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U8025
+FOOTPRINT
+DIP-16_L19.8-W6.5-P2.54-LS7.6-BL
+PARTTYPE
+CD74HC283E
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HC283E
+Designator
+U8025
+Device
+CD74HC283E
+Unique ID
+gge194
+LCSC Part Name
+
+Supplier Part
+CD74HC283E.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HC283E
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-16_L20.0-W6.4-H3.5-LS7.62-P2.54
+Number of Channels
+
+Voltage - Supply
+
+Operating Temperature
+
+Name
+CD74HC283E
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U8028
+FOOTPRINT
+DIP-16_L19.8-W6.5-P2.54-LS7.6-BL
+PARTTYPE
+CD74HC283E
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HC283E
+Designator
+U8028
+Device
+CD74HC283E
+Unique ID
+gge197
+LCSC Part Name
+
+Supplier Part
+CD74HC283E.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HC283E
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-16_L20.0-W6.4-H3.5-LS7.62-P2.54
+Number of Channels
+
+Voltage - Supply
+
+Operating Temperature
+
+Name
+CD74HC283E
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U8037
+FOOTPRINT
+DIP-16_L19.8-W6.5-P2.54-LS7.6-BL
+PARTTYPE
+CD74HC283E
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HC283E
+Designator
+U8037
+Device
+CD74HC283E
+Unique ID
+gge206
+LCSC Part Name
+
+Supplier Part
+CD74HC283E.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HC283E
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-16_L20.0-W6.4-H3.5-LS7.62-P2.54
+Number of Channels
+
+Voltage - Supply
+
+Operating Temperature
+
+Name
+CD74HC283E
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U8045
+FOOTPRINT
+DIP-16_L19.8-W6.5-P2.54-LS7.6-BL
+PARTTYPE
+CD74HC283E
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+CD74HC283E
+Designator
+U8045
+Device
+CD74HC283E
+Unique ID
+gge214
+LCSC Part Name
+
+Supplier Part
+CD74HC283E.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+CD74HC283E
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-16_L20.0-W6.4-H3.5-LS7.62-P2.54
+Number of Channels
+
+Voltage - Supply
+
+Operating Temperature
+
+Name
+CD74HC283E
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U8118
+FOOTPRINT
+TESTPOINT-TH_BD3.2
+PARTTYPE
+TP-黄色测试点
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+TP-黄色测试点
+Designator
+U8118
+Device
+TP-黄色测试点
+Unique ID
+gge287
+LCSC Part Name
+
+Supplier Part
+TP-黄色测试点.1
+Manufacturer
+
+Manufacturer Part
+TP-黄色测试点
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+TESTPOINT-TH_BD3.2
+Name
+TP-黄色测试点
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U8145
+FOOTPRINT
+DIP-16_L19.2-W6.6-P2.54-LS7.6-BL
+PARTTYPE
+74HC138N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+74HC138N
+Designator
+U8145
+Device
+74HC138N
+Unique ID
+gge314
+LCSC Part Name
+
+Supplier Part
+74HC138N.1
+Manufacturer
+HGSEMI(华冠)
+Manufacturer Part
+74HC138N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-16_L19.2-W6.6-H3.3-LS7.62-P2.54
+Type
+
+Voltage Supply Source
+
+Voltage - Supply
+
+Number of lines
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Operating temperature
+
+Propagation Delay
+
+Quiescent Current
+
+Function
+
+Series
+
+Name
+74HC138N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U8150
+FOOTPRINT
+TESTPOINT-TH_BD3.2
+PARTTYPE
+TP-黄色测试点
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+TP-黄色测试点
+Designator
+U8150
+Device
+TP-黄色测试点
+Unique ID
+gge319
+LCSC Part Name
+
+Supplier Part
+TP-黄色测试点.1
+Manufacturer
+
+Manufacturer Part
+TP-黄色测试点
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+TESTPOINT-TH_BD3.2
+Name
+TP-黄色测试点
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED21024
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED21024
+Device
+HLMP-S301
+Unique ID
+gge369
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q21024
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q21024
+Device
+S8050_C2931492
+Unique ID
+gge370
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R31047
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R31047
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge371
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+1kΩ
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R31048
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R31048
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge372
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED21035
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED21035
+Device
+HLMP-S301
+Unique ID
+gge413
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q21035
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q21035
+Device
+S8050_C2931492
+Unique ID
+gge414
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R31069
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R31069
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge415
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+1kΩ
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R31070
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R31070
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge416
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED21036
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED21036
+Device
+HLMP-S301
+Unique ID
+gge417
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q21036
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q21036
+Device
+S8050_C2931492
+Unique ID
+gge418
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R31071
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R31071
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge419
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+1kΩ
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R31072
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R31072
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge420
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+LED21037
+FOOTPRINT
+LED-TH_L5.0-W2.0-RD
+PARTTYPE
+HLMP-S301
+DESCRIPTION
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+HLMP-S301
+Designator
+LED21037
+Device
+HLMP-S301
+Unique ID
+gge421
+LCSC Part Name
+HLMP-S301
+Supplier Part
+HLMP-S301.1
+Manufacturer
+Broadcom(博通)
+Manufacturer Part
+HLMP-S301
+Supplier Footprint
+插件
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/HLMP-S301/8254663.html
+Supplier
+LCSC
+3D Model Title
+LED-TH_L5.0-W2.0-H7.1-RD
+Lamp Holder Type
+-
+Illumination Color
+黄色
+Voltage - Forward(Vf)
+2.1V
+Power(Watts)
+-
+Test Current
+20mA
+Wavelength - Dominant
+585nm
+Peak Wavelength
+583nm
+Diode Configuration
+-
+Lens Color
+黄色透镜
+Color Temperature
+-
+Luminous Intensity
+4mcd
+Viewing Angle
+110°
+Mounting Style
+-
+Operating Temperature
+-40℃~+100℃
+Name
+HLMP-S301
+Description
+灯头类型:-;发光颜色:黄色;正向压降(Vf):2.1V;功率:-;测试电流:20mA;波长:585nm;二极管配置:-;透镜颜色:黄色透镜;色温:-;发光强度:4mcd;发光角度:110°;载带方式:-;工作温度:-40℃~+100℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q21037
+FOOTPRINT
+TO-92-3_L4.5-W3.5-P1.27-L
+PARTTYPE
+S8050_C2931492
+DESCRIPTION
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+S8050_C2931492
+Designator
+Q21037
+Device
+S8050_C2931492
+Unique ID
+gge422
+LCSC Part Name
+NPN 电流:500mA 电压:25V
+Supplier Part
+S8050_C2931492.1
+Manufacturer
+JSMSEMI(杰盛微)
+Manufacturer Part
+S8050
+Supplier Footprint
+TO-92
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/S8050/3272796.html
+Supplier
+LCSC
+3D Model Title
+TO-92-3_L4.5-W3.5-P1.27-L
+type
+NPN
+Current - Collector(Ic)
+500mA
+Collector - Emitter Voltage VCEO
+25V
+Pd - Power Dissipation
+625mW
+DC Current Gain
+160
+Transition frequency(fT)
+150MHz
+Current - Collector Cutoff
+100nA
+Vce Saturation(VCE(sat))
+600mV
+Operating Temperature
+-
+Emitter-Base Voltage(Vebo)
+5V
+Number
+1个NPN
+Configuration
+独立式
+Name
+S8050
+Description
+晶体管类型:NPN;集电极电流(Ic):500mA;集射极击穿电压(Vceo):25V;耗散功率(Pd):625mW;直流电流增益(hFE):160;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R31073
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-1KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-1KΩ±1% T52
+Designator
+R31073
+Device
+MF1/4W-1KΩ±1% T
+Unique ID
+gge423
+LCSC Part Name
+1kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-1KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-1KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/MF1%252F4W-1K%25CE%25A9%25C2%25B11%2525%2520T/120593.html
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+1kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+1kΩ
+Description
+电阻类型:金属膜电阻;阻值:1kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R31074
+FOOTPRINT
+RES-TH_BD2.3-L6.5-P10.50-D0.5
+PARTTYPE
+MF1/4W-10KΩ±1% T
+DESCRIPTION
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+MF1/4W-10KΩ±1% T52
+Designator
+R31074
+Device
+MF1/4W-10KΩ±1% T
+Unique ID
+gge424
+LCSC Part Name
+10kΩ ±1% 250mW 金属膜电阻 圆柱状直插
+Supplier Part
+MF1/4W-10KΩ±1% T52.1
+Manufacturer
+CCO(千志电子)
+Manufacturer Part
+MF1/4W-10KΩ±1% T
+Supplier Footprint
+插件,D2.3xL6.5mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20190910/C427326_62A6D058BC0FF74963A2F22379CA06CE.pdf
+Supplier
+LCSC
+3D Model Title
+RES-TH_D2.3-L6.5-P10.50
+Type
+金属膜电阻
+Value
+10kΩ
+Tolerance
+±1%
+Voltage-Supply(Max)
+250V
+Power(Watts)
+250mW
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Name
+10kΩ
+Description
+电阻类型:金属膜电阻;阻值:10kΩ;精度:±1%;功率:250mW;温度系数:±100ppm/℃;
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U15005
+FOOTPRINT
+DIP-14_L19.2-W6.6-P2.54-LS10.9-BL
+PARTTYPE
+SN74HC04N
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+SN74HC04N
+Designator
+U15005
+Device
+SN74HC04N
+Unique ID
+gge330
+LCSC Part Name
+
+Supplier Part
+SN74HC04N.1
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74HC04N
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+DIP-14_L20.0-W6.7-H4.1-LS7.62-P2.54
+Input Type
+
+Voltage - Supply
+
+Quiescent Current(Iq)
+
+Number of Circuits
+
+Current - Output Low(IOL)
+
+Current - Output High(IOH)
+
+Input Logic Level - High
+
+Input Logic Level -Low
+
+Output Logic Level - High
+
+Output Logic Level - Low
+
+Propagation Delay
+
+Series
+
+Operating Temperature
+
+Features
+
+Name
+SN74HC04N
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+J20506
+FOOTPRINT
+HDR-TH_64P-P2.54-V-M-R2-C32-S2.54-2
+PARTTYPE
+X6522WV-2x32H-C60D30-E80
+DESCRIPTION
+
+Component Kind
+Standard
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+X6522WV-2X32H-C60D30-E80
+Designator
+J20506
+Device
+X6522WV-2x32H-C60D30-E80
+Unique ID
+gge425
+LCSC Part Name
+
+Supplier Part
+X6522WV-2X32H-C60D30-E80.1
+Manufacturer
+XKB Connection(中国星坤)
+Manufacturer Part
+X6522WV-2x32H-C60D30-E80
+Supplier Footprint
+
+JLCPCB Part Class
+
+Datasheet
+
+Supplier
+LCSC
+3D Model Title
+HDR-TH_64P-P2.54-V-M-R2-C32-S2.54-2
+Pin Structure
+
+Pitch
+
+Row Spacing
+
+Circluar Pins/Square Pins
+
+Number of Rows
+
+Number of Pins
+
+Current Rating
+
+Voltage Rating (Max)
+
+Length of Mating Pin
+
+Insulation Height
+
+Length of End Connection Pin
+
+Contact Material
+
+Contact Plating
+
+Operating Temperature
+
+Color
+
+Name
+X6522WV-2x32H-C60D30-E80
+Description
+
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+(
++5V 
+U8003-16 SN74HC161N-VCC Passive 
+U8004-20 SN74HC688N-VCC Passive 
+U8004-8 SN74HC688N-P3 Passive 
+U8004-2 SN74HC688N-P0 Passive 
+U8005-16 SN74HC161N-VCC Passive 
+U8006-20 SN74HC688N-VCC Passive 
+U8006-8 SN74HC688N-P3 Passive 
+U8006-2 SN74HC688N-P0 Passive 
+U8021-16 CD74HC283E-VCC Passive 
+U8022-16 CD74HC283E-VCC Passive 
+U8024-16 CD74HC283E-VCC Passive 
+U8025-16 CD74HC283E-VCC Passive 
+U8028-16 CD74HC283E-VCC Passive 
+U8037-16 CD74HC283E-VCC Passive 
+U8045-16 CD74HC283E-VCC Passive 
+U8145-6 74HC138N-CS1 Passive 
+U8145-16 74HC138N-VCC Passive 
+U15005-14 SN74HC04N-VCC Passive 
+J20506-6 X6522WV-2x32H-C60D30-E80-6 Passive 
+J20506-8 X6522WV-2x32H-C60D30-E80-8 Passive 
+J20506-7 X6522WV-2x32H-C60D30-E80-7 Passive 
+J20506-5 X6522WV-2x32H-C60D30-E80-5 Passive 
+)
+(
+UNCONNECTED-(U8003-TC-PAD15) 
+U8003-15 SN74HC161N-RCO Passive 
+)
+(
+/B06_S08_CONV2/C2_OY0 
+U8003-14 SN74HC161N-QA Passive 
+U8004-3 SN74HC688N-Q0 Passive 
+U8021-5 CD74HC283E-A0 Passive 
+)
+(
+/B06_S08_CONV2/C2_OY1 
+U8003-13 SN74HC161N-QB Passive 
+U8004-5 SN74HC688N-Q1 Passive 
+U8021-3 CD74HC283E-A1 Passive 
+)
+(
+/B06_S08_CONV2/C2_OY2 
+U8003-12 SN74HC161N-QC Passive 
+U8004-7 SN74HC688N-Q2 Passive 
+U8021-14 CD74HC283E-A2 Passive 
+)
+(
+/B06_S08_CONV2/C2_OY3 
+U8003-11 SN74HC161N-QD Passive 
+U8004-9 SN74HC688N-Q3 Passive 
+U8021-12 CD74HC283E-A3 Passive 
+)
+(
+/B06_S08_CONV2/C2_OY_EN 
+U8003-10 SN74HC161N-ENT Passive 
+U8003-7 SN74HC161N-ENP Passive 
+J20506-29 X6522WV-2x32H-C60D30-E80-29 Passive 
+)
+(
+/B06_S08_CONV2/C2_OY_PE_N 
+U8003-9 SN74HC161N-LOAD# Passive 
+J20506-31 X6522WV-2x32H-C60D30-E80-31 Passive 
+)
+(
+GND 
+U8003-8 SN74HC161N-GND Passive 
+U8003-6 SN74HC161N-D Passive 
+U8003-5 SN74HC161N-C Passive 
+U8003-4 SN74HC161N-B Passive 
+U8003-3 SN74HC161N-A Passive 
+U8004-18 SN74HC688N-Q7 Passive 
+U8004-17 SN74HC688N-P7 Passive 
+U8004-16 SN74HC688N-Q6 Passive 
+U8004-15 SN74HC688N-P6 Passive 
+U8004-14 SN74HC688N-Q5 Passive 
+U8004-13 SN74HC688N-P5 Passive 
+U8004-12 SN74HC688N-Q4 Passive 
+U8004-11 SN74HC688N-P4 Passive 
+U8004-10 SN74HC688N-GND Passive 
+U8004-6 SN74HC688N-P2 Passive 
+U8004-4 SN74HC688N-P1 Passive 
+U8004-1 SN74HC688N-OE# Passive 
+U8005-8 SN74HC161N-GND Passive 
+U8005-6 SN74HC161N-D Passive 
+U8005-5 SN74HC161N-C Passive 
+U8005-4 SN74HC161N-B Passive 
+U8005-3 SN74HC161N-A Passive 
+U8006-18 SN74HC688N-Q7 Passive 
+U8006-17 SN74HC688N-P7 Passive 
+U8006-16 SN74HC688N-Q6 Passive 
+U8006-15 SN74HC688N-P6 Passive 
+U8006-14 SN74HC688N-Q5 Passive 
+U8006-13 SN74HC688N-P5 Passive 
+U8006-12 SN74HC688N-Q4 Passive 
+U8006-11 SN74HC688N-P4 Passive 
+U8006-10 SN74HC688N-GND Passive 
+U8006-6 SN74HC688N-P2 Passive 
+U8006-4 SN74HC688N-P1 Passive 
+U8006-1 SN74HC688N-OE# Passive 
+U8021-7 CD74HC283E-CIN Passive 
+U8021-11 CD74HC283E-B3 Passive 
+U8021-15 CD74HC283E-B2 Passive 
+U8021-8 CD74HC283E-GND Passive 
+U8022-7 CD74HC283E-CIN Passive 
+U8022-11 CD74HC283E-B3 Passive 
+U8022-15 CD74HC283E-B2 Passive 
+U8022-8 CD74HC283E-GND Passive 
+U8024-11 CD74HC283E-B3 Passive 
+U8024-12 CD74HC283E-A3 Passive 
+U8024-15 CD74HC283E-B2 Passive 
+U8024-8 CD74HC283E-GND Passive 
+U8025-3 CD74HC283E-A1 Passive 
+U8025-5 CD74HC283E-A0 Passive 
+U8025-7 CD74HC283E-CIN Passive 
+U8025-11 CD74HC283E-B3 Passive 
+U8025-14 CD74HC283E-A2 Passive 
+U8025-8 CD74HC283E-GND Passive 
+U8028-8 CD74HC283E-GND Passive 
+U8037-3 CD74HC283E-A1 Passive 
+U8037-5 CD74HC283E-A0 Passive 
+U8037-7 CD74HC283E-CIN Passive 
+U8037-14 CD74HC283E-A2 Passive 
+U8037-8 CD74HC283E-GND Passive 
+U8045-2 CD74HC283E-B1 Passive 
+U8045-3 CD74HC283E-A1 Passive 
+U8045-5 CD74HC283E-A0 Passive 
+U8045-6 CD74HC283E-B0 Passive 
+U8045-11 CD74HC283E-B3 Passive 
+U8045-12 CD74HC283E-A3 Passive 
+U8045-14 CD74HC283E-A2 Passive 
+U8045-15 CD74HC283E-B2 Passive 
+U8045-8 CD74HC283E-GND Passive 
+U8145-3 74HC138N-A2 Passive 
+U8145-5 74HC138N-CS3 Passive 
+U8145-8 74HC138N-GND Passive 
+Q21024-1 S8050_C2931492-E Passive 
+Q21035-1 S8050_C2931492-E Passive 
+Q21036-1 S8050_C2931492-E Passive 
+Q21037-1 S8050_C2931492-E Passive 
+U15005-7 SN74HC04N-GND Passive 
+J20506-2 X6522WV-2x32H-C60D30-E80-2 Passive 
+J20506-4 X6522WV-2x32H-C60D30-E80-4 Passive 
+J20506-3 X6522WV-2x32H-C60D30-E80-3 Passive 
+J20506-1 X6522WV-2x32H-C60D30-E80-1 Passive 
+)
+(
+CLK 
+U8003-2 SN74HC161N-CLK Passive 
+U8005-2 SN74HC161N-CLK Passive 
+J20506-62 X6522WV-2x32H-C60D30-E80-62 Passive 
+)
+(
+/B06_S08_CONV2/C2_CNT_RESET_N 
+U8003-1 SN74HC161N-CLR# Passive 
+U8005-1 SN74HC161N-CLR# Passive 
+J20506-13 X6522WV-2x32H-C60D30-E80-13 Passive 
+)
+(
+/B06_S08_CONV2/C2_OY_LAST_LO_N 
+U8004-19 SN74HC688N-(P=Q)# Passive 
+J20506-30 X6522WV-2x32H-C60D30-E80-30 Passive 
+)
+(
+UNCONNECTED-(U8005-TC-PAD15) 
+U8005-15 SN74HC161N-RCO Passive 
+)
+(
+/B06_S08_CONV2/C2_OX0 
+U8005-14 SN74HC161N-QA Passive 
+U8006-3 SN74HC688N-Q0 Passive 
+U8022-5 CD74HC283E-A0 Passive 
+)
+(
+/B06_S08_CONV2/C2_OX1 
+U8005-13 SN74HC161N-QB Passive 
+U8006-5 SN74HC688N-Q1 Passive 
+U8022-3 CD74HC283E-A1 Passive 
+)
+(
+/B06_S08_CONV2/C2_OX2 
+U8005-12 SN74HC161N-QC Passive 
+U8006-7 SN74HC688N-Q2 Passive 
+U8022-14 CD74HC283E-A2 Passive 
+)
+(
+/B06_S08_CONV2/C2_OX3 
+U8005-11 SN74HC161N-QD Passive 
+U8006-9 SN74HC688N-Q3 Passive 
+U8022-12 CD74HC283E-A3 Passive 
+)
+(
+/B06_S08_CONV2/C2_OX_EN 
+U8005-10 SN74HC161N-ENT Passive 
+U8005-7 SN74HC161N-ENP Passive 
+J20506-26 X6522WV-2x32H-C60D30-E80-26 Passive 
+)
+(
+/B06_S08_CONV2/C2_OX_PE_N 
+U8005-9 SN74HC161N-LOAD# Passive 
+J20506-28 X6522WV-2x32H-C60D30-E80-28 Passive 
+)
+(
+/B06_S08_CONV2/C2_OX_LAST_LO_N 
+U8006-19 SN74HC688N-(P=Q)# Passive 
+J20506-27 X6522WV-2x32H-C60D30-E80-27 Passive 
+)
+(
+/B06_S08_CONV2/C2_SY1 
+U8021-1 CD74HC283E-S1 Output  
+U8024-5 CD74HC283E-A0 Passive 
+J20506-37 X6522WV-2x32H-C60D30-E80-37 Passive 
+)
+(
+/B06_S08_CONV2/C2_KY1 
+U8021-2 CD74HC283E-B1 Passive 
+J20506-21 X6522WV-2x32H-C60D30-E80-21 Passive 
+)
+(
+/B06_S08_CONV2/C2_SY0 
+U8021-4 CD74HC283E-S0 Output  
+J20506-36 X6522WV-2x32H-C60D30-E80-36 Passive 
+)
+(
+/B06_S08_CONV2/C2_KY0 
+U8021-6 CD74HC283E-B0 Passive 
+J20506-20 X6522WV-2x32H-C60D30-E80-20 Passive 
+)
+(
+UNCONNECTED-(U8021-C4-PAD9) 
+U8021-9 CD74HC283E-COUT Output  
+)
+(
+/B06_S08_CONV2/C2_SY3 
+U8021-10 CD74HC283E-S3 Output  
+U8024-2 CD74HC283E-B1 Passive 
+U8024-14 CD74HC283E-A2 Passive 
+)
+(
+/B06_S08_CONV2/C2_SY2 
+U8021-13 CD74HC283E-S2 Output  
+U8024-3 CD74HC283E-A1 Passive 
+U8024-6 CD74HC283E-B0 Passive 
+)
+(
+/B06_S08_CONV2/C2_SX1 
+U8022-1 CD74HC283E-S1 Output  
+J20506-33 X6522WV-2x32H-C60D30-E80-33 Passive 
+)
+(
+/B06_S08_CONV2/C2_KX1 
+U8022-2 CD74HC283E-B1 Passive 
+J20506-19 X6522WV-2x32H-C60D30-E80-19 Passive 
+)
+(
+/B06_S08_CONV2/C2_SX0 
+U8022-4 CD74HC283E-S0 Output  
+J20506-32 X6522WV-2x32H-C60D30-E80-32 Passive 
+)
+(
+/B06_S08_CONV2/C2_KX0 
+U8022-6 CD74HC283E-B0 Passive 
+J20506-18 X6522WV-2x32H-C60D30-E80-18 Passive 
+)
+(
+UNCONNECTED-(U8022-C4-PAD9) 
+U8022-9 CD74HC283E-COUT Output  
+)
+(
+/B06_S08_CONV2/C2_SX3 
+U8022-10 CD74HC283E-S3 Output  
+J20506-35 X6522WV-2x32H-C60D30-E80-35 Passive 
+)
+(
+/B06_S08_CONV2/C2_SX2 
+U8022-13 CD74HC283E-S2 Output  
+J20506-34 X6522WV-2x32H-C60D30-E80-34 Passive 
+)
+(
+/B06_S08_CONV2/C2_SY12_5 
+U8024-1 CD74HC283E-S1 Output  
+U8028-2 CD74HC283E-B1 Passive 
+)
+(
+/B06_S08_CONV2/C2_SY12_4 
+U8024-4 CD74HC283E-S0 Output  
+U8028-6 CD74HC283E-B0 Passive 
+)
+(
+/B06_S08_CONV2/C2_SY12_C0 
+U8024-7 CD74HC283E-CIN Passive 
+J20506-38 X6522WV-2x32H-C60D30-E80-38 Passive 
+)
+(
+UNCONNECTED-(U8024-C4-PAD9) 
+U8024-9 CD74HC283E-COUT Output  
+)
+(
+/B06_S08_CONV2/C2_SY12_7 
+U8024-10 CD74HC283E-S3 Output  
+U8028-11 CD74HC283E-B3 Passive 
+)
+(
+/B06_S08_CONV2/C2_SY12_6 
+U8024-13 CD74HC283E-S2 Output  
+U8028-15 CD74HC283E-B2 Passive 
+)
+(
+/B06_S08_CONV2/C2_IC9_1 
+U8025-1 CD74HC283E-S1 Output  
+U8028-3 CD74HC283E-A1 Passive 
+U8037-2 CD74HC283E-B1 Passive 
+)
+(
+/B06_S08_CONV2/C2_IC1 
+U8025-2 CD74HC283E-B1 Passive 
+J20506-15 X6522WV-2x32H-C60D30-E80-15 Passive 
+)
+(
+/B06_S08_CONV2/C2_IC9_0 
+U8025-4 CD74HC283E-S0 Output  
+U8028-5 CD74HC283E-A0 Passive 
+U8037-6 CD74HC283E-B0 Passive 
+)
+(
+/B06_S08_CONV2/C2_IC0 
+U8025-6 CD74HC283E-B0 Passive 
+U8025-12 CD74HC283E-A3 Passive 
+J20506-14 X6522WV-2x32H-C60D30-E80-14 Passive 
+)
+(
+/B06_S08_CONV2/C2_IC9_C0 
+U8025-9 CD74HC283E-COUT Output  
+J20506-17 X6522WV-2x32H-C60D30-E80-17 Passive 
+)
+(
+/B06_S08_CONV2/C2_IC9_3 
+U8025-10 CD74HC283E-S3 Output  
+U8028-12 CD74HC283E-A3 Passive 
+U8037-11 CD74HC283E-B3 Passive 
+)
+(
+/B06_S08_CONV2/C2_IC9_2 
+U8025-13 CD74HC283E-S2 Output  
+U8028-14 CD74HC283E-A2 Passive 
+U8037-15 CD74HC283E-B2 Passive 
+)
+(
+/B06_S08_CONV2/C2_IC2 
+U8025-15 CD74HC283E-B2 Passive 
+J20506-16 X6522WV-2x32H-C60D30-E80-16 Passive 
+)
+(
+/B06_S08_CONV2/C2_T1_5 
+U8028-1 CD74HC283E-S1 Output  
+J20506-40 X6522WV-2x32H-C60D30-E80-40 Passive 
+)
+(
+/B06_S08_CONV2/C2_T1_4 
+U8028-4 CD74HC283E-S0 Output  
+J20506-39 X6522WV-2x32H-C60D30-E80-39 Passive 
+)
+(
+/B06_S08_CONV2/C2_T1_C0 
+U8028-7 CD74HC283E-CIN Passive 
+J20506-43 X6522WV-2x32H-C60D30-E80-43 Passive 
+)
+(
+/B06_S08_CONV2/C2_T1_C1 
+U8028-9 CD74HC283E-COUT Output  
+J20506-44 X6522WV-2x32H-C60D30-E80-44 Passive 
+)
+(
+/B06_S08_CONV2/C2_T1_7 
+U8028-10 CD74HC283E-S3 Output  
+J20506-42 X6522WV-2x32H-C60D30-E80-42 Passive 
+)
+(
+/B06_S08_CONV2/C2_T1_6 
+U8028-13 CD74HC283E-S2 Output  
+J20506-41 X6522WV-2x32H-C60D30-E80-41 Passive 
+)
+(
+/B06_S08_CONV2/C2_W1_1 
+U8037-1 CD74HC283E-S1 Output  
+J20506-46 X6522WV-2x32H-C60D30-E80-46 Passive 
+)
+(
+/B06_S08_CONV2/C2_W1_0 
+U8037-4 CD74HC283E-S0 Output  
+J20506-45 X6522WV-2x32H-C60D30-E80-45 Passive 
+)
+(
+/B06_S08_CONV2/C2_W1_C0 
+U8037-9 CD74HC283E-COUT Output  
+J20506-49 X6522WV-2x32H-C60D30-E80-49 Passive 
+)
+(
+/B06_S08_CONV2/C2_W1_3 
+U8037-10 CD74HC283E-S3 Output  
+J20506-48 X6522WV-2x32H-C60D30-E80-48 Passive 
+)
+(
+/B06_S08_CONV2/C2_OC9_0 
+U8037-12 CD74HC283E-A3 Passive 
+J20506-25 X6522WV-2x32H-C60D30-E80-25 Passive 
+)
+(
+/B06_S08_CONV2/C2_W1_2 
+U8037-13 CD74HC283E-S2 Output  
+J20506-47 X6522WV-2x32H-C60D30-E80-47 Passive 
+)
+(
+UNCONNECTED-(U8045-S2-PAD1) 
+U8045-1 CD74HC283E-S1 Output  
+)
+(
+/B06_S08_CONV2/C2_OC24_8 
+U8045-4 CD74HC283E-S0 Output  
+J20506-23 X6522WV-2x32H-C60D30-E80-23 Passive 
+)
+(
+/B06_S08_CONV2/C2_OC24_C1 
+U8045-7 CD74HC283E-CIN Passive 
+J20506-24 X6522WV-2x32H-C60D30-E80-24 Passive 
+)
+(
+UNCONNECTED-(U8045-C4-PAD9) 
+U8045-9 CD74HC283E-COUT Output  
+)
+(
+UNCONNECTED-(U8045-S4-PAD10) 
+U8045-10 CD74HC283E-S3 Output  
+)
+(
+UNCONNECTED-(U8045-S3-PAD13) 
+U8045-13 CD74HC283E-S2 Output  
+)
+(
+C2_REQ_BUSY 
+U8118-1 TP-黄色测试点-1 Passive 
+J20506-61 X6522WV-2x32H-C60D30-E80-61 Passive 
+)
+(
+/B06_S08_CONV2/C2_ADD_SEL0 
+U8145-1 74HC138N-A0 Passive 
+J20506-11 X6522WV-2x32H-C60D30-E80-11 Passive 
+)
+(
+/B06_S08_CONV2/C2_ADD_SEL1 
+U8145-2 74HC138N-A1 Passive 
+J20506-12 X6522WV-2x32H-C60D30-E80-12 Passive 
+)
+(
+MEM_NCE 
+U8145-4 74HC138N-CS2 Passive 
+J20506-64 X6522WV-2x32H-C60D30-E80-64 Passive 
+)
+(
+UNCONNECTED-(U8145-~{Y7}-PAD7) 
+U8145-7 74HC138N-Y7 Passive 
+)
+(
+UNCONNECTED-(U8145-~{Y6}-PAD9) 
+U8145-9 74HC138N-Y6 Passive 
+)
+(
+C2_MEM_NCE_MC 
+U8145-10 74HC138N-Y5 Passive 
+J20506-57 X6522WV-2x32H-C60D30-E80-57 Passive 
+)
+(
+C2_MEM_NCE_Q 
+U8145-11 74HC138N-Y4 Passive 
+J20506-59 X6522WV-2x32H-C60D30-E80-59 Passive 
+)
+(
+C2_MEM_NCE_B 
+U8145-12 74HC138N-Y3 Passive 
+J20506-55 X6522WV-2x32H-C60D30-E80-55 Passive 
+)
+(
+C2_MEM_NCE_OUT 
+U8145-13 74HC138N-Y2 Passive 
+J20506-58 X6522WV-2x32H-C60D30-E80-58 Passive 
+)
+(
+C2_MEM_NCE_W 
+U8145-14 74HC138N-Y1 Passive 
+J20506-60 X6522WV-2x32H-C60D30-E80-60 Passive 
+)
+(
+C2_MEM_NCE_IN 
+U8145-15 74HC138N-Y0 Passive 
+J20506-56 X6522WV-2x32H-C60D30-E80-56 Passive 
+)
+(
+/B06_S08_CONV2/C2_MEM_STAT_NOE 
+U8150-1 TP-黄色测试点-1 Passive 
+J20506-22 X6522WV-2x32H-C60D30-E80-22 Passive 
+)
+(
+$5N7921 
+LED21024-1 HLMP-S301-C Passive 
+Q21024-3 S8050_C2931492-C Passive 
+)
+(
+$5N7922 
+LED21024-2 HLMP-S301-A Passive 
+R31047-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$5N7918 
+Q21024-2 S8050_C2931492-B Passive 
+R31048-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
++VLED 
+R31047-1 MF1/4W-1KΩ±1% T-1 Passive 
+R31069-1 MF1/4W-1KΩ±1% T-1 Passive 
+R31071-1 MF1/4W-1KΩ±1% T-1 Passive 
+R31073-1 MF1/4W-1KΩ±1% T-1 Passive 
+J20506-10 X6522WV-2x32H-C60D30-E80-10 Passive 
+J20506-9 X6522WV-2x32H-C60D30-E80-9 Passive 
+)
+(
+DATA7 
+R31048-2 MF1/4W-10KΩ±1% T-2 Passive 
+J20506-63 X6522WV-2x32H-C60D30-E80-63 Passive 
+)
+(
+$5N7998 
+LED21035-1 HLMP-S301-C Passive 
+Q21035-3 S8050_C2931492-C Passive 
+)
+(
+$5N7999 
+LED21035-2 HLMP-S301-A Passive 
+R31069-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$5N7995 
+Q21035-2 S8050_C2931492-B Passive 
+R31070-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
+C2_ACC19 
+R31070-2 MF1/4W-10KΩ±1% T-2 Passive 
+J20506-51 X6522WV-2x32H-C60D30-E80-51 Passive 
+)
+(
+$5N8005 
+LED21036-1 HLMP-S301-C Passive 
+Q21036-3 S8050_C2931492-C Passive 
+)
+(
+$5N8006 
+LED21036-2 HLMP-S301-A Passive 
+R31071-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$5N8002 
+Q21036-2 S8050_C2931492-B Passive 
+R31072-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
+C2_ACC20 
+R31072-2 MF1/4W-10KΩ±1% T-2 Passive 
+J20506-52 X6522WV-2x32H-C60D30-E80-52 Passive 
+)
+(
+$5N8012 
+LED21037-1 HLMP-S301-C Passive 
+Q21037-3 S8050_C2931492-C Passive 
+)
+(
+$5N8013 
+LED21037-2 HLMP-S301-A Passive 
+R31073-2 MF1/4W-1KΩ±1% T-2 Passive 
+)
+(
+$5N8009 
+Q21037-2 S8050_C2931492-B Passive 
+R31074-1 MF1/4W-10KΩ±1% T-1 Passive 
+)
+(
+C2_ACC21 
+R31074-2 MF1/4W-10KΩ±1% T-2 Passive 
+J20506-53 X6522WV-2x32H-C60D30-E80-53 Passive 
+)
+(
+C2_ACC31 
+U15005-1 SN74HC04N-1A Passive 
+J20506-54 X6522WV-2x32H-C60D30-E80-54 Passive 
+)
+(
+/B06_S15_REQUANT_C2/C2_RQ_NEG_N 
+U15005-2 SN74HC04N-1Y Passive 
+J20506-50 X6522WV-2x32H-C60D30-E80-50 Passive 
+)

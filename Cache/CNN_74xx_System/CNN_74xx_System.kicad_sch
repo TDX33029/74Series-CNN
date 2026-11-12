@@ -1,0 +1,4320 @@
+(kicad_sch
+	(version 20250610)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0")
+	(paper "A0")
+	(title_block
+		(title "74-Series 28x28 MNIST CNN - 12-Board Backplane System")
+		(date "2026-11-04")
+		(rev "2.0")
+		(company "74Series-CNN Project")
+	)
+	(lib_symbols
+		(symbol "power:PWR_FLAG"
+				(power global)
+				(pin_numbers
+					(hide yes)
+				)
+				(pin_names
+					(offset 0)
+					(hide yes)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(in_pos_files yes)
+				(duplicate_pin_numbers_are_jumpers no)
+				(property "Reference" "#FLG"
+					(at 0 1.905 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Value" "PWR_FLAG"
+					(at 0 3.81 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Footprint" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" "Special symbol for telling ERC where power comes from"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "ki_keywords" "flag power"
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "PWR_FLAG_0_0"
+					(pin power_out line
+						(at 0 0 90)
+						(length 0)
+						(name ""
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "1"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+				)
+				(symbol "PWR_FLAG_0_1"
+					(polyline
+						(pts
+							(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+						)
+						(stroke
+							(width 0)
+							(type default)
+						)
+						(fill
+							(type none)
+						)
+					)
+				)
+				(embedded_fonts no)
+			)
+	)
+	(text "74-Series 28x28 MNIST CNN - 12-Board Backplane System (Option A)"
+		(exclude_from_sim no)
+		(at 25 14 0)
+		(effects
+			(font
+				(size 4.2 4.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "658f99bb-c179-4715-9115-d3a4bcffd2ef")
+	)
+
+	(text "Twelve concrete boards, one 2x20P backplane connector group per board. Every inter-board net is a global label; the passive backplane only wires slot pins together.\nIMAGE -> CONV1 -> POOL1 -> CONV2 -> POOL2 -> FC1 -> FC2 -> ARGMAX -> RESULT\nBoard path: B12 -> B04 -> B05 -> B06 -> B07 -> B08 -> B09 -> B10 -> B12"
+		(exclude_from_sim no)
+		(at 25 24 0)
+		(effects
+			(font
+				(size 1.6 1.6)
+			)
+			(justify left top)
+		)
+		(uuid "3f6e6553-b7e3-4a92-89de-52ce4fcdfa34")
+	)
+
+	(polyline
+		(pts
+			(xy 25 70) (xy 297 70)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "84c8fd31-e28f-4bd3-9f91-35f7ccd40695")
+	)
+
+	(polyline
+		(pts
+			(xy 297 70) (xy 297 248)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "1ec5a55d-1197-4ade-be55-ab56eecce6a9")
+	)
+
+	(polyline
+		(pts
+			(xy 297 248) (xy 25 248)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "9c7eda72-deff-4f4e-8768-1cb40872b795")
+	)
+
+	(polyline
+		(pts
+			(xy 25 248) (xy 25 70)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "439524ab-e477-400a-9d86-feee43be3932")
+	)
+
+	(text "B01  SUPERVISOR"
+		(exclude_from_sim no)
+		(at 29 73 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "9de1f5b1-2ede-43eb-9c8b-a07240d2aa2b")
+	)
+
+	(text "Global supervisor FSM, microcode ROM, watchdog\nsequencer: START/BUSY/DONE, stage starts, FC_SEL/POOL_SEL"
+		(exclude_from_sim no)
+		(at 29 79 0)
+		(effects
+			(font
+				(size 1.05 1.05)
+			)
+			(justify left top)
+		)
+		(uuid "7b8154be-1959-406c-8f14-a7651cef9765")
+	)
+
+	(text "37 external nets\n2 x 2x20P (52 pins)"
+		(exclude_from_sim no)
+		(at 159 78 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "1bc83fd3-467c-4220-9a7a-90e18fbd3533")
+	)
+
+	(sheet
+		(at 29 92)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "626c316b-dc5b-4df7-b552-c98efd1b4638")
+		(property "Sheetname" "B01_S01_Supervisor"
+			(at 29 90.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S01_Supervisor.kicad_sch"
+			(at 29 129.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "2")
+				)
+			)
+		)
+	)
+
+	(text "Supervisor FSM, 2x 27C512 microcode, 74HCT273 state, watchdog"
+		(exclude_from_sim no)
+		(at 155 94 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "42918375-45a6-476d-83e3-1f3fa183e690")
+	)
+
+	(sheet
+		(at 29 142)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3c27d30f-672b-4293-8f07-9e60aecc6e96")
+		(property "Sheetname" "B01_Conn"
+			(at 29 140.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "B01_Conn.kicad_sch"
+			(at 29 179.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "3")
+				)
+			)
+		)
+	)
+
+	(text "SUPERVISOR backplane connector (2x20P, fixed power pinout)"
+		(exclude_from_sim no)
+		(at 155 144 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "5ca76c1d-5ac1-417c-b56f-53f331a7b6e7")
+	)
+
+	(polyline
+		(pts
+			(xy 305 70) (xy 577 70)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "b89f164d-7189-4923-bb63-6f52f3f7fb46")
+	)
+
+	(polyline
+		(pts
+			(xy 577 70) (xy 577 248)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "2a6626e4-2ad3-45ff-b468-420dd3b9ee92")
+	)
+
+	(polyline
+		(pts
+			(xy 577 248) (xy 305 248)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "9c3ea4d8-3238-443a-a33f-25d95585799c")
+	)
+
+	(polyline
+		(pts
+			(xy 305 248) (xy 305 70)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "01c83a90-9d70-4593-9b94-69ab004df6a8")
+	)
+
+	(text "B02  TIMING"
+		(exclude_from_sim no)
+		(at 309 73 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "ec54bccd-1cbc-42c8-989a-fec0fb8ab144")
+	)
+
+	(text "Memory timing controller SETUP/WAIT/CAPTURE/HOLD/RELEASE\nsingle owner of MEM_nCE/nOE/nWE and the ACK handshake"
+		(exclude_from_sim no)
+		(at 309 79 0)
+		(effects
+			(font
+				(size 1.05 1.05)
+			)
+			(justify left top)
+		)
+		(uuid "1ada522d-3244-49cf-8dc5-6cb0c1002b70")
+	)
+
+	(text "10 external nets\n1 x 2x20P (26 pins)"
+		(exclude_from_sim no)
+		(at 439 78 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "d2f204e5-8f49-40fd-929b-8679b5666540")
+	)
+
+	(sheet
+		(at 309 92)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "50e49e31-8731-463c-a919-d1adb74a7e80")
+		(property "Sheetname" "B02_S02_Timing"
+			(at 309 90.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S02_Timing.kicad_sch"
+			(at 309 129.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "4")
+				)
+			)
+		)
+	)
+
+	(text "SETUP/WAIT/CAPTURE/HOLD/RELEASE, MEM_nCE/nOE/nWE, ACK handshake"
+		(exclude_from_sim no)
+		(at 435 94 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "19240a98-09e6-4c19-9f1b-519bba798575")
+	)
+
+	(sheet
+		(at 309 142)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "2de151aa-2110-47c4-a839-5f5909f69c66")
+		(property "Sheetname" "B02_Conn"
+			(at 309 140.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "B02_Conn.kicad_sch"
+			(at 309 179.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "5")
+				)
+			)
+		)
+	)
+
+	(text "TIMING backplane connector (2x20P, fixed power pinout)"
+		(exclude_from_sim no)
+		(at 435 144 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "07d4cdb0-48d9-49cf-b3f4-7cd091dd86ca")
+	)
+
+	(polyline
+		(pts
+			(xy 585 70) (xy 857 70)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "a0d0d0b3-d02a-4eff-bee4-61506b188bf6")
+	)
+
+	(polyline
+		(pts
+			(xy 857 70) (xy 857 248)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "c12c9ab1-9939-4bdc-aa07-dd7873d1484d")
+	)
+
+	(polyline
+		(pts
+			(xy 857 248) (xy 585 248)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "78e1d2f1-13b3-465c-84eb-b9e6d68316ac")
+	)
+
+	(polyline
+		(pts
+			(xy 585 248) (xy 585 70)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "42b9fe05-ee68-4b9f-b574-38f03f8d224f")
+	)
+
+	(text "B03  MEMORY"
+		(exclude_from_sim no)
+		(at 589 73 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "c12a2020-0e89-4895-81c0-5f7a3b6e2c03")
+	)
+
+	(text "7x 6264 SRAM + 12x 28C256 + 8x 27C512 LUT/map storage\nall feature maps, weights, biases, quant params and LUT/map ROMs"
+		(exclude_from_sim no)
+		(at 589 79 0)
+		(effects
+			(font
+				(size 1.05 1.05)
+			)
+			(justify left top)
+		)
+		(uuid "ebdb86f8-c54d-44ec-a686-b45fe4e96255")
+	)
+
+	(text "204 external nets\n8 x 2x20P (208 pins)"
+		(exclude_from_sim no)
+		(at 719 78 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "414c2480-e2c9-4ff7-ac5a-ccad04853cd6")
+	)
+
+	(sheet
+		(at 589 92)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8180082a-826d-471d-94ca-46382deacf02")
+		(property "Sheetname" "B03_S04_Memories"
+			(at 589 90.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S04_Memories.kicad_sch"
+			(at 589 129.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "6")
+				)
+			)
+		)
+	)
+
+	(text "7x 6264 SRAM, 12x 28C256 params, 8x 27C512 LUT/map, per-engine buffers"
+		(exclude_from_sim no)
+		(at 715 94 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "88043d55-053d-4c02-addd-468308a945c8")
+	)
+
+	(sheet
+		(at 589 142)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "794cde84-2050-4638-807c-b09e419179cf")
+		(property "Sheetname" "B03_Conn"
+			(at 589 140.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "B03_Conn.kicad_sch"
+			(at 589 179.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "7")
+				)
+			)
+		)
+	)
+
+	(text "MEMORY backplane connector (2x20P, fixed power pinout)"
+		(exclude_from_sim no)
+		(at 715 144 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "4551b46d-7064-44d6-bdb6-cd6d4bca3ed4")
+	)
+
+	(polyline
+		(pts
+			(xy 865 70) (xy 1137 70)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "49f46e49-847d-4891-b13c-9e928dfbc2a0")
+	)
+
+	(polyline
+		(pts
+			(xy 1137 70) (xy 1137 248)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "6dcb5df4-16a8-4b6c-b3ea-49e1e4b89402")
+	)
+
+	(polyline
+		(pts
+			(xy 1137 248) (xy 865 248)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "b6500361-7e43-4ce3-a393-4cb2d4b6f6ae")
+	)
+
+	(polyline
+		(pts
+			(xy 865 248) (xy 865 70)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "d9214bed-8eab-45c0-8762-81168d025abe")
+	)
+
+	(text "B04  CONV1"
+		(exclude_from_sim no)
+		(at 869 73 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "b1ebf395-8a87-4134-a157-247eeeb7db85")
+	)
+
+	(text "5x5x1 -> 8ch convolution engine + ACC>>8 requant\nC1 stage; requant is on-board, C1_ACC never leaves the board"
+		(exclude_from_sim no)
+		(at 869 79 0)
+		(effects
+			(font
+				(size 1.05 1.05)
+			)
+			(justify left top)
+		)
+		(uuid "7e987e0d-8052-4112-a483-f1ac1eec6b6c")
+	)
+
+	(text "43 external nets\n2 x 2x20P (52 pins)"
+		(exclude_from_sim no)
+		(at 999 78 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "819f19f4-aa31-4f88-996a-74e4ce6c1e9e")
+	)
+
+	(sheet
+		(at 869 92)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c1fbe284-c70c-4492-a280-694806f1dbe0")
+		(property "Sheetname" "B04_S07_Conv1"
+			(at 869 90.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S07_Conv1.kicad_sch"
+			(at 869 129.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "8")
+				)
+			)
+		)
+	)
+
+	(text "CONV1 5x5x1 x 8 filters, 32-bit ACC, C1 memory interface"
+		(exclude_from_sim no)
+		(at 995 94 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "6adf22ab-41a6-4a81-8f04-a0dc66b6ce0f")
+	)
+
+	(sheet
+		(at 869 142)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "beb5883e-4f8d-4178-8250-15331d8a3273")
+		(property "Sheetname" "B04_S13_Requant_C1"
+			(at 869 140.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S13_Requant_C1.kicad_sch"
+			(at 869 179.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "9")
+				)
+			)
+		)
+	)
+
+	(text "CONV1 requant ACC>>8, ReLU/uint8 clamp (on-board with S07)"
+		(exclude_from_sim no)
+		(at 995 144 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "a734a4d5-33c6-4b05-9370-184dfff320a2")
+	)
+
+	(sheet
+		(at 869 192)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0761eb78-3687-4d22-b4b4-8337500c365b")
+		(property "Sheetname" "B04_Conn"
+			(at 869 190.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "B04_Conn.kicad_sch"
+			(at 869 229.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "10")
+				)
+			)
+		)
+	)
+
+	(text "CONV1 backplane connector (2x20P, fixed power pinout)"
+		(exclude_from_sim no)
+		(at 995 194 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "349adf36-22ba-4933-a3ad-ec0dac4ea10d")
+	)
+
+	(polyline
+		(pts
+			(xy 25 258) (xy 297 258)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "ba620f99-6f8b-47d5-a09a-18d2ef60a9d9")
+	)
+
+	(polyline
+		(pts
+			(xy 297 258) (xy 297 436)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "5ac472e2-2e80-41fb-8292-ab74d5645377")
+	)
+
+	(polyline
+		(pts
+			(xy 297 436) (xy 25 436)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "66b1d5fa-56e4-4723-8456-ba45676aa539")
+	)
+
+	(polyline
+		(pts
+			(xy 25 436) (xy 25 258)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "16b9158a-fe72-44ee-91d9-caa0db108dce")
+	)
+
+	(text "B05  POOL1"
+		(exclude_from_sim no)
+		(at 29 261 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "4b6ebbe0-1bb3-409b-9f44-b2c77c44b504")
+	)
+
+	(text "2x2 stride-2 max pool 12x12x8 -> 6x6x8\nP1 stage; POOL_SEL tied 0, IN_DATA1 byte buffer on-board"
+		(exclude_from_sim no)
+		(at 29 267 0)
+		(effects
+			(font
+				(size 1.05 1.05)
+			)
+			(justify left top)
+		)
+		(uuid "3a2b15b4-91bb-46c6-bb0b-25741c5a44f6")
+	)
+
+	(text "53 external nets\n3 x 2x20P (78 pins)"
+		(exclude_from_sim no)
+		(at 159 266 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "38c97c16-3c5d-4c58-bf03-20bb3dcd1197")
+	)
+
+	(sheet
+		(at 29 280)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "06d0ecb2-aa8c-4d1f-8c57-96ba2dfb51e3")
+		(property "Sheetname" "B05_S05_Pool1"
+			(at 29 278.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S05_Pool1.kicad_sch"
+			(at 29 317.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "11")
+				)
+			)
+		)
+	)
+
+	(text "POOL1 max-pool 12x12x8 -> 6x6x8, POOL_SEL tied 0"
+		(exclude_from_sim no)
+		(at 155 282 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "7cb5967d-b966-4701-8d24-6369ad4daecf")
+	)
+
+	(sheet
+		(at 29 330)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fc5fab0e-0fe1-4cd7-bb1c-d863010a08ae")
+		(property "Sheetname" "B05_S12A_PoolLatch1"
+			(at 29 328.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S12A_PoolLatch1.kicad_sch"
+			(at 29 367.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "12")
+				)
+			)
+		)
+	)
+
+	(text "POOL1 input byte buffer DATA[7:0] -> IN_DATA1[7:0]"
+		(exclude_from_sim no)
+		(at 155 332 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "bc9a585c-0ed0-4f5f-8968-1a6d65950a31")
+	)
+
+	(sheet
+		(at 29 380)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3a6e0761-9f90-4637-9c40-e40d9e62a5ef")
+		(property "Sheetname" "B05_Conn"
+			(at 29 378.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "B05_Conn.kicad_sch"
+			(at 29 417.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "13")
+				)
+			)
+		)
+	)
+
+	(text "POOL1 backplane connector (2x20P, fixed power pinout)"
+		(exclude_from_sim no)
+		(at 155 382 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "98a844cf-0996-4474-8d52-2d74a9b26f3b")
+	)
+
+	(polyline
+		(pts
+			(xy 305 258) (xy 577 258)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "941ec8f9-f85a-43ae-894a-926776b0a609")
+	)
+
+	(polyline
+		(pts
+			(xy 577 258) (xy 577 436)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "0a38c224-d7c2-4f7b-85ad-4736e5fad71a")
+	)
+
+	(polyline
+		(pts
+			(xy 577 436) (xy 305 436)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "063f2e75-dd5b-412b-9e9d-96b88ab78427")
+	)
+
+	(polyline
+		(pts
+			(xy 305 436) (xy 305 258)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "b590d22b-005c-4988-9bc3-c7b14cad2bf9")
+	)
+
+	(text "B06  CONV2"
+		(exclude_from_sim no)
+		(at 309 261 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "7e2d524c-0715-4dd5-b57e-f560137fb832")
+	)
+
+	(text "3x3x8 -> 16ch convolution engine + ACC>>9 requant\nC2 stage; requant is on-board, C2_ACC never leaves the board"
+		(exclude_from_sim no)
+		(at 309 267 0)
+		(effects
+			(font
+				(size 1.05 1.05)
+			)
+			(justify left top)
+		)
+		(uuid "dbb16f2e-9236-454a-ac43-1c257a3902a1")
+	)
+
+	(text "43 external nets\n2 x 2x20P (52 pins)"
+		(exclude_from_sim no)
+		(at 439 266 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "c5e025b4-e02d-473a-b9b4-3b8f6175bfbf")
+	)
+
+	(sheet
+		(at 309 280)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5bbed57d-674e-482e-8814-a0acddf7ef57")
+		(property "Sheetname" "B06_S08_Conv2"
+			(at 309 278.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S08_Conv2.kicad_sch"
+			(at 309 317.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "14")
+				)
+			)
+		)
+	)
+
+	(text "CONV2 3x3x8 x 16 filters, 32-bit ACC, C2 memory interface"
+		(exclude_from_sim no)
+		(at 435 282 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "a69e1d98-a669-433b-95ba-534c4826f024")
+	)
+
+	(sheet
+		(at 309 330)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8d04395c-0b9c-4c1b-b395-478c478a1c8a")
+		(property "Sheetname" "B06_S15_Requant_C2"
+			(at 309 328.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S15_Requant_C2.kicad_sch"
+			(at 309 367.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "15")
+				)
+			)
+		)
+	)
+
+	(text "CONV2 requant ACC>>9, ReLU/uint8 clamp (on-board with S08)"
+		(exclude_from_sim no)
+		(at 435 332 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "c7a478d5-a2bb-4e3a-a829-01b8730bcb9b")
+	)
+
+	(sheet
+		(at 309 380)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3d7272f8-51dd-481d-9324-28fbab082a1a")
+		(property "Sheetname" "B06_Conn"
+			(at 309 378.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "B06_Conn.kicad_sch"
+			(at 309 417.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "16")
+				)
+			)
+		)
+	)
+
+	(text "CONV2 backplane connector (2x20P, fixed power pinout)"
+		(exclude_from_sim no)
+		(at 435 382 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "e0ae31b0-28d1-4e87-9fc4-7026344de93e")
+	)
+
+	(polyline
+		(pts
+			(xy 585 258) (xy 857 258)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "88ea1e8d-a1b7-4ef5-9dc6-490fcd238d48")
+	)
+
+	(polyline
+		(pts
+			(xy 857 258) (xy 857 436)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "3717a9d4-f683-4682-814f-fcaa285a11ce")
+	)
+
+	(polyline
+		(pts
+			(xy 857 436) (xy 585 436)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "e1c486be-57b7-4729-99ad-19c9718fab4c")
+	)
+
+	(polyline
+		(pts
+			(xy 585 436) (xy 585 258)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "9ee1addb-6173-4fd1-8ee7-b3058a036242")
+	)
+
+	(text "B07  POOL2"
+		(exclude_from_sim no)
+		(at 589 261 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "6d080719-58b5-49da-8eb6-651db351f3fa")
+	)
+
+	(text "2x2 stride-2 max pool 10x10x16 -> 5x5x16\nP2 stage; POOL_SEL tied 1, IN_DATA2 byte buffer on-board"
+		(exclude_from_sim no)
+		(at 589 267 0)
+		(effects
+			(font
+				(size 1.05 1.05)
+			)
+			(justify left top)
+		)
+		(uuid "b954d561-9898-40f5-b590-c3019576301d")
+	)
+
+	(text "53 external nets\n3 x 2x20P (78 pins)"
+		(exclude_from_sim no)
+		(at 719 266 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "de3aa0cc-f05e-402a-89dd-e83a4c695bba")
+	)
+
+	(sheet
+		(at 589 280)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b3fb3612-28b6-46b1-97a8-285a626a60a7")
+		(property "Sheetname" "B07_S05_Pool2"
+			(at 589 278.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S05_Pool2.kicad_sch"
+			(at 589 317.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "17")
+				)
+			)
+		)
+	)
+
+	(text "POOL2 max-pool 10x10x16 -> 5x5x16, POOL_SEL tied 1"
+		(exclude_from_sim no)
+		(at 715 282 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "50bd7026-e286-4bf6-8730-29b8ce57134b")
+	)
+
+	(sheet
+		(at 589 330)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d5eacd28-8f90-4c14-b808-fc7cd0ced55c")
+		(property "Sheetname" "B07_S12A_PoolLatch2"
+			(at 589 328.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S12A_PoolLatch2.kicad_sch"
+			(at 589 367.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "18")
+				)
+			)
+		)
+	)
+
+	(text "POOL2 input byte buffer DATA[7:0] -> IN_DATA2[7:0]"
+		(exclude_from_sim no)
+		(at 715 332 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "b95063fe-7d7a-4d19-8ebe-17e047322c5c")
+	)
+
+	(sheet
+		(at 589 380)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "321b3c8b-311b-405c-bb0b-059d452bb353")
+		(property "Sheetname" "B07_Conn"
+			(at 589 378.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "B07_Conn.kicad_sch"
+			(at 589 417.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "19")
+				)
+			)
+		)
+	)
+
+	(text "POOL2 backplane connector (2x20P, fixed power pinout)"
+		(exclude_from_sim no)
+		(at 715 382 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "8ba97c6c-3349-4a8d-9429-3c639754da65")
+	)
+
+	(polyline
+		(pts
+			(xy 865 258) (xy 1137 258)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "bb632370-b92d-435d-a110-34a20269ce7f")
+	)
+
+	(polyline
+		(pts
+			(xy 1137 258) (xy 1137 436)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "1706ec4d-dc1e-42fe-92f2-9100b0921099")
+	)
+
+	(polyline
+		(pts
+			(xy 1137 436) (xy 865 436)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "89f9301e-2f7c-4489-a182-186065eb27b4")
+	)
+
+	(polyline
+		(pts
+			(xy 865 436) (xy 865 258)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "26367822-497f-42b6-9efb-27e6996555b7")
+	)
+
+	(text "B08  FC1"
+		(exclude_from_sim no)
+		(at 869 261 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "ff3a329e-63f0-495b-b7ad-87cfe9d78496")
+	)
+
+	(text "400 -> 32 fully connected + FC1 uint8 requant\nFC1 stage; FC_SEL tied 0, FC1_ACC/FC1_REQ_* stay on-board"
+		(exclude_from_sim no)
+		(at 869 267 0)
+		(effects
+			(font
+				(size 1.05 1.05)
+			)
+			(justify left top)
+		)
+		(uuid "422fa6dd-508c-49ee-abde-e7ce2df3bd65")
+	)
+
+	(text "43 external nets\n2 x 2x20P (52 pins)"
+		(exclude_from_sim no)
+		(at 999 266 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "0a2c8367-e193-4eaf-ad08-ba6e3d965429")
+	)
+
+	(sheet
+		(at 869 280)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8083a102-fa1a-477f-b7d8-9169b7fc975f")
+		(property "Sheetname" "B08_S09_FC1"
+			(at 869 278.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S09_FC1.kicad_sch"
+			(at 869 317.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "20")
+				)
+			)
+		)
+	)
+
+	(text "FC1 400->32 engine, FC_SEL tied 0, FC1_ACC/REQ to S17_FC1"
+		(exclude_from_sim no)
+		(at 995 282 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "126177c4-9804-4917-bcc9-1be5bfb1f6d9")
+	)
+
+	(sheet
+		(at 869 330)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3a226e5a-7fbd-40f1-b26c-fba3a9aec92a")
+		(property "Sheetname" "B08_S17_FC1"
+			(at 869 328.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S17_FC1.kicad_sch"
+			(at 869 367.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "21")
+				)
+			)
+		)
+	)
+
+	(text "FC1 requant ACC>>8 uint8 (on-board with S09_FC1)"
+		(exclude_from_sim no)
+		(at 995 332 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "a1d4102f-8599-4be7-a4be-89f658ef1487")
+	)
+
+	(sheet
+		(at 869 380)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "bbe05916-baba-4dba-b8cb-a26a2705cc98")
+		(property "Sheetname" "B08_Conn"
+			(at 869 378.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "B08_Conn.kicad_sch"
+			(at 869 417.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "22")
+				)
+			)
+		)
+	)
+
+	(text "FC1 backplane connector (2x20P, fixed power pinout)"
+		(exclude_from_sim no)
+		(at 995 382 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "fa01958b-c691-4580-aaa1-98a819ff9100")
+	)
+
+	(polyline
+		(pts
+			(xy 25 446) (xy 297 446)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "f6fd8e1a-9f2e-4ed7-b680-88d51302f27d")
+	)
+
+	(polyline
+		(pts
+			(xy 297 446) (xy 297 624)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "da238f18-e0c8-4852-87f3-b0fde8eeb262")
+	)
+
+	(polyline
+		(pts
+			(xy 297 624) (xy 25 624)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "17064b80-2375-402d-a87a-1a8082e14104")
+	)
+
+	(polyline
+		(pts
+			(xy 25 624) (xy 25 446)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "eb6a948b-3692-4303-8465-7ab5264fb590")
+	)
+
+	(text "B09  FC2"
+		(exclude_from_sim no)
+		(at 29 449 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "a76c1397-b02a-4ab2-82ea-98abeb12d59f")
+	)
+
+	(text "32 -> 10 fully connected + FC2 raw signed32 requant\nFC2 stage; FC_SEL tied 1, FC2_ACC/FC2_REQ_* stay on-board"
+		(exclude_from_sim no)
+		(at 29 455 0)
+		(effects
+			(font
+				(size 1.05 1.05)
+			)
+			(justify left top)
+		)
+		(uuid "029c63a3-8bbc-46c7-8548-5029f0366b7f")
+	)
+
+	(text "44 external nets\n2 x 2x20P (52 pins)"
+		(exclude_from_sim no)
+		(at 159 454 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "fad11389-6de9-41fc-8529-b6c6ec32f198")
+	)
+
+	(sheet
+		(at 29 468)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "60f29b53-887e-49ae-a275-123ef3cb64ec")
+		(property "Sheetname" "B09_S09_FC2"
+			(at 29 466.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S09_FC2.kicad_sch"
+			(at 29 505.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "23")
+				)
+			)
+		)
+	)
+
+	(text "FC2 32->10 engine, FC_SEL tied 1, FC2_ACC/REQ to S17_FC2"
+		(exclude_from_sim no)
+		(at 155 470 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "b72cb0cd-621f-4180-8daf-924713c5c508")
+	)
+
+	(sheet
+		(at 29 518)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0df92448-0239-404a-9c97-0f89b1f9e427")
+		(property "Sheetname" "B09_S17_FC2"
+			(at 29 516.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S17_FC2.kicad_sch"
+			(at 29 555.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "24")
+				)
+			)
+		)
+	)
+
+	(text "FC2 raw signed32, four-byte LE QSTB timing (on-board with S09_FC2)"
+		(exclude_from_sim no)
+		(at 155 520 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "d4087429-cdfc-4089-ba07-ec311e3c005e")
+	)
+
+	(sheet
+		(at 29 568)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ada84077-a1b0-400c-b7be-3aa78984c23b")
+		(property "Sheetname" "B09_Conn"
+			(at 29 566.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "B09_Conn.kicad_sch"
+			(at 29 605.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "25")
+				)
+			)
+		)
+	)
+
+	(text "FC2 backplane connector (2x20P, fixed power pinout)"
+		(exclude_from_sim no)
+		(at 155 570 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "f78939c3-226d-47af-9f0a-ee9e74540856")
+	)
+
+	(polyline
+		(pts
+			(xy 305 446) (xy 577 446)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "8a45d5ec-4154-480e-b1c5-ba8399ec338b")
+	)
+
+	(polyline
+		(pts
+			(xy 577 446) (xy 577 624)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "c4bd05c0-ed03-4bb4-9b25-826291e39513")
+	)
+
+	(polyline
+		(pts
+			(xy 577 624) (xy 305 624)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "5713c687-fb7e-40d3-9e8e-15785ee1f050")
+	)
+
+	(polyline
+		(pts
+			(xy 305 624) (xy 305 446)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "c0f93d19-c649-4eb5-b542-383c4a2736bb")
+	)
+
+	(text "B10  ARGMAX"
+		(exclude_from_sim no)
+		(at 309 449 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "9676cdb6-725a-412d-b9fb-50753ccba143")
+	)
+
+	(text "10-way signed-32 argmax + 32-bit score staging\nfinal stage; four score bytes assembled on-board"
+		(exclude_from_sim no)
+		(at 309 455 0)
+		(effects
+			(font
+				(size 1.05 1.05)
+			)
+			(justify left top)
+		)
+		(uuid "628e6879-8690-4e0f-aa04-671284bf7aa5")
+	)
+
+	(text "26 external nets\n1 x 2x20P (26 pins)"
+		(exclude_from_sim no)
+		(at 439 454 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "faceedb5-2b1b-4ed0-9aaf-7fc5fb713c8d")
+	)
+
+	(sheet
+		(at 309 468)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5f99d216-cc85-452b-a0a2-1d5884adc6f0")
+		(property "Sheetname" "B10_S06_Argmax"
+			(at 309 466.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S06_Argmax.kicad_sch"
+			(at 309 505.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "26")
+				)
+			)
+		)
+	)
+
+	(text "10-way signed-32 argmax, result latch, ARGMAX_START/DONE"
+		(exclude_from_sim no)
+		(at 435 470 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "f65ac9f2-4f56-49f4-b3b5-1f3f4586498d")
+	)
+
+	(sheet
+		(at 309 518)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0fe68b21-e56b-43a5-9e02-a61272da95b8")
+		(property "Sheetname" "B10_S12B_ScoreLatch"
+			(at 309 516.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S12B_ScoreLatch.kicad_sch"
+			(at 309 555.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "27")
+				)
+			)
+		)
+	)
+
+	(text "Argmax 4x 74HCT574 score staging + 74HC238 byte-lane decode"
+		(exclude_from_sim no)
+		(at 435 520 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "9f34b1bd-3a1f-4a07-a012-fcde038267bf")
+	)
+
+	(sheet
+		(at 309 568)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d0c7b912-1485-4dad-9404-4d412a9fabb8")
+		(property "Sheetname" "B10_Conn"
+			(at 309 566.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "B10_Conn.kicad_sch"
+			(at 309 605.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "28")
+				)
+			)
+		)
+	)
+
+	(text "ARGMAX backplane connector (2x20P, fixed power pinout)"
+		(exclude_from_sim no)
+		(at 435 570 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "2bf68a4a-0480-4c66-b546-be66cdb93b90")
+	)
+
+	(polyline
+		(pts
+			(xy 585 446) (xy 857 446)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "f484ab6a-86b9-49f0-8216-faaed16f8456")
+	)
+
+	(polyline
+		(pts
+			(xy 857 446) (xy 857 624)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "1d40c3b0-a73c-48ed-8a03-c3765177d5b0")
+	)
+
+	(polyline
+		(pts
+			(xy 857 624) (xy 585 624)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "cd422478-3fbc-4a99-ab1b-c48556a1924e")
+	)
+
+	(polyline
+		(pts
+			(xy 585 624) (xy 585 446)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "c82f8ca3-2aec-439e-a847-5eccbf772460")
+	)
+
+	(text "B11  BUSFAB"
+		(exclude_from_sim no)
+		(at 589 449 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "0cb317ae-8dbb-4e95-a5ae-022a5bf605de")
+	)
+
+	(text "Master/region encode, map ROM, REQ/WE merge, engine merge\narbitration only; FC1/FC2 and POOL1/POOL2 are muxed into the S11 slots"
+		(exclude_from_sim no)
+		(at 589 455 0)
+		(effects
+			(font
+				(size 1.05 1.05)
+			)
+			(justify left top)
+		)
+		(uuid "7077d9e3-f64b-4ddb-8773-3e350964076b")
+	)
+
+	(text "72 external nets\n3 x 2x20P (78 pins)"
+		(exclude_from_sim no)
+		(at 719 454 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "2cfd881f-ca4a-48fe-ad98-112cc328da70")
+	)
+
+	(sheet
+		(at 589 468)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3d0885f6-8404-4f5f-a16e-af52fb5800cf")
+		(property "Sheetname" "B11_S11_BusFabric"
+			(at 589 466.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S11_BusFabric.kicad_sch"
+			(at 589 505.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "29")
+				)
+			)
+		)
+	)
+
+	(text "Master/region encode, 27C512 map ROM, ADDR tag, REQ/WE merge"
+		(exclude_from_sim no)
+		(at 715 470 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "e57d3abf-816d-4a35-9d66-24896112e4e9")
+	)
+
+	(sheet
+		(at 589 518)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "bf282aaf-e4af-44ae-ae78-09688df90516")
+		(property "Sheetname" "B11_S11A_EngineMerge"
+			(at 589 516.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S11A_EngineMerge.kicad_sch"
+			(at 589 555.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "30")
+				)
+			)
+		)
+	)
+
+	(text "FC1/FC2 and POOL1/POOL2 mux into the single S11 slots"
+		(exclude_from_sim no)
+		(at 715 520 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "afbdf3af-d2ef-4063-8af5-c4ee686a1d98")
+	)
+
+	(sheet
+		(at 589 568)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "48b17284-ea90-4ad8-8932-0611b8abe914")
+		(property "Sheetname" "B11_Conn"
+			(at 589 566.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "B11_Conn.kicad_sch"
+			(at 589 605.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "31")
+				)
+			)
+		)
+	)
+
+	(text "BUSFAB backplane connector (2x20P, fixed power pinout)"
+		(exclude_from_sim no)
+		(at 715 570 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "9c56bf23-af5c-4fb5-a4b5-f670e9d686f2")
+	)
+
+	(polyline
+		(pts
+			(xy 865 446) (xy 1137 446)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "7fea1e00-93db-4cf7-8f57-46040101c1c8")
+	)
+
+	(polyline
+		(pts
+			(xy 1137 446) (xy 1137 624)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "18d4e914-22b0-49ea-b62d-d7485f610207")
+	)
+
+	(polyline
+		(pts
+			(xy 1137 624) (xy 865 624)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "a01388e2-84ce-41ee-a216-b363309cf2c7")
+	)
+
+	(polyline
+		(pts
+			(xy 865 624) (xy 865 446)
+		)
+		(stroke
+			(width 0.35)
+			(type default)
+		)
+		(uuid "8206580c-20d0-47f8-80db-f4cc70673cef")
+	)
+
+	(text "B12  HOSTIO"
+		(exclude_from_sim no)
+		(at 869 449 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "47311f91-2961-43d0-89e9-93ad6f54261e")
+	)
+
+	(text "Host connector, clock/reset, image and weight load ports\nthe only board with the external host interface"
+		(exclude_from_sim no)
+		(at 869 455 0)
+		(effects
+			(font
+				(size 1.05 1.05)
+			)
+			(justify left top)
+		)
+		(uuid "2bd5f3b7-3e57-4493-88af-7bdb2bdbefc2")
+	)
+
+	(text "59 external nets\n3 x 2x20P (78 pins)"
+		(exclude_from_sim no)
+		(at 999 454 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "9f3b5f3c-e433-4b5f-9403-ac7eb62575c9")
+	)
+
+	(sheet
+		(at 869 468)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5e5fe307-59ed-436e-9dc4-94e18584c454")
+		(property "Sheetname" "B12_S10_Top_IO"
+			(at 869 466.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "S10_Top_IO.kicad_sch"
+			(at 869 505.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "32")
+				)
+			)
+		)
+	)
+
+	(text "Host connector, clock/reset, image and weight load ports, LEDs"
+		(exclude_from_sim no)
+		(at 995 470 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "5ef761d9-ebc4-474f-bd89-c64c1a87cc42")
+	)
+
+	(sheet
+		(at 869 518)
+		(size 120 36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "aa69fc6c-65be-43c9-9fbb-8e4643b56007")
+		(property "Sheetname" "B12_Conn"
+			(at 869 516.73 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "B12_Conn.kicad_sch"
+			(at 869 555.27 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(page "33")
+				)
+			)
+		)
+	)
+
+	(text "HOSTIO backplane connector (2x20P, fixed power pinout)"
+		(exclude_from_sim no)
+		(at 995 520 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+			(justify left top)
+		)
+		(uuid "ecdc7dc5-3336-4296-8040-6b1a5615038c")
+	)
+
+	(text "Board table (sheets, backplane budget)"
+		(exclude_from_sim no)
+		(at 25 632 0)
+		(effects
+			(font
+				(size 1.4 1.4)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "5a24d0c8-238c-462f-937b-1d90d9a0073e")
+	)
+
+	(polyline
+		(pts
+			(xy 25 640) (xy 959 640)
+		)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(uuid "3fb12396-bc63-4a6d-920d-e17978d2c17c")
+	)
+
+	(polyline
+		(pts
+			(xy 959 640) (xy 959 755)
+		)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(uuid "a415b94e-5156-4f7f-9989-3be7779010dc")
+	)
+
+	(polyline
+		(pts
+			(xy 959 755) (xy 25 755)
+		)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(uuid "80843169-5cb2-4d0e-8485-0852ae3168f3")
+	)
+
+	(polyline
+		(pts
+			(xy 25 755) (xy 25 640)
+		)
+		(stroke
+			(width 0.3)
+			(type default)
+		)
+		(uuid "d7b81858-7a2a-4bb4-8336-9f49b6c92266")
+	)
+
+	(polyline
+		(pts
+			(xy 25 647) (xy 959 647)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "509fef33-1804-4472-af87-79b53c5fc4cb")
+	)
+
+	(polyline
+		(pts
+			(xy 25 656) (xy 959 656)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "f58bbae2-3560-4196-8ee9-e13c633e6574")
+	)
+
+	(polyline
+		(pts
+			(xy 25 665) (xy 959 665)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "c1f3b118-4cad-49c5-8573-75c64f41de15")
+	)
+
+	(polyline
+		(pts
+			(xy 25 674) (xy 959 674)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "50ff3517-4846-4f3f-9b43-684a39379c66")
+	)
+
+	(polyline
+		(pts
+			(xy 25 683) (xy 959 683)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "36a1b3a7-7c65-4d88-9298-2fda8ea5ddad")
+	)
+
+	(polyline
+		(pts
+			(xy 25 692) (xy 959 692)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "fcb6edca-6ace-492d-9470-7430ca297407")
+	)
+
+	(polyline
+		(pts
+			(xy 25 701) (xy 959 701)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "21194aaf-77d2-494a-ae5d-b36bf9ecf01b")
+	)
+
+	(polyline
+		(pts
+			(xy 25 710) (xy 959 710)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "913a9e60-ac25-4bfb-8fc8-ba28f85baca9")
+	)
+
+	(polyline
+		(pts
+			(xy 25 719) (xy 959 719)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "ebce0bdc-203c-47f8-93a0-8daf41909b8a")
+	)
+
+	(polyline
+		(pts
+			(xy 25 728) (xy 959 728)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "e94614a4-3c9b-4a05-b741-a9a046db785b")
+	)
+
+	(polyline
+		(pts
+			(xy 25 737) (xy 959 737)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "f280c4c8-c607-4bd8-b0a3-c21afe328186")
+	)
+
+	(polyline
+		(pts
+			(xy 25 746) (xy 959 746)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "bdb10a4b-8bcb-4297-8e9c-4ce5035092ca")
+	)
+
+	(polyline
+		(pts
+			(xy 63 640) (xy 63 755)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "31988027-a1b6-4706-9a81-cf475b5bcfde")
+	)
+
+	(polyline
+		(pts
+			(xy 129 640) (xy 129 755)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "48ef40f7-f824-4cb0-958d-a5b904542027")
+	)
+
+	(polyline
+		(pts
+			(xy 429 640) (xy 429 755)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "a9b54cf7-c15f-4a96-9338-4162d95113e7")
+	)
+
+	(polyline
+		(pts
+			(xy 859 640) (xy 859 755)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "d1267f09-d0a8-434e-aa22-f7e57fe8783d")
+	)
+
+	(polyline
+		(pts
+			(xy 909 640) (xy 909 755)
+		)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(uuid "550602ec-4359-4ad9-b473-70a83097ca43")
+	)
+
+	(text "Board"
+		(exclude_from_sim no)
+		(at 25.8 640.8 0)
+		(effects
+			(font
+				(size 0.95 0.95)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "78555a70-713a-475f-9dfe-feb05b8c0971")
+	)
+
+	(text "Slot"
+		(exclude_from_sim no)
+		(at 63.8 640.8 0)
+		(effects
+			(font
+				(size 0.95 0.95)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "2aba6bc9-6b13-4263-b37d-9f23e7b6af02")
+	)
+
+	(text "Function"
+		(exclude_from_sim no)
+		(at 129.8 640.8 0)
+		(effects
+			(font
+				(size 0.95 0.95)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "fc9a21af-1408-451b-8efc-8f42c0351673")
+	)
+
+	(text "Sheet files"
+		(exclude_from_sim no)
+		(at 429.8 640.8 0)
+		(effects
+			(font
+				(size 0.95 0.95)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "52f07d2d-753f-4b66-9993-25a0ae4831c3")
+	)
+
+	(text "Ext. nets"
+		(exclude_from_sim no)
+		(at 859.8 640.8 0)
+		(effects
+			(font
+				(size 0.95 0.95)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "b316e7f1-c75f-40f0-929e-15152c4876b0")
+	)
+
+	(text "Headers"
+		(exclude_from_sim no)
+		(at 909.8 640.8 0)
+		(effects
+			(font
+				(size 0.95 0.95)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "da60014b-2981-4224-a226-8b8e027dcd6e")
+	)
+
+	(text "B01"
+		(exclude_from_sim no)
+		(at 25.8 647.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "aa828bb7-8a5e-4257-9848-3b8ae8648b35")
+	)
+
+	(text "SUPERVISOR"
+		(exclude_from_sim no)
+		(at 63.8 647.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "1f5ad414-b520-4836-9c11-91db1a4597b3")
+	)
+
+	(text "Global supervisor FSM, microcode ROM, watchdog"
+		(exclude_from_sim no)
+		(at 129.8 647.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "bcf08f21-4960-4c32-afa8-1108be1aaebc")
+	)
+
+	(text "S01_Supervisor.kicad_sch"
+		(exclude_from_sim no)
+		(at 429.8 647.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "b8c7dca0-cab7-4fe6-9cfe-14e1de43a475")
+	)
+
+	(text "37"
+		(exclude_from_sim no)
+		(at 859.8 647.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "4b60a81a-2692-4bbb-bac3-166b644e3f1f")
+	)
+
+	(text "2"
+		(exclude_from_sim no)
+		(at 909.8 647.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "dc60a498-2d1d-49e7-a5cb-fbe612944c27")
+	)
+
+	(text "B02"
+		(exclude_from_sim no)
+		(at 25.8 656.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "d636e926-f3e8-48fb-ae73-b4aa5fe8a1b4")
+	)
+
+	(text "TIMING"
+		(exclude_from_sim no)
+		(at 63.8 656.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "90a98b2d-aba8-4df5-97c8-48cfb6e09e1c")
+	)
+
+	(text "Memory timing controller SETUP/WAIT/CAPTURE/HOLD/RELEASE"
+		(exclude_from_sim no)
+		(at 129.8 656.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "04d4caf3-cd73-42ae-83d2-08c440d940d4")
+	)
+
+	(text "S02_Timing.kicad_sch"
+		(exclude_from_sim no)
+		(at 429.8 656.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "0ae9f5b7-a734-44ce-b03d-e847079d448c")
+	)
+
+	(text "10"
+		(exclude_from_sim no)
+		(at 859.8 656.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "a44f665f-f324-4a5e-a5f7-fda2448abe6a")
+	)
+
+	(text "1"
+		(exclude_from_sim no)
+		(at 909.8 656.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "3f30fb8c-e163-44ec-8a9a-f5f35489be12")
+	)
+
+	(text "B03"
+		(exclude_from_sim no)
+		(at 25.8 665.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "80fdc729-5c03-45cd-89ed-2c513710cc89")
+	)
+
+	(text "MEMORY"
+		(exclude_from_sim no)
+		(at 63.8 665.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "1028cdff-7766-49de-a1c7-93a4c8c0a772")
+	)
+
+	(text "7x 6264 SRAM + 12x 28C256 + 8x 27C512 LUT/map storage"
+		(exclude_from_sim no)
+		(at 129.8 665.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "055d00b1-636e-4d30-b629-62e43b5c85b8")
+	)
+
+	(text "S04_Memories.kicad_sch"
+		(exclude_from_sim no)
+		(at 429.8 665.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "853872f9-3831-4844-9b33-e245192b978a")
+	)
+
+	(text "204"
+		(exclude_from_sim no)
+		(at 859.8 665.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "1236c59e-dee1-4f79-b204-3efe38932a96")
+	)
+
+	(text "8"
+		(exclude_from_sim no)
+		(at 909.8 665.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "ef4754d1-d68a-4b40-8071-1e75a7ad8f9e")
+	)
+
+	(text "B04"
+		(exclude_from_sim no)
+		(at 25.8 674.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "016fbcd8-01c9-403a-aff6-1c714b9bdd89")
+	)
+
+	(text "CONV1"
+		(exclude_from_sim no)
+		(at 63.8 674.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "339ebffb-d87b-4bba-8f9b-04e400753bb8")
+	)
+
+	(text "5x5x1 -> 8ch convolution engine + ACC>>8 requant"
+		(exclude_from_sim no)
+		(at 129.8 674.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "eefe4c1c-7363-4227-ac23-e0b34ea5398f")
+	)
+
+	(text "S07_Conv1.kicad_sch, S13_Requant_C1.kicad_sch"
+		(exclude_from_sim no)
+		(at 429.8 674.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "0112c8a6-4a6b-48b3-a862-e337034e566b")
+	)
+
+	(text "43"
+		(exclude_from_sim no)
+		(at 859.8 674.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "e4f523a1-b532-45fb-b4e8-2d2b8b17200b")
+	)
+
+	(text "2"
+		(exclude_from_sim no)
+		(at 909.8 674.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "d5813380-6266-4704-b856-ef07172488d2")
+	)
+
+	(text "B05"
+		(exclude_from_sim no)
+		(at 25.8 683.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "0c372305-56ec-4cc2-9d1d-7a98cdc3c1d3")
+	)
+
+	(text "POOL1"
+		(exclude_from_sim no)
+		(at 63.8 683.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "d1ad256d-efa6-4251-9bf4-bf79085b2578")
+	)
+
+	(text "2x2 stride-2 max pool 12x12x8 -> 6x6x8"
+		(exclude_from_sim no)
+		(at 129.8 683.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "b54e485f-b932-433a-b074-33f6c0fb4037")
+	)
+
+	(text "S05_Pool1.kicad_sch, S12A_PoolLatch1.kicad_sch"
+		(exclude_from_sim no)
+		(at 429.8 683.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "1d74fcea-4633-4ade-a3bd-74005d0c36f3")
+	)
+
+	(text "53"
+		(exclude_from_sim no)
+		(at 859.8 683.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "1b24d0eb-ade0-4a8f-a06b-bc4d09fb38be")
+	)
+
+	(text "3"
+		(exclude_from_sim no)
+		(at 909.8 683.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "acefb5de-1754-4d30-afe9-899f887562c3")
+	)
+
+	(text "B06"
+		(exclude_from_sim no)
+		(at 25.8 692.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "8d6c4ef6-0a1a-4728-a1d4-71c92ac607a9")
+	)
+
+	(text "CONV2"
+		(exclude_from_sim no)
+		(at 63.8 692.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "9e3b2be0-22a2-4f1b-9ce4-90c65c9cf120")
+	)
+
+	(text "3x3x8 -> 16ch convolution engine + ACC>>9 requant"
+		(exclude_from_sim no)
+		(at 129.8 692.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "90323aab-b0dc-4cc3-864c-11d6f6fff47b")
+	)
+
+	(text "S08_Conv2.kicad_sch, S15_Requant_C2.kicad_sch"
+		(exclude_from_sim no)
+		(at 429.8 692.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "f46c6475-634a-4eb5-b745-7ea4486b6cca")
+	)
+
+	(text "43"
+		(exclude_from_sim no)
+		(at 859.8 692.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "1fae92d9-10d9-4da7-ac77-eb35270706b6")
+	)
+
+	(text "2"
+		(exclude_from_sim no)
+		(at 909.8 692.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "c2a250e7-45c4-409b-9705-1cbd453d48fe")
+	)
+
+	(text "B07"
+		(exclude_from_sim no)
+		(at 25.8 701.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "c5f56d0f-1079-452f-b3dc-00bb0cc7dac2")
+	)
+
+	(text "POOL2"
+		(exclude_from_sim no)
+		(at 63.8 701.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "47c3d767-8a6e-4a84-bfa5-3f00b6dfd3fb")
+	)
+
+	(text "2x2 stride-2 max pool 10x10x16 -> 5x5x16"
+		(exclude_from_sim no)
+		(at 129.8 701.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "3307b0c5-cac1-43f8-accc-58a15766930b")
+	)
+
+	(text "S05_Pool2.kicad_sch, S12A_PoolLatch2.kicad_sch"
+		(exclude_from_sim no)
+		(at 429.8 701.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "c394d15b-2126-43f9-8c50-e9f7bf7ac49c")
+	)
+
+	(text "53"
+		(exclude_from_sim no)
+		(at 859.8 701.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "17e08d9f-3783-40fd-a9a5-2f4f748cf9f0")
+	)
+
+	(text "3"
+		(exclude_from_sim no)
+		(at 909.8 701.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "bd5669f3-d5ff-4a97-a1e0-affb5c13756b")
+	)
+
+	(text "B08"
+		(exclude_from_sim no)
+		(at 25.8 710.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "f11fe75c-e1de-4a86-b70c-25f696b27507")
+	)
+
+	(text "FC1"
+		(exclude_from_sim no)
+		(at 63.8 710.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "35da36fb-9af5-407a-be9a-034ea48f0f75")
+	)
+
+	(text "400 -> 32 fully connected + FC1 uint8 requant"
+		(exclude_from_sim no)
+		(at 129.8 710.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "704dfc1f-452b-4afc-bb3e-3aa75d9026cf")
+	)
+
+	(text "S09_FC1.kicad_sch, S17_FC1.kicad_sch"
+		(exclude_from_sim no)
+		(at 429.8 710.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "a16db659-a89b-4f7c-b38d-59cb0f1f6754")
+	)
+
+	(text "43"
+		(exclude_from_sim no)
+		(at 859.8 710.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "11c666c2-c780-4df8-8e11-a9aa60e5bf11")
+	)
+
+	(text "2"
+		(exclude_from_sim no)
+		(at 909.8 710.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "c6b282ba-95de-4a1f-bf67-cbbb368862ce")
+	)
+
+	(text "B09"
+		(exclude_from_sim no)
+		(at 25.8 719.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "f7ee5203-5ef4-4e5a-bc03-82de4223de02")
+	)
+
+	(text "FC2"
+		(exclude_from_sim no)
+		(at 63.8 719.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "7e47d030-0a56-4d68-8700-984f3385964c")
+	)
+
+	(text "32 -> 10 fully connected + FC2 raw signed32 requant"
+		(exclude_from_sim no)
+		(at 129.8 719.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "9161608b-16d8-4f5e-b338-ba3aac767455")
+	)
+
+	(text "S09_FC2.kicad_sch, S17_FC2.kicad_sch"
+		(exclude_from_sim no)
+		(at 429.8 719.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "0569e77f-0d85-4418-a9cf-ef74ef78b13c")
+	)
+
+	(text "44"
+		(exclude_from_sim no)
+		(at 859.8 719.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "1781ee57-dcaa-4109-9676-129ec8044e5c")
+	)
+
+	(text "2"
+		(exclude_from_sim no)
+		(at 909.8 719.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "487ca411-11dd-4bb9-b3b8-1417ed3a46ac")
+	)
+
+	(text "B10"
+		(exclude_from_sim no)
+		(at 25.8 728.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "35e8134a-a567-4d7e-a336-8f59b605a4b5")
+	)
+
+	(text "ARGMAX"
+		(exclude_from_sim no)
+		(at 63.8 728.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "5aaa2c3e-abdd-4e9e-84c3-fe6589324d79")
+	)
+
+	(text "10-way signed-32 argmax + 32-bit score staging"
+		(exclude_from_sim no)
+		(at 129.8 728.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "9a0db8f3-1ab6-478a-a9b3-ec2141816bb8")
+	)
+
+	(text "S06_Argmax.kicad_sch, S12B_ScoreLatch.kicad_sch"
+		(exclude_from_sim no)
+		(at 429.8 728.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "dd366099-0c66-4a2c-b998-03c11d7a75cd")
+	)
+
+	(text "26"
+		(exclude_from_sim no)
+		(at 859.8 728.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "83b7caf8-cc65-4fa1-8476-ac1d7d16a6d3")
+	)
+
+	(text "1"
+		(exclude_from_sim no)
+		(at 909.8 728.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "ecef8d40-4493-431b-883f-ae6dff604f01")
+	)
+
+	(text "B11"
+		(exclude_from_sim no)
+		(at 25.8 737.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "18f76e1b-3a12-4cf9-af2e-eb64e6694759")
+	)
+
+	(text "BUSFAB"
+		(exclude_from_sim no)
+		(at 63.8 737.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "148c3ef5-21e8-4a29-9746-50ea9ba72555")
+	)
+
+	(text "Master/region encode, map ROM, REQ/WE merge, engine merge"
+		(exclude_from_sim no)
+		(at 129.8 737.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "faf368f9-bef8-4117-adfb-6c6cffdd910c")
+	)
+
+	(text "S11_BusFabric.kicad_sch, S11A_EngineMerge.kicad_sch"
+		(exclude_from_sim no)
+		(at 429.8 737.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "0df90317-b4f8-44af-9be3-277c67249fdd")
+	)
+
+	(text "72"
+		(exclude_from_sim no)
+		(at 859.8 737.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "3ac89355-c791-4db9-bfc4-93db499608c5")
+	)
+
+	(text "3"
+		(exclude_from_sim no)
+		(at 909.8 737.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "6850f7a9-7b68-4815-8b8a-826d75a44af8")
+	)
+
+	(text "B12"
+		(exclude_from_sim no)
+		(at 25.8 746.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "12c6f1e9-8785-4590-9ad9-d0541bb54306")
+	)
+
+	(text "HOSTIO"
+		(exclude_from_sim no)
+		(at 63.8 746.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "60b0c33f-0f7d-44cc-aa3b-94aa2996d57d")
+	)
+
+	(text "Host connector, clock/reset, image and weight load ports"
+		(exclude_from_sim no)
+		(at 129.8 746.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "2c3fd578-9b59-4443-8265-22e7a024ea79")
+	)
+
+	(text "S10_Top_IO.kicad_sch"
+		(exclude_from_sim no)
+		(at 429.8 746.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "14307e85-40ee-4700-9159-9b87220e3cdb")
+	)
+
+	(text "59"
+		(exclude_from_sim no)
+		(at 859.8 746.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "823d8da7-4bfd-4541-b3da-68444ab47a8a")
+	)
+
+	(text "3"
+		(exclude_from_sim no)
+		(at 909.8 746.8 0)
+		(effects
+			(font
+				(size 0.85 0.85)
+			)
+			(justify left top)
+		)
+		(uuid "4c2638f6-c786-4fb4-a6d6-09bcced615c2")
+	)
+
+	(text "Backplane is passive: pins 1-4 +5V, 5-8 +3V3 (reserved), 9-14 GND, 15-40 signals on every header.\nPer-board pinout: output/backplane/ ; board manifest: output/boards/BOARD_MANIFEST.csv ; net matrix: output/boards/backplane_nets.csv.\nInternal board nets: C1/C2/FC1/FC2 ACC+REQ pairs, IN_DATA1/2 byte buses and SCORE_DATA[31:0] never reach the backplane."
+		(exclude_from_sim no)
+		(at 25 761 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left top)
+		)
+		(uuid "f8b3f0b3-69c1-416d-8d33-aa1e9c0ab79f")
+	)
+
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 25.4 800.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "12d0745c-23ca-4a14-bd17-8d71a1e5b7d6")
+		(property "Reference" "FLG1"
+			(at 25.4 787.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 25.4 796.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.4 800.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 800.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Hierarchy power flag +5V"
+			(at 25.4 800.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(reference "FLG1")
+					(unit 1)
+				)
+			)
+		)
+	)
+
+	(wire
+		(pts
+			(xy 25.4 800.1) (xy 38.1 800.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32427083-03e4-4694-8818-f6ad8389193a")
+	)
+
+	(global_label "+5V"
+		(shape bidirectional)
+		(at 38.1 800.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d149dd4f-cd83-46a3-aa3a-a193a43de474")
+	)
+
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 105.41 800.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ef3b3245-2970-453f-a838-000cfd1a9066")
+		(property "Reference" "FLG2"
+			(at 105.41 787.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 105.41 796.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 105.41 800.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 800.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Hierarchy power flag +3V3"
+			(at 105.41 800.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(reference "FLG2")
+					(unit 1)
+				)
+			)
+		)
+	)
+
+	(wire
+		(pts
+			(xy 105.41 800.1) (xy 118.11 800.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eaf0944e-fa53-46b6-872b-c37fbf412235")
+	)
+
+	(global_label "+3V3"
+		(shape bidirectional)
+		(at 118.11 800.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "73618ab8-2e0d-42d1-bcae-0a7287f0e027")
+	)
+
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 185.42 800.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9a1bd5f0-5ebf-4183-872b-67b972739bed")
+		(property "Reference" "FLG3"
+			(at 185.42 787.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 185.42 796.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 185.42 800.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 800.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Hierarchy power flag GND"
+			(at 185.42 800.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "CNN_74xx_System"
+				(path "/5f5c02ac-f0a4-427c-a39d-09a8f8fddbd0"
+					(reference "FLG3")
+					(unit 1)
+				)
+			)
+		)
+	)
+
+	(wire
+		(pts
+			(xy 185.42 800.1) (xy 198.12 800.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bea82dee-5561-418c-960e-0b9a3a2216f8")
+	)
+
+	(global_label "GND"
+		(shape bidirectional)
+		(at 198.12 800.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "67b6877d-4631-4bd3-b1d4-ba6200c1cff2")
+	)
+
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

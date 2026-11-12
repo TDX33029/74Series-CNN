@@ -1,0 +1,22 @@
+D:\Document\tempPrj\74Series-CNN\FPGA_CNN\eval_nonneg_v2.py:57: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  xt = torch.from_numpy(xtr).float().unsqueeze(1) / 255.0
+epoch  1/12  loss 0.8379  test acc 0.8250  (3s)
+epoch  2/12  loss 0.4731  test acc 0.8435  (3s)
+epoch  3/12  loss 0.4113  test acc 0.8740  (3s)
+epoch  4/12  loss 0.3590  test acc 0.8905  (3s)
+epoch  5/12  loss 0.3172  test acc 0.8955  (3s)
+epoch  6/12  loss 0.2840  test acc 0.8780  (3s)
+epoch  7/12  loss 0.2580  test acc 0.9025  (3s)
+epoch  8/12  loss 0.2349  test acc 0.9210  (3s)
+epoch  9/12  loss 0.2183  test acc 0.9170  (3s)
+epoch 10/12  loss 0.2034  test acc 0.9275  (2s)
+epoch 11/12  loss 0.1924  test acc 0.9290  (3s)
+epoch 12/12  loss 0.1874  test acc 0.9305  (3s)
+Traceback (most recent call last):
+  File "D:\Document\tempPrj\74Series-CNN\FPGA_CNN\eval_nonneg_v2.py", line 214, in <module>
+    raise SystemExit(main())
+  File "D:\Document\tempPrj\74Series-CNN\FPGA_CNN\eval_nonneg_v2.py", line 161, in main
+    pmat = im2col(a, k)
+  File "D:\Document\tempPrj\74Series-CNN\FPGA_CNN\eval_v2_quant.py", line 39, in im2col
+    n, ic, h, w = x.shape
+ValueError: not enough values to unpack (expected 4, got 3)

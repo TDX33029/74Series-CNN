@@ -1,0 +1,1570 @@
+Reading C:/intelFPGA/18.0/modelsim_ase/tcl/vsim/pref.tcl
+
+# 10.5b
+
+# vsim -c -voptargs="+acc" tb_numeric "+nvec=1" -do "run -all; quit -f" 
+# Start time: 20:27:52 on Nov 12,2026
+# Loading sv_std.std
+# Loading work.tb_numeric
+# Loading work.cnn74_top
+# Loading work.m_Memory_EPROM_27C512
+# Loading work.m_74xx_74HCT273
+# Loading work.m_74xx_74HCT574
+# Loading work.m_74xx_74HC238
+# Loading work.m_74xx_74HC157
+# Loading work.m_74xx_74HCT541
+# Loading work.m_74xx_74HC74
+# Loading work.m_74xx_74HC08
+# Loading work.m_74xx_74HC32
+# Loading work.m_74xx_74HC04
+# Loading work.m_74xx_74HC688
+# Loading work.m_74xx_74HC161
+# Loading work.m_74xx_74HC138
+# Loading work.m_Memory_RAM_HY6264AxP
+# Loading work.m_Memory_RAM_CY62256_70PC
+# Loading work.m_74xx_74HC245
+# Loading work.m_74xx_74HC85
+# Loading work.m_74xx_74HC283
+# Loading work.m_74xx_74HC02
+# Loading work.m_74xx_74HC00
+# Loading work.m_74xx_74HCT245
+# Loading work.m_74xx_74LS148
+# Loading work.m_Oscillator_ASE_xxxMHz
+# ** Warning: (vsim-3017) cnn74_top.v(3917): [TFMPC] - Too few port connections. Expected 18, found 15.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U1003 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3917): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3722) cnn74_top.v(3917): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(3917): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(3920): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U1006 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3920): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(3922): [TFMPC] - Too few port connections. Expected 18, found 17.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U1008 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3922): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3017) cnn74_top.v(3924): [TFMPC] - Too few port connections. Expected 18, found 14.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U1010 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3924): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(3924): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(3924): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3722) cnn74_top.v(3924): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(3925): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U1011 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3925): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(3925): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3017) cnn74_top.v(3926): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U1012 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3926): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(3926): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3017) cnn74_top.v(3927): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U1013 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3927): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(3927): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(3927): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(3929): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U1015 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3929): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(3929): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3017) cnn74_top.v(3937): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U1023 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3937): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(3942): [TFMPC] - Too few port connections. Expected 18, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U2002 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3942): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(3942): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(3942): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3722) cnn74_top.v(3942): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(3942): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(3944): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U2004 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3944): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3017) cnn74_top.v(3945): [TFMPC] - Too few port connections. Expected 18, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U2005 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3945): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(3945): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(3946): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U2006 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3946): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(3949): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U2009 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3949): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(3949): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3017) cnn74_top.v(3950): [TFMPC] - Too few port connections. Expected 12, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U2010 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3950): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(3950): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(3950): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(3950): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(3950): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(3950): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(3950): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(3950): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(3950): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(3951): [TFMPC] - Too few port connections. Expected 12, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U2011 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3951): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(3951): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(3951): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(3951): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(3951): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(3951): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(3951): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(3951): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(3971): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U4020 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3971): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3017) cnn74_top.v(3972): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U4021 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3972): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(3972): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(3972): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(3972): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3017) cnn74_top.v(3973): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U4022 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3973): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(3973): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(3973): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3722) cnn74_top.v(3973): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(3974): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U4023 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3974): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(3974): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(3974): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(3974): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3017) cnn74_top.v(3976): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U4025 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3976): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(3977): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U4026 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3977): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(3977): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3017) cnn74_top.v(3981): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U4030 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3981): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(3981): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3017) cnn74_top.v(3999): [TFMPC] - Too few port connections. Expected 12, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U4048 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(3999): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(3999): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(3999): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(3999): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(3999): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(3999): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(3999): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(3999): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(3999): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4007): [TFMPC] - Too few port connections. Expected 12, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U4056 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4007): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4007): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4007): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4007): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4007): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4007): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4007): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4007): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4007): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4008): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5001 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4008): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4009): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5002 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4009): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4010): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5003 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4010): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4011): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5004 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4011): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4011): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4011): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4020): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5013 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4020): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4020): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3017) cnn74_top.v(4024): [TFMPC] - Too few port connections. Expected 18, found 15.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5017 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4024): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3722) cnn74_top.v(4024): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(4024): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(4028): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5021 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4028): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4028): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4028): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4028): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4032): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5025 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4032): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4032): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4032): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4032): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4035): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5028 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4035): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4037): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5030 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4037): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4037): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4037): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4039): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5032 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4039): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3017) cnn74_top.v(4043): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5036 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4043): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3017) cnn74_top.v(4047): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5040 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4047): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4047): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4047): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4052): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5045 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4052): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4053): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5101 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4053): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4054): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5102 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4054): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4055): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5103 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4055): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4056): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5104 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4056): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4056): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4056): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4065): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5113 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4065): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4065): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3017) cnn74_top.v(4069): [TFMPC] - Too few port connections. Expected 18, found 15.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5117 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4069): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3722) cnn74_top.v(4069): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(4069): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(4073): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5121 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4073): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4073): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4073): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4073): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4077): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5125 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4077): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4077): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4077): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4077): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4080): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5128 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4080): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4082): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5130 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4082): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4082): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4082): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4084): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5132 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4084): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3017) cnn74_top.v(4088): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5136 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4088): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3017) cnn74_top.v(4092): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5140 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4092): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4092): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4092): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4097): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U5145 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4097): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4098): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U6001 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4098): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4109): [TFMPC] - Too few port connections. Expected 18, found 14.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U6012 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4109): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4109): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4109): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3722) cnn74_top.v(4109): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4118): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U6021 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4118): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4118): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3017) cnn74_top.v(4127): [TFMPC] - Too few port connections. Expected 18, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U6030 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4127): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(4127): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(4128): [TFMPC] - Too few port connections. Expected 18, found 14.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U6031 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4128): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4128): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3722) cnn74_top.v(4128): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(4128): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(4129): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U6032 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4129): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4129): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3017) cnn74_top.v(4132): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U6035 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4132): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3017) cnn74_top.v(4136): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U6039 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4136): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4136): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4136): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4140): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U6043 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4140): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4140): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3017) cnn74_top.v(4141): [TFMPC] - Too few port connections. Expected 12, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U6044 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4141): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4141): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4141): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4141): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4141): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4142): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U6045 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4142): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4142): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4142): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3017) cnn74_top.v(4143): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7001 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4143): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4143): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4146): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7004 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4146): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4146): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4146): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4146): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4149): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7007 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4149): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4149): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4149): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4149): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4151): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7009 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4151): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4151): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4153): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7011 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4153): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4153): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4157): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7015 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4157): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4157): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4157): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4159): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7017 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4159): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4159): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4159): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4159): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4162): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7021 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4162): [TFMPC] - Missing connection for port 'p3'.
+# ** Warning: (vsim-3722) cnn74_top.v(4162): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3017) cnn74_top.v(4166): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7025 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4166): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4166): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4166): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4166): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4168): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7027 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4168): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4168): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4168): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4168): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4171): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7030 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4171): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4171): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4171): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4174): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7033 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4174): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4174): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4174): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4176): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7035 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4176): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4176): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4176): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4176): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4178): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7037 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4178): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4180): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7039 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4180): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4180): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4180): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4180): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4182): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7041 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4182): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4184): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7043 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4184): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4186): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7045 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4186): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4186): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4186): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4244): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7097 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4244): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4244): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4244): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4249): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7102 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4249): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4249): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4257): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7110 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4257): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4277): [TFMPC] - Too few port connections. Expected 18, found 15.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7134 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4277): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3722) cnn74_top.v(4277): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(4277): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(4278): [TFMPC] - Too few port connections. Expected 18, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7135 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4278): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3722) cnn74_top.v(4278): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(4278): [TFMPC] - Missing connection for port 'p17'.
+# ** Warning: (vsim-3722) cnn74_top.v(4278): [TFMPC] - Missing connection for port 'p18'.
+# ** Warning: (vsim-3722) cnn74_top.v(4278): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(4279): [TFMPC] - Too few port connections. Expected 18, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7136 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4279): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4279): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4280): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7137 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4280): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4280): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4280): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3017) cnn74_top.v(4281): [TFMPC] - Too few port connections. Expected 14, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7138 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4281): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4281): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4281): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4281): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4281): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4281): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4281): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3017) cnn74_top.v(4283): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7140 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4283): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4283): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4283): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4285): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7142 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4285): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4285): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4285): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4286): [TFMPC] - Too few port connections. Expected 12, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7143 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4286): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4286): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4286): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4286): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4286): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4286): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4287): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7144 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4287): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4287): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4287): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4288): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7145 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4288): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4288): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4291): [TFMPC] - Too few port connections. Expected 18, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7148 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4291): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4291): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4292): [TFMPC] - Too few port connections. Expected 12, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7155 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4292): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4292): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4292): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4292): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4294): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U7157 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4294): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4294): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4294): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4295): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8001 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4295): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4297): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8003 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4297): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4299): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8005 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4299): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4301): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8007 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4301): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4301): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4303): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8009 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4303): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4303): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4303): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4305): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8011 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4305): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4305): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4305): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4308): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8014 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4308): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4308): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4315): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8021 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4315): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4316): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8022 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4316): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4318): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8024 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4318): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4320): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8026 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4320): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4320): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4320): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4323): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8029 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4323): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4323): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3017) cnn74_top.v(4326): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8032 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4326): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4326): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3017) cnn74_top.v(4328): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8034 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4328): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4329): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8035 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4329): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4329): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3017) cnn74_top.v(4330): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8036 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4330): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4333): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8039 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4333): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4333): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3017) cnn74_top.v(4336): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8042 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4336): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4336): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3017) cnn74_top.v(4339): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8045 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4339): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4339): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4339): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4339): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4342): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8048 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4342): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4342): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4342): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4342): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4345): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8051 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4345): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4345): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3017) cnn74_top.v(4398): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8098 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4398): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4398): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4398): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4403): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8103 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4403): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4403): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4411): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8111 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4411): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4430): [TFMPC] - Too few port connections. Expected 18, found 15.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8134 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4430): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3722) cnn74_top.v(4430): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(4430): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(4431): [TFMPC] - Too few port connections. Expected 18, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8135 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4431): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3722) cnn74_top.v(4431): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(4431): [TFMPC] - Missing connection for port 'p17'.
+# ** Warning: (vsim-3722) cnn74_top.v(4431): [TFMPC] - Missing connection for port 'p18'.
+# ** Warning: (vsim-3722) cnn74_top.v(4431): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(4432): [TFMPC] - Too few port connections. Expected 18, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8136 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4432): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4432): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4433): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8137 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4433): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4433): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4433): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3017) cnn74_top.v(4434): [TFMPC] - Too few port connections. Expected 14, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8138 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4434): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4434): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4434): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4434): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4434): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4434): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4434): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3017) cnn74_top.v(4437): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8141 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4437): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4437): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4437): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4438): [TFMPC] - Too few port connections. Expected 12, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8142 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4438): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4438): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4438): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4438): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4438): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4438): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4438): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4438): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4438): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4439): [TFMPC] - Too few port connections. Expected 12, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8143 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4439): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4439): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4439): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4439): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4439): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4439): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4440): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8144 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4440): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4440): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4440): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4441): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8145 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4441): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4441): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4444): [TFMPC] - Too few port connections. Expected 18, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8148 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4444): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4444): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4446): [TFMPC] - Too few port connections. Expected 12, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U8156 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4446): [TFMPC] - Missing connection for port 'p3'.
+# ** Warning: (vsim-3722) cnn74_top.v(4446): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4446): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4446): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4446): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4446): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4446): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4446): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4446): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4446): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4448): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9002 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4448): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4448): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4448): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4448): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4451): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9005 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4451): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4451): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4451): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4454): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9008 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4454): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4454): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4454): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4454): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4457): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9011 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4457): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4457): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4457): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4458): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9012 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4458): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4458): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4458): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4466): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9020 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4466): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4466): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4466): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4470): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9024 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4470): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4470): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4470): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4474): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9028 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4474): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4474): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4478): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9032 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4478): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4478): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4478): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4480): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9034 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4480): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4480): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3017) cnn74_top.v(4482): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9036 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4482): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4535): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9083 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4535): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4535): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4535): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4540): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9088 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4540): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4540): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4548): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9096 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4548): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4565): [TFMPC] - Too few port connections. Expected 12, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9117 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4565): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4565): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4565): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4565): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4565): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4565): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4568): [TFMPC] - Too few port connections. Expected 18, found 15.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9120 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4568): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3722) cnn74_top.v(4568): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(4568): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(4569): [TFMPC] - Too few port connections. Expected 18, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9121 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4569): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3722) cnn74_top.v(4569): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(4569): [TFMPC] - Missing connection for port 'p17'.
+# ** Warning: (vsim-3722) cnn74_top.v(4569): [TFMPC] - Missing connection for port 'p18'.
+# ** Warning: (vsim-3722) cnn74_top.v(4569): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(4570): [TFMPC] - Too few port connections. Expected 18, found 15.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9122 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4570): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4570): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4570): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3017) cnn74_top.v(4571): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9123 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4571): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4571): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4571): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3017) cnn74_top.v(4572): [TFMPC] - Too few port connections. Expected 14, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9124 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4572): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4572): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4572): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4572): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4572): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4572): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3017) cnn74_top.v(4575): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9127 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4575): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4575): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4575): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4576): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9128 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4576): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4576): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4576): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4578): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9130 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4578): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4578): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4578): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4579): [TFMPC] - Too few port connections. Expected 12, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9131 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4579): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4579): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4579): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4579): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4579): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4579): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4580): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9132 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4580): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4580): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4583): [TFMPC] - Too few port connections. Expected 18, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9135 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4583): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4583): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4585): [TFMPC] - Too few port connections. Expected 12, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9143 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4585): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4585): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4585): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4585): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4585): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4585): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4587): [TFMPC] - Too few port connections. Expected 12, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9145 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4587): [TFMPC] - Missing connection for port 'p3'.
+# ** Warning: (vsim-3722) cnn74_top.v(4587): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4587): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4587): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4587): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4587): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4587): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4587): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4587): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4587): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4589): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9202 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4589): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4589): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4589): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4589): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4592): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9205 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4592): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4592): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4592): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4595): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9208 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4595): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4595): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4595): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4595): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4598): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9211 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4598): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4598): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4598): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4599): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9212 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4599): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4599): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4599): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4607): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9220 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4607): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4607): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4607): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4611): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9224 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4611): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4611): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4611): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4615): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9228 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4615): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4615): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4619): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9232 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4619): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4619): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4619): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4621): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9234 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4621): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4621): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3017) cnn74_top.v(4623): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9236 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4623): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4676): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9283 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4676): [TFMPC] - Missing connection for port 'p1'.
+# ** Warning: (vsim-3722) cnn74_top.v(4676): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4676): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4681): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9288 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4681): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4681): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4689): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9296 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4689): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4706): [TFMPC] - Too few port connections. Expected 12, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9317 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4706): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4706): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4706): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4706): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4706): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4706): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4709): [TFMPC] - Too few port connections. Expected 18, found 15.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9320 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4709): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3722) cnn74_top.v(4709): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(4709): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(4710): [TFMPC] - Too few port connections. Expected 18, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9321 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4710): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3722) cnn74_top.v(4710): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3722) cnn74_top.v(4710): [TFMPC] - Missing connection for port 'p17'.
+# ** Warning: (vsim-3722) cnn74_top.v(4710): [TFMPC] - Missing connection for port 'p18'.
+# ** Warning: (vsim-3722) cnn74_top.v(4710): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(4711): [TFMPC] - Too few port connections. Expected 18, found 15.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9322 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4711): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4711): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4711): [TFMPC] - Missing connection for port 'p16'.
+# ** Warning: (vsim-3017) cnn74_top.v(4712): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9323 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4712): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4712): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3722) cnn74_top.v(4712): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3017) cnn74_top.v(4713): [TFMPC] - Too few port connections. Expected 14, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9324 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4713): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4713): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4713): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4713): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4713): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4713): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3017) cnn74_top.v(4716): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9327 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4716): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4716): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4716): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4717): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9328 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4717): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4717): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4717): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4719): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9330 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4719): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4719): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4719): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4720): [TFMPC] - Too few port connections. Expected 12, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9331 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4720): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4720): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4720): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4720): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4720): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4720): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4721): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9332 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4721): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4721): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3017) cnn74_top.v(4724): [TFMPC] - Too few port connections. Expected 18, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9335 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4724): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4724): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4726): [TFMPC] - Too few port connections. Expected 12, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9343 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4726): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4726): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4726): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4726): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4726): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4726): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4728): [TFMPC] - Too few port connections. Expected 12, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U9345 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4728): [TFMPC] - Missing connection for port 'p3'.
+# ** Warning: (vsim-3722) cnn74_top.v(4728): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4728): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4728): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4728): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4728): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4728): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4728): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4728): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4728): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4729): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U10001 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4729): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4729): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4730): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U10002 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4730): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4730): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3017) cnn74_top.v(4735): [TFMPC] - Too few port connections. Expected 18, found 17.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U10007 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4735): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3017) cnn74_top.v(4737): [TFMPC] - Too few port connections. Expected 18, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U10009 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4737): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4737): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4738): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U12001 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4738): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4738): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3722) cnn74_top.v(4738): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4739): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U12002 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4739): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4739): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3722) cnn74_top.v(4739): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4740): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U12003 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4740): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4740): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3722) cnn74_top.v(4740): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4741): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U12004 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4741): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4741): [TFMPC] - Missing connection for port 'p14'.
+# ** Warning: (vsim-3722) cnn74_top.v(4741): [TFMPC] - Missing connection for port 'p15'.
+# ** Warning: (vsim-3017) cnn74_top.v(4742): [TFMPC] - Too few port connections. Expected 26, found 23.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U12005 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4742): [TFMPC] - Missing connection for port 'p17'.
+# ** Warning: (vsim-3722) cnn74_top.v(4742): [TFMPC] - Missing connection for port 'p18'.
+# ** Warning: (vsim-3722) cnn74_top.v(4742): [TFMPC] - Missing connection for port 'p19'.
+# ** Warning: (vsim-3017) cnn74_top.v(4743): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U12006 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4743): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4744): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U12007 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4744): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4746): [TFMPC] - Too few port connections. Expected 18, found 15.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U12009 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4746): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4746): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4746): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4749): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U12012 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4749): [TFMPC] - Missing connection for port 'p3'.
+# ** Warning: (vsim-3017) cnn74_top.v(4750): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U12013 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4750): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4751): [TFMPC] - Too few port connections. Expected 12, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U12014 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4751): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4751): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4751): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4751): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4751): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4751): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4751): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4751): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4751): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4754): [TFMPC] - Too few port connections. Expected 14, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U12503 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4754): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4754): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4754): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4756): [TFMPC] - Too few port connections. Expected 14, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U12505 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4756): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4756): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3017) cnn74_top.v(4763): [TFMPC] - Too few port connections. Expected 14, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U13205 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4763): [TFMPC] - Missing connection for port 'p7'.
+# ** Warning: (vsim-3722) cnn74_top.v(4763): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4763): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4763): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3017) cnn74_top.v(4768): [TFMPC] - Too few port connections. Expected 12, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U14005 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4768): [TFMPC] - Missing connection for port 'p3'.
+# ** Warning: (vsim-3722) cnn74_top.v(4768): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4768): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4768): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4768): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4768): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4768): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4768): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4768): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4768): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4769): [TFMPC] - Too few port connections. Expected 12, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U14006 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4769): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4769): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4769): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4769): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4769): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4769): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4769): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4769): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4769): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4775): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U14012 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4775): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4775): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3017) cnn74_top.v(4776): [TFMPC] - Too few port connections. Expected 12, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U14013 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4776): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4776): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4776): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4776): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4776): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4776): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4776): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4776): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4776): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4781): [TFMPC] - Too few port connections. Expected 12, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U15005 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4781): [TFMPC] - Missing connection for port 'p3'.
+# ** Warning: (vsim-3722) cnn74_top.v(4781): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4781): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4781): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4781): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4781): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4781): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4781): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4781): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4781): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4782): [TFMPC] - Too few port connections. Expected 12, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U15006 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4782): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4782): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4782): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4782): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4782): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4782): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4782): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4782): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4782): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4788): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U15012 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4788): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4788): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3017) cnn74_top.v(4793): [TFMPC] - Too few port connections. Expected 12, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U16005 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4793): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4793): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4793): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4793): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4793): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4793): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4793): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4793): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4794): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U16006 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4794): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4794): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4794): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4808): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U16020 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4808): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4808): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3017) cnn74_top.v(4809): [TFMPC] - Too few port connections. Expected 12, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U16021 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4809): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4809): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4809): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4809): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4809): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4809): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4809): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4809): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4809): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4814): [TFMPC] - Too few port connections. Expected 12, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U16205 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4814): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4814): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4814): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4814): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4814): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4814): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4814): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4814): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4815): [TFMPC] - Too few port connections. Expected 12, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U16206 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4815): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4815): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4815): [TFMPC] - Missing connection for port 'p13'.
+# ** Warning: (vsim-3017) cnn74_top.v(4829): [TFMPC] - Too few port connections. Expected 12, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U16220 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4829): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4829): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3017) cnn74_top.v(4830): [TFMPC] - Too few port connections. Expected 12, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_numeric/dut/U16221 File: models.v
+# ** Warning: (vsim-3722) cnn74_top.v(4830): [TFMPC] - Missing connection for port 'p4'.
+# ** Warning: (vsim-3722) cnn74_top.v(4830): [TFMPC] - Missing connection for port 'p5'.
+# ** Warning: (vsim-3722) cnn74_top.v(4830): [TFMPC] - Missing connection for port 'p6'.
+# ** Warning: (vsim-3722) cnn74_top.v(4830): [TFMPC] - Missing connection for port 'p8'.
+# ** Warning: (vsim-3722) cnn74_top.v(4830): [TFMPC] - Missing connection for port 'p9'.
+# ** Warning: (vsim-3722) cnn74_top.v(4830): [TFMPC] - Missing connection for port 'p10'.
+# ** Warning: (vsim-3722) cnn74_top.v(4830): [TFMPC] - Missing connection for port 'p11'.
+# ** Warning: (vsim-3722) cnn74_top.v(4830): [TFMPC] - Missing connection for port 'p12'.
+# ** Warning: (vsim-3722) cnn74_top.v(4830): [TFMPC] - Missing connection for port 'p13'.
+# run -all
+#   [RP] t=0 RESET_RAW=0 RESET_N=0 CLR_N=0 MRN=0 q=xxxxxxxx
+#   [0] ERROR=1 code=0001
+#   [0] C1_DONE
+#   [0] C2_DONE
+#   [0] FC2_DONE
+#   [0] FC1_DONE
+#   [RP] t=125000 RESET_RAW=0 RESET_N=0 CLR_N=0 MRN=0 q=00000000
+#   [RP] t=250000 RESET_RAW=0 RESET_N=0 CLR_N=0 MRN=0 q=00000000
+#   [RP] t=375000 RESET_RAW=0 RESET_N=0 CLR_N=0 MRN=0 q=00000000
+#   [RP] t=500000 RESET_RAW=0 RESET_N=0 CLR_N=0 MRN=0 q=00000000
+#   [RP] t=625000 RESET_RAW=0 RESET_N=0 CLR_N=0 MRN=0 q=00000000
+#   loaded 200 bytes -> MEM_SEL=8
+# ** Warning: (vsim-PLI-3406) Too many digits (8) in data on line 1 of file "../../weights/x28s/conv1_bias.hex". (Max is 2.)    : tb_numeric.v(937)
+#    Time: 305375 ns  Iteration: 1  Instance: /tb_numeric
+#   loaded 32 bytes -> MEM_SEL=12
+#   loaded 128 bytes -> MEM_SEL=16
+#   loaded 1152 bytes -> MEM_SEL=9
+# ** Warning: (vsim-PLI-3406) Too many digits (8) in data on line 1 of file "../../weights/x28s/conv2_bias.hex". (Max is 2.)    : tb_numeric.v(943)
+#    Time: 2273375 ns  Iteration: 1  Instance: /tb_numeric
+#   loaded 64 bytes -> MEM_SEL=13
+#   loaded 256 bytes -> MEM_SEL=17
+#   loaded 12800 bytes -> MEM_SEL=10
+# ** Warning: (vsim-PLI-3406) Too many digits (8) in data on line 1 of file "../../weights/x28s/fc1_bias.hex". (Max is 2.)    : tb_numeric.v(949)
+#    Time: 21953375 ns  Iteration: 1  Instance: /tb_numeric
+#   loaded 128 bytes -> MEM_SEL=14
+#   loaded 512 bytes -> MEM_SEL=18
+#   loaded 320 bytes -> MEM_SEL=11
+# ** Warning: (vsim-PLI-3406) Too many digits (8) in data on line 1 of file "../../weights/x28s/fc2_bias.hex". (Max is 2.)    : tb_numeric.v(956)
+#    Time: 23393375 ns  Iteration: 1  Instance: /tb_numeric
+#   loaded 40 bytes -> MEM_SEL=15
+#   loaded 160 bytes -> MEM_SEL=19
+# === model loaded (23693875000), starting 1 vectors ===
+# === vector 0 ===
+#   [AD] n=0 t=24879250000 ADDR=0000 SEL=00000 DATA=00 OX=00000 OY=00000 ADD_SEL=00
+#        MX2=00000000 INA=00000000 WA=00000000
+#        SX=00000 SY28=00000 KY=000 KX=000
+#   [MS] n=0 t=24880875000 KX=000 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MD] n=0 A_LAT=00 B_LAT=23 A0=00 B0=23 A1=00 B1=00
+#   [AE] n=1 t=24880875000 ACC_EN=1 LANE=00 q=0000 PE_N=1 CLR_N=1 ACC_LD=0 PSUM=0000
+#   [AD] n=1 t=24882000000 ADDR=0001 SEL=00000 DATA=00 OX=00000 OY=00000 ADD_SEL=00
+#        MX2=00000001 INA=00000001 WA=00000001
+#        SX=00001 SY28=00000 KY=000 KX=001
+#   [MS] n=1 t=24883625000 KX=001 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MD] n=1 A_LAT=00 B_LAT=e5 A0=00 B0=e5 A1=00 B1=23
+#   [AE] n=2 t=24883625000 ACC_EN=1 LANE=01 q=0001 PE_N=1 CLR_N=1 ACC_LD=0 PSUM=0000
+#   [AD] n=2 t=24884750000 ADDR=0002 SEL=00000 DATA=00 OX=00000 OY=00000 ADD_SEL=00
+#        MX2=00000010 INA=00000010 WA=00000010
+#        SX=00010 SY28=00000 KY=000 KX=010
+#   [MS] n=2 t=24886375000 KX=010 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MD] n=2 A_LAT=00 B_LAT=c6 A0=00 B0=c6 A1=00 B1=e5
+#   [AE] n=3 t=24886375000 ACC_EN=1 LANE=10 q=0010 PE_N=1 CLR_N=1 ACC_LD=0 PSUM=0000
+#   [MT] t=24886375000 ST=00111 q=0010 CLR_N=1 PE_N=1 ACC_EN=1
+#   [MT] t=24886500000 ST=00010 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24886625000 ST=00011 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24886750000 ST=00011 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24886875000 ST=00011 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24887000000 ST=00011 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24887125000 ST=00011 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24887250000 ST=00011 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24887375000 ST=00011 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24887500000 ST=00011 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [AD] n=3 t=24887500000 ADDR=0003 SEL=00000 DATA=00 OX=00000 OY=00000 ADD_SEL=00
+#        MX2=00000011 INA=00000011 WA=00000011
+#        SX=00011 SY28=00000 KY=000 KX=011
+#   [MT] t=24887625000 ST=00011 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24887750000 ST=00100 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24887875000 ST=00101 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24888000000 ST=00101 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24888125000 ST=00101 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24888250000 ST=00101 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24888375000 ST=00101 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24888500000 ST=00101 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24888625000 ST=00101 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24888750000 ST=00101 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24888875000 ST=00101 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24889000000 ST=00110 q=0011 CLR_N=1 PE_N=1 ACC_EN=0
+#   [AL] n=1 t=24889125000 PSUM=0000 P1=0000 P2=0000 P3=0000 P4=0000 ACC=00000000 LANE=11
+#   [MS] n=3 t=24889125000 KX=011 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MD] n=3 A_LAT=00 B_LAT=c7 A0=00 B0=c7 A1=00 B1=c6
+#   [AE] n=4 t=24889125000 ACC_EN=1 LANE=11 q=0011 PE_N=0 CLR_N=1 ACC_LD=1 PSUM=0000
+#   [MT] t=24889125000 ST=00111 q=0011 CLR_N=1 PE_N=0 ACC_EN=1
+#   [MT] t=24889250000 ST=00010 q=0000 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24889375000 ST=00011 q=0000 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24889500000 ST=00011 q=0000 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24889625000 ST=00011 q=0000 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24889750000 ST=00011 q=0000 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24889875000 ST=00011 q=0000 CLR_N=1 PE_N=1 ACC_EN=0
+#   [MT] t=24890000000 ST=00011 q=0000 CLR_N=1 PE_N=1 ACC_EN=0
+#   [AD] n=4 t=24890250000 ADDR=0004 SEL=00000 DATA=00 OX=00000 OY=00000 ADD_SEL=00
+#        MX2=00000100 INA=00000100 WA=00000100
+#        SX=00100 SY28=00000 KY=000 KX=100
+#   [MS] n=4 t=24891875000 KX=100 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=0 KYPE_N=1
+#   [MD] n=4 A_LAT=00 B_LAT=ac A0=00 B0=ac A1=00 B1=c7
+#   [AE] n=5 t=24891875000 ACC_EN=1 LANE=00 q=0000 PE_N=1 CLR_N=1 ACC_LD=0 PSUM=0000
+#   [AD] n=5 t=24893000000 ADDR=001c SEL=00000 DATA=00 OX=00000 OY=00000 ADD_SEL=00
+#        MX2=00011100 INA=00011100 WA=00000101
+#        SX=00000 SY28=11100 KY=001 KX=000
+#   [MS] n=5 t=24894625000 KX=000 KY=001 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MD] n=5 A_LAT=00 B_LAT=41 A0=00 B0=41 A1=00 B1=ac
+#   [AE] n=6 t=24894625000 ACC_EN=1 LANE=01 q=0001 PE_N=1 CLR_N=1 ACC_LD=0 PSUM=0000
+#   [AD] n=6 t=24895750000 ADDR=001d SEL=00000 DATA=00 OX=00000 OY=00000 ADD_SEL=00
+#        MX2=00011101 INA=00011101 WA=00000110
+#        SX=00001 SY28=11100 KY=001 KX=001
+#   [MS] n=6 t=24897375000 KX=001 KY=001 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MD] n=6 A_LAT=00 B_LAT=35 A0=00 B0=35 A1=00 B1=41
+#   [AE] n=7 t=24897375000 ACC_EN=1 LANE=10 q=0010 PE_N=1 CLR_N=1 ACC_LD=0 PSUM=0000
+#   [AD] n=7 t=24898500000 ADDR=001e SEL=00000 DATA=00 OX=00000 OY=00000 ADD_SEL=00
+#        MX2=00011110 INA=00011110 WA=00000111
+#        SX=00010 SY28=11100 KY=001 KX=010
+#   [AL] n=2 t=24900125000 PSUM=0000 P1=0000 P2=0000 P3=0000 P4=0000 ACC=00000000 LANE=11
+#   [MS] n=7 t=24900125000 KX=010 KY=001 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MD] n=7 A_LAT=00 B_LAT=46 A0=00 B0=46 A1=00 B1=35
+#   [AE] n=8 t=24900125000 ACC_EN=1 LANE=11 q=0011 PE_N=0 CLR_N=1 ACC_LD=1 PSUM=0000
+#   [AD] n=8 t=24901250000 ADDR=001f SEL=00000 DATA=00 OX=00000 OY=00000 ADD_SEL=00
+#        MX2=00011111 INA=00011111 WA=00001000
+#        SX=00011 SY28=11100 KY=001 KX=011
+#   [MS] n=8 t=24902875000 KX=011 KY=001 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [AE] n=9 t=24902875000 ACC_EN=1 LANE=00 q=0000 PE_N=1 CLR_N=1 ACC_LD=0 PSUM=0000
+#   [AD] n=9 t=24904000000 ADDR=0020 SEL=00000 DATA=00 OX=00000 OY=00000 ADD_SEL=00
+#        MX2=00100000 INA=00100000 WA=00001001
+#        SX=00100 SY28=11100 KY=001 KX=100
+#   [MS] n=9 t=24905625000 KX=100 KY=001 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=0 KYPE_N=1
+#   [AE] n=10 t=24905625000 ACC_EN=1 LANE=01 q=0001 PE_N=1 CLR_N=1 ACC_LD=0 PSUM=0000
+#   [AD] n=10 t=24906750000 ADDR=0038 SEL=00000 DATA=00 OX=00000 OY=00000 ADD_SEL=00
+#        MX2=00111000 INA=00111000 WA=00001010
+#        SX=00000 SY28=11000 KY=010 KX=000
+#   [MS] n=10 t=24908375000 KX=000 KY=010 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [AD] n=11 t=24909500000 ADDR=0039 SEL=00000 DATA=00 OX=00000 OY=00000 ADD_SEL=00
+#        MX2=00111001 INA=00111001 WA=00001011
+#        SX=00001 SY28=11000 KY=010 KX=001
+#   [AL] n=3 t=24911125000 PSUM=0000 P1=0000 P2=0000 P3=0000 P4=0000 ACC=00000000 LANE=11
+#   [MS] n=11 t=24911125000 KX=001 KY=010 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=12 t=24913875000 KX=010 KY=010 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=13 t=24916625000 KX=011 KY=010 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=14 t=24919375000 KX=100 KY=010 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=0 KYPE_N=1
+#   [MS] n=15 t=24922125000 KX=000 KY=011 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=16 t=24924875000 KX=001 KY=011 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=17 t=24927625000 KX=010 KY=011 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=18 t=24930375000 KX=011 KY=011 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=19 t=24933125000 KX=100 KY=011 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=0 KYPE_N=1
+#   [MS] n=20 t=24935875000 KX=000 KY=100 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=21 t=24938625000 KX=001 KY=100 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=22 t=24941375000 KX=010 KY=100 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=23 t=24944125000 KX=011 KY=100 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=24 t=24946875000 KX=100 KY=100 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=0 KYPE_N=0
+#   [MS] n=25 t=24949625000 KX=000 KY=000 PAD_A=1 PAD_LAST=0 PT_LAST=0 PAD0=1 PAD1=0 KXPE_N=0 KYPE_N=0
+#   [MS] n=26 t=24952375000 KX=000 KY=000 PAD_A=1 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=1 KXPE_N=0 KYPE_N=0
+#   [MS] n=27 t=24955125000 KX=000 KY=000 PAD_A=1 PAD_LAST=1 PT_LAST=1 PAD0=1 PAD1=1 KXPE_N=0 KYPE_N=0
+#   [C1W] n=1 t=24956000000 ACC=00000000 QVAL=00 Q=00 OUT=00 DBUS=00
+#   [MS] n=28 t=24959500000 KX=000 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=29 t=24962250000 KX=001 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=30 t=24965000000 KX=010 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=31 t=24967750000 KX=011 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=32 t=24970500000 KX=100 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=0 KYPE_N=1
+#   [MS] n=33 t=24973250000 KX=000 KY=001 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=34 t=24976000000 KX=001 KY=001 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=35 t=24978750000 KX=010 KY=001 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=36 t=24981500000 KX=011 KY=001 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=37 t=24984250000 KX=100 KY=001 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=0 KYPE_N=1
+#   [MS] n=38 t=24987000000 KX=000 KY=010 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=39 t=24989750000 KX=001 KY=010 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=40 t=24992500000 KX=010 KY=010 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=41 t=24995250000 KX=011 KY=010 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=42 t=24998000000 KX=100 KY=010 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=0 KYPE_N=1
+#   [MS] n=43 t=25000750000 KX=000 KY=011 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=44 t=25003500000 KX=001 KY=011 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=45 t=25006250000 KX=010 KY=011 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=46 t=25009000000 KX=011 KY=011 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=47 t=25011750000 KX=100 KY=011 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=0 KYPE_N=1
+#   [MS] n=48 t=25014500000 KX=000 KY=100 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=49 t=25017250000 KX=001 KY=100 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=50 t=25020000000 KX=010 KY=100 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=51 t=25022750000 KX=011 KY=100 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=52 t=25025500000 KX=100 KY=100 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=0 KYPE_N=0
+#   [MS] n=53 t=25028250000 KX=000 KY=000 PAD_A=1 PAD_LAST=0 PT_LAST=0 PAD0=1 PAD1=0 KXPE_N=0 KYPE_N=0
+#   [MS] n=54 t=25031000000 KX=000 KY=000 PAD_A=1 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=1 KXPE_N=0 KYPE_N=0
+#   [MS] n=55 t=25033750000 KX=000 KY=000 PAD_A=1 PAD_LAST=1 PT_LAST=1 PAD0=1 PAD1=1 KXPE_N=0 KYPE_N=0
+#   [C1W] n=2 t=25034625000 ACC=00000000 QVAL=00 Q=00 OUT=00 DBUS=00
+#   [MS] n=56 t=25038125000 KX=000 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=57 t=25040875000 KX=001 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=58 t=25043625000 KX=010 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [MS] n=59 t=25046375000 KX=011 KY=000 PAD_A=0 PAD_LAST=0 PT_LAST=0 PAD0=0 PAD1=0 KXPE_N=1 KYPE_N=1
+#   [C1W] n=3 t=25113250000 ACC=00000000 QVAL=00 Q=00 OUT=00 DBUS=00
+#   [C1W] n=4 t=25191875000 ACC=00000000 QVAL=00 Q=00 OUT=00 DBUS=00
+#   [Q5] A_LAT=0000_0000 B_LAT=0000_0000
+#   [Q5] P1=0000_0000_0000_0000 ACC=0000_0000_0000_0000
+#   [Q5] QVAL=0000_0000 Q=0000_0000 OUT_DATA=0000_0000
+#   [C1W] n=5 t=25270500000 ACC=00000000 QVAL=00 Q=00 OUT=00 DBUS=00
+#   [C1W] n=6 t=25349125000 ACC=00000000 QVAL=00 Q=00 OUT=00 DBUS=00
+#   [C1W] n=7 t=25427750000 ACC=00000000 QVAL=00 Q=00 OUT=00 DBUS=00
+#   [C1W] n=8 t=25506375000 ACC=00000000 QVAL=00 Q=00 OUT=00 DBUS=00
+#   [PL] n=57 KX=011 KY=000 OX=01000 OY=00000 P1=0000 P2=0000 P3=0000 P4=0000 PSUM=0000 A=00 B=c7
+#        PSUM16=0 PSUM17=0 BM16=0 BM17=0 S12_16=0 S34_16=0
+#   [PL] n=58 KX=010 KY=001 OX=01000 OY=00000 P1=0000 P2=0000 P3=0000 P4=0000 PSUM=0000 A=00 B=46
+#        PSUM16=0 PSUM17=0 BM16=0 BM17=0 S12_16=0 S34_16=0
+#   [PL] n=59 KX=001 KY=010 OX=01000 OY=00000 P1=0000 P2=0000 P3=0000 P4=0000 PSUM=0000 A=00 B=5a
+#        PSUM16=0 PSUM17=0 BM16=0 BM17=0 S12_16=0 S34_16=0
+#   [PL] n=60 KX=000 KY=011 OX=01000 OY=00000 P1=0000 P2=0000 P3=0000 P4=0000 PSUM=0000 A=00 B=f4
+#        PSUM16=0 PSUM17=0 BM16=0 BM17=0 S12_16=0 S34_16=0
+#   [PL] n=61 KX=100 KY=011 OX=01000 OY=00000 P1=0000 P2=0000 P3=0000 P4=0000 PSUM=0000 A=00 B=3c
+#        PSUM16=0 PSUM17=0 BM16=0 BM17=0 S12_16=0 S34_16=0
+#   [PL] n=62 KX=011 KY=100 OX=01000 OY=00000 P1=0000 P2=0000 P3=0000 P4=0000 PSUM=0000 A=00 B=a7
+#        PSUM16=0 PSUM17=0 BM16=0 BM17=0 S12_16=0 S34_16=0
+#   [PL] n=63 KX=000 KY=000 OX=01001 OY=00000 P1=0000 P2=0000 P3=0000 P4=ff5b PSUM=ff5b A=00 B=00
+#        PSUM16=1 PSUM17=0 BM16=1 BM17=0 S12_16=0 S34_16=1
+#   [C1W] n=9 t=25585000000 ACC=0001ff5b QVAL=ff Q=ff OUT=ff DBUS=ff
+#   [PL] n=64 KX=011 KY=000 OX=01001 OY=00000 P1=0000 P2=0000 P3=0000 P4=0000 PSUM=0000 A=00 B=c7
+#        PSUM16=0 PSUM17=0 BM16=0 BM17=0 S12_16=0 S34_16=0
+#   [C1W] n=10 t=25663625000 ACC=0003f363 QVAL=ff Q=ff OUT=ff DBUS=ff
+#   [C1W] n=11 t=25742250000 ACC=0003b86e QVAL=ff Q=ff OUT=ff DBUS=ff
+#   [C1W] n=12 t=25820875000 ACC=0003580e QVAL=ff Q=ff OUT=ff DBUS=ff
+#   [C1W] n=13 t=25899500000 ACC=0002fec5 QVAL=ff Q=ff OUT=ff DBUS=ff
+#   [C1W] n=14 t=25978125000 ACC=0000deba QVAL=6f Q=6f OUT=6f DBUS=6f
+#   [C1W] n=15 t=26056750000 ACC=00011b34 QVAL=8d Q=8d OUT=8d DBUS=8d
+#   [C1W] n=16 t=26135375000 ACC=0001944d QVAL=ca Q=ca OUT=ca DBUS=ca
+#   [C1W] n=17 t=26214000000 ACC=0001f1d5 QVAL=f8 Q=f8 OUT=f8 DBUS=f8
+#   [C1W] n=18 t=26292625000 ACC=00000000 QVAL=00 Q=00 OUT=00 DBUS=00
+#   [DP] t=30001250000 ACC=0000_0000_0000_0000_0000_0000_0000_0000
+#   [DP] QVAL=0000_0000 Q=1111_1111 SAT_POS=0
+#   [DP] P1=0000_0000_0000_0000
+#   [MC] t=33302000000 A=fd B=c7 P1=c7ab ACC=00000000
+#   [MC] t=33302125000 A=fd B=c7 P1=c7ab ACC=0001a486
+#   [MC] t=33302250000 A=fd B=c7 P1=c7ab ACC=0001a486
+#   [MC] t=33302375000 A=fd B=c7 P1=c7ab ACC=0001a486
+#   [MC] t=33302500000 A=fd B=c7 P1=c7ab ACC=0001a486
+#   [C1W] n=200 t=40602375000 ACC=00086491 QVAL=ff Q=ff OUT=ff DBUS=ff
+#   [70166250000] C1_DONE
+#   [POOL1 IN ] t=70166750000 S_RD=1 S_NEXT=0 S_OUTLD=0 S_RD2=0 READ_PHASE=1 WE=0 REQ=1 BUSY=1
+#   [RS] pool read snapshot at 70166875000
+#   [RS] t=70166875000 REQ=1 ACK=0 nCE=1 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=1 GT=x
+#   [RS] t=70167000000 REQ=1 ACK=0 nCE=1 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=1 GT=x
+#   [RS] t=70167125000 REQ=1 ACK=0 nCE=1 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=1 GT=x
+#   [RS] t=70167250000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=1 GT=x
+#   [RS] t=70167375000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=1 GT=x
+#   [RS] t=70167500000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=1 GT=x
+#   [RS] t=70167625000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=1 GT=x
+#   [RS] t=70167750000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=1 GT=x
+#   [RS] t=70167875000 REQ=1 ACK=1 nCE=0 nOE=0 DATA=00 MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=1 GT=0
+#   [RS] t=70168000000 REQ=1 ACK=0 nCE=0 nOE=0 DATA=00 MAX=00 q=00 UPD=1 SWAIT=0 RPH=1 V0=1 GT=0
+#   [RS] t=70168125000 REQ=1 ACK=0 nCE=1 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70168250000 REQ=1 ACK=0 nCE=1 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70168375000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70168500000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70168625000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70168750000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70168875000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70169000000 REQ=1 ACK=1 nCE=0 nOE=0 DATA=00 MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=0
+#   [RS] t=70169125000 REQ=1 ACK=0 nCE=0 nOE=0 DATA=00 MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=0
+#   [RS] t=70169250000 REQ=1 ACK=0 nCE=1 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70169375000 REQ=1 ACK=0 nCE=1 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70169500000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70169625000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70169750000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70169875000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70170000000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70170125000 REQ=1 ACK=1 nCE=0 nOE=0 DATA=00 MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=0
+#   [RS] t=70170250000 REQ=1 ACK=0 nCE=0 nOE=0 DATA=00 MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=0
+#   [RS] t=70170375000 REQ=1 ACK=0 nCE=1 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [RS] t=70170500000 REQ=0 ACK=0 nCE=1 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=0 V0=0 GT=x
+#   [POOL1 OUT] t=70170500000 S_RD=0 S_NEXT=1 S_OUTLD=0 S_RD2=0 READ_PHASE=0 WE=1 REQ=1 BUSY=1
+#   [RS] t=70170625000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=00 MAX=00 q=00 UPD=0 SWAIT=0 RPH=0 V0=0 GT=0
+#   [RS] t=70170750000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=00 MAX=00 q=00 UPD=0 SWAIT=0 RPH=0 V0=0 GT=0
+#   [PS] pool write snapshot at 70170750000
+#   [RS] t=70170875000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=00 MAX=00 q=00 UPD=0 SWAIT=0 RPH=0 V0=0 GT=0
+#   [PS] t=70170875000 REQ=1 WE=1 NS_NEXT=0 S_NEXT=1 nCE_OUT=0 nCE=0 nWE=0 DATA=00 POD=00 BUSY=1
+#   [RS] t=70171000000 REQ=1 ACK=0 nCE=0 nOE=1 DATA=00 MAX=00 q=00 UPD=0 SWAIT=0 RPH=0 V0=0 GT=0
+#   [PS] t=70171000000 REQ=1 WE=1 NS_NEXT=0 S_NEXT=1 nCE_OUT=0 nCE=0 nWE=0 DATA=00 POD=00 BUSY=1
+#   [RS] t=70171125000 REQ=1 ACK=1 nCE=0 nOE=1 DATA=00 MAX=00 q=00 UPD=0 SWAIT=0 RPH=0 V0=0 GT=0
+#   [PS] t=70171125000 REQ=1 WE=1 NS_NEXT=0 S_NEXT=1 nCE_OUT=0 nCE=0 nWE=1 DATA=00 POD=00 BUSY=1
+#   [RS] t=70171250000 REQ=1 ACK=0 nCE=1 nOE=1 DATA=00 MAX=00 q=00 UPD=0 SWAIT=0 RPH=0 V0=0 GT=0
+#   [PS] t=70171250000 REQ=1 WE=1 NS_NEXT=0 S_NEXT=1 nCE_OUT=0 nCE=1 nWE=1 DATA=00 POD=00 BUSY=1
+#   [RS] t=70171375000 REQ=1 ACK=0 nCE=1 nOE=1 DATA=00 MAX=00 q=00 UPD=0 SWAIT=0 RPH=0 V0=0 GT=0
+#   [PS] t=70171375000 REQ=1 WE=1 NS_NEXT=0 S_NEXT=1 nCE_OUT=0 nCE=1 nWE=1 DATA=00 POD=00 BUSY=1
+#   [RS] t=70171500000 REQ=1 ACK=0 nCE=1 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [PS] t=70171500000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=1 nWE=1 DATA=zz POD=00 BUSY=1
+#   [RS] t=70171625000 REQ=1 ACK=0 nCE=1 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [PS] t=70171625000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=1 nWE=1 DATA=zz POD=00 BUSY=1
+#   [RS] t=70171750000 REQ=1 ACK=0 nCE=1 nOE=1 DATA=zz MAX=00 q=00 UPD=0 SWAIT=0 RPH=1 V0=0 GT=x
+#   [PS] t=70171750000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=1 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70171875000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=1 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70172000000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70172125000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70172250000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70172375000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70172500000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70172625000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=00 POD=00 BUSY=1
+#   [PS] t=70172750000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=00 POD=00 BUSY=1
+#   [PS] t=70172875000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=1 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70173000000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=1 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70173125000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70173250000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70173375000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70173500000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70173625000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70173750000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=00 POD=00 BUSY=1
+#   [PS] t=70173875000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=00 POD=00 BUSY=1
+#   [PS] t=70174000000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=1 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70174125000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=1 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70174250000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70174375000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70174500000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70174625000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70174750000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70174875000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=00 POD=00 BUSY=1
+#   [PS] t=70175000000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=00 POD=00 BUSY=1
+#   [PS] t=70175125000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=1 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70175250000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=1 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70175375000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70175500000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70175625000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [PS] t=70175750000 REQ=1 WE=0 NS_NEXT=1 S_NEXT=0 nCE_OUT=1 nCE=0 nWE=1 DATA=zz POD=00 BUSY=1
+#   [76933500000] P1_DONE
+#   [96896500000] C2_DONE
+#   [99245750000] P2_DONE
+#   [134498250000] FC1_DONE
+#   [135473750000] FC2_DONE
+#   [135535500000] ARGMAX_DONE
+#   FC2LOG write pulses: 40
+#   SEL histogram read : 1:4607 2:1152 3:1599 4:400 6:40 31:73644
+#   SEL histogram write: 2:1152 4:400 31:748
+#   SEL histo rd@end : 0:16128 1:4607 2:8352 3:1599 4:13200 5:320 6:40 8:16128 9:7200 10:12800 11:320
+#   SEL histo wr@end : 1:576 3:100 5:32 6:40 31:2
+#   SEL=31 cycles: region-asserted=0  no-region=2
+#   REGION asserts: C1[IN=64739 W=16129 OUT=577 B=1 Q=0 MC=0] C2[IN=74143 W=7201 OUT=101 B=1 Q=0 MC=0] FC[IN=68251 W=13121 OUT=73 B=1 Q=0 MC=0] POOL[IN=1552 OUT=1552]
+#   MEM_nCE falls=81443  MEM_nOE falls=79143
+#   SEL at WE-rise: 1:576 2:1152 3:100 4:400 5:32 6:40 31:2
+#   WE-rise DATA bus: floating(x/z)=42  all-zero=1597
+#   Requant C1: START=576 QSTB=576 DONE=576  (QSTB high clocks=1728)
+#   Operand latches: A_LOAD=16128 B_LOAD=16128  WAIT_A rises=16128 WAIT_B rises=16128
+#   Write-cycle owner: C1=576 C2=100 FC=72 POOL=1552 none=1
+#   B latch: PAD_ACTIVE=1 1728 times, normal 14400 times
+#   MAC: pulses=16128  A!=0:5404  B!=0:14400  P1!=0:4825
+#   ACC: clocks!=0=186631  ACC_LD pulses=4032  ACC_LD&PSUM!=0=1934  LANE_LAST clocks=88704
+#   C1 per-point: p0(MAC=28,LD=7) p1(MAC=28,LD=7) p2(MAC=28,LD=7) p3(MAC=28,LD=7) p4(MAC=28,LD=7) p5(MAC=28,LD=7) 
+#   C2 per-point: p0(MAC=72,LD=18) p1(MAC=72,LD=18) p2(MAC=72,LD=18) p3(MAC=72,LD=18) p4(MAC=72,LD=18) p5(MAC=72,LD=18) 
+#   MEMDUMP INPUT (scan 8192): nonzero=193 x/z=0 first:
+#  00 00 00 00 00 00 00 00
+#   MEMDUMP C1OUT (scan 8192): nonzero=397 x/z=0 first:
+#  00 00 00 00 00 00 00 00 ff ff ff ff ff 6f 8d ca f8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff ff ff de cc ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 fc ff ff ff ff ff ff ff ff ff ff d7 f1 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff ff ff f4 00 00 00 00 00 00 00 00 00 fa ff ff ff ff ff ff ff ff ff ff 9b ff ff ff 00 00 00 00 00 00 00 00 fe ff ff ff ff ff ff ff ff ff ff ff ff e1 ff ff e8 00 00 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff e4 fe 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff f5 ff ff 00 00 00 00 ff ff ff ff ff ff ff ff ff 09 ff ff ff ff ff ff ff ff ff ff 00 00 00 00 ff ff ff ff ff ff ff 21 0f ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 ff ff ff ff ff ff ff 0c 02 fe ff ff ff ff ff ff ff ff ff ff 00 00 00 00 ff ff ff ff ff ff ff 00 fa ff ff ff ff ff ff ff ff ff ff 12 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 36 06 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 38 15 02 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 22 04 00 00 00 00 00 fb ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 0c 00 00 00 00 00 00 e7 ff ff ff ff ff ff ff ff ff ff ff ff ff ff 38 25 00 00 00 00 00 00 00 ef ff ff ff ff ff ff ff ff ff ff ff ff ff ff 0e 0b 00 00 00 00 00 00 00 fa ff ff ff ff ff ff ff ff ff ff ff ff 11 09 01 00 00 00 00 00 00 00 00 00 f5 ff ff ff ff ff f6 f5 fe ff ff 17 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 f4 ff ff ff ff ff ff fc fd 03 02 00 00 00 00 00 00 00
+#   MEMDUMP P1OUT (scan 8192): nonzero=110 x/z=0 first:
+#  00 00 00 00 ff ff ff ff
+#   MEMDUMP C2OUT (scan 8192): nonzero=99 x/z=0 first:
+#  00 87 ff 97 ff ff ff 95 14 87 75 ff ff ff ff ff ff ff 85 f5 83 ff 97 ff
+#   MEMDUMP P2OUT (scan 8192): nonzero=25 x/z=0 first:
+#  87 ff ff ff 87 ff ff ff
+#   MEMDUMP FC1OUT (scan 8192): nonzero=32 x/z=0 first:
+#  ff ff ff ff ff ff ff ff
+#   MEMDUMP FC2LOG (scan 8192): nonzero=40 x/z=40 first:
+#  xx xx xx xx xx xx xx xx xx xx xx xx xX xX xX xX xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx xx 00 00 00 00 00 00 00 00
+#   MEMDUMP W_C1 (scan 32768): nonzero=198 x/z=0 first:
+#  23 e5 c6 c7 ac 41 35 46
+#   MEMDUMP W_C2 (scan 32768): nonzero=1143 x/z=0 first:
+#  ef e7 f0 f0 d6 2f 58 49
+#   MEMDUMP W_FC1 (scan 32768): nonzero=12465 x/z=0 first:
+#  fc 05 fd 0f 29 fd f6 f4
+#   MEMDUMP W_FC2 (scan 32768): nonzero=318 x/z=0 first:
+#  81 b8 e9 16 cd f0 16 f7
+#   B_FC1[0..3] readback: zz
+#  zz zz zz
+#   Q_FC1[0] readback: zz
+#   logit[0] got xxxxxxxx exp 00009fea MISMATCH
+#   logit[1] got xxxxxxxx exp ffff2f61 MISMATCH
+#   logit[2] got xxxxxxxx exp fffffe79 MISMATCH
+#   logit[3] got xXxXxXxX exp ffffb6d8 MISMATCH
+#   logit[4] got xxxxxxxx exp ffffc56e MISMATCH
+#   logit[5] got xxxxxxxx exp ffffe88c MISMATCH
+#   logit[6] got xxxxxxxx exp 00002fca MISMATCH
+#   logit[7] got xxxxxxxx exp ffffb0ef MISMATCH
+#   logit[8] got xxxxxxxx exp 0000117f MISMATCH
+#   logit[9] got xxxxxxxx exp fffff39e MISMATCH
+#   vector 0: label=0 argmax_exp=0 argmax_got=0 logits_match= NO
+# VECTOR 0: FAIL (10 errors)
+# === NUMERIC RESULT: 0/1 vectors pass, 10 total errors ===
+# TB RESULT: FAIL
+# ** Note: $finish    : tb_numeric.v(1102)
+#    Time: 135582250 ns  Iteration: 1  Instance: /tb_numeric
+# End time: 20:28:33 on Nov 12,2026, Elapsed time: 0:00:41
+# Errors: 0, Warnings: 940

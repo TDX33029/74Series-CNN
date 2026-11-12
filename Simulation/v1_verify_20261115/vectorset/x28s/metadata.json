@@ -1,0 +1,22 @@
+{
+  "source": "export_v2_signed.py",
+  "sections": {
+    "conv1_weight": 0,
+    "conv1_bias": 200,
+    "conv2_weight": 232,
+    "conv2_bias": 1384,
+    "fc1_weight": 1448,
+    "fc1_bias": 14248,
+    "fc2_weight": 14376,
+    "fc2_bias": 14696,
+    "qparams": 14736
+  },
+  "model_bin_bytes": 15792,
+  "shifts": {
+    "conv1": 9,
+    "conv2": 10,
+    "fc1": 9,
+    "fc2": 0
+  },
+  "quant": "symmetric int8, zp=0, no bias, arithmetic >>S"
+}
