@@ -1,0 +1,1434 @@
+// Numeric (end-to-end inference) test for the 12-board CNN_74xx_System.
+//
+// DUT: the flat structural netlist (cnn74_top.v) with behavioural 74xx/memory
+// models.  The testbench plays the host:
+//   1. power-on reset
+//   2. load the real quantized weights from weights/x28 through the real
+//      H_A/H_D/LOAD_* path into every bus_map window
+//      (W_CONV1/B_CONV1/Q_CONV1, W_CONV2/..., W_FC1/..., W_FC2/...)
+//   3. per MNIST test vector: load the 784-byte image into INPUT_SRAM,
+//      pulse IMAGE_DONE_N/MODEL_DONE_N, pulse START
+//   4. wait for DONE, read the 10 int32 logits from FC2_LOGITS_SRAM,
+//      compare bitwise against vectors/logit_N.hex and check argmax==label
+//
+// Plus-args:
+//   +nvec=N   run vectors 0..N-1 (default 1)
+//   +verbose  chatty progress
+`timescale 1ns/1ps
+
+module tb_numeric;
+
+  reg [15:0] H_A;
+  wire H_D0, H_D1, H_D2, H_D3, H_D4, H_D5, H_D6, H_D7;
+  reg [7:0] hd_val = 8'h00;
+  reg hd_en = 1'b0;
+  assign H_D0 = hd_en ? hd_val[0] : 1'bz;
+  assign H_D1 = hd_en ? hd_val[1] : 1'bz;
+  assign H_D2 = hd_en ? hd_val[2] : 1'bz;
+  assign H_D3 = hd_en ? hd_val[3] : 1'bz;
+  assign H_D4 = hd_en ? hd_val[4] : 1'bz;
+  assign H_D5 = hd_en ? hd_val[5] : 1'bz;
+  assign H_D6 = hd_en ? hd_val[6] : 1'bz;
+  assign H_D7 = hd_en ? hd_val[7] : 1'bz;
+  reg [4:0] H_MEM_SEL;
+  reg H_LOAD_nOE, H_LOAD_nWE, LOAD_EN;
+  reg START_RAW, RESET_RAW, IMAGE_DONE_N, MODEL_DONE_N;
+
+  wire BUSY, DONE, RESULT_VALID, ERROR;
+  wire RESULT0, RESULT1, RESULT2, RESULT3;
+  wire ERROR_CODE0, ERROR_CODE1, ERROR_CODE2, ERROR_CODE3;
+  wire IMAGE_READY, MODEL_READY;
+
+  cnn74_top dut (
+    .H_A0(H_A[0]),   .H_A1(H_A[1]),   .H_A2(H_A[2]),   .H_A3(H_A[3]),
+    .H_A4(H_A[4]),   .H_A5(H_A[5]),   .H_A6(H_A[6]),   .H_A7(H_A[7]),
+    .H_A8(H_A[8]),   .H_A9(H_A[9]),   .H_A10(H_A[10]), .H_A11(H_A[11]),
+    .H_A12(H_A[12]), .H_A13(H_A[13]), .H_A14(H_A[14]), .H_A15(H_A[15]),
+    .H_D0(H_D0), .H_D1(H_D1), .H_D2(H_D2), .H_D3(H_D3),
+    .H_D4(H_D4), .H_D5(H_D5), .H_D6(H_D6), .H_D7(H_D7),
+    .H_MEM_SEL0(H_MEM_SEL[0]), .H_MEM_SEL1(H_MEM_SEL[1]),
+    .H_MEM_SEL2(H_MEM_SEL[2]), .H_MEM_SEL3(H_MEM_SEL[3]),
+    .H_MEM_SEL4(H_MEM_SEL[4]),
+    .H_LOAD_nOE(H_LOAD_nOE), .H_LOAD_nWE(H_LOAD_nWE),
+    .LOAD_EN(LOAD_EN),
+    .START_RAW(START_RAW), .RESET_RAW(RESET_RAW),
+    .IMAGE_DONE_N(IMAGE_DONE_N), .MODEL_DONE_N(MODEL_DONE_N),
+    .BUSY(BUSY), .DONE(DONE), .RESULT_VALID(RESULT_VALID), .ERROR(ERROR),
+    .RESULT0(RESULT0), .RESULT1(RESULT1),
+    .RESULT2(RESULT2), .RESULT3(RESULT3),
+    .ERROR_CODE0(ERROR_CODE0), .ERROR_CODE1(ERROR_CODE1),
+    .ERROR_CODE2(ERROR_CODE2), .ERROR_CODE3(ERROR_CODE3),
+    .IMAGE_READY(IMAGE_READY), .MODEL_READY(MODEL_READY)
+  );
+
+  wire CLK = dut.CLK;
+
+  integer errors = 0;
+  integer vec_errors;
+  integer total_vec_pass = 0;
+  integer i, k, v, nvec;
+  reg [7:0] rb;
+  reg [7:0] payload [0:16383];
+  reg [31:0] exp_logit [0:9];
+  reg [31:0] got_logit [0:9];
+  reg [1023:0] fname;
+  reg [31:0] sum_exp, sum_got;
+  integer argmax_got, argmax_exp;
+  reg [31:0] best;
+
+  // ------------------------------------------------------------ host tasks
+  task drive_d;
+    input [7:0] v;
+    begin
+      hd_val = v;
+      hd_en = 1'b1;
+    end
+  endtask
+
+  task release_d;
+    begin
+      hd_en = 1'b0;
+    end
+  endtask
+
+  task host_write;
+    input [15:0] addr;
+    input [7:0] data;
+    input [4:0] sel;
+    begin
+      H_A = addr;
+      H_MEM_SEL = sel;
+      LOAD_EN = 1'b1;
+      H_LOAD_nOE = 1'b1;
+      H_LOAD_nWE = 1'b1;
+      drive_d(data);
+      repeat (4) @(posedge CLK);
+      H_LOAD_nWE = 1'b0;
+      repeat (4) @(posedge CLK);
+      H_LOAD_nWE = 1'b1;
+      repeat (4) @(posedge CLK);
+    end
+  endtask
+
+  task host_read;
+    input [15:0] addr;
+    input [4:0] sel;
+    output [7:0] data;
+    begin
+      H_A = addr;
+      H_MEM_SEL = sel;
+      LOAD_EN = 1'b1;
+      H_LOAD_nWE = 1'b1;
+      release_d();
+      H_LOAD_nOE = 1'b0;
+      repeat (6) @(posedge CLK);
+      data = {H_D7, H_D6, H_D5, H_D4, H_D3, H_D2, H_D1, H_D0};
+      H_LOAD_nOE = 1'b1;
+      repeat (2) @(posedge CLK);
+    end
+  endtask
+
+  task host_idle;
+    begin
+      LOAD_EN = 1'b0;
+      H_LOAD_nOE = 1'b1;
+      H_LOAD_nWE = 1'b1;
+      H_MEM_SEL = 5'b11111;
+      release_d();
+      repeat (4) @(posedge CLK);
+    end
+  endtask
+
+  task do_reset;
+    begin
+      RESET_RAW = 1'b0;
+      START_RAW = 1'b0;
+      IMAGE_DONE_N = 1'b1;
+      MODEL_DONE_N = 1'b1;
+      host_idle();
+      repeat (20) @(posedge CLK);
+      RESET_RAW = 1'b1;
+      repeat (20) @(posedge CLK);
+    end
+  endtask
+
+  task set_ready;
+    begin
+      @(posedge CLK);
+      IMAGE_DONE_N = 1'b0;
+      MODEL_DONE_N = 1'b0;
+      repeat (4) @(posedge CLK);
+      IMAGE_DONE_N = 1'b1;
+      MODEL_DONE_N = 1'b1;
+      repeat (6) @(posedge CLK);
+    end
+  endtask
+
+  // load a byte array already staged in payload[0:n-1] into window sel
+  task load_window;
+    input [4:0] sel;
+    input integer n;
+    integer i;
+    begin
+      for (i = 0; i < n; i = i + 1)
+        host_write(i[15:0], payload[i], sel);
+      $display("  loaded %0d bytes -> MEM_SEL=%0d", n, sel);
+    end
+  endtask
+
+  // ------------------------------------------------------------ monitors
+  always @(posedge dut.C1_DONE)     $display("  [%0t] C1_DONE", $time);
+  always @(posedge dut.P1_DONE)     $display("  [%0t] P1_DONE", $time);
+  always @(posedge dut.C2_DONE)     $display("  [%0t] C2_DONE", $time);
+  always @(posedge dut.P2_DONE)     $display("  [%0t] P2_DONE", $time);
+  always @(posedge dut.FC1_DONE)    $display("  [%0t] FC1_DONE", $time);
+  always @(posedge dut.FC2_DONE)    $display("  [%0t] FC2_DONE", $time);
+  always @(posedge dut.ARGMAX_DONE) $display("  [%0t] ARGMAX_DONE", $time);
+  always @(posedge ERROR)           $display("  [%0t] ERROR=1 code=%b%b%b%b",
+                                             $time, ERROR_CODE3, ERROR_CODE2,
+                                             ERROR_CODE1, ERROR_CODE0);
+
+  // debug: writes hitting the FC2 logits SRAM (U4007, nCS low on WE rise)
+  integer n_fc2log_we = 0;
+  always @(posedge dut.MEM_nWE)
+    if (dut._B03_S04_Memories_nCS_SRAM_FC2LOG === 1'b0)
+      n_fc2log_we = n_fc2log_we + 1;
+
+  // debug: MEM_SEL page histogram for reads (nCE) and writes (nWE)
+  wire [4:0] MSEL = {dut._B03_S04_Memories_MSEL4, dut._B03_S04_Memories_MSEL3,
+                     dut._B03_S04_Memories_MSEL2, dut._B03_S04_Memories_MSEL1,
+                     dut._B03_S04_Memories_MSEL0};
+  integer sel_rd [0:31];
+  integer sel_wr [0:31];
+  integer si;
+  initial for (si = 0; si < 32; si = si + 1) begin
+    sel_rd[si] = 0;
+    sel_wr[si] = 0;
+  end
+  always @(negedge dut.MEM_nCE) sel_rd[MSEL] = sel_rd[MSEL] + 1;
+  always @(negedge dut.MEM_nWE) sel_wr[MSEL] = sel_wr[MSEL] + 1;
+
+  // ---- refined probe: classify memory cycles at END of cycle (nCE rise),
+  // ---- and record whether any region strobe was ever asserted during it.
+  integer sel_rd_end [0:31];
+  integer sel_wr_end [0:31];
+  integer cyc_region_but31 = 0;   // a region requested but MSEL resolved to 31
+  integer cyc_noregion = 0;       // whole cycle with no region strobe at all
+  reg  cyc_we_lat;                // nWE state sampled at cycle start
+  reg  cyc_region_seen;
+  integer sei;
+  initial for (sei = 0; sei < 32; sei = sei + 1) begin
+    sel_rd_end[sei] = 0; sel_wr_end[sei] = 0;
+  end
+
+  wire any_region_now = (dut.C1_MEM_nCE_IN === 1'b0) || (dut.C1_MEM_nCE_W === 1'b0) ||
+                        (dut.C1_MEM_nCE_OUT === 1'b0) || (dut.C1_MEM_nCE_B === 1'b0) ||
+                        (dut.C1_MEM_nCE_Q === 1'b0) || (dut.C1_MEM_nCE_MC === 1'b0) ||
+                        (dut.C2_MEM_nCE_IN === 1'b0) || (dut.C2_MEM_nCE_W === 1'b0) ||
+                        (dut.C2_MEM_nCE_OUT === 1'b0) || (dut.C2_MEM_nCE_B === 1'b0) ||
+                        (dut.C2_MEM_nCE_Q === 1'b0) || (dut.C2_MEM_nCE_MC === 1'b0) ||
+                        (dut.FC_MEM_nCE_IN === 1'b0) || (dut.FC_MEM_nCE_W === 1'b0) ||
+                        (dut.FC_MEM_nCE_OUT === 1'b0) || (dut.FC_MEM_nCE_B === 1'b0) ||
+                        (dut.FC_MEM_nCE_Q === 1'b0) || (dut.FC_MEM_nCE_MC === 1'b0) ||
+                        (dut.POOL_MEM_nCE_IN === 1'b0) || (dut.POOL_MEM_nCE_OUT === 1'b0);
+
+  always @(negedge dut.MEM_nCE) begin
+    cyc_we_lat = dut.MEM_nWE;
+    cyc_region_seen = 1'b0;
+  end
+  always @(posedge CLK) if (dut.MEM_nCE === 1'b0 && any_region_now) cyc_region_seen = 1'b1;
+  always @(posedge dut.MEM_nCE) begin
+    if (cyc_we_lat === 1'b1) sel_rd_end[MSEL] = sel_rd_end[MSEL] + 1;
+    else                     sel_wr_end[MSEL] = sel_wr_end[MSEL] + 1;
+    if (MSEL == 5'd31) begin
+      if (cyc_region_seen) cyc_region_but31 = cyc_region_but31 + 1;
+      else                 cyc_noregion  = cyc_noregion + 1;
+    end
+  end
+
+  // ---- raw trace of the first N memory cycles (full fabric state) ----
+  integer tr_fd;
+  integer tr_n = 0;
+  integer TR_MAX = 400;
+  initial begin
+    tr_fd = $fopen("tb_bus_trace.log", "w");
+    $fdisplay(tr_fd, "# t;edge;SEL;nWE;nOE;C1REQ;C2REQ;FCREQ;POOLREQ;SCORERD;ADD_SEL(C1);C1REG(IN,W,OUT,B,Q,MC);REGION;MASTER;FC_SEL;POOL_SEL;D;ADDR");
+  end
+  task trace_cycle;
+    input integer ph;   // 0 = nCE fall (start), 1 = nCE rise (end)
+    begin
+      if (tr_n < TR_MAX) begin
+        $fdisplay(tr_fd, "%0d;%0d;%0d;%0b;%0b;%0b;%0b;%0b;%0b;%0b;%0b%0b;%0b%0b%0b%0b%0b%0b;%b;%b;%0b;%0b;%02h;%04h",
+          $time, ph, MSEL, dut.MEM_nWE, dut.MEM_nOE,
+          dut.C1_MEM_REQ, dut.C2_MEM_REQ, dut.FC_MEM_REQ, dut.POOL_MEM_REQ, dut.SCORE_RD,
+          dut._B04_S07_Conv1_C1_ADD_SEL1, dut._B04_S07_Conv1_C1_ADD_SEL0,
+          dut.C1_MEM_nCE_IN, dut.C1_MEM_nCE_W, dut.C1_MEM_nCE_OUT, dut.C1_MEM_nCE_B, dut.C1_MEM_nCE_Q, dut.C1_MEM_nCE_MC,
+          {dut._B11_S11_BusFabric_REGION2, dut._B11_S11_BusFabric_REGION1, dut._B11_S11_BusFabric_REGION0},
+          {dut._B11_S11_BusFabric_MASTER2, dut._B11_S11_BusFabric_MASTER1, dut._B11_S11_BusFabric_MASTER0},
+          dut.FC_SEL, dut.POOL_SEL,
+          {dut.DATA7, dut.DATA6, dut.DATA5, dut.DATA4, dut.DATA3, dut.DATA2, dut.DATA1, dut.DATA0},
+          {dut.ADDR15, dut.ADDR14, dut.ADDR13, dut.ADDR12, dut.ADDR11, dut.ADDR10, dut.ADDR9, dut.ADDR8, dut.ADDR7, dut.ADDR6, dut.ADDR5, dut.ADDR4, dut.ADDR3, dut.ADDR2, dut.ADDR1, dut.ADDR0});
+        tr_n = tr_n + 1;
+      end
+    end
+  endtask
+  always @(negedge dut.MEM_nCE) trace_cycle(0);
+  always @(posedge dut.MEM_nCE) trace_cycle(1);
+
+  // ---- region-strobe assertion counters (per master x region) ----
+  // order: C1,C2,FC,POOL x IN,W,OUT,B,Q,MC
+  integer rag [0:23];
+  integer rai;
+  initial for (rai = 0; rai < 24; rai = rai + 1) rag[rai] = 0;
+  always @(negedge dut.C1_MEM_nCE_IN)  rag[0]  = rag[0]  + 1;
+  always @(negedge dut.C1_MEM_nCE_W)   rag[1]  = rag[1]  + 1;
+  always @(negedge dut.C1_MEM_nCE_OUT) rag[2]  = rag[2]  + 1;
+  always @(negedge dut.C1_MEM_nCE_B)   rag[3]  = rag[3]  + 1;
+  always @(negedge dut.C1_MEM_nCE_Q)   rag[4]  = rag[4]  + 1;
+  always @(negedge dut.C1_MEM_nCE_MC)  rag[5]  = rag[5]  + 1;
+  always @(negedge dut.C2_MEM_nCE_IN)  rag[6]  = rag[6]  + 1;
+  always @(negedge dut.C2_MEM_nCE_W)   rag[7]  = rag[7]  + 1;
+  always @(negedge dut.C2_MEM_nCE_OUT) rag[8]  = rag[8]  + 1;
+  always @(negedge dut.C2_MEM_nCE_B)   rag[9]  = rag[9]  + 1;
+  always @(negedge dut.C2_MEM_nCE_Q)   rag[10] = rag[10] + 1;
+  always @(negedge dut.C2_MEM_nCE_MC)  rag[11] = rag[11] + 1;
+  always @(negedge dut.FC_MEM_nCE_IN)  rag[12] = rag[12] + 1;
+  always @(negedge dut.FC_MEM_nCE_W)   rag[13] = rag[13] + 1;
+  always @(negedge dut.FC_MEM_nCE_OUT) rag[14] = rag[14] + 1;
+  always @(negedge dut.FC_MEM_nCE_B)   rag[15] = rag[15] + 1;
+  always @(negedge dut.FC_MEM_nCE_Q)   rag[16] = rag[16] + 1;
+  always @(negedge dut.FC_MEM_nCE_MC)  rag[17] = rag[17] + 1;
+  always @(negedge dut.POOL_MEM_nCE_IN)  rag[18] = rag[18] + 1;
+  always @(negedge dut.POOL_MEM_nCE_OUT) rag[20] = rag[20] + 1;
+  integer n_oe_fall = 0;
+  integer n_ce_fall = 0;
+  always @(negedge dut.MEM_nOE) n_oe_fall = n_oe_fall + 1;
+  always @(negedge dut.MEM_nCE) n_ce_fall = n_ce_fall + 1;
+
+  // ---- pool1 state at first IN/OUT strobe ----
+  reg p1_in_seen = 1'b0, p1_out_seen = 1'b0;
+  always @(negedge dut.POOL1_MEM_nCE_IN) if (!p1_in_seen) begin
+    p1_in_seen = 1'b1;
+    $display("  [POOL1 IN ] t=%0t S_RD=%b S_NEXT=%b S_OUTLD=%b S_RD2=%b READ_PHASE=%b WE=%b REQ=%b BUSY=%b",
+      $time, dut._B05_S05_Pool1_S_RD, dut._B05_S05_Pool1_S_NEXT, dut._B05_S05_Pool1_S_OUTLD,
+      dut._B05_S05_Pool1_S_WAIT, dut._B05_S05_Pool1_READ_PHASE, dut.POOL1_MEM_WE,
+      dut.POOL1_MEM_REQ, dut.POOL1_BUSY);
+  end
+  always @(negedge dut.POOL1_MEM_nCE_OUT) if (!p1_out_seen) begin
+    p1_out_seen = 1'b1;
+    $display("  [POOL1 OUT] t=%0t S_RD=%b S_NEXT=%b S_OUTLD=%b S_RD2=%b READ_PHASE=%b WE=%b REQ=%b BUSY=%b",
+      $time, dut._B05_S05_Pool1_S_RD, dut._B05_S05_Pool1_S_NEXT, dut._B05_S05_Pool1_S_OUTLD,
+      dut._B05_S05_Pool1_S_WAIT, dut._B05_S05_Pool1_READ_PHASE, dut.POOL1_MEM_WE,
+      dut.POOL1_MEM_REQ, dut.POOL1_BUSY);
+  end
+
+  // ---- what the SRAM sees at the WE rising edge (actual latch instant) ----
+  integer sel_wr_rise [0:31];
+  integer wr_rise_z = 0;      // DATA bus floating at latch instant
+  integer wr_rise_zero = 0;   // DATA bus all-zero at latch instant
+  integer wri;
+  initial for (wri = 0; wri < 32; wri = wri + 1) sel_wr_rise[wri] = 0;
+  wire [7:0] DBUS = {dut.DATA7, dut.DATA6, dut.DATA5, dut.DATA4,
+                     dut.DATA3, dut.DATA2, dut.DATA1, dut.DATA0};
+  always @(posedge dut.MEM_nWE) begin
+    sel_wr_rise[MSEL] = sel_wr_rise[MSEL] + 1;
+    if (^DBUS === 1'bx) wr_rise_z = wr_rise_z + 1;
+    else if (DBUS === 8'h00) wr_rise_zero = wr_rise_zero + 1;
+  end
+
+  task rag_print;
+    integer s;
+    begin
+      $write("  REGION asserts: C1[IN=%0d W=%0d OUT=%0d B=%0d Q=%0d MC=%0d]", rag[0],rag[1],rag[2],rag[3],rag[4],rag[5]);
+      $write(" C2[IN=%0d W=%0d OUT=%0d B=%0d Q=%0d MC=%0d]", rag[6],rag[7],rag[8],rag[9],rag[10],rag[11]);
+      $write(" FC[IN=%0d W=%0d OUT=%0d B=%0d Q=%0d MC=%0d]", rag[12],rag[13],rag[14],rag[15],rag[16],rag[17]);
+      $write(" POOL[IN=%0d OUT=%0d]\n", rag[18],rag[20]);
+      $write("  MEM_nCE falls=%0d  MEM_nOE falls=%0d\n", n_ce_fall, n_oe_fall);
+      $write("  SEL at WE-rise:");
+      for (s = 0; s < 32; s = s + 1)
+        if (sel_wr_rise[s] > 0) $write(" %0d:%0d", s, sel_wr_rise[s]);
+      $write("\n  WE-rise DATA bus: floating(x/z)=%0d  all-zero=%0d\n", wr_rise_z, wr_rise_zero);
+      $write("  Requant C1: START=%0d QSTB=%0d DONE=%0d  (QSTB high clocks=%0d)\n",
+             n_rq_start, n_rq_qstb, n_rq_done, n_qstb_hi_clk);
+      $write("  Operand latches: A_LOAD=%0d B_LOAD=%0d  WAIT_A rises=%0d WAIT_B rises=%0d\n",
+             n_a_load, n_b_load, n_wait_a, n_wait_b);
+      $write("  Write-cycle owner: C1=%0d C2=%0d FC=%0d POOL=%0d none=%0d\n",
+             wr_owner[0], wr_owner[1], wr_owner[2], wr_owner[3], wr_owner[4]);
+      $write("  B latch: PAD_ACTIVE=1 %0d times, normal %0d times\n", n_b_pad, n_b_ok);
+      $write("  MAC: pulses=%0d  A!=0:%0d  B!=0:%0d  P1!=0:%0d\n",
+             n_mac, n_al_nz, n_bl_nz, n_mac_nz);
+      $write("  ACC: clocks!=0=%0d  ACC_LD pulses=%0d  ACC_LD&PSUM!=0=%0d  LANE_LAST clocks=%0d\n",
+             n_acc_nz, n_accld, n_accld_nz, n_lanelast);
+      print_points;
+      print_points2;
+      print_fc1;
+    end
+  endtask
+
+  // ---- V13: MAC datapath liveness (nonzero operands / product) ----
+  wire [7:0] ALW = {dut._B04_S07_Conv1_C1_A_LAT7, dut._B04_S07_Conv1_C1_A_LAT6,
+                    dut._B04_S07_Conv1_C1_A_LAT5, dut._B04_S07_Conv1_C1_A_LAT4,
+                    dut._B04_S07_Conv1_C1_A_LAT3, dut._B04_S07_Conv1_C1_A_LAT2,
+                    dut._B04_S07_Conv1_C1_A_LAT1, dut._B04_S07_Conv1_C1_A_LAT0};
+  wire [7:0] BLW = {dut._B04_S07_Conv1_C1_B_LAT7, dut._B04_S07_Conv1_C1_B_LAT6,
+                    dut._B04_S07_Conv1_C1_B_LAT5, dut._B04_S07_Conv1_C1_B_LAT4,
+                    dut._B04_S07_Conv1_C1_B_LAT3, dut._B04_S07_Conv1_C1_B_LAT2,
+                    dut._B04_S07_Conv1_C1_B_LAT1, dut._B04_S07_Conv1_C1_B_LAT0};
+  wire [15:0] P1W = {dut._B04_S07_Conv1_C1_P1_15, dut._B04_S07_Conv1_C1_P1_14,                     dut._B04_S07_Conv1_C1_P1_13, dut._B04_S07_Conv1_C1_P1_12,
+                     dut._B04_S07_Conv1_C1_P1_11, dut._B04_S07_Conv1_C1_P1_10,
+                     dut._B04_S07_Conv1_C1_P1_9,  dut._B04_S07_Conv1_C1_P1_8,
+                     dut._B04_S07_Conv1_C1_P1_7,  dut._B04_S07_Conv1_C1_P1_6,
+                     dut._B04_S07_Conv1_C1_P1_5,  dut._B04_S07_Conv1_C1_P1_4,
+                     dut._B04_S07_Conv1_C1_P1_3,  dut._B04_S07_Conv1_C1_P1_2,
+                     dut._B04_S07_Conv1_C1_P1_1,  dut._B04_S07_Conv1_C1_P1_0};
+  wire [15:0] P2W = {dut._B04_S07_Conv1_C1_P2_15, dut._B04_S07_Conv1_C1_P2_14,
+                     dut._B04_S07_Conv1_C1_P2_13, dut._B04_S07_Conv1_C1_P2_12,
+                     dut._B04_S07_Conv1_C1_P2_11, dut._B04_S07_Conv1_C1_P2_10,
+                     dut._B04_S07_Conv1_C1_P2_9,  dut._B04_S07_Conv1_C1_P2_8,
+                     dut._B04_S07_Conv1_C1_P2_7,  dut._B04_S07_Conv1_C1_P2_6,
+                     dut._B04_S07_Conv1_C1_P2_5,  dut._B04_S07_Conv1_C1_P2_4,
+                     dut._B04_S07_Conv1_C1_P2_3,  dut._B04_S07_Conv1_C1_P2_2,
+                     dut._B04_S07_Conv1_C1_P2_1,  dut._B04_S07_Conv1_C1_P2_0};
+  wire [15:0] P3W = {dut._B04_S07_Conv1_C1_P3_15, dut._B04_S07_Conv1_C1_P3_14,
+                     dut._B04_S07_Conv1_C1_P3_13, dut._B04_S07_Conv1_C1_P3_12,
+                     dut._B04_S07_Conv1_C1_P3_11, dut._B04_S07_Conv1_C1_P3_10,
+                     dut._B04_S07_Conv1_C1_P3_9,  dut._B04_S07_Conv1_C1_P3_8,
+                     dut._B04_S07_Conv1_C1_P3_7,  dut._B04_S07_Conv1_C1_P3_6,
+                     dut._B04_S07_Conv1_C1_P3_5,  dut._B04_S07_Conv1_C1_P3_4,
+                     dut._B04_S07_Conv1_C1_P3_3,  dut._B04_S07_Conv1_C1_P3_2,
+                     dut._B04_S07_Conv1_C1_P3_1,  dut._B04_S07_Conv1_C1_P3_0};
+  wire [15:0] P4W = {dut._B04_S07_Conv1_C1_P4_15, dut._B04_S07_Conv1_C1_P4_14,
+                     dut._B04_S07_Conv1_C1_P4_13, dut._B04_S07_Conv1_C1_P4_12,
+                     dut._B04_S07_Conv1_C1_P4_11, dut._B04_S07_Conv1_C1_P4_10,
+                     dut._B04_S07_Conv1_C1_P4_9,  dut._B04_S07_Conv1_C1_P4_8,
+                     dut._B04_S07_Conv1_C1_P4_7,  dut._B04_S07_Conv1_C1_P4_6,
+                     dut._B04_S07_Conv1_C1_P4_5,  dut._B04_S07_Conv1_C1_P4_4,
+                     dut._B04_S07_Conv1_C1_P4_3,  dut._B04_S07_Conv1_C1_P4_2,
+                     dut._B04_S07_Conv1_C1_P4_1,  dut._B04_S07_Conv1_C1_P4_0};
+  wire [31:0] ACCW = {dut.C1_ACC31, dut.C1_ACC30, dut.C1_ACC29, dut.C1_ACC28,
+                      dut.C1_ACC27, dut.C1_ACC26, dut.C1_ACC25, dut.C1_ACC24,
+                      dut.C1_ACC23, dut.C1_ACC22, dut.C1_ACC21, dut.C1_ACC20,
+                      dut.C1_ACC19, dut.C1_ACC18, dut.C1_ACC17, dut.C1_ACC16,
+                      dut.C1_ACC15, dut.C1_ACC14, dut.C1_ACC13, dut.C1_ACC12,
+                      dut.C1_ACC11, dut.C1_ACC10, dut.C1_ACC9,  dut.C1_ACC8,
+                      dut.C1_ACC7,  dut.C1_ACC6,  dut.C1_ACC5,  dut.C1_ACC4,
+                      dut.C1_ACC3,  dut.C1_ACC2,  dut.C1_ACC1,  dut.C1_ACC0};
+  integer n_mac = 0, n_al_nz = 0, n_bl_nz = 0, n_mac_nz = 0;
+  integer mac_probe = 0;
+  always @(posedge CLK) begin
+    if (dut._B04_S07_Conv1_C1_MAC_EN === 1'b1) begin
+      n_mac = n_mac + 1;
+      if (ALW !== 8'b0) n_al_nz = n_al_nz + 1;
+      if (BLW !== 8'b0) n_bl_nz = n_bl_nz + 1;
+      if (P1W !== 16'b0) n_mac_nz = n_mac_nz + 1;
+      if (n_mac == 3000) mac_probe = 5;
+    end
+    if (mac_probe != 0) begin
+      $display("  [MC] t=%0t A=%02h B=%02h P1=%04h ACC=%08h", $time, ALW, BLW, P1W, ACCW);
+      mac_probe = mac_probe - 1;
+    end
+  end
+
+  // ---- probe a real C1 write: ACC -> requant -> OUT latch -> bus ----
+  wire [7:0] QVALW = {dut._B04_S13_Requant_C1_C1_RQ_QVAL7, dut._B04_S13_Requant_C1_C1_RQ_QVAL6,
+                      dut._B04_S13_Requant_C1_C1_RQ_QVAL5, dut._B04_S13_Requant_C1_C1_RQ_QVAL4,
+                      dut._B04_S13_Requant_C1_C1_RQ_QVAL3, dut._B04_S13_Requant_C1_C1_RQ_QVAL2,
+                      dut._B04_S13_Requant_C1_C1_RQ_QVAL1, dut._B04_S13_Requant_C1_C1_RQ_QVAL0};
+  wire [7:0] QW    = {dut.C1_REQ_Q7, dut.C1_REQ_Q6, dut.C1_REQ_Q5, dut.C1_REQ_Q4,
+                      dut.C1_REQ_Q3, dut.C1_REQ_Q2, dut.C1_REQ_Q1, dut.C1_REQ_Q0};
+  wire [7:0] ODW   = {dut._B04_S07_Conv1_C1_OUT_DATA7, dut._B04_S07_Conv1_C1_OUT_DATA6,
+                      dut._B04_S07_Conv1_C1_OUT_DATA5, dut._B04_S07_Conv1_C1_OUT_DATA4,
+                      dut._B04_S07_Conv1_C1_OUT_DATA3, dut._B04_S07_Conv1_C1_OUT_DATA2,
+                      dut._B04_S07_Conv1_C1_OUT_DATA1, dut._B04_S07_Conv1_C1_OUT_DATA0};
+  integer n_c1wr = 0;
+  always @(negedge dut.MEM_nWE) begin
+    if (dut.C1_MEM_REQ === 1'b1) begin
+      n_c1wr = n_c1wr + 1;
+      if (n_c1wr <= 18 || n_c1wr == 200)
+        $display("  [C1W] n=%0d t=%0t ACC=%08h QVAL=%02h Q=%02h OUT=%02h DBUS=%02h",
+                 n_c1wr, $time, ACCW, QVALW, QW, ODW, DBUS);
+      if (n_c1wr % 576 == 0)
+        $display("  [OC] after write %0d: OC=%b%b%b OC_LAST=%b SP=%b%b%b%b%b%b%b%b%b%b",
+                 n_c1wr, dut._B04_S07_Conv1_C1_OC2, dut._B04_S07_Conv1_C1_OC1,
+                 dut._B04_S07_Conv1_C1_OC0, dut._B04_S07_Conv1_C1_OC_LAST,
+                 dut._B04_S07_Conv1_C1_SP9, dut._B04_S07_Conv1_C1_SP8,
+                 dut._B04_S07_Conv1_C1_SP7, dut._B04_S07_Conv1_C1_SP6,
+                 dut._B04_S07_Conv1_C1_SP5, dut._B04_S07_Conv1_C1_SP4,
+                 dut._B04_S07_Conv1_C1_SP3, dut._B04_S07_Conv1_C1_SP2,
+                 dut._B04_S07_Conv1_C1_SP1, dut._B04_S07_Conv1_C1_SP0);
+    end
+  end
+
+  // ---- accumulator load path: ACC_LD / LANE_LAST / PSUM liveness ----
+  wire [15:0] PSUM = {dut._B04_S07_Conv1_C1_PSUM15, dut._B04_S07_Conv1_C1_PSUM14,
+                      dut._B04_S07_Conv1_C1_PSUM13, dut._B04_S07_Conv1_C1_PSUM12,
+                      dut._B04_S07_Conv1_C1_PSUM11, dut._B04_S07_Conv1_C1_PSUM10,
+                      dut._B04_S07_Conv1_C1_PSUM9,  dut._B04_S07_Conv1_C1_PSUM8,
+                      dut._B04_S07_Conv1_C1_PSUM7,  dut._B04_S07_Conv1_C1_PSUM6,
+                      dut._B04_S07_Conv1_C1_PSUM5,  dut._B04_S07_Conv1_C1_PSUM4,
+                      dut._B04_S07_Conv1_C1_PSUM3,  dut._B04_S07_Conv1_C1_PSUM2,
+                      dut._B04_S07_Conv1_C1_PSUM1,  dut._B04_S07_Conv1_C1_PSUM0};
+  integer n_acc_nz = 0, n_accld = 0, n_accld_nz = 0, n_lanelast = 0;
+  always @(posedge CLK) begin
+    if (ACCW !== 32'b0) n_acc_nz = n_acc_nz + 1;
+    if (dut._B04_S07_Conv1_C1_ACC_LD === 1'b1) begin
+      n_accld = n_accld + 1;
+      if (PSUM !== 16'b0) n_accld_nz = n_accld_nz + 1;
+      if (n_accld <= 3)
+        $display("  [AL] n=%0d t=%0t PSUM=%04h P1=%04h P2=%04h P3=%04h P4=%04h ACC=%08h LANE=%b%b",
+                 n_accld, $time, PSUM, P1W, P2W, P3W, P4W, ACCW,
+                 dut._B04_S07_Conv1_C1_LANE1, dut._B04_S07_Conv1_C1_LANE0);
+      if (n_accld >= 57 && n_accld <= 64)
+        $display("  [PL] n=%0d KX=%b%b%b KY=%b%b%b OX=%b%b%b%b%b OY=%b%b%b%b%b P1=%04h P2=%04h P3=%04h P4=%04h PSUM=%04h A=%02h B=%02h",
+                 n_accld,
+                 dut._B04_S07_Conv1_C1_KX2, dut._B04_S07_Conv1_C1_KX1, dut._B04_S07_Conv1_C1_KX0,
+                 dut._B04_S07_Conv1_C1_KY2, dut._B04_S07_Conv1_C1_KY1, dut._B04_S07_Conv1_C1_KY0,
+                 dut._B04_S07_Conv1_C1_OX4, dut._B04_S07_Conv1_C1_OX3, dut._B04_S07_Conv1_C1_OX2,
+                 dut._B04_S07_Conv1_C1_OX1, dut._B04_S07_Conv1_C1_OX0,
+                 dut._B04_S07_Conv1_C1_OY4, dut._B04_S07_Conv1_C1_OY3, dut._B04_S07_Conv1_C1_OY2,
+                 dut._B04_S07_Conv1_C1_OY1, dut._B04_S07_Conv1_C1_OY0,
+                 P1W, P2W, P3W, P4W, PSUM, ALW, BLW);
+      if (n_accld >= 57 && n_accld <= 64)
+        $display("       PSUM16=%b PSUM17=%b BM16=%b BM17=%b S12_16=%b S34_16=%b",
+                 dut._B04_S07_Conv1_C1_PSUM16, dut._B04_S07_Conv1_C1_PSUM17,
+                 dut._B04_S07_Conv1_C1_BM16, dut._B04_S07_Conv1_C1_BM17,
+                 dut._B04_S07_Conv1_C1_S12_16, dut._B04_S07_Conv1_C1_S34_16);
+    end
+    if (dut._B04_S07_Conv1_C1_LANE0 === 1'b1 && dut._B04_S07_Conv1_C1_LANE1 === 1'b1)
+      n_lanelast = n_lanelast + 1;
+  end
+
+  // ---- per-output-point MAC / ACC_LD accounting (does a load group cross points?) ----
+  integer pt_mac = 0, pt_ld = 0, pt_cnt = 0;
+  integer h_mac [0:9];
+  integer h_ld  [0:9];
+  integer hi;
+  initial for (hi = 0; hi < 10; hi = hi + 1) begin h_mac[hi] = 0; h_ld[hi] = 0; end
+  always @(posedge dut.C1_REQ_START) begin
+    if (pt_cnt <= 9) begin
+      h_mac[pt_cnt] = pt_mac;
+      h_ld[pt_cnt]  = pt_ld;
+    end
+    pt_cnt = pt_cnt + 1; pt_mac = 0; pt_ld = 0;
+  end
+  always @(posedge CLK) begin
+    if (dut._B04_S07_Conv1_C1_MAC_EN === 1'b1) pt_mac = pt_mac + 1;
+    if (dut._B04_S07_Conv1_C1_ACC_LD === 1'b1) pt_ld = pt_ld + 1;
+  end
+  task print_points;
+    integer k;
+    begin
+      $write("  C1 per-point: ");
+      for (k = 0; k < 6; k = k + 1)
+        $write("p%0d(MAC=%0d,LD=%0d) ", k, h_mac[k], h_ld[k]);
+      $write("
+");
+    end
+  endtask
+
+  // ---- C2 per-point MAC / ACC_LD accounting (V17 check for S08) ----
+  integer pt2_mac = 0, pt2_ld = 0, pt2_cnt = 0;
+  integer h2_mac [0:9];
+  integer h2_ld  [0:9];
+  integer hj;
+  initial for (hj = 0; hj < 10; hj = hj + 1) begin h2_mac[hj] = 0; h2_ld[hj] = 0; end
+  always @(posedge dut.C2_REQ_START) begin
+    if (pt2_cnt <= 9) begin
+      h2_mac[pt2_cnt] = pt2_mac;
+      h2_ld[pt2_cnt]  = pt2_ld;
+    end
+    pt2_cnt = pt2_cnt + 1; pt2_mac = 0; pt2_ld = 0;
+  end
+  always @(posedge CLK) begin
+    if (dut._B06_S08_Conv2_C2_MAC_EN === 1'b1) pt2_mac = pt2_mac + 1;
+    if (dut._B06_S08_Conv2_C2_ACC_LD === 1'b1) pt2_ld = pt2_ld + 1;
+  end
+  task print_points2;
+    integer k;
+    begin
+      $write("  C2 per-point: ");
+      for (k = 0; k < 6; k = k + 1)
+        $write("p%0d(MAC=%0d,LD=%0d) ", k, h2_mac[k], h2_ld[k]);
+      $write("
+");
+    end
+  endtask
+
+  // ---- FC1 diagnostics: operands, MAC count, ACC at each neuron boundary ----
+  wire [15:0] FC1PSUM = {dut._B08_S09_FC1_FC_PSUM15, dut._B08_S09_FC1_FC_PSUM14,
+                         dut._B08_S09_FC1_FC_PSUM13, dut._B08_S09_FC1_FC_PSUM12,
+                         dut._B08_S09_FC1_FC_PSUM11, dut._B08_S09_FC1_FC_PSUM10,
+                         dut._B08_S09_FC1_FC_PSUM9,  dut._B08_S09_FC1_FC_PSUM8,
+                         dut._B08_S09_FC1_FC_PSUM7,  dut._B08_S09_FC1_FC_PSUM6,
+                         dut._B08_S09_FC1_FC_PSUM5,  dut._B08_S09_FC1_FC_PSUM4,
+                         dut._B08_S09_FC1_FC_PSUM3,  dut._B08_S09_FC1_FC_PSUM2,
+                         dut._B08_S09_FC1_FC_PSUM1,  dut._B08_S09_FC1_FC_PSUM0};
+  wire [15:0] FC1P1 = {dut._B08_S09_FC1_FC_P1_15, dut._B08_S09_FC1_FC_P1_14,
+                       dut._B08_S09_FC1_FC_P1_13, dut._B08_S09_FC1_FC_P1_12,
+                       dut._B08_S09_FC1_FC_P1_11, dut._B08_S09_FC1_FC_P1_10,
+                       dut._B08_S09_FC1_FC_P1_9,  dut._B08_S09_FC1_FC_P1_8,
+                       dut._B08_S09_FC1_FC_P1_7,  dut._B08_S09_FC1_FC_P1_6,
+                       dut._B08_S09_FC1_FC_P1_5,  dut._B08_S09_FC1_FC_P1_4,
+                       dut._B08_S09_FC1_FC_P1_3,  dut._B08_S09_FC1_FC_P1_2,
+                       dut._B08_S09_FC1_FC_P1_1,  dut._B08_S09_FC1_FC_P1_0};
+  wire [15:0] FC1P2 = {dut._B08_S09_FC1_FC_P2_15, dut._B08_S09_FC1_FC_P2_14,
+                       dut._B08_S09_FC1_FC_P2_13, dut._B08_S09_FC1_FC_P2_12,
+                       dut._B08_S09_FC1_FC_P2_11, dut._B08_S09_FC1_FC_P2_10,
+                       dut._B08_S09_FC1_FC_P2_9,  dut._B08_S09_FC1_FC_P2_8,
+                       dut._B08_S09_FC1_FC_P2_7,  dut._B08_S09_FC1_FC_P2_6,
+                       dut._B08_S09_FC1_FC_P2_5,  dut._B08_S09_FC1_FC_P2_4,
+                       dut._B08_S09_FC1_FC_P2_3,  dut._B08_S09_FC1_FC_P2_2,
+                       dut._B08_S09_FC1_FC_P2_1,  dut._B08_S09_FC1_FC_P2_0};
+  wire [15:0] FC1P3 = {dut._B08_S09_FC1_FC_P3_15, dut._B08_S09_FC1_FC_P3_14,
+                       dut._B08_S09_FC1_FC_P3_13, dut._B08_S09_FC1_FC_P3_12,
+                       dut._B08_S09_FC1_FC_P3_11, dut._B08_S09_FC1_FC_P3_10,
+                       dut._B08_S09_FC1_FC_P3_9,  dut._B08_S09_FC1_FC_P3_8,
+                       dut._B08_S09_FC1_FC_P3_7,  dut._B08_S09_FC1_FC_P3_6,
+                       dut._B08_S09_FC1_FC_P3_5,  dut._B08_S09_FC1_FC_P3_4,
+                       dut._B08_S09_FC1_FC_P3_3,  dut._B08_S09_FC1_FC_P3_2,
+                       dut._B08_S09_FC1_FC_P3_1,  dut._B08_S09_FC1_FC_P3_0};
+  wire [15:0] FC1P4 = {dut._B08_S09_FC1_FC_P4_15, dut._B08_S09_FC1_FC_P4_14,
+                       dut._B08_S09_FC1_FC_P4_13, dut._B08_S09_FC1_FC_P4_12,
+                       dut._B08_S09_FC1_FC_P4_11, dut._B08_S09_FC1_FC_P4_10,
+                       dut._B08_S09_FC1_FC_P4_9,  dut._B08_S09_FC1_FC_P4_8,
+                       dut._B08_S09_FC1_FC_P4_7,  dut._B08_S09_FC1_FC_P4_6,
+                       dut._B08_S09_FC1_FC_P4_5,  dut._B08_S09_FC1_FC_P4_4,
+                       dut._B08_S09_FC1_FC_P4_3,  dut._B08_S09_FC1_FC_P4_2,
+                       dut._B08_S09_FC1_FC_P4_1,  dut._B08_S09_FC1_FC_P4_0};
+  integer n_fc1_ld = 0;
+  wire [31:0] FC1ACC = {dut.FC1_ACC31, dut.FC1_ACC30, dut.FC1_ACC29, dut.FC1_ACC28,
+                        dut.FC1_ACC27, dut.FC1_ACC26, dut.FC1_ACC25, dut.FC1_ACC24,
+                        dut.FC1_ACC23, dut.FC1_ACC22, dut.FC1_ACC21, dut.FC1_ACC20,
+                        dut.FC1_ACC19, dut.FC1_ACC18, dut.FC1_ACC17, dut.FC1_ACC16,
+                        dut.FC1_ACC15, dut.FC1_ACC14, dut.FC1_ACC13, dut.FC1_ACC12,
+                        dut.FC1_ACC11, dut.FC1_ACC10, dut.FC1_ACC9,  dut.FC1_ACC8,
+                        dut.FC1_ACC7,  dut.FC1_ACC6,  dut.FC1_ACC5,  dut.FC1_ACC4,
+                        dut.FC1_ACC3,  dut.FC1_ACC2,  dut.FC1_ACC1,  dut.FC1_ACC0};
+  wire [7:0] FC1AL = {dut._B08_S09_FC1_FC_A_LAT7, dut._B08_S09_FC1_FC_A_LAT6,
+                      dut._B08_S09_FC1_FC_A_LAT5, dut._B08_S09_FC1_FC_A_LAT4,
+                      dut._B08_S09_FC1_FC_A_LAT3, dut._B08_S09_FC1_FC_A_LAT2,
+                      dut._B08_S09_FC1_FC_A_LAT1, dut._B08_S09_FC1_FC_A_LAT0};
+  wire [7:0] FC1BL = {dut._B08_S09_FC1_FC_B_LAT7, dut._B08_S09_FC1_FC_B_LAT6,
+                      dut._B08_S09_FC1_FC_B_LAT5, dut._B08_S09_FC1_FC_B_LAT4,
+                      dut._B08_S09_FC1_FC_B_LAT3, dut._B08_S09_FC1_FC_B_LAT2,
+                      dut._B08_S09_FC1_FC_B_LAT1, dut._B08_S09_FC1_FC_B_LAT0};
+  wire [15:0] MADDRW = {dut._B03_S04_Memories_MADDR15, dut._B03_S04_Memories_MADDR14,
+                        dut._B03_S04_Memories_MADDR13, dut._B03_S04_Memories_MADDR12,
+                        dut._B03_S04_Memories_MADDR11, dut._B03_S04_Memories_MADDR10,
+                        dut._B03_S04_Memories_MADDR9,  dut._B03_S04_Memories_MADDR8,
+                        dut._B03_S04_Memories_MADDR7,  dut._B03_S04_Memories_MADDR6,
+                        dut._B03_S04_Memories_MADDR5,  dut._B03_S04_Memories_MADDR4,
+                        dut._B03_S04_Memories_MADDR3,  dut._B03_S04_Memories_MADDR2,
+                        dut._B03_S04_Memories_MADDR1,  dut._B03_S04_Memories_MADDR0};
+  integer n_fc1_mac = 0, n_fc1_start = 0, n_fc1acc_nz = 0;
+  integer n_fc1_al = 0, n_fc1_bl = 0;
+  always @(posedge dut._B08_S09_FC1_FC_MAC_EN) begin
+    n_fc1_mac = n_fc1_mac + 1;
+    if (n_fc1_mac <= 12)
+      $display("  [F1] mac=%0d t=%0t NEURON=%b%b%b%b%b INDEX=%b%b%b%b%b%b%b%b%b A_LAT=%02h B_LAT=%02h",
+               n_fc1_mac, $time,
+               dut._B08_S09_FC1_FC_NEURON4, dut._B08_S09_FC1_FC_NEURON3,
+               dut._B08_S09_FC1_FC_NEURON2, dut._B08_S09_FC1_FC_NEURON1,
+               dut._B08_S09_FC1_FC_NEURON0,
+               dut._B08_S09_FC1_FC_INDEX8, dut._B08_S09_FC1_FC_INDEX7,
+               dut._B08_S09_FC1_FC_INDEX6, dut._B08_S09_FC1_FC_INDEX5,
+               dut._B08_S09_FC1_FC_INDEX4, dut._B08_S09_FC1_FC_INDEX3,
+               dut._B08_S09_FC1_FC_INDEX2, dut._B08_S09_FC1_FC_INDEX1,
+               dut._B08_S09_FC1_FC_INDEX0, FC1AL, FC1BL);
+  end
+  always @(posedge dut.FC1_REQ_START) begin
+    n_fc1_start = n_fc1_start + 1;
+    if (FC1ACC !== 32'b0) n_fc1acc_nz = n_fc1acc_nz + 1;
+    if (n_fc1_start <= 40)
+      $display("  [F1R] n=%0d t=%0t ACC=%08h SAT=%b A_LAT=%02h B_LAT=%02h",
+               n_fc1_start, $time, FC1ACC, dut.FC1_SAT_FLAG, FC1AL, FC1BL);
+  end
+  always @(posedge dut._B08_S09_FC1_FC_A_LOAD) begin
+    if (n_fc1_al < 8) begin
+      $display("  [F1A] n=%0d t=%0t MADDR=%04h DBUS=%02h", n_fc1_al, $time, MADDRW, DBUS);
+      n_fc1_al = n_fc1_al + 1;
+    end
+  end
+  always @(posedge dut._B08_S09_FC1_FC_B_LOAD) begin
+    if (n_fc1_bl < 8) begin
+      $display("  [F1B] n=%0d t=%0t MADDR=%04h DBUS=%02h", n_fc1_bl, $time, MADDRW, DBUS);
+      n_fc1_bl = n_fc1_bl + 1;
+    end
+  end
+
+  task print_fc1;
+    begin
+      $write("  FC1: MACs=%0d REQ_STARTs=%0d ACC!=0 at start=%0d\n",
+             n_fc1_mac, n_fc1_start, n_fc1acc_nz);
+    end
+  endtask
+
+  always @(posedge dut._B08_S09_FC1_FC_ACC_LD) begin
+    n_fc1_ld = n_fc1_ld + 1;
+    if (n_fc1_ld <= 8)
+      $display("  [FAL] n=%0d t=%0t P1=%04h P2=%04h P3=%04h P4=%04h PSUM=%04h PSUM16=%b PSUM17=%b BM16=%b BM17=%b ACC=%08h",
+               n_fc1_ld, $time, FC1P1, FC1P2, FC1P3, FC1P4, FC1PSUM,
+               dut._B08_S09_FC1_FC_PSUM16, dut._B08_S09_FC1_FC_PSUM17,
+               dut._B08_S09_FC1_FC_BM16, dut._B08_S09_FC1_FC_BM17, FC1ACC);
+    if (n_fc1_ld <= 8)
+      $display("        SUM=%b%b%b%b%b%b%b%b_%b%b%b%b%b%b%b%b ACCUP=%b%b%b%b%b%b%b%b C3=%b C4=%b C5=%b C6=%b",
+               dut._B08_S09_FC1_FC_SUM23, dut._B08_S09_FC1_FC_SUM22,
+               dut._B08_S09_FC1_FC_SUM21, dut._B08_S09_FC1_FC_SUM20,
+               dut._B08_S09_FC1_FC_SUM19, dut._B08_S09_FC1_FC_SUM18,
+               dut._B08_S09_FC1_FC_SUM17, dut._B08_S09_FC1_FC_SUM16,
+               dut._B08_S09_FC1_FC_SUM31, dut._B08_S09_FC1_FC_SUM30,
+               dut._B08_S09_FC1_FC_SUM29, dut._B08_S09_FC1_FC_SUM28,
+               dut._B08_S09_FC1_FC_SUM27, dut._B08_S09_FC1_FC_SUM26,
+               dut._B08_S09_FC1_FC_SUM25, dut._B08_S09_FC1_FC_SUM24,
+               dut.FC1_ACC23, dut.FC1_ACC22, dut.FC1_ACC21, dut.FC1_ACC20,
+               dut.FC1_ACC19, dut.FC1_ACC18, dut.FC1_ACC17, dut.FC1_ACC16,
+               dut._B08_S09_FC1_FC_ACCSUM_C3, dut._B08_S09_FC1_FC_ACCSUM_C4,
+               dut._B08_S09_FC1_FC_ACCSUM_C5, dut._B08_S09_FC1_FC_ACCSUM_C6);
+  end
+
+  // ---- Pool1 read probe: address sequence for the first windows ----
+  wire [12:0] P1WB = {dut._B05_S05_Pool1_WB12, dut._B05_S05_Pool1_WB11,
+                      dut._B05_S05_Pool1_WB10, dut._B05_S05_Pool1_WB9,
+                      dut._B05_S05_Pool1_WB8, dut._B05_S05_Pool1_WB7,
+                      dut._B05_S05_Pool1_WB6, dut._B05_S05_Pool1_WB5,
+                      dut._B05_S05_Pool1_WB4, dut._B05_S05_Pool1_WB3,
+                      dut._B05_S05_Pool1_WB2, dut._B05_S05_Pool1_WB1,
+                      dut._B05_S05_Pool1_WB0};
+  integer n_p1rd = 0;
+  always @(negedge dut.MEM_nOE) begin
+    if (dut.MEM_SEL0 === 1'b1 && dut.MEM_SEL1 === 1'b0 &&
+        dut.MEM_SEL2 === 1'b0 && dut.MEM_SEL3 === 1'b0 &&
+        dut.MEM_SEL4 === 1'b0) begin
+      if (n_p1rd < 24)
+        $display("  [PR] n=%0d t=%0t ADDR=%04h DBUS=%02h V1V0=%b%b OFF1=%b OFF4=%b WB=%04h",
+                 n_p1rd, $time, MADDRW, DBUS,
+                 dut._B05_S05_Pool1_V1, dut._B05_S05_Pool1_V0,
+                 dut._B05_S05_Pool1_OFF1, dut._B05_S05_Pool1_OFF4, P1WB);
+      n_p1rd = n_p1rd + 1;
+    end
+  end
+
+  // ---- Pool1 control trace for the first windows ----
+  integer n_ptrc = 0;
+  always @(posedge CLK) begin
+    if (dut.P1_START === 1'b1) n_ptrc = 0;
+    if (n_ptrc < 80 && dut._B05_S05_Pool1_BUSY_I === 1'b1) begin
+      $display("  [PT] n=%0d t=%0t ST=%b%b%b%b%b%b%b%b RD=%b WT=%b NX=%b ACK=%b MDONE=%b NXD=%b STEP=%b OXEN=%b ROW=%b V=%b%b WB=%04h ADDR=%04h D=%02h UPD=%b",
+               n_ptrc, $time,
+               dut._B05_S05_Pool1_S_WAIT, dut._B05_S05_Pool1_S_DONE,
+               dut._B05_S05_Pool1_S_NEXT, dut._B05_S05_Pool1_S_OUTLD,
+               dut._B05_S05_Pool1_S_CP, dut._B05_S05_Pool1_S_WT,
+               dut._B05_S05_Pool1_S_RD, dut._B05_S05_Pool1_S_INIT,
+               dut._B05_S05_Pool1_S_RD, dut._B05_S05_Pool1_S_WT,
+               dut._B05_S05_Pool1_S_NEXT, dut.MEM_ACK,
+               dut.MEM_DONE, dut._B05_S05_Pool1_NEXT_DONE,
+               dut._B05_S05_Pool1_STEP, dut._B05_S05_Pool1_OX_EN,
+               dut._B05_S05_Pool1_ROW_STEP,
+               dut._B05_S05_Pool1_V1, dut._B05_S05_Pool1_V0, P1WB,
+               MADDRW, DBUS, dut._B05_S05_Pool1_UPDATE);
+      n_ptrc = n_ptrc + 1;
+    end
+  end
+
+  // ---- FC2 write trace: byte, ACC and bus data ----
+  wire [31:0] FC2ACC = {dut.FC2_ACC31, dut.FC2_ACC30, dut.FC2_ACC29, dut.FC2_ACC28,
+                        dut.FC2_ACC27, dut.FC2_ACC26, dut.FC2_ACC25, dut.FC2_ACC24,
+                        dut.FC2_ACC23, dut.FC2_ACC22, dut.FC2_ACC21, dut.FC2_ACC20,
+                        dut.FC2_ACC19, dut.FC2_ACC18, dut.FC2_ACC17, dut.FC2_ACC16,
+                        dut.FC2_ACC15, dut.FC2_ACC14, dut.FC2_ACC13, dut.FC2_ACC12,
+                        dut.FC2_ACC11, dut.FC2_ACC10, dut.FC2_ACC9,  dut.FC2_ACC8,
+                        dut.FC2_ACC7,  dut.FC2_ACC6,  dut.FC2_ACC5,  dut.FC2_ACC4,
+                        dut.FC2_ACC3,  dut.FC2_ACC2,  dut.FC2_ACC1,  dut.FC2_ACC0};
+  integer n_f2w = 0;
+  always @(negedge dut.MEM_nWE) begin
+    if (dut.FC2_MEM_REQ === 1'b1 && n_f2w < 12) begin
+      $display("  [F2W] n=%0d t=%0t BYTE=%b%b ACC=%08h DBUS=%02h OUT=%02h",
+               n_f2w, $time, dut._B09_S09_FC2_FC_BYTE1, dut._B09_S09_FC2_FC_BYTE0, FC2ACC, DBUS,
+               {dut._B09_S09_FC2_FC_OUT_DATA7, dut._B09_S09_FC2_FC_OUT_DATA6,
+                dut._B09_S09_FC2_FC_OUT_DATA5, dut._B09_S09_FC2_FC_OUT_DATA4,
+                dut._B09_S09_FC2_FC_OUT_DATA3, dut._B09_S09_FC2_FC_OUT_DATA2,
+                dut._B09_S09_FC2_FC_OUT_DATA1, dut._B09_S09_FC2_FC_OUT_DATA0});
+      n_f2w = n_f2w + 1;
+    end
+  end
+
+  // ---- FC1 weight address bit13 for neuron 22 ----
+  integer n_fw22 = 0;
+  always @(posedge dut._B08_S09_FC1_FC_B_LOAD) begin
+    if (dut._B08_S09_FC1_FC_NEURON4 === 1'b1 && dut._B08_S09_FC1_FC_NEURON2 === 1'b1 &&
+        dut._B08_S09_FC1_FC_NEURON1 === 1'b1 && dut._B08_S09_FC1_FC_NEURON0 === 1'b0 &&
+        n_fw22 < 4) begin
+      $display("  [FW] n=%0d t=%0t N400a13=%b N40013=%b NW13=%b WADDR13=%b MX1_13=%b MX2_13=%b MADDR13=%b MADDR=%04h IDX=%b%b%b%b%b%b%b%b%b DATA=%02h",
+               n_fw22, $time,
+               dut._B08_S09_FC1_FC_N400a_13, dut._B08_S09_FC1_FC_N400_13,
+               dut._B08_S09_FC1_FC_NW13, dut._B08_S09_FC1_FC_W_ADDR13,
+               dut._B08_S09_FC1_FC_MX1_13, dut._B08_S09_FC1_FC_MX2_13,
+               dut._B03_S04_Memories_MADDR13, MADDRW,
+               dut._B08_S09_FC1_FC_INDEX8, dut._B08_S09_FC1_FC_INDEX7,
+               dut._B08_S09_FC1_FC_INDEX6, dut._B08_S09_FC1_FC_INDEX5,
+               dut._B08_S09_FC1_FC_INDEX4, dut._B08_S09_FC1_FC_INDEX3,
+               dut._B08_S09_FC1_FC_INDEX2, dut._B08_S09_FC1_FC_INDEX1,
+               dut._B08_S09_FC1_FC_INDEX0, DBUS);
+      n_fw22 = n_fw22 + 1;
+    end
+  end
+
+  // ---- FC1 write trace: address + data + neuron for every output byte ----
+  integer n_f1w = 0;
+  always @(negedge dut.MEM_nWE) begin
+    if (dut.FC1_MEM_REQ === 1'b1 && n_f1w < 34) begin
+      $display("  [F1W] n=%0d t=%0t ADDR=%04h DATA=%02h NEURON=%b%b%b%b%b ST=%b%b%b",
+               n_f1w, $time, MADDRW, DBUS,
+               dut._B08_S09_FC1_FC_NEURON4, dut._B08_S09_FC1_FC_NEURON3,
+               dut._B08_S09_FC1_FC_NEURON2, dut._B08_S09_FC1_FC_NEURON1,
+               dut._B08_S09_FC1_FC_NEURON0,
+               dut._B08_S09_FC1_FC_ST2, dut._B08_S09_FC1_FC_ST1, dut._B08_S09_FC1_FC_ST0);
+      n_f1w = n_f1w + 1;
+    end
+  end
+
+  // ---- C1 weight-address bits for the first B_LOAD of oc=7 ----
+  integer n_w7 = 0;
+  always @(posedge dut._B04_S07_Conv1_C1_B_LOAD) begin
+    if (dut._B04_S07_Conv1_C1_OC2 === 1'b1 && dut._B04_S07_Conv1_C1_OC1 === 1'b1 &&
+        dut._B04_S07_Conv1_C1_OC0 === 1'b1 && n_w7 < 6) begin
+      $display("  [W7] n=%0d t=%0t WADDR=%b%b%b%b%b%b%b%b OC25=%b%b%b%b%b%b%b%b W1=%b%b%b%b%b%b%b%b KY=%b%b%b KX=%b%b%b DATA=%02h",
+               n_w7, $time,
+               dut._B04_S07_Conv1_C1_W_ADDR7, dut._B04_S07_Conv1_C1_W_ADDR6,
+               dut._B04_S07_Conv1_C1_W_ADDR5, dut._B04_S07_Conv1_C1_W_ADDR4,
+               dut._B04_S07_Conv1_C1_W_ADDR3, dut._B04_S07_Conv1_C1_W_ADDR2,
+               dut._B04_S07_Conv1_C1_W_ADDR1, dut._B04_S07_Conv1_C1_W_ADDR0,
+               dut._B04_S07_Conv1_C1_OC25_7, dut._B04_S07_Conv1_C1_OC25_6,
+               dut._B04_S07_Conv1_C1_OC25_5, dut._B04_S07_Conv1_C1_OC25_4,
+               dut._B04_S07_Conv1_C1_OC25_3, dut._B04_S07_Conv1_C1_OC25_2,
+               dut._B04_S07_Conv1_C1_OC25_1, dut._B04_S07_Conv1_C1_OC25_0,
+               dut._B04_S07_Conv1_C1_W1_7, dut._B04_S07_Conv1_C1_W1_6,
+               dut._B04_S07_Conv1_C1_W1_5, dut._B04_S07_Conv1_C1_W1_4,
+               dut._B04_S07_Conv1_C1_W1_3, dut._B04_S07_Conv1_C1_W1_2,
+               dut._B04_S07_Conv1_C1_W1_1, dut._B04_S07_Conv1_C1_W1_0,
+               dut._B04_S07_Conv1_C1_KY2, dut._B04_S07_Conv1_C1_KY1, dut._B04_S07_Conv1_C1_KY0,
+               dut._B04_S07_Conv1_C1_KX2, dut._B04_S07_Conv1_C1_KX1, dut._B04_S07_Conv1_C1_KX0,
+               DBUS);
+      n_w7 = n_w7 + 1;
+    end
+  end
+
+  // ---- C1 channel-7 weight/operand trace (first points of the last filter) ----
+  integer n_c7 = 0;
+  always @(posedge CLK) begin
+    if (dut._B04_S07_Conv1_C1_MAC_EN === 1'b1 &&
+        dut._B04_S07_Conv1_C1_OC0 === 1'b1 && dut._B04_S07_Conv1_C1_OC1 === 1'b1 &&
+        dut._B04_S07_Conv1_C1_OC2 === 1'b1 &&
+        dut._B04_S07_Conv1_C1_SP9 === 1'b0 && dut._B04_S07_Conv1_C1_SP8 === 1'b0) begin
+      if (n_c7 < 30)
+        $display("  [C7] n=%0d t=%0t KX=%b%b%b KY=%b%b%b OX=%b%b%b%b%b OY=%b%b%b%b%b SP=%b%b AL=%02h BL=%02h ADDR=%04h",
+                 n_c7, $time,
+                 dut._B04_S07_Conv1_C1_KX2, dut._B04_S07_Conv1_C1_KX1, dut._B04_S07_Conv1_C1_KX0,
+                 dut._B04_S07_Conv1_C1_KY2, dut._B04_S07_Conv1_C1_KY1, dut._B04_S07_Conv1_C1_KY0,
+                 dut._B04_S07_Conv1_C1_OX4, dut._B04_S07_Conv1_C1_OX3, dut._B04_S07_Conv1_C1_OX2,
+                 dut._B04_S07_Conv1_C1_OX1, dut._B04_S07_Conv1_C1_OX0,
+                 dut._B04_S07_Conv1_C1_OY4, dut._B04_S07_Conv1_C1_OY3, dut._B04_S07_Conv1_C1_OY2,
+                 dut._B04_S07_Conv1_C1_OY1, dut._B04_S07_Conv1_C1_OY0,
+                 dut._B04_S07_Conv1_C1_SP1, dut._B04_S07_Conv1_C1_SP0,
+                 ALW, BLW, MADDRW);
+      n_c7 = n_c7 + 1;
+    end
+  end
+
+  // ---- first 60 MAC steps: KX/KY/pad/point_last sequence ----
+  integer mstep = 0;
+  always @(posedge CLK) begin
+    if (dut._B04_S07_Conv1_C1_MAC_EN === 1'b1 && mstep < 60) begin
+      $display("  [MS] n=%0d t=%0t KX=%b%b%b KY=%b%b%b PAD_A=%b PAD_LAST=%b PT_LAST=%b PAD0=%b PAD1=%b KXPE_N=%b KYPE_N=%b",
+               mstep, $time,
+               dut._B04_S07_Conv1_C1_KX2, dut._B04_S07_Conv1_C1_KX1, dut._B04_S07_Conv1_C1_KX0,
+               dut._B04_S07_Conv1_C1_KY2, dut._B04_S07_Conv1_C1_KY1, dut._B04_S07_Conv1_C1_KY0,
+               dut._B04_S07_Conv1_C1_PAD_ACTIVE, dut._B04_S07_Conv1_C1_PAD_LAST,
+               dut._B04_S07_Conv1_C1_POINT_LAST,
+               dut._B04_S07_Conv1_C1_PAD0, dut._B04_S07_Conv1_C1_PAD1,
+               dut._B04_S07_Conv1_C1_KX_PE_N, dut._B04_S07_Conv1_C1_KY_PE_N);
+      if (mstep < 8)
+        $display("  [MD] n=%0d A_LAT=%02h B_LAT=%02h A0=%02h B0=%02h A1=%02h B1=%02h",
+                 mstep, ALW, BLW,
+                 {dut._B04_S07_Conv1_C1_A0_7, dut._B04_S07_Conv1_C1_A0_6,
+                  dut._B04_S07_Conv1_C1_A0_5, dut._B04_S07_Conv1_C1_A0_4,
+                  dut._B04_S07_Conv1_C1_A0_3, dut._B04_S07_Conv1_C1_A0_2,
+                  dut._B04_S07_Conv1_C1_A0_1, dut._B04_S07_Conv1_C1_A0_0},
+                 {dut._B04_S07_Conv1_C1_B0_7, dut._B04_S07_Conv1_C1_B0_6,
+                  dut._B04_S07_Conv1_C1_B0_5, dut._B04_S07_Conv1_C1_B0_4,
+                  dut._B04_S07_Conv1_C1_B0_3, dut._B04_S07_Conv1_C1_B0_2,
+                  dut._B04_S07_Conv1_C1_B0_1, dut._B04_S07_Conv1_C1_B0_0},
+                 {dut._B04_S07_Conv1_C1_A1_7, dut._B04_S07_Conv1_C1_A1_6,
+                  dut._B04_S07_Conv1_C1_A1_5, dut._B04_S07_Conv1_C1_A1_4,
+                  dut._B04_S07_Conv1_C1_A1_3, dut._B04_S07_Conv1_C1_A1_2,
+                  dut._B04_S07_Conv1_C1_A1_1, dut._B04_S07_Conv1_C1_A1_0},
+                 {dut._B04_S07_Conv1_C1_B1_7, dut._B04_S07_Conv1_C1_B1_6,
+                  dut._B04_S07_Conv1_C1_B1_5, dut._B04_S07_Conv1_C1_B1_4,
+                  dut._B04_S07_Conv1_C1_B1_3, dut._B04_S07_Conv1_C1_B1_2,
+                  dut._B04_S07_Conv1_C1_B1_1, dut._B04_S07_Conv1_C1_B1_0});
+      mstep = mstep + 1;
+    end
+  end
+
+  // ---- first A_LOAD edges: address + data the engine captured as activation ----
+  wire [15:0] C1AD = {dut.C1_ADDR15, dut.C1_ADDR14, dut.C1_ADDR13, dut.C1_ADDR12,
+                      dut.C1_ADDR11, dut.C1_ADDR10, dut.C1_ADDR9,  dut.C1_ADDR8,
+                      dut.C1_ADDR7,  dut.C1_ADDR6,  dut.C1_ADDR5,  dut.C1_ADDR4,
+                      dut.C1_ADDR3,  dut.C1_ADDR2,  dut.C1_ADDR1,  dut.C1_ADDR0};
+  integer aload_cnt = 0;
+  always @(posedge dut._B04_S07_Conv1_C1_A_LOAD) begin
+    if (aload_cnt < 12) begin
+      $display("  [AD] n=%0d t=%0t ADDR=%04h SEL=%b%b%b%b%b DATA=%02h OX=%b%b%b%b%b OY=%b%b%b%b%b ADD_SEL=%b%b",
+               aload_cnt, $time, C1AD, dut.MEM_SEL4, dut.MEM_SEL3, dut.MEM_SEL2,
+               dut.MEM_SEL1, dut.MEM_SEL0, DBUS,
+               dut._B04_S07_Conv1_C1_OX4, dut._B04_S07_Conv1_C1_OX3,
+               dut._B04_S07_Conv1_C1_OX2, dut._B04_S07_Conv1_C1_OX1,
+               dut._B04_S07_Conv1_C1_OX0,
+               dut._B04_S07_Conv1_C1_OY4, dut._B04_S07_Conv1_C1_OY3,
+               dut._B04_S07_Conv1_C1_OY2, dut._B04_S07_Conv1_C1_OY1,
+               dut._B04_S07_Conv1_C1_OY0,
+               dut._B04_S07_Conv1_C1_ADD_SEL1, dut._B04_S07_Conv1_C1_ADD_SEL0);
+      $display("       MX2=%b%b%b%b%b%b%b%b INA=%b%b%b%b%b%b%b%b WA=%b%b%b%b%b%b%b%b",
+               dut._B04_S07_Conv1_C1_MX2_7, dut._B04_S07_Conv1_C1_MX2_6,
+               dut._B04_S07_Conv1_C1_MX2_5, dut._B04_S07_Conv1_C1_MX2_4,
+               dut._B04_S07_Conv1_C1_MX2_3, dut._B04_S07_Conv1_C1_MX2_2,
+               dut._B04_S07_Conv1_C1_MX2_1, dut._B04_S07_Conv1_C1_MX2_0,
+               dut._B04_S07_Conv1_C1_IN_ADDR7, dut._B04_S07_Conv1_C1_IN_ADDR6,
+               dut._B04_S07_Conv1_C1_IN_ADDR5, dut._B04_S07_Conv1_C1_IN_ADDR4,
+               dut._B04_S07_Conv1_C1_IN_ADDR3, dut._B04_S07_Conv1_C1_IN_ADDR2,
+               dut._B04_S07_Conv1_C1_IN_ADDR1, dut._B04_S07_Conv1_C1_IN_ADDR0,
+               dut._B04_S07_Conv1_C1_W_ADDR7, dut._B04_S07_Conv1_C1_W_ADDR6,
+               dut._B04_S07_Conv1_C1_W_ADDR5, dut._B04_S07_Conv1_C1_W_ADDR4,
+               dut._B04_S07_Conv1_C1_W_ADDR3, dut._B04_S07_Conv1_C1_W_ADDR2,
+               dut._B04_S07_Conv1_C1_W_ADDR1, dut._B04_S07_Conv1_C1_W_ADDR0);
+      $display("       SX=%b%b%b%b%b SY28=%b%b%b%b%b KY=%b%b%b KX=%b%b%b",
+               dut._B04_S07_Conv1_C1_SX4, dut._B04_S07_Conv1_C1_SX3,
+               dut._B04_S07_Conv1_C1_SX2, dut._B04_S07_Conv1_C1_SX1,
+               dut._B04_S07_Conv1_C1_SX0,
+               dut._B04_S07_Conv1_C1_SY28_4, dut._B04_S07_Conv1_C1_SY28_3,
+               dut._B04_S07_Conv1_C1_SY28_2, dut._B04_S07_Conv1_C1_SY28_1,
+               dut._B04_S07_Conv1_C1_SY28_0,
+               dut._B04_S07_Conv1_C1_KY2, dut._B04_S07_Conv1_C1_KY1,
+               dut._B04_S07_Conv1_C1_KY0,
+               dut._B04_S07_Conv1_C1_KX2, dut._B04_S07_Conv1_C1_KX1,
+               dut._B04_S07_Conv1_C1_KX0);
+      aload_cnt = aload_cnt + 1;
+    end
+  end
+
+  // ---- reset probe: pool MAX register and its clear ----
+  integer rst_cnt = 0;
+  always @(posedge CLK) begin
+    if (rst_cnt < 6) begin
+      $display("  [RP] t=%0t RESET_RAW=%b RESET_N=%b CLR_N=%b MRN=%b q=%b",
+               $time, RESET_RAW, dut.RESET_N, dut._B05_S05_Pool1_CLR_N, dut.RESET_N, dut.U5010.q);
+      rst_cnt = rst_cnt + 1;
+    end
+  end
+
+  // ---- pool read snapshot: does the MAX register sample valid bus data? ----
+  wire [7:0] PMAXW = {dut._B05_S05_Pool1_MAX7, dut._B05_S05_Pool1_MAX6,
+                      dut._B05_S05_Pool1_MAX5, dut._B05_S05_Pool1_MAX4,
+                      dut._B05_S05_Pool1_MAX3, dut._B05_S05_Pool1_MAX2,
+                      dut._B05_S05_Pool1_MAX1, dut._B05_S05_Pool1_MAX0};
+  integer rsnap_cnt = 0, rsnap_done = 0;
+  always @(posedge CLK) begin
+    if (!rsnap_done && dut.POOL1_MEM_REQ === 1'b1 && $time > 66000000
+        && dut._B05_S05_Pool1_READ_PHASE === 1'b1) begin
+      rsnap_done = 1; rsnap_cnt = 0;
+      $display("  [RS] pool read snapshot at %0t", $time);
+    end
+    if (rsnap_done && rsnap_cnt < 40) begin
+      $display("  [RS] t=%0t REQ=%b ACK=%b nCE=%b nOE=%b DATA=%02h MAX=%02h q=%02h UPD=%b SWAIT=%b RPH=%b V0=%b GT=%b",
+               $time, dut.POOL1_MEM_REQ, dut.MEM_ACK, dut.MEM_nCE, dut.MEM_nOE,
+               DBUS, PMAXW, dut.U5010.q, dut._B05_S05_Pool1_UPDATE,
+               dut._B05_S05_Pool1_S_WAIT, dut._B05_S05_Pool1_READ_PHASE,
+               dut._B05_S05_Pool1_IS_V0, dut._B05_S05_Pool1_GT);
+      rsnap_cnt = rsnap_cnt + 1;
+    end
+  end
+
+  // ---- pool write snapshot: when does NS_NEXT / OUT data vs nWE rise? ----
+  wire [7:0] PODW = {dut.POOL1_OUT_DATA7, dut.POOL1_OUT_DATA6, dut.POOL1_OUT_DATA5,
+                     dut.POOL1_OUT_DATA4, dut.POOL1_OUT_DATA3, dut.POOL1_OUT_DATA2,
+                     dut.POOL1_OUT_DATA1, dut.POOL1_OUT_DATA0};
+  integer psnap_cnt = 0, psnap_done = 0;
+  always @(negedge dut.MEM_nWE) begin
+    if (!psnap_done && dut.POOL1_MEM_REQ === 1'b1 && $time > 70000000) begin
+      psnap_done = 1; psnap_cnt = 0;
+      $display("  [PS] pool write snapshot at %0t", $time);
+    end
+  end
+  always @(posedge CLK) begin
+    if (psnap_done && psnap_cnt < 40) begin
+      $display("  [PS] t=%0t REQ=%b WE=%b NS_NEXT=%b S_NEXT=%b nCE_OUT=%b nCE=%b nWE=%b DATA=%02h POD=%02h BUSY=%b",
+               $time, dut.POOL1_MEM_REQ, dut.POOL1_MEM_WE,
+               dut._B05_S05_Pool1_NS_NEXT, dut._B05_S05_Pool1_S_NEXT,
+               dut.POOL1_MEM_nCE_OUT, dut.MEM_nCE, dut.MEM_nWE, DBUS, PODW,
+               dut.POOL1_BUSY);
+      psnap_cnt = psnap_cnt + 1;
+    end
+  end
+
+  // ---- one-write-cycle snapshot (40 clocks from first WE fall in the run) ----
+  integer snap_fd;
+  reg snap_on = 1'b0;
+  reg snap_done = 1'b0;
+  integer snap_cnt = 0;
+  initial snap_fd = $fopen("tb_wr_snap.log", "w");
+  wire [4:0] C1ST = {dut._B04_S07_Conv1_C1_ST4, dut._B04_S07_Conv1_C1_ST3,
+                     dut._B04_S07_Conv1_C1_ST2, dut._B04_S07_Conv1_C1_ST1,
+                     dut._B04_S07_Conv1_C1_ST0};
+  always @(posedge CLK) begin
+    if (!snap_done && C1ST == 5'd7 && dut._B04_S07_Conv1_C1_POINT_LAST === 1'b1) begin
+      snap_on = 1'b1; snap_cnt = 0; snap_done = 1'b1;
+      $fdisplay(snap_fd, "# last-MAC write sequence snapshot at %0t", $time);
+      $fdisplay(snap_fd, "# t;ST;REQ;WE;REQ_S;WE_S;TS;nCE;nWE;ACK;DONE;SEL;DBUS;ADDR");
+    end
+  end
+  always @(posedge CLK) begin
+    if (snap_on) begin
+      $fdisplay(snap_fd, "%0d;%b;%b;%b;%b;%b;%b;%b;%b;%b;%b;%0d;%02h;%04h",
+        $time,
+        {dut._B04_S07_Conv1_C1_ST4, dut._B04_S07_Conv1_C1_ST3, dut._B04_S07_Conv1_C1_ST2,
+         dut._B04_S07_Conv1_C1_ST1, dut._B04_S07_Conv1_C1_ST0},
+        dut.C1_MEM_REQ, dut.C1_MEM_WE,
+        dut._B02_S02_Timing_REQ_S, dut._B02_S02_Timing_WE_S,
+        {dut._B02_S02_Timing_TS2, dut._B02_S02_Timing_TS1, dut._B02_S02_Timing_TS0},
+        dut.MEM_nCE, dut.MEM_nWE, dut.MEM_ACK, dut.MEM_DONE, MSEL, DBUS,
+        {dut.ADDR15, dut.ADDR14, dut.ADDR13, dut.ADDR12, dut.ADDR11, dut.ADDR10, dut.ADDR9, dut.ADDR8,
+         dut.ADDR7, dut.ADDR6, dut.ADDR5, dut.ADDR4, dut.ADDR3, dut.ADDR2, dut.ADDR1, dut.ADDR0});
+      snap_cnt = snap_cnt + 1;
+      if (snap_cnt >= 60) begin snap_on = 1'b0; snap_done = 1'b1; end
+    end
+  end
+
+  integer wr_owner [0:4];
+  integer woi;
+  initial for (woi = 0; woi < 5; woi = woi + 1) wr_owner[woi] = 0;
+
+  // ---- probe the E_ACC state: ACC_EN / lane counter / ACC_LD ----
+  integer n_acc_st = 0;
+  integer mac_trace = 0;
+  always @(posedge CLK) begin
+    if (C1ST == 5'd7) begin
+      n_acc_st = n_acc_st + 1;
+      if (n_acc_st <= 10)
+        $display("  [AE] n=%0d t=%0t ACC_EN=%b LANE=%b%b q=%b%b%b%b PE_N=%b CLR_N=%b ACC_LD=%b PSUM=%04h",
+                 n_acc_st, $time, dut._B04_S07_Conv1_C1_ACC_EN,
+                 dut._B04_S07_Conv1_C1_LANE1, dut._B04_S07_Conv1_C1_LANE0,
+                 dut.U7140.q[3], dut.U7140.q[2], dut.U7140.q[1], dut.U7140.q[0],
+                 dut._B04_S07_Conv1_C1_LANE_PE_N, dut._B04_S07_Conv1_C1_CNT_RESET_N,
+                 dut._B04_S07_Conv1_C1_ACC_LD, PSUM);
+      if (n_acc_st == 3) mac_trace = 30;
+    end
+    if (mac_trace != 0) begin
+      $display("  [MT] t=%0t ST=%b q=%b%b%b%b CLR_N=%b PE_N=%b ACC_EN=%b",
+               $time, C1ST, dut.U7140.q[3], dut.U7140.q[2], dut.U7140.q[1], dut.U7140.q[0],
+               dut._B04_S07_Conv1_C1_CNT_RESET_N, dut._B04_S07_Conv1_C1_LANE_PE_N,
+               dut._B04_S07_Conv1_C1_ACC_EN);
+      mac_trace = mac_trace - 1;
+    end
+  end
+  always @(negedge dut.MEM_nWE) begin
+    if (dut.C1_MEM_REQ === 1'b1)       wr_owner[0] = wr_owner[0] + 1;
+    else if (dut.C2_MEM_REQ === 1'b1)  wr_owner[1] = wr_owner[1] + 1;
+    else if (dut.FC_MEM_REQ === 1'b1)  wr_owner[2] = wr_owner[2] + 1;
+    else if (dut.POOL_MEM_REQ === 1'b1) wr_owner[3] = wr_owner[3] + 1;
+    else                                wr_owner[4] = wr_owner[4] + 1;
+  end
+  // ---- requant handshake pulse counters ----
+  integer n_rq_start = 0, n_rq_qstb = 0, n_rq_done = 0;
+  integer n_qstb_hi_clk = 0;
+  always @(posedge dut.C1_REQ_START) n_rq_start = n_rq_start + 1;
+  always @(posedge dut.C1_REQ_QSTB)  n_rq_qstb  = n_rq_qstb  + 1;
+  always @(posedge dut.C1_REQ_DONE)  n_rq_done  = n_rq_done  + 1;
+  always @(posedge CLK) if (dut.C1_REQ_QSTB === 1'b1) n_qstb_hi_clk = n_qstb_hi_clk + 1;
+
+  integer n_a_load = 0, n_b_load = 0, n_wait_a = 0, n_wait_b = 0;
+  always @(posedge dut._B04_S07_Conv1_C1_A_LOAD) n_a_load = n_a_load + 1;
+  always @(posedge dut._B04_S07_Conv1_C1_B_LOAD) n_b_load = n_b_load + 1;
+  integer n_b_pad = 0, n_b_ok = 0;
+  always @(posedge dut._B04_S07_Conv1_C1_B_LOAD)
+    if (dut._B04_S07_Conv1_C1_PAD_ACTIVE === 1'b1) n_b_pad = n_b_pad + 1;
+    else n_b_ok = n_b_ok + 1;
+  always @(posedge dut._B04_S07_Conv1_C1_WAIT_A) n_wait_a = n_wait_a + 1;
+  always @(posedge dut._B04_S07_Conv1_C1_WAIT_B) n_wait_b = n_wait_b + 1;
+  // ---- one-shot datapath probe mid-C1: ACC -> requant -> OUT latch ----
+  reg dp_seen = 1'b0;
+  always @(posedge CLK) begin
+    if (!dp_seen && $time > 30000000 && dut.C1_MEM_REQ === 1'b1) begin
+      dp_seen = 1'b1;
+      $display("  [DP] t=%0t ACC=%b%b%b%b_%b%b%b%b_%b%b%b%b_%b%b%b%b_%b%b%b%b_%b%b%b%b_%b%b%b%b_%b%b%b%b",
+        $time,
+        dut.C1_ACC31, dut.C1_ACC30, dut.C1_ACC29, dut.C1_ACC28,
+        dut.C1_ACC27, dut.C1_ACC26, dut.C1_ACC25, dut.C1_ACC24,
+        dut.C1_ACC23, dut.C1_ACC22, dut.C1_ACC21, dut.C1_ACC20,
+        dut.C1_ACC19, dut.C1_ACC18, dut.C1_ACC17, dut.C1_ACC16,
+        dut.C1_ACC15, dut.C1_ACC14, dut.C1_ACC13, dut.C1_ACC12,
+        dut.C1_ACC11, dut.C1_ACC10, dut.C1_ACC9,  dut.C1_ACC8,
+        dut.C1_ACC7,  dut.C1_ACC6,  dut.C1_ACC5,  dut.C1_ACC4,
+        dut.C1_ACC3,  dut.C1_ACC2,  dut.C1_ACC1,  dut.C1_ACC0);
+      $display("  [DP] QVAL=%b%b%b%b_%b%b%b%b Q=%b%b%b%b_%b%b%b%b SAT_POS=%b",
+        dut._B04_S13_Requant_C1_C1_RQ_QVAL7, dut._B04_S13_Requant_C1_C1_RQ_QVAL6,
+        dut._B04_S13_Requant_C1_C1_RQ_QVAL5, dut._B04_S13_Requant_C1_C1_RQ_QVAL4,
+        dut._B04_S13_Requant_C1_C1_RQ_QVAL3, dut._B04_S13_Requant_C1_C1_RQ_QVAL2,
+        dut._B04_S13_Requant_C1_C1_RQ_QVAL1, dut._B04_S13_Requant_C1_C1_RQ_QVAL0,
+        dut.C1_REQ_Q7, dut.C1_REQ_Q6, dut.C1_REQ_Q5, dut.C1_REQ_Q4,
+        dut.C1_REQ_Q3, dut.C1_REQ_Q2, dut.C1_REQ_Q1, dut.C1_REQ_Q0,
+        dut._B04_S13_Requant_C1_C1_RQ_SAT_POS);
+      $display("  [DP] P1=%b%b%b%b_%b%b%b%b_%b%b%b%b_%b%b%b%b",
+        dut._B04_S07_Conv1_C1_P1_15, dut._B04_S07_Conv1_C1_P1_14,
+        dut._B04_S07_Conv1_C1_P1_13, dut._B04_S07_Conv1_C1_P1_12,
+        dut._B04_S07_Conv1_C1_P1_11, dut._B04_S07_Conv1_C1_P1_10,
+        dut._B04_S07_Conv1_C1_P1_9,  dut._B04_S07_Conv1_C1_P1_8,
+        dut._B04_S07_Conv1_C1_P1_7,  dut._B04_S07_Conv1_C1_P1_6,
+        dut._B04_S07_Conv1_C1_P1_5,  dut._B04_S07_Conv1_C1_P1_4,
+        dut._B04_S07_Conv1_C1_P1_3,  dut._B04_S07_Conv1_C1_P1_2,
+        dut._B04_S07_Conv1_C1_P1_1,  dut._B04_S07_Conv1_C1_P1_0);
+    end
+  end
+
+  // ---- probe at the 5th QSTB: operands -> LUT -> ACC -> Q ----
+  integer qstb_cnt = 0;
+  always @(posedge dut.C1_REQ_QSTB) begin
+    qstb_cnt = qstb_cnt + 1;
+    if (qstb_cnt == 5) begin
+      $display("  [Q5] A_LAT=%b%b%b%b_%b%b%b%b B_LAT=%b%b%b%b_%b%b%b%b",
+        dut._B04_S07_Conv1_C1_A_LAT7, dut._B04_S07_Conv1_C1_A_LAT6,
+        dut._B04_S07_Conv1_C1_A_LAT5, dut._B04_S07_Conv1_C1_A_LAT4,
+        dut._B04_S07_Conv1_C1_A_LAT3, dut._B04_S07_Conv1_C1_A_LAT2,
+        dut._B04_S07_Conv1_C1_A_LAT1, dut._B04_S07_Conv1_C1_A_LAT0,
+        dut._B04_S07_Conv1_C1_B_LAT7, dut._B04_S07_Conv1_C1_B_LAT6,
+        dut._B04_S07_Conv1_C1_B_LAT5, dut._B04_S07_Conv1_C1_B_LAT4,
+        dut._B04_S07_Conv1_C1_B_LAT3, dut._B04_S07_Conv1_C1_B_LAT2,
+        dut._B04_S07_Conv1_C1_B_LAT1, dut._B04_S07_Conv1_C1_B_LAT0);
+      $display("  [Q5] P1=%b%b%b%b_%b%b%b%b_%b%b%b%b_%b%b%b%b ACC=%b%b%b%b_%b%b%b%b_%b%b%b%b_%b%b%b%b",
+        dut._B04_S07_Conv1_C1_P1_15, dut._B04_S07_Conv1_C1_P1_14,
+        dut._B04_S07_Conv1_C1_P1_13, dut._B04_S07_Conv1_C1_P1_12,
+        dut._B04_S07_Conv1_C1_P1_11, dut._B04_S07_Conv1_C1_P1_10,
+        dut._B04_S07_Conv1_C1_P1_9,  dut._B04_S07_Conv1_C1_P1_8,
+        dut._B04_S07_Conv1_C1_P1_7,  dut._B04_S07_Conv1_C1_P1_6,
+        dut._B04_S07_Conv1_C1_P1_5,  dut._B04_S07_Conv1_C1_P1_4,
+        dut._B04_S07_Conv1_C1_P1_3,  dut._B04_S07_Conv1_C1_P1_2,
+        dut._B04_S07_Conv1_C1_P1_1,  dut._B04_S07_Conv1_C1_P1_0,
+        dut.C1_ACC15, dut.C1_ACC14, dut.C1_ACC13, dut.C1_ACC12,
+        dut.C1_ACC11, dut.C1_ACC10, dut.C1_ACC9,  dut.C1_ACC8,
+        dut.C1_ACC7,  dut.C1_ACC6,  dut.C1_ACC5,  dut.C1_ACC4,
+        dut.C1_ACC3,  dut.C1_ACC2,  dut.C1_ACC1,  dut.C1_ACC0);
+      $display("  [Q5] QVAL=%b%b%b%b_%b%b%b%b Q=%b%b%b%b_%b%b%b%b OUT_DATA=%b%b%b%b_%b%b%b%b",
+        dut._B04_S13_Requant_C1_C1_RQ_QVAL7, dut._B04_S13_Requant_C1_C1_RQ_QVAL6,
+        dut._B04_S13_Requant_C1_C1_RQ_QVAL5, dut._B04_S13_Requant_C1_C1_RQ_QVAL4,
+        dut._B04_S13_Requant_C1_C1_RQ_QVAL3, dut._B04_S13_Requant_C1_C1_RQ_QVAL2,
+        dut._B04_S13_Requant_C1_C1_RQ_QVAL1, dut._B04_S13_Requant_C1_C1_RQ_QVAL0,
+        dut.C1_REQ_Q7, dut.C1_REQ_Q6, dut.C1_REQ_Q5, dut.C1_REQ_Q4,
+        dut.C1_REQ_Q3, dut.C1_REQ_Q2, dut.C1_REQ_Q1, dut.C1_REQ_Q0,
+        dut._B04_S07_Conv1_C1_OUT_DATA7, dut._B04_S07_Conv1_C1_OUT_DATA6,
+        dut._B04_S07_Conv1_C1_OUT_DATA5, dut._B04_S07_Conv1_C1_OUT_DATA4,
+        dut._B04_S07_Conv1_C1_OUT_DATA3, dut._B04_S07_Conv1_C1_OUT_DATA2,
+        dut._B04_S07_Conv1_C1_OUT_DATA1, dut._B04_S07_Conv1_C1_OUT_DATA0);
+    end
+  end
+
+  task sel_histo;
+    integer s;
+    begin
+      $write("  SEL histogram read :");
+      for (s = 0; s < 32; s = s + 1)
+        if (sel_rd[s] > 0) $write(" %0d:%0d", s, sel_rd[s]);
+      $write("\n  SEL histogram write:");
+      for (s = 0; s < 32; s = s + 1)
+        if (sel_wr[s] > 0) $write(" %0d:%0d", s, sel_wr[s]);
+      $write("\n  SEL histo rd@end :");
+      for (s = 0; s < 32; s = s + 1)
+        if (sel_rd_end[s] > 0) $write(" %0d:%0d", s, sel_rd_end[s]);
+      $write("\n  SEL histo wr@end :");
+      for (s = 0; s < 32; s = s + 1)
+        if (sel_wr_end[s] > 0) $write(" %0d:%0d", s, sel_wr_end[s]);
+      $write("\n  SEL=31 cycles: region-asserted=%0d  no-region=%0d\n",
+             cyc_region_but31, cyc_noregion);
+    end
+  endtask
+
+  // ---- full byte dumps for offline layer comparison ----
+  integer dump_fd;
+  task dump_mem;
+    input [8*16:1] name;
+    input integer inst_sel;
+    input integer size;
+    integer d;
+    reg [8*96:1] path;
+    begin
+      $sformat(path, "dump_%0s_%0d.hex", name, v);
+      dump_fd = $fopen(path, "w");
+      for (d = 0; d < size; d = d + 1) begin
+        case (inst_sel)
+          0: $fwrite(dump_fd, "%02x\n", dut.U4001.mem[d]);
+          1: $fwrite(dump_fd, "%02x\n", dut.U4002.mem[d]);
+          2: $fwrite(dump_fd, "%02x\n", dut.U4003.mem[d]);
+          3: $fwrite(dump_fd, "%02x\n", dut.U4004.mem[d]);
+          4: $fwrite(dump_fd, "%02x\n", dut.U4005.mem[d]);
+          5: $fwrite(dump_fd, "%02x\n", dut.U4006.mem[d]);
+          6: $fwrite(dump_fd, "%02x\n", dut.U4007.mem[d]);
+          7: $fwrite(dump_fd, "%02x\n", dut.U4008.mem[d]);
+          8: $fwrite(dump_fd, "%02x\n", dut.U4009.mem[d]);
+          9: $fwrite(dump_fd, "%02x\n", dut.U4010.mem[d]);
+          10: $fwrite(dump_fd, "%02x\n", dut.U4011.mem[d]);
+          default: $fwrite(dump_fd, "00\n");
+        endcase
+      end
+      $fclose(dump_fd);
+    end
+  endtask
+
+  task mem_dump;
+    input [8*32:1] name;
+    input integer inst_sel;   // which instance to peek
+    input integer n;          // head bytes to print
+    input integer size;       // bytes to scan for nonzero
+    integer d, nz;
+    integer nxz;
+    begin
+      nz = 0;
+      nxz = 0;
+      for (d = 0; d < size; d = d + 1) begin
+        case (inst_sel)
+          0: if (dut.U4001.mem[d] !== 8'h00) nz = nz + 1;
+          1: if (dut.U4002.mem[d] !== 8'h00) nz = nz + 1;
+          2: if (dut.U4003.mem[d] !== 8'h00) nz = nz + 1;
+          3: if (dut.U4004.mem[d] !== 8'h00) nz = nz + 1;
+          4: if (dut.U4005.mem[d] !== 8'h00) nz = nz + 1;
+          5: if (dut.U4006.mem[d] !== 8'h00) nz = nz + 1;
+          6: if (dut.U4007.mem[d] !== 8'h00) nz = nz + 1;
+          7: if (dut.U4008.mem[d] !== 8'h00) nz = nz + 1;
+          8: if (dut.U4009.mem[d] !== 8'h00) nz = nz + 1;
+          9: if (dut.U4010.mem[d] !== 8'h00) nz = nz + 1;
+          10: if (dut.U4011.mem[d] !== 8'h00) nz = nz + 1;
+        endcase
+        case (inst_sel)
+          0: if (^dut.U4001.mem[d] === 1'bx) nxz = nxz + 1;
+          1: if (^dut.U4002.mem[d] === 1'bx) nxz = nxz + 1;
+          2: if (^dut.U4003.mem[d] === 1'bx) nxz = nxz + 1;
+          3: if (^dut.U4004.mem[d] === 1'bx) nxz = nxz + 1;
+          4: if (^dut.U4005.mem[d] === 1'bx) nxz = nxz + 1;
+          5: if (^dut.U4006.mem[d] === 1'bx) nxz = nxz + 1;
+          6: if (^dut.U4007.mem[d] === 1'bx) nxz = nxz + 1;
+          7: if (^dut.U4008.mem[d] === 1'bx) nxz = nxz + 1;
+          8: if (^dut.U4009.mem[d] === 1'bx) nxz = nxz + 1;
+          9: if (^dut.U4010.mem[d] === 1'bx) nxz = nxz + 1;
+          10: if (^dut.U4011.mem[d] === 1'bx) nxz = nxz + 1;
+        endcase
+      end
+      $display("  MEMDUMP %0s (scan %0d): nonzero=%0d x/z=%0d first:", name, size, nz, nxz);
+      for (d = 0; d < n; d = d + 1) begin
+        case (inst_sel)
+          0: $write(" %02h", dut.U4001.mem[d]);
+          1: $write(" %02h", dut.U4002.mem[d]);
+          2: $write(" %02h", dut.U4003.mem[d]);
+          3: $write(" %02h", dut.U4004.mem[d]);
+          4: $write(" %02h", dut.U4005.mem[d]);
+          5: $write(" %02h", dut.U4006.mem[d]);
+          6: $write(" %02h", dut.U4007.mem[d]);
+          7: $write(" %02h", dut.U4008.mem[d]);
+          8: $write(" %02h", dut.U4009.mem[d]);
+          9: $write(" %02h", dut.U4010.mem[d]);
+          10: $write(" %02h", dut.U4011.mem[d]);
+        endcase
+      end
+      $write("\n");
+    end
+  endtask
+
+  // ------------------------------------------------------------ stimulus
+  initial begin
+    if ($test$plusargs("vcd")) begin
+      $dumpfile("tb_numeric.vcd");
+      $dumpvars(0, tb_numeric);
+    end
+
+    nvec = 1;
+    if (!$value$plusargs("nvec=%d", nvec)) nvec = 1;
+    if (nvec > 8) nvec = 8;
+
+    // ---- reset first: the load-path decode needs released RESET_RAW ----
+    do_reset();
+
+    // ---- stage the model files ----
+    $readmemh("../../weights/x28s/conv1_weight.hex", payload);
+    load_window(5'd8, 200);      // W_CONV1
+    $readmemh("../../weights/x28s/conv1_bias.hex", payload);
+    load_window(5'd12, 32);      // B_CONV1
+    $readmemh("../../weights/x28s/qparams.hex", payload);
+    load_window(5'd16, 128);     // Q_CONV1: neurons 0..7
+    $readmemh("../../weights/x28s/conv2_weight.hex", payload);
+    load_window(5'd9, 1152);     // W_CONV2
+    $readmemh("../../weights/x28s/conv2_bias.hex", payload);
+    load_window(5'd13, 64);      // B_CONV2
+    for (i = 0; i < 256; i = i + 1) payload[i] = payload[128 + i];
+    load_window(5'd17, 256);     // Q_CONV2: neurons 8..23
+    $readmemh("../../weights/x28s/fc1_weight.hex", payload);
+    load_window(5'd10, 12800);   // W_FC1
+    $readmemh("../../weights/x28s/fc1_bias.hex", payload);
+    load_window(5'd14, 128);     // B_FC1
+    $readmemh("../../weights/x28s/qparams.hex", payload);
+    for (i = 0; i < 512; i = i + 1) payload[i] = payload[384 + i];
+    load_window(5'd18, 512);     // Q_FC1: neurons 24..55
+    $readmemh("../../weights/x28s/fc2_weight.hex", payload);
+    load_window(5'd11, 320);     // W_FC2
+    $readmemh("../../weights/x28s/fc2_bias.hex", payload);
+    load_window(5'd15, 40);      // B_FC2
+    $readmemh("../../weights/x28s/qparams.hex", payload);
+    for (i = 0; i < 160; i = i + 1) payload[i] = payload[896 + i];
+    load_window(5'd19, 160);     // Q_FC2: neurons 56..65
+
+    host_idle();
+
+    $display("=== model loaded (%0t), starting %0d vectors ===", $time, nvec);
+
+    for (v = 0; v < nvec; v = v + 1) begin
+      vec_errors = 0;
+      $display("=== vector %0d ===", v);
+      do_reset();
+
+      // image -> INPUT_SRAM
+      $sformat(fname, "../../weights/x28s/vectors/img_%0d.hex", v);
+      $readmemh(fname, payload);
+      for (i = 0; i < 784; i = i + 1)
+        host_write(i[15:0], payload[i], 5'd0);
+      host_idle();
+
+      set_ready();
+      if (IMAGE_READY !== 1'b1 || MODEL_READY !== 1'b1) begin
+        $display("FAIL: ready handshake (IMAGE=%b MODEL=%b)", IMAGE_READY, MODEL_READY);
+        vec_errors = vec_errors + 1;
+      end
+
+      START_RAW = 1'b1;
+      repeat (8) @(posedge CLK);
+      START_RAW = 1'b0;
+
+      fork : run
+        begin
+          wait (DONE === 1'b1 || ERROR === 1'b1);
+        end
+        begin
+          repeat (16000000) @(posedge CLK);
+          $display("FAIL: TIMEOUT in vector %0d", v);
+          vec_errors = vec_errors + 1;
+        end
+      join_any
+      disable run;
+      repeat (8) @(posedge CLK);
+
+      if (ERROR === 1'b1) begin
+        $display("FAIL: vector %0d ended with ERROR", v);
+        vec_errors = vec_errors + 1;
+      end
+      if (RESULT_VALID !== 1'b1) begin
+        $display("FAIL: vector %0d RESULT_VALID not set", v);
+        vec_errors = vec_errors + 1;
+      end
+
+      // ---- read back the 10 int32 logits (LE) ----
+      for (k = 0; k < 10; k = k + 1) begin
+        for (i = 0; i < 4; i = i + 1) begin
+          host_read(k*4 + i[15:0], 5'd6, rb);
+          payload[k*4 + i] = rb;
+        end
+        got_logit[k] = {payload[k*4+3], payload[k*4+2],
+                        payload[k*4+1], payload[k*4+0]};
+      end
+      host_idle();
+
+      $display("  FC2LOG write pulses: %0d", n_fc2log_we);
+      sel_histo();
+      rag_print();
+      mem_dump("INPUT", 0, 8, 8192);
+      mem_dump("C1OUT", 1, 576, 8192);
+      mem_dump("P1OUT", 2, 8, 8192);
+      mem_dump("C2OUT", 3, 24, 8192);
+      mem_dump("P2OUT", 4, 8, 8192);
+      mem_dump("FC1OUT", 5, 8, 8192);
+      mem_dump("FC2LOG", 6, 48, 8192);
+      mem_dump("W_C1", 7, 8, 32768);
+      mem_dump("W_C2", 8, 8, 32768);
+      mem_dump("W_FC1", 9, 8, 32768);
+      mem_dump("W_FC2", 10, 8, 32768);
+      dump_mem("INPUT", 0, 784);
+      dump_mem("C1OUT", 1, 4608);
+      dump_mem("P1OUT", 2, 1152);
+      dump_mem("C2OUT", 3, 1600);
+      dump_mem("P2OUT", 4, 400);
+      dump_mem("FC1OUT", 5, 32);
+      dump_mem("FC2LOG", 6, 40);
+      // read back a bias and a qparam to prove the B/Q windows stuck
+      host_read(16'h0000, 5'd14, rb);
+      $display("  B_FC1[0..3] readback: %02h", rb);
+      host_read(16'h0001, 5'd14, rb);
+      $write(" %02h", rb);
+      host_read(16'h0002, 5'd14, rb);
+      $write(" %02h", rb);
+      host_read(16'h0003, 5'd14, rb);
+      $write(" %02h\n", rb);
+      host_read(16'h0000, 5'd18, rb);
+      $display("  Q_FC1[0] readback: %02h", rb);
+
+      $sformat(fname, "../../weights/x28s/vectors/logit_%0d.hex", v);
+      $readmemh(fname, exp_logit);
+
+      argmax_got = 0;
+      argmax_exp = 0;
+      best = got_logit[0];
+      for (k = 1; k < 10; k = k + 1)
+        if ($signed(got_logit[k]) > $signed(best)) begin
+          best = got_logit[k];
+          argmax_got = k;
+        end
+      best = exp_logit[0];
+      for (k = 1; k < 10; k = k + 1)
+        if ($signed(exp_logit[k]) > $signed(best)) begin
+          best = exp_logit[k];
+          argmax_exp = k;
+        end
+
+      sum_exp = 0;
+      sum_got = 0;
+      for (k = 0; k < 10; k = k + 1) begin
+        sum_exp = sum_exp + exp_logit[k];
+        sum_got = sum_got + got_logit[k];
+        if (got_logit[k] !== exp_logit[k]) begin
+          $display("  logit[%0d] got %08h exp %08h MISMATCH",
+                   k, got_logit[k], exp_logit[k]);
+        end
+      end
+
+      for (k = 0; k < 10; k = k + 1)
+        if (got_logit[k] !== exp_logit[k])
+          vec_errors = vec_errors + 1;
+
+      $display("  vector %0d: label=%0d argmax_exp=%0d argmax_got=%0d logits_match=%s",
+               v, v, argmax_exp, argmax_got,
+               (sum_exp === sum_got) ? "yes" : "NO");
+
+      if (argmax_got !== v) begin
+        $display("FAIL: vector %0d argmax %0d != label", v, argmax_got);
+        vec_errors = vec_errors + 1;
+      end
+
+      if (vec_errors == 0) begin
+        total_vec_pass = total_vec_pass + 1;
+        $display("VECTOR %0d: PASS", v);
+      end else begin
+        $display("VECTOR %0d: FAIL (%0d errors)", v, vec_errors);
+        errors = errors + vec_errors;
+      end
+    end
+
+    $display("=== NUMERIC RESULT: %0d/%0d vectors pass, %0d total errors ===",
+             total_vec_pass, nvec, errors);
+    if (errors == 0) $display("TB RESULT: PASS");
+    else             $display("TB RESULT: FAIL");
+    $finish;
+  end
+
+endmodule
