@@ -1,0 +1,10 @@
+page s07_conv1: 487 wires, 0 junction pairs, 487 components
+top: [(1, 486), (1, 485), (1, 484), (1, 483), (1, 482), (1, 481)]
+
+-- comp size 1: {'/B04_S07_CONV1/C1_OUT_ADDR12': 1}
+
+-- comp size 1: {'<empty>': 1}
+
+-- comp size 1: {'+VLED': 1}
+
+-- comp size 1: {'<empty>': 1}

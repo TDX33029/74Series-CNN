@@ -1,0 +1,2795 @@
+{
+ "netlist": "D:/Document/tempPrj/74Series-CNN/Cache/CNN_74xx_System\\output\\top_20261112c.net",
+ "counts": {
+  "components": 1314,
+  "distinct_parts": 36,
+  "nets": 4497,
+  "nodes": 17423,
+  "memory_parts": 59
+ },
+ "by_sheet": {
+  "CNN_74xx_System": 3,
+  "B01_S01_Supervisor": 60,
+  "B01_Conn": 2,
+  "B02_S02_Timing": 31,
+  "B02_Conn": 1,
+  "B03_S04_Memories": 115,
+  "B03_Conn": 8,
+  "B04_S07_Conv1": 157,
+  "B04_S13_Requant_C1": 13,
+  "B04_Conn": 2,
+  "B05_S05_Pool1": 91,
+  "B05_S12A_PoolLatch1": 2,
+  "B05_Conn": 3,
+  "B06_S08_Conv2": 156,
+  "B06_S15_Requant_C2": 12,
+  "B06_Conn": 2,
+  "B07_S05_Pool2": 91,
+  "B07_S12A_PoolLatch2": 2,
+  "B07_Conn": 3,
+  "B08_S09_FC1": 145,
+  "B08_S17_FC1": 21,
+  "B08_Conn": 2,
+  "B09_S09_FC2": 145,
+  "B09_S17_FC2": 21,
+  "B09_Conn": 2,
+  "B10_S06_Argmax": 91,
+  "B10_S12B_ScoreLatch": 14,
+  "B10_Conn": 1,
+  "B11_S11_BusFabric": 31,
+  "B11_S11A_EngineMerge": 10,
+  "B11_Conn": 3,
+  "B12_S10_Top_IO": 71,
+  "B12_Conn": 3
+ },
+ "by_part": {
+  "power:PWR_FLAG": 3,
+  "Device:C": 260,
+  "Connector:TestPoint": 77,
+  "Memory_EPROM:27C512": 52,
+  "74xx:74HCT273": 32,
+  "74xx:74HCT574": 75,
+  "74xx:74HC238": 2,
+  "74xx:74HC157": 198,
+  "74xx:74HCT541": 52,
+  "74xx:74HC74": 19,
+  "74xx:74HC08": 47,
+  "74xx:74HC32": 39,
+  "74xx:74HC04": 29,
+  "74xx:74HC688": 41,
+  "74xx:74HC161": 59,
+  "Connector_Generic:Conn_02x20_Odd_Even": 32,
+  "74xx:74HC138": 17,
+  "Connector_Generic:Conn_02x12_Odd_Even": 1,
+  "Device:R": 32,
+  "Memory_RAM:HY6264AxP": 7,
+  "Memory_RAM:CY62256-70PC": 4,
+  "74xx:74HC245": 6,
+  "74xx:74HC00": 7,
+  "74xx:74HC283": 184,
+  "74xx:74HC02": 5,
+  "74xx:74HC85": 12,
+  "74xx:74LS148": 4,
+  "Device:LED": 7,
+  "Connector_Generic:Conn_02x02_Odd_Even": 1,
+  "Connector_Generic:Conn_01x02": 3,
+  "Connector_Generic:Conn_02x32_Odd_Even": 1,
+  "Connector_Generic:Conn_01x03": 1,
+  "Device:R_Network08": 2,
+  "Switch:SW_Push": 1,
+  "74xx:74HCT245": 1,
+  "Oscillator:ASE-xxxMHz": 1
+ },
+ "skipped": {
+  "ASE-xxxMHz": {
+   "count": 1,
+   "reason": "crystal oscillator can - model as clock source, not logic",
+   "refs": [
+    "X10001"
+   ],
+   "nets": {
+    "+5V": 2,
+    "/B12_S10_Top_IO/OSC_OUT": 1,
+    "GND": 1
+   },
+   "distinct_nets": 3
+  },
+  "C": {
+   "count": 260,
+   "reason": "capacitor (decoupling) - passive",
+   "refs": [
+    "C1001",
+    "C1002",
+    "C1003",
+    "C1004",
+    "C1005",
+    "C1006",
+    "C1007",
+    "C1008",
+    "C1009",
+    "C1010",
+    "C1011",
+    "C1012",
+    "..."
+   ],
+   "nets": {
+    "GND": 260,
+    "+5V": 259,
+    "/B12_S10_Top_IO/RESET_RAW": 1
+   },
+   "distinct_nets": 3
+  },
+  "Conn_01x02": {
+   "count": 3,
+   "reason": "connector - mechanical",
+   "refs": [
+    "J10002",
+    "J10003",
+    "J10004"
+   ],
+   "nets": {
+    "GND": 3,
+    "/B12_S10_Top_IO/START_RAW": 1,
+    "/B12_S10_Top_IO/RESET_RAW": 1,
+    "/B12_S10_Top_IO/EXT_CLK_IN": 1
+   },
+   "distinct_nets": 4
+  },
+  "Conn_01x03": {
+   "count": 1,
+   "reason": "connector - mechanical",
+   "refs": [
+    "JP10001"
+   ],
+   "nets": {
+    "/B12_S10_Top_IO/CLK_SEL": 1,
+    "/B12_S10_Top_IO/EXT_CLK_IN": 1,
+    "/B12_S10_Top_IO/OSC_OUT": 1
+   },
+   "distinct_nets": 3
+  },
+  "Conn_02x02_Odd_Even": {
+   "count": 1,
+   "reason": "connector - mechanical",
+   "refs": [
+    "J10001"
+   ],
+   "nets": {
+    "+5V": 2,
+    "GND": 2
+   },
+   "distinct_nets": 2
+  },
+  "Conn_02x12_Odd_Even": {
+   "count": 1,
+   "reason": "connector - mechanical",
+   "refs": [
+    "J4001"
+   ],
+   "nets": {
+    "GND": 4,
+    "+5V": 2,
+    "IMAGE_DONE_N": 1,
+    "IMAGE_READY": 1,
+    "LOAD_DATA0": 1,
+    "LOAD_DATA1": 1,
+    "LOAD_DATA2": 1,
+    "LOAD_DATA3": 1,
+    "LOAD_DATA4": 1,
+    "LOAD_DATA5": 1,
+    "LOAD_DATA6": 1,
+    "LOAD_DATA7": 1,
+    "LOAD_EN": 1,
+    "LOAD_nOE": 1,
+    "LOAD_nWE": 1,
+    "MODEL_DONE_N": 1,
+    "MODEL_READY": 1,
+    "unconnected-(J4001-Pin_22-Pad22)": 1,
+    "unconnected-(J4001-Pin_23-Pad23)": 1,
+    "unconnected-(J4001-Pin_24-Pad24)": 1
+   },
+   "distinct_nets": 20
+  },
+  "Conn_02x20_Odd_Even": {
+   "count": 32,
+   "reason": "connector - mechanical",
+   "refs": [
+    "J20001",
+    "J20002",
+    "J20101",
+    "J20201",
+    "J20202",
+    "J20203",
+    "J20204",
+    "J20205",
+    "J20206",
+    "J20207",
+    "J20208",
+    "J20301",
+    "..."
+   ],
+   "nets": {
+    "GND": 192,
+    "+3V3": 128,
+    "+5V": 128,
+    "CLK": 11,
+    "RESET_N": 11,
+    "MEM_ACK": 9,
+    "MEM_DONE": 9,
+    "DATA0": 8,
+    "DATA1": 8,
+    "DATA2": 8,
+    "DATA3": 8,
+    "DATA4": 8,
+    "DATA5": 8,
+    "DATA6": 8,
+    "DATA7": 8,
+    "MEM_BUSY": 6,
+    "MEM_nCE": 6,
+    "MEM_nOE": 6,
+    "MEM_nWE": 6,
+    "IMAGE_READY": 3,
+    "MODEL_READY": 3,
+    "ADDR16": 3,
+    "ADDR17": 3,
+    "ADDR18": 3,
+    "ADDR19": 3,
+    "ADDR20": 3,
+    "ADDR21": 3,
+    "ADDR22": 3,
+    "ADDR23": 3,
+    "LOAD_EN": 3,
+    "C1_BUSY_N": 3,
+    "MEM_SEL0": 3,
+    "MEM_SEL1": 3,
+    "MEM_SEL2": 3,
+    "MEM_SEL3": 3,
+    "MEM_SEL4": 3,
+    "ARGMAX_BUSY_N": 3,
+    "C2_BUSY_N": 3,
+    "FC1_BUSY_N": 3,
+    "FC2_BUSY_N": 3,
+    "POOL1_BUSY_N": 3,
+    "POOL1_MEM_WE": 3,
+    "POOL1_MEM_nCE_OUT": 3,
+    "POOL2_BUSY_N": 3,
+    "POOL2_MEM_WE": 3,
+    "POOL2_MEM_nCE_OUT": 3,
+    "ARGMAX_DONE": 2,
+    "ARGMAX_START": 2,
+    "BUSY": 2,
+    "C1_DONE": 2,
+    "C1_START": 2,
+    "C2_DONE": 2,
+    "DONE": 2,
+    "ERROR": 2,
+    "ERROR_CODE0": 2,
+    "ERROR_CODE1": 2,
+    "ERROR_CODE2": 2,
+    "ERROR_CODE3": 2,
+    "RESULT0": 2,
+    "RESULT1": 2,
+    "RESULT2": 2,
+    "RESULT3": 2,
+    "RESULT_IN0": 2,
+    "RESULT_IN1": 2,
+    "RESULT_IN2": 2,
+    "RESULT_IN3": 2,
+    "RESULT_VALID": 2,
+    "START": 2,
+    "C2_START": 2,
+    "FC1_DONE": 2,
+    "FC1_START": 2,
+    "FC2_DONE": 2,
+    "FC2_START": 2,
+    "FC_SEL": 2,
+    "P1_DONE": 2,
+    "P1_START": 2,
+    "P2_DONE": 2,
+    "P2_START": 2,
+    "POOL_SEL": 2,
+    "REQ": 2,
+    "WE": 2,
+    "ADDR0": 2,
+    "ADDR1": 2,
+    "ADDR2": 2,
+    "ADDR3": 2,
+    "ADDR4": 2,
+    "ADDR5": 2,
+    "ADDR6": 2,
+    "ADDR7": 2,
+    "ADDR8": 2,
+    "ADDR9": 2,
+    "ADDR10": 2,
+    "ADDR11": 2,
+    "ADDR12": 2,
+    "ADDR13": 2,
+    "ADDR14": 2,
+    "ADDR15": 2,
+    "IMAGE_DONE_N": 2,
+    "MODEL_DONE_N": 2,
+    "LOAD_DATA0": 2,
+    "LOAD_DATA1": 2,
+    "LOAD_DATA2": 2,
+    "LOAD_DATA3": 2,
+    "LOAD_DATA4": 2,
+    "LOAD_DATA5": 2,
+    "LOAD_DATA6": 2,
+    "LOAD_DATA7": 2,
+    "LOAD_nOE": 2,
+    "LOAD_nWE": 2,
+    "C1_ADDR0": 2,
+    "C1_ADDR1": 2,
+    "C1_ADDR2": 2,
+    "C1_ADDR3": 2,
+    "C1_ADDR4": 2,
+    "C1_ADDR5": 2,
+    "C1_ADDR6": 2,
+    "C1_ADDR7": 2,
+    "C1_ADDR8": 2,
+    "C1_ADDR9": 2,
+    "C1_ADDR10": 2,
+    "C1_ADDR11": 2,
+    "C1_ADDR12": 2,
+    "C1_ADDR13": 2,
+    "C1_ADDR14": 2,
+    "C1_ADDR15": 2,
+    "C2_ADDR0": 2,
+    "C2_ADDR1": 2,
+    "C2_ADDR2": 2,
+    "C2_ADDR3": 2,
+    "C2_ADDR4": 2,
+    "C2_ADDR5": 2,
+    "C2_ADDR6": 2,
+    "C2_ADDR7": 2,
+    "C2_ADDR8": 2,
+    "C2_ADDR9": 2,
+    "C2_ADDR10": 2,
+    "C2_ADDR11": 2,
+    "C2_ADDR12": 2,
+    "C2_ADDR13": 2,
+    "C2_ADDR14": 2,
+    "C2_ADDR15": 2,
+    "FC1_ADDR0": 2,
+    "FC1_ADDR1": 2,
+    "FC1_ADDR2": 2,
+    "FC1_ADDR3": 2,
+    "FC1_ADDR4": 2,
+    "FC1_ADDR5": 2,
+    "SCORE_ADDR0": 2,
+    "SCORE_ADDR1": 2,
+    "SCORE_ADDR2": 2,
+    "SCORE_ADDR3": 2,
+    "SCORE_ADDR4": 2,
+    "SCORE_ADDR5": 2,
+    "FC1_ADDR6": 2,
+    "FC1_ADDR7": 2,
+    "FC1_ADDR8": 2,
+    "FC1_ADDR9": 2,
+    "FC1_ADDR10": 2,
+    "FC1_ADDR11": 2,
+    "FC1_ADDR12": 2,
+    "FC1_ADDR13": 2,
+    "FC1_ADDR14": 2,
+    "FC1_ADDR15": 2,
+    "FC2_ADDR0": 2,
+    "FC2_ADDR1": 2,
+    "FC2_ADDR2": 2,
+    "FC2_ADDR3": 2,
+    "FC2_ADDR4": 2,
+    "FC2_ADDR5": 2,
+    "FC2_ADDR6": 2,
+    "FC2_ADDR7": 2,
+    "FC2_ADDR8": 2,
+    "FC2_ADDR9": 2,
+    "FC2_ADDR10": 2,
+    "FC2_ADDR11": 2,
+    "FC2_ADDR12": 2,
+    "FC2_ADDR13": 2,
+    "FC2_ADDR14": 2,
+    "FC2_ADDR15": 2,
+    "POOL1_IN_ADDR0": 2,
+    "POOL1_IN_ADDR1": 2,
+    "POOL1_IN_ADDR2": 2,
+    "POOL1_IN_ADDR3": 2,
+    "POOL1_IN_ADDR4": 2,
+    "POOL1_IN_ADDR5": 2,
+    "POOL1_IN_ADDR6": 2,
+    "POOL1_IN_ADDR7": 2,
+    "POOL1_IN_ADDR8": 2,
+    "POOL1_IN_ADDR9": 2,
+    "POOL1_IN_ADDR10": 2,
+    "POOL1_IN_ADDR11": 2,
+    "POOL1_IN_ADDR12": 2,
+    "POOL1_OUT_ADDR0": 2,
+    "POOL1_OUT_ADDR1": 2,
+    "POOL1_OUT_ADDR2": 2,
+    "POOL1_OUT_ADDR3": 2,
+    "POOL1_OUT_ADDR4": 2,
+    "POOL1_OUT_ADDR5": 2,
+    "POOL1_OUT_ADDR6": 2,
+    "POOL1_OUT_ADDR7": 2,
+    "POOL1_OUT_ADDR8": 2,
+    "POOL1_OUT_ADDR9": 2,
+    "POOL1_OUT_ADDR10": 2,
+    "POOL1_OUT_ADDR11": 2,
+    "POOL1_OUT_DATA0": 2,
+    "POOL1_OUT_DATA1": 2,
+    "POOL1_OUT_DATA2": 2,
+    "POOL1_OUT_DATA3": 2,
+    "POOL1_OUT_DATA4": 2,
+    "POOL1_OUT_DATA5": 2,
+    "POOL1_OUT_DATA6": 2,
+    "POOL1_OUT_DATA7": 2,
+    "POOL2_IN_ADDR0": 2,
+    "POOL2_IN_ADDR1": 2,
+    "POOL2_IN_ADDR2": 2,
+    "POOL2_IN_ADDR3": 2,
+    "POOL2_IN_ADDR4": 2,
+    "POOL2_IN_ADDR5": 2,
+    "POOL2_IN_ADDR6": 2,
+    "POOL2_IN_ADDR7": 2,
+    "POOL2_IN_ADDR8": 2,
+    "POOL2_IN_ADDR9": 2,
+    "POOL2_IN_ADDR10": 2,
+    "POOL2_IN_ADDR11": 2,
+    "POOL2_IN_ADDR12": 2,
+    "POOL2_OUT_ADDR0": 2,
+    "POOL2_OUT_ADDR1": 2,
+    "POOL2_OUT_ADDR2": 2,
+    "POOL2_OUT_ADDR3": 2,
+    "POOL2_OUT_ADDR4": 2,
+    "POOL2_OUT_ADDR5": 2,
+    "POOL2_OUT_ADDR6": 2,
+    "POOL2_OUT_ADDR7": 2,
+    "POOL2_OUT_ADDR8": 2,
+    "POOL2_OUT_ADDR9": 2,
+    "POOL2_OUT_ADDR10": 2,
+    "POOL2_OUT_ADDR11": 2,
+    "POOL2_OUT_DATA0": 2,
+    "POOL2_OUT_DATA1": 2,
+    "POOL2_OUT_DATA2": 2,
+    "POOL2_OUT_DATA3": 2,
+    "POOL2_OUT_DATA4": 2,
+    "POOL2_OUT_DATA5": 2,
+    "POOL2_OUT_DATA6": 2,
+    "POOL2_OUT_DATA7": 2,
+    "C1_MEM_REQ": 2,
+    "C1_MEM_WE": 2,
+    "C1_MEM_nCE_B": 2,
+    "C1_MEM_nCE_IN": 2,
+    "C1_MEM_nCE_MC": 2,
+    "C1_MEM_nCE_OUT": 2,
+    "C1_MEM_nCE_Q": 2,
+    "C1_MEM_nCE_W": 2,
+    "POOL1_BUSY": 2,
+    "POOL1_MEM_REQ": 2,
+    "POOL1_MEM_nCE_IN": 2,
+    "C2_MEM_REQ": 2,
+    "C2_MEM_WE": 2,
+    "C2_MEM_nCE_B": 2,
+    "C2_MEM_nCE_IN": 2,
+    "C2_MEM_nCE_MC": 2,
+    "C2_MEM_nCE_OUT": 2,
+    "C2_MEM_nCE_Q": 2,
+    "C2_MEM_nCE_W": 2,
+    "POOL2_BUSY": 2,
+    "POOL2_MEM_REQ": 2,
+    "POOL2_MEM_nCE_IN": 2,
+    "FC1_MEM_REQ": 2,
+    "FC1_MEM_WE": 2,
+    "FC1_MEM_nCE_B": 2,
+    "FC1_MEM_nCE_IN": 2,
+    "FC1_MEM_nCE_MC": 2,
+    "FC1_MEM_nCE_OUT": 2,
+    "FC1_MEM_nCE_Q": 2,
+    "FC1_MEM_nCE_W": 2,
+    "FC2_BUSY": 2,
+    "FC2_MEM_REQ": 2,
+    "FC2_MEM_WE": 2,
+    "FC2_MEM_nCE_B": 2,
+    "FC2_MEM_nCE_IN": 2,
+    "FC2_MEM_nCE_MC": 2,
+    "FC2_MEM_nCE_OUT": 2,
+    "FC2_MEM_nCE_Q": 2,
+    "FC2_MEM_nCE_W": 2,
+    "SCORE_RD": 2,
+    "unconnected-(J20002-Pin_26-Pad26)": 1,
+    "unconnected-(J20002-Pin_27-Pad27)": 1,
+    "unconnected-(J20002-Pin_28-Pad28)": 1,
+    "unconnected-(J20002-Pin_29-Pad29)": 1,
+    "unconnected-(J20002-Pin_30-Pad30)": 1,
+    "unconnected-(J20002-Pin_31-Pad31)": 1,
+    "unconnected-(J20002-Pin_32-Pad32)": 1,
+    "unconnected-(J20002-Pin_33-Pad33)": 1,
+    "unconnected-(J20002-Pin_34-Pad34)": 1,
+    "unconnected-(J20002-Pin_35-Pad35)": 1,
+    "unconnected-(J20002-Pin_36-Pad36)": 1,
+    "unconnected-(J20002-Pin_37-Pad37)": 1,
+    "unconnected-(J20002-Pin_38-Pad38)": 1,
+    "unconnected-(J20002-Pin_39-Pad39)": 1,
+    "unconnected-(J20002-Pin_40-Pad40)": 1,
+    "unconnected-(J20101-Pin_25-Pad25)": 1,
+    "unconnected-(J20101-Pin_26-Pad26)": 1,
+    "unconnected-(J20101-Pin_27-Pad27)": 1,
+    "unconnected-(J20101-Pin_28-Pad28)": 1,
+    "unconnected-(J20101-Pin_29-Pad29)": 1,
+    "unconnected-(J20101-Pin_30-Pad30)": 1,
+    "unconnected-(J20101-Pin_31-Pad31)": 1,
+    "unconnected-(J20101-Pin_32-Pad32)": 1,
+    "unconnected-(J20101-Pin_33-Pad33)": 1,
+    "unconnected-(J20101-Pin_34-Pad34)": 1,
+    "unconnected-(J20101-Pin_35-Pad35)": 1,
+    "unconnected-(J20101-Pin_36-Pad36)": 1,
+    "unconnected-(J20101-Pin_37-Pad37)": 1,
+    "unconnected-(J20101-Pin_38-Pad38)": 1,
+    "unconnected-(J20101-Pin_39-Pad39)": 1,
+    "unconnected-(J20101-Pin_40-Pad40)": 1,
+    "unconnected-(J20208-Pin_37-Pad37)": 1,
+    "unconnected-(J20208-Pin_38-Pad38)": 1,
+    "unconnected-(J20208-Pin_39-Pad39)": 1,
+    "unconnected-(J20208-Pin_40-Pad40)": 1,
+    "unconnected-(J20302-Pin_32-Pad32)": 1,
+    "unconnected-(J20302-Pin_33-Pad33)": 1,
+    "unconnected-(J20302-Pin_34-Pad34)": 1,
+    "unconnected-(J20302-Pin_35-Pad35)": 1,
+    "unconnected-(J20302-Pin_36-Pad36)": 1,
+    "unconnected-(J20302-Pin_37-Pad37)": 1,
+    "unconnected-(J20302-Pin_38-Pad38)": 1,
+    "unconnected-(J20302-Pin_39-Pad39)": 1,
+    "unconnected-(J20302-Pin_40-Pad40)": 1,
+    "unconnected-(J20403-Pin_16-Pad16)": 1,
+    "unconnected-(J20403-Pin_17-Pad17)": 1,
+    "unconnected-(J20403-Pin_18-Pad18)": 1,
+    "unconnected-(J20403-Pin_19-Pad19)": 1,
+    "unconnected-(J20403-Pin_20-Pad20)": 1,
+    "unconnected-(J20403-Pin_21-Pad21)": 1,
+    "unconnected-(J20403-Pin_22-Pad22)": 1,
+    "unconnected-(J20403-Pin_23-Pad23)": 1,
+    "unconnected-(J20403-Pin_24-Pad24)": 1,
+    "unconnected-(J20403-Pin_25-Pad25)": 1,
+    "unconnected-(J20403-Pin_26-Pad26)": 1,
+    "unconnected-(J20403-Pin_27-Pad27)": 1,
+    "unconnected-(J20403-Pin_28-Pad28)": 1,
+    "unconnected-(J20403-Pin_29-Pad29)": 1,
+    "unconnected-(J20403-Pin_30-Pad30)": 1,
+    "unconnected-(J20403-Pin_31-Pad31)": 1,
+    "unconnected-(J20403-Pin_32-Pad32)": 1,
+    "unconnected-(J20403-Pin_33-Pad33)": 1,
+    "unconnected-(J20403-Pin_34-Pad34)": 1,
+    "unconnected-(J20403-Pin_35-Pad35)": 1,
+    "unconnected-(J20403-Pin_36-Pad36)": 1,
+    "unconnected-(J20403-Pin_37-Pad37)": 1,
+    "unconnected-(J20403-Pin_38-Pad38)": 1,
+    "unconnected-(J20403-Pin_39-Pad39)": 1,
+    "unconnected-(J20403-Pin_40-Pad40)": 1,
+    "unconnected-(J20502-Pin_32-Pad32)": 1,
+    "unconnected-(J20502-Pin_33-Pad33)": 1,
+    "unconnected-(J20502-Pin_34-Pad34)": 1,
+    "unconnected-(J20502-Pin_35-Pad35)": 1,
+    "unconnected-(J20502-Pin_36-Pad36)": 1,
+    "unconnected-(J20502-Pin_37-Pad37)": 1,
+    "unconnected-(J20502-Pin_38-Pad38)": 1,
+    "unconnected-(J20502-Pin_39-Pad39)": 1,
+    "unconnected-(J20502-Pin_40-Pad40)": 1,
+    "unconnected-(J20603-Pin_16-Pad16)": 1,
+    "unconnected-(J20603-Pin_17-Pad17)": 1,
+    "unconnected-(J20603-Pin_18-Pad18)": 1,
+    "unconnected-(J20603-Pin_19-Pad19)": 1,
+    "unconnected-(J20603-Pin_20-Pad20)": 1,
+    "unconnected-(J20603-Pin_21-Pad21)": 1,
+    "unconnected-(J20603-Pin_22-Pad22)": 1,
+    "unconnected-(J20603-Pin_23-Pad23)": 1,
+    "unconnected-(J20603-Pin_24-Pad24)": 1,
+    "unconnected-(J20603-Pin_25-Pad25)": 1,
+    "unconnected-(J20603-Pin_26-Pad26)": 1,
+    "unconnected-(J20603-Pin_27-Pad27)": 1,
+    "unconnected-(J20603-Pin_28-Pad28)": 1,
+    "unconnected-(J20603-Pin_29-Pad29)": 1,
+    "unconnected-(J20603-Pin_30-Pad30)": 1,
+    "unconnected-(J20603-Pin_31-Pad31)": 1,
+    "unconnected-(J20603-Pin_32-Pad32)": 1,
+    "unconnected-(J20603-Pin_33-Pad33)": 1,
+    "unconnected-(J20603-Pin_34-Pad34)": 1,
+    "unconnected-(J20603-Pin_35-Pad35)": 1,
+    "unconnected-(J20603-Pin_36-Pad36)": 1,
+    "unconnected-(J20603-Pin_37-Pad37)": 1,
+    "unconnected-(J20603-Pin_38-Pad38)": 1,
+    "unconnected-(J20603-Pin_39-Pad39)": 1,
+    "unconnected-(J20603-Pin_40-Pad40)": 1,
+    "unconnected-(J20702-Pin_32-Pad32)": 1,
+    "unconnected-(J20702-Pin_33-Pad33)": 1,
+    "unconnected-(J20702-Pin_34-Pad34)": 1,
+    "unconnected-(J20702-Pin_35-Pad35)": 1,
+    "unconnected-(J20702-Pin_36-Pad36)": 1,
+    "unconnected-(J20702-Pin_37-Pad37)": 1,
+    "unconnected-(J20702-Pin_38-Pad38)": 1,
+    "unconnected-(J20702-Pin_39-Pad39)": 1,
+    "unconnected-(J20702-Pin_40-Pad40)": 1,
+    "unconnected-(J20802-Pin_33-Pad33)": 1,
+    "unconnected-(J20802-Pin_34-Pad34)": 1,
+    "unconnected-(J20802-Pin_35-Pad35)": 1
+   },
+   "distinct_nets": 430
+  },
+  "Conn_02x32_Odd_Even": {
+   "count": 1,
+   "reason": "connector - mechanical",
+   "refs": [
+    "J10005"
+   ],
+   "nets": {
+    "GND": 10,
+    "+5V": 4,
+    "/B12_S10_Top_IO/H_A0": 1,
+    "/B12_S10_Top_IO/H_A1": 1,
+    "/B12_S10_Top_IO/H_A2": 1,
+    "/B12_S10_Top_IO/H_A3": 1,
+    "/B12_S10_Top_IO/H_A4": 1,
+    "/B12_S10_Top_IO/H_A5": 1,
+    "/B12_S10_Top_IO/H_A6": 1,
+    "/B12_S10_Top_IO/H_A7": 1,
+    "/B12_S10_Top_IO/H_A8": 1,
+    "/B12_S10_Top_IO/H_A9": 1,
+    "/B12_S10_Top_IO/H_A10": 1,
+    "/B12_S10_Top_IO/H_A11": 1,
+    "/B12_S10_Top_IO/H_A12": 1,
+    "/B12_S10_Top_IO/H_A13": 1,
+    "/B12_S10_Top_IO/H_A14": 1,
+    "/B12_S10_Top_IO/H_A15": 1,
+    "/B12_S10_Top_IO/H_D0": 1,
+    "/B12_S10_Top_IO/H_D1": 1,
+    "/B12_S10_Top_IO/H_D2": 1,
+    "/B12_S10_Top_IO/H_D3": 1,
+    "/B12_S10_Top_IO/H_D4": 1,
+    "/B12_S10_Top_IO/H_D5": 1,
+    "/B12_S10_Top_IO/H_D6": 1,
+    "/B12_S10_Top_IO/H_D7": 1,
+    "/B12_S10_Top_IO/H_LOAD_nOE": 1,
+    "/B12_S10_Top_IO/H_LOAD_nWE": 1,
+    "/B12_S10_Top_IO/H_MEM_SEL0": 1,
+    "/B12_S10_Top_IO/H_MEM_SEL1": 1,
+    "/B12_S10_Top_IO/H_MEM_SEL2": 1,
+    "/B12_S10_Top_IO/H_MEM_SEL3": 1,
+    "/B12_S10_Top_IO/H_MEM_SEL4": 1,
+    "/B12_S10_Top_IO/RESET_RAW": 1,
+    "/B12_S10_Top_IO/START_RAW": 1,
+    "/B12_S10_Top_IO/ST_BUSY": 1,
+    "/B12_S10_Top_IO/ST_DONE": 1,
+    "/B12_S10_Top_IO/ST_ERROR": 1,
+    "/B12_S10_Top_IO/ST_ERROR_CODE0": 1,
+    "/B12_S10_Top_IO/ST_ERROR_CODE1": 1,
+    "/B12_S10_Top_IO/ST_ERROR_CODE2": 1,
+    "/B12_S10_Top_IO/ST_ERROR_CODE3": 1,
+    "/B12_S10_Top_IO/ST_IMAGE_READY": 1,
+    "/B12_S10_Top_IO/ST_MODEL_READY": 1,
+    "/B12_S10_Top_IO/ST_RESULT0": 1,
+    "/B12_S10_Top_IO/ST_RESULT1": 1,
+    "/B12_S10_Top_IO/ST_RESULT2": 1,
+    "/B12_S10_Top_IO/ST_RESULT3": 1,
+    "/B12_S10_Top_IO/ST_RESULT_VALID": 1,
+    "IMAGE_DONE_N": 1,
+    "LOAD_EN": 1,
+    "MODEL_DONE_N": 1
+   },
+   "distinct_nets": 52
+  },
+  "LED": {
+   "count": 7,
+   "reason": "indicator LED - passive/visual",
+   "refs": [
+    "D10001",
+    "D10002",
+    "D10003",
+    "D10004",
+    "D10005",
+    "D10006",
+    "D10007"
+   ],
+   "nets": {
+    "GND": 7,
+    "/B12_S10_Top_IO/LED_PWR": 1,
+    "/B12_S10_Top_IO/LED_BUSY": 1,
+    "/B12_S10_Top_IO/LED_DONE": 1,
+    "/B12_S10_Top_IO/LED_RESULT_VALID": 1,
+    "/B12_S10_Top_IO/LED_ERROR": 1,
+    "/B12_S10_Top_IO/LED_IMAGE_READY": 1,
+    "/B12_S10_Top_IO/LED_MODEL_READY": 1
+   },
+   "distinct_nets": 8
+  },
+  "PWR_FLAG": {
+   "count": 3,
+   "reason": "ERC power flag - not a physical part",
+   "refs": [
+    "FLG1",
+    "FLG2",
+    "FLG3"
+   ],
+   "nets": {
+    "+5V": 1,
+    "+3V3": 1,
+    "GND": 1
+   },
+   "distinct_nets": 3
+  },
+  "R": {
+   "count": 32,
+   "reason": "resistor - passive",
+   "refs": [
+    "R4001",
+    "R4002",
+    "R4003",
+    "R4004",
+    "R4005",
+    "R4006",
+    "R4007",
+    "R4008",
+    "R4009",
+    "R4010",
+    "R10001",
+    "R10002",
+    "..."
+   ],
+   "nets": {
+    "+5V": 15,
+    "GND": 10,
+    "LOAD_EN": 2,
+    "IMAGE_DONE_N": 2,
+    "MODEL_DONE_N": 2,
+    "MEM_SEL0": 1,
+    "MEM_SEL1": 1,
+    "MEM_SEL2": 1,
+    "MEM_SEL3": 1,
+    "MEM_SEL4": 1,
+    "LOAD_nWE": 1,
+    "LOAD_nOE": 1,
+    "/B12_S10_Top_IO/RESET_RAW": 1,
+    "/B12_S10_Top_IO/START_RAW": 1,
+    "/B12_S10_Top_IO/CLK_SEL": 1,
+    "/B12_S10_Top_IO/EXT_CLK_IN": 1,
+    "/B12_S10_Top_IO/CLK_BUF": 1,
+    "CLK": 1,
+    "/B12_S10_Top_IO/H_LOAD_nWE": 1,
+    "/B12_S10_Top_IO/H_LOAD_nOE": 1,
+    "/B12_S10_Top_IO/H_MEM_SEL0": 1,
+    "/B12_S10_Top_IO/H_MEM_SEL1": 1,
+    "/B12_S10_Top_IO/H_MEM_SEL2": 1,
+    "/B12_S10_Top_IO/H_MEM_SEL3": 1,
+    "/B12_S10_Top_IO/H_MEM_SEL4": 1,
+    "/B12_S10_Top_IO/LED_PWR": 1,
+    "/B12_S10_Top_IO/LED_BUSY": 1,
+    "/B12_S10_Top_IO/ST_BUSY": 1,
+    "/B12_S10_Top_IO/LED_DONE": 1,
+    "/B12_S10_Top_IO/ST_DONE": 1,
+    "/B12_S10_Top_IO/LED_RESULT_VALID": 1,
+    "/B12_S10_Top_IO/ST_RESULT_VALID": 1,
+    "/B12_S10_Top_IO/LED_ERROR": 1,
+    "/B12_S10_Top_IO/ST_ERROR": 1,
+    "/B12_S10_Top_IO/LED_IMAGE_READY": 1,
+    "/B12_S10_Top_IO/ST_IMAGE_READY": 1,
+    "/B12_S10_Top_IO/LED_MODEL_READY": 1,
+    "/B12_S10_Top_IO/ST_MODEL_READY": 1
+   },
+   "distinct_nets": 38
+  },
+  "R_Network08": {
+   "count": 2,
+   "reason": "8-resistor network - passive",
+   "refs": [
+    "RN10001",
+    "RN10002"
+   ],
+   "nets": {
+    "GND": 2,
+    "/B12_S10_Top_IO/H_A0": 1,
+    "/B12_S10_Top_IO/H_A1": 1,
+    "/B12_S10_Top_IO/H_A2": 1,
+    "/B12_S10_Top_IO/H_A3": 1,
+    "/B12_S10_Top_IO/H_A4": 1,
+    "/B12_S10_Top_IO/H_A5": 1,
+    "/B12_S10_Top_IO/H_A6": 1,
+    "/B12_S10_Top_IO/H_A7": 1,
+    "/B12_S10_Top_IO/H_A8": 1,
+    "/B12_S10_Top_IO/H_A9": 1,
+    "/B12_S10_Top_IO/H_A10": 1,
+    "/B12_S10_Top_IO/H_A11": 1,
+    "/B12_S10_Top_IO/H_A12": 1,
+    "/B12_S10_Top_IO/H_A13": 1,
+    "/B12_S10_Top_IO/H_A14": 1,
+    "/B12_S10_Top_IO/H_A15": 1
+   },
+   "distinct_nets": 17
+  },
+  "SW_Push": {
+   "count": 1,
+   "reason": "push button - mechanical input, model as stimulus",
+   "refs": [
+    "SW10001"
+   ],
+   "nets": {
+    "/B12_S10_Top_IO/RESET_RAW": 1,
+    "GND": 1
+   },
+   "distinct_nets": 2
+  },
+  "TestPoint": {
+   "count": 77,
+   "reason": "test point - mechanical probe pad",
+   "refs": [
+    "TP1001",
+    "TP1002",
+    "TP1003",
+    "TP1004",
+    "TP1005",
+    "TP1006",
+    "TP1007",
+    "TP2001",
+    "TP2002",
+    "TP2003",
+    "TP2004",
+    "TP2005",
+    "..."
+   ],
+   "nets": {
+    "CLK": 3,
+    "RESET_N": 2,
+    "START": 2,
+    "BUSY": 2,
+    "DONE": 2,
+    "ERROR": 2,
+    "RESULT_VALID": 2,
+    "MEM_ACK": 2,
+    "MEM_DONE": 2,
+    "MEM_BUSY": 2,
+    "REQ": 1,
+    "WE": 1,
+    "MEM_nCE": 1,
+    "MEM_nOE": 1,
+    "MEM_nWE": 1,
+    "/B04_S07_Conv1/C1_IC0": 1,
+    "C1_REQ_QSTB": 1,
+    "C1_SAT_FLAG": 1,
+    "C1_REQ_BUSY": 1,
+    "C1_REQ_DONE": 1,
+    "/B04_S07_Conv1/C1_MEM_STAT_nCE": 1,
+    "/B04_S07_Conv1/C1_MEM_STAT_nOE": 1,
+    "/B04_S07_Conv1/C1_MEM_STAT_nWE": 1,
+    "/B04_S07_Conv1/C1_MEM_STAT_ACK": 1,
+    "/B04_S07_Conv1/C1_MEM_STAT_DONE": 1,
+    "/B04_S07_Conv1/C1_MEM_STAT_BUSY": 1,
+    "/B05_S05_Pool1/IN_RD": 1,
+    "C2_REQ_QSTB": 1,
+    "C2_SAT_FLAG": 1,
+    "C2_REQ_BUSY": 1,
+    "C2_REQ_DONE": 1,
+    "/B06_S08_Conv2/C2_MEM_STAT_nCE": 1,
+    "/B06_S08_Conv2/C2_MEM_STAT_nOE": 1,
+    "/B06_S08_Conv2/C2_MEM_STAT_nWE": 1,
+    "/B06_S08_Conv2/C2_MEM_STAT_ACK": 1,
+    "/B06_S08_Conv2/C2_MEM_STAT_DONE": 1,
+    "/B06_S08_Conv2/C2_MEM_STAT_BUSY": 1,
+    "/B07_S05_Pool2/IN_RD": 1,
+    "FC1_REQ_QSTB": 1,
+    "FC1_SAT_FLAG": 1,
+    "FC1_REQ_BUSY": 1,
+    "FC1_REQ_DONE": 1,
+    "/B08_S09_FC1/FC_MEM_STAT_nCE": 1,
+    "/B08_S09_FC1/FC_MEM_STAT_nOE": 1,
+    "/B08_S09_FC1/FC_MEM_STAT_nWE": 1,
+    "/B08_S09_FC1/FC_MEM_STAT_ACK": 1,
+    "/B08_S09_FC1/FC_MEM_STAT_DONE": 1,
+    "/B08_S09_FC1/FC_MEM_STAT_BUSY": 1,
+    "FC2_REQ_QSTB": 1,
+    "FC2_SAT_FLAG": 1,
+    "FC2_REQ_BUSY": 1,
+    "FC2_REQ_DONE": 1,
+    "/B09_S09_FC2/FC_MEM_STAT_nCE": 1,
+    "/B09_S09_FC2/FC_MEM_STAT_nOE": 1,
+    "/B09_S09_FC2/FC_MEM_STAT_nWE": 1,
+    "/B09_S09_FC2/FC_MEM_STAT_ACK": 1,
+    "/B09_S09_FC2/FC_MEM_STAT_DONE": 1,
+    "/B09_S09_FC2/FC_MEM_STAT_BUSY": 1,
+    "/B10_S06_Argmax/GT": 1,
+    "/B10_S12B_ScoreLatch/SCORE_L0": 1,
+    "/B10_S12B_ScoreLatch/SCORE_L1": 1,
+    "/B10_S12B_ScoreLatch/SCORE_L2": 1,
+    "/B10_S12B_ScoreLatch/SCORE_L3": 1,
+    "IMAGE_READY": 1,
+    "MODEL_READY": 1,
+    "LOAD_EN": 1
+   },
+   "distinct_nets": 66
+  }
+ },
+ "model_files": {
+  "model/busmap/bus_map.bin": 65536,
+  "model/lut/lut_hi.bin": 65536,
+  "model/lut/lut_hi_signed.bin": 65536,
+  "model/lut/lut_lo.bin": 65536,
+  "model/lut/lut_lo_signed.bin": 65536,
+  "model/microcode/c1_rom1.bin": 65536,
+  "model/microcode/c1_rom2.bin": 65536,
+  "model/microcode/c2_rom1.bin": 65536,
+  "model/microcode/c2_rom2.bin": 65536,
+  "model/microcode/fc_rom1.bin": 65536,
+  "model/microcode/fc_rom2.bin": 65536,
+  "model/microcode/supervisor_hi.bin": 65536,
+  "model/microcode/supervisor_lo.bin": 65536,
+  "model/requant/c1_requant_hi.bin": 2048,
+  "model/requant/c1_requant_lo.bin": 2048,
+  "model/requant/c2_requant_hi.bin": 2048,
+  "model/requant/c2_requant_lo.bin": 2048,
+  "model/requant/fc_requant_hi.bin": 2048,
+  "model/requant/fc_requant_lo.bin": 2048
+ },
+ "init_files_used": {
+  "model/microcode/supervisor_lo.bin": 1,
+  "model/microcode/supervisor_hi.bin": 1,
+  "unknown": 1,
+  "none": 7,
+  "model/lut/lut_lo.bin": 20,
+  "model/lut/lut_hi.bin": 20,
+  "model/microcode/c1_rom1.bin": 1,
+  "model/microcode/c1_rom2.bin": 1,
+  "model/microcode/c2_rom1.bin": 1,
+  "model/microcode/c2_rom2.bin": 1,
+  "model/microcode/fc_rom1.bin": 2,
+  "model/microcode/fc_rom2.bin": 2,
+  "model/busmap/bus_map.bin": 1
+ },
+ "model_files_unused": [
+  "model/lut/lut_hi_signed.bin",
+  "model/lut/lut_lo_signed.bin",
+  "model/requant/c1_requant_hi.bin",
+  "model/requant/c1_requant_lo.bin",
+  "model/requant/c2_requant_hi.bin",
+  "model/requant/c2_requant_lo.bin",
+  "model/requant/fc_requant_hi.bin",
+  "model/requant/fc_requant_lo.bin"
+ ],
+ "pin_checks": {
+  "power:PWR_FLAG": {
+   "pins": 1,
+   "package": "",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "PWR_FLAG",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 1,
+   "dup_names_in_unit": {}
+  },
+  "Device:C": {
+   "pins": 2,
+   "package": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "C",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 2,
+   "dup_names_in_unit": {}
+  },
+  "Connector:TestPoint": {
+   "pins": 1,
+   "package": "",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "TestPoint",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "Memory_EPROM:27C512": {
+   "pins": 28,
+   "package": "DIP-28",
+   "check": "ok",
+   "lib_symbol": "27C512",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HCT273": {
+   "pins": 20,
+   "package": "DIP-20",
+   "check": "ok",
+   "lib_symbol": "74HCT273",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HCT574": {
+   "pins": 20,
+   "package": "DIP-20",
+   "check": "ok",
+   "lib_symbol": "74HCT574",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC238": {
+   "pins": 16,
+   "package": "DIP-16",
+   "check": "ok",
+   "lib_symbol": "74HC238",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC157": {
+   "pins": 16,
+   "package": "DIP-16",
+   "check": "ok",
+   "lib_symbol": "74LS157",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HCT541": {
+   "pins": 20,
+   "package": "DIP-20",
+   "check": "ok",
+   "lib_symbol": "74HCT541",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC74": {
+   "pins": 14,
+   "package": "DIP-14",
+   "check": "ok",
+   "lib_symbol": "74HC74",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A",
+    "B",
+    "C"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC08": {
+   "pins": 14,
+   "package": "DIP-14",
+   "check": "ok",
+   "lib_symbol": "74LS08",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ],
+   "unnamed_pins": 12,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC32": {
+   "pins": 14,
+   "package": "DIP-14",
+   "check": "ok",
+   "lib_symbol": "74LS32",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ],
+   "unnamed_pins": 12,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC04": {
+   "pins": 14,
+   "package": "DIP-14",
+   "check": "ok",
+   "lib_symbol": "74HC04",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
+   ],
+   "unnamed_pins": 12,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC688": {
+   "pins": 20,
+   "package": "DIP-20",
+   "check": "ok",
+   "lib_symbol": "74HC688",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC161": {
+   "pins": 16,
+   "package": "DIP-16",
+   "check": "ok",
+   "lib_symbol": "74LS161",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "Connector_Generic:Conn_02x20_Odd_Even": {
+   "pins": 40,
+   "package": "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "Conn_02x20_Odd_Even",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC138": {
+   "pins": 16,
+   "package": "DIP-16",
+   "check": "ok",
+   "lib_symbol": "74HC138",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "Connector_Generic:Conn_02x12_Odd_Even": {
+   "pins": 24,
+   "package": "Connector_PinHeader_2.54mm:PinHeader_2x12_P2.54mm_Vertical",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "Conn_02x12_Odd_Even",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "Device:R": {
+   "pins": 2,
+   "package": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "R",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 2,
+   "dup_names_in_unit": {}
+  },
+  "Memory_RAM:HY6264AxP": {
+   "pins": 28,
+   "package": "DIP-28",
+   "check": "ok",
+   "lib_symbol": "HY6264AxP",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "Memory_RAM:CY62256-70PC": {
+   "pins": 28,
+   "package": "DIP-28",
+   "check": "ok",
+   "lib_symbol": "CY62256-70PC",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC245": {
+   "pins": 20,
+   "package": "DIP-20",
+   "check": "ok",
+   "lib_symbol": "74HC245",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC00": {
+   "pins": 14,
+   "package": "DIP-14",
+   "check": "ok",
+   "lib_symbol": "74HC00",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ],
+   "unnamed_pins": 12,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC283": {
+   "pins": 16,
+   "package": "DIP-16",
+   "check": "ok",
+   "lib_symbol": "74LS283",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC02": {
+   "pins": 14,
+   "package": "DIP-14",
+   "check": "ok",
+   "lib_symbol": "74HC02",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ],
+   "unnamed_pins": 12,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HC85": {
+   "pins": 16,
+   "package": "DIP-16",
+   "check": "ok",
+   "lib_symbol": "74HC85",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74LS148": {
+   "pins": 16,
+   "package": "DIP-16",
+   "check": "ok",
+   "lib_symbol": "74LS148",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "Device:LED": {
+   "pins": 2,
+   "package": "LED_THT:LED_D5.0mm",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "LED",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "Connector_Generic:Conn_02x02_Odd_Even": {
+   "pins": 4,
+   "package": "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "Conn_02x02_Odd_Even",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "Connector_Generic:Conn_01x02": {
+   "pins": 2,
+   "package": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "Conn_01x02",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "Connector_Generic:Conn_02x32_Odd_Even": {
+   "pins": 64,
+   "package": "Connector_PinHeader_2.54mm:PinHeader_2x32_P2.54mm_Vertical",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "Conn_02x32_Odd_Even",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "Connector_Generic:Conn_01x03": {
+   "pins": 3,
+   "package": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "Conn_01x03",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "Device:R_Network08": {
+   "pins": 9,
+   "package": "Resistor_THT:R_Array_SIP9",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "R_Network08",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "Switch:SW_Push": {
+   "pins": 2,
+   "package": "Button_Switch_THT:SW_PUSH_6mm",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "SW_Push",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "74xx:74HCT245": {
+   "pins": 20,
+   "package": "DIP-20",
+   "check": "ok",
+   "lib_symbol": "74LS245",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  },
+  "Oscillator:ASE-xxxMHz": {
+   "pins": 4,
+   "package": "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm",
+   "check": "n/a (no DIP footprint)",
+   "lib_symbol": "ASE-xxxMHz",
+   "name_mismatches": 0,
+   "type_mismatches": 0,
+   "unit_conflicts": 0,
+   "units_used": [
+    "A"
+   ],
+   "unnamed_pins": 0,
+   "dup_names_in_unit": {}
+  }
+ },
+ "single_node": {
+  "total": 668,
+  "unconnected_named": 641,
+  "other": [
+   {
+    "name": "/B01_S01_Supervisor/MCR0",
+    "ref": "U1004",
+    "pin": "19",
+    "part": "74HCT574"
+   },
+   {
+    "name": "/B01_S01_Supervisor/MCR1",
+    "ref": "U1004",
+    "pin": "18",
+    "part": "74HCT574"
+   },
+   {
+    "name": "/B01_S01_Supervisor/MCR2",
+    "ref": "U1004",
+    "pin": "17",
+    "part": "74HCT574"
+   },
+   {
+    "name": "/B01_S01_Supervisor/MCR3",
+    "ref": "U1004",
+    "pin": "16",
+    "part": "74HCT574"
+   },
+   {
+    "name": "/B01_S01_Supervisor/MCR4",
+    "ref": "U1004",
+    "pin": "15",
+    "part": "74HCT574"
+   },
+   {
+    "name": "/B01_S01_Supervisor/MCR15",
+    "ref": "U1005",
+    "pin": "12",
+    "part": "74HCT574"
+   },
+   {
+    "name": "/B01_S01_Supervisor/NOT_RESET_N",
+    "ref": "U1016",
+    "pin": "6",
+    "part": "74HC04"
+   },
+   {
+    "name": "/B02_S02_Timing/CAPTURE_N",
+    "ref": "U2004",
+    "pin": "12",
+    "part": "74HC138"
+   },
+   {
+    "name": "/B02_S02_Timing/DONE_ST_N",
+    "ref": "U2004",
+    "pin": "9",
+    "part": "74HC138"
+   },
+   {
+    "name": "/B02_S02_Timing/HOLD_N",
+    "ref": "U2004",
+    "pin": "11",
+    "part": "74HC138"
+   },
+   {
+    "name": "/B02_S02_Timing/MC_REG0",
+    "ref": "U2003",
+    "pin": "19",
+    "part": "74HCT574"
+   },
+   {
+    "name": "/B02_S02_Timing/MC_REG1",
+    "ref": "U2003",
+    "pin": "18",
+    "part": "74HCT574"
+   },
+   {
+    "name": "/B02_S02_Timing/MC_REG2",
+    "ref": "U2003",
+    "pin": "17",
+    "part": "74HCT574"
+   },
+   {
+    "name": "/B02_S02_Timing/READ_I",
+    "ref": "U2011",
+    "pin": "2",
+    "part": "74HC04"
+   },
+   {
+    "name": "/B02_S02_Timing/RELEASE_N",
+    "ref": "U2004",
+    "pin": "10",
+    "part": "74HC138"
+   },
+   {
+    "name": "/B02_S02_Timing/WAIT_N",
+    "ref": "U2004",
+    "pin": "13",
+    "part": "74HC138"
+   },
+   {
+    "name": "/B05_S05_Pool1/IDLE_OR",
+    "ref": "U5031",
+    "pin": "8",
+    "part": "74HC32"
+   },
+   {
+    "name": "/B06_S08_Conv2/C2_IMG_LAST",
+    "ref": "U8018",
+    "pin": "6",
+    "part": "74HC08"
+   },
+   {
+    "name": "/B07_S05_Pool2/IDLE_OR",
+    "ref": "U5131",
+    "pin": "8",
+    "part": "74HC32"
+   },
+   {
+    "name": "ARGMAX_RESULT_VALID",
+    "ref": "U6034",
+    "pin": "11",
+    "part": "74HC32"
+   },
+   {
+    "name": "FC1_FC2_DONE_NC",
+    "ref": "U9131",
+    "pin": "3",
+    "part": "74HC08"
+   },
+   {
+    "name": "FC2_FC1_DONE_NC",
+    "ref": "U9329",
+    "pin": "11",
+    "part": "74HC08"
+   },
+   {
+    "name": "POOL1_OUT_WE_NC",
+    "ref": "U5039",
+    "pin": "18",
+    "part": "74HCT541"
+   },
+   {
+    "name": "POOL1_P2_DONE_NC",
+    "ref": "U5041",
+    "pin": "6",
+    "part": "74HC08"
+   },
+   {
+    "name": "POOL2_OUT_WE_NC",
+    "ref": "U5139",
+    "pin": "18",
+    "part": "74HCT541"
+   },
+   {
+    "name": "POOL2_P1_DONE_NC",
+    "ref": "U5141",
+    "pin": "3",
+    "part": "74HC08"
+   },
+   {
+    "name": "POOL_MEM_nCE_OUT",
+    "ref": "U12504",
+    "pin": "7",
+    "part": "74HC157"
+   }
+  ]
+ },
+ "chars": {
+  "/": 3315,
+  "+": 2,
+  "-": 641,
+  "(": 641,
+  ")": 641,
+  "[": 0,
+  "]": 0,
+  "{": 98,
+  "}": 98,
+  "~": 98,
+  "<": 3,
+  "=": 3
+ },
+ "collisions": {},
+ "net_name_shapes": {
+  "hierarchical": 3315,
+  "plain": 539,
+  "unconnected": 641,
+  "rails": [
+   "+3V3",
+   "+5V",
+   "GND"
+  ]
+ },
+ "power": {
+  "+5V": {
+   "nodes": 1569,
+   "pintypes": {
+    "passive": 410,
+    "power_out": 1,
+    "power_in": 893,
+    "input": 265
+   },
+   "top_parts": {
+    "C": 259,
+    "74HC157": 250,
+    "74HC283": 190,
+    "74HC688": 154,
+    "Conn_02x20_Odd_Even": 128,
+    "74HC161": 78,
+    "74HCT574": 75,
+    "74HC74": 55
+   }
+  },
+  "+3V3": {
+   "nodes": 129,
+   "pintypes": {
+    "power_out": 1,
+    "passive": 128
+   },
+   "top_parts": {
+    "Conn_02x20_Odd_Even": 128,
+    "PWR_FLAG": 1
+   }
+  },
+  "GND": {
+   "nodes": 3389,
+   "pintypes": {
+    "passive": 491,
+    "power_out": 1,
+    "input": 2004,
+    "power_in": 893
+   },
+   "top_parts": {
+    "74HC157": 690,
+    "74HC283": 612,
+    "74HC688": 420,
+    "74HC161": 297,
+    "C": 260,
+    "Conn_02x20_Odd_Even": 192,
+    "27C512": 190,
+    "74HCT574": 178
+   }
+  }
+ },
+ "unconnected_by_part": {
+  "Conn_02x20_Odd_Even": 145,
+  "74HC283": 110,
+  "74HC161": 91,
+  "74HC138": 60,
+  "74HC74": 45,
+  "74HCT574": 36,
+  "74HC157": 34,
+  "74HCT273": 32,
+  "74HCT541": 17,
+  "74LS148": 12,
+  "74HC04": 10,
+  "74HC08": 9,
+  "74HC32": 8,
+  "HY6264AxP": 7,
+  "74HC85": 6,
+  "74HC02": 6,
+  "74HC238": 5,
+  "Conn_02x12_Odd_Even": 3,
+  "27C512": 3,
+  "74HC00": 2
+ },
+ "incomplete_components": [
+  {
+   "ref": "U2010",
+   "part": "74HC08",
+   "missing_pins": [
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U2011",
+   "part": "74HC04",
+   "missing_pins": [
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  {
+   "ref": "U4048",
+   "part": "74HC32",
+   "missing_pins": [
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U4056",
+   "part": "74HC32",
+   "missing_pins": [
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U7143",
+   "part": "74HC32",
+   "missing_pins": [
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U7155",
+   "part": "74HC04",
+   "missing_pins": [
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "E",
+    "F"
+   ]
+  },
+  {
+   "ref": "U7157",
+   "part": "74HC02",
+   "missing_pins": [
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "D"
+   ]
+  },
+  {
+   "ref": "U14005",
+   "part": "74HC04",
+   "missing_pins": [
+    "3",
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  {
+   "ref": "U14006",
+   "part": "74HC08",
+   "missing_pins": [
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U14013",
+   "part": "74HC32",
+   "missing_pins": [
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U8142",
+   "part": "74HC00",
+   "missing_pins": [
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U8143",
+   "part": "74HC08",
+   "missing_pins": [
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U8156",
+   "part": "74HC04",
+   "missing_pins": [
+    "3",
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  {
+   "ref": "U15005",
+   "part": "74HC04",
+   "missing_pins": [
+    "3",
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  {
+   "ref": "U15006",
+   "part": "74HC08",
+   "missing_pins": [
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U9117",
+   "part": "74HC32",
+   "missing_pins": [
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U9131",
+   "part": "74HC08",
+   "missing_pins": [
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U9143",
+   "part": "74HC02",
+   "missing_pins": [
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U9145",
+   "part": "74HC04",
+   "missing_pins": [
+    "3",
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  {
+   "ref": "U16005",
+   "part": "74HC04",
+   "missing_pins": [
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  {
+   "ref": "U16006",
+   "part": "74HC08",
+   "missing_pins": [
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "D"
+   ]
+  },
+  {
+   "ref": "U16021",
+   "part": "74HC32",
+   "missing_pins": [
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U9317",
+   "part": "74HC32",
+   "missing_pins": [
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U9331",
+   "part": "74HC08",
+   "missing_pins": [
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U9343",
+   "part": "74HC02",
+   "missing_pins": [
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U9345",
+   "part": "74HC04",
+   "missing_pins": [
+    "3",
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  {
+   "ref": "U16205",
+   "part": "74HC04",
+   "missing_pins": [
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  {
+   "ref": "U16206",
+   "part": "74HC08",
+   "missing_pins": [
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "D"
+   ]
+  },
+  {
+   "ref": "U16221",
+   "part": "74HC32",
+   "missing_pins": [
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  {
+   "ref": "U12014",
+   "part": "74HC08",
+   "missing_pins": [
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "units": [
+    "B",
+    "C",
+    "D"
+   ]
+  }
+ ],
+ "power_pin_anomalies": [],
+ "signal_pins_on_rails": {
+  "total": 2269,
+  "by_part": {
+   "74HC157": 544,
+   "74HC688": 492,
+   "74HC283": 434,
+   "74HC161": 257,
+   "27C512": 140,
+   "74HCT574": 103,
+   "74HCT541": 83,
+   "74HC74": 47,
+   "74HCT273": 32,
+   "74HC138": 31,
+   "74HC08": 22,
+   "74HC32": 20,
+   "74HC04": 16,
+   "74HC02": 12,
+   "74LS148": 9,
+   "74HC85": 9,
+   "HY6264AxP": 7,
+   "74HC238": 6,
+   "74HC245": 4,
+   "ASE-xxxMHz": 1
+  },
+  "by_part_and_rail": {
+   "74HC157 on GND": 492,
+   "74HC283 on GND": 428,
+   "74HC688 on GND": 379,
+   "74HC161 on GND": 238,
+   "27C512 on GND": 138,
+   "74HC688 on +5V": 113,
+   "74HCT574 on GND": 103,
+   "74HCT541 on GND": 83,
+   "74HC157 on +5V": 52,
+   "74HC74 on +5V": 36,
+   "74HCT273 on GND": 32,
+   "74HC138 on GND": 22,
+   "74HC32 on GND": 20,
+   "74HC161 on +5V": 19,
+   "74HC08 on GND": 18,
+   "74HC04 on GND": 13,
+   "74HC02 on GND": 12,
+   "74HC74 on GND": 11,
+   "74HC138 on +5V": 9,
+   "HY6264AxP on +5V": 7,
+   "74HC283 on +5V": 6,
+   "74HC85 on GND": 6,
+   "74LS148 on +5V": 5,
+   "74HC238 on GND": 5,
+   "74HC08 on +5V": 4,
+   "74HC245 on +5V": 4,
+   "74LS148 on GND": 4,
+   "74HC04 on +5V": 3,
+   "74HC85 on +5V": 3,
+   "27C512 on +5V": 2,
+   "74HC238 on +5V": 1,
+   "ASE-xxxMHz on +5V": 1
+  }
+ },
+ "fanin_fanout": {
+  "nets_with_multiple_drivers": 85,
+  "multiple_driver_examples": [
+   {
+    "net": "/B03_S04_Memories/MEM_D0",
+    "drivers": 21,
+    "nodes": 21
+   },
+   {
+    "net": "/B03_S04_Memories/MEM_D1",
+    "drivers": 21,
+    "nodes": 21
+   },
+   {
+    "net": "/B03_S04_Memories/MEM_D2",
+    "drivers": 21,
+    "nodes": 21
+   },
+   {
+    "net": "/B03_S04_Memories/MEM_D3",
+    "drivers": 21,
+    "nodes": 21
+   },
+   {
+    "net": "/B03_S04_Memories/MEM_D4",
+    "drivers": 21,
+    "nodes": 21
+   },
+   {
+    "net": "/B03_S04_Memories/MEM_D5",
+    "drivers": 21,
+    "nodes": 21
+   },
+   {
+    "net": "/B03_S04_Memories/MEM_D6",
+    "drivers": 21,
+    "nodes": 21
+   },
+   {
+    "net": "/B03_S04_Memories/MEM_D7",
+    "drivers": 21,
+    "nodes": 21
+   },
+   {
+    "net": "ADDR0",
+    "drivers": 10,
+    "nodes": 13
+   },
+   {
+    "net": "ADDR1",
+    "drivers": 10,
+    "nodes": 13
+   }
+  ],
+  "nets_without_driver": 40,
+  "no_driver_examples": [
+   {
+    "net": "/B12_S10_Top_IO/CLK_SEL",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/EXT_CLK_IN",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/H_A0",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/H_A1",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/H_A2",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/H_A3",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/H_A4",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/H_A5",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/H_A6",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/H_A7",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/H_A8",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/H_A9",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/H_A10",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/H_A11",
+    "nodes": 3
+   },
+   {
+    "net": "/B12_S10_Top_IO/H_A12",
+    "nodes": 3
+   }
+  ]
+ },
+ "node_histogram": {
+  "1": 668,
+  "2": 2553,
+  "3": 429,
+  "4": 379,
+  "5": 291,
+  "6": 50,
+  "7": 16,
+  "8": 9,
+  "9": 17,
+  "10": 5,
+  "11": 5,
+  "12": 2,
+  "13": 22,
+  "14": 4,
+  "15": 1,
+  "16": 4,
+  "17": 5,
+  "20": 14,
+  "21": 8,
+  "29": 8,
+  "32": 1,
+  "41": 1,
+  "80": 1,
+  "129": 1,
+  "199": 1,
+  "1569": 1,
+  "3389": 1
+ },
+ "longest_net_names": [
+  {
+   "name": "/B01_S01_Supervisor/NOT_RESULT_VALID_SET",
+   "len": 40
+  },
+  {
+   "name": "/B01_S01_Supervisor/RESULT_VALID_CLEAR_N",
+   "len": 40
+  },
+  {
+   "name": "/B01_S01_Supervisor/RESULT_VALID_SET",
+   "len": 36
+  },
+  {
+   "name": "/B01_S01_Supervisor/NOT_TIMEOUT_CLR",
+   "len": 35
+  },
+  {
+   "name": "/B04_S13_Requant_C1/C1_RQ_HIGH_L0_0",
+   "len": 35
+  }
+ ],
+ "external_nets": {
+  "only_on_mechanical_parts": 157,
+  "only_on_mechanical_parts_names": [
+   "+3V3",
+   "/B12_S10_Top_IO/EXT_CLK_IN",
+   "/B12_S10_Top_IO/LED_BUSY",
+   "/B12_S10_Top_IO/LED_DONE",
+   "/B12_S10_Top_IO/LED_ERROR",
+   "/B12_S10_Top_IO/LED_IMAGE_READY",
+   "/B12_S10_Top_IO/LED_MODEL_READY",
+   "/B12_S10_Top_IO/LED_PWR",
+   "/B12_S10_Top_IO/LED_RESULT_VALID",
+   "unconnected-(J4001-Pin_22-Pad22)",
+   "unconnected-(J4001-Pin_23-Pad23)",
+   "unconnected-(J4001-Pin_24-Pad24)",
+   "unconnected-(J20002-Pin_26-Pad26)",
+   "unconnected-(J20002-Pin_27-Pad27)",
+   "unconnected-(J20002-Pin_28-Pad28)",
+   "unconnected-(J20002-Pin_29-Pad29)",
+   "unconnected-(J20002-Pin_30-Pad30)",
+   "unconnected-(J20002-Pin_31-Pad31)",
+   "unconnected-(J20002-Pin_32-Pad32)",
+   "unconnected-(J20002-Pin_33-Pad33)",
+   "unconnected-(J20002-Pin_34-Pad34)",
+   "unconnected-(J20002-Pin_35-Pad35)",
+   "unconnected-(J20002-Pin_36-Pad36)",
+   "unconnected-(J20002-Pin_37-Pad37)",
+   "unconnected-(J20002-Pin_38-Pad38)",
+   "unconnected-(J20002-Pin_39-Pad39)",
+   "unconnected-(J20002-Pin_40-Pad40)",
+   "unconnected-(J20101-Pin_25-Pad25)",
+   "unconnected-(J20101-Pin_26-Pad26)",
+   "unconnected-(J20101-Pin_27-Pad27)",
+   "unconnected-(J20101-Pin_28-Pad28)",
+   "unconnected-(J20101-Pin_29-Pad29)",
+   "unconnected-(J20101-Pin_30-Pad30)",
+   "unconnected-(J20101-Pin_31-Pad31)",
+   "unconnected-(J20101-Pin_32-Pad32)",
+   "unconnected-(J20101-Pin_33-Pad33)",
+   "unconnected-(J20101-Pin_34-Pad34)",
+   "unconnected-(J20101-Pin_35-Pad35)",
+   "unconnected-(J20101-Pin_36-Pad36)",
+   "unconnected-(J20101-Pin_37-Pad37)",
+   "unconnected-(J20101-Pin_38-Pad38)",
+   "unconnected-(J20101-Pin_39-Pad39)",
+   "unconnected-(J20101-Pin_40-Pad40)",
+   "unconnected-(J20208-Pin_37-Pad37)",
+   "unconnected-(J20208-Pin_38-Pad38)",
+   "unconnected-(J20208-Pin_39-Pad39)",
+   "unconnected-(J20208-Pin_40-Pad40)",
+   "unconnected-(J20302-Pin_32-Pad32)",
+   "unconnected-(J20302-Pin_33-Pad33)",
+   "unconnected-(J20302-Pin_34-Pad34)",
+   "unconnected-(J20302-Pin_35-Pad35)",
+   "unconnected-(J20302-Pin_36-Pad36)",
+   "unconnected-(J20302-Pin_37-Pad37)",
+   "unconnected-(J20302-Pin_38-Pad38)",
+   "unconnected-(J20302-Pin_39-Pad39)",
+   "unconnected-(J20302-Pin_40-Pad40)",
+   "unconnected-(J20403-Pin_16-Pad16)",
+   "unconnected-(J20403-Pin_17-Pad17)",
+   "unconnected-(J20403-Pin_18-Pad18)",
+   "unconnected-(J20403-Pin_19-Pad19)",
+   "unconnected-(J20403-Pin_20-Pad20)",
+   "unconnected-(J20403-Pin_21-Pad21)",
+   "unconnected-(J20403-Pin_22-Pad22)",
+   "unconnected-(J20403-Pin_23-Pad23)",
+   "unconnected-(J20403-Pin_24-Pad24)",
+   "unconnected-(J20403-Pin_25-Pad25)",
+   "unconnected-(J20403-Pin_26-Pad26)",
+   "unconnected-(J20403-Pin_27-Pad27)",
+   "unconnected-(J20403-Pin_28-Pad28)",
+   "unconnected-(J20403-Pin_29-Pad29)",
+   "unconnected-(J20403-Pin_30-Pad30)",
+   "unconnected-(J20403-Pin_31-Pad31)",
+   "unconnected-(J20403-Pin_32-Pad32)",
+   "unconnected-(J20403-Pin_33-Pad33)",
+   "unconnected-(J20403-Pin_34-Pad34)",
+   "unconnected-(J20403-Pin_35-Pad35)",
+   "unconnected-(J20403-Pin_36-Pad36)",
+   "unconnected-(J20403-Pin_37-Pad37)",
+   "unconnected-(J20403-Pin_38-Pad38)",
+   "unconnected-(J20403-Pin_39-Pad39)",
+   "unconnected-(J20403-Pin_40-Pad40)",
+   "unconnected-(J20502-Pin_32-Pad32)",
+   "unconnected-(J20502-Pin_33-Pad33)",
+   "unconnected-(J20502-Pin_34-Pad34)",
+   "unconnected-(J20502-Pin_35-Pad35)",
+   "unconnected-(J20502-Pin_36-Pad36)",
+   "unconnected-(J20502-Pin_37-Pad37)",
+   "unconnected-(J20502-Pin_38-Pad38)",
+   "unconnected-(J20502-Pin_39-Pad39)",
+   "unconnected-(J20502-Pin_40-Pad40)",
+   "unconnected-(J20603-Pin_16-Pad16)",
+   "unconnected-(J20603-Pin_17-Pad17)",
+   "unconnected-(J20603-Pin_18-Pad18)",
+   "unconnected-(J20603-Pin_19-Pad19)",
+   "unconnected-(J20603-Pin_20-Pad20)",
+   "unconnected-(J20603-Pin_21-Pad21)",
+   "unconnected-(J20603-Pin_22-Pad22)",
+   "unconnected-(J20603-Pin_23-Pad23)",
+   "unconnected-(J20603-Pin_24-Pad24)",
+   "unconnected-(J20603-Pin_25-Pad25)",
+   "unconnected-(J20603-Pin_26-Pad26)",
+   "unconnected-(J20603-Pin_27-Pad27)",
+   "unconnected-(J20603-Pin_28-Pad28)",
+   "unconnected-(J20603-Pin_29-Pad29)",
+   "unconnected-(J20603-Pin_30-Pad30)",
+   "unconnected-(J20603-Pin_31-Pad31)",
+   "unconnected-(J20603-Pin_32-Pad32)",
+   "unconnected-(J20603-Pin_33-Pad33)",
+   "unconnected-(J20603-Pin_34-Pad34)",
+   "unconnected-(J20603-Pin_35-Pad35)",
+   "unconnected-(J20603-Pin_36-Pad36)",
+   "unconnected-(J20603-Pin_37-Pad37)",
+   "unconnected-(J20603-Pin_38-Pad38)",
+   "unconnected-(J20603-Pin_39-Pad39)",
+   "unconnected-(J20603-Pin_40-Pad40)",
+   "unconnected-(J20702-Pin_32-Pad32)",
+   "unconnected-(J20702-Pin_33-Pad33)",
+   "unconnected-(J20702-Pin_34-Pad34)",
+   "unconnected-(J20702-Pin_35-Pad35)",
+   "unconnected-(J20702-Pin_36-Pad36)",
+   "unconnected-(J20702-Pin_37-Pad37)",
+   "unconnected-(J20702-Pin_38-Pad38)",
+   "unconnected-(J20702-Pin_39-Pad39)",
+   "unconnected-(J20702-Pin_40-Pad40)",
+   "unconnected-(J20802-Pin_33-Pad33)",
+   "unconnected-(J20802-Pin_34-Pad34)",
+   "unconnected-(J20802-Pin_35-Pad35)",
+   "unconnected-(J20802-Pin_36-Pad36)",
+   "unconnected-(J20802-Pin_37-Pad37)",
+   "unconnected-(J20802-Pin_38-Pad38)",
+   "unconnected-(J20802-Pin_39-Pad39)",
+   "unconnected-(J20802-Pin_40-Pad40)",
+   "unconnected-(J21003-Pin_35-Pad35)",
+   "unconnected-(J21003-Pin_36-Pad36)",
+   "unconnected-(J21003-Pin_37-Pad37)",
+   "unconnected-(J21003-Pin_38-Pad38)",
+   "unconnected-(J21003-Pin_39-Pad39)",
+   "unconnected-(J21003-Pin_40-Pad40)",
+   "unconnected-(J21103-Pin_22-Pad22)",
+   "unconnected-(J21103-Pin_23-Pad23)",
+   "unconnected-(J21103-Pin_24-Pad24)",
+   "unconnected-(J21103-Pin_25-Pad25)",
+   "unconnected-(J21103-Pin_26-Pad26)",
+   "unconnected-(J21103-Pin_27-Pad27)",
+   "unconnected-(J21103-Pin_28-Pad28)",
+   "unconnected-(J21103-Pin_29-Pad29)",
+   "unconnected-(J21103-Pin_30-Pad30)",
+   "unconnected-(J21103-Pin_31-Pad31)",
+   "unconnected-(J21103-Pin_32-Pad32)",
+   "unconnected-(J21103-Pin_33-Pad33)",
+   "unconnected-(J21103-Pin_34-Pad34)",
+   "unconnected-(J21103-Pin_35-Pad35)",
+   "unconnected-(J21103-Pin_36-Pad36)",
+   "unconnected-(J21103-Pin_37-Pad37)",
+   "unconnected-(J21103-Pin_38-Pad38)",
+   "unconnected-(J21103-Pin_39-Pad39)",
+   "unconnected-(J21103-Pin_40-Pad40)"
+  ],
+  "logic_and_mechanical_parts": 300,
+  "logic_and_mechanical_examples": [
+   "+5V",
+   "ADDR0",
+   "ADDR1",
+   "ADDR2",
+   "ADDR3",
+   "ADDR4",
+   "ADDR5",
+   "ADDR6",
+   "ADDR7",
+   "ADDR8",
+   "ADDR9",
+   "ADDR10",
+   "ADDR11",
+   "ADDR12",
+   "ADDR13",
+   "ADDR14",
+   "ADDR15",
+   "ADDR16",
+   "ADDR17",
+   "ADDR18",
+   "ADDR19",
+   "ADDR20",
+   "ADDR21",
+   "ADDR22",
+   "ADDR23",
+   "ARGMAX_BUSY_N",
+   "ARGMAX_DONE",
+   "ARGMAX_START",
+   "BUSY",
+   "C1_ADDR0",
+   "C1_ADDR1",
+   "C1_ADDR2",
+   "C1_ADDR3",
+   "C1_ADDR4",
+   "C1_ADDR5",
+   "C1_ADDR6",
+   "C1_ADDR7",
+   "C1_ADDR8",
+   "C1_ADDR9",
+   "C1_ADDR10",
+   "C1_ADDR11",
+   "C1_ADDR12",
+   "C1_ADDR13",
+   "C1_ADDR14",
+   "C1_ADDR15",
+   "C1_BUSY_N",
+   "C1_DONE",
+   "C1_MEM_REQ",
+   "C1_MEM_WE",
+   "C1_MEM_nCE_B",
+   "C1_MEM_nCE_IN",
+   "C1_MEM_nCE_MC",
+   "C1_MEM_nCE_OUT",
+   "C1_MEM_nCE_Q",
+   "C1_MEM_nCE_W",
+   "C1_REQ_BUSY",
+   "C1_REQ_DONE",
+   "C1_REQ_QSTB",
+   "C1_SAT_FLAG",
+   "C1_START"
+  ]
+ },
+ "clock_pins": {
+  "74xx:74HCT273": [
+   "11"
+  ],
+  "74xx:74HCT574": [
+   "11"
+  ],
+  "74xx:74HC74": [
+   "3",
+   "11"
+  ]
+ },
+ "memories": {
+  "B01_S01_Supervisor": {
+   "27C512": 2
+  },
+  "B02_S02_Timing": {
+   "27C512": 1
+  },
+  "B03_S04_Memories": {
+   "HY6264AxP": 7,
+   "27C512": 8
+  },
+  "B04_S07_Conv1": {
+   "27C512": 10
+  },
+  "B06_S08_Conv2": {
+   "27C512": 10
+  },
+  "B08_S09_FC1": {
+   "27C512": 10
+  },
+  "B09_S09_FC2": {
+   "27C512": 10
+  },
+  "B11_S11_BusFabric": {
+   "27C512": 1
+  }
+ }
+}

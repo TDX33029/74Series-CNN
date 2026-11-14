@@ -1,0 +1,90 @@
+KiCad comps 1314 (logic 887), EDA comps 3139 (logic 887)
+
+=== logic refs missing in EDA (0) ===
+=== EDA-only refs classified as logic (7) ===
+  + U11001   AT27C512R-70PU                 B13_LUT_REF
+  + U11002   AT27C512R-70PU                 B13_LUT_REF
+  + U11003   CD74HCT574EE4                  B13_LUT_REF
+  + U11004   CD74HCT574EE4                  B13_LUT_REF
+  + U11005   CD74HCT574EE4                  B13_LUT_REF
+  + U11006   CD74HCT574EE4                  B13_LUT_REF
+  + U15013   SN74HC32AN                     B06-3_CONV2
+=== logic class mismatches (4) ===
+  ~ U4008    62256 vs 28C256 (CY62256-70PC vs AT28C256-15PU)
+  ~ U4009    62256 vs 28C256 (CY62256-70PC vs AT28C256-15PU)
+  ~ U4010    62256 vs 28C256 (CY62256-70PC vs AT28C256-15PU)
+  ~ U4011    62256 vs 28C256 (CY62256-70PC vs AT28C256-15PU)
+
+=== EDA-only non-logic refs by kind ===
+  CONN         18
+  LED          552
+  OTHER:HLMP-S301 1
+  Q            551
+  R            1047
+  RP/LEDP      2
+
+=== logic pin connectivity diffs (50) ===
+
+-- B04_S07_Conv1 (5 pins)
+  U7120.1: kicad_only=[-] eda_only=[U14013.2]
+  U7121.1: kicad_only=[-] eda_only=[U14013.2]
+  U7132.24: kicad_only=[U14013.2] eda_only=[U14013.5]
+  U7133.24: kicad_only=[U14013.2] eda_only=[U14013.5]
+  U7139.8: kicad_only=[-] eda_only=[U14013.1]
+
+-- B04_S13_Requant_C1 (13 pins)
+  U14004.11: kicad_only=[U14013.1] eda_only=[-]
+  U14004.12: kicad_only=[-] eda_only=[U14013.1]
+  U14004.13: kicad_only=[-] eda_only=[U14013.2]
+  U14011.11: kicad_only=[-] eda_only=[U14013.1]
+  U14012.2: kicad_only=[-] eda_only=[U14013.1]
+  U14012.5: kicad_only=[-] eda_only=[U14013.2]
+  U14012.9: kicad_only=[U14013.2] eda_only=[U14013.5]
+  U14012.12: kicad_only=[-] eda_only=[U14013.2]
+  U14013.1: kicad_only=[U14004.11] eda_only=[U14004.12, U14011.11, U14012.2, U7139.8]
+  U14013.2: kicad_only=[U14012.9, U7132.24, U7133.24] eda_only=[U14004.13, U14012.12, U14012.5, U7120.1, U7121.1]
+  U14013.3: kicad_only=[-] eda_only=[U14013.4]
+  U14013.4: kicad_only=[-] eda_only=[U14013.3]
+  ... (1 more)
+
+-- B08_S09_FC1 (3 pins)
+  U9118.24: kicad_only=[U16021.2] eda_only=[U16021.5]
+  U9119.24: kicad_only=[U16021.2] eda_only=[U16021.5]
+  U9125.2: kicad_only=[U16004.12] eda_only=[U16021.1]
+
+-- B08_S17_FC1 (13 pins)
+  U16004.11: kicad_only=[U16021.1] eda_only=[-]
+  U16004.12: kicad_only=[U16006.4, U16020.2, U9125.2] eda_only=[-]
+  U16004.13: kicad_only=[U16020.12, U16020.5] eda_only=[-]
+  U16006.4: kicad_only=[U16004.12] eda_only=[U16021.1]
+  U16020.2: kicad_only=[U16004.12] eda_only=[U16021.1]
+  U16020.5: kicad_only=[U16004.13] eda_only=[U16021.2]
+  U16020.9: kicad_only=[U16021.2] eda_only=[U16021.5]
+  U16020.12: kicad_only=[U16004.13] eda_only=[U16021.2]
+  U16021.1: kicad_only=[U16004.11] eda_only=[U16006.4, U16020.2, U9125.2]
+  U16021.2: kicad_only=[U16020.9, U9118.24, U9119.24] eda_only=[U16020.12, U16020.5]
+  U16021.3: kicad_only=[-] eda_only=[U16021.4]
+  U16021.4: kicad_only=[-] eda_only=[U16021.3]
+  ... (1 more)
+
+-- B09_S09_FC2 (3 pins)
+  U9318.24: kicad_only=[U16221.2] eda_only=[U16221.5]
+  U9319.24: kicad_only=[U16221.2] eda_only=[U16221.5]
+  U9325.2: kicad_only=[U16204.12] eda_only=[U16221.1]
+
+-- B09_S17_FC2 (13 pins)
+  U16204.11: kicad_only=[U16221.1] eda_only=[-]
+  U16204.12: kicad_only=[U16206.4, U16220.2, U9325.2] eda_only=[-]
+  U16204.13: kicad_only=[U16220.12, U16220.5] eda_only=[-]
+  U16206.4: kicad_only=[U16204.12] eda_only=[U16221.1]
+  U16220.2: kicad_only=[U16204.12] eda_only=[U16221.1]
+  U16220.5: kicad_only=[U16204.13] eda_only=[U16221.2]
+  U16220.9: kicad_only=[U16221.2] eda_only=[U16221.5]
+  U16220.12: kicad_only=[U16204.13] eda_only=[U16221.2]
+  U16221.1: kicad_only=[U16204.11] eda_only=[U16206.4, U16220.2, U9325.2]
+  U16221.2: kicad_only=[U16220.9, U9318.24, U9319.24] eda_only=[U16220.12, U16220.5]
+  U16221.3: kicad_only=[-] eda_only=[U16221.4]
+  U16221.4: kicad_only=[-] eda_only=[U16221.3]
+  ... (1 more)
+
+TOTAL: 0 missing, 4 class mismatch, 50 pin diffs

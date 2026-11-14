@@ -1,0 +1,4192 @@
+{
+ "source": "D:/Document/tempPrj/74Series-CNN/Cache/CNN_74xx_System\\output\\top_20261112c.net",
+ "netlist_export": "KiCad 10.0.4, 2026-11-07T23:23:23",
+ "key": "lib:part -> pin number -> {name, etype, unit, unit_name}",
+ "notes": [
+  "Covers every part that needs a simulation model (logic, memory, clock, switch); passives/connectors/power symbols are excluded and listed in report.md.",
+  "unit/unit_name come from the component 'units' blocks in the netlist (authoritative for how the part is instantiated).",
+  "lib_unit is the unit number inside the KiCad symbol; 0 means the pin belongs to the common body shared by all units.",
+  "~{NAME} is KiCad's overbar notation for an active-low pin.",
+  "pins always include the power pins."
+ ],
+ "parts": {
+  "Memory_EPROM:27C512": {
+   "lib": "Memory_EPROM",
+   "part": "27C512",
+   "description": "OTP EPROM 512 KiBit",
+   "category": "memory-rom",
+   "instances": 52,
+   "sheets": [
+    "B01_S01_Supervisor",
+    "B02_S02_Timing",
+    "B03_S04_Memories",
+    "B04_S07_Conv1",
+    "B06_S08_Conv2",
+    "B08_S09_FC1",
+    "B09_S09_FC2",
+    "B11_S11_BusFabric"
+   ],
+   "footprint": "Package_DIP:DIP-28_W15.24mm",
+   "package": "DIP-28",
+   "pin_count": 28,
+   "package_pin_count": 28,
+   "pin_count_check": "ok",
+   "library_symbol": "27C512",
+   "library_note": "",
+   "symbol_units": [
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "A15",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "A12",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "A7",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "A6",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "A5",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "A4",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "A3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "A2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "A1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "A0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "D0",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "D1",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "D2",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "D3",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "D4",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "17": {
+     "name": "D5",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "18": {
+     "name": "D6",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "19": {
+     "name": "D7",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "20": {
+     "name": "~{CE}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "21": {
+     "name": "A10",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "22": {
+     "name": "~{OE}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "23": {
+     "name": "A11",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "24": {
+     "name": "A9",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "25": {
+     "name": "A8",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "26": {
+     "name": "A13",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "27": {
+     "name": "A14",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "28": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "14",
+    "28"
+   ],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HCT273": {
+   "lib": "74xx",
+   "part": "74HCT273",
+   "description": "8-bit D Flip-Flop, reset",
+   "category": "logic",
+   "instances": 32,
+   "sheets": [
+    "B01_S01_Supervisor",
+    "B02_S02_Timing",
+    "B04_S07_Conv1",
+    "B05_S05_Pool1",
+    "B06_S08_Conv2",
+    "B07_S05_Pool2",
+    "B08_S09_FC1",
+    "B09_S09_FC2",
+    "B10_S06_Argmax"
+   ],
+   "footprint": "Package_DIP:DIP-20_W7.62mm",
+   "package": "DIP-20",
+   "pin_count": 20,
+   "package_pin_count": 20,
+   "pin_count_check": "ok",
+   "library_symbol": "74HCT273",
+   "library_note": "",
+   "symbol_units": [
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "~{Mr}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "Q0",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "D0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "D1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "Q1",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "Q2",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "D2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "D3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "Q3",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "Cp",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "clock",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "Q4",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "D4",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "D5",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "Q5",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "Q6",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "17": {
+     "name": "D6",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "18": {
+     "name": "D7",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "19": {
+     "name": "Q7",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "20": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "10",
+    "20"
+   ],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HCT574": {
+   "lib": "74xx",
+   "part": "74HCT574",
+   "description": "8-bit Register, 3-state outputs",
+   "category": "logic",
+   "instances": 75,
+   "sheets": [
+    "B01_S01_Supervisor",
+    "B02_S02_Timing",
+    "B04_S07_Conv1",
+    "B04_S13_Requant_C1",
+    "B05_S05_Pool1",
+    "B06_S08_Conv2",
+    "B06_S15_Requant_C2",
+    "B07_S05_Pool2",
+    "B08_S09_FC1",
+    "B08_S17_FC1",
+    "B09_S09_FC2",
+    "B09_S17_FC2",
+    "B10_S06_Argmax",
+    "B10_S12B_ScoreLatch"
+   ],
+   "footprint": "Package_DIP:DIP-20_W7.62mm",
+   "package": "DIP-20",
+   "pin_count": 20,
+   "package_pin_count": 20,
+   "pin_count_check": "ok",
+   "library_symbol": "74HCT574",
+   "library_note": "",
+   "symbol_units": [
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "OE",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "D0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "D1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "D2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "D3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "D4",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "D5",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "D6",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "D7",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "Cp",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "clock",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "Q7",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "Q6",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "Q5",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "Q4",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "Q3",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "17": {
+     "name": "Q2",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "18": {
+     "name": "Q1",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "19": {
+     "name": "Q0",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "20": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "10",
+    "20"
+   ],
+   "active_low_by_graphic_only": [
+    [
+     "1",
+     "OE",
+     "inverted"
+    ]
+   ],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC238": {
+   "lib": "74xx",
+   "part": "74HC238",
+   "description": "3-to-8 line decoder/multiplexer, DIP-16/SOIC-16/SSOP-16",
+   "category": "logic",
+   "instances": 2,
+   "sheets": [
+    "B01_S01_Supervisor",
+    "B10_S12B_ScoreLatch"
+   ],
+   "footprint": "Package_DIP:DIP-16_W7.62mm",
+   "package": "DIP-16",
+   "pin_count": 16,
+   "package_pin_count": 16,
+   "pin_count_check": "ok",
+   "library_symbol": "74HC238",
+   "library_note": "",
+   "symbol_units": [
+    0,
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "A0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "A1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "A2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "~{E1}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "~{E2}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "E3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "Y7",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "Y6",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "Y5",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "Y4",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "Y3",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "Y2",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "Y1",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "Y0",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "8",
+    "16"
+   ],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC157": {
+   "lib": "74xx",
+   "part": "74HC157",
+   "description": "Quad 2 to 1 line Multiplexer",
+   "category": "logic",
+   "instances": 198,
+   "sheets": [
+    "B01_S01_Supervisor",
+    "B02_S02_Timing",
+    "B03_S04_Memories",
+    "B04_S07_Conv1",
+    "B04_S13_Requant_C1",
+    "B05_S05_Pool1",
+    "B06_S08_Conv2",
+    "B06_S15_Requant_C2",
+    "B07_S05_Pool2",
+    "B08_S09_FC1",
+    "B08_S17_FC1",
+    "B09_S09_FC2",
+    "B09_S17_FC2",
+    "B10_S06_Argmax",
+    "B11_S11A_EngineMerge",
+    "B11_S11_BusFabric"
+   ],
+   "footprint": "Package_DIP:DIP-16_W7.62mm",
+   "package": "DIP-16",
+   "pin_count": 16,
+   "package_pin_count": 16,
+   "pin_count_check": "ok",
+   "library_symbol": "74LS157",
+   "library_note": "symbol absent from installed 74xx.kicad_sym; modelled on the pin-compatible 74LS157",
+   "symbol_units": [
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "S",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "I0a",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "I1a",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "Za",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "I0b",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "I1b",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "Zb",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "Zc",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "I1c",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "I0c",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "Zd",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "I1d",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "I0d",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "E",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "8",
+    "16"
+   ],
+   "active_low_by_graphic_only": [
+    [
+     "15",
+     "E",
+     "inverted"
+    ]
+   ],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HCT541": {
+   "lib": "74xx",
+   "part": "74HCT541",
+   "description": "8-bit Buffer/Line Driver 3-state outputs",
+   "category": "logic",
+   "instances": 52,
+   "sheets": [
+    "B01_S01_Supervisor",
+    "B02_S02_Timing",
+    "B03_S04_Memories",
+    "B04_S07_Conv1",
+    "B05_S05_Pool1",
+    "B05_S12A_PoolLatch1",
+    "B06_S08_Conv2",
+    "B07_S05_Pool2",
+    "B07_S12A_PoolLatch2",
+    "B08_S09_FC1",
+    "B09_S09_FC2",
+    "B10_S06_Argmax",
+    "B11_S11_BusFabric",
+    "B12_S10_Top_IO"
+   ],
+   "footprint": "Package_DIP:DIP-20_W7.62mm",
+   "package": "DIP-20",
+   "pin_count": 20,
+   "package_pin_count": 20,
+   "pin_count_check": "ok",
+   "library_symbol": "74HCT541",
+   "library_note": "",
+   "symbol_units": [
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "G1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "A0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "A1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "A2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "A3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "A4",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "A5",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "A6",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "A7",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "Y7",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "Y6",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "Y5",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "Y4",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "Y3",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "Y2",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "17": {
+     "name": "Y1",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "18": {
+     "name": "Y0",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "19": {
+     "name": "G2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "20": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "10",
+    "20"
+   ],
+   "active_low_by_graphic_only": [
+    [
+     "1",
+     "G1",
+     "inverted"
+    ],
+    [
+     "19",
+     "G2",
+     "inverted"
+    ]
+   ],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC74": {
+   "lib": "74xx",
+   "part": "74HC74",
+   "description": "Dual D Flip-flop, Set & Reset",
+   "category": "logic",
+   "instances": 19,
+   "sheets": [
+    "B01_S01_Supervisor",
+    "B02_S02_Timing",
+    "B03_S04_Memories",
+    "B04_S07_Conv1",
+    "B04_S13_Requant_C1",
+    "B05_S05_Pool1",
+    "B06_S08_Conv2",
+    "B06_S15_Requant_C2",
+    "B07_S05_Pool2",
+    "B08_S09_FC1",
+    "B08_S17_FC1",
+    "B09_S09_FC2",
+    "B09_S17_FC2",
+    "B10_S06_Argmax",
+    "B12_S10_Top_IO"
+   ],
+   "footprint": "Package_DIP:DIP-14_W7.62mm",
+   "package": "DIP-14",
+   "pin_count": 14,
+   "package_pin_count": 14,
+   "pin_count_check": "ok",
+   "library_symbol": "74HC74",
+   "library_note": "",
+   "symbol_units": [
+    1,
+    2,
+    3
+   ],
+   "units_used": [
+    "A",
+    "B",
+    "C"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "~{R}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "D",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "C",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "clock",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "~{S}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "Q",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "~{Q}",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 3,
+     "unit_name": "C",
+     "lib_unit": 3
+    },
+    "8": {
+     "name": "~{Q}",
+     "etype": "output",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "9": {
+     "name": "Q",
+     "etype": "output",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "10": {
+     "name": "~{S}",
+     "etype": "input",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "11": {
+     "name": "C",
+     "etype": "input",
+     "unit": 2,
+     "unit_name": "B",
+     "graphic": "clock",
+     "lib_unit": 2
+    },
+    "12": {
+     "name": "D",
+     "etype": "input",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "13": {
+     "name": "~{R}",
+     "etype": "input",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "14": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 3,
+     "unit_name": "C",
+     "lib_unit": 3
+    }
+   },
+   "power_pins": [
+    "7",
+    "14"
+   ],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC08": {
+   "lib": "74xx",
+   "part": "74HC08",
+   "description": "Quad And2",
+   "category": "logic",
+   "instances": 47,
+   "sheets": [
+    "B01_S01_Supervisor",
+    "B02_S02_Timing",
+    "B03_S04_Memories",
+    "B04_S07_Conv1",
+    "B04_S13_Requant_C1",
+    "B05_S05_Pool1",
+    "B06_S08_Conv2",
+    "B06_S15_Requant_C2",
+    "B07_S05_Pool2",
+    "B08_S09_FC1",
+    "B08_S17_FC1",
+    "B09_S09_FC2",
+    "B09_S17_FC2",
+    "B10_S06_Argmax",
+    "B11_S11_BusFabric"
+   ],
+   "footprint": "Package_DIP:DIP-14_W7.62mm",
+   "package": "DIP-14",
+   "pin_count": 14,
+   "package_pin_count": 14,
+   "pin_count_check": "ok",
+   "library_symbol": "74LS08",
+   "library_note": "symbol absent from installed 74xx.kicad_sym; modelled on the pin-compatible 74LS08",
+   "symbol_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "units_used": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "",
+     "etype": "input",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "5": {
+     "name": "",
+     "etype": "input",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "6": {
+     "name": "",
+     "etype": "output",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "7": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 5,
+     "unit_name": "E",
+     "lib_unit": 5
+    },
+    "8": {
+     "name": "",
+     "etype": "output",
+     "unit": 3,
+     "unit_name": "C",
+     "lib_unit": 3
+    },
+    "9": {
+     "name": "",
+     "etype": "input",
+     "unit": 3,
+     "unit_name": "C",
+     "lib_unit": 3
+    },
+    "10": {
+     "name": "",
+     "etype": "input",
+     "unit": 3,
+     "unit_name": "C",
+     "lib_unit": 3
+    },
+    "11": {
+     "name": "",
+     "etype": "output",
+     "unit": 4,
+     "unit_name": "D",
+     "lib_unit": 4
+    },
+    "12": {
+     "name": "",
+     "etype": "input",
+     "unit": 4,
+     "unit_name": "D",
+     "lib_unit": 4
+    },
+    "13": {
+     "name": "",
+     "etype": "input",
+     "unit": 4,
+     "unit_name": "D",
+     "lib_unit": 4
+    },
+    "14": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 5,
+     "unit_name": "E",
+     "lib_unit": 5
+    }
+   },
+   "power_pins": [
+    "7",
+    "14"
+   ],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC32": {
+   "lib": "74xx",
+   "part": "74HC32",
+   "description": "Quad 2-input OR",
+   "category": "logic",
+   "instances": 39,
+   "sheets": [
+    "B01_S01_Supervisor",
+    "B03_S04_Memories",
+    "B04_S07_Conv1",
+    "B04_S13_Requant_C1",
+    "B05_S05_Pool1",
+    "B06_S15_Requant_C2",
+    "B07_S05_Pool2",
+    "B08_S09_FC1",
+    "B08_S17_FC1",
+    "B09_S09_FC2",
+    "B09_S17_FC2",
+    "B10_S06_Argmax",
+    "B11_S11_BusFabric"
+   ],
+   "footprint": "Package_DIP:DIP-14_W7.62mm",
+   "package": "DIP-14",
+   "pin_count": 14,
+   "package_pin_count": 14,
+   "pin_count_check": "ok",
+   "library_symbol": "74LS32",
+   "library_note": "symbol absent from installed 74xx.kicad_sym; modelled on the pin-compatible 74LS32",
+   "symbol_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "units_used": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "",
+     "etype": "input",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "5": {
+     "name": "",
+     "etype": "input",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "6": {
+     "name": "",
+     "etype": "output",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "7": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 5,
+     "unit_name": "E",
+     "lib_unit": 5
+    },
+    "8": {
+     "name": "",
+     "etype": "output",
+     "unit": 3,
+     "unit_name": "C",
+     "lib_unit": 3
+    },
+    "9": {
+     "name": "",
+     "etype": "input",
+     "unit": 3,
+     "unit_name": "C",
+     "lib_unit": 3
+    },
+    "10": {
+     "name": "",
+     "etype": "input",
+     "unit": 3,
+     "unit_name": "C",
+     "lib_unit": 3
+    },
+    "11": {
+     "name": "",
+     "etype": "output",
+     "unit": 4,
+     "unit_name": "D",
+     "lib_unit": 4
+    },
+    "12": {
+     "name": "",
+     "etype": "input",
+     "unit": 4,
+     "unit_name": "D",
+     "lib_unit": 4
+    },
+    "13": {
+     "name": "",
+     "etype": "input",
+     "unit": 4,
+     "unit_name": "D",
+     "lib_unit": 4
+    },
+    "14": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 5,
+     "unit_name": "E",
+     "lib_unit": 5
+    }
+   },
+   "power_pins": [
+    "7",
+    "14"
+   ],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC04": {
+   "lib": "74xx",
+   "part": "74HC04",
+   "description": "Hex Inverter",
+   "category": "logic",
+   "instances": 29,
+   "sheets": [
+    "B01_S01_Supervisor",
+    "B02_S02_Timing",
+    "B03_S04_Memories",
+    "B04_S07_Conv1",
+    "B04_S13_Requant_C1",
+    "B05_S05_Pool1",
+    "B06_S08_Conv2",
+    "B06_S15_Requant_C2",
+    "B07_S05_Pool2",
+    "B08_S09_FC1",
+    "B08_S17_FC1",
+    "B09_S09_FC2",
+    "B09_S17_FC2",
+    "B10_S06_Argmax",
+    "B12_S10_Top_IO"
+   ],
+   "footprint": "Package_DIP:DIP-14_W7.62mm",
+   "package": "DIP-14",
+   "pin_count": 14,
+   "package_pin_count": 14,
+   "pin_count_check": "ok",
+   "library_symbol": "74HC04",
+   "library_note": "",
+   "symbol_units": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "units_used": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "",
+     "etype": "input",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "4": {
+     "name": "",
+     "etype": "output",
+     "unit": 2,
+     "unit_name": "B",
+     "graphic": "inverted",
+     "lib_unit": 2
+    },
+    "5": {
+     "name": "",
+     "etype": "input",
+     "unit": 3,
+     "unit_name": "C",
+     "lib_unit": 3
+    },
+    "6": {
+     "name": "",
+     "etype": "output",
+     "unit": 3,
+     "unit_name": "C",
+     "graphic": "inverted",
+     "lib_unit": 3
+    },
+    "7": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 7,
+     "unit_name": "G",
+     "lib_unit": 7
+    },
+    "8": {
+     "name": "",
+     "etype": "output",
+     "unit": 4,
+     "unit_name": "D",
+     "graphic": "inverted",
+     "lib_unit": 4
+    },
+    "9": {
+     "name": "",
+     "etype": "input",
+     "unit": 4,
+     "unit_name": "D",
+     "lib_unit": 4
+    },
+    "10": {
+     "name": "",
+     "etype": "output",
+     "unit": 5,
+     "unit_name": "E",
+     "graphic": "inverted",
+     "lib_unit": 5
+    },
+    "11": {
+     "name": "",
+     "etype": "input",
+     "unit": 5,
+     "unit_name": "E",
+     "lib_unit": 5
+    },
+    "12": {
+     "name": "",
+     "etype": "output",
+     "unit": 6,
+     "unit_name": "F",
+     "graphic": "inverted",
+     "lib_unit": 6
+    },
+    "13": {
+     "name": "",
+     "etype": "input",
+     "unit": 6,
+     "unit_name": "F",
+     "lib_unit": 6
+    },
+    "14": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 7,
+     "unit_name": "G",
+     "lib_unit": 7
+    }
+   },
+   "power_pins": [
+    "7",
+    "14"
+   ],
+   "active_low_by_graphic_only": [
+    [
+     "2",
+     "",
+     "inverted"
+    ],
+    [
+     "4",
+     "",
+     "inverted"
+    ],
+    [
+     "6",
+     "",
+     "inverted"
+    ],
+    [
+     "8",
+     "",
+     "inverted"
+    ],
+    [
+     "10",
+     "",
+     "inverted"
+    ],
+    [
+     "12",
+     "",
+     "inverted"
+    ]
+   ],
+   "pins_without_name": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC688": {
+   "lib": "74xx",
+   "part": "74HC688",
+   "description": "8-bit magnitude comparator",
+   "category": "logic",
+   "instances": 41,
+   "sheets": [
+    "B01_S01_Supervisor",
+    "B02_S02_Timing",
+    "B03_S04_Memories",
+    "B04_S07_Conv1",
+    "B05_S05_Pool1",
+    "B06_S08_Conv2",
+    "B07_S05_Pool2",
+    "B08_S09_FC1",
+    "B09_S09_FC2",
+    "B10_S06_Argmax"
+   ],
+   "footprint": "Package_DIP:DIP-20_W7.62mm",
+   "package": "DIP-20",
+   "pin_count": 20,
+   "package_pin_count": 20,
+   "pin_count_check": "ok",
+   "library_symbol": "74HC688",
+   "library_note": "",
+   "symbol_units": [
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "G",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "P0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "R0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "P1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "R1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "P2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "R2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "P3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "R3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "P4",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "R4",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "P5",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "R5",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "P6",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "R6",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "17": {
+     "name": "P7",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "18": {
+     "name": "R7",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "19": {
+     "name": "P=R",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "20": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "10",
+    "20"
+   ],
+   "active_low_by_graphic_only": [
+    [
+     "1",
+     "G",
+     "inverted"
+    ],
+    [
+     "19",
+     "P=R",
+     "inverted"
+    ]
+   ],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC161": {
+   "lib": "74xx",
+   "part": "74HC161",
+   "description": "Synchronous 4-bit programmable binary Counter",
+   "category": "logic",
+   "instances": 59,
+   "sheets": [
+    "B01_S01_Supervisor",
+    "B02_S02_Timing",
+    "B04_S07_Conv1",
+    "B05_S05_Pool1",
+    "B06_S08_Conv2",
+    "B07_S05_Pool2",
+    "B08_S09_FC1",
+    "B09_S09_FC2",
+    "B10_S06_Argmax"
+   ],
+   "footprint": "Package_DIP:DIP-16_W7.62mm",
+   "package": "DIP-16",
+   "pin_count": 16,
+   "package_pin_count": 16,
+   "pin_count_check": "ok",
+   "library_symbol": "74LS161",
+   "library_note": "symbol absent from installed 74xx.kicad_sym; modelled on the pin-compatible 74LS161",
+   "symbol_units": [
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "~{MR}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "CP",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "D0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "D1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "D2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "D3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "CEP",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "~{PE}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "CET",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "Q3",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "Q2",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "Q1",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "Q0",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "TC",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "8",
+    "16"
+   ],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC138": {
+   "lib": "74xx",
+   "part": "74HC138",
+   "description": "3-to-8 line decoder/multiplexer inverting, DIP-16/SOIC-16/SSOP-16",
+   "category": "logic",
+   "instances": 17,
+   "sheets": [
+    "B02_S02_Timing",
+    "B03_S04_Memories",
+    "B04_S07_Conv1",
+    "B06_S08_Conv2",
+    "B08_S09_FC1",
+    "B09_S09_FC2"
+   ],
+   "footprint": "Package_DIP:DIP-16_W7.62mm",
+   "package": "DIP-16",
+   "pin_count": 16,
+   "package_pin_count": 16,
+   "pin_count_check": "ok",
+   "library_symbol": "74HC138",
+   "library_note": "",
+   "symbol_units": [
+    0,
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "A0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "A1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "A2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "~{E0}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "~{E1}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "E2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "~{Y7}",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "~{Y6}",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "~{Y5}",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "~{Y4}",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "~{Y3}",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "~{Y2}",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "~{Y1}",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "~{Y0}",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "8",
+    "16"
+   ],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "Memory_RAM:HY6264AxP": {
+   "lib": "Memory_RAM",
+   "part": "HY6264AxP",
+   "description": "Not in Production, 8Kx8 bit Static RAM, 70/85/100/120/150ns, DIP-28",
+   "category": "memory-sram",
+   "instances": 7,
+   "sheets": [
+    "B03_S04_Memories"
+   ],
+   "footprint": "Package_DIP:DIP-28_W15.24mm",
+   "package": "DIP-28",
+   "pin_count": 28,
+   "package_pin_count": 28,
+   "pin_count_check": "ok",
+   "library_symbol": "HY6264AxP",
+   "library_note": "",
+   "symbol_units": [
+    0,
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "NC",
+     "etype": "no_connect",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "A12",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "A7",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "A6",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "A5",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "A4",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "A3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "A2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "A1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "A0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "I/O0",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "I/O1",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "I/O2",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 0
+    },
+    "15": {
+     "name": "I/O3",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "I/O4",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "17": {
+     "name": "I/O5",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "18": {
+     "name": "I/O6",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "19": {
+     "name": "I/O7",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "20": {
+     "name": "~{CS1}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "21": {
+     "name": "A10",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "22": {
+     "name": "~{OE}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "23": {
+     "name": "A11",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "24": {
+     "name": "A9",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "25": {
+     "name": "A8",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "26": {
+     "name": "CS2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "27": {
+     "name": "~{WE}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "28": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 0
+    }
+   },
+   "power_pins": [
+    "14",
+    "28"
+   ],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "Memory_RAM:CY62256-70PC": {
+   "lib": "Memory_RAM",
+   "part": "CY62256-70PC",
+   "description": "32Kx8 bit Low Power CMOS Static RAM, 55/70ns, DIP-28",
+   "category": "memory-sram",
+   "instances": 4,
+   "sheets": [
+    "B03_S04_Memories"
+   ],
+   "footprint": "Package_DIP:DIP-28_W15.24mm",
+   "package": "DIP-28",
+   "pin_count": 28,
+   "package_pin_count": 28,
+   "pin_count_check": "ok",
+   "library_symbol": "CY62256-70PC",
+   "library_note": "",
+   "symbol_units": [
+    0,
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "A14",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "A12",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "A7",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "A6",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "A5",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "A4",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "A3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "A2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "A1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "A0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "Q0",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "Q1",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "Q2",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 0
+    },
+    "15": {
+     "name": "Q3",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "Q4",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "17": {
+     "name": "Q5",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "18": {
+     "name": "Q6",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "19": {
+     "name": "Q7",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "20": {
+     "name": "~{CS}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "21": {
+     "name": "A10",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "22": {
+     "name": "~{OE}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "23": {
+     "name": "A11",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "24": {
+     "name": "A9",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "25": {
+     "name": "A8",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "26": {
+     "name": "A13",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "27": {
+     "name": "~{WE}",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "28": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 0
+    }
+   },
+   "power_pins": [
+    "14",
+    "28"
+   ],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC245": {
+   "lib": "74xx",
+   "part": "74HC245",
+   "description": "Octal BUS Transceivers, 3-State outputs",
+   "category": "logic",
+   "instances": 6,
+   "sheets": [
+    "B03_S04_Memories",
+    "B04_S07_Conv1",
+    "B06_S08_Conv2",
+    "B08_S09_FC1",
+    "B09_S09_FC2"
+   ],
+   "footprint": "Package_DIP:DIP-20_W7.62mm",
+   "package": "DIP-20",
+   "pin_count": 20,
+   "package_pin_count": 20,
+   "pin_count_check": "ok",
+   "library_symbol": "74HC245",
+   "library_note": "",
+   "symbol_units": [
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "A->B",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "A0",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "A1",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "A2",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "A3",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "A4",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "A5",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "A6",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "A7",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "B7",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "B6",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "B5",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "B4",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "B3",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "B2",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "17": {
+     "name": "B1",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "18": {
+     "name": "B0",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "19": {
+     "name": "CE",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "20": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "10",
+    "20"
+   ],
+   "active_low_by_graphic_only": [
+    [
+     "19",
+     "CE",
+     "inverted"
+    ]
+   ],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC00": {
+   "lib": "74xx",
+   "part": "74HC00",
+   "description": "quad 2-input NAND gate",
+   "category": "logic",
+   "instances": 7,
+   "sheets": [
+    "B04_S07_Conv1",
+    "B06_S08_Conv2",
+    "B08_S09_FC1",
+    "B09_S09_FC2"
+   ],
+   "footprint": "Package_DIP:DIP-14_W7.62mm",
+   "package": "DIP-14",
+   "pin_count": 14,
+   "package_pin_count": 14,
+   "pin_count_check": "ok",
+   "library_symbol": "74HC00",
+   "library_note": "",
+   "symbol_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "units_used": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "",
+     "etype": "input",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "5": {
+     "name": "",
+     "etype": "input",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "6": {
+     "name": "",
+     "etype": "output",
+     "unit": 2,
+     "unit_name": "B",
+     "graphic": "inverted",
+     "lib_unit": 2
+    },
+    "7": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 5,
+     "unit_name": "E",
+     "lib_unit": 5
+    },
+    "8": {
+     "name": "",
+     "etype": "output",
+     "unit": 3,
+     "unit_name": "C",
+     "graphic": "inverted",
+     "lib_unit": 3
+    },
+    "9": {
+     "name": "",
+     "etype": "input",
+     "unit": 3,
+     "unit_name": "C",
+     "lib_unit": 3
+    },
+    "10": {
+     "name": "",
+     "etype": "input",
+     "unit": 3,
+     "unit_name": "C",
+     "lib_unit": 3
+    },
+    "11": {
+     "name": "",
+     "etype": "output",
+     "unit": 4,
+     "unit_name": "D",
+     "graphic": "inverted",
+     "lib_unit": 4
+    },
+    "12": {
+     "name": "",
+     "etype": "input",
+     "unit": 4,
+     "unit_name": "D",
+     "lib_unit": 4
+    },
+    "13": {
+     "name": "",
+     "etype": "input",
+     "unit": 4,
+     "unit_name": "D",
+     "lib_unit": 4
+    },
+    "14": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 5,
+     "unit_name": "E",
+     "lib_unit": 5
+    }
+   },
+   "power_pins": [
+    "7",
+    "14"
+   ],
+   "active_low_by_graphic_only": [
+    [
+     "3",
+     "",
+     "inverted"
+    ],
+    [
+     "6",
+     "",
+     "inverted"
+    ],
+    [
+     "8",
+     "",
+     "inverted"
+    ],
+    [
+     "11",
+     "",
+     "inverted"
+    ]
+   ],
+   "pins_without_name": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC283": {
+   "lib": "74xx",
+   "part": "74HC283",
+   "description": "4-bit full Adder",
+   "category": "logic",
+   "instances": 184,
+   "sheets": [
+    "B04_S07_Conv1",
+    "B05_S05_Pool1",
+    "B06_S08_Conv2",
+    "B07_S05_Pool2",
+    "B08_S09_FC1",
+    "B09_S09_FC2"
+   ],
+   "footprint": "Package_DIP:DIP-16_W7.62mm",
+   "package": "DIP-16",
+   "pin_count": 16,
+   "package_pin_count": 16,
+   "pin_count_check": "ok",
+   "library_symbol": "74LS283",
+   "library_note": "symbol absent from installed 74xx.kicad_sym; modelled on the pin-compatible 74LS283",
+   "symbol_units": [
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "S2",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "B2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "A2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "S1",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "A1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "B1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "C0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "C4",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "S4",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "B4",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "A4",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "S3",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "A3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "B3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "8",
+    "16"
+   ],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC02": {
+   "lib": "74xx",
+   "part": "74HC02",
+   "description": "quad 2-input NOR gate",
+   "category": "logic",
+   "instances": 5,
+   "sheets": [
+    "B04_S07_Conv1",
+    "B05_S05_Pool1",
+    "B07_S05_Pool2",
+    "B08_S09_FC1",
+    "B09_S09_FC2"
+   ],
+   "footprint": "Package_DIP:DIP-14_W7.62mm",
+   "package": "DIP-14",
+   "pin_count": 14,
+   "package_pin_count": 14,
+   "pin_count_check": "ok",
+   "library_symbol": "74HC02",
+   "library_note": "",
+   "symbol_units": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "units_used": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "",
+     "etype": "output",
+     "unit": 2,
+     "unit_name": "B",
+     "graphic": "inverted",
+     "lib_unit": 2
+    },
+    "5": {
+     "name": "",
+     "etype": "input",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "6": {
+     "name": "",
+     "etype": "input",
+     "unit": 2,
+     "unit_name": "B",
+     "lib_unit": 2
+    },
+    "7": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 5,
+     "unit_name": "E",
+     "lib_unit": 5
+    },
+    "8": {
+     "name": "",
+     "etype": "input",
+     "unit": 3,
+     "unit_name": "C",
+     "lib_unit": 3
+    },
+    "9": {
+     "name": "",
+     "etype": "input",
+     "unit": 3,
+     "unit_name": "C",
+     "lib_unit": 3
+    },
+    "10": {
+     "name": "",
+     "etype": "output",
+     "unit": 3,
+     "unit_name": "C",
+     "graphic": "inverted",
+     "lib_unit": 3
+    },
+    "11": {
+     "name": "",
+     "etype": "input",
+     "unit": 4,
+     "unit_name": "D",
+     "lib_unit": 4
+    },
+    "12": {
+     "name": "",
+     "etype": "input",
+     "unit": 4,
+     "unit_name": "D",
+     "lib_unit": 4
+    },
+    "13": {
+     "name": "",
+     "etype": "output",
+     "unit": 4,
+     "unit_name": "D",
+     "graphic": "inverted",
+     "lib_unit": 4
+    },
+    "14": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 5,
+     "unit_name": "E",
+     "lib_unit": 5
+    }
+   },
+   "power_pins": [
+    "7",
+    "14"
+   ],
+   "active_low_by_graphic_only": [
+    [
+     "1",
+     "",
+     "inverted"
+    ],
+    [
+     "4",
+     "",
+     "inverted"
+    ],
+    [
+     "10",
+     "",
+     "inverted"
+    ],
+    [
+     "13",
+     "",
+     "inverted"
+    ]
+   ],
+   "pins_without_name": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13"
+   ],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HC85": {
+   "lib": "74xx",
+   "part": "74HC85",
+   "description": "4-bit Comparator",
+   "category": "logic",
+   "instances": 12,
+   "sheets": [
+    "B05_S05_Pool1",
+    "B07_S05_Pool2",
+    "B10_S06_Argmax"
+   ],
+   "footprint": "Package_DIP:DIP-16_W7.62mm",
+   "package": "DIP-16",
+   "pin_count": 16,
+   "package_pin_count": 16,
+   "pin_count_check": "ok",
+   "library_symbol": "74HC85",
+   "library_note": "",
+   "symbol_units": [
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "B3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "Ia<b",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "Ia=b",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "Ia>b",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "Oa>b",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "Oa=b",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "Oa<b",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "B0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "A0",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "B1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "A1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "A2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "B2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "A3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "8",
+    "16"
+   ],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74LS148": {
+   "lib": "74xx",
+   "part": "74LS148",
+   "description": "Priority Encoder 3 to 8 cascadable",
+   "category": "logic",
+   "instances": 4,
+   "sheets": [
+    "B11_S11_BusFabric"
+   ],
+   "footprint": "Package_DIP:DIP-16_W7.62mm",
+   "package": "DIP-16",
+   "pin_count": 16,
+   "package_pin_count": 16,
+   "pin_count_check": "ok",
+   "library_symbol": "74LS148",
+   "library_note": "",
+   "symbol_units": [
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "I4",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "I5",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "I6",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "I7",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "EI",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "S2",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "S1",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "S0",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "IO",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "I1",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "I2",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "I3",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "GS",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "EO",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "8",
+    "16"
+   ],
+   "active_low_by_graphic_only": [
+    [
+     "1",
+     "I4",
+     "inverted"
+    ],
+    [
+     "2",
+     "I5",
+     "inverted"
+    ],
+    [
+     "3",
+     "I6",
+     "inverted"
+    ],
+    [
+     "4",
+     "I7",
+     "inverted"
+    ],
+    [
+     "5",
+     "EI",
+     "inverted"
+    ],
+    [
+     "6",
+     "S2",
+     "inverted"
+    ],
+    [
+     "7",
+     "S1",
+     "inverted"
+    ],
+    [
+     "9",
+     "S0",
+     "inverted"
+    ],
+    [
+     "10",
+     "IO",
+     "inverted"
+    ],
+    [
+     "11",
+     "I1",
+     "inverted"
+    ],
+    [
+     "12",
+     "I2",
+     "inverted"
+    ],
+    [
+     "13",
+     "I3",
+     "inverted"
+    ],
+    [
+     "14",
+     "GS",
+     "inverted"
+    ],
+    [
+     "15",
+     "EO",
+     "inverted"
+    ]
+   ],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "Switch:SW_Push": {
+   "lib": "Switch",
+   "part": "SW_Push",
+   "description": "Push button switch, generic, two pins",
+   "category": "input",
+   "instances": 1,
+   "sheets": [
+    "B12_S10_Top_IO"
+   ],
+   "footprint": "Button_Switch_THT:SW_PUSH_6mm",
+   "package": "Button_Switch_THT:SW_PUSH_6mm",
+   "pin_count": 2,
+   "package_pin_count": null,
+   "pin_count_check": "n/a (no DIP footprint)",
+   "library_symbol": "SW_Push",
+   "library_note": "",
+   "symbol_units": [
+    0
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "1",
+     "etype": "passive",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 0
+    },
+    "2": {
+     "name": "2",
+     "etype": "passive",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 0
+    }
+   },
+   "power_pins": [],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "74xx:74HCT245": {
+   "lib": "74xx",
+   "part": "74HCT245",
+   "description": "Octal BUS Transceivers, 3-State outputs",
+   "category": "logic",
+   "instances": 1,
+   "sheets": [
+    "B12_S10_Top_IO"
+   ],
+   "footprint": "Package_DIP:DIP-20_W7.62mm",
+   "package": "DIP-20",
+   "pin_count": 20,
+   "package_pin_count": 20,
+   "pin_count_check": "ok",
+   "library_symbol": "74LS245",
+   "library_note": "symbol absent from installed 74xx.kicad_sym; modelled on the pin-compatible 74LS245",
+   "symbol_units": [
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "A->B",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "A0",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "A1",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "A2",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "5": {
+     "name": "A3",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "6": {
+     "name": "A4",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "7": {
+     "name": "A5",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "8": {
+     "name": "A6",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "9": {
+     "name": "A7",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "10": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "11": {
+     "name": "B7",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "12": {
+     "name": "B6",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "13": {
+     "name": "B5",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "14": {
+     "name": "B4",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "15": {
+     "name": "B3",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "16": {
+     "name": "B2",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "17": {
+     "name": "B1",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "18": {
+     "name": "B0",
+     "etype": "tri_state",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "19": {
+     "name": "CE",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "graphic": "inverted",
+     "lib_unit": 1
+    },
+    "20": {
+     "name": "VCC",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "10",
+    "20"
+   ],
+   "active_low_by_graphic_only": [
+    [
+     "19",
+     "CE",
+     "inverted"
+    ]
+   ],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  },
+  "Oscillator:ASE-xxxMHz": {
+   "lib": "Oscillator",
+   "part": "ASE-xxxMHz",
+   "description": "3.3V CMOS SMD Crystal Clock Oscillator, Abracon",
+   "category": "clock",
+   "instances": 1,
+   "sheets": [
+    "B12_S10_Top_IO"
+   ],
+   "footprint": "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm",
+   "package": "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm",
+   "pin_count": 4,
+   "package_pin_count": null,
+   "pin_count_check": "n/a (no DIP footprint)",
+   "library_symbol": "ASE-xxxMHz",
+   "library_note": "",
+   "symbol_units": [
+    0,
+    1
+   ],
+   "units_used": [
+    "A"
+   ],
+   "unit_conflicts": [],
+   "name_mismatches_vs_library": [],
+   "type_mismatches_vs_library": [],
+   "pins": {
+    "1": {
+     "name": "EN",
+     "etype": "input",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "2": {
+     "name": "GND",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "3": {
+     "name": "OUT",
+     "etype": "output",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    },
+    "4": {
+     "name": "Vdd",
+     "etype": "power_in",
+     "unit": 1,
+     "unit_name": "A",
+     "lib_unit": 1
+    }
+   },
+   "power_pins": [
+    "2",
+    "4"
+   ],
+   "active_low_by_graphic_only": [],
+   "pins_without_name": [],
+   "duplicate_pin_names_within_unit": {}
+  }
+ }
+}

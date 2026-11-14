@@ -1,0 +1,35 @@
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+Start time: 04:09:11 on Nov 14,2026
+vlog -sv -work work ../models.v ../cnn74_top.v ../tb_numeric.v 
+-- Compiling module m_74xx_74HC00
+-- Compiling module m_74xx_74HC02
+-- Compiling module m_74xx_74HC04
+-- Compiling module m_74xx_74HC08
+-- Compiling module m_74xx_74HC138
+-- Compiling module m_74xx_74HC157
+-- Compiling module m_74xx_74HC161
+-- Compiling module m_74xx_74HC238
+-- Compiling module m_74xx_74HC245
+-- Compiling module m_74xx_74HC283
+-- Compiling module m_74xx_74HC32
+-- Compiling module m_74xx_74HC688
+-- Compiling module m_74xx_74HC74
+-- Compiling module m_74xx_74HC85
+-- Compiling module m_74xx_74HCT245
+-- Compiling module m_74xx_74HCT273
+-- Compiling module m_74xx_74HCT541
+-- Compiling module m_74xx_74HCT574
+-- Compiling module m_74xx_74LS148
+-- Compiling module m_Memory_EPROM_27C512
+-- Compiling module m_Memory_RAM_CY62256_70PC
+-- Compiling module m_Memory_RAM_HY6264AxP
+-- Compiling module m_Oscillator_ASE_xxxMHz
+-- Compiling module cnn74_top
+-- Compiling module tb_numeric
+** Warning: ../tb_numeric.v(528): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ../tb_numeric.v(556): (vlog-2643) Unterminated string literal continues onto next line.
+
+Top level modules:
+	tb_numeric
+End time: 04:09:12 on Nov 14,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 2

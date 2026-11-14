@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\Document\tempPrj\74Series-CNN\Simulation\rtl\diff_netlist2.py", line 167, in <module>
+    raise SystemExit(main(sys.argv))
+  File "D:\Document\tempPrj\74Series-CNN\Simulation\rtl\diff_netlist2.py", line 101, in main
+    nc, nn = load(new_path)
+  File "D:\Document\tempPrj\74Series-CNN\Simulation\rtl\diff_netlist2.py", line 28, in load
+    return load_sexpr(path)
+  File "D:\Document\tempPrj\74Series-CNN\Simulation\rtl\diff_netlist2.py", line 57, in load_sexpr
+    root = k.parse(f.read())[0]
+  File "D:\Document/tempPrj/74Series-CNN/Cache/CNN_74xx_System/tools\kicad_sexpr.py", line 45, in parse
+    raise ValueError("unbalanced '('")
+ValueError: unbalanced '('

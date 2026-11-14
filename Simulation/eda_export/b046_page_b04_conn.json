@@ -1,0 +1,1723 @@
+{
+"comps": [
+{
+"id": "977fdf43b02d687c",
+"x": 0,
+"y": 0,
+"kind": "sheet",
+"des": "",
+"pt": ""
+},
+{
+"id": "c0e4ca61c5095c45",
+"x": 375,
+"y": 600,
+"kind": "part",
+"des": "J20306",
+"pt": ""
+},
+{
+"id": "17baf3f1573b4888",
+"x": 220,
+"y": 780,
+"kind": "netflag",
+"des": "",
+"pt": ""
+},
+{
+"id": "f7a373b558868f61",
+"x": 220,
+"y": 780,
+"kind": "netflag",
+"des": "",
+"pt": ""
+},
+{
+"id": "151a53b0fa0436ef",
+"x": 220,
+"y": 780,
+"kind": "netflag",
+"des": "",
+"pt": ""
+},
+{
+"id": "67c601bc82e022cb",
+"x": 420,
+"y": 880,
+"kind": "netflag",
+"des": "",
+"pt": ""
+},
+{
+"id": "afdb15aad3e3e525",
+"x": 220,
+"y": 1320,
+"kind": "netflag",
+"des": "",
+"pt": ""
+},
+{
+"id": "2031b5f57af88782",
+"x": 220,
+"y": 1320,
+"kind": "netflag",
+"des": "",
+"pt": ""
+},
+{
+"id": "025a84432b1b849a",
+"x": 220,
+"y": 1320,
+"kind": "netflag",
+"des": "",
+"pt": ""
+},
+{
+"id": "6b12a984728796b6",
+"x": 220,
+"y": 830,
+"kind": "netflag",
+"des": "",
+"pt": ""
+},
+{
+"id": "4f762de380833cd5",
+"x": 220,
+"y": 1370,
+"kind": "netflag",
+"des": "",
+"pt": ""
+},
+{
+"id": "8b2c27b29da307b4",
+"x": 220,
+"y": 1630,
+"kind": "netflag",
+"des": "",
+"pt": ""
+},
+{
+"id": "9e7509d57610db0a",
+"x": 220,
+"y": 1630,
+"kind": "netflag",
+"des": "",
+"pt": ""
+},
+{
+"id": "2c63f03875cd72d4",
+"x": 220,
+"y": 1630,
+"kind": "netflag",
+"des": "",
+"pt": ""
+},
+{
+"id": "647b1d7595a0c9b0",
+"x": 200,
+"y": 1900,
+"kind": "netflag",
+"des": "",
+"pt": ""
+},
+{
+"id": "e47a60b7f10a9d38",
+"x": 420,
+"y": 760,
+"kind": "part",
+"des": "R1",
+"pt": ""
+},
+{
+"id": "9aa2e7de2211c8b6",
+"x": 390,
+"y": 1890,
+"kind": "part",
+"des": "RP1",
+"pt": ""
+},
+{
+"id": "dfbe23f118f60eff",
+"x": 420,
+"y": 840,
+"kind": "part",
+"des": "LED1",
+"pt": ""
+},
+{
+"id": "ec719cc6a38d0840",
+"x": 220,
+"y": 1890,
+"kind": "part",
+"des": "LEDP1",
+"pt": ""
+}
+],
+"pins": [
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "2",
+"pinName": "2",
+"x": 405,
+"y": 760,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "63",
+"pinName": "63",
+"x": 345,
+"y": 450,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "4",
+"pinName": "4",
+"x": 405,
+"y": 750,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "61",
+"pinName": "61",
+"x": 345,
+"y": 460,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "6",
+"pinName": "6",
+"x": 405,
+"y": 740,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "59",
+"pinName": "59",
+"x": 345,
+"y": 470,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "8",
+"pinName": "8",
+"x": 405,
+"y": 730,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "57",
+"pinName": "57",
+"x": 345,
+"y": 480,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "10",
+"pinName": "10",
+"x": 405,
+"y": 720,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "55",
+"pinName": "55",
+"x": 345,
+"y": 490,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "12",
+"pinName": "12",
+"x": 405,
+"y": 710,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "53",
+"pinName": "53",
+"x": 345,
+"y": 500,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "14",
+"pinName": "14",
+"x": 405,
+"y": 700,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "51",
+"pinName": "51",
+"x": 345,
+"y": 510,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "16",
+"pinName": "16",
+"x": 405,
+"y": 690,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "49",
+"pinName": "49",
+"x": 345,
+"y": 520,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "18",
+"pinName": "18",
+"x": 405,
+"y": 680,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "47",
+"pinName": "47",
+"x": 345,
+"y": 530,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "20",
+"pinName": "20",
+"x": 405,
+"y": 670,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "45",
+"pinName": "45",
+"x": 345,
+"y": 540,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "22",
+"pinName": "22",
+"x": 405,
+"y": 660,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "43",
+"pinName": "43",
+"x": 345,
+"y": 550,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "24",
+"pinName": "24",
+"x": 405,
+"y": 650,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "41",
+"pinName": "41",
+"x": 345,
+"y": 560,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "26",
+"pinName": "26",
+"x": 405,
+"y": 640,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "39",
+"pinName": "39",
+"x": 345,
+"y": 570,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "28",
+"pinName": "28",
+"x": 405,
+"y": 630,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "37",
+"pinName": "37",
+"x": 345,
+"y": 580,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "30",
+"pinName": "30",
+"x": 405,
+"y": 620,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "35",
+"pinName": "35",
+"x": 345,
+"y": 590,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "32",
+"pinName": "32",
+"x": 405,
+"y": 610,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "33",
+"pinName": "33",
+"x": 345,
+"y": 600,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "34",
+"pinName": "34",
+"x": 405,
+"y": 600,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "31",
+"pinName": "31",
+"x": 345,
+"y": 610,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "36",
+"pinName": "36",
+"x": 405,
+"y": 590,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "29",
+"pinName": "29",
+"x": 345,
+"y": 620,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "38",
+"pinName": "38",
+"x": 405,
+"y": 580,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "27",
+"pinName": "27",
+"x": 345,
+"y": 630,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "40",
+"pinName": "40",
+"x": 405,
+"y": 570,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "25",
+"pinName": "25",
+"x": 345,
+"y": 640,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "42",
+"pinName": "42",
+"x": 405,
+"y": 560,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "23",
+"pinName": "23",
+"x": 345,
+"y": 650,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "44",
+"pinName": "44",
+"x": 405,
+"y": 550,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "21",
+"pinName": "21",
+"x": 345,
+"y": 660,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "46",
+"pinName": "46",
+"x": 405,
+"y": 540,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "19",
+"pinName": "19",
+"x": 345,
+"y": 670,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "48",
+"pinName": "48",
+"x": 405,
+"y": 530,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "17",
+"pinName": "17",
+"x": 345,
+"y": 680,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "50",
+"pinName": "50",
+"x": 405,
+"y": 520,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "15",
+"pinName": "15",
+"x": 345,
+"y": 690,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "52",
+"pinName": "52",
+"x": 405,
+"y": 510,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "13",
+"pinName": "13",
+"x": 345,
+"y": 700,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "54",
+"pinName": "54",
+"x": 405,
+"y": 500,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "11",
+"pinName": "11",
+"x": 345,
+"y": 710,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "56",
+"pinName": "56",
+"x": 405,
+"y": 490,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "9",
+"pinName": "9",
+"x": 345,
+"y": 720,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "58",
+"pinName": "58",
+"x": 405,
+"y": 480,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "7",
+"pinName": "7",
+"x": 345,
+"y": 730,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "60",
+"pinName": "60",
+"x": 405,
+"y": 470,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "5",
+"pinName": "5",
+"x": 345,
+"y": 740,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "62",
+"pinName": "62",
+"x": 405,
+"y": 460,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "3",
+"pinName": "3",
+"x": 345,
+"y": 750,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "64",
+"pinName": "64",
+"x": 405,
+"y": 450,
+"net": null
+},
+{
+"compId": "c0e4ca61c5095c45",
+"designator": "J20306",
+"pinNumber": "1",
+"pinName": "1",
+"x": 345,
+"y": 760,
+"net": null
+},
+{
+"compId": "17baf3f1573b4888",
+"designator": "",
+"pinNumber": "1",
+"pinName": "Pin1",
+"x": 220,
+"y": 780,
+"net": null
+},
+{
+"compId": "f7a373b558868f61",
+"designator": "",
+"pinNumber": "1",
+"pinName": "Pin1",
+"x": 220,
+"y": 780,
+"net": null
+},
+{
+"compId": "151a53b0fa0436ef",
+"designator": "",
+"pinNumber": "1",
+"pinName": "Pin1",
+"x": 220,
+"y": 780,
+"net": null
+},
+{
+"compId": "67c601bc82e022cb",
+"designator": "",
+"pinNumber": "1",
+"pinName": "Pin1",
+"x": 420,
+"y": 880,
+"net": null
+},
+{
+"compId": "afdb15aad3e3e525",
+"designator": "",
+"pinNumber": "1",
+"pinName": "Pin1",
+"x": 220,
+"y": 1320,
+"net": null
+},
+{
+"compId": "2031b5f57af88782",
+"designator": "",
+"pinNumber": "1",
+"pinName": "Pin1",
+"x": 220,
+"y": 1320,
+"net": null
+},
+{
+"compId": "025a84432b1b849a",
+"designator": "",
+"pinNumber": "1",
+"pinName": "Pin1",
+"x": 220,
+"y": 1320,
+"net": null
+},
+{
+"compId": "6b12a984728796b6",
+"designator": "",
+"pinNumber": "1",
+"pinName": "Pin1",
+"x": 220,
+"y": 830,
+"net": null
+},
+{
+"compId": "4f762de380833cd5",
+"designator": "",
+"pinNumber": "1",
+"pinName": "Pin1",
+"x": 220,
+"y": 1370,
+"net": null
+},
+{
+"compId": "8b2c27b29da307b4",
+"designator": "",
+"pinNumber": "1",
+"pinName": "Pin1",
+"x": 220,
+"y": 1630,
+"net": null
+},
+{
+"compId": "9e7509d57610db0a",
+"designator": "",
+"pinNumber": "1",
+"pinName": "Pin1",
+"x": 220,
+"y": 1630,
+"net": null
+},
+{
+"compId": "2c63f03875cd72d4",
+"designator": "",
+"pinNumber": "1",
+"pinName": "Pin1",
+"x": 220,
+"y": 1630,
+"net": null
+},
+{
+"compId": "647b1d7595a0c9b0",
+"designator": "",
+"pinNumber": "1",
+"pinName": "Pin1",
+"x": 200,
+"y": 1900,
+"net": null
+},
+{
+"compId": "e47a60b7f10a9d38",
+"designator": "R1",
+"pinNumber": "2",
+"pinName": "2",
+"x": 440,
+"y": 760,
+"net": null
+},
+{
+"compId": "e47a60b7f10a9d38",
+"designator": "R1",
+"pinNumber": "1",
+"pinName": "1",
+"x": 400,
+"y": 760,
+"net": null
+},
+{
+"compId": "9aa2e7de2211c8b6",
+"designator": "RP1",
+"pinNumber": "2",
+"pinName": "2",
+"x": 410,
+"y": 1890,
+"net": null
+},
+{
+"compId": "9aa2e7de2211c8b6",
+"designator": "RP1",
+"pinNumber": "1",
+"pinName": "1",
+"x": 370,
+"y": 1890,
+"net": null
+},
+{
+"compId": "dfbe23f118f60eff",
+"designator": "LED1",
+"pinNumber": "1",
+"pinName": "C",
+"x": 420,
+"y": 860,
+"net": null
+},
+{
+"compId": "dfbe23f118f60eff",
+"designator": "LED1",
+"pinNumber": "2",
+"pinName": "A",
+"x": 420,
+"y": 820,
+"net": null
+},
+{
+"compId": "ec719cc6a38d0840",
+"designator": "LEDP1",
+"pinNumber": "1",
+"pinName": "C",
+"x": 200,
+"y": 1890,
+"net": null
+},
+{
+"compId": "ec719cc6a38d0840",
+"designator": "LEDP1",
+"pinNumber": "2",
+"pinName": "A",
+"x": 240,
+"y": 1890,
+"net": null
+}
+],
+"wires": [
+{
+"id": "1b5999e741045593",
+"net": "GND",
+"line": [
+315,
+760,
+345,
+760
+]
+},
+{
+"id": "7952a5a304fcded1",
+"net": "GND",
+"line": [
+435,
+760,
+405,
+760
+]
+},
+{
+"id": "773cbb1b031f2e6b",
+"net": "GND",
+"line": [
+315,
+750,
+345,
+750
+]
+},
+{
+"id": "0fcd00a6ca632928",
+"net": "GND",
+"line": [
+435,
+750,
+405,
+750
+]
+},
+{
+"id": "e64dedfd049cdb81",
+"net": "+5V",
+"line": [
+315,
+740,
+345,
+740
+]
+},
+{
+"id": "6c2a309cebef76d1",
+"net": "+5V",
+"line": [
+435,
+740,
+405,
+740
+]
+},
+{
+"id": "56e99cc3ef40da61",
+"net": "+5V",
+"line": [
+315,
+730,
+345,
+730
+]
+},
+{
+"id": "2f0d44c08f0abb26",
+"net": "+5V",
+"line": [
+435,
+730,
+405,
+730
+]
+},
+{
+"id": "078151d293d87f59",
+"net": "+VLED",
+"line": [
+315,
+720,
+345,
+720
+]
+},
+{
+"id": "741cbc1162d6e6aa",
+"net": "+VLED",
+"line": [
+435,
+720,
+405,
+720
+]
+},
+{
+"id": "a65530176759f543",
+"net": "/B04_S07_CONV1/C1_ADD_SEL0",
+"line": [
+315,
+710,
+345,
+710
+]
+},
+{
+"id": "faad0799245236e5",
+"net": "/B04_S07_CONV1/C1_ADD_SEL1",
+"line": [
+435,
+710,
+405,
+710
+]
+},
+{
+"id": "b7d9c9f7ed26437e",
+"net": "/B04_S07_CONV1/C1_CNT_RESET_N",
+"line": [
+315,
+700,
+345,
+700
+]
+},
+{
+"id": "b1649f67996bdadf",
+"net": "/B04_S07_CONV1/C1_IN_ADDR4",
+"line": [
+435,
+700,
+405,
+700
+]
+},
+{
+"id": "58c839784d6410eb",
+"net": "/B04_S07_CONV1/C1_IN_ADDR5",
+"line": [
+315,
+690,
+345,
+690
+]
+},
+{
+"id": "3a6ef629a20327c7",
+"net": "/B04_S07_CONV1/C1_IN_ADDR6",
+"line": [
+435,
+690,
+405,
+690
+]
+},
+{
+"id": "dde8ad04755e6e3e",
+"net": "/B04_S07_CONV1/C1_IN_ADDR7",
+"line": [
+315,
+680,
+345,
+680
+]
+},
+{
+"id": "987dbff6180b25ab",
+"net": "/B04_S07_CONV1/C1_IN_ADDR8",
+"line": [
+435,
+680,
+405,
+680
+]
+},
+{
+"id": "0eed248947617274",
+"net": "/B04_S07_CONV1/C1_IN_ADDR9",
+"line": [
+315,
+670,
+345,
+670
+]
+},
+{
+"id": "044bdc6e337b3d5f",
+"net": "/B04_S07_CONV1/C1_KY2",
+"line": [
+435,
+670,
+405,
+670
+]
+},
+{
+"id": "1f8644952db34015",
+"net": "/B04_S07_CONV1/C1_KY5_C0",
+"line": [
+315,
+660,
+345,
+660
+]
+},
+{
+"id": "93d51501ceb87f9a",
+"net": "/B04_S07_CONV1/C1_MEM_STAT_DONE",
+"line": [
+435,
+660,
+405,
+660
+]
+},
+{
+"id": "95c6444783ac9a71",
+"net": "/B04_S07_CONV1/C1_MX1_0",
+"line": [
+315,
+650,
+345,
+650
+]
+},
+{
+"id": "624a84945e3bd51e",
+"net": "/B04_S07_CONV1/C1_MX1_1",
+"line": [
+435,
+650,
+405,
+650
+]
+},
+{
+"id": "9f1ee7ebb1fcf5e6",
+"net": "/B04_S07_CONV1/C1_MX1_2",
+"line": [
+315,
+640,
+345,
+640
+]
+},
+{
+"id": "5fe3774fe3f17faf",
+"net": "/B04_S07_CONV1/C1_MX1_3",
+"line": [
+435,
+640,
+405,
+640
+]
+},
+{
+"id": "1986f4c4d7c989b2",
+"net": "/B04_S07_CONV1/C1_OC0",
+"line": [
+315,
+630,
+345,
+630
+]
+},
+{
+"id": "20c6d6257ecefe33",
+"net": "/B04_S07_CONV1/C1_OC1",
+"line": [
+435,
+630,
+405,
+630
+]
+},
+{
+"id": "6b901ef6b6c2ed78",
+"net": "/B04_S07_CONV1/C1_OC2",
+"line": [
+315,
+620,
+345,
+620
+]
+},
+{
+"id": "75ce1bcd8f632e0b",
+"net": "/B04_S07_CONV1/C1_OC25_4",
+"line": [
+435,
+620,
+405,
+620
+]
+},
+{
+"id": "887caaed9d4593fd",
+"net": "/B04_S07_CONV1/C1_OC25_5",
+"line": [
+315,
+610,
+345,
+610
+]
+},
+{
+"id": "3ee49ee72042fa79",
+"net": "/B04_S07_CONV1/C1_OC25_6",
+"line": [
+435,
+610,
+405,
+610
+]
+},
+{
+"id": "e140c792749c52ef",
+"net": "/B04_S07_CONV1/C1_OC25_7",
+"line": [
+315,
+600,
+345,
+600
+]
+},
+{
+"id": "097429bbf3450ffc",
+"net": "/B04_S07_CONV1/C1_OUT_STB",
+"line": [
+435,
+600,
+405,
+600
+]
+},
+{
+"id": "84caa5e7ae964ce6",
+"net": "/B04_S07_CONV1/C1_SP_LAST_HI_N",
+"line": [
+315,
+590,
+345,
+590
+]
+},
+{
+"id": "c339f3e718bdb96e",
+"net": "/B04_S07_CONV1/C1_SP_LAST_LO_N",
+"line": [
+435,
+590,
+405,
+590
+]
+},
+{
+"id": "85d982760b349536",
+"net": "/B04_S07_CONV1/C1_SP_PE_N",
+"line": [
+315,
+580,
+345,
+580
+]
+},
+{
+"id": "33e104fa93f39116",
+"net": "/B04_S07_CONV1/C1_W1_C0",
+"line": [
+435,
+580,
+405,
+580
+]
+},
+{
+"id": "461d019e9eb3adc3",
+"net": "/B04_S07_CONV1/C1_WA_C0",
+"line": [
+315,
+570,
+345,
+570
+]
+},
+{
+"id": "05a4076cfaa20aac",
+"net": "/B04_S13_REQUANT_C1/C1_RQ_NEG_N",
+"line": [
+435,
+570,
+405,
+570
+]
+},
+{
+"id": "4f7100b3414a748e",
+"net": "C1_ACC31",
+"line": [
+315,
+560,
+345,
+560
+]
+},
+{
+"id": "ee7b9f818c8392b2",
+"net": "C1_ADDR0",
+"line": [
+435,
+560,
+405,
+560
+]
+},
+{
+"id": "5b531daf012d3f23",
+"net": "C1_ADDR1",
+"line": [
+315,
+550,
+345,
+550
+]
+},
+{
+"id": "707f8897822ecb7c",
+"net": "C1_ADDR10",
+"line": [
+435,
+550,
+405,
+550
+]
+},
+{
+"id": "d2d0c5fe4827c7bc",
+"net": "C1_ADDR11",
+"line": [
+315,
+540,
+345,
+540
+]
+},
+{
+"id": "5500f2c115f97eaf",
+"net": "C1_ADDR12",
+"line": [
+435,
+540,
+405,
+540
+]
+},
+{
+"id": "1ab40527bef9e8af",
+"net": "C1_ADDR13",
+"line": [
+315,
+530,
+345,
+530
+]
+},
+{
+"id": "3ab4ae161e5f6143",
+"net": "C1_ADDR14",
+"line": [
+435,
+530,
+405,
+530
+]
+},
+{
+"id": "361675bcb919a158",
+"net": "C1_ADDR15",
+"line": [
+315,
+520,
+345,
+520
+]
+},
+{
+"id": "4f39d62ba141cd70",
+"net": "C1_ADDR2",
+"line": [
+435,
+520,
+405,
+520
+]
+},
+{
+"id": "0711169c946a9d88",
+"net": "C1_ADDR3",
+"line": [
+315,
+510,
+345,
+510
+]
+},
+{
+"id": "913bcfd23f957823",
+"net": "C1_ADDR4",
+"line": [
+435,
+510,
+405,
+510
+]
+},
+{
+"id": "9b86111c790656ee",
+"net": "C1_ADDR5",
+"line": [
+315,
+500,
+345,
+500
+]
+},
+{
+"id": "1640e890a1b099dc",
+"net": "C1_ADDR6",
+"line": [
+435,
+500,
+405,
+500
+]
+},
+{
+"id": "385394a241ddc1ae",
+"net": "C1_ADDR7",
+"line": [
+315,
+490,
+345,
+490
+]
+},
+{
+"id": "54b5f5f69d4f13fb",
+"net": "C1_ADDR8",
+"line": [
+435,
+490,
+405,
+490
+]
+},
+{
+"id": "1ba0503afb97c5e3",
+"net": "C1_ADDR9",
+"line": [
+315,
+480,
+345,
+480
+]
+},
+{
+"id": "632186258831ac90",
+"net": "C1_BUSY_N",
+"line": [
+435,
+480,
+405,
+480
+]
+},
+{
+"id": "558604a9937f7f12",
+"net": "CLK",
+"line": [
+315,
+470,
+345,
+470
+]
+},
+{
+"id": "baa36ec9b2dd8360",
+"net": "DATA6",
+"line": [
+435,
+470,
+405,
+470
+]
+},
+{
+"id": "f2ee60b1042a43ab",
+"net": "GND",
+"line": [
+315,
+460,
+345,
+460
+]
+},
+{
+"id": "69413d7bad6e98dd",
+"net": "GND",
+"line": [
+435,
+460,
+405,
+460
+]
+},
+{
+"id": "0843b207a8fb99dc",
+"net": "GND",
+"line": [
+315,
+450,
+345,
+450
+]
+},
+{
+"id": "2a24b89e3ecbf87a",
+"net": "GND",
+"line": [
+435,
+450,
+405,
+450
+]
+},
+{
+"id": "fc937ce20c7bac21",
+"net": "+5V",
+"line": [
+220,
+780,
+220,
+800,
+220,
+780,
+220,
+760
+]
+},
+{
+"id": "17c374c50cee7965",
+"net": "+5V",
+"line": [
+440,
+740,
+440,
+760
+]
+},
+{
+"id": "696a24a8ea099918",
+"net": "GND",
+"line": [
+420,
+880,
+420,
+860
+]
+},
+{
+"id": "8cec4e5781f9f263",
+"net": "+5V",
+"line": [
+220,
+1160,
+220,
+1120
+]
+},
+{
+"id": "25335fce7fae2362",
+"net": "+5V",
+"line": [
+220,
+1320,
+220,
+1340,
+220,
+1320,
+220,
+1300
+]
+},
+{
+"id": "c61d99c547217c2c",
+"net": "+5V",
+"line": [
+220,
+910,
+220,
+890
+]
+},
+{
+"id": "9d1f135b92c26446",
+"net": "GND",
+"line": [
+220,
+830,
+220,
+850
+]
+},
+{
+"id": "6a8682b833e4d7e7",
+"net": "+VLED",
+"line": [
+220,
+1450,
+220,
+1430
+]
+},
+{
+"id": "5ae2621ede4d80ef",
+"net": "GND",
+"line": [
+220,
+1370,
+220,
+1390
+]
+},
+{
+"id": "4af7ca7d56bedf1b",
+"net": "+5V",
+"line": [
+220,
+1550,
+220,
+1570
+]
+},
+{
+"id": "dbd05e60e3569fc1",
+"net": "GND",
+"line": [
+220,
+1630,
+220,
+1610
+]
+},
+{
+"id": "3c58c40d322f5e21",
+"net": "LEDPWR_A",
+"line": [
+240,
+1878,
+240,
+1890
+]
+},
+{
+"id": "3e8da6d6de7d8c3e",
+"net": "GND",
+"line": [
+200,
+1902,
+200,
+1890
+]
+},
+{
+"id": "32956eea36e765c0",
+"net": "+5V",
+"line": [
+370,
+1878,
+370,
+1890
+]
+},
+{
+"id": "5bea48608585269f",
+"net": "LEDPWR_A",
+"line": [
+410,
+1878,
+410,
+1890
+]
+}
+]
+}

@@ -1,0 +1,818 @@
+[
+{
+"id": "4b5df90d41295bf1",
+"pt": null,
+"des": null,
+"x": 0,
+"y": 0,
+"kind": "sheet"
+},
+{
+"id": "8ffed62aac6de20a",
+"pt": null,
+"des": "U7013",
+"x": 510,
+"y": 1512,
+"kind": "part"
+},
+{
+"id": "53a29249cab3084c",
+"pt": null,
+"des": "U7014",
+"x": 850,
+"y": 1512,
+"kind": "part"
+},
+{
+"id": "fbf3185f454a23fb",
+"pt": null,
+"des": "U7015",
+"x": 1190,
+"y": 1512,
+"kind": "part"
+},
+{
+"id": "a24b95f3ad12a0b5",
+"pt": null,
+"des": "U7016",
+"x": 170,
+"y": 1502,
+"kind": "part"
+},
+{
+"id": "730ddc74198f37e1",
+"pt": null,
+"des": "U7156",
+"x": 170,
+"y": 742,
+"kind": "part"
+},
+{
+"id": "bd5a3c33bfc6f159",
+"pt": null,
+"des": "U7039",
+"x": 1530,
+"y": 1492,
+"kind": "part"
+},
+{
+"id": "a25ce5bb0df12423",
+"pt": null,
+"des": "U7041",
+"x": 1870,
+"y": 1492,
+"kind": "part"
+},
+{
+"id": "8b8036e1d7c2a4d1",
+"pt": null,
+"des": "U7043",
+"x": 170,
+"y": 1302,
+"kind": "part"
+},
+{
+"id": "d371327379e8739b",
+"pt": null,
+"des": "U7044",
+"x": 510,
+"y": 1302,
+"kind": "part"
+},
+{
+"id": "428e60531b7dfa9b",
+"pt": null,
+"des": "U7045",
+"x": 850,
+"y": 1302,
+"kind": "part"
+},
+{
+"id": "9753dbb4a98b1988",
+"pt": null,
+"des": "U7046",
+"x": 1190,
+"y": 1302,
+"kind": "part"
+},
+{
+"id": "78df2d8ba589221e",
+"pt": null,
+"des": "U7047",
+"x": 1530,
+"y": 1302,
+"kind": "part"
+},
+{
+"id": "be4b11a103195232",
+"pt": null,
+"des": "U7048",
+"x": 1870,
+"y": 1302,
+"kind": "part"
+},
+{
+"id": "d7af04f699ad122e",
+"pt": null,
+"des": "U7125",
+"x": 500,
+"y": 1132,
+"kind": "part"
+},
+{
+"id": "84a718ff164d749a",
+"pt": null,
+"des": "U7126",
+"x": 840,
+"y": 1132,
+"kind": "part"
+},
+{
+"id": "24366264ce12203b",
+"pt": null,
+"des": "U7127",
+"x": 1180,
+"y": 1132,
+"kind": "part"
+},
+{
+"id": "6a483c8ce2f110a5",
+"pt": null,
+"des": "U7128",
+"x": 1520,
+"y": 1132,
+"kind": "part"
+},
+{
+"id": "69d0854e1d2329cd",
+"pt": null,
+"des": "U7129",
+"x": 1860,
+"y": 1132,
+"kind": "part"
+},
+{
+"id": "0a9f3b98d7a09e7c",
+"pt": null,
+"des": "U7130",
+"x": 160,
+"y": 942,
+"kind": "part"
+},
+{
+"id": "5136e87aae6c8afd",
+"pt": null,
+"des": "U7131",
+"x": 840,
+"y": 942,
+"kind": "part"
+},
+{
+"id": "08bab8e7bc5bc1d4",
+"pt": null,
+"des": "U7146",
+"x": 1515,
+"y": 917,
+"kind": "part"
+},
+{
+"id": "700c6162f99454e9",
+"pt": null,
+"des": "U7147",
+"x": 1855,
+"y": 917,
+"kind": "part"
+},
+{
+"id": "1846e206f80fe8c9",
+"pt": null,
+"des": "LED21003",
+"x": 1170,
+"y": 971.9999999999998,
+"kind": "part"
+},
+{
+"id": "42bac00a92a0285a",
+"pt": null,
+"des": "LED21005",
+"x": 490,
+"y": 972,
+"kind": "part"
+},
+{
+"id": "ed1fa05d48ce182d",
+"pt": null,
+"des": "LED21006",
+"x": 160,
+"y": 1695,
+"kind": "part"
+},
+{
+"id": "0ff91e74835bdd8c",
+"pt": null,
+"des": "LED2",
+"x": 330,
+"y": 1695,
+"kind": "part"
+},
+{
+"id": "5a0101941c8c0525",
+"pt": null,
+"des": "LED21007",
+"x": 2160,
+"y": 175,
+"kind": "part"
+},
+{
+"id": "8ce98ce728518c78",
+"pt": null,
+"des": "LED21008",
+"x": 2310,
+"y": 175,
+"kind": "part"
+},
+{
+"id": "3cff96d30711fa6b",
+"pt": null,
+"des": "LED21009",
+"x": 2460,
+"y": 175,
+"kind": "part"
+},
+{
+"id": "54c2007d6b373b7d",
+"pt": null,
+"des": "LED21010",
+"x": 2610,
+"y": 175,
+"kind": "part"
+},
+{
+"id": "146fac4bf2a064ee",
+"pt": null,
+"des": "LED21011",
+"x": 2160,
+"y": 305,
+"kind": "part"
+},
+{
+"id": "6c3ff472396264ea",
+"pt": null,
+"des": "LED21012",
+"x": 2310,
+"y": 305,
+"kind": "part"
+},
+{
+"id": "818eae5620f2174d",
+"pt": null,
+"des": "LED21013",
+"x": 2460,
+"y": 305,
+"kind": "part"
+},
+{
+"id": "686d75a8b899643e",
+"pt": null,
+"des": "LED21014",
+"x": 2610,
+"y": 305,
+"kind": "part"
+},
+{
+"id": "e4eb609fdf78027a",
+"pt": null,
+"des": "LED21015",
+"x": 2160,
+"y": 435,
+"kind": "part"
+},
+{
+"id": "a2a9f42ffdaff561",
+"pt": null,
+"des": "LED21016",
+"x": 2310,
+"y": 435,
+"kind": "part"
+},
+{
+"id": "d859e7a83707db8f",
+"pt": null,
+"des": "LED21017",
+"x": 2460,
+"y": 435,
+"kind": "part"
+},
+{
+"id": "6a6ebacd531e0aed",
+"pt": null,
+"des": "LED21018",
+"x": 2610,
+"y": 435,
+"kind": "part"
+},
+{
+"id": "fdc0e52dc2becbed",
+"pt": null,
+"des": "LED21019",
+"x": 2160,
+"y": 565,
+"kind": "part"
+},
+{
+"id": "01bcdf47adff4dfa",
+"pt": null,
+"des": "LED21020",
+"x": 2310,
+"y": 565,
+"kind": "part"
+},
+{
+"id": "8145a18a3a6e2a00",
+"pt": null,
+"des": "LED21021",
+"x": 2460,
+"y": 565,
+"kind": "part"
+},
+{
+"id": "c9224077e7928875",
+"pt": null,
+"des": "Q21003",
+"x": 1130,
+"y": 942,
+"kind": "part"
+},
+{
+"id": "474140812105d42b",
+"pt": null,
+"des": "Q21005",
+"x": 450,
+"y": 942,
+"kind": "part"
+},
+{
+"id": "2bfd4886d4b96cda",
+"pt": null,
+"des": "Q21006",
+"x": 120,
+"y": 1665,
+"kind": "part"
+},
+{
+"id": "17947333b4784eae",
+"pt": null,
+"des": "Q1",
+"x": 290,
+"y": 1665,
+"kind": "part"
+},
+{
+"id": "5bc7b954d1b12a46",
+"pt": null,
+"des": "R31005",
+"x": 1170,
+"y": 922,
+"kind": "part"
+},
+{
+"id": "23b3b2c41ca436ce",
+"pt": null,
+"des": "R31009",
+"x": 490,
+"y": 922,
+"kind": "part"
+},
+{
+"id": "ecfd70d96f8353a0",
+"pt": null,
+"des": "R31006",
+"x": 1110,
+"y": 962,
+"kind": "part"
+},
+{
+"id": "49471620eefd5da6",
+"pt": null,
+"des": "R31010",
+"x": 430,
+"y": 962,
+"kind": "part"
+},
+{
+"id": "e805b7aeffefbf5a",
+"pt": null,
+"des": "R31012",
+"x": 2160,
+"y": 125,
+"kind": "part"
+},
+{
+"id": "3193eb0a7eb5589a",
+"pt": null,
+"des": "R31013",
+"x": 2100,
+"y": 165,
+"kind": "part"
+},
+{
+"id": "edad8e5bfd47010e",
+"pt": null,
+"des": "R31014",
+"x": 2310,
+"y": 125,
+"kind": "part"
+},
+{
+"id": "99482a5663d752b6",
+"pt": null,
+"des": "R31015",
+"x": 2250,
+"y": 165,
+"kind": "part"
+},
+{
+"id": "a0e1ce7daee25e38",
+"pt": null,
+"des": "R31016",
+"x": 2460,
+"y": 125,
+"kind": "part"
+},
+{
+"id": "4ea812ada1544e41",
+"pt": null,
+"des": "R31017",
+"x": 2400,
+"y": 165,
+"kind": "part"
+},
+{
+"id": "877260f9348b402e",
+"pt": null,
+"des": "R31018",
+"x": 2610,
+"y": 125,
+"kind": "part"
+},
+{
+"id": "796a4c60d781903f",
+"pt": null,
+"des": "R31019",
+"x": 2550,
+"y": 165,
+"kind": "part"
+},
+{
+"id": "bf5de6d67b093f33",
+"pt": null,
+"des": "R31020",
+"x": 2160,
+"y": 255,
+"kind": "part"
+},
+{
+"id": "982619afe7c48e9d",
+"pt": null,
+"des": "R31021",
+"x": 2100,
+"y": 295,
+"kind": "part"
+},
+{
+"id": "b12661855042fdd0",
+"pt": null,
+"des": "R31022",
+"x": 2310,
+"y": 255,
+"kind": "part"
+},
+{
+"id": "001e4cb7a594d3a6",
+"pt": null,
+"des": "R31023",
+"x": 2250,
+"y": 295,
+"kind": "part"
+},
+{
+"id": "2270b937f79cff7f",
+"pt": null,
+"des": "R31024",
+"x": 2460,
+"y": 255,
+"kind": "part"
+},
+{
+"id": "641f840002fb5669",
+"pt": null,
+"des": "R31025",
+"x": 2400,
+"y": 295,
+"kind": "part"
+},
+{
+"id": "0c2a6d0e160f2d5c",
+"pt": null,
+"des": "R31026",
+"x": 2610,
+"y": 255,
+"kind": "part"
+},
+{
+"id": "2932fcc9c36fce70",
+"pt": null,
+"des": "R31027",
+"x": 2550,
+"y": 295,
+"kind": "part"
+},
+{
+"id": "34b06219edcf4cc2",
+"pt": null,
+"des": "R31028",
+"x": 2160,
+"y": 385,
+"kind": "part"
+},
+{
+"id": "cf688fd725afe9b3",
+"pt": null,
+"des": "R31029",
+"x": 2100,
+"y": 425,
+"kind": "part"
+},
+{
+"id": "78b68f6f4817aab6",
+"pt": null,
+"des": "R31030",
+"x": 2310,
+"y": 385,
+"kind": "part"
+},
+{
+"id": "89dbe3ba44f57eb4",
+"pt": null,
+"des": "R31031",
+"x": 2250,
+"y": 425,
+"kind": "part"
+},
+{
+"id": "4d1b26754fe91b85",
+"pt": null,
+"des": "R31032",
+"x": 2460,
+"y": 385,
+"kind": "part"
+},
+{
+"id": "9fa59ebf6f2ed501",
+"pt": null,
+"des": "R31033",
+"x": 2400,
+"y": 425,
+"kind": "part"
+},
+{
+"id": "87f06354c8998c03",
+"pt": null,
+"des": "R31034",
+"x": 2610,
+"y": 385,
+"kind": "part"
+},
+{
+"id": "c215cb5cf6042411",
+"pt": null,
+"des": "R31035",
+"x": 2550,
+"y": 425,
+"kind": "part"
+},
+{
+"id": "28524d533b00963d",
+"pt": null,
+"des": "R31036",
+"x": 2160,
+"y": 515,
+"kind": "part"
+},
+{
+"id": "e4161a4e47ac57a3",
+"pt": null,
+"des": "R31037",
+"x": 2100,
+"y": 555,
+"kind": "part"
+},
+{
+"id": "3d3ad617659ef364",
+"pt": null,
+"des": "R31038",
+"x": 2310,
+"y": 515,
+"kind": "part"
+},
+{
+"id": "23f89aa1ffea7501",
+"pt": null,
+"des": "R31039",
+"x": 2250,
+"y": 555,
+"kind": "part"
+},
+{
+"id": "bc78a4adb0c07d1d",
+"pt": null,
+"des": "R31040",
+"x": 2460,
+"y": 515,
+"kind": "part"
+},
+{
+"id": "9436c48b26744342",
+"pt": null,
+"des": "R31041",
+"x": 2400,
+"y": 555,
+"kind": "part"
+},
+{
+"id": "d2fae3f3c08cdf00",
+"pt": null,
+"des": "U14005",
+"x": 160,
+"y": 1137,
+"kind": "part"
+},
+{
+"id": "7d8a459af59a6f56",
+"pt": null,
+"des": "R31011",
+"x": 160,
+"y": 1645,
+"kind": "part"
+},
+{
+"id": "096c6fc04bb39baf",
+"pt": null,
+"des": "R3",
+"x": 330,
+"y": 1645,
+"kind": "part"
+},
+{
+"id": "a5c7df0738dd3035",
+"pt": null,
+"des": "R2",
+"x": 100,
+"y": 1685,
+"kind": "part"
+},
+{
+"id": "a18b59b0b8396a5e",
+"pt": null,
+"des": "R4",
+"x": 270,
+"y": 1685,
+"kind": "part"
+},
+{
+"id": "5665a428f4210a4c",
+"pt": null,
+"des": null,
+"x": 130,
+"y": 1635,
+"kind": "netflag"
+},
+{
+"id": "7090d11652253a1b",
+"pt": null,
+"des": null,
+"x": 300,
+"y": 1635,
+"kind": "netflag"
+},
+{
+"id": "fcca4f3425eb30de",
+"pt": null,
+"des": "Q21007",
+"x": 2120,
+"y": 145,
+"kind": "part"
+},
+{
+"id": "66a2d937001c72f7",
+"pt": null,
+"des": "Q21008",
+"x": 2270,
+"y": 145,
+"kind": "part"
+},
+{
+"id": "5fba92c9175483eb",
+"pt": null,
+"des": "Q21009",
+"x": 2420,
+"y": 145,
+"kind": "part"
+},
+{
+"id": "fcaf0e3475751cbf",
+"pt": null,
+"des": "Q21010",
+"x": 2570,
+"y": 145,
+"kind": "part"
+},
+{
+"id": "829ae63829650b45",
+"pt": null,
+"des": "Q21011",
+"x": 2120,
+"y": 275,
+"kind": "part"
+},
+{
+"id": "a4f0e42fe4501781",
+"pt": null,
+"des": "Q21012",
+"x": 2270,
+"y": 275,
+"kind": "part"
+},
+{
+"id": "c8a3487c6f5cec46",
+"pt": null,
+"des": "Q21013",
+"x": 2420,
+"y": 275,
+"kind": "part"
+},
+{
+"id": "d47a75e9268f55d0",
+"pt": null,
+"des": "Q21014",
+"x": 2570,
+"y": 275,
+"kind": "part"
+},
+{
+"id": "b39d2fed9f8307aa",
+"pt": null,
+"des": "Q21015",
+"x": 2120,
+"y": 405,
+"kind": "part"
+},
+{
+"id": "2338537176f643e2",
+"pt": null,
+"des": "Q21016",
+"x": 2270,
+"y": 405,
+"kind": "part"
+},
+{
+"id": "e52ea90af5e692f6",
+"pt": null,
+"des": "Q21017",
+"x": 2420,
+"y": 405,
+"kind": "part"
+},
+{
+"id": "a16bc50a1ef1828a",
+"pt": null,
+"des": "Q21018",
+"x": 2570,
+"y": 405,
+"kind": "part"
+},
+{
+"id": "4242f75db0329111",
+"pt": null,
+"des": "Q21019",
+"x": 2120,
+"y": 535,
+"kind": "part"
+},
+{
+"id": "495640cb9822313c",
+"pt": null,
+"des": "Q21020",
+"x": 2270,
+"y": 535,
+"kind": "part"
+},
+{
+"id": "c33f16bfcf6b7c60",
+"pt": null,
+"des": "Q21021",
+"x": 2420,
+"y": 535,
+"kind": "part"
+}
+]

@@ -1,0 +1,1702 @@
+[
+ {
+  "ref": "J20306",
+  "pin": "10",
+  "base_nets": [
+   "+VLED"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "J20306",
+  "pin": "5",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "J20306",
+  "pin": "6",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "J20306",
+  "pin": "7",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "J20306",
+  "pin": "8",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "J20306",
+  "pin": "9",
+  "base_nets": [
+   "+VLED"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "LED1",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "LED2",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2674"
+  ]
+ },
+ {
+  "ref": "LED2",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2675"
+  ]
+ },
+ {
+  "ref": "LED21006",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2668"
+  ]
+ },
+ {
+  "ref": "LED21006",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2669"
+  ]
+ },
+ {
+  "ref": "LED21007",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2679"
+  ]
+ },
+ {
+  "ref": "LED21007",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2678"
+  ]
+ },
+ {
+  "ref": "LED21008",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2685"
+  ]
+ },
+ {
+  "ref": "LED21008",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2684"
+  ]
+ },
+ {
+  "ref": "LED21009",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2691"
+  ]
+ },
+ {
+  "ref": "LED21009",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2690"
+  ]
+ },
+ {
+  "ref": "LED21010",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2697"
+  ]
+ },
+ {
+  "ref": "LED21010",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2696"
+  ]
+ },
+ {
+  "ref": "LED21011",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2703"
+  ]
+ },
+ {
+  "ref": "LED21011",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2702"
+  ]
+ },
+ {
+  "ref": "LED21012",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2709"
+  ]
+ },
+ {
+  "ref": "LED21012",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2708"
+  ]
+ },
+ {
+  "ref": "LED21013",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2716"
+  ]
+ },
+ {
+  "ref": "LED21013",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2714"
+  ]
+ },
+ {
+  "ref": "LED21014",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2723"
+  ]
+ },
+ {
+  "ref": "LED21014",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2721"
+  ]
+ },
+ {
+  "ref": "LED21015",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2730"
+  ]
+ },
+ {
+  "ref": "LED21015",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2728"
+  ]
+ },
+ {
+  "ref": "LED21016",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2737"
+  ]
+ },
+ {
+  "ref": "LED21016",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2735"
+  ]
+ },
+ {
+  "ref": "LED21017",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2744"
+  ]
+ },
+ {
+  "ref": "LED21017",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2742"
+  ]
+ },
+ {
+  "ref": "LED21018",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2751"
+  ]
+ },
+ {
+  "ref": "LED21018",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2749"
+  ]
+ },
+ {
+  "ref": "LED21019",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2758"
+  ]
+ },
+ {
+  "ref": "LED21019",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2756"
+  ]
+ },
+ {
+  "ref": "LED21020",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2765"
+  ]
+ },
+ {
+  "ref": "LED21020",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2763"
+  ]
+ },
+ {
+  "ref": "LED21021",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2772"
+  ]
+ },
+ {
+  "ref": "LED21021",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2770"
+  ]
+ },
+ {
+  "ref": "LEDP1",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "LEDP1",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "LEDPWR_A"
+  ]
+ },
+ {
+  "ref": "Q1",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2672"
+  ]
+ },
+ {
+  "ref": "Q1",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q1",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2674"
+  ]
+ },
+ {
+  "ref": "Q21003",
+  "pin": "1",
+  "base_nets": [
+   "GND"
+  ],
+  "curr_nets": [
+   "$2N2554"
+  ]
+ },
+ {
+  "ref": "Q21003",
+  "pin": "2",
+  "base_nets": [
+   "$2N2554"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21005",
+  "pin": "1",
+  "base_nets": [
+   "GND"
+  ],
+  "curr_nets": [
+   "$2N2566"
+  ]
+ },
+ {
+  "ref": "Q21005",
+  "pin": "2",
+  "base_nets": [
+   "$2N2566"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21006",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2666"
+  ]
+ },
+ {
+  "ref": "Q21006",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21006",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2668"
+  ]
+ },
+ {
+  "ref": "Q21007",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2681"
+  ]
+ },
+ {
+  "ref": "Q21007",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21007",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2679"
+  ]
+ },
+ {
+  "ref": "Q21008",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2687"
+  ]
+ },
+ {
+  "ref": "Q21008",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21008",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2685"
+  ]
+ },
+ {
+  "ref": "Q21009",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2693"
+  ]
+ },
+ {
+  "ref": "Q21009",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21009",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2691"
+  ]
+ },
+ {
+  "ref": "Q21010",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2699"
+  ]
+ },
+ {
+  "ref": "Q21010",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21010",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2697"
+  ]
+ },
+ {
+  "ref": "Q21011",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2705"
+  ]
+ },
+ {
+  "ref": "Q21011",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21011",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2703"
+  ]
+ },
+ {
+  "ref": "Q21012",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2711"
+  ]
+ },
+ {
+  "ref": "Q21012",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21012",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2709"
+  ]
+ },
+ {
+  "ref": "Q21013",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2718"
+  ]
+ },
+ {
+  "ref": "Q21013",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21013",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2716"
+  ]
+ },
+ {
+  "ref": "Q21014",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2725"
+  ]
+ },
+ {
+  "ref": "Q21014",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21014",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2723"
+  ]
+ },
+ {
+  "ref": "Q21015",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2732"
+  ]
+ },
+ {
+  "ref": "Q21015",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21015",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2730"
+  ]
+ },
+ {
+  "ref": "Q21016",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2739"
+  ]
+ },
+ {
+  "ref": "Q21016",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21016",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2737"
+  ]
+ },
+ {
+  "ref": "Q21017",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2746"
+  ]
+ },
+ {
+  "ref": "Q21017",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21017",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2744"
+  ]
+ },
+ {
+  "ref": "Q21018",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2753"
+  ]
+ },
+ {
+  "ref": "Q21018",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21018",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2751"
+  ]
+ },
+ {
+  "ref": "Q21019",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2760"
+  ]
+ },
+ {
+  "ref": "Q21019",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21019",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2758"
+  ]
+ },
+ {
+  "ref": "Q21020",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2767"
+  ]
+ },
+ {
+  "ref": "Q21020",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21020",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2765"
+  ]
+ },
+ {
+  "ref": "Q21021",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2774"
+  ]
+ },
+ {
+  "ref": "Q21021",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "Q21021",
+  "pin": "3",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2772"
+  ]
+ },
+ {
+  "ref": "R1",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R2",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2666"
+  ]
+ },
+ {
+  "ref": "R2",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_OUT_STB"
+  ]
+ },
+ {
+  "ref": "R3",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R3",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2675"
+  ]
+ },
+ {
+  "ref": "R31005",
+  "pin": "1",
+  "base_nets": [
+   "+VLED"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31009",
+  "pin": "1",
+  "base_nets": [
+   "+VLED"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31011",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31011",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2669"
+  ]
+ },
+ {
+  "ref": "R31012",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31012",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2678"
+  ]
+ },
+ {
+  "ref": "R31013",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2681"
+  ]
+ },
+ {
+  "ref": "R31013",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_MEM_STAT_DONE"
+  ]
+ },
+ {
+  "ref": "R31014",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31014",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2684"
+  ]
+ },
+ {
+  "ref": "R31015",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2687"
+  ]
+ },
+ {
+  "ref": "R31015",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_SP_LAST_LO_N"
+  ]
+ },
+ {
+  "ref": "R31016",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31016",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2690"
+  ]
+ },
+ {
+  "ref": "R31017",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2693"
+  ]
+ },
+ {
+  "ref": "R31017",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S13_REQUANT_C1/C1_RQ_NEG_N"
+  ]
+ },
+ {
+  "ref": "R31018",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31018",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2696"
+  ]
+ },
+ {
+  "ref": "R31019",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2699"
+  ]
+ },
+ {
+  "ref": "R31019",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "C1_BUSY_N"
+  ]
+ },
+ {
+  "ref": "R31020",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31020",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2702"
+  ]
+ },
+ {
+  "ref": "R31021",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2705"
+  ]
+ },
+ {
+  "ref": "R31021",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_ADD_SEL1"
+  ]
+ },
+ {
+  "ref": "R31022",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31022",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2708"
+  ]
+ },
+ {
+  "ref": "R31023",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2711"
+  ]
+ },
+ {
+  "ref": "R31023",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_SP_PE_N"
+  ]
+ },
+ {
+  "ref": "R31024",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31024",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2714"
+  ]
+ },
+ {
+  "ref": "R31025",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2718"
+  ]
+ },
+ {
+  "ref": "R31025",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_ADD_SEL0"
+  ]
+ },
+ {
+  "ref": "R31026",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31026",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2721"
+  ]
+ },
+ {
+  "ref": "R31027",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2725"
+  ]
+ },
+ {
+  "ref": "R31027",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_CNT_RESET_N"
+  ]
+ },
+ {
+  "ref": "R31028",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31028",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2728"
+  ]
+ },
+ {
+  "ref": "R31029",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2732"
+  ]
+ },
+ {
+  "ref": "R31029",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_OUTA_C0"
+  ]
+ },
+ {
+  "ref": "R31030",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31030",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2735"
+  ]
+ },
+ {
+  "ref": "R31031",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2739"
+  ]
+ },
+ {
+  "ref": "R31031",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_OUTA_C1"
+  ]
+ },
+ {
+  "ref": "R31032",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31032",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2742"
+  ]
+ },
+ {
+  "ref": "R31033",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2746"
+  ]
+ },
+ {
+  "ref": "R31033",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_OUT_ADDR0"
+  ]
+ },
+ {
+  "ref": "R31034",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31034",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2749"
+  ]
+ },
+ {
+  "ref": "R31035",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2753"
+  ]
+ },
+ {
+  "ref": "R31035",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_OUT_ADDR1"
+  ]
+ },
+ {
+  "ref": "R31036",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31036",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2756"
+  ]
+ },
+ {
+  "ref": "R31037",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2760"
+  ]
+ },
+ {
+  "ref": "R31037",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_OUT_ADDR10"
+  ]
+ },
+ {
+  "ref": "R31038",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31038",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2763"
+  ]
+ },
+ {
+  "ref": "R31039",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2767"
+  ]
+ },
+ {
+  "ref": "R31039",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_OUT_ADDR11"
+  ]
+ },
+ {
+  "ref": "R31040",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "R31040",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2770"
+  ]
+ },
+ {
+  "ref": "R31041",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2774"
+  ]
+ },
+ {
+  "ref": "R31041",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_OUT_ADDR12"
+  ]
+ },
+ {
+  "ref": "R4",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "$2N2672"
+  ]
+ },
+ {
+  "ref": "R4",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "/B04_S07_CONV1/C1_SP_LAST_HI_N"
+  ]
+ },
+ {
+  "ref": "RP1",
+  "pin": "1",
+  "base_nets": [],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "RP1",
+  "pin": "2",
+  "base_nets": [],
+  "curr_nets": [
+   "LEDPWR_A"
+  ]
+ },
+ {
+  "ref": "U14005",
+  "pin": "14",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7013",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7014",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7015",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7016",
+  "pin": "11",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7016",
+  "pin": "13",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7016",
+  "pin": "2",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7016",
+  "pin": "20",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7016",
+  "pin": "4",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7016",
+  "pin": "6",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7016",
+  "pin": "8",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7039",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7041",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7043",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7044",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7045",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7046",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7047",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7048",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7125",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7126",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7127",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7128",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7129",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7130",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7131",
+  "pin": "16",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7146",
+  "pin": "20",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7147",
+  "pin": "20",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7153",
+  "pin": "1",
+  "base_nets": [
+   "/B04_S07_CONV1/C1_MEM_STAT_DONE"
+  ],
+  "curr_nets": []
+ },
+ {
+  "ref": "U7156",
+  "pin": "20",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ },
+ {
+  "ref": "U7156",
+  "pin": "4",
+  "base_nets": [
+   "+5V"
+  ],
+  "curr_nets": [
+   "GND"
+  ]
+ }
+]
