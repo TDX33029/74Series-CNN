@@ -1,0 +1,46 @@
+$ C:\intelFPGA\18.0\modelsim_ase\win32aloem\vlib.exe work
+
+[exit 0]
+$ C:\intelFPGA\18.0\modelsim_ase\win32aloem\vlog.exe -sv -work work D:\Document\tempPrj\74Series-CNN\Simulation\v1_verify_20261115\rtl\models_eda_2m.v D:\Document\tempPrj\74Series-CNN\Simulation\v1_verify_20261115\rtl\cnn74_top_eda.v D:\Document\tempPrj\74Series-CNN\Simulation\v1_verify_20261115\rtl\tb_numeric.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+Start time: 20:52:51 on Nov 15,2026
+vlog -sv -work work D:\Document\tempPrj\74Series-CNN\Simulation\v1_verify_20261115\rtl\models_eda_2m.v D:\Document\tempPrj\74Series-CNN\Simulation\v1_verify_20261115\rtl\cnn74_top_eda.v D:\Document\tempPrj\74Series-CNN\Simulation\v1_verify_20261115\rtl\tb_numeric.v 
+-- Compiling module m_74xx_74HC00
+-- Compiling module m_74xx_74HC02
+-- Compiling module m_74xx_74HC04
+-- Compiling module m_74xx_74HC08
+-- Compiling module m_74xx_74HC138
+-- Compiling module m_74xx_74HC157
+-- Compiling module m_74xx_74HC161
+-- Compiling module m_74xx_74HC238
+-- Compiling module m_74xx_74HC245
+-- Compiling module m_74xx_74HC283
+-- Compiling module m_74xx_74HC32
+-- Compiling module m_74xx_74HC688
+-- Compiling module m_74xx_74HC74
+-- Compiling module m_74xx_74HC85
+-- Compiling module m_74xx_74HCT245
+-- Compiling module m_74xx_74HCT273
+-- Compiling module m_74xx_74HCT541
+-- Compiling module m_74xx_74HCT574
+-- Compiling module m_74xx_74LS148
+-- Compiling module m_Memory_EPROM_27C512
+-- Compiling module m_Memory_RAM_CY62256_70PC
+-- Compiling module m_Memory_RAM_HY6264AxP
+-- Compiling module m_Oscillator_ASE_xxxMHz
+-- Compiling module m_Osc_ACH
+-- Compiling module m_Memory_EEPROM_28C256
+-- Compiling module m_74xx_74HC86
+-- Compiling module cnn74_top
+-- Compiling module tb_numeric
+** Warning: D:\Document\tempPrj\74Series-CNN\Simulation\v1_verify_20261115\rtl\tb_numeric.v(528): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: D:\Document\tempPrj\74Series-CNN\Simulation\v1_verify_20261115\rtl\tb_numeric.v(556): (vlog-2643) Unterminated string literal continues onto next line.
+
+Top level modules:
+	m_Memory_RAM_CY62256_70PC
+	m_Oscillator_ASE_xxxMHz
+	tb_numeric
+End time: 20:52:51 on Nov 15,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 2
+
+[exit 0]

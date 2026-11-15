@@ -1,0 +1,8 @@
+neg-control errors: 2
+  C1OUT   1/4608 differ (first @100 ff!=00)
+  P1OUT   OK
+  C2OUT   OK
+  P2OUT   OK
+  FC1OUT  OK
+  FC2LOG  got [61933, -59127, -13825, -36372, -51272, 2022, 16180, -23175, 3160, -3809] want [61933, -59127, -13921, -36372, -51272, 2022, 16180, -23175, 3160, -3809]
+tb_pass: True vector_pass: True

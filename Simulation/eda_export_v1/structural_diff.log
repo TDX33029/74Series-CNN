@@ -1,0 +1,99 @@
+logic comps: old 2595 new 2595 | pins: old 25919 new 25914 | nets: old 7494 new 7494
+
+[inventory] only-11-14 0, only-11-15 0, changed 0
+
+[connectivity] pins whose neighbour set differs: 4529 of 25919
+  B01_SUPERVISOR|J20001.1     -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.2     -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.3     -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.4     -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.48    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.49    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.50    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.51    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.52    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.53    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.54    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.55    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.56    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.57    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.58    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.59    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.60    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.61    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.62    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.63    -[Q9.2]  +[]
+  B01_SUPERVISOR|J20001.64    -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1001.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1002.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1003.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1004.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1005.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1006.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1007.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1008.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1009.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1010.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1011.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1012.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1013.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1014.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1015.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1016.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1017.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1018.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1019.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1020.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1021.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1022.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1023.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|Q1024.2      -[Q9.2]  +[]
+  B01_SUPERVISOR|RP1.1        -[Q9.2]  +[]
+  B01_SUPERVISOR|U1001.14     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1001.20     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1001.22     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1002.14     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1002.20     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1002.22     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1003.10     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1003.14     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1003.17     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1003.18     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1004.1      -[Q9.2]  +[]
+  B01_SUPERVISOR|U1004.10     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1005.1      -[Q9.2]  +[]
+  B01_SUPERVISOR|U1005.10     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1006.4      -[Q9.2]  +[]
+  B01_SUPERVISOR|U1006.5      -[Q9.2]  +[]
+  B01_SUPERVISOR|U1006.8      -[Q9.2]  +[]
+  B01_SUPERVISOR|U1007.10     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1007.11     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1007.13     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1007.14     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1007.15     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1007.3      -[Q9.2]  +[]
+  B01_SUPERVISOR|U1007.5      -[Q9.2]  +[]
+  B01_SUPERVISOR|U1007.8      -[Q9.2]  +[]
+  B01_SUPERVISOR|U1008.1      -[Q9.2]  +[]
+  B01_SUPERVISOR|U1008.10     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1008.19     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1008.9      -[Q9.2]  +[]
+  B01_SUPERVISOR|U1009.1      -[Q9.2]  +[]
+  B01_SUPERVISOR|U1009.10     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1009.19     -[Q9.2]  +[]
+  B01_SUPERVISOR|U1010.1      -[Q9.2]  +[]
+  B01_SUPERVISOR|U1010.10     -[Q9.2]  +[]
+
+[nets] identical membership: 7489 | old-only 5 | new-only 5
+  old-only G::GND                                   4502 pins
+  old-only G::ADDR1                                 19 pins
+  old-only B12-3_HOSTIO::$4N2247                    3 pins
+  old-only B12-3_HOSTIO::$4N2245                    2 pins
+  old-only B12-3_HOSTIO::$4N2319                    3 pins
+  new-only G::GND                                   4501 pins
+  new-only G::ADDR1                                 18 pins
+  new-only B12-3_HOSTIO::$4N2322                    2 pins
+  new-only B12-3_HOSTIO::$4N2245                    1 pins
+  new-only B12-3_HOSTIO::$4N2319                    2 pins
+
+VERDICT: DIFFERENT

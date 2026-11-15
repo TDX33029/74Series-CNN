@@ -1,0 +1,9 @@
+INPUT   identical across 4 runs (784 bytes)
+C1OUT   identical across 4 runs (4608 bytes)
+P1OUT   identical across 4 runs (1152 bytes)
+C2OUT   identical across 4 runs (1600 bytes)
+P2OUT   identical across 4 runs (400 bytes)
+FC1OUT  identical across 4 runs (32 bytes)
+FC2LOG  identical across 4 runs (40 bytes)
+
+FREQUENCY INVARIANCE: PASS

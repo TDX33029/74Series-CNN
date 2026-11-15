@@ -1,0 +1,98 @@
+vec 12 (sim_v12_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 13 (sim_v13_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 14 (sim_v14_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 15 (sim_v15_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 16 (sim_v16_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 17 (sim_v17_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 18 (sim_v18_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 19 (sim_v19_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 20 (sim_v20_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 21 (sim_v21_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 22 (sim_v22_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 23 (sim_v23_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+
+TOTAL layer/logit errors: 0

@@ -1,0 +1,98 @@
+vec  0 (sim_v00_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908456000000 ns
+vec  1 (sim_v01_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908456000000 ns
+vec  2 (sim_v02_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908456000000 ns
+vec  3 (sim_v03_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908456000000 ns
+vec  4 (sim_v04_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908456000000 ns
+vec  5 (sim_v05_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908456000000 ns
+vec  6 (sim_v06_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908456000000 ns
+vec  7 (sim_v07_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908456000000 ns
+vec  8 (sim_v08_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908456000000 ns
+vec  9 (sim_v09_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908456000000 ns
+vec 10 (sim_v10_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908456000000 ns
+vec 11 (sim_v11_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908456000000 ns
+
+TOTAL layer/logit errors: 0

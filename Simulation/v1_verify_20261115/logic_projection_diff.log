@@ -1,0 +1,3 @@
+nets: old 7494 new 7494 | logic-only nets: old 4404 new 4404
+logic-projected nets identical: 4404 / 4404
+VERDICT: PASS (no logic pin moved)

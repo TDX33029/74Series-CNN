@@ -1,0 +1,17 @@
+vec  0: OK
+vec  1: OK
+vec  2: OK
+vec  3: OK
+vec  4: OK
+vec  5: OK
+vec  6: OK
+vec  7: OK
+vec  8: OK
+vec  9: OK
+vec 10: OK
+vec 11: OK
+vec 12: OK
+vec 13: OK
+vec 14: OK
+vec 15: OK
+SELFTEST PASS (independent model reproduces shipped vectors bit-exact)

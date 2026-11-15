@@ -1,0 +1,64 @@
+{
+  "vectors": [
+    {
+      "vec": 16,
+      "mnist_index": 101,
+      "label": 0,
+      "argmax": 0
+    },
+    {
+      "vec": 17,
+      "mnist_index": 107,
+      "label": 1,
+      "argmax": 1
+    },
+    {
+      "vec": 18,
+      "mnist_index": 106,
+      "label": 2,
+      "argmax": 2
+    },
+    {
+      "vec": 19,
+      "mnist_index": 112,
+      "label": 3,
+      "argmax": 3
+    },
+    {
+      "vec": 20,
+      "mnist_index": 103,
+      "label": 4,
+      "argmax": 4
+    },
+    {
+      "vec": 21,
+      "mnist_index": 102,
+      "label": 5,
+      "argmax": 5
+    },
+    {
+      "vec": 22,
+      "mnist_index": 100,
+      "label": 6,
+      "argmax": 6
+    },
+    {
+      "vec": 23,
+      "mnist_index": 111,
+      "label": 7,
+      "argmax": 7
+    },
+    {
+      "vec": 24,
+      "mnist_index": 110,
+      "label": 8,
+      "argmax": 8
+    },
+    {
+      "vec": 25,
+      "mnist_index": 104,
+      "label": 9,
+      "argmax": 9
+    }
+  ]
+}

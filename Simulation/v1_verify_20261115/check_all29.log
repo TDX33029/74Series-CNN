@@ -1,0 +1,234 @@
+vec  0 (sim_v00_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec  1 (sim_v01_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec  2 (sim_v02_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec  3 (sim_v03_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec  4 (sim_v04_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec  5 (sim_v05_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec  6 (sim_v06_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec  7 (sim_v07_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec  8 (sim_v08_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec  9 (sim_v09_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 10 (sim_v10_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 11 (sim_v11_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 12 (sim_v12_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 13 (sim_v13_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 14 (sim_v14_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 15 (sim_v15_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 16 (sim_v16_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 16 (freq_v16_32k): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 181778.500 ms
+vec 16 (freq_v16_250k): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 23267.648 ms
+vec 16 (freq_v16_1m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 5816.912 ms
+vec 17 (sim_v17_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 18 (sim_v18_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 19 (sim_v19_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 20 (sim_v20_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 21 (sim_v21_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 22 (sim_v22_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 23 (sim_v23_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 24 (sim_v24_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+vec 25 (sim_v25_2m): tb=PASS 1/1 pass, 0 errors
+    C1OUT   OK
+    P1OUT   OK
+    C2OUT   OK
+    P2OUT   OK
+    FC1OUT  OK
+    FC2LOG  OK
+    recognition 2908.456 ms
+
+TOTAL layer/logit errors: 0
