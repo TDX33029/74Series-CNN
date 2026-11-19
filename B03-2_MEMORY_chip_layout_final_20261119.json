@@ -1,0 +1,105 @@
+{
+ "board": "B03-2_MEMORY",
+ "pcbUuid": "7f08bbdec72478d8",
+ "date": "2026-11-19",
+ "rot": 90,
+ "coordinate_note": "component coords y-down=negative; board outline polyline sits detached at y-positive [100,3837]x[100,3443] (pre-existing doc state, verified by rendered canvas image + straddle DRC probes); all content incl. header and user arrays lives in y-negative region; chips placed in y-negative band right of header",
+ "positions": {
+  "U4031": {
+   "x": 2915,
+   "y": -1700,
+   "rot": 90,
+   "footprint": "PDIP-20",
+   "pads": "OVAL 57.5x71.9",
+   "role": "HCT541 buffer (IO)"
+  },
+  "U4049": {
+   "x": 2915,
+   "y": -2900,
+   "rot": 90,
+   "footprint": "PDIP-20",
+   "pads": "OVAL 57.5x71.9",
+   "role": "HCT541 buffer (IO)"
+  },
+  "U4009": {
+   "x": 4215,
+   "y": -1450,
+   "rot": 90,
+   "footprint": "PDIP-28",
+   "pads": "ELLIPSE 70.9 (1 RECT)",
+   "role": "AT28C256 SRAM"
+  },
+  "U4010": {
+   "x": 5515,
+   "y": -1490,
+   "rot": 90,
+   "footprint": "PDIP-28",
+   "pads": "ELLIPSE 70.9",
+   "role": "AT28C256 SRAM"
+  },
+  "U4011": {
+   "x": 6815,
+   "y": -1490,
+   "rot": 90,
+   "footprint": "PDIP-28",
+   "pads": "ELLIPSE 70.9",
+   "role": "AT28C256 SRAM"
+  },
+  "U4016": {
+   "x": 4215,
+   "y": -3040,
+   "rot": 90,
+   "footprint": "PDIP-28",
+   "pads": "ELLIPSE 70.9",
+   "role": "AT27C512 EPROM"
+  },
+  "U4017": {
+   "x": 5515,
+   "y": -3080,
+   "rot": 90,
+   "footprint": "PDIP-28",
+   "pads": "ELLIPSE 70.9",
+   "role": "AT27C512 EPROM"
+  },
+  "U4018": {
+   "x": 6815,
+   "y": -3080,
+   "rot": 90,
+   "footprint": "PDIP-28",
+   "pads": "ELLIPSE 70.9",
+   "role": "AT27C512 EPROM"
+  },
+  "U4014": {
+   "x": 8115,
+   "y": -1490,
+   "rot": 90,
+   "footprint": "PDIP-28",
+   "pads": "ELLIPSE 70.9",
+   "role": "AT27C512 EPROM"
+  }
+ },
+ "columns": {
+  "c1_x2915": [
+   "U4031",
+   "U4049"
+  ],
+  "c2_x4215": [
+   "U4009(top)",
+   "U4016(bottom)"
+  ],
+  "c3_x5515": [
+   "U4010(top)",
+   "U4017(bottom)"
+  ],
+  "c4_x6815": [
+   "U4011(top)",
+   "U4018(bottom)"
+  ],
+  "c5_x8115": [
+   "U4014(top)"
+  ]
+ },
+ "led_zone_note": "right of x=8422 (c5 right pad edge 8115+307) fully empty, far exceeds 200mil; user LED/Q/R arrays untouched at x<=2180 plus top/bottom strips",
+ "drc": "Clearance Error 0; Connection Error 484 (equals pad count, baseline unrouted state)",
+ "backup_file": "B03-2_MEMORY_chip_layout_backup_20261119.json"
+}

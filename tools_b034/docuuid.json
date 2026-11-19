@@ -1,0 +1,1 @@
+{"code": "const info = await eda.dmt_SelectControl.getCurrentDocumentInfo(); return JSON.stringify({uuid: info.uuid, type: info.documentType, proj: info.parentProjectUuid});"}

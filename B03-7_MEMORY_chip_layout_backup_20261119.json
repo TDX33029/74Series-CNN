@@ -1,0 +1,14 @@
+{
+  "board": "B03-7_MEMORY",
+  "pcbUuid": "046a237b7518687e",
+  "date": "2026-11-19",
+  "note": "Original coordinates of all U-designator chips before rot=90 vertical placement. Units mil. Board outline disconnected from content (outline y[100,3443] empty, all content y-negative) - chips placed in content gravity zone per spec section 6.4.",
+  "outline_polygon": ["R",100,100,3837,3443,0,0],
+  "chips": {
+    "U4043": {"x": 4450.6744, "y": -1388.2184, "rot": 0},
+    "U4045": {"x": 5536.6854, "y": -1388.2184, "rot": 0},
+    "U4046": {"x": 6622.6964, "y": -1388.2184, "rot": 0},
+    "U4051": {"x": 7708.7074, "y": -1388.2184, "rot": 0},
+    "U4052": {"x": 4450.6744, "y": -1779.7534, "rot": 0}
+  }
+}

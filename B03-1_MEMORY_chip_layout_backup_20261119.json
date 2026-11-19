@@ -1,0 +1,78 @@
+{
+ "board": "B03-1_MEMORY",
+ "pcbUuid": "d760df1fa8af5bfc",
+ "date": "2026-11-19",
+ "coordinate_note": "component coords: y down = negative; board outline polygon y[100,3443] DISCONNECTED from content (all pads y[-5157,-124]); content gravity area x[-927,8920] y[-5157,-124]",
+ "chips": [
+  {
+   "des": "U4001",
+   "x": 3653.2904,
+   "y": -784.8024,
+   "rot": 0,
+   "name": "={Manufacturer Part}"
+  },
+  {
+   "des": "U4002",
+   "x": 5143.1294,
+   "y": -784.8024,
+   "rot": 0,
+   "name": "={Manufacturer Part}"
+  },
+  {
+   "des": "U4003",
+   "x": 5638.8324,
+   "y": -1502.7954,
+   "rot": 0,
+   "name": "={Manufacturer Part}"
+  },
+  {
+   "des": "U4004",
+   "x": 6780.3454,
+   "y": -784.8024,
+   "rot": 0,
+   "name": "={Manufacturer Part}"
+  },
+  {
+   "des": "U4006",
+   "x": 8270.1844,
+   "y": -784.8024,
+   "rot": 0,
+   "name": "={Manufacturer Part}"
+  },
+  {
+   "des": "U4007",
+   "x": 3653.2904,
+   "y": -2358.2814,
+   "rot": 0,
+   "name": "={Manufacturer Part}"
+  },
+  {
+   "des": "U4020",
+   "x": 5638.8324,
+   "y": -2058.2814,
+   "rot": 0,
+   "name": "={Manufacturer Part}"
+  },
+  {
+   "des": "U4027",
+   "x": 3703.2904,
+   "y": -2905.2183999999997,
+   "rot": 0,
+   "name": "={Manufacturer Part}"
+  },
+  {
+   "des": "U4028",
+   "x": 8270.1844,
+   "y": -2158.2814,
+   "rot": 0,
+   "name": "={Manufacturer Part}"
+  },
+  {
+   "des": "U4034",
+   "x": 6780.3454,
+   "y": -3155.2183999999997,
+   "rot": 0,
+   "name": "={Manufacturer Part}"
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "board": "B03-1_MEMORY",
+ "pcbUuid": "d760df1fa8af5bfc",
+ "date": "2026-11-19",
+ "layout": {
+  "col_A_x3100": {
+   "U4028": [
+    3100,
+    -850
+   ],
+   "U4034": [
+    3100,
+    -1910
+   ]
+  },
+  "col_B_x3804": {
+   "U4020": [
+    3804,
+    -900
+   ],
+   "U4027": [
+    3804,
+    -1750
+   ]
+  },
+  "col_C_x4508": {
+   "U4001": [
+    4508,
+    -1500
+   ],
+   "U4004": [
+    4508,
+    -2880
+   ]
+  },
+  "col_D_x5212": {
+   "U4002": [
+    5212,
+    -1500
+   ],
+   "U4006": [
+    5212,
+    -2880
+   ]
+  },
+  "col_E_x5916": {
+   "U4003": [
+    5916,
+    -1500
+   ],
+   "U4007": [
+    5916,
+    -2880
+   ]
+  }
+ },
+ "rot": 90,
+ "led_zone": "x > 6463 free (>=200mil right of U4003/U4007 right pad edge 6263.4); user LED/Q/R wall preserved at x<=1490 and top strip R4001-06/RP1/LEDP1 x[3636,4843] y[-190,-92]",
+ "pad_shapes": {
+  "PDIP-28 U4001/02/03/04/06/07": "ELLIPSE 70.9 x27 + RECT 70.9 x1 each; rot90 halfLen=650 halfWid=312",
+  "DIP-16 U4020": "OVAL 57.5x71.9 x16; halfLen=350 halfWid=150",
+  "DIP-16 U4027": "ELLIPSE 63 x15 + RECT 63 x1; halfLen=350 halfWid=144.9",
+  "PDIP-20 U4028": "OVAL 57.6x71.9 x20; halfLen=450 halfWid=156.3",
+  "PDIP-20 U4034": "OVAL 57.5x71.9 x20; halfLen=450 halfWid=150"
+ },
+ "drc": {
+  "clearance_error": 0,
+  "connection_error": 491,
+  "note": "491 connection errors are unrouted nets, normal state"
+ },
+ "outline_disconnect": {
+  "outline_poly_layer11": "x[100,3837] y[100,3443] (y positive)",
+  "all_498_pads": "x[-926.9,8920.2] y[-5157.4,-124.5] (y negative)",
+  "verdict": "DISCONNECTED - same as B03-2; chips placed in content gravity area per coordinator instruction"
+ }
+}

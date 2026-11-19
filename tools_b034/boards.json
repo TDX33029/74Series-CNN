@@ -1,0 +1,1 @@
+{"code": "const bl = await eda.dmt_Board.getAllBoardsInfo(); return JSON.stringify(bl.map(b => ({name: b.boardName, pcbUuid: (b.pcb && b.pcb.uuid) ? b.pcb.uuid : null})));"}

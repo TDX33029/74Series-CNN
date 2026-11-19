@@ -1,0 +1,1 @@
+{"code": "const bl = await eda.dmt_Board.getAllBoardsInfo(); const map = {}; for (const b of bl) map[b.pcb ? b.pcb.uuid : '?'] = b.name; return JSON.stringify(map);"}
