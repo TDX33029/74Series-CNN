@@ -1,0 +1,1 @@
+[{"rule":"TH Pad to TH Pad","o1":{"typeName":"TH Pad","suffix":"($3N448): LED_POOL1_READ_OE_1"},"o2":{"typeName":"TH Pad","suffix":"(GND): LEDP1_1"},"d":null},{"rule":"TH Pad to TH Pad","o1":{"typeName":"TH Pad","suffix":"($3N449): LED_POOL1_READ_OE_2"},"o2":{"typeName":"TH Pad","suffix":"($2N1344): LEDP1_2"},"d":null}]

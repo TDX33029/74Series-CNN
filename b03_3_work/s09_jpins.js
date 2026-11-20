@@ -1,0 +1,10 @@
+const TARGET = '7ce97899ea288f46';
+const doc = await eda.dmt_SelectControl.getCurrentDocumentInfo();
+if (doc.uuid !== TARGET) return 'ABORT: wrong document ' + doc.uuid;
+const comps = await eda.pcb_PrimitiveComponent.getAll();
+const j = comps.find(c => c.getState_Designator() === 'J20203');
+const a = j.toAsync();
+const pins = await a.getAllPins();
+const pl = pins.map(p => ({n: p.padNumber, x: Math.round(p.x*100)/100, y: Math.round(p.y*100)/100, net: p.net}));
+pl.sort((p,q) => parseInt(p.n) - parseInt(q.n));
+return JSON.stringify(pl.slice(0, 8));

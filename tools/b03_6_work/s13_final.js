@@ -1,0 +1,10 @@
+const TARGET = 'e4b2cb67c3463844';
+const doc = await eda.dmt_SelectControl.getCurrentDocumentInfo();
+if (doc.uuid !== TARGET) return 'ABORT: wrong document ' + doc.uuid;
+const polys = await eda.pcb_PrimitivePolyline.getAll();
+const outline = polys.map(p => p.polygon);
+const comps = await eda.pcb_PrimitiveComponent.getAll();
+const J = comps.find(c => c.getState_Designator() === 'J20206');
+const header = J ? {x: J.getState_X(), y: J.getState_Y(), rot: J.getState_Rotation(), layer: J.getState_Layer()} : null;
+await eda.pcb_Document.zoomToBoardOutline();
+return JSON.stringify({outline, header});

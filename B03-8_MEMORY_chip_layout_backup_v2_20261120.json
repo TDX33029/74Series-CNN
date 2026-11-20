@@ -1,0 +1,32 @@
+{
+ "board": "B03-8_MEMORY",
+ "pcb_uuid": "c03b63553aa7180b",
+ "date": "2026-11-20",
+ "note": "chip original coords before task-A placement v2 (all chips were in negative-x region outside outline)",
+ "chips": {
+  "U4029": {
+   "x": -3713.1205,
+   "y": -705.8420000000001,
+   "layer": 1,
+   "rot": 90
+  },
+  "U4035": {
+   "x": -4502.54,
+   "y": -711.3530000000001,
+   "layer": 1,
+   "rot": 90
+  },
+  "U4039": {
+   "x": -4894.075000000001,
+   "y": -711.3530000000001,
+   "layer": 1,
+   "rot": 90
+  },
+  "U4053": {
+   "x": -4111.005,
+   "y": -711.3530000000001,
+   "layer": 1,
+   "rot": 90
+  }
+ }
+}

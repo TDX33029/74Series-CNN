@@ -1,0 +1,49 @@
+{
+ "board": "B03-6_MEMORY",
+ "date": "2026-11-20",
+ "note": "original coords before placement, all comps were outside outline at negative x",
+ "chips": [
+  {
+   "designator": "U4037",
+   "x": -2389.0750000000003,
+   "y": -626.3530000000001,
+   "rotation": 90,
+   "layer": 1
+  },
+  {
+   "designator": "U4038",
+   "x": -1606.0049999999983,
+   "y": -626.3530000000001,
+   "rotation": 90,
+   "layer": 1
+  },
+  {
+   "designator": "U4041",
+   "x": -1214.4699999999978,
+   "y": -626.3530000000001,
+   "rotation": 90,
+   "layer": 1
+  },
+  {
+   "designator": "U4042",
+   "x": -1997.539999999999,
+   "y": -626.3530000000001,
+   "rotation": 90,
+   "layer": 1
+  },
+  {
+   "designator": "U4044",
+   "x": -822.9349999999971,
+   "y": -626.3529999999997,
+   "rotation": 90,
+   "layer": 1
+  },
+  {
+   "designator": "U4056",
+   "x": -427.95499999999663,
+   "y": -486.02000000000004,
+   "rotation": 90,
+   "layer": 1
+  }
+ ]
+}

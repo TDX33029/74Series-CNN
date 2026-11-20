@@ -1,0 +1,979 @@
+{
+ "subsInfo": [
+  {
+   "name": "Board Outline to TH Pad",
+   "n": 10,
+   "keys": [
+    "name",
+    "list",
+    "count",
+    "title",
+    "visible"
+   ]
+  },
+  {
+   "name": "Board Outline to Hole",
+   "n": 6,
+   "keys": [
+    "name",
+    "list",
+    "count",
+    "title",
+    "visible"
+   ]
+  },
+  {
+   "name": "TH Pad to TH Pad",
+   "n": 89,
+   "keys": [
+    "name",
+    "list",
+    "count",
+    "title",
+    "visible"
+   ]
+  },
+  {
+   "name": "Hole to Hole",
+   "n": 69,
+   "keys": [
+    "name",
+    "list",
+    "count",
+    "title",
+    "visible"
+   ]
+  },
+  {
+   "name": "Hole to TH Pad",
+   "n": 176,
+   "keys": [
+    "name",
+    "list",
+    "count",
+    "title",
+    "visible"
+   ]
+  }
+ ],
+ "raw": [
+  {
+   "sub": "Board Outline to TH Pad",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "Board Outline to TH Pad",
+    "ruleName": "copperThickness1oz",
+    "ruleTypeName": "Safe Spacing",
+    "obj1": {
+     "typeName": "Board Outline",
+     "suffix": ": e2"
+    },
+    "obj2": {
+     "typeName": "TH Pad",
+     "suffix": "(+5V): U4001_28"
+    },
+    "layer": "Top Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0mm",
+      "shouldBe": ">= 0.3mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2521",
+      "position": {
+       "x": 13.800099999999993,
+       "y": -322.83465
+      },
+      "name": "copperThickness1oz",
+      "obj1": "15b76896ef6851c1",
+      "obj1Type": "Board Outline",
+      "obj2": "bb5b5706d5c22b9ae6",
+      "obj2Type": "TH Pad",
+      "minDistance": 0,
+      "clearance": 1.1800000000000002,
+      "errorType": "Safe Spacing",
+      "layerIds": [
+       1
+      ],
+      "obj1Suffix": ": e2",
+      "obj2Suffix": "(+5V): U4001_28"
+     }
+    },
+    "objs": [
+     "15b76896ef6851c1",
+     "bb5b5706d5c22b9ae6"
+    ],
+    "globalIndex": "err2521",
+    "pos": {
+     "x": 13.800099999999993,
+     "y": -322.83465
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to TH Pad"
+   }
+  },
+  {
+   "sub": "Board Outline to TH Pad",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "Board Outline to TH Pad",
+    "ruleName": "copperThickness1oz",
+    "ruleTypeName": "Safe Spacing",
+    "obj1": {
+     "typeName": "Board Outline",
+     "suffix": ": e2"
+    },
+    "obj2": {
+     "typeName": "TH Pad",
+     "suffix": "(+5V): U4003_28"
+    },
+    "layer": "Top Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0mm",
+      "shouldBe": ">= 0.3mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2522",
+      "position": {
+       "x": 58.80009999999999,
+       "y": -322.83465
+      },
+      "name": "copperThickness1oz",
+      "obj1": "15b76896ef6851c1",
+      "obj1Type": "Board Outline",
+      "obj2": "fbf5326a99c9a839e6",
+      "obj2Type": "TH Pad",
+      "minDistance": 0,
+      "clearance": 1.1800000000000002,
+      "errorType": "Safe Spacing",
+      "layerIds": [
+       1
+      ],
+      "obj1Suffix": ": e2",
+      "obj2Suffix": "(+5V): U4003_28"
+     }
+    },
+    "objs": [
+     "15b76896ef6851c1",
+     "fbf5326a99c9a839e6"
+    ],
+    "globalIndex": "err2522",
+    "pos": {
+     "x": 58.80009999999999,
+     "y": -322.83465
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to TH Pad"
+   }
+  },
+  {
+   "sub": "Board Outline to TH Pad",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "Board Outline to TH Pad",
+    "ruleName": "copperThickness1oz",
+    "ruleTypeName": "Safe Spacing",
+    "obj1": {
+     "typeName": "Board Outline",
+     "suffix": ": e2"
+    },
+    "obj2": {
+     "typeName": "TH Pad",
+     "suffix": "(UNCONNECTED-(U4001-NC-PAD1)): U4001_1"
+    },
+    "layer": "Top Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0mm",
+      "shouldBe": ">= 0.3mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2523",
+      "position": {
+       "x": 72.6568,
+       "y": -322.83465
+      },
+      "name": "copperThickness1oz",
+      "obj1": "15b76896ef6851c1",
+      "obj1Type": "Board Outline",
+      "obj2": "bb5b5706d5c22b9ae33",
+      "obj2Type": "TH Pad",
+      "minDistance": 0,
+      "clearance": 1.1800000000000002,
+      "errorType": "Safe Spacing",
+      "layerIds": [
+       1
+      ],
+      "obj1Suffix": ": e2",
+      "obj2Suffix": "(UNCONNECTED-(U4001-NC-PAD1)): U4001_1"
+     }
+    },
+    "objs": [
+     "15b76896ef6851c1",
+     "bb5b5706d5c22b9ae33"
+    ],
+    "globalIndex": "err2523",
+    "pos": {
+     "x": 72.6568,
+     "y": -322.83465
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to TH Pad"
+   }
+  },
+  {
+   "sub": "Board Outline to Hole",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "Board Outline to Hole",
+    "ruleName": "copperThickness1oz",
+    "ruleTypeName": "Safe Spacing",
+    "obj1": {
+     "typeName": "Board Outline",
+     "suffix": ": e2"
+    },
+    "obj2": {
+     "typeName": "Hole",
+     "suffix": "(/B03_S04_MEMORIES/MEM_D4): U4002_16"
+    },
+    "layer": "Multi-Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0.162mm",
+      "shouldBe": ">= 0.176mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2526",
+      "position": {
+       "x": 13.8001,
+       "y": -0.31889999999999996
+      },
+      "name": "copperThickness1oz",
+      "obj1": "15b76896ef6851c1",
+      "obj1Type": "Board Outline",
+      "obj2": "df77a2d995ce28f9e18",
+      "obj2Type": "Hole",
+      "minDistance": 0.6377999999999999,
+      "clearance": 0.6929000000000001,
+      "errorType": "Safe Spacing",
+      "layerIds": [
+       12
+      ],
+      "obj1Suffix": ": e2",
+      "obj2Suffix": "(/B03_S04_MEMORIES/MEM_D4): U4002_16"
+     }
+    },
+    "objs": [
+     "15b76896ef6851c1",
+     "df77a2d995ce28f9e18"
+    ],
+    "globalIndex": "err2526",
+    "pos": {
+     "x": 13.8001,
+     "y": -0.31889999999999996
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to Hole"
+   }
+  },
+  {
+   "sub": "Board Outline to Hole",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "Board Outline to Hole",
+    "ruleName": "copperThickness1oz",
+    "ruleTypeName": "Safe Spacing",
+    "obj1": {
+     "typeName": "Board Outline",
+     "suffix": ": e2"
+    },
+    "obj2": {
+     "typeName": "Hole",
+     "suffix": "(/B03_S04_MEMORIES/MEM_D4): U4004_16"
+    },
+    "layer": "Multi-Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0.162mm",
+      "shouldBe": ">= 0.176mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2528",
+      "position": {
+       "x": 58.8001,
+       "y": -0.31889999999999996
+      },
+      "name": "copperThickness1oz",
+      "obj1": "15b76896ef6851c1",
+      "obj1Type": "Board Outline",
+      "obj2": "34436dc692dc6d32e18",
+      "obj2Type": "Hole",
+      "minDistance": 0.6377999999999999,
+      "clearance": 0.6929000000000001,
+      "errorType": "Safe Spacing",
+      "layerIds": [
+       12
+      ],
+      "obj1Suffix": ": e2",
+      "obj2Suffix": "(/B03_S04_MEMORIES/MEM_D4): U4004_16"
+     }
+    },
+    "objs": [
+     "15b76896ef6851c1",
+     "34436dc692dc6d32e18"
+    ],
+    "globalIndex": "err2528",
+    "pos": {
+     "x": 58.8001,
+     "y": -0.31889999999999996
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to Hole"
+   }
+  },
+  {
+   "sub": "Board Outline to Hole",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "Board Outline to Hole",
+    "ruleName": "copperThickness1oz",
+    "ruleTypeName": "Safe Spacing",
+    "obj1": {
+     "typeName": "Board Outline",
+     "suffix": ": e2"
+    },
+    "obj2": {
+     "typeName": "Hole",
+     "suffix": "(/B03_S04_MEMORIES/MEM_D2): U4002_13"
+    },
+    "layer": "Multi-Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0.162mm",
+      "shouldBe": ">= 0.176mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2530",
+      "position": {
+       "x": 76.19810000000001,
+       "y": -0.31889999999999996
+      },
+      "name": "copperThickness1oz",
+      "obj1": "15b76896ef6851c1",
+      "obj1Type": "Board Outline",
+      "obj2": "df77a2d995ce28f9e21",
+      "obj2Type": "Hole",
+      "minDistance": 0.6377999999999999,
+      "clearance": 0.6929000000000001,
+      "errorType": "Safe Spacing",
+      "layerIds": [
+       12
+      ],
+      "obj1Suffix": ": e2",
+      "obj2Suffix": "(/B03_S04_MEMORIES/MEM_D2): U4002_13"
+     }
+    },
+    "objs": [
+     "15b76896ef6851c1",
+     "df77a2d995ce28f9e21"
+    ],
+    "globalIndex": "err2530",
+    "pos": {
+     "x": 76.19810000000001,
+     "y": -0.31889999999999996
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to Hole"
+   }
+  },
+  {
+   "sub": "TH Pad to TH Pad",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "TH Pad to TH Pad",
+    "ruleName": "copperThickness1oz",
+    "ruleTypeName": "Safe Spacing",
+    "obj1": {
+     "typeName": "TH Pad",
+     "suffix": "(GND): J20201_1"
+    },
+    "obj2": {
+     "typeName": "TH Pad",
+     "suffix": "(+5V): U4001_28"
+    },
+    "layer": "Top Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0mm",
+      "shouldBe": ">= 0.152mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2671",
+      "position": {
+       "x": 17.65339999999999,
+       "y": -313.8504
+      },
+      "name": "copperThickness1oz",
+      "obj1": "f1b700a698e2e8bee133",
+      "obj1Type": "TH Pad",
+      "obj2": "bb5b5706d5c22b9ae6",
+      "obj2Type": "TH Pad",
+      "minDistance": 0,
+      "clearance": 0.59843,
+      "errorType": "Safe Spacing",
+      "layerIds": [
+       1
+      ],
+      "obj1Suffix": "(GND): J20201_1",
+      "obj2Suffix": "(+5V): U4001_28"
+     }
+    },
+    "objs": [
+     "f1b700a698e2e8bee133",
+     "bb5b5706d5c22b9ae6"
+    ],
+    "globalIndex": "err2671",
+    "pos": {
+     "x": 17.65339999999999,
+     "y": -313.8504
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|TH Pad to TH Pad"
+   }
+  },
+  {
+   "sub": "TH Pad to TH Pad",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "TH Pad to TH Pad",
+    "ruleName": "copperThickness1oz",
+    "ruleTypeName": "Safe Spacing",
+    "obj1": {
+     "typeName": "TH Pad",
+     "suffix": "(GND): J20201_63"
+    },
+    "obj2": {
+     "typeName": "TH Pad",
+     "suffix": "(/B03_S04_MEMORIES/MEM_D4): U4002_16"
+    },
+    "layer": "Top Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0mm",
+      "shouldBe": ">= 0.152mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2540",
+      "position": {
+       "x": 14.205855177770394,
+       "y": -5.319595128028515
+      },
+      "name": "copperThickness1oz",
+      "obj1": "f1b700a698e2e8bee71",
+      "obj1Type": "TH Pad",
+      "obj2": "df77a2d995ce28f9e18",
+      "obj2Type": "TH Pad",
+      "minDistance": 0,
+      "clearance": 0.59843,
+      "errorType": "Safe Spacing",
+      "layerIds": [
+       1
+      ],
+      "obj1Suffix": "(GND): J20201_63",
+      "obj2Suffix": "(/B03_S04_MEMORIES/MEM_D4): U4002_16"
+     }
+    },
+    "objs": [
+     "f1b700a698e2e8bee71",
+     "df77a2d995ce28f9e18"
+    ],
+    "globalIndex": "err2540",
+    "pos": {
+     "x": 14.205855177770394,
+     "y": -5.319595128028515
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|TH Pad to TH Pad"
+   }
+  },
+  {
+   "sub": "TH Pad to TH Pad",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "TH Pad to TH Pad",
+    "ruleName": "copperThickness1oz",
+    "ruleTypeName": "Safe Spacing",
+    "obj1": {
+     "typeName": "TH Pad",
+     "suffix": "(GND): J20201_63"
+    },
+    "obj2": {
+     "typeName": "TH Pad",
+     "suffix": "(/B03_S04_MEMORIES/MEM_D5): U4002_17"
+    },
+    "layer": "Top Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0mm",
+      "shouldBe": ">= 0.152mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2537",
+      "position": {
+       "x": 14.175213456143286,
+       "y": -9.783363245877243
+      },
+      "name": "copperThickness1oz",
+      "obj1": "f1b700a698e2e8bee71",
+      "obj1Type": "TH Pad",
+      "obj2": "df77a2d995ce28f9e17",
+      "obj2Type": "TH Pad",
+      "minDistance": 0,
+      "clearance": 0.59843,
+      "errorType": "Safe Spacing",
+      "layerIds": [
+       1
+      ],
+      "obj1Suffix": "(GND): J20201_63",
+      "obj2Suffix": "(/B03_S04_MEMORIES/MEM_D5): U4002_17"
+     }
+    },
+    "objs": [
+     "f1b700a698e2e8bee71",
+     "df77a2d995ce28f9e17"
+    ],
+    "globalIndex": "err2537",
+    "pos": {
+     "x": 14.175213456143286,
+     "y": -9.783363245877243
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|TH Pad to TH Pad"
+   }
+  },
+  {
+   "sub": "Hole to Hole",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "Hole to Hole",
+    "ruleName": "otherClearance",
+    "ruleTypeName": "Other Spacing",
+    "obj1": {
+     "typeName": "Hole",
+     "suffix": "(GND): J20201_1"
+    },
+    "obj2": {
+     "typeName": "Hole",
+     "suffix": "(+5V): U4001_28"
+    },
+    "layer": "Multi-Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0mm",
+      "shouldBe": ">= 0.3mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2672",
+      "position": {
+       "x": 12.338499999999991,
+       "y": -316.9997
+      },
+      "name": "otherClearance",
+      "obj1": "f1b700a698e2e8bee133",
+      "obj1Type": "Hole",
+      "obj2": "bb5b5706d5c22b9ae6",
+      "obj2Type": "Hole",
+      "minDistance": 0,
+      "clearance": 1.1811,
+      "errorType": "Other Spacing",
+      "layerIds": [
+       12
+      ],
+      "line": {
+       "_start": {
+        "x": 12.338499999999991,
+        "y": -316.9997
+       },
+       "_end": {
+        "x": 12.338499999999991,
+        "y": -316.9997
+       }
+      },
+      "obj1Suffix": "(GND): J20201_1",
+      "obj2Suffix": "(+5V): U4001_28"
+     }
+    },
+    "objs": [
+     "f1b700a698e2e8bee133",
+     "bb5b5706d5c22b9ae6"
+    ],
+    "globalIndex": "err2672",
+    "pos": {
+     "x": 12.338499999999991,
+     "y": -316.9997
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Hole to Hole"
+   }
+  },
+  {
+   "sub": "Hole to Hole",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "Hole to Hole",
+    "ruleName": "otherClearance",
+    "ruleTypeName": "Other Spacing",
+    "obj1": {
+     "typeName": "Hole",
+     "suffix": "(GND): J20201_63"
+    },
+    "obj2": {
+     "typeName": "Hole",
+     "suffix": "(/B03_S04_MEMORIES/MEM_D4): U4002_16"
+    },
+    "layer": "Multi-Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0mm",
+      "shouldBe": ">= 0.3mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2541",
+      "position": {
+       "x": 14.168909803556542,
+       "y": -5.107928795777467
+      },
+      "name": "otherClearance",
+      "obj1": "f1b700a698e2e8bee71",
+      "obj1Type": "Hole",
+      "obj2": "df77a2d995ce28f9e18",
+      "obj2Type": "Hole",
+      "minDistance": 0,
+      "clearance": 1.1811,
+      "errorType": "Other Spacing",
+      "layerIds": [
+       12
+      ],
+      "line": {
+       "_start": {
+        "x": 13.183575555118045,
+        "y": -5.280325952328525
+       },
+       "_end": {
+        "x": 15.154244051995036,
+        "y": -4.93553163922641
+       }
+      },
+      "obj1Suffix": "(GND): J20201_63",
+      "obj2Suffix": "(/B03_S04_MEMORIES/MEM_D4): U4002_16"
+     }
+    },
+    "objs": [
+     "f1b700a698e2e8bee71",
+     "df77a2d995ce28f9e18"
+    ],
+    "globalIndex": "err2541",
+    "pos": {
+     "x": 14.168909803556542,
+     "y": -5.107928795777467
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Hole to Hole"
+   }
+  },
+  {
+   "sub": "Hole to Hole",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "Hole to Hole",
+    "ruleName": "otherClearance",
+    "ruleTypeName": "Other Spacing",
+    "obj1": {
+     "typeName": "Hole",
+     "suffix": "(MEM_SEL4): J20201_61"
+    },
+    "obj2": {
+     "typeName": "Hole",
+     "suffix": "(/B03_S04_MEMORIES/MEM_D5): U4002_17"
+    },
+    "layer": "Multi-Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0mm",
+      "shouldBe": ">= 0.3mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2548",
+      "position": {
+       "x": 14.168909803556538,
+       "y": -15.107928795777468
+      },
+      "name": "otherClearance",
+      "obj1": "f1b700a698e2e8bee73",
+      "obj1Type": "Hole",
+      "obj2": "df77a2d995ce28f9e17",
+      "obj2Type": "Hole",
+      "minDistance": 0,
+      "clearance": 1.1811,
+      "errorType": "Other Spacing",
+      "layerIds": [
+       12
+      ],
+      "line": {
+       "_start": {
+        "x": 13.183575555118045,
+        "y": -15.280325952328525
+       },
+       "_end": {
+        "x": 15.15424405199503,
+        "y": -14.93553163922641
+       }
+      },
+      "obj1Suffix": "(MEM_SEL4): J20201_61",
+      "obj2Suffix": "(/B03_S04_MEMORIES/MEM_D5): U4002_17"
+     }
+    },
+    "objs": [
+     "f1b700a698e2e8bee73",
+     "df77a2d995ce28f9e17"
+    ],
+    "globalIndex": "err2548",
+    "pos": {
+     "x": 14.168909803556538,
+     "y": -15.107928795777468
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Hole to Hole"
+   }
+  },
+  {
+   "sub": "Hole to TH Pad",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "Hole to TH Pad",
+    "ruleName": "copperThickness1oz",
+    "ruleTypeName": "Safe Spacing",
+    "obj1": {
+     "typeName": "TH Pad",
+     "suffix": "(GND): J20201_1"
+    },
+    "obj2": {
+     "typeName": "Hole",
+     "suffix": "(+5V): U4001_28"
+    },
+    "layer": "Top Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0mm",
+      "shouldBe": ">= 0.176mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2673",
+      "position": {
+       "x": 13.800099999999993,
+       "y": -317.0378
+      },
+      "name": "copperThickness1oz",
+      "obj1": "f1b700a698e2e8bee133",
+      "obj1Type": "TH Pad",
+      "obj2": "bb5b5706d5c22b9ae6",
+      "obj2Type": "Hole",
+      "minDistance": 0,
+      "clearance": 0.6929000000000001,
+      "errorType": "Safe Spacing",
+      "layerIds": [
+       1,
+       12
+      ],
+      "obj1Suffix": "(GND): J20201_1",
+      "obj2Suffix": "(+5V): U4001_28"
+     }
+    },
+    "objs": [
+     "f1b700a698e2e8bee133",
+     "bb5b5706d5c22b9ae6"
+    ],
+    "globalIndex": "err2673",
+    "pos": {
+     "x": 13.800099999999993,
+     "y": -317.0378
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Hole to TH Pad"
+   }
+  },
+  {
+   "sub": "Hole to TH Pad",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "Hole to TH Pad",
+    "ruleName": "copperThickness1oz",
+    "ruleTypeName": "Safe Spacing",
+    "obj1": {
+     "typeName": "Hole",
+     "suffix": "(GND): J20201_1"
+    },
+    "obj2": {
+     "typeName": "TH Pad",
+     "suffix": "(+5V): U4001_28"
+    },
+    "layer": "Top Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0mm",
+      "shouldBe": ">= 0.176mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2674",
+      "position": {
+       "x": 12.338499999999991,
+       "y": -316.9997
+      },
+      "name": "copperThickness1oz",
+      "obj1": "f1b700a698e2e8bee133",
+      "obj1Type": "Hole",
+      "obj2": "bb5b5706d5c22b9ae6",
+      "obj2Type": "TH Pad",
+      "minDistance": 0,
+      "clearance": 0.6929000000000001,
+      "errorType": "Safe Spacing",
+      "layerIds": [
+       12,
+       1
+      ],
+      "obj1Suffix": "(GND): J20201_1",
+      "obj2Suffix": "(+5V): U4001_28"
+     }
+    },
+    "objs": [
+     "f1b700a698e2e8bee133",
+     "bb5b5706d5c22b9ae6"
+    ],
+    "globalIndex": "err2674",
+    "pos": {
+     "x": 12.338499999999991,
+     "y": -316.9997
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Hole to TH Pad"
+   }
+  },
+  {
+   "sub": "Hole to TH Pad",
+   "e": {
+    "visible": true,
+    "errorType": "Clearance Error",
+    "errorObjType": "Hole to TH Pad",
+    "ruleName": "copperThickness1oz",
+    "ruleTypeName": "Safe Spacing",
+    "obj1": {
+     "typeName": "TH Pad",
+     "suffix": "(GND): J20201_63"
+    },
+    "obj2": {
+     "typeName": "Hole",
+     "suffix": "(/B03_S04_MEMORIES/MEM_D4): U4002_16"
+    },
+    "layer": "Top Layer",
+    "explanation": {
+     "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+     "param": {
+      "minDistance": "0mm",
+      "shouldBe": ">= 0.176mm",
+      "obj1": "Object 1",
+      "obj2": "object 2",
+      "type": "ClearanceError"
+     },
+     "errData": {
+      "globalIndex": "err2542",
+      "position": {
+       "x": 14.057870883672306,
+       "y": -4.473608024423623
+      },
+      "name": "copperThickness1oz",
+      "obj1": "f1b700a698e2e8bee71",
+      "obj1Type": "TH Pad",
+      "obj2": "df77a2d995ce28f9e18",
+      "obj2Type": "Hole",
+      "minDistance": 0,
+      "clearance": 0.6929000000000001,
+      "errorType": "Safe Spacing",
+      "layerIds": [
+       1,
+       12
+      ],
+      "obj1Suffix": "(GND): J20201_63",
+      "obj2Suffix": "(/B03_S04_MEMORIES/MEM_D4): U4002_16"
+     }
+    },
+    "objs": [
+     "f1b700a698e2e8bee71",
+     "df77a2d995ce28f9e18"
+    ],
+    "globalIndex": "err2542",
+    "pos": {
+     "x": 14.057870883672306,
+     "y": -4.473608024423623
+    },
+    "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Hole to TH Pad"
+   }
+  }
+ ]
+}

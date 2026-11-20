@@ -1,0 +1,10 @@
+const TARGET = '822ec5745398cfb8';
+const doc = await eda.dmt_SelectControl.getCurrentDocumentInfo();
+if (doc.uuid !== TARGET) return 'ABORT: wrong document ' + doc.uuid;
+const comps = await eda.pcb_PrimitiveComponent.getAll();
+const c = comps.find(k => k.getState_Designator() === 'LEDP1');
+if (!c) return 'LEDP1 not found';
+const a = c.toAsync();
+a.setState_X(3822.5); a.setState_Y(-3146); a.setState_Rotation(0); a.setState_Layer(1);
+await a.done();
+return 'LEDP1 placed';

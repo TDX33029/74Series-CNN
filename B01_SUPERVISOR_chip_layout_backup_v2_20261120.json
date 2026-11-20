@@ -1,0 +1,278 @@
+{
+ "board": "B01_SUPERVISOR",
+ "pcb_uuid": "564310954c577de3",
+ "date": "2026-11-20",
+ "coordinate_system": "y-down-negative (B04-1 style); outline ['R',0,0,3937.0079,3228.3465,0,0] => x[0,3937.0] y[-3228.3,0]",
+ "outline_polygon": [
+  "R",
+  0,
+  0,
+  3937.0079,
+  3228.3465,
+  0,
+  0
+ ],
+ "j20001": {
+  "center": [
+   100,
+   -1615
+  ],
+  "rot": 90,
+  "pads_x": [
+   50,
+   150
+  ],
+  "pads_y": [
+   -3165,
+   -65
+  ],
+  "npins": 64,
+  "note": "left-edge vertical header spanning full board height; right pad column x=150, bbox right ~205"
+ },
+ "note": "Backup of chip positions BEFORE v2 re-placement. Chips were rot=90 but swept OFF-BOARD by the user (x[-4778.7,-1630], y[345.45,3175.45]) while redrawing outline+header to B04-1 standard. This is exactly (old_final_x-5035, old_final_y-10) vs B01_SUPERVISOR_chip_layout_final_20261119.json. Old layout void; positions NOT reused.",
+ "pre_placed_parts_offboard": {
+  "Q": "24 pcs: Q1001-Q1007 x[-3165,-2920] y[2260,3201]; Q1008-Q1024 grid x[-2446.3,-1114.0] y[-2902.8,-1241.0]",
+  "R": "48 pcs x[-4532,-889] y[-3008,3240]",
+  "LED": "25 pcs x[-3271.3,1622.9] y[-2695.1,2901.4]",
+  "RP": "RP1 (1622.86, 160.83) rot=0",
+  "inside_outline": [
+   "J20001"
+  ]
+ },
+ "chips": {
+  "U1001": {
+   "id": "e2161b0898c259df",
+   "x": -4235.299999999999,
+   "y": 725.45,
+   "rot": 90,
+   "footprint": "PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL",
+   "parttype": "AT27C512R-70PU",
+   "npins": 28
+  },
+  "U1002": {
+   "id": "166aaf7f24349d5b",
+   "x": -4235.299999999999,
+   "y": 2105.45,
+   "rot": 90,
+   "footprint": "PDIP-28_L37.0-W13.5-P2.54-LS15.6-BL",
+   "parttype": "AT27C512R-70PU",
+   "npins": 28
+  },
+  "U1003": {
+   "id": "48e296a9c297ad0f",
+   "x": -3691.9,
+   "y": 525.45,
+   "rot": 90,
+   "footprint": "PDIP-20_L25.4-W6.4-P2.54-LS7.6-BL",
+   "parttype": "SN74HCT273N",
+   "npins": 20
+  },
+  "U1004": {
+   "id": "1ad92b0f78a9019a",
+   "x": -3691.9,
+   "y": 1505.4500000000003,
+   "rot": 90,
+   "footprint": "PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL",
+   "parttype": "CD74HCT574EE4",
+   "npins": 20
+  },
+  "U1005": {
+   "id": "eaac8487b6ca6ef7",
+   "x": -3691.9,
+   "y": 2485.45,
+   "rot": 90,
+   "footprint": "PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL",
+   "parttype": "CD74HCT574EE4",
+   "npins": 20
+  },
+  "U1006": {
+   "id": "8487280fa1b334ba",
+   "x": -3299.3,
+   "y": 1405.4500000000003,
+   "rot": 90,
+   "footprint": "PDIP-16_L19.3-W6.4-P2.54-LS7.9-BL",
+   "parttype": "CD74HC238E",
+   "npins": 16
+  },
+  "U1007": {
+   "id": "d6798627dc4da16d",
+   "x": -3314.3,
+   "y": 2185.45,
+   "rot": 90,
+   "footprint": "DIP-16_L20.4-W5.8-P2.54-LS7.6-BL",
+   "parttype": "SN74HC157N",
+   "npins": 16
+  },
+  "U1008": {
+   "id": "0007ffb9dcaf4229",
+   "x": -4778.7,
+   "y": 2485.45,
+   "rot": 90,
+   "footprint": "PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL",
+   "parttype": "SN74HCT541N",
+   "npins": 20
+  },
+  "U1009": {
+   "id": "b06986b1732e7efb",
+   "x": -4778.7,
+   "y": 1505.4500000000003,
+   "rot": 90,
+   "footprint": "PDIP-20_L26.2-W7.6-P2.54-LS7.9-BL",
+   "parttype": "SN74HCT541N",
+   "npins": 20
+  },
+  "U1010": {
+   "id": "8edae204b49019ee",
+   "x": -4778.7,
+   "y": 525.45,
+   "rot": 90,
+   "footprint": "PDIP-20_L25.9-W6.6-P2.54-LS7.9-BL",
+   "parttype": "CD74HCT574EE4",
+   "npins": 20
+  },
+  "U1011": {
+   "id": "8c6b80e3cc9ceb67",
+   "x": -4247,
+   "y": 3175.45,
+   "rot": 90,
+   "footprint": "PDIP-14_L19.3-W6.4-P2.54-LS7.9-BL-1",
+   "parttype": "CD74HC74E",
+   "npins": 14
+  },
+  "U1012": {
+   "id": "804b975a0e4efbf0",
+   "x": -1710,
+   "y": 1355.4500000000003,
+   "rot": 90,
+   "footprint": "PDIP-14_L19.3-W6.4-P2.54-LS7.9-BL-1",
+   "parttype": "CD74HC74E",
+   "npins": 14
+  },
+  "U1013": {
+   "id": "b4bab79cfdf7acb0",
+   "x": -1710,
+   "y": 2045.4499999999998,
+   "rot": 90,
+   "footprint": "PDIP-14_L19.3-W6.4-P2.54-LS7.9-BL-1",
+   "parttype": "CD74HC74E",
+   "npins": 14
+  },
+  "U1014": {
+   "id": "0fe421be3986bd7e",
+   "x": -2897.7,
+   "y": 345.45000000000005,
+   "rot": 90,
+   "footprint": "DIP-14_L19.2-W6.6-P2.54-LS10.9-BL",
+   "parttype": "SN74HC08N",
+   "npins": 14
+  },
+  "U1015": {
+   "id": "427e403a8ddf6da7",
+   "x": -1630,
+   "y": 2890.45,
+   "rot": 90,
+   "footprint": "PDIP-14_L19.3-W6.4-P2.54-LS7.6-BL",
+   "parttype": "SN74HC32AN",
+   "npins": 14
+  },
+  "U1016": {
+   "id": "98f8c8c4a1cb3810",
+   "x": -2897.7,
+   "y": 1025.45,
+   "rot": 90,
+   "footprint": "DIP-14_L19.2-W6.6-P2.54-LS10.9-BL",
+   "parttype": "SN74HC04N",
+   "npins": 14
+  },
+  "U1017": {
+   "id": "e890615b9b30eea5",
+   "x": -3299.3,
+   "y": 525.45,
+   "rot": 90,
+   "footprint": "PDIP-20_L24.5-W6.4-P2.54-LS7.9-BL",
+   "parttype": "SN74HC688N",
+   "npins": 20
+  },
+  "U1018": {
+   "id": "a8fcbe91aa3283e7",
+   "x": -2493.7,
+   "y": 475.45000000000005,
+   "rot": 90,
+   "footprint": "PDIP-16_L19.3-W6.4-P2.54-LS7.9-BL",
+   "parttype": "SN74HC161N",
+   "npins": 16
+  },
+  "U1019": {
+   "id": "81d8c1a5676fbc77",
+   "x": -2493.7,
+   "y": 1255.45,
+   "rot": 90,
+   "footprint": "PDIP-16_L19.3-W6.4-P2.54-LS7.9-BL",
+   "parttype": "SN74HC161N",
+   "npins": 16
+  },
+  "U1020": {
+   "id": "12032a0eabca717c",
+   "x": -2493.7,
+   "y": 3015.45,
+   "rot": 90,
+   "footprint": "PDIP-16_L19.3-W6.4-P2.54-LS7.9-BL",
+   "parttype": "SN74HC161N",
+   "npins": 16
+  },
+  "U1021": {
+   "id": "8e3de6cfce92c227",
+   "x": -2098.7,
+   "y": 425.45000000000005,
+   "rot": 90,
+   "footprint": "PDIP-16_L19.3-W6.4-P2.54-LS7.9-BL",
+   "parttype": "SN74HC161N",
+   "npins": 16
+  },
+  "U1022": {
+   "id": "8ae7e2142fb307f2",
+   "x": -2098.7,
+   "y": 2185.45,
+   "rot": 90,
+   "footprint": "PDIP-16_L19.3-W6.4-P2.54-LS7.9-BL",
+   "parttype": "SN74HC161N",
+   "npins": 16
+  },
+  "U1023": {
+   "id": "7384b2420046788b",
+   "x": -2098.7,
+   "y": 2965.45,
+   "rot": 90,
+   "footprint": "PDIP-16_L19.3-W6.4-P2.54-LS7.9-BL",
+   "parttype": "SN74HC161N",
+   "npins": 16
+  },
+  "U1024": {
+   "id": "0e14587d1ac5394b",
+   "x": -2700,
+   "y": 1590.4500000000003,
+   "rot": 90,
+   "footprint": "PDIP-20_L24.5-W6.4-P2.54-LS7.9-BL",
+   "parttype": "SN74HC688N",
+   "npins": 20
+  },
+  "U1025": {
+   "id": "f45c0b9d47c1c0ee",
+   "x": -2098.7,
+   "y": 1305.4500000000003,
+   "rot": 90,
+   "footprint": "PDIP-20_L24.5-W6.4-P2.54-LS7.9-BL",
+   "parttype": "SN74HC688N",
+   "npins": 20
+  },
+  "U1026": {
+   "id": "396e20bef09dbbf0",
+   "x": -1703.7,
+   "y": 525.45,
+   "rot": 90,
+   "footprint": "PDIP-20_L24.5-W6.4-P2.54-LS7.9-BL",
+   "parttype": "SN74HC688N",
+   "npins": 20
+  }
+ }
+}

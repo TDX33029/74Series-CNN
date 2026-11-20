@@ -1,0 +1,128 @@
+{
+ "LEDP1": {
+  "Q": "Q3008",
+  "R1k": "RP1",
+  "R10k": null,
+  "RP": "RP1"
+ },
+ "LED_ARGMAX_BUSY_N": {
+  "Q": "Q3012",
+  "R1k": "R3020",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_C2_ADDR0": {
+  "Q": "Q3016",
+  "R1k": "R4014",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_C2_ADDR1": {
+  "Q": "Q3017",
+  "R1k": "R4016",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_C2_ADDR10": {
+  "Q": "Q3018",
+  "R1k": "R4018",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_C2_ADDR11": {
+  "Q": "Q3019",
+  "R1k": "R4020",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_C2_ADDR12": {
+  "Q": "Q3020",
+  "R1k": "R4022",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_C2_ADDR13": {
+  "Q": "Q3021",
+  "R1k": "R4024",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_C2_ADDR14": {
+  "Q": "Q3022",
+  "R1k": "R4026",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_C2_ADDR15": {
+  "Q": "Q3023",
+  "R1k": "R4028",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_C2_ADDR2": {
+  "Q": "Q3024",
+  "R1k": "R4030",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_C2_ADDR3": {
+  "Q": "Q3025",
+  "R1k": "R4032",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_C2_ADDR4": {
+  "Q": "Q3026",
+  "R1k": "R4034",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_C2_ADDR5": {
+  "Q": "Q3027",
+  "R1k": "R4036",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_C2_BUSY_N": {
+  "Q": "Q3013",
+  "R1k": "R3021",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_DATA7": {
+  "Q": "Q3008",
+  "R1k": "R3015",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_IMAGE_DONE_N": {
+  "Q": "Q3011",
+  "R1k": "R3019",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_POOL1_READ_OE": {
+  "Q": "Q3009",
+  "R1k": "R3017",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_POOL2_BUSY_N": {
+  "Q": "Q3014",
+  "R1k": "R4010",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_POOL2_MEM_WE": {
+  "Q": "Q3015",
+  "R1k": "R4012",
+  "R10k": null,
+  "RP": null
+ },
+ "LED_POOL2_READ_OE": {
+  "Q": "Q3010",
+  "R1k": "R3018",
+  "R10k": null,
+  "RP": null
+ }
+}

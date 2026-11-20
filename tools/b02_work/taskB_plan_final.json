@@ -1,0 +1,66 @@
+{
+ "led_x": 3823.0,
+ "pitch": 122.0,
+ "pos": {
+  "LEDP1": 3164.85,
+  "LED_ACK_I": 2982.85,
+  "LED_CLK": 2860.85,
+  "LED_CNT_CLR_N": 2738.85,
+  "LED_DONE_I": 2616.85,
+  "LED_DONE_ST_N": 2494.85,
+  "LED_IDLE_N": 2372.85,
+  "LED_MEM_ACK": 2250.85,
+  "LED_MEM_BUSY": 2128.85,
+  "LED_MEM_DONE": 2006.85,
+  "LED_MEM_NCE": 1884.85,
+  "LED_MEM_NOE": 1762.85,
+  "LED_MEM_NWE": 1640.85,
+  "LED_REQ": 1518.85,
+  "LED_RESET_N": 1396.85,
+  "LED_WE": 1274.85,
+  "LED_WE_S": 1152.85,
+  "LED_CNT0": 970.8499999999999,
+  "LED_CNT1": 848.8499999999999,
+  "LED_CNT2": 726.8499999999999,
+  "LED_CNT3": 604.8499999999999,
+  "LED_MC1": 482.8499999999999,
+  "LED_MC2": 360.8499999999999
+ },
+ "q_x": 3522.0,
+ "r1k_x": 3328.0,
+ "r10k_x": 3246.0,
+ "rp_y": 1062,
+ "extras_row_y": 3164.85,
+ "groups": {
+  "power": [
+   "LEDP1"
+  ],
+  "control": [
+   "LED_ACK_I",
+   "LED_CLK",
+   "LED_CNT_CLR_N",
+   "LED_DONE_I",
+   "LED_DONE_ST_N",
+   "LED_IDLE_N",
+   "LED_MEM_ACK",
+   "LED_MEM_BUSY",
+   "LED_MEM_DONE",
+   "LED_MEM_NCE",
+   "LED_MEM_NOE",
+   "LED_MEM_NWE",
+   "LED_REQ",
+   "LED_RESET_N",
+   "LED_WE",
+   "LED_WE_S"
+  ],
+  "data": [
+   "LED_CNT0",
+   "LED_CNT1",
+   "LED_CNT2",
+   "LED_CNT3",
+   "LED_MC1",
+   "LED_MC2"
+  ]
+ },
+ "rp_pos_note": "moved to y=1062 between Q2013/Q2017 rows on backside after DRC"
+}
